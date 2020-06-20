@@ -9,6 +9,9 @@ type: "lecture"
 
 # Introduction to Learning at GA and Classroom Culture
 
+<br>
+<br>
+
 ## Learning Objectives
 
 - Introduction to the classroom, instructors and roles
@@ -20,10 +23,12 @@ type: "lecture"
 ## Instructors
 
 - Daniel Scott - Instructor Lead
-- Casey Harding - Instructor Lead
-- Veronica Ramirez - Instructional Associate (IA)
+- Morgan Pierson - Instructor Lead
+- TBT - Instructor Associate
 
 
+<br>
+<br>
 
 ## Roles
 
@@ -45,20 +50,28 @@ type: "lecture"
 
 >**Note:** These roles define who *leads* a section, and whom you should go to if you have a question on a certain topic, but each of these roles are shared responsibilities.
 
+<br>
+<br>
+
 # Communication
 - Feedback goes both directions, we love getting/giving feedback at GA
 - Let us know how you're doing and how we can improve your experience
+
+<br>
+<br>
 
 ## Communication Tools
 
 ### Slack
 
-#### 4 channels
+#### 3 channels
 
-	- seirfx-47-classroom
-	- seirfx-47-outcomes
-	- seirfx-47-partytime
-	- seirfx-47-techtalk
+	- seir_629_debugging_dm
+	- seir_629_funnybiz_dm
+	- seir_629_strictlybiz2
+	
+  <br>
+<br>
 
 #### How To:
 
@@ -70,15 +83,24 @@ type: "lecture"
 		- sends a notification to everyone / everyone currently online
     - DO NOT use these unless absolutely necessary (usually only instructors/TAs use this)
 
+<br>
+<br>
+
 ##### Communicate privately:
 
 - Direct messages are one-on-one messages nobody else can see
 - In addition, you can make group direct messages to talk to multiple people at once, privately
 
+<br>
+<br>
+
 ##### Other:
 
 	- You can mute channels that you no longer need (e.g. Fundamentals)
 	- You can adjust the sound / notifications of your messages
+
+<br>
+<br>
 
 ### Zoom
 

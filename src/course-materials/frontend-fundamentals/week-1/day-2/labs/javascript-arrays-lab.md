@@ -2,12 +2,13 @@
 track: "Frontend Fundamentals"
 title: "JavaScript Arrays Lab"
 week: 1
-day: 3
+day: 2
 type: "lab"
 ---
 
 
 # JavaScript Arrays Lab
+<br>
 
 ## Introduction
 
@@ -17,11 +18,17 @@ This lab provides an opportunity to practice defining, accessing and manipulatin
 
 This lab **is a deliverable**. When completed, please fill out the [Google Form](https://forms.gle/aGLyBqABxeDLv18B9) or click the link above **(it's the same form)** in the navbar to submit your work to your instructional team for review.
 
+<br>
+<br>
+
 ## Setup & Instructions
 
 For the exercises in this lab, create a `JavaScript` `REPL` from [repl.it](https://repl.it) -- you can name it `"JavaScript Arrays lab"`.
 
 As a reminder, this lab is a **Deliverable**
+
+<br>
+<br>
 
 ## Exercise
 

@@ -9,6 +9,8 @@ type: "lecture"
 
 # Intro to JavaScript Control Flow
 
+<br>
+<br>
 
 ## Learning Objectives
 
@@ -21,9 +23,9 @@ type: "lecture"
 
 - Use the `while` statement to perform looping
 
-## Lesson Recording
+<br>
+<br>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hY2SrgIYDRY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Roadmap                             
 
@@ -41,6 +43,8 @@ type: "lecture"
 
 - Bonus Material
 
+<br>
+<br>
 
 ## Lesson Setup  
 
@@ -52,6 +56,8 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 >#### "The execution sequence of instructions in a program determined at run time with the use of control structures".
 
   
+<br>
+<br>
 
 ### Basic Types of Control Flow
 
@@ -65,6 +71,9 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 	- Code is repeatedly executed while a condition is truthy.
 
   
+<br>
+<br>
+
 
 ## Conditional Expressions 
    
@@ -73,7 +82,10 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - Comparison Expressions
 
-  
+
+<br>
+<br>
+
 ### What is True/Truthy & What is False/Falsey?
 
 - To test what is truthy and what is falsey, let's type the following code into `script.js` inside our `repl.it`:
@@ -96,6 +108,8 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - For example, the number `3`, is considered to be _truthy_ - test it out
 
+<br>
+<br>
   
 ### What is True/Truthy & What is False/Falsey?
 
@@ -109,6 +123,8 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - **Take a couple of minutes to test a few of the above**
 
+<br>
+<br>
   
 ### The Not Operator
 
@@ -129,7 +145,8 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 	console.log(!!3); // outputs true
 	```
 
-  
+<br>
+<br>
 
 ### Boolean Logic   <small><em>Comparison Operators</em></small>
 
@@ -160,7 +177,9 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 	0 || null  // evaluates to 0
 	```
 
-  
+<br>
+<br>
+
 ### Conditional Expressions
    
 
@@ -178,7 +197,9 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 	
 - **❓ If `x <= 10` was replaced with just `x`, would it still be considered a valid conditional expression?**
 
-  
+<br>
+<br>
+
 ## Review Questions
    
 
@@ -190,13 +211,17 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 4. **What value does `!!0` evaluate to?**
 
-  
+<br>
+<br>
+
 ## The <span style="text-transform:lowercase">if..else</span> Branching Statement 
    
 
 - As you saw in the pre-work, the `if` and the optional `else` clause allows us to conditionally execute code
 
-  
+<br>
+<br>
+
 ### The <span style="text-transform:lowercase">if</span> Branching Statement <small>Single Path</small>
 
 - Single path `if`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -216,7 +241,9 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 	```
 	This code is the same as the example above.
 
-  
+<br>
+<br>
+
 ### The <span style="text-transform:lowercase">if..else</span> <small>(dual path)</small>
    
 
@@ -230,7 +257,9 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 	}
 	```
 
-  
+<br>
+<br>
+
 ### The <span style="text-transform:lowercase">if..else..if</span> <small>(three or more paths)</small>
 
 - If you have three or more code paths use `if` with as many `else if` statements as necessary and optionally a final `else`:
@@ -251,6 +280,9 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - Any questions regarding branching with `if...else`?
 
+<br>
+<br>
+
   
 ### 💪 Exercise - Branching Statements <small>(5 mins)</small>
 
@@ -264,7 +296,9 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - As always, be sure to ask your instructional team for help if you get stuck!
 
-  
+<br>
+<br>
+
 
 ## Looping Statements 
    
@@ -279,6 +313,8 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 	- **`for`**
 
+<br>
+<br>
   
 ### Looping Statements   <small><em>while</em></small>
 
@@ -298,6 +334,8 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - Beware of infinite loops!
 
+<br>
+<br>
   
 ### Looping Statements   <small><em>do...while</em></small>
 
@@ -315,6 +353,8 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - Again, beware of infinite loops!
 
+<br>
+<br>
   
 ### Looping Statements   <small><em>for</em></small>
 
@@ -332,7 +372,9 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 	2. The _condition_ which will be evaluated before each loop. If truthy, the code block will execute.
 	3. The last part will execute after each loop and is typically used to increment or decrement the looping variable by one or more units.
 
-  
+<br>
+<br>
+
 ### Looping Statements   <small><em>break</em></small>
 
 - Use the `break` statement within any `while` or `for` loop to immediately exit the loop:
@@ -349,7 +391,9 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 	```
 	Note how the `if` statement does not require braces in this case.
 
-  
+<br>
+<br>
+
 
 ### Question - Looping Statements
    
@@ -358,7 +402,8 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - **How can we avoid the above scenario?**
 
-  
+<br>
+<br>
 
 ## Closing Questions
 
@@ -368,13 +413,18 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - **What does expression `'happy' || 'sad'` return?**
 
-  
+<br>
+<br>
+
 
 ## 💪 Practice Exercises <small>(15 mins)</small>
 
-  
+<br>
+<br>
 
 ### Practice Exercises
+
+<br>
 
 #### Exercise 1 - Branching
 
@@ -391,17 +441,26 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 	- anything else - "you're a rebel"
 
   
+<br>
+<br>
 
 ### Practice Exercises
+
+<br>
+
 #### Exercise 2 - Looping
    
 
 - **Use one of the looping statements to continue to execute the code you wrote in the previous exercise until the phrase _no more fruit_ is entered by the user**
 
   
+<br>
+<br>
+
 ## Bonus Material
 
-  
+<br>
+
 ### Ternary Operator
 
 - The _ternary_ operator is ideal when you need to return one of two values depending upon a condition:
@@ -427,7 +486,8 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 	score > 100 ? gameWinner() : gameLoop();
 	```
 
-  
+<br>
+
 ### Switch Statement
    
 

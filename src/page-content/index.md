@@ -2,9 +2,9 @@
 title: "index"
 ---
 
-# SEIR-FLEX 04/07/2020 - "Cyberpunk 2020"
+# SEI-R Classroom Website
 
-This website contains assignments and materials for General Assembly's Software Engineering Immersive Flex Program. 
+This website contains assignments and materials for General Assembly's Software Engineering Immersive Program. 
 
 ## Curriculum Overview
 
@@ -13,28 +13,24 @@ Curriculum schedule and content is subject to change at the instructor's discret
 
 ### [Unit One: Frontend Fundamentals](/frontend-fundamentals)
 
-| Week  | Topics |
+| Week  | Topics | 
 | ----- | ------ |
-| 1  | Intro to the Dev Environment, Git/Github, and JavaScript Fundamentals  |
-| 2  | Intro to JavaScript Objects, Classes, and OOP (Object Oriented Programming) |
-| 3  | Intro to the DOM & jQuery |
-| 4  | Frontend project practice and AJAX|
-| 5 | More practice with Frontend projects and Start Project 1 |
-| 6  | Finish Project 1 and Project Presentations |
+| 1  | Intro to the Dev Environment, JavaScript Fundamentals, HTML & CSS, DOM Selectors & Events  |
+| 2  | CSS: Flexbox, Grid & Responsive Design JS: jQuery, Callback Functions, Classes, Array Iterators & AJAX|
+| 3  | Project Week, Project Deployment to Github Pages, & CS Topics |
+
 
 
 <br>
 <br>
 
-### [Unit Two: Backend Fundamentals](/backend-fundamentals)
+### [Unit Two: Full Stack Development](/full-stack-development)
 
 | Week  | Topics |
 | ----- | ------ |
-| 6/7  | Intro to Full-Stack Development - Node, Express & MongoDB |
-| 8  | Intro to the Mongoose ODM & Data Entity Relationships - Introduce Project 2|
-| 9  | Catch up to Labs, Project 2 Planning, and Authentication With Oauth |
-| 10 | Project 2 Week, Cloud-Hosted MongoDB & Heroku Deployment |
-| 11 | Project 2 Week (Cont) and Project 2 Presentations |
+| 4  | Client-Server: HTTP Communications & REST NodeJS & ExpressJS Framework MongoDB & MongooseJS ODM Data Modeling |
+| 5  | Consuming & Producing APIs Authentication using OAuth Regular Expressions |
+| 6  | Project Week, Project Deployment to Heroku, CS Topics |
 
 
 <br>
@@ -44,13 +40,9 @@ Curriculum schedule and content is subject to change at the instructor's discret
 
 | Week  | Topics |
 | ----- | ------ |
-| 12 | Intro to React, JSX, State, Props & Components  |
-| 13 | CSS + React & Handling Events |
-| 14 | Handling Input, Updating State & React Router |
-| 15 | Lifecycle Methods, React + AJAX & Full-Stack React|
-| 16 | Project 3 Planning, Catch up on Labs & Authentication with React + JWTs |
-| 17 | Project 3 Week & React Review |
-| 18 | Project 3 Week, React Review & Project 3 Presentations |
+| 7 | SPA Architecture, ReactJS Library & Client-side Routing (React)  |
+| 8 | Web Sockets, AJAX, Full-stack React & Token-based Authentication |
+| 9 | Project Week, Project Deployment to Heroku & CS Topics |
 
 
 <br>
@@ -60,13 +52,8 @@ Curriculum schedule and content is subject to change at the instructor's discret
 
 | Week  | Topics |
 | ----- | ------ |
-| 19  | Intro SQL/Relational Databases & Python  |
-| 20  | Intro to Python Container, Functions, Classes & Django |
-| 21  | Django URLs, Views, Templates & Models |
-| 22  | Django Model Relationships & Photo Upload to Amazon S3|
-| 23 | Lab Catch Up, Introduce Project 4/Planning, Git Workflow & Django Auth|
-| 24  | Project Planning & Start Group Project 4 |
-| 25  | Students Work on Group Project 4 |
-| 26  | Students Finish Group Project 4 & Graduation |
+| 10  | Relational Databases & SQL, Fundamentals of Python & CS Topics |
+| 11  | Django Web Framework, Uploading Files to Amazon S3 & Username/Password Authentication |
+| 12  | Project Week, Project Deployment to Heroku & CS Topics |
 
 
