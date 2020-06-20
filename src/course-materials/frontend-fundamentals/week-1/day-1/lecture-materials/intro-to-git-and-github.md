@@ -2,12 +2,14 @@
 track: "Frontend Fundamentals"
 title: "Intro to Git and Github"
 week: 1
-day: 2
+day: 1
 type: "lecture"
 ---
 
 
 # Intro to Git and Github
+<br>
+<br>
 
 ## Learning Objectives
 
@@ -17,10 +19,9 @@ type: "lecture"
 | Describe the difference between Git and GitHub |
 | Distinguish between local and remote repositories |
 
-## Lesson Recording
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/92OZPkhqDVU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<br>
+<br>
 
 ## What is version control, and why should you care?
 
@@ -39,6 +40,9 @@ In SEIR, we'll be using the world's most popular version control system - **git*
 
 Git was created by Linus Torvolds in 2005 to help with the development of his main project at the time - developing Linux.
 
+<br>
+<br>
+
 ## Git vs. GitHub
 
 GitHub is not the same as git. **GitHub** is a social network built around git. It has completely changed the way we, as programmers, share and work on code. GitHub is now the largest online storage space of collaborative works, and it works with git in order to keep track of versions, issues, and requests for changes.
@@ -52,6 +56,8 @@ In summary:
 - A local repository is "linked" to a remote repository by adding a "remote" with this command `$ git remote add <name of remote> <URL of repo on GitHub>`
 
 
+<br>
+<br>
 
 ## Summary of Common Git Commands
 
@@ -79,6 +85,9 @@ This following diagrams the flow of making changes to a repo:
 This is the most simple workflow, things get a bit more complex when you start sharing code and manage larger codebases.
 
 > IMPORTANT: Do not create a repo within an existing repo!  If you find your computer very sluggish, it might be because you have "nested" repos. It's not uncommon for students to accidentally make their home folder (`~`) a repo - so start there if you suspect something is wrong.
+
+<br>
+<br>
 
 # Conclusion
 

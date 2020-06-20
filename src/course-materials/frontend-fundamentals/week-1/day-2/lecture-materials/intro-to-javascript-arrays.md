@@ -2,11 +2,12 @@
 track: "Frontend Fundamentals"
 title: "JavaScript Arrays"
 week: 1
-day: 3
+day: 2
 type: "lecture"
 ---
 
 # JavaScript Arrays
+<br>
 
 ## Learning Objectives
  
@@ -22,6 +23,8 @@ Students will be able to:
 - Copy All or Some of an Array
 - Create a Single String from an Array
 
+<br>
+<br>
 
 ## Roadmap
 
@@ -37,9 +40,9 @@ Students will be able to:
 10. Essential Questions
 11. Further Study
 
-## Lesson Recording
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/t83tHvIztU8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+<br>
 
 ### Lesson Setup  
 
@@ -65,6 +68,9 @@ For this lesson, we're going to code along using a `JavaScript` `REPL` from [rep
 	- Without complex data types such as arrays or objects, we'd have to store every individual piece of data in separate variables resulting is lots of messy code
 
   
+<br>
+<br>
+
 ### Creating Arrays
  
 
@@ -80,12 +86,17 @@ For this lesson, we're going to code along using a `JavaScript` `REPL` from [rep
 
 - The best practice is to use the _Array Literal_ syntax because it's more concise and the Class approach behaves differently if you pass only one argument
 
+<br>
+<br>
 
 ### Creating Arrays - Exercise (2 mins)
  
 - Create an array consisting of three of your favorite movies (strings) and assign it to a variable named `movies`
 
-  
+
+<br>
+<br>
+
 ### Accessing Elements in an Array
  
 
@@ -111,6 +122,8 @@ For this lesson, we're going to code along using a `JavaScript` `REPL` from [rep
 	```js
 	movies.unshift('Star Wars');
 	```
+<br>
+<br>
 
   
 ### Removing Elements from an Array
@@ -129,6 +142,8 @@ For this lesson, we're going to code along using a `JavaScript` `REPL` from [rep
 	```
 - `pop` and `shift` only remove one element at a time and don't take any arguments
 
+<br>
+<br>
   
 ### Remembering `unshift` & `shift`
  
@@ -145,6 +160,8 @@ For this lesson, we're going to code along using a `JavaScript` `REPL` from [rep
 	shift <- [...] -> pop
 	```
 
+<br>
+<br>
   
 ### Add/Remove Elements to/from Anywhere in the Array
  
@@ -170,6 +187,8 @@ movies => [ 'Spaceballs', 'The Sting', 'Alien' ]
 
 The `splice` method always returns an array containing the removed elements.
 
+<br>
+<br>
   
 ### Iterate Over All of the Elements in an Array
  
@@ -208,6 +227,8 @@ The `splice` method always returns an array containing the removed elements.
 
 - Unlike `forEach`, the `for...of` loop can be exited using the `break` statement
 
+<br>
+<br>
   
 ### Copy All or Some of an Array
  
@@ -231,6 +252,8 @@ The `splice` method always returns an array containing the removed elements.
 
 - Unlike `splice`, the 2nd argument in `slice` represents the ending index (but does not include that index)
 
+<br>
+<br>
   
 ### Copy All of an Array
  
@@ -245,7 +268,10 @@ The `splice` method always returns an array containing the removed elements.
 	```
 	The elements are being "spread" within the array literal
 
-  
+
+<br>
+<br>
+
 ### Copy All of an Array & Insert
  
 
@@ -256,7 +282,10 @@ The `splice` method always returns an array containing the removed elements.
 	let moreMovies = ['Interstellar', ...movies, 'Contact'];
 	```
 
-  
+
+<br>
+<br>
+
 ### Create a Single String from an Array
  
 
@@ -274,7 +303,9 @@ The `splice` method always returns an array containing the removed elements.
 	movieStr = movies.join('    ');
 	=> 'Spaceballs    The Sting    Alien'
 	```
-	
+
+<br>
+<br>
   
 ### Essential Questions
  
@@ -293,7 +324,10 @@ The `splice` method always returns an array containing the removed elements.
 - **What method is used to copy a number of elements into a new array?**
 
 	
-  
+
+<br>
+<br>
+
 ### Further Study
  
 
@@ -307,7 +341,10 @@ The `splice` method always returns an array containing the removed elements.
 	- `reverse`
 	- `sort`
 
-  
+
+<br>
+<br>
+
 ### References
  
 

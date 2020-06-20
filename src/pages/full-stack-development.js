@@ -22,11 +22,11 @@ export default({ data, location }) => {
 
     return (
         <Layout 
-          pageTitle="Backend Fundamentals"
+          pageTitle="Full-Stack Development"
           centerContent={true}  
           location={location} 
-          crumbLabel={"Backend Fundamentals"}>
-            <h1>Backend Fundamentals</h1>
+          crumbLabel={"Full-Stack Development"}>
+            <h1>Full-Stack Development</h1>
             <main className={styles.main}>
               {lessons}
             </main>
