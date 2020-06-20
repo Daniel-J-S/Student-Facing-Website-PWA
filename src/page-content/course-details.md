@@ -6,14 +6,19 @@
 
 You will be required to meet 80% completion of homework assignments at the end of each unit, and complete all project requirements. As this is an intense, fast-paced course, only 3 absences will be allowed.
 
+<br>
+<br>
+
 ## Schedule and Holidays
 
-Start date: 04/07/2020
-End date: 10/03/2020
-Monday-Friday 7 pm - 11 pm EST  
-Sat 11 am - 7 pm EST
-Office Hours Follow Classroom Time and run for :45 mins
-Holidays: 07/04
+Start date: 06/29/2020
+End date: 09/22/2020
+Monday-Friday 9 am - 5 pm PST  
+Office Hours: TBT
+Holidays: 07/04 & 09/07
+
+<br>
+<br>
 
 ## In Class
 * Before class:
@@ -32,12 +37,16 @@ Holidays: 07/04
 | Name  | Role |
 | ----- | ----- |
 | Daniel Scott  |  Lead Instructor 
-| Casey Harding  |  Lead Instructor 
-| Veronica Ramirez | Instructional Associate 
-| Jennifer Youngblood | Outcomes Coach
+| Morgan Pierson  |  Lead Instructor 
+| TBT | Instructional Associate 
+| TBT | Outcomes Coach
 
+<br>
+<br>
 
 ## Communication
+
+<br>
 
 ##### Send us a message if:
 * You know in advance that you will be missing a class or multiple classes
@@ -52,6 +61,9 @@ Holidays: 07/04
 
 **Remember we are here to help you! Please reach out with any questions**
 
+<br>
+<br>
+
 ## Course Overview
 Learn to code in JavaScript, the native language of the web used by developers the world over.
 
@@ -59,46 +71,65 @@ Build a single-page web app that persists user data and connects to services lik
 
 Learn the fundamentals of object-oriented programming while receiving support from industry experts and a community of peers.
 
+<br>
+<br>
+
 ## Lab/Homework Submission Procedure
 
+<br>
+
 ### We will walk through this together the first time!
-<!-- * Create a repo on Github Enterprise named `SEIR-FLEX-HOMEWORK-AND-LABS`
-* Inside the parent directory you will create a folder representing each week we're currently working in... i.e `wk01`
-* Complete the work for each homework assignment inside a folder inside your current week folder... i.e `wk01/homework`
-* Please note that we'll also use this repo for in-class exercises
-* Push your changes to your repository from your terminal by running the following commands:
-* `git add .`
-* `git commit -m "completed lab/homework”`
-* `git push` -->
+
 * Depending on the assignment, your homework will be completed on [repl.it](https://repl.it/), [CodeSandbox](https://codesandbox.io/), or [GitHub](https://github.com/)
 * Fill out this [Google Form](https://forms.gle/aGLyBqABxeDLv18B9) with a link for that specific homework. It will be the same Google Form for each homework
 * **Homework is due one week from the day it was assigned**
 * If homework is marked `incomplete`, you may be asked to re-submit it; a new timeline will be discussed how long you have to re-submit the homework
 
+<br>
+<br>
 
 ## Lesson Recordings
 
-Lessons will be recorded and embedded into the lesson material within 24-48 hours -- you can also view the entire playlist for this program [here](https://www.youtube.com/playlist?list=PLN8j7ZvmsikDz3csSUQaWz7966uGwJ0Wn)
+Lessons will be recorded and embedded into the lesson material within 24-48 hours -- you can also view the entire playlist for this program [here]()
+<br>
+<br>
 
 ## Managing your Projects
 * At the end of each unit, you will create a repo in your personal github for your project... i.e. Unit One - Project One, Unit Two - Project Two ...etc
 * Pushing your labs/homework to your personal github is not recommended
 
+<br>
+<br>
+
 ## What We Expect From You
 
+<br>
+
 ### Graduation Requirements
+
+<br>
 
 #### HOMEWORK
 
 Students must complete at least 80% on all homework assignments
 For an assignment to be marked complete, students must complete 100% of the minimum tasks specified in that assignment.
+
+<br>
+<br>
  
 ####  PROJECTS
 - Students must complete all of the minimum technical requirements for each unit project
 - Parameters for minimum requirements will be explained when the project is assigned
-- 
+
+<br>
+<br>
+
 ####  ZERO ACCOUNT BALANCE
 - Students must have no outstanding balances due on their account
+
+<br>
+<br>
+
 ####  ATTENDANCE 
 - Have at least an 80% attendance record (you’ve missed 24 hours total or less of class)
 - Attendance is taken at the start of every class meeting
@@ -113,11 +144,16 @@ Unexcused absences are not allowed. If you will have to miss a class, notify the
 Students who have fulfilled all of the above requirements will receive a digital certificate of completion via email 1 week after to the course’s end.
 
 Please feel free to contact either myself, Kevin, Yanny, or a member from student experience  if you have questions regarding this policy.
+<br>
+<br>
 
 ## Additional Expectations
 * Take initiative.
 * Ask for help.
 * Practice, practice, practice.
+
+<br>
+<br>
 
 ### Classroom Culture
 
@@ -127,6 +163,9 @@ Let's all agree to:
 * Participate in class
 * Be on video with mute on during class
 
+<br>
+<br>
+
 ### How To Succeed in a Remote Environment
 
 * Communication is key! Please respond in a "reasonable" timely manner if we contact you via slack or email.
@@ -135,6 +174,9 @@ Let's all agree to:
 * Carve out at least 10 hours outside a class a week for review and homework. Expect the next 6 months to be out of the norm for you. If you have to carve out a personal hour during a family vacation, you will have to do this!
 * Make use of office hours! Find a time that works for you and don't cancel on your instructors :)
 * Hold yourself accountable. Don't let yourself fall behind!
+
+<br>
+<br>
 
 ## Group Work Formats
 We will be using breakout rooms to get more personalized learning environments. Make sure to get to know your classmates and use each other as teachers!
