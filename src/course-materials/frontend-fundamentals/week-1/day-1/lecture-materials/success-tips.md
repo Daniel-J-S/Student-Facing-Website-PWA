@@ -7,6 +7,7 @@ type: "lecture"
 ---
 
 # How to Successfully Learn in this Bootcamp
+<br>
 
 ## Learning Objectives
 
@@ -15,6 +16,8 @@ type: "lecture"
 - Classroom culture
 - Overview of common student concerns
 
+<br>
+<br>
 
 ## Emotional Framing
 
@@ -25,6 +28,9 @@ type: "lecture"
 - Make a friend with discomfort
 - The maximum point of learning is right at the edge of learning and panic
 - This experience is a rollercoaster
+
+<br>
+<br>
 
 ## Successful students
 
@@ -45,6 +51,9 @@ it's about developing a mindset to solve unforeseen problems
 
 - Be open and ready to receive constructive criticism
 
+<br>
+<br>
+
 ## Classroom Culture
 
 - Open safe environment
@@ -54,6 +63,9 @@ it's about developing a mindset to solve unforeseen problems
 - Be courteous calm and patient with others; don't let the stress get to you!
 - Don't compare yourself to others, compare yourself to who you were yesterday
 
+<br>
+<br>
+
 ### Mentorship / Collaborative Culture in the Classroom
 
 - Take care of each other
@@ -61,6 +73,8 @@ it's about developing a mindset to solve unforeseen problems
 - Teaching is the best way of truly solidifying your understanding of a concept
 - Your classmates will be the best foundation for establishing a professional network in tech!
 
+<br>
+<br>
 
 ## Common Student Concerns
 
