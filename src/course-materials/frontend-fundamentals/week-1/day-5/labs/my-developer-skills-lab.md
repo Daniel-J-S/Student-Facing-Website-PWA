@@ -1,8 +1,8 @@
 ---
 track: "Frontend Fundamentals"
 title: "My Developer Skills Lab"
-week: 3
-day: 3
+week: 1
+day: 5
 type: "lab"
 ---
 

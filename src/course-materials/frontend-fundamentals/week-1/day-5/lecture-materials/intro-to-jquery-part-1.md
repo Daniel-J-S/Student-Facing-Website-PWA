@@ -1,8 +1,8 @@
 ---
 track: "Frontend Fundamentals"
 title: "Intro to jQuery Part One"
-week: 3
-day: 3
+week: 1
+day: 5
 type: "lecture"
 ---
 
