@@ -14,7 +14,7 @@ export default({ data, location }) => {
     node.frontmatter.week === 1
   ).map(({ node }) =>
     <Link to={node.fields.slug}>
-      <h2 key={node.fields.id}>{node.frontmatter.title} - <small className={styles.smallText}>{node.frontmatter.topics}</small></h2>
+      <h2 className={styles.dayTitle} key={node.fields.id}>{node.frontmatter.title} - <small className={styles.smallText}>{node.frontmatter.topics}</small></h2>
     </Link> 
   );
 
@@ -22,7 +22,7 @@ export default({ data, location }) => {
     node.frontmatter.week === 2
   ).map(({ node }) =>
     <Link to={node.fields.slug}>
-      <h2 key={node.fields.id}>{node.frontmatter.title} - <small className={styles.smallText}>{node.frontmatter.topics}</small></h2>
+      <h2 className={styles.dayTitle} key={node.fields.id}>{node.frontmatter.title} - <small className={styles.smallText}>{node.frontmatter.topics}</small></h2>
     </Link> 
   );
 
@@ -30,7 +30,7 @@ export default({ data, location }) => {
     node.frontmatter.week === 3
   ).map(({ node }) =>
     <Link to={node.fields.slug}>
-      <h2 key={node.fields.id}>{node.frontmatter.title} - <small className={styles.smallText}>{node.frontmatter.topics}</small></h2>
+      <h2 className={styles.dayTitle} key={node.fields.id}>{node.frontmatter.title} - <small className={styles.smallText}>{node.frontmatter.topics}</small></h2>
     </Link> 
   );
 

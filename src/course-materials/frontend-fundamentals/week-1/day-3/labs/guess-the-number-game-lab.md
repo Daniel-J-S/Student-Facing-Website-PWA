@@ -1,8 +1,8 @@
 ---
 track: "Frontend Fundamentals"
 title: "Guess the Number Game Lab"
-week: 2
-day: 1
+week: 1
+day: 3
 type: "lab"
 ---
 
