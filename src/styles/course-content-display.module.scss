@@ -13,3 +13,12 @@
     color: black
 }
 
+@media (max-width:700px) {
+    .dayTitle {
+        font-size: 1.1rem;
+    }
+    .small-text {
+        font-size: .8rem;
+    }
+}
+
