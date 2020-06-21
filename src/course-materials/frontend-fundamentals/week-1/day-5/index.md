@@ -1,6 +1,6 @@
 ---
 track: "Frontend Fundamentals"
-title: "Week 3 - Day 3"
+title: "Day 5"
 week: 1
 day: 5
 type: "homepage"
