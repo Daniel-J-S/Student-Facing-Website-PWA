@@ -2,11 +2,14 @@
 track: "Frontend Fundamentals"
 title: "Intro to JavaScript Classes"
 week: 2
-day: 2
+day: 3
 type: "lecture"
 ---
 
 # Intro to JavaScript Classes  
+
+<br>
+
 
 ## Learning Objectives
 
@@ -24,13 +27,19 @@ type: "lecture"
 - Use _extends_ to create a _subclass_
 - Use _super_ within a subclass
 
-## Lesson Recording
-<iframe width="560" height="315" src="https://www.youtube.com/embed/aFRFQDKnnb8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+<br>
+<br>
 
 
 ### Lesson Setup  
 
 For this lesson, we're going to code along using a `JavaScript` `REPL` from [repl.it](https://repl.it) -- you can name it `"JavaScript Classes Practice"`.
+
+<br>
+<br>
+
+
 
 ### What Are <em>Classes</em>?
 
@@ -44,6 +53,9 @@ For this lesson, we're going to code along using a `JavaScript` `REPL` from [rep
 
 <img src="https://i.imgur.com/Pjxlpjs.jpg" width="600">
 
+<br>
+<br>
+
 
 ### Why Use <em>Classes</em>?
 
@@ -55,6 +67,10 @@ For this lesson, we're going to code along using a `JavaScript` `REPL` from [rep
 - Because the number of a certain type of object needed by an application often varies at runtime; and...
 
 - Classes/constructors provide a convenient way to dynamically create objects as needed.
+
+
+<br>
+<br>
 
 
 ## Encapsulation in OOP
@@ -88,6 +104,10 @@ var cohort = {
 };
 ```
 
+<br>
+<br>
+
+
 ### Review Questions
 
 
@@ -96,6 +116,11 @@ var cohort = {
 - **In your own words, describe why Classes exist in OOP.**
 
 - **In your own words, describe the OOP principle known as _encapsulation_.**
+
+<br>
+<br>
+<br>
+
 
 
 ### Defining Classes in JS
@@ -116,6 +141,12 @@ var cohort = {
 **What's different about the naming convention?**
 
 
+<br>
+<br>
+<br>
+
+
+
 ### Instantiating a Class
 
 
@@ -132,6 +163,10 @@ var cohort = {
 	```js
 	var v1 = new Vehicle();
 	```
+
+<br>
+<br>
+<br>
 
 
 
@@ -159,6 +194,10 @@ var cohort = {
 
 - If there are no properties to initialize, the `constructor` method is optional (a hidden default constructor is called).
 
+<br>
+<br>
+<br>
+
 
 
 ### Practice - Add a Property
@@ -172,6 +211,10 @@ var cohort = {
 	var car = new Vehicle('A1234', 'Toyota', 'Camry');
 	```
 
+<br>
+<br>
+<br>
+
 
 ### Object Instantiation
 
@@ -181,6 +224,11 @@ var cohort = {
 	- After the `constructor` is finished executing, the class automatically returns the shiny new object.
 
 - Although the `constructor` method is _special_ because it's called automatically, there's nothing special about how it's defined, other methods are defined the same way...
+
+<br>
+<br>
+<br>
+
 
 
 ### Defining Methods in a Class
@@ -215,10 +263,24 @@ var cohort = {
 - Note that unlike within object literals, methods are not separated by a comma.
 
 
+<br>
+<br>
+<br>
+
+
+
+
 ### Practice - Defining Methods
 
 
 - **Define a `stop` method that sets the `running` property to `false` and console.logs the message "stopped..."**
+
+
+<br>
+<br>
+<br>
+
+
 
 
 ### Overriding Methods
@@ -247,6 +309,12 @@ var cohort = {
 	Test it out.
 
 
+<br>
+<br>
+<br>
+
+
+
 ### Review Questions
 
 - You've just learned how to define a class and add prototype methods to it.  This represents about 80% there is to know about classes - congrats! 
@@ -258,6 +326,11 @@ Some questions before moving on:
 3. **What is the main purpose of this method?**
 4. **What character(s) separate the methods in a class definition?**
 
+<br>
+<br>
+<br>
+
+
 
 ### Constructor Functions - B.C. (before classes 😀)
 
@@ -267,6 +340,12 @@ Some questions before moving on:
 - Because of the newness of ES2015, much of the code out there is written using constructor functions, however, most new code today is likely to be written as classes.
 
 - It's important that you be able to recognize _constructor functions_, so let's look at how the `Vehicle` class can be written as a constructor function...
+
+<br>
+<br>
+<br>
+
+
 
 
 ### Constructor Functions
@@ -290,6 +369,12 @@ var car = new Vehicle('A1234', 'Toyota', 'Camry');
 - Note that constructor functions are similar to the constructor methods in a class. Also note how instance methods are defined on the function's prototype object.
 
 - Invoking a class and a constructor function works identically.
+
+
+<br>
+<br>
+<br>
+
 
 
 ### Static Methods
@@ -319,6 +404,13 @@ var car = new Vehicle('A1234', 'Toyota', 'Camry');
 	```
 
 
+<br>
+<br>
+<br>
+
+
+
+
 ### Review Quesitons
 
 - **Is there anything a class can implement that can't be done using constructor functions?**
@@ -338,6 +430,13 @@ var car = new Vehicle('A1234', 'Toyota', 'Camry');
 	  }
 	}
 	```
+
+
+<br>
+<br>
+<br>
+
+
 
 
 ### Inheritance
@@ -367,6 +466,12 @@ var car = new Vehicle('A1234', 'Toyota', 'Camry');
 
 - In a derived class, the `super` keyword represents the parent superclass and must be called before the `this` keyword can be used in the constructor.
 
+<br>
+<br>
+<br>
+
+
+
 
 ### Inheritance
 
@@ -383,6 +488,13 @@ var car = new Vehicle('A1234', 'Toyota', 'Camry');
 <img src="https://i.imgur.com/t9eUguh.png" width="700">
 
 
+<br>
+<br>
+<br>
+
+
+
+
 ### Practice - Inheritance
 
 
@@ -396,10 +508,22 @@ var car = new Vehicle('A1234', 'Toyota', 'Camry');
 
 - Hint: It's okay to copy and paste your own code (but make sure you understand what it does)
 
+<br>
+<br>
+<br>
+
+
+
 
 ### Final Notes on Classes
 
 > Unlike function declarations, class declarations are not _hoisted_ - they must be declared before using them to create objects.
+
+
+<br>
+<br>
+<br>
+
 
 
 
