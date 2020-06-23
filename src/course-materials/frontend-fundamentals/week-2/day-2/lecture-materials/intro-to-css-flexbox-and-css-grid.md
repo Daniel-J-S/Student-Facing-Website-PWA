@@ -1,17 +1,16 @@
 ---
 track: "Frontend Fundamentals"
 title: "Intro to CSS Flexbox & Grid"
-week: 4
-day: 3
+week: 2
+day: 2
 type: "lecture"
 ---
 
 
 # Intro to CSS Flexbox & Grid
 
-## Lesson Recording
-
-[Click Here](https://generalassembly.zoom.us/rec/share/2pV2KLb95G1LcomX5maOXoUzGoTUX6a8g3If-acNxEvu1QhxEgWrwaZfkngW0Nyw?startTime=1588432827000) to access recording
+<br>
+<br>
 
 
 ## Learning Objectives
@@ -25,6 +24,11 @@ type: "lecture"
 - Use CSS Grid for Two-Dimensional Layout 
 
 
+<br>
+<br>
+<br>
+
+
 ## Roadmap
 
 
@@ -36,6 +40,10 @@ type: "lecture"
 - Why use CSS Grid?
 - CSS Grid Fundamentals
 - Your First CSS Grid
+
+<br>
+<br>
+
 
 
 ### Setup
@@ -58,6 +66,11 @@ type: "lecture"
 	}
 	```
 
+<br>
+<br>
+<br>
+
+
 
 ### Intro to Flexbox & CSS Grid
 
@@ -73,7 +86,16 @@ type: "lecture"
 <img src="https://i.imgur.com/2ie45ct.png">
 
 
+<br>
+<br>
+<br>
+
+
+
 ## Flexbox
+
+
+<br>
 
 
 ### Why Use Flexbox?
@@ -86,6 +108,11 @@ type: "lecture"
 	- Spacing child elements within a container uniformly
 	
 	- Making the height of child elements laid out in columns the same even though they have a different amount of content.
+
+<br>
+<br>
+<br>
+
 
 
 ### Flexbox Fundamentals
@@ -101,6 +128,12 @@ type: "lecture"
 	The above would make all `<section>` elements **flex containers** and all direct children become **flex items**.
 
 - Let's open in a separate tab and briefly review what has become the [de facto guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+
+<br>
+<br>
+<br>
+
 
 
 ### Your First Flexbox
@@ -208,6 +241,12 @@ type: "lecture"
 	```
 	
 
+<br>
+<br>
+<br>
+
+
+
 ### Review Questions - Flexbox
 
 
@@ -219,8 +258,14 @@ type: "lecture"
 
 - **Is it `justify-content` or `align-items` that controls the alignment along the _cross axis_?**
 
+<br>
+<br>
+<br>
+
 
 ## CSS Grid
+
+<br>
 
 
 ### Why use CSS Grid?
@@ -230,6 +275,10 @@ type: "lecture"
 	1. A page layout like this (or as complex as you'd like):
 	<img src="https://i.imgur.com/tkBPUd0.png">
 	2. Any other "components" that would benefit from a grid-type layout such as a "profile card", in other words, CSS Grid doesn't have to apply to the whole page - it can be useful for laying out smaller "components" as well.
+
+<br>
+<br>
+
 
 
 ### CSS Grid Fundamentals
@@ -255,6 +304,11 @@ type: "lecture"
 - Here's the [CSS Grid equivalent of that Flexbox guide we used earlier](https://css-tricks.com/snippets/css/complete-guide-grid/).
 
 - Let's open it up in a new tab and take a peek.
+
+<br>
+<br>
+<br>
+
 
 
 ### Your First CSS Grid
@@ -401,6 +455,11 @@ type: "lecture"
 - Note that the grid gaps cannot be styled - the grid's background simply shows through.
 
 
+<br>
+<br>
+<br>
+
+
 ### Flexbox & CSS Grid Practice Sites
 
 
@@ -409,6 +468,10 @@ type: "lecture"
 - Here are a couple of really fun ways to learn more about them:
 	- [FLEXBOX FROGGY](https://flexboxfroggy.com/)
 	- [GRID GARDEN](https://cssgridgarden.com/)
+
+
+<br>
+<br>
 
 
 ### References
