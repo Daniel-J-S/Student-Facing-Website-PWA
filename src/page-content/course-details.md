@@ -11,11 +11,11 @@ You will be required to meet 80% completion of homework assignments at the end o
 
 ## Schedule and Holidays
 
-Start date: 06/29/2020
-End date: 09/22/2020
-Monday-Friday 9 am - 5 pm PST  
-Office Hours: TBT
-Holidays: 07/04 & 09/07
+- Start date: **06/29/2020**
+- End date: **09/22/2020**
+- Monday-Friday **9 am - 5 pm PST**  
+- Office Hours: **TBT** 
+- Holidays: **07/04 & 09/07**
 
 <br>
 <br>
@@ -38,7 +38,7 @@ Holidays: 07/04 & 09/07
 | ----- | ----- |
 | Daniel Scott  |  Lead Instructor 
 | Morgan Pierson  |  Lead Instructor 
-| TBT | Instructional Associate 
+| Melissa Young | Instructional Associate 
 | TBT | Outcomes Coach
 
 <br>
@@ -81,7 +81,7 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 ### We will walk through this together the first time!
 
 * Depending on the assignment, your homework will be completed on [repl.it](https://repl.it/), [CodeSandbox](https://codesandbox.io/), or [GitHub](https://github.com/)
-* Fill out this [Google Form](https://forms.gle/aGLyBqABxeDLv18B9) with a link for that specific homework. It will be the same Google Form for each homework
+* Fill out this [Google Form](https://forms.gle/vA1pSq6N5CkBDNHg9) with a link for that specific homework. It will be the same Google Form for each homework
 * **Homework is due one week from the day it was assigned**
 * If homework is marked `incomplete`, you may be asked to re-submit it; a new timeline will be discussed how long you have to re-submit the homework
 
@@ -117,6 +117,8 @@ For an assignment to be marked complete, students must complete 100% of the mini
 <br>
 <br>
  
+
+
 ####  PROJECTS
 - Students must complete all of the minimum technical requirements for each unit project
 - Parameters for minimum requirements will be explained when the project is assigned
@@ -143,7 +145,8 @@ Unexcused absences are not allowed. If you will have to miss a class, notify the
 
 Students who have fulfilled all of the above requirements will receive a digital certificate of completion via email 1 week after to the course’s end.
 
-Please feel free to contact either myself, Kevin, Yanny, or a member from student experience  if you have questions regarding this policy.
+Please feel free to contact your instructional team, or a member from student experience  if you have questions regarding this policy.
+
 <br>
 <br>
 
@@ -171,7 +174,7 @@ Let's all agree to:
 * Communication is key! Please respond in a "reasonable" timely manner if we contact you via slack or email.
 * No distractions during class. This means no cell phones (talking/texting), television, or children around.
 * Make sure to speak up and speak out about any problems you are having! Don't be afraid to ask questions during class! Someone else is probably having this same issue!
-* Carve out at least 10 hours outside a class a week for review and homework. Expect the next 6 months to be out of the norm for you. If you have to carve out a personal hour during a family vacation, you will have to do this!
+* Carve out at least 15-20 hours outside a class a week for review and homework. Expect the next 3 or so months to be out of the norm for you. If you have to carve out a personal hour during a family vacation, you will have to do this!
 * Make use of office hours! Find a time that works for you and don't cancel on your instructors :)
 * Hold yourself accountable. Don't let yourself fall behind!
 

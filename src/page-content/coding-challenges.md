@@ -1,6 +1,6 @@
 ---
 title: "coding-challenges"
-date: '2020-03-09'
+date: '2020-06-23'
 ---
 
 # Coding Challenges
@@ -17,6 +17,7 @@ Listed below are coding challenges intended to give you practice with problem so
 
 <iframe height="850px" width="95%" src="https://repl.it/@DanielScott2/sumNumbers?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
+<!--
 
 ## addList
 
@@ -40,3 +41,4 @@ Listed below are coding challenges intended to give you practice with problem so
 <iframe height="800px" width="95%" src="https://repl.it/@DanielScott2/charCount?lite=true"  scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 
+-->
