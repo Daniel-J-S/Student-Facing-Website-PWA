@@ -1,8 +1,8 @@
 ---
 track: "Frontend Fundamentals"
 title: "Intro to jQuery Part Two"
-week: 1
-day: 5
+week: 2
+day: 1
 type: "lecture"
 ---
 
@@ -15,9 +15,11 @@ type: "lecture"
 | Use jQuery to add and remove DOM elements|
 | Bind to events with jQuery|
 
-## Lesson Recording - Lessons 1 & 2
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VRTgW-0Y-Z4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+<br>
+<br>
+
 
 
 ## Roadmap
@@ -30,7 +32,15 @@ type: "lecture"
 - More on DOM Manipulation
 - Practice Challenge - Add New Homes
 
+<br>
+<br>
+
+
+
 ## Page Setup
+
+<br>
+
 
 ### Create a `./js/script.js` File
 
@@ -49,6 +59,12 @@ intro-to-jquery/
   js/
     script.js
 ```
+
+<br>
+<br>
+<br>
+
+
 
 ### Load Order Matters
 
@@ -73,6 +89,12 @@ Let's take the above's advice and add our `app.js` **after** jQuery:
   <script defer src="./js/script.js"></script>
 </head>
 ```
+
+
+<br>
+<br>
+<br>
+
 
 ### Sprinkle in Some CSS - Bootstrap
 
@@ -99,6 +121,11 @@ Here's what we should have so far:
 ```
 
 [Bootstrap](http://getbootstrap.com/) also changes the default styling of most elements thus making your site more eye-pleasing out of the box.
+
+<br>
+<br>
+<br>
+
 
 ### Starting HTML
 
@@ -155,6 +182,12 @@ Here's some HTML to get us started - **replace** the existing `<body>` tags with
 </body>
 ```
 
+
+<br>
+<br>
+<br>
+
+
 ### Ensuring that the DOM is Ready
 
 We've used the [defer Attribute](https://www.w3schools.com/tags/att_script_defer.asp) in the `<script>` tag in the `<head>` to ensure that the DOM is built before the JS runs.
@@ -177,11 +210,25 @@ $(function(){
 
 **❓ Since all of the app's code will be within the callback function, what impact does this have in terms of scope?**
 
+
+<br>
+<br>
+<br>
+
+
 ### Open it Up!
 
 We're all set to get started. If you have the _Open in Browser_ VS Code extension installed, you can right-click anywhere on `index.html` and select `Open in Browser`, or better yet press `[option] + B`.
 
 Your page should load and the alert should appear.
+
+
+
+<br>
+<br>
+<br>
+
+
 
 ## Adding & Removing Classes
 
@@ -198,11 +245,25 @@ That's better!
 
 **❓ What's it called when we call a method immediately after a previous method like we did above?**
 
+
+<br>
+<br>
+<br>
+
+
+
 ##### 💪 PRACTICE EXERCISE
 
 **Using jQuery, add the Bootstrap class named "text-center" to the `<h1>` tag.**
 
 > Note: In case you're wondering, "NO", we would not ordinarily style our page using jQuery :) We're doing this just to learn about jQuery. jQuery should be used to change styling dynamically as needed by the app.
+
+
+<br>
+<br>
+<br>
+
+
 
 ### Does an Element have a class?
 
@@ -218,9 +279,21 @@ var isStyled = $('p').hasClass('left-aligned big');
 
 There's also a `toggleClass(<the class as a string>)` method used to toggle a class.
 
+
+<br>
+<br>
+<br>
+
+
 ## Creating New Elements
 
 jQuery makes creating new elements easy. Lets add a hyperlink (`<a>`) to our page that, when clicked, takes our users to Zillow's website!
+
+
+<br>
+<br>
+<br>
+
 
 ### New Element from an HTML String
 
@@ -251,6 +324,13 @@ var $p = $('<p>').addClass('bold');
 
 Which approach you use is up to you (or your boss).
 
+<br>
+<br>
+<br>
+
+
+
+
 ### Adding the Element to the DOM
 
 The `$newLink` variable now holds our newly created elements in memory, however, we still need to add them to the page. One of the ways is to use the `append()` method:
@@ -273,11 +353,26 @@ Other methods available include:
 
 The practice challenge will provide an opportunity to practice adding elements...
 
+
+<br>
+<br>
+<br>
+
+
+
+
 ### Check it Out
 
 Refresh your page and there's the link!
 
 However, we have a UX problem - the link navigates us away from our app. Wouldn't it be better instead to open Zillow in another tab? We'll do that in the next section!
+
+
+<br>
+<br>
+<br>
+
+
 
 ## Modifying Attributes
 
@@ -292,11 +387,29 @@ Refresh - Yay!!!
 
 There's also a `removeAttr()` method we can use to remove attributes.
 
+<br>
+<br>
+<br>
+
+
+
 ##### PAIR UP TO ANSWER THE FOLLOWING QUESTION
 
 What line of code would `console.log` the value of the Zillow link's `href` attribute?
 
+<br>
+<br>
+<br>
+
+
+
+
 ## Adding Event Listeners
+
+
+<br>
+
+
 
 ### Basic Event Listeners
 
@@ -330,6 +443,12 @@ This syntax in fact uses the `.on` method internally.
 
 [These docs](http://api.jquery.com/category/events/) has a complete list of event methods.
 
+<br>
+<br>
+<br>
+
+
+
 ### Event Delegation
 
 We already learned about _event delegation_ in native JavaScript.
@@ -362,7 +481,19 @@ $('#homes tbody').on('click', 'button', function() {
 });
 ```
 
+<br>
+<br>
+<br>
+
+
+
 ## More on DOM Manipulation
+
+<br>
+<br>
+<br>
+
+
 
 ### Removing Elements
 
@@ -379,6 +510,14 @@ Because we want to remove the `<tr>`, not the `<button>` represented by `this`, 
 Pretty cool!
 
 > Take a look at the `.find()` and `.children()` methods if you need to look for the nearest descendent going down the DOM instead of up the DOM like we just saw using the `closest()` method.
+
+
+<br>
+<br>
+<br>
+
+
+
 
 ### Removing Elements "Gracefully"
 
@@ -397,11 +536,22 @@ Here, we are taking advantage of the fact that we can provide a callback functio
 
 That's better!
 
+
+<br>
+<br>
+<br>
+
+
+
 ## 💪 Practice Exercise - Add New Homes
 
 Now for a fun challenge.
 
 You've already seen everything you need to make this happen! jQuery's there for you and Google and your fellow students are your friend.
+
+
+<br>
+
 
 ### Goal
 
@@ -421,6 +571,12 @@ var newHomes = [
 ];
 ```
 
+<br>
+<br>
+<br>
+
+
+
 ### Hints:
 
 - Don't forget that the jQuery function can create HTML by passing in a string that looks like HTML - just like we did when we added the Zillow hyperlink earlier in the lesson. This string of HTML can include everything you want to be inserted, the cells, classes, content, button, etc.
@@ -428,15 +584,32 @@ var newHomes = [
 - Consider using a template literal to interpolate the values of the home object's properties into the string before passing to the jQuery function.
 - It always helps to pseudocode (write the coding steps in plain, non-technical English).
 
+
+<br>
+<br>
+
 ### Bonus Challenge
 
 - Disable the _Add Home_ button if there are no more homes in the array.
+
+<br>
+<br>
+
+
+
 
 ### Super Bonus Challenge
 
 - Add a button, that when clicked, restores all previously removed homes and appends them to the bottom of the table.
 
 	Hint: When you remove an element like we did with the `<tr>`s, they are returned by the `remove` method.
+
+
+<br>
+<br>
+<br>
+
+
 
 ## References
 
