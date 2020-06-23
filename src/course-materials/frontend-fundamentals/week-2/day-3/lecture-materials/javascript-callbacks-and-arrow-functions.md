@@ -1,14 +1,21 @@
 ---
 track: "Frontend Fundamentals"
 title: "JavaScript Callbacks and Arrow Functions"
-week: 5
+week: 2
 day: 3
 type: "lecture"
 ---
 
+
 # JavaScript Callbacks and Arrow Functions
 
 This material was meant to be a resource for students to refer to later, but we'll briefly introduce/review these concepts, so we're familiar with them.
+
+<br>
+<br>
+<br>
+
+
 
 
 ### What's a Callback Function and when Are They Used?
@@ -66,6 +73,16 @@ let result2 = compute(10, 5, subtract);
 Also, note that we are passing named functions `(add& sum)` instead of using an anonymous inline function like with the `forEach` earlier.
 
 
+
+
+<br>
+<br>
+<br>
+
+
+
+
+
 ##### One of the best ways to learn about callbacks is to first understand their use-cases.
 
 **Here are three use-cases for callback functions:**
@@ -75,6 +92,14 @@ Also, note that we are passing named functions `(add& sum)` instead of using an 
 2. To provide a function to be executed each time an event happens - just like with the `addEventListener` example above.
 
 3. To provide a function to be executed when an _asynchronous_ process has completed.
+
+
+<br>
+<br>
+<br>
+
+
+
 
 ### Using Callbacks with Array Iterator Methods
 
@@ -98,12 +123,24 @@ flowers.forEach(function(flower, idx) {
 });
 ```
 
+<br>
+<br>
+<br>
+
+
+
 
 ### Using Callbacks with Asynchronous Functions
 
 _What's an "asynchronous" method?_
 
 Before we can clearly understand what "asynchronous" means, it will help to confirm what **synchronous** code is.
+
+<br>
+<br>
+<br>
+
+
 
 #### Synchronous Code Execution
 
@@ -127,6 +164,12 @@ console.log('AFTER the forEach...');
 
 This is exactly what you would expect - right?
 
+<br>
+<br>
+<br>
+
+
+
 #### Asynchronous Code
 
 Unlike the synchronous code we saw above, the code following an **asynchronous** function call continues to run before the async function finishes.
@@ -145,6 +188,13 @@ console.log('Code after the asynchronous function call');
 
 > We use `setTimeout` to "simulate" asynchronous code.
 
+<br>
+<br>
+<br>
+
+
+
+
 #### Why do Asynchronous Functions exist?
 
 Asynchronous functions are necessary in JavaScript because JS runs on a single CPU thread dedicated to handling events, running your code, painting the screen, etc.
@@ -159,12 +209,25 @@ A good example of JavaScript's asynchronous programming model is the browser its
 
 How does the browser know when an image has been retrieved and is ready to be painted? By implementing **callbacks** and something known as the [event loop](https://www.youtube.com/watch?v=cCOL7MC4Pl0) (in this video, Jake Archibald from Google does an amazing job demonstrating the browser's event loop).
 
+<br>
+<br>
+<br>
+
+
+
 ##### Using Callbacks to Work with Asynchronous Code
 
 JavaScript provides two ways to run a function **after** an asynchronous operation completes its long running process:
 
 - **Callbacks**
 - **Promises**
+
+
+<br>
+<br>
+<br>
+
+
 
 
 ##### A Simulated Asynchronous Example
@@ -213,6 +276,14 @@ Running the above code will generate an error because the `friends` variable wil
 
 What's a programmer to do?
 
+
+<br>
+<br>
+<br>
+
+
+
+
 ##### Callbacks to the Rescue 
 
 We're going to make it possible to work with the `getFriendsAsync` function by refactoring it to accept a callback function as follows:
@@ -247,6 +318,12 @@ Functions that are asynchronous must be **designed** to either:
 
 <hr>
 
+<br>
+<br>
+
+
+
+
 ### Intro to Arrow Functions:
 
 Arrow functions have a more terse syntax than regular functions (`function` keyword)
@@ -257,6 +334,12 @@ let squares = [1, 2, 3].map(function (x) { return x * x });
 // arrow function
 let squares = [1, 2, 3].map(x => x * x);
 ```
+<br>
+<br>
+<br>
+
+
+
 
 ##### A single parameter need not be wrapped in parens:
 
@@ -265,6 +348,12 @@ x => { ... }  // one parameter
 () => { ... }  // no parameters
 (x, y) => { ... }  // two or more parameters
 ```
+
+<br>
+<br>
+
+
+
 
 ##### The statement block of an arrow function behaves just like that of a regular function:
 
@@ -276,12 +365,24 @@ const getGrade = score => {
 };
 ```
 
+
+<br>
+<br>
+
+
+
 ##### If there's only a single **expression** (not a statement), curly braces are optional:
 
 ```js
 const logThis = () => { console.log(this) };
 const logThis = () => console.log(this);
 ```
+
+<br>
+<br>
+
+
+
 
 ##### Arrow functions will implicitly return the result of an **expression** without a block (braces):
 
@@ -298,6 +399,12 @@ const add = (x, y) => { x + y };
 const add = (x, y) => return x + y;
 ```
 
+
+<br>
+<br>
+
+
+
 ##### To implicitly return a JS object, wrap it in parens to avoid the curly braces of the object being interpreted as a statement block:
 
 ```js
@@ -309,6 +416,13 @@ let todos = ['Buy milk', 'Mow lawn'];
 // Wrap the implicit returned object in parens
 let todoObjects = todos.map(todo => ({todo: todo, done: false}));
 ```
+
+<br>
+<br>
+
+
+
+
 
 ##### All arrow functions are expressions.  There's no such thing as an arrow function definition/declaration.
 
@@ -323,6 +437,9 @@ const add = (x, y) => x + y;
 **Review Question**
 
 ❓ In your own words describe what the term "implicit return" means.
+
+
+<br>
 
 
 ### Resources

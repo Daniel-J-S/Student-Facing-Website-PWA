@@ -9,8 +9,11 @@ topics: "JavaScript Callbacks and Arrow Functions"
 
 # Week 2 - Day 3
 
-#### JavaScript Review Weekend
-- [**Lecture:** JavaScript Callbacks and Arrow Functions](/frontend-fundamentals/week-2/day-3/lecture-materials/javascript-callbacks-and-arrow-functions/) 
+#### JavaScript Callbacks and Arrow Functions
+- [**Lecture:** JavaScript Callbacks and Arrow Functions](/frontend-fundamentals/week-2/day-3/lecture-materials/javascript-callbacks-and-arrow-functions/)
+- [**Lecture** Array Iterators Walkthrough](/frontend-fundamentals/week-2/day-3/lecture-materials/array-iterators-walkthrough/) - **Deliverable** 
+- [**Lecture:** Intro to JavaScript Classes](/frontend-fundamentals/week-2/day-3/lecture-materials/intro-to-javascript-classes/)
+- [**Lab:** JavaScript Classes Lab](/frontend-fundamentals/week-2/day-3/labs/javascript-classes-lab/) - **Non-Deliverable**
 
 
 
