@@ -15,6 +15,8 @@ type: "lecture"
 | Call Functions With & Without Arguments |
 | Describe Scope |
 
+<br>
+<br>
 
 ## Roadmap
 1. Lesson Setup
@@ -25,15 +27,19 @@ type: "lecture"
 6. Scope
 7. Further Study
 
-## Lesson Recording
+<br>
+<br>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yEhIwYq3rIA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ### Lesson Setup  
 
 For this lesson, we're going to code along using a `JavaScript` `REPL` from [repl.it](https://repl.it) -- you can name it `"JavaScript Functions and Scope Practice"`.
   
+<br>
+<br>
+
+
 ### 1. What is a function?
 
 A function is a reusable block of code designed to perform a single purpose.
@@ -55,13 +61,23 @@ In addition to the functions we write, programming languages typically include n
 
 Functions commonly call other functions.
 
+<br>
+<br>
+
+
+
 ### 2. Why Functions Anyway?
+
+<br>
+
 
 #### Tackle Complexity
 
 There's no better way to tackle a complex problem than by breaking it into smaller problems.
 
 Functions allow us to break up programs into more manageable blocks of code.
+
+<br>
 
 #### Code Reuse
 
@@ -71,11 +87,19 @@ Without functions, we might have to write the same code in multiple places of th
 
 **❓What would be the downside of violating the DRY principle by repeating the same code in multiple places throughout a program?**
 
+<br>
+<br>
+
+
 #### Documentation & Debugging
 
 Simply naming functions appropriately, e.g., `renderBoard`, documents what the program is doing.
 
 Organizing code into functions also makes it easier to find and fix code that's not working as expected, a process known as **debugging**.
+
+<br>
+<br>
+
 
 #### Summary
 
@@ -120,6 +144,10 @@ function sendReport(report) {
 
 ```
 
+<br>
+<br>
+
+
 #### Review
 
 **Take a minute to discuss with a partner which would be a better programming practice:**
@@ -127,12 +155,23 @@ function sendReport(report) {
 - **Code numerous, smaller functions**<br>-or-<br>
 - **Code fewer, larger functions**
 
+<br>
+<br>
+
+
 ### 3. Defining and Calling Functions
+
+<br>
+<br>
 
 
 #### Defining Functions
 
 There are three primary ways to define functions in JS:
+
+<br>
+
+
 
 ##### 1) Function Declaration (AKA Function Definitions)
 
@@ -141,6 +180,9 @@ function sayHello(name) {
     console.log('Hello ' + name + '!');
 }
 ```
+
+<br>
+
 
 ##### 2) Function Expression
 
@@ -151,6 +193,9 @@ var sayHello = function(name) {
 ```
 
 **What similarities and differences do you see between the two approaches?**
+
+<br>
+<br>
 
 ##### Primary Difference Between Function Declarations & Expressions
 
@@ -170,6 +215,10 @@ const fnExpression = function() {
 ```
 
 > Note: Attempting to execute a function expression before it's been assigned to its variable is the source of many an error for JS developers!
+
+<br>
+<br>
+
 
 ##### 3) Arrow Functions
 
@@ -201,6 +250,11 @@ However, as cool as Arrow Functions are, they cannot be used in every scenario d
 
 Rest assured we'll be using Arrow Functions during this course, however, for this lesson we'll focus on Function Declarations and Expressions which have served the language well for over 20 years...
 
+<br>
+<br>
+
+
+
 #### Calling Functions
 
 Regardless of which of the three approaches are used to define functions, we call them the same way:
@@ -210,6 +264,10 @@ add(25, 100);  // returns 125
 ```
 
 > **Developer Vocab:** Developers might say **call**, **execute**, **invoke** or "**run** a function" - they all mean the thing.
+
+<br>
+<br>
+
 
 ##### Let's Write Another Function
 
@@ -233,11 +291,22 @@ Let's invoke the function a couple of times to try it out.
 
 Now it's your turn... 
 
+<br>
+<br>
+
+
+
 #### Practice Writing Functions
 
 You're going to write two functions, one as a function declaration & the other as a function expression.
 
 This will be an individual exercise, however, feel free to seek guidance from a partner via direct message or posting a question in the classroom Slack channel if you get stuck.
+
+
+<br>
+<br>
+<br>
+
 
 ##### EXERCISE 1: Write a Function Declaration
 
@@ -251,6 +320,11 @@ It will compute the area of a rectangle (_width_ X _height_) and return a string
 
 Invoke the function to test it.
 
+<br>
+<br>
+<br>
+
+
 ##### EXERCISE 2: Write a Function Expression
 
 Write a function named `planetHasWater` using the function expression syntax.
@@ -263,11 +337,21 @@ Bonus points if you ensure the function will work regardless of the casing of th
 
 Invoke the function a couple of times to test it!
 
+<br>
+<br>
+<br>
+
+
 ##### FUNCTION REVIEW QUESTIONS
 
 **❓ How many different ways are there to define a function?**
 
 **❓ What's the only practical difference between a function definition and a function expression?**
+
+<br>
+<br>
+<br>
+
 
 ### 4. Parameters/Arguments
 
@@ -285,6 +369,12 @@ There are a few tidbits about parameters/arguments to ponder:
 
 - Arguments are assigned to their respective parameter positionally. In the example above, the `bottle` parameter would be assigned the string "green bottle" because they are the first parameter and argument respectively.
 
+<br>
+<br>
+<br>
+
+
+
 ##### Fewer Arguments
 
 JavaScript is very flexible and won't complain when the number of arguments is not the same as the number of parameters defined.
@@ -292,6 +382,12 @@ JavaScript is very flexible and won't complain when the number of arguments is n
 If fewer arguments are passed than parameters defined, then the parameter variables without a matching argument would be set to `undefined`.
 
 > Note: Unlike some other programming languages, JavaScript won't complain if fewer (or extra) arguments are passed to a function.  However, the function that depends on certain arguments to do its job might raise an error or return an unexpected result if it doesn't receive the proper arguments.
+
+
+<br>
+<br>
+<br>
+
 
 ##### Extra Arguments
 
@@ -354,6 +450,11 @@ When writing new code, devs should  use **rest parameters** instead of `argument
 - The existence of the rest parameter in the parameter list better documents the function
 - The rest parameter is a true array and thus includes all of the nifty methods that arrays have
 
+<br>
+<br>
+<br>
+
+
 ##### ES2015 Default Parameters
 
 What if your function requires certain arguments and you want to provide a default value for the parameter if an argument is not supplied when the function is invoked?
@@ -380,10 +481,21 @@ function setColor(bicycle, color = 'purple') {
 
 Any expression can be provided as a default, including objects, etc.
 
+<br>
+<br>
+<br>
+
+
 #### Functions as Arguments
 
 In JavaScript, it's easy to pass around functions like data -  because they are - they're objects!
   
+
+<br>
+<br>
+<br>
+
+
 ##### Passing an Anonymous Function
 
 Often functions or methods (functions attached to an object) will require a function be provided as an argument.<br><br>For example, the `forEach` method on arrays:
@@ -397,6 +509,10 @@ a.forEach(function(color) {
 ```
 	
 Since the function provided to the `forEach` will never be called anywhere else in the code, why create a separate named function and pass it in? <br><br>**Anonymous functions** like shown above can really come in handy!
+
+<br>
+<br>
+<br>
 
 ##### PARAMETER/ARGUMENT REVIEW QUESTIONS
 
@@ -416,6 +532,11 @@ JavaScript has three types of scope:
 - **function scope**, also known as **local scope**
 - and, **block scope** which was added by ES2015's `let` & `const`
 
+<br>
+<br>
+<br>
+
+
 #### Why the Different Types of Scope?
 
 There's a concept in programming known as **The Principle of Least Access**.
@@ -424,6 +545,12 @@ The principle is based on the idea that limiting the accessibility of variables 
 
 A practical benefit of having different scope, however, is being able to use the same names for variables in different functions!  If there were only one scope, this wouldn't be possible.
 
+
+<br>
+<br>
+<br>
+
+
 #### Examples of Scope
 
 Ignoring _block scope_ for the moment, let's review the following diagram demonstrates both _global_ and _function_ scope:
@@ -431,6 +558,12 @@ Ignoring _block scope_ for the moment, let's review the following diagram demons
 ![](https://i.imgur.com/UtIoe7F.png)
 
 The diagram identifies 3 different scopes along with the identifiers (variables and functions) that live within each scope.
+
+
+<br>
+<br>
+<br>
+
 
 ##### You can look out, but you can't look in!
 
@@ -441,6 +574,13 @@ Basically, when a line of code accesses a variable (or function), JS will traver
 If the JS runtime engine gets to the _global scope_ (which is the top of the food chain in the scope hierarchy) and still can't find what it's looking for, that's when your program ceases due to a **ReferenceError**.
 
 **❓ Does the function `foo` have access to the variable `c`?**
+
+
+<br>
+<br>
+<br>
+
+
 
 ##### Global Scope
 
@@ -458,7 +598,17 @@ If we define a variable (or a function) within the global scope, it becomes a pr
 
 **Any questions before moving on the lab where you'll practice writing several functions?**
 
+
+<br>
+<br>
+<br>
+
+
 ### 6. Local Review & Further Study
+
+
+<br>
+
 
 ##### Immediately Invoked Function Expressions (IIFE)
 
@@ -473,6 +623,11 @@ One way we can prevent our code from leaking into the global scope is by wrappin
 })();
 ```
 **❓ Why does this construct virtually prevent variables and functions from being created in the global scope?**
+
+<br>
+<br>
+<br>
+
 
 ##### Block Scope
 
@@ -506,6 +661,12 @@ and another example of their differences:
 
 <img src="https://i.imgur.com/K0uJx2P.jpg">
 
+
+<br>
+<br>
+<br>
+
+
 ##### Hoisting
 
 Remember how we can call function declarations before they are defined thanks to _hoisting_?
@@ -533,6 +694,11 @@ function hoist() {
 }
 ```
 
+<br>
+<br>
+<br>
+
+
 #### Nesting Functions
 
 As the examples above have shown, we can define functions within functions!
@@ -558,6 +724,9 @@ function openNewAccount(name, openingBalance) {
 
 As you can see, there's a nifty `generateAcctNum` function in there and it's only relevant to when a new account is opened, so it's nested within the `openNewAcount` function.
 
+<br>
+<br>
+<br>
 
 ## References
 

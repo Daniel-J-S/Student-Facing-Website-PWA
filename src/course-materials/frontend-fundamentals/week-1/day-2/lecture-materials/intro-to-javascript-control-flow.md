@@ -111,7 +111,9 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 <br>
 <br>
   
-### What is True/Truthy & What is False/Falsey?
+
+  
+### What is True/Truthy & What is False/Falsey? (cont)
 
 - Most things in JS are _truthy_, so it's easier to remember what's _falsey_...
 
@@ -125,6 +127,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 <br>
 <br>
+
   
 ### The Not Operator
 
@@ -316,6 +319,8 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 <br>
 <br>
   
+
+
 ### Looping Statements   <small><em>while</em></small>
 
 - The first looping statement we'll look at is `while`:
@@ -336,6 +341,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 <br>
 <br>
+
   
 ### Looping Statements   <small><em>do...while</em></small>
 
@@ -356,6 +362,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 <br>
 <br>
   
+
 ### Looping Statements   <small><em>for</em></small>
 
 - The next looping statement we'll look at is the `for` statement:

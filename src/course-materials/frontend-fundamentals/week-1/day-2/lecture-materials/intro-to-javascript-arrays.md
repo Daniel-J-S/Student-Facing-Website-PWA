@@ -145,6 +145,8 @@ For this lesson, we're going to code along using a `JavaScript` `REPL` from [rep
 <br>
 <br>
   
+
+
 ### Remembering `unshift` & `shift`
  
 
@@ -163,6 +165,8 @@ For this lesson, we're going to code along using a `JavaScript` `REPL` from [rep
 <br>
 <br>
   
+
+
 ### Add/Remove Elements to/from Anywhere in the Array
  
 
@@ -189,6 +193,7 @@ The `splice` method always returns an array containing the removed elements.
 
 <br>
 <br>
+
   
 ### Iterate Over All of the Elements in an Array
  
@@ -230,6 +235,7 @@ The `splice` method always returns an array containing the removed elements.
 <br>
 <br>
   
+
 ### Copy All or Some of an Array
  
 
@@ -255,6 +261,7 @@ The `splice` method always returns an array containing the removed elements.
 <br>
 <br>
   
+
 ### Copy All of an Array
  
 
@@ -307,6 +314,7 @@ The `splice` method always returns an array containing the removed elements.
 <br>
 <br>
   
+
 ### Essential Questions
  
 
