@@ -24,7 +24,7 @@ Curriculum schedule and content is subject to change at the instructor's discret
 <br>
 <br>
 
-### [Unit Two: Full Stack Development](/full-stack-development)
+### Unit Two: Full Stack Development (Locked)
 
 | Week  | Topics |
 | ----- | ------ |
