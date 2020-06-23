@@ -1,18 +1,18 @@
 ---
 track: "Frontend Fundamentals"
 title: "Intro to AJAX and JavaScript Promises with jQuery"
-week: 4
-day: 3
+week: 2
+day: 2
 type: "lecture"
 ---
 
 # Intro to AJAX and JavaScript Promises with jQuery
 
-## Lesson Recording
+<br>
+<br>
 
-## Lesson Recording
 
-[Click Here](https://generalassembly.zoom.us/rec/share/2pV2KLb95G1LcomX5maOXoUzGoTUX6a8g3If-acNxEvu1QhxEgWrwaZfkngW0Nyw?startTime=1588448262000) to access recording
+
 
 ## Lesson Objectives
 
@@ -20,6 +20,12 @@ type: "lecture"
 2. Explain promises
 3. Populate the DOM with AJAX data
 4. Make dynamic AJAX requests
+
+
+<br>
+<br>
+<br>
+
 
 
 ## Explain AJAX
@@ -35,6 +41,11 @@ type: "lecture"
 >When these technologies are combined in the Ajax model, web applications are able to make quick, incremental updates to the user interface without reloading the entire browser page. This makes the application faster and more responsive to user actions.
 
 >Although X in Ajax stands for XML, JSON is used more than XML nowadays because of its many advantages such as being lighter and a part of JavaScript. Both JSON and XML are used for packaging information in Ajax model.
+
+
+<br>
+<br>
+<br>
 
 
 ### Lesson Setup  
@@ -125,6 +136,13 @@ $.ajax({
 );
 ```
 
+<br>
+<br>
+<br>
+
+
+
+
 ## Populate the DOM with AJAX data
 
 Now that we have successfully made an AJAX request, let's use the response from OMDB to populate the DOM. 
@@ -169,6 +187,12 @@ $.ajax({
   });
 })
 ```
+<br>
+<br>
+<br>
+
+
+
 
 ## Make dynamic AJAX requests
 
@@ -282,6 +306,12 @@ function render() {
  }
 ```
 
+<br>
+<br>
+<br>
+
+
+
 ## Review Questions
 
 ❓**In your own words describe a JavaScript Promise**
@@ -289,6 +319,13 @@ function render() {
 ❓**What is AJAX?**
 
 ❓**What jQuery method do we use to make AJAX requests**
+
+
+<br>
+<br>
+<br>
+
+
 
 ## Resources
 

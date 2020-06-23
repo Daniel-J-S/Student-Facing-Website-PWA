@@ -48,7 +48,7 @@ export default({ data, location }) => {
               <h2>Week 2</h2>  
               { weekTwoLessons }
               <hr />
-              <h2>Week 3</h2>  
+              <h2>Project Week</h2>  
               { weekThreeLessons }
             </main>
         </Layout>
