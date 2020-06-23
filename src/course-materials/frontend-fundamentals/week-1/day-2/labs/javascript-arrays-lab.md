@@ -223,6 +223,8 @@ Exercise 15:
 console.log('Exercise 15 Result: ', total);
 ```
 
+<br>
+<br>
 
 ## Additional Resources
 

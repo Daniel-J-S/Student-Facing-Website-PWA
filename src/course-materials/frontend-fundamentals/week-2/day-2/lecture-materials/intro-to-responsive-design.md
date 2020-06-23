@@ -1,7 +1,7 @@
 ---
 track: "Frontend Fundamentals"
 title: "Intro to Responsive Web Design"
-week: 5
+week: 2
 day: 2
 type: "lecture"
 ---
@@ -9,6 +9,11 @@ type: "lecture"
 
 
 # Intro to Responsive Web Design
+
+<br>
+<br>
+
+
 
 ---
 ## Learning Objectives
@@ -19,9 +24,11 @@ type: "lecture"
 | Explain the benefits of Mobile First design |
 | Use CSS Media Queries to alter page layout and styling |
 
-## Walkthrough Recording
 
-[Click Here](https://generalassembly.zoom.us/rec/share/xc9cLbXwpm5IZqeOs23jQ40TH6m8aaa8gCkZ-vpZmBzdZIs1i4NaF2Ia0l1apiDW?startTime=1588809931000) to access recording
+<br>
+<br>
+<br>
+
 
 
 ## Roadmap
@@ -34,7 +41,14 @@ type: "lecture"
 6. Essential Questions
 7. Practice
 
+<br>
+<br>
+
+
 ## Intro to Responsive Web Design
+
+<br>
+
 
 ### Background
 
@@ -46,6 +60,12 @@ Approximately 80% percent of Americans now own a smartphone and well over 50% of
 
 Web sites and applications designed just for desktop displays don't cut it anymore!
 
+
+<br>
+<br>
+
+
+
 ### Enter - Responsive Web Design
 
 **Responsive Web Design**, not surprisingly, is designing a web page to respond to the size of the device's screen being used to view it.
@@ -56,6 +76,9 @@ Lastly, what specifically **responds**? Primarily, the overall layout of the pag
 
 Okay, now that you know what Responsive Design is, let's look at some real-world examples out there.
 
+<br>
+<br>
+
 
 ## Examples of Responsive Design
 
@@ -64,6 +87,13 @@ One great example of a responsive site is one you've become very familiar with: 
 For another great example is [Smashing Magazine](https://www.smashingmagazine.com/), which is a fantastic site dedicated to web design:
 
 <img src="https://i.imgur.com/KozEWGq.png">
+
+
+<br>
+<br>
+<br>
+
+
 
 ## Mobile First Design Philosophy
 
@@ -79,6 +109,13 @@ The experts tell us that it's better, to use a **mobile first** approach for the
 - It's easier to detect performance related issues, such as the slow loading of large image files, on mobile devices and it's better to deal with performance issues early on.
 - A design based on a small screen width, although not ideal, is usable on larger devices, however the reverse is often not the case.
 
+
+<br>
+<br>
+<br>
+
+
+
 ## First Step to Enabling a Better Experience on Mobile
 
 For those of use that remember using smartphones when they first came out to browse the web, we often saw screens with tiny, unreadable content like this:
@@ -88,6 +125,10 @@ For those of use that remember using smartphones when they first came out to bro
 Unlike on desktop browsers that render pixel-by-pixel, mobile browsers actually render to a virtual **viewport**. This virtual viewport concept is what enables pinching to zoom in and out.
 
 By default, mobile browsers scale down the content to fit it in the browser window, resulting in tiny text that's hard to read.
+
+<br>
+<br>
+
 
 #### `<meta name="viewport" ...>` to the Rescue
 
@@ -106,6 +147,13 @@ With that `meta` tag in the document's `head` element, the above page will now r
 <img src="https://i.imgur.com/hdSBUzg.jpg">
 
 Much better!  Be sure to always have `<meta name="viewport" ...>` in every web app you write!
+
+
+<br>
+<br>
+<br>
+
+
 
 ## Setup
 
@@ -173,7 +221,19 @@ In the earlier lesson you saw how to position **grid items** using the `grid-col
 
 As you can see, using [grid-template-areas](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas) is very powerful!
 
+<br>
+<br>
+<br>
+
+
+
 ## Using Media Queries to Apply Different CSS Rules to a Page
+
+<br>
+<br>
+<br>
+
+
 
 #### What's a Media Query?
 
@@ -182,6 +242,13 @@ A [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/U
 A media query contains its own section of CSS that is used to modify the "base" CSS when certain "media" conditions exist.
 
 The media query can be composed of any number of _media feature expressions_ and an optional _media type_, such as `print`, `screen`, or `all`.
+
+
+<br>
+<br>
+<br>
+
+
 
 #### Our First Media Query
 
@@ -208,6 +275,12 @@ Resize the window and check it out!
 
 There's a link in the references section you can use to start to learn more about media queries.
 
+
+<br>
+<br>
+
+
+
 ## 💪 Practice Exercise (5 min)
 
 Adding another media query for another breakpoint at `(min-width: 1024px)`, a common breakpoint width for desktop displays.
@@ -216,6 +289,12 @@ Within the query, add some CSS to change colors of the backgrounds and/or text.
 
 Here's a few quick review questions for you...
 
+
+<br>
+<br>
+
+
+
 ## ❓ Essential Questions
 
 1. **In your own words, describe Responsive Design.**
@@ -223,6 +302,11 @@ Here's a few quick review questions for you...
 2. **When coding an app that we want to make responsive, is it more common to write the "base" CSS for mobile screens or desktop?**
 
 3. **What key CSS feature did we just learn about that's fundamental to the implementation of responsive design?**
+
+
+<br>
+<br>
+
 
 ## References
 
