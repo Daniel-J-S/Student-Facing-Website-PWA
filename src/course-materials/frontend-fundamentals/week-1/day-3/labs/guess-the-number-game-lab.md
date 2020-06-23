@@ -8,13 +8,22 @@ type: "lab"
 
 # JavaScript Objects Lab: Guess The Number Game
 
+<br>
+<br>
+
+
 ## Intro
 
 This lab will provide you with practice working with JavaScript objects, plus some additional practice working with arrays.
 
 This lab builds upon the `game` object that was started in the Intro to JS Objects lesson.
 
-This lab is a **deliverable** - when completed, please use the [Google Form](https://forms.gle/aGLyBqABxeDLv18B9) to submit it to your instructional team.
+This lab is a **deliverable** - when completed, please use the [Google Form](https://forms.gle/zboNDxW7v3jxKczw7) to submit it to your instructional team.
+
+<br>
+<br>
+<br>
+
 
 ### Lab Setup  
 
@@ -42,6 +51,11 @@ For this lab, create a `HTML, CSS & JS` `REPL` from [repl.it](https://repl.it) -
 
 3. To begin running your code and checking its output, click the `[run]` button.
 
+<br>
+<br>
+<br>
+
+
 ## Features
 
 - Allow the player to continually be prompted to enter their guess of what the secret number is until they guess correctly
@@ -53,6 +67,11 @@ For this lab, create a `HTML, CSS & JS` `REPL` from [repl.it](https://repl.it) -
 - If the player has guessed the secret number:
 	- Display an alert message that congrats the player and informs them of how many guesses they took
 	- End the game play
+
+<br>
+<br>
+<br>
+
 
 ## Tasks
 
@@ -87,6 +106,11 @@ Completing the following tasks will result in a working _Guess the Number_ game:
 		- The list of previous guesses can be generated using the array `join` method
 
 6. The `play` method should end (`return`) when the guess matches `secretNum`
+
+<br>
+<br>
+<br>
+
 
 ## Bonus
 

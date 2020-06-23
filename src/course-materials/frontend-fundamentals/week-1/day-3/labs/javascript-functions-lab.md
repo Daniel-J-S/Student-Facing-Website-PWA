@@ -9,19 +9,37 @@ type: "lab"
 
 # JavaScript Functions Lab
 
+<br>
+<br>
+
+
 ## Introduction
 
 This lab provides an opportunity to practice defining and coding some real-world functions
 
 > **Note:** Feel free to work in pairs to complete this lab. Also, Google/StackOverflow is a good friend to have around...
 
+<br>
+<br>
+
+
+
 ## Exercise
+
+<br>
+<br>
+
 
 ## Setup & Instructions
 
 For the exercises in this lab, create a `JavaScript` `REPL` from [repl.it](https://repl.it) -- you can name it `"JavaScript Functions lab"`.
 
 As a reminder this lab is **not a deliverable**.
+
+<br>
+<br>
+
+
 
 #### Requirements
 
@@ -73,6 +91,11 @@ Here are the functions:
 8. Define a function, as a function expression, `longestStringInArray` that takes an array of strings as an argument and returns the length of the longest string.
 
 9. Define a function, as a function declaration, `stringsLongerThan` that takes an array of strings and a number as arguments; and returns an array of the strings that are longer than the number passed in. For example, `stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3);` would return `["hello", "morning"]`.
+
+
+<br>
+<br>
+
 
 
 ## Additional Resources

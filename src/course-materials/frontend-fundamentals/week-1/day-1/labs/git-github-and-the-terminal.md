@@ -10,6 +10,10 @@ type: "lab"
 
 # Git/Github and the Terminal 
 
+<br>
+<br>
+
+
 ## Setup Instructions
 1. Create a folder in your Desktop or any other designated location on your machine; you can name it `git-github-and-terminal`
 2. Initialize a `git` repo inside that folder with the command `git init`
@@ -18,6 +22,10 @@ type: "lab"
 5. Create a file called `README.md` inside your `git-github-and-terminal` folder
 6. Write your answers to the questions below in your `README.md` file
 7. Commit your work at each point when directed (remember to `git add .` and then `git commit -m "your commit message"`)
+
+<br>
+<br>
+<br>
 
 ## Git & Github - Questions 
 
@@ -34,7 +42,16 @@ Refer back to the notes from today and/or use the internet and `google-fu` to fi
 Your commit message should read something like: <br>
 "The GIT homework answers are complete"
 
+
+<br>
+<br>
+<br>
+
+
 # Section 2: Terminal Practice
+
+<br>
+
 
 ## Episode X: A New Terminal
 
@@ -44,6 +61,11 @@ enter… The Terminal.
 
 Follow the instructions below using all the console commands introduced in
 Fundamentals, class, or that you find on your own.
+
+<br>
+<br>
+
+
 
 ## Setup
 
@@ -57,6 +79,8 @@ Fundamentals, class, or that you find on your own.
 
 * Remember, you can learn about any Unix command by typing `man` and then the command name.  E.g., `man ls`.  Type `Q` to get out of the Manual page ("man page") viewer
 
+<br>
+<br>
 
 ## Part I: Set the Scene
 
@@ -148,6 +172,8 @@ This command will not typically ask you if you "really want to delete." It will 
 
 
 20. Remove `tie_fighter_2` and `tie_fighter_3`
+
+<br>
 
 
 ## Part VIII:
