@@ -1,16 +1,17 @@
 ---
 track: "Frontend Fundamentals"
 title: "Guide to Building a Browser Game"
-week: 4
-day: 1
+week: 1
+day: 4
 type: "lecture"
 ---
 
 # Guide to Building a Browser Game
 
-## Walkthrough Recording
 
-[Click Here](https://generalassembly.zoom.us/rec/share/-PFIKL_LtSBLeY31r0L_UfcLQqi6eaa82iEf-fpemEeXhHKQR6O2YfiI0-4DADuL?startTime=1588117579000) to access recording
+<br>
+<br>
+<br>
 
 ## Intro
 
@@ -27,6 +28,11 @@ This guide will help you with:
 - How to start a project, and
 - How to organize/structure your code, in other words, how to "architect" your app.
 
+<br>
+<br>
+<br>
+
+
 ## Client-Side MVC Architectural Approach
 
 **Model-View-Controller (MVC)** is a popular software architectural pattern that is used to organize code in both client and server applications.
@@ -36,6 +42,12 @@ The following diagrams a typical client-side MVC architecture:
 <img src="https://i.imgur.com/jIY7mO5.png">
 
 Let's briefly review the Model, View and Controller components...
+
+<br>
+<br>
+<br>
+
+
 
 #### Model
 
@@ -49,6 +61,13 @@ An easy mistake new programmers make is using the **DOM** to hold state - instea
 
 By following this approach, a developer can re-use much of an application's code  if/when the application needs to be ported to other platforms such as mobile and desktop.
 
+
+<br>
+<br>
+<br>
+
+
+
 #### View
 
 The **View** is what the user sees and interacts with.
@@ -56,6 +75,12 @@ The **View** is what the user sees and interacts with.
 In a browser app, the View consists of the **DOM** elements created using HTML, CSS and JavaScript.
 
 The View can be made to "listen" for user actions by adding _event listeners_ to DOM elements for a multitude of [DOM events](https://developer.mozilla.org/en-US/docs/Web/Events). 
+
+<br>
+<br>
+<br>
+
+
 
 #### Controller
 
@@ -70,12 +95,25 @@ When an event occurs, e.g., the user clicks something, the Controller:
 1. Updates the Model variables (state).
 2. Updates the View (DOM), using the data contained in the Model variables (state).
 
+<br>
+<br>
+<br>
+
+
+
 #### Summary
 
 To summarize, the MVC architectural pattern organizes and structures code in a way that enables:
 
 - Code to be more testable, reusable and extendable.
 - Separation of the View (display) logic and business (application) logic. For example, you might decide to model a game of tic-tac-toe using the values of `1`, `-1` or `null` to represent whether a square holds Player X, Player O, or nobody, respectively.  However, when it comes time to transfer the app's state to the DOM, you can visualize the state anyway you want, e.g., a value of `1` is "rendered" with a certain image, etc.
+
+<br>
+<br>
+<br>
+
+
+
 
 ## Overall Application Flow
 
@@ -84,6 +122,14 @@ Let's see how we might apply the MVC pattern when writing a browser app such as 
 The following diagram denotes one approach to structuring your code:
 
 <img src="https://i.imgur.com/jayaYY2.png">
+
+
+<br>
+<br>
+<br>
+
+
+
 
 #### Key Points & Best Practices
 
@@ -124,6 +170,12 @@ The following diagram denotes one approach to structuring your code:
 - The overreaching principle to keep in mind is...<br>**In response to user interaction**:
 	1. **Update all state impacted by the interaction**, then
 	2. **Update the DOM by calling `render()`**.
+
+<br>
+<br>
+<br>
+
+
 
 ## Suggested Steps to Get Started
 
