@@ -8,6 +8,10 @@ type: "lecture"
 
 # Intro to JavaScript Objects
 
+<br>
+<br>
+<br>
+
    
 ## Learning Objectives
  
@@ -26,9 +30,9 @@ Students Will Be Able To:
 - Describe How a Variable References an Object
 
 
-## Lesson Recording
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QZLk5Sl7ruY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<br>
+<br>
+<br>
    
 ### Roadmap
 
@@ -49,12 +53,24 @@ Students Will Be Able To:
 15. Essential Questions
 16. Further Study
 
+
+<br>
+<br>
+<br>
+
+
 ### Lesson Setup  
 
 For this lesson, we're going to code along using an `HTML, CSS & JS` `REPL` from [repl.it](https://repl.it) -- you can name it `"JavaScript Objects Practice"`.`
    
+
+<br>
+<br>
+<br>
+
+
+
 ### What Are Objects?
- 
 
 - Objects are the most common data structure in _Object Oriented Programming_ (OOP)
 
@@ -67,6 +83,9 @@ For this lesson, we're going to code along using an `HTML, CSS & JS` `REPL` from
 
 - <p>In computer science, collections of key/value pairs are commonly referred to as dictionaries - a good visualization of what an object is</p>
 
+<br>
+<br>
+<br>
    
 ### Why Objects?
  
@@ -86,6 +105,10 @@ For this lesson, we're going to code along using an `HTML, CSS & JS` `REPL` from
 - Now does it make sense why it's called **Object Oriented Programming**?
 
    
+<br>
+<br>
+<br>
+
 ### Ways to Create Objects
 
 - There are three different ways we can create objects:
@@ -99,6 +122,10 @@ For this lesson, we're going to code along using an `HTML, CSS & JS` `REPL` from
 
 - Using `Object.create` is not very common and won't be used during SEI, but as always, you're encouraged to research it
 
+<br>
+<br>
+<br>
+
 
 ### Creating Objects with Object Literal Notation
 
@@ -110,6 +137,11 @@ For this lesson, we're going to code along using an `HTML, CSS & JS` `REPL` from
 	```
 
    
+
+<br>
+<br>
+
+
 ### Creating Objects with Object Literal Notation
  
 
@@ -146,7 +178,12 @@ For this lesson, we're going to code along using an `HTML, CSS & JS` `REPL` from
 	};
 	```
 
-   
+
+<br>
+<br>
+<br>
+
+
 ### Properties - Review Questions
  
 
@@ -165,7 +202,12 @@ For this lesson, we're going to code along using an `HTML, CSS & JS` `REPL` from
 	- **What are the property values of `game`?**
 	- **What are the data types of the keys?**
 
-   
+
+<br>
+<br>
+<br>
+
+
 ### Adding Properties to an Existing Object Using Dot Notation
 
 - There are two different syntaxes available to access, add or modify an object's properties:
@@ -180,6 +222,11 @@ game.smallestNum = 0;
 
 - Using the _assignment operator_, if a property doesn't exist, it is created, otherwise it's updated.
 
+<br>
+<br>
+<br>
+
+
    
 ### Adding/Updating Properties Practice (3 min)
  
@@ -187,6 +234,10 @@ game.smallestNum = 0;
 - Using dot notation on the `game` object:
 	- Add a property with a key of `numGuesses` set to a value of `0`
 	- Update the `smallestNum` property's value to be `1`
+
+<br>
+<br>
+<br>
 
    
 ### Accessing Properties with Square Bracket Notation
@@ -199,7 +250,13 @@ game.smallestNum = 0;
 
 > Less common is to have to resort to using _square brackets_ to access properties when the key name contains a space.
 
-   
+
+
+<br>
+<br>
+<br>
+
+
 ### Square Bracket Notation
  
 
@@ -227,6 +284,10 @@ console.log(weirdObj) // {'null': true}
 
 - Again, the expression between the square brackets can be any expression - even a function call!
 
+<br>
+<br>
+<br>
+
    
 ### Square Bracket Notation - Practice
 
@@ -253,6 +314,10 @@ console.log(weirdObj) // {'null': true}
 	```
 
 - That string in the `alert` is called a **template literal** and is delimited using back-tick characters (it's above the _tab_ key). One of its benefits is that we can use _string interpolation_ to embed the results of JS expressions right into the string using the `${<exp>}` syntax!
+
+<br>
+<br>
+<br>
 
    
 ### Checking if an Object has a Property
@@ -283,6 +348,9 @@ console.log(weirdObj) // {'null': true}
 
 - Nice!
 
+<br>
+<br>
+<br>
    
 ### Deleting a Property
  
@@ -301,6 +369,10 @@ console.log(weirdObj) // {'null': true}
 	```
 
 - **Try it out!** Use the `delete` operator to remove one of the items from your `catalog` object
+
+<br>
+<br>
+<br>
 
    
 ### Iterating Over an Object's Properties
@@ -338,6 +410,12 @@ console.log(weirdObj) // {'null': true}
 > Note: The ECMAScript specification does not dictate how properties should be ordered, however, all browsers currently iterate over them in the order they are defined/added.
 
    
+
+<br>
+<br>
+<br>
+
+
 ### Property Shorthand Syntax
  
 
@@ -368,6 +446,10 @@ console.log(weirdObj) // {'null': true}
 
 - Again, note how the variable name determines the name of the property
 
+<br>
+<br>
+<br>
+
    
 ### Methods
  
@@ -395,6 +477,11 @@ console.log(weirdObj) // {'null': true}
 - We'll have a dedicated lesson on `this`
 
 - **IMPORTANT:** Due to how `this` is set within _arrow functions_, it's best to avoid using them as methods in objects
+
+<br>
+<br>
+<br>
+
 
    
 ### How Variables Reference an Object
@@ -437,6 +524,10 @@ arr1 === arr2  // false!
 arr3 === arr1 // true!
 ```
 
+<br>
+<br>
+<br>
+
    
 ### Essential Questions
 
@@ -455,6 +546,10 @@ arr3 === arr1 // true!
 		const age = prompt('Enter your age: ');
 		const person = {name, age};
 	```
+
+<br>
+<br>
+<br>
 
    
 ### Further Study
