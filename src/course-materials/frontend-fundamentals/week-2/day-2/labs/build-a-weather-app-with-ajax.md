@@ -1,8 +1,8 @@
 ---
 track: "Frontend Fundamentals"
 title: "Build a Weather App With AJAX"
-week: 4
-day: 3
+week: 2
+day: 2
 type: "lab"
 ---
 
@@ -24,6 +24,13 @@ type: "lab"
 
 - If the user searches for another city, make sure the page is only showing ONE city's forecast at a time (i.e. make sure the previous results don't stay on the page).
 
+
+<br>
+<br>
+<br>
+
+
+
 ## Bonus
 
 - Allow a drop-down menu for the user to choose how many days' worth of forecasts they want, then display that many days of weather predictions on the page.
@@ -39,6 +46,11 @@ type: "lab"
   - User Stories
   - Wireframes (you place hosted images in your README)
   - Stretch Goals/Future Goals
+
+<br>
+<br>
+<br>
+
 
 ## Super Bonus
 

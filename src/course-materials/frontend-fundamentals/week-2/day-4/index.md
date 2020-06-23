@@ -1,15 +1,15 @@
 ---
 track: "Frontend Fundamentals"
-title: "Week 2 - Day 2"
+title: "Day 3"
 week: 2
-day: 2
+day: 3
 type: "homepage"
 topics: "Intro to JavaScript Classes"
 ---
 
 
-# Week 2 - Day 2
+# Week 2 - Day 3
 
 #### JavaScript Classes
-- [**Lecture:** Intro to JavaScript Classes](/frontend-fundamentals/week-2/day-2/lecture-materials/intro-to-javascript-classes/)
-- [**Lab:** JavaScript Classes Lab](/frontend-fundamentals/week-2/day-2/labs/javascript-classes-lab/) - **Non-Deliverable**
+- [**Lecture:** Intro to JavaScript Classes](/frontend-fundamentals/week-2/day-3/lecture-materials/intro-to-javascript-classes/)
+- [**Lab:** JavaScript Classes Lab](/frontend-fundamentals/week-2/day-3/labs/javascript-classes-lab/) - **Non-Deliverable**
