@@ -2,11 +2,15 @@
 track: "Frontend Fundamentals"
 title: "Intro to DOM Events"
 week: 1
-day: 2
-type: 4lecture"
+day: 4
+type: "lecture"
 ---
 
 # Intro to DOM Events
+
+<br>
+<br>
+
 
 
 ## Learning Objectives
@@ -18,9 +22,10 @@ type: 4lecture"
 - Explain event bubbling
 - Use event bubbling to implement event delegation
 
-## Lesson Recording
+<br>
+<br>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lybtmhzvDFI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ## Roadmap
   
@@ -32,6 +37,12 @@ type: 4lecture"
 - Creating a new element
 - Event bubbling
 - Event delegation
+
+
+<br>
+<br>
+
+
 
 ### Lesson Setup  
 
@@ -62,6 +73,11 @@ intro-to-dom-events/
 </html>
 ```
 
+<br>
+<br>
+
+
+
 ### Setup
   
 
@@ -78,6 +94,11 @@ intro-to-dom-events/
 - The `defer` attribute ensures the DOM is ready before the script executes.
 
 - Putting a temporary `alert('js loaded)` will verify `script.js` is being loaded.
+
+<br>
+<br>
+
+
 
   
 ### What are DOM Events?
@@ -96,7 +117,12 @@ intro-to-dom-events/
 
 - Take a gander [here](https://developer.mozilla.org/en-US/docs/Web/Events) at the type and sheer number of events.
 
-  
+
+<br>
+<br>
+
+
+
 ### What's an Event Listener?
   
 
@@ -120,6 +146,11 @@ intro-to-dom-events/
 	- **event-name** is the name of the event (string)
 	- **callback** is the function we want executed when the event happens.  When called by the JS engine, it will be passed an _event object_ as an argument.
 	- **use-capture** is a boolean and is optional. It has to do with _event phases_. We won't need to worry about it in SEI but if you want to know more, read the [Event Phases section of this article](https://www.smashingmagazine.com/2013/11/an-introduction-to-dom-events/). 
+
+<br>
+<br>
+
+
 
   
 ### Our first Event Listener
@@ -156,7 +187,13 @@ intro-to-dom-events/
 
 - Congrats, registering an event listener is that easy!
 
-  
+
+ <br>
+ <br>
+ <br>
+
+
+
 ### Review Questions
   
 
@@ -166,7 +203,13 @@ intro-to-dom-events/
 
 3. **Name three events that might be triggered in the browser.**
 
-  
+
+<br>
+<br>
+<br>
+
+
+
 ### The _event object_
   
 
@@ -177,7 +220,13 @@ intro-to-dom-events/
 	- The `target` property, which holds a reference to the DOM element that triggered (dispatched) the event.
 	- Note that JS's `this` keyword within the listener function will be set to the DOM element that `addEventListener` was called on.
 
-  
+
+<br>
+<br>
+<br>
+
+
+
 ### Creating a new `li` element
 
 - If we want to add a new comment, we're going to need to create a new `<li>` element.
@@ -191,6 +240,12 @@ intro-to-dom-events/
 	});
 	```
 	> Note: At this point, the element is "in memory" only and is not part of the DOM (yet).
+
+<br>
+<br>
+<br>
+
+
 
   
 ### Creating a new Comment
@@ -238,7 +293,13 @@ intro-to-dom-events/
 
 - One line of code is all it takes - you got this!
 
-  
+
+<br>
+<br>
+<br>
+
+
+
 ### Event bubbling
   
 
@@ -250,7 +311,12 @@ intro-to-dom-events/
 
 - Why does JS bubble up (propagate) its events?...
 
-  
+<br>
+<br>
+<br>
+
+
+
 ### Event Delegation
   
 
@@ -282,6 +348,13 @@ intro-to-dom-events/
 
 - Without event delegation, you would have to register a listener every time a new element, such as our comment `<li>` is added. 
 
+<br>
+<br>
+<br>
+
+
+
+
   
 ### Event Delegation (Practice)
   
@@ -289,6 +362,12 @@ intro-to-dom-events/
 - **Practice: Write the code to change the color of the text of a clicked comment.**
 
 - Hint: DOM elements have a `style` property that's an object with the CSS properties (named using camel-casing), e.g., `myLi.style.fontSize`.
+
+<br>
+<br>
+<br>
+
+
 
   
 ### Removing event listeners
@@ -302,7 +381,13 @@ intro-to-dom-events/
 	This would remove the 'click' event listener (`handleClick`) that was registered on the `btn` element like this:  
 	`btn.addEventListener('click', handleClick);`
 
-  
+
+<br>  
+<br>  
+<br>
+
+
+
 ### Essential Questions
   
 
@@ -312,7 +397,13 @@ intro-to-dom-events/
 
 3. **Let's say you needed to have an event listener respond to a `click` event on the `<td>`s within a `<table>` - would you have to add event listeners to each `<td>`?  Support your answer.**
 
-  
+<br> 
+<br> 
+<br> 
+
+
+
+
 ## References
   
 
