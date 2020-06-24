@@ -9,6 +9,12 @@ type: "lab"
 
 # DOM "Menu" Lab - Part 1
 
+<br>
+<br>
+
+
+
+
 ## Intro
 
 In the _Intro to the DOM_ we selected, manipulated and created DOM elements - this lab provides practice doing the same.
@@ -17,7 +23,11 @@ This is the first of a two-part lab that builds a menu bar with a slide-down sub
 
 > Note:  Several of the tasks in this lab would be better done upfront in the markup or CSS instead of using JS, however the goal of this lab is to provide practice modifying the DOM using JS. <br> In your projects, if the HTML or CSS is known in advance and/or static (unchanging), code it in HTML and CSS!
 
-### This lab, combined with Part 2, is a deliverable.
+### This lab is not a deliverable.
+
+<br>
+
+
 
 ## Setup  
 
@@ -123,11 +133,23 @@ dom-menu-lab/
 
 	We will cover these in a later lesson, but if you are curious, feel free to check out the links above.
 
+<br>
+<br>
+
+
+
 ## Tasks
+
+<br>
+
 
 #### Task 1.0
 
 Select and cache the `<main>` element in a variable named `mainEl`.
+
+<br>
+
+
 
 #### Task 1.1
 
@@ -135,9 +157,17 @@ Set the background color of `mainEl` to the value stored in the `--main-bg` CSS 
 
 **Hint:** Assign a string that uses the CSS `var()` function like this:<br>`'var(--main-bg)'`
 
+<br>
+
+
+
 #### Task 1.2
 
 Set the content of `mainEl` to `<h1>SEI Rocks!</h1>`.
+
+<br>
+
+
 
 #### Task 1.3
 
@@ -145,29 +175,56 @@ Add a class of `flex-ctr` to `mainEl`.
 
 **Hint:** [Element.classList API](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
 
+
+<br>
+
+
 #### Progress Check:
 
 <img src="https://i.imgur.com/6y10M6X.png">
+
+
+<br>
+
 
 #### Task 2.0
 
 Select and cache the `<nav id="top-menu">` element in a variable named `topMenuEl`.
 
+
+<br>
+
+
 #### Task 2.1
 
 Set the height `topMenuEl` element to be `100%`.
+
+
+<br>
+
 
 #### Task 2.2
 
 Set the background color of `topMenuEl` to the value stored in the `--top-menu-bg` CSS custom property.
 
+<br>
+
+
 #### Task 2.3
 
 Add a class of `flex-around` to `topMenuEl`.
 
+
+<br>
+
+
 #### Progress Check:
 
 <img src="https://i.imgur.com/tzYjw8n.png">
+
+
+<br>
+
 
 #### Task 3.0
 
@@ -183,6 +240,11 @@ var menuLinks = [
 ];
 ```
 
+<br>
+<br>
+
+
+
 #### Task 3.1
 
 Iterate over the entire `menuLinks` array and for each "link" object:
@@ -194,6 +256,12 @@ Iterate over the entire `menuLinks` array and for each "link" object:
 - Set the new element's content to the value of the `text` property of the "link" object.
 
 - Append the new element to the `topMenuEl` element.
+
+
+<br>
+<br>
+
+
 
 #### Congrats!
 

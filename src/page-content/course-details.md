@@ -39,7 +39,7 @@ You will be required to meet 80% completion of homework assignments at the end o
 | Daniel Scott  |  Lead Instructor 
 | Morgan Pierson  |  Lead Instructor 
 | Melissa Young | Instructional Associate 
-| TBT | Outcomes Coach
+| Joy Haugen | Outcomes Coach
 
 <br>
 <br>

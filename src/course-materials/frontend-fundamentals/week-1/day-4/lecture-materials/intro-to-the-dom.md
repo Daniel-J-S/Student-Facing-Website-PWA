@@ -8,6 +8,12 @@ type: "lecture"
 
 # Intro to the DOM
 
+<br>
+<br>
+<br>
+
+
+
 ## Learning Objectives
   
 <p>Students Will Be Able To:</p>
@@ -21,8 +27,11 @@ type: "lecture"
 - Manipulate the Classes of an Element
 - Iterate Over a Collection of Elements
   
-## Lesson Recording
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cBB3ZGg8QmQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+<br>
+<br>
+
+
 
 
 ## Roadmap
@@ -39,6 +48,12 @@ type: "lecture"
 - Attributes of an element - Classes
 - Selecting multiple elements
 - Iterating over a collection of elements
+
+
+<br>
+<br>
+<br>
+
 
 ### Lesson Setup  
 
@@ -69,6 +84,11 @@ intro-to-dom/
 </html>
 ```
 
+<br>
+<br>
+<br>
+
+
   
 ### Lesson Setup (continued)
   
@@ -98,6 +118,12 @@ intro-to-dom/
 
 - Note: It's a best practice to use double quotes and kebob-casing in the HTML.
 
+<br>
+<br>
+<br>
+
+
+
 
 ### What's the DOM
   
@@ -108,6 +134,12 @@ intro-to-dom/
 
 - Let's type `document` in DevTool's console and explore some of its properties.
 
+<br>
+<br>
+<br>
+
+
+
   
 ### What's the DOM
   
@@ -116,6 +148,13 @@ intro-to-dom/
 	-  Add/remove elements to/from the document
 	-  Change the content of elements
 	-  Change the style properties of elements
+
+
+<br>
+<br>
+<br>
+
+
 
 
   
@@ -143,6 +182,11 @@ intro-to-dom/
 
 - Now that's what I call a DOM!
 
+<br>
+<br>
+<br>
+
+
   
 ### Selecting DOM Elements
   
@@ -158,6 +202,12 @@ intro-to-dom/
 	-  Append the new element to its parent element
 
 - Devs must use JS to select DOM elements so that the above steps can be performed!
+
+<br>
+<br>
+<br>
+
+
 
   
 ### Select a single element by its _id_
@@ -176,6 +226,12 @@ intro-to-dom/
 
 - But what if the element doesn't have an id...
 
+<br>
+<br>
+<br>
+
+
+
   
 ### Select a single element using a  CSS selector
   
@@ -192,6 +248,13 @@ intro-to-dom/
 
 - If no matching node is found, `null` is returned.
 
+<br>
+<br>
+<br>
+
+
+
+
   
 ### 💪 Practice
   
@@ -203,6 +266,13 @@ intro-to-dom/
 - Use `querySelector()` to select the first element with a class of _cool_ and assign it to a variable named `pEl`.
 
 - **Verify that the `<p>` element was selected by logging out `pEl`.**
+
+<br>
+<br>
+<br>
+
+
+
 
   
 ### Change the content of an element
@@ -223,7 +293,14 @@ intro-to-dom/
 
 - However, using `textContent` is more efficient if just setting text.
 
-  
+
+<br>  
+<br>  
+<br>  
+
+
+
+
 ### Change the style of an element
   
 
@@ -246,7 +323,13 @@ intro-to-dom/
 
 - **Your turn:** Change the `color` of the `<p>` element to a color of your choosing.
 
-  
+<br>  
+<br>  
+<br>  
+
+
+
+
 ### Attributes of an element
   
 
@@ -257,7 +340,13 @@ intro-to-dom/
 	- `setAttribute(name, value)`
 	- `hasAttribute(name)`
 
-  
+<br>  
+<br>  
+<br>  
+
+
+
+
 ### Attributes of an element  💪 Practice (5 mins)
   
 
@@ -267,6 +356,13 @@ intro-to-dom/
 
 - In the JS, write the line of code that will add an `href` attribute that will make the link navigate to "https://www.google.com".
   
+<br>  
+<br>  
+<br>  
+
+
+
+
 ### Attributes of an element - Classes
   
 
@@ -279,7 +375,15 @@ intro-to-dom/
 	- `contains(className)`
 	- `replace(oldClass, newClass)`
 
+<br>
+<br>
+<br>
+
+
+
+
   
+
 ### Review Questions
   
 
@@ -289,7 +393,13 @@ intro-to-dom/
 
 - **What DOM element property is used to style a DOM element?**
 
-  
+<br>  
+<br>  
+<br>  
+
+
+
+
 ### Selecting multiple elements
   
 
@@ -318,6 +428,13 @@ intro-to-dom/
 
 - By itself, `querySelectorAll` actually provides all the DOM selection power a web dev needs!
 
+<br>
+<br>
+<br>
+
+
+
+
   
 ### Select multiple elements with  <span style="text-transform: lowercase">query</span>S<span style="text-transform: lowercase">elector</span>A<span style="text-transform: lowercase">ll</span>
   
@@ -325,6 +442,13 @@ intro-to-dom/
 - **You Do:** Use `querySelectorAll` to select all of the elements with a class of `comment` and assign to a variable named `commentEls`.
 
 - `console.log(commentEls)` to verify it worked. 
+
+
+<br>
+<br>
+<br>
+
+
 
   
 ### DOM Selection Summary
@@ -335,7 +459,13 @@ intro-to-dom/
 	- **querySelector**: Use when you need to select a single element that **does not** have an `id`.
 	- **querySelectorAll**: Use when you need to select multiple elements.
 
-  
+<br>  
+<br>  
+<br>  
+
+
+
+
 ### Iterating over a collection of elements
   
 
@@ -359,7 +489,13 @@ intro-to-dom/
 
 - Hint: You must use a string like `'30px'` (just the number `30` or the string of `'30'` will not work). 
 
-  
+<br>  
+<br>  
+<br>  
+
+
+
+
 ### Final Questions
 
 1. **What method is the most efficient for selecting an element that has an `id`?**
@@ -369,6 +505,13 @@ intro-to-dom/
 3. **If you had to pick only one method to select DOM elements with during your career as a developer, which one should you choose?**
 
 4. **Which property on DOM elements is used to set the CSS properties for that element?**
+
+<br>
+<br>
+<br>
+
+
+
 
   
 ## References
