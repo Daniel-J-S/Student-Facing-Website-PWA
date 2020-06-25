@@ -363,13 +363,16 @@ console.log(weirdObj) // {'null': true}
 
 	```js
 	const geniuses = {
+		Jemison: true,
+		Hopper: true,
 		Einstein: true,
-		Newton: true,
-		Snooki: false
+		McNair: true,
+		Lovelace: true,
+		carrotTop: false
 	};
 	
 	// see ya!
-	delete geniuses.Snooki;
+	delete geniuses.carrotTop;
 	```
 
 - **Try it out!** Use the `delete` operator to remove one of the items from your `catalog` object
