@@ -85,7 +85,7 @@ Functions provide code reuse because they can be called over and over.
 
 Without functions, we might have to write the same code in multiple places of the app which violates a key principle known as **DRY** - Don't Repeat Yourself!
 
-**❓What would be the downside of violating the DRY principle by repeating the same code in multiple places throughout a program?**
+**❓ What would be the downside of violating the DRY principle by repeating the same code in multiple places throughout a program?**
 
 <br>
 <br>
@@ -283,7 +283,7 @@ The `areBothEven` function is defined to accept two arguments. <br><br>These arg
 
 The `return` keyword returns the result of the expression that follows it - which looks kind of crazy, but isn't as intimidating as it appears when you break it down.
 
-> Note: In the real world, much of the code you write will be code designed prevent and handle error conditions. For example, in the `areBothEven` function above, it would be important to ensure that both of the inputs are numbers.  However, in SEI, we will minimize the amount of error handling code so that we can focus more on what it is we're trying to teach.  There just isn't enough time, so we must prioritize.
+> Note: In the real world, much of the code you write will be code designed prevent and handle error conditions. For example, in the `areBothEven` function above, it would be important to ensure that both of the inputs are numbers.  However, in SEIR, we will minimize the amount of error handling code so that we can focus more on what it is we're trying to teach.  There just isn't enough time, so we must prioritize.
 
 Let's invoke the function a couple of times to try it out.
 
@@ -520,7 +520,15 @@ Since the function provided to the `forEach` will never be called anywhere else 
 
 **❓ Explain how _arguments_ and _parameters_ are "matched up".**
   
+
+<br>
+<br>
+
+
+
 ### 5. Scope
+
+<br>
 
 #### What is Scope?
 
