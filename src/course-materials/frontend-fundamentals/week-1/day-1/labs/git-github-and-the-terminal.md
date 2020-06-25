@@ -17,8 +17,8 @@ type: "lab"
 ## Setup Instructions
 1. Create a folder in your Desktop or any other designated location on your machine; you can name it `git-github-and-terminal`
 2. Initialize a `git` repo inside that folder with the command `git init`
-3. Create a repository on [`github.com`](https://github.com)
-4. Add your remote from `github` to your local repo with the following command: `git remote add origin https://www.github.com/YOURUSERNAME/git-github-and-terminal.git`
+3. Create a repository on [`git.generalassemb.ly`](git.generalassemb.ly) - **Your Github Enterprise Account**
+4. Add your remote from `github` to your local repo with the following command: `git remote add origin https://www.git.generalassemb.ly/YOURUSERNAME/git-github-and-terminal.git`
 5. Create a file called `README.md` inside your `git-github-and-terminal` folder
 6. Write your answers to the questions below in your `README.md` file
 7. Commit your work at each point when directed (remember to `git add .` and then `git commit -m "your commit message"`)
@@ -38,17 +38,12 @@ Refer back to the notes from today and/or use the internet and `google-fu` to fi
 1. What command do you use to ask git to move your file from the staging area to the repository?
 
 
-**Commit your work!** <br>
-Your commit message should read something like: <br>
-"The GIT homework answers are complete"
-
-
 <br>
 <br>
 <br>
 
 
-# Section 2: Terminal Practice
+## Terminal Practice
 
 <br>
 
@@ -189,7 +184,7 @@ This command will not typically ask you if you "really want to delete." It will 
 
 <br>
 
-# Commit and push your updated code:
+## Commit and push your updated code:
 
 "Add" your changes (prepare them to be "committed"):
 ```bash
