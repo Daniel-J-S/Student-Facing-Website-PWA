@@ -455,4 +455,4 @@ motivation(){
 ## Going Forward
 - Today, we have only scratched the surface of tools such as _Terminal_ and _VS Code_
 
-- Rest assured that throughout your time in SEIR Flex, we will help you to get to know these tools much better!
+- Rest assured that throughout your time in SEIR, we will help you to get to know these tools much better!
