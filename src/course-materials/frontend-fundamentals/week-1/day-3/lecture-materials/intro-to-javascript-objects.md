@@ -33,6 +33,7 @@ Students Will Be Able To:
 <br>
 <br>
 <br>
+
    
 ### Roadmap
 
@@ -86,6 +87,8 @@ For this lesson, we're going to code along using an `HTML, CSS & JS` `REPL` from
 <br>
 <br>
 <br>
+
+
    
 ### Why Objects?
  
@@ -120,7 +123,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS` `REPL` from
 
 - Later, we'll learn how _Classes_ are used
 
-- Using `Object.create` is not very common and won't be used during SEI, but as always, you're encouraged to research it
+- Using `Object.create` is not very common and won't be used during SEIR, but as always, you're encouraged to research it
 
 <br>
 <br>
@@ -352,6 +355,7 @@ console.log(weirdObj) // {'null': true}
 <br>
 <br>
    
+
 ### Deleting a Property
  
 
