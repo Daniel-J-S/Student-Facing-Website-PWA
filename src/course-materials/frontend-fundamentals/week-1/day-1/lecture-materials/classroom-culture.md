@@ -64,7 +64,7 @@ type: "lecture"
 
 ### Slack
 
-#### 3 channels
+#### 4 channels
 
 	- seir_629_debugging_dm
 	- seir_629_funnybiz_dm
