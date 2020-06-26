@@ -14,11 +14,9 @@ Dougie the Donut and Pizza Rat have become best buds taking New York City by sto
 <br> Now they've taken it upon themselves to cause trouble around the city! The catch is, they don't want to get caught by the police, so they've put their brains together to come up with a helpful app idea that will allow them to see what kind of trouble they can cause without getting thrown in jail. 
 <br> Let's help them build it! 
 
-
-## Walkthrough Recording
-
-[Click Here](https://generalassembly.zoom.us/rec/share/4sAkLoPwqz9JEtbkyUD0C-kkLMe7aaa80HAb-6Jbmk91NsRmfJolqLvDXrv4mbVI?startTime=1588722648000) to access recording
-
+<br>
+<br>
+<br>
 
 
 #### Learning Objectives
@@ -53,10 +51,20 @@ Dougie the Donut and Pizza Rat have become best buds taking New York City by sto
    css/
      style.css
 ```        
+<br>
+<br>
+<br>
+
 
 ## The App 
 
 Overall, Dougie and Pizza Rat want this app to provide a search feature. <br>The data it will search through will be the [311 call data](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9) provided by the [NYC Open Data API](http://opendata.cityofnewyork.us/), and display all the complaints made to the NYPD, filtered by borough. <br>They also want to see how the police responded to the complaint, since that's what they'll use to determine whether or not they can cause the same trouble without consequences! 
+
+
+<br>
+<br>
+<br>
+
 
 ## The Data 
 
@@ -93,6 +101,11 @@ For this lab in particular, here are some important pages you may need to look t
   
 Now that you're armed with an API and it's documentation, as well as a general idea of what the app should do -- let's finally get onto the specifics of the app!  
 
+<br>
+<br>
+<br>
+
+
 ## Minimum Viable Product (MVP)
 
 #### Below is a more detailed list of what functionalities Dougie and Pizza Rat want for their app. 
@@ -112,9 +125,14 @@ Now that you're armed with an API and it's documentation, as well as a general i
 
 #### Example of a working app
 
-![](https://imgur.com/ssFKX3J.gif)
+![example](https://imgur.com/ssFKX3J.gif)
 
 ---
+
+<br>
+<br>
+<br>
+
 
 ## Hungry for More? 
 
@@ -122,8 +140,14 @@ Now that you're armed with an API and it's documentation, as well as a general i
 
 - You'll notice the complaint descriptors fall under umbrella categories (e.g. "No Access", "Banging/Pounding", "Loud Music/Party", etc. etc.) 
     * Display somewhere on the page all the categories and how many times they show up for the current list of complaints
-    * e.g. "No Access was complained about 4 times", "Banging/Pounding was complained about 10 times", "Loud Music/Party was complained about 20 times"
+    * e.g. **"No Access was complained about 4 times", "Banging/Pounding was complained about 10 times", "Loud Music/Party was complained about 20 times"**
   
+
+<br>
+<br>
+<br>
+
+
 ## Super Hungry for More?
 
 - The data provides latitude and longitude coordinates for where the complaints took place. Consider looking into  geolocation and google maps so that you can display a map with a pin showing exactly where the complaint was made
