@@ -12,4 +12,4 @@ topics: "Holiday - Observance of Independence Day"
 
 #### Holiday - Observance of Independence Day
 
-There will be no classroom activities facilitated this day
+There will be no classroom activities facilitated this day, however this is a great opportunity to get caught up on labs or get more practice with yesterday's resources!
