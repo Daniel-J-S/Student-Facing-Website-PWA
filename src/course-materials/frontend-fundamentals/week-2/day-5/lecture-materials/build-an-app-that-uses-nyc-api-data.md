@@ -1,8 +1,8 @@
 ---
 track: "Frontend Fundamentals"
 title: "Dougie the Donut & Pizza Rat"
-week: 5
-day: 1
+week: 2
+day: 5
 type: "lecture"
 ---
 
