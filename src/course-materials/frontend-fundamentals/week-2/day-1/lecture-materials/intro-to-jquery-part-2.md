@@ -252,7 +252,7 @@ That's better!
 
 
 
-##### 💪 PRACTICE EXERCISE
+##### 💪 &nbsp; PRACTICE EXERCISE
 
 **Using jQuery, add the Bootstrap class named "text-center" to the `<h1>` tag.**
 
@@ -543,7 +543,7 @@ That's better!
 
 
 
-## 💪 Practice Exercise - Add New Homes
+#### 💪 Practice Exercise - Add New Homes
 
 Now for a fun challenge.
 
