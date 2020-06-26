@@ -212,7 +212,7 @@ Before we can change the properties of DOM elements, we must first _select_ them
 
 You've already had some practice doing this with native JavaScript.
 
-**Q: What native JS methods have we used to select elements in the DOM?**
+**❓ What native JS methods have we used to select elements in the DOM?**
 
 <br>
 <br>
@@ -249,7 +249,7 @@ All CSS3 selectors rules apply. For example, this is how you could select just t
 <br>
 
 
-##### 💪 PRACTICE EXERCISE
+##### 💪 &nbsp;PRACTICE EXERCISE
 
 In Chrome's console (`cmd-opt-J`), use jQuery to select the `<div>` that have a class of `big-and-round`.
 
@@ -325,7 +325,7 @@ Those DOM elements can be accessed using bracket notation like with any other ar
 
 
 
-##### 💪 PRACTICE EXERCISE
+##### 💪 &nbsp; PRACTICE EXERCISE
 
 Assuming you don't know how many `<li>` DOM elements are contained in the `$li` jQuery set, assign the last `<li>` in `$li` to a variable named `lastLi`.
 
@@ -508,7 +508,7 @@ $('p').css('font-size', '30px');
 <br>
 
 
-##### 💪 PRACTICE EXERCISE
+##### 💪 &nbsp; PRACTICE EXERCISE
 
 In the console, write the code that will set the background color of _only the last_ `<li>` element to yellow.
 
