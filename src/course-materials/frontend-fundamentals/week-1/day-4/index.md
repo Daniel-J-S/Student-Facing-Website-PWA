@@ -11,6 +11,8 @@ topics: "Intro to the DOM & DOM Events"
 # Week 1 - Day 4
 
 #### Intro to the DOM & DOM Events
+- [**Lecture:** Intro to JavaScript Objects](/frontend-fundamentals/week-1/day-4/lecture-materials/intro-to-javascript-objects/)
+- [**Lab:** Guess the Number Game Lab](/frontend-fundamentals/week-1/day-4/labs/guess-the-number-game-lab/) - **Deliverable**
 - [**Lecture:** Intro to the DOM](/frontend-fundamentals/week-1/day-4/lecture-materials/intro-to-the-dom/)
 - [**Lecture:** Intro to DOM Events](/frontend-fundamentals/week-1/day-4/lecture-materials/intro-to-dom-events/)
 - [**Lab:** DOM Menu Lab - Part 1 of 2](/frontend-fundamentals/week-1/day-4/labs/dom-menu-lab-part-1/) - **Non-Deliverable**
