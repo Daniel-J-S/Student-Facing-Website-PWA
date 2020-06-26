@@ -68,22 +68,19 @@ let result2 = compute(10, 5, subtract);
 
 **Review Question**
 
-❓ When the add and subtract functions are passed as arguments to the compute function - they are ___ functions.
+**❓ When the add and subtract functions are passed as arguments to the compute function - they are ___ functions.**
 
 Also, note that we are passing named functions `(add& sum)` instead of using an anonymous inline function like with the `forEach` earlier.
 
-
-
-
-<br>
-<br>
-<br>
-
-
-
-
-
 ##### One of the best ways to learn about callbacks is to first understand their use-cases.
+
+
+
+<br>
+<br>
+
+
+
 
 **Here are three use-cases for callback functions:**
 
@@ -215,7 +212,7 @@ How does the browser know when an image has been retrieved and is ready to be pa
 
 
 
-##### Using Callbacks to Work with Asynchronous Code
+#### Using Callbacks to Work with Asynchronous Code
 
 JavaScript provides two ways to run a function **after** an asynchronous operation completes its long running process:
 
@@ -230,7 +227,7 @@ JavaScript provides two ways to run a function **after** an asynchronous operati
 
 
 
-##### A Simulated Asynchronous Example
+#### A Simulated Asynchronous Example
 
 The `getFriends()` function below is _synchronous_. It returns an array of friends immediately when invoked, and everything works just peachy:
 
@@ -284,7 +281,7 @@ What's a programmer to do?
 
 
 
-##### Callbacks to the Rescue 
+#### Callbacks to the Rescue 
 
 We're going to make it possible to work with the `getFriendsAsync` function by refactoring it to accept a callback function as follows:
 
@@ -341,7 +338,7 @@ let squares = [1, 2, 3].map(x => x * x);
 
 
 
-##### A single parameter need not be wrapped in parens:
+#### A single parameter need not be wrapped in parens:
 
 ```js
 x => { ... }  // one parameter
@@ -355,7 +352,7 @@ x => { ... }  // one parameter
 
 
 
-##### The statement block of an arrow function behaves just like that of a regular function:
+#### The statement block of an arrow function behaves just like that of a regular function:
 
 ```js
 const getGrade = score => {
@@ -371,7 +368,7 @@ const getGrade = score => {
 
 
 
-##### If there's only a single **expression** (not a statement), curly braces are optional:
+#### If there's only a single **expression** (not a statement), curly braces are optional:
 
 ```js
 const logThis = () => { console.log(this) };
@@ -384,7 +381,7 @@ const logThis = () => console.log(this);
 
 
 
-##### Arrow functions will implicitly return the result of an **expression** without a block (braces):
+#### Arrow functions will implicitly return the result of an **expression** without a block (braces):
 
 ```js
 const add = (x, y) => { return x + y };
@@ -405,7 +402,7 @@ const add = (x, y) => return x + y;
 
 
 
-##### To implicitly return a JS object, wrap it in parens to avoid the curly braces of the object being interpreted as a statement block:
+#### To implicitly return a JS object, wrap it in parens to avoid the curly braces of the object being interpreted as a statement block:
 
 ```js
 let todos = ['Buy milk', 'Mow lawn'];
@@ -424,7 +421,7 @@ let todoObjects = todos.map(todo => ({todo: todo, done: false}));
 
 
 
-##### All arrow functions are expressions.  There's no such thing as an arrow function definition/declaration.
+#### All arrow functions are expressions.  There's no such thing as an arrow function definition/declaration.
 
 ```js
 // Nope, syntax error (no declarations for arrow functions)
@@ -436,7 +433,7 @@ const add = (x, y) => x + y;
 
 **Review Question**
 
-❓ In your own words describe what the term "implicit return" means.
+**❓ In your own words describe what the term "implicit return" means.**
 
 
 <br>
