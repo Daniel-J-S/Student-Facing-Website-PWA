@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Intro to JavaScript Objects"
 week: 1
-day: 3
+day: 4
 type: "lecture"
 ---
 
@@ -33,6 +33,7 @@ Students Will Be Able To:
 <br>
 <br>
 <br>
+
    
 ### Roadmap
 
@@ -86,6 +87,8 @@ For this lesson, we're going to code along using an `HTML, CSS & JS` `REPL` from
 <br>
 <br>
 <br>
+
+
    
 ### Why Objects?
  
@@ -120,7 +123,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS` `REPL` from
 
 - Later, we'll learn how _Classes_ are used
 
-- Using `Object.create` is not very common and won't be used during SEI, but as always, you're encouraged to research it
+- Using `Object.create` is not very common and won't be used during SEIR, but as always, you're encouraged to research it
 
 <br>
 <br>
@@ -352,6 +355,7 @@ console.log(weirdObj) // {'null': true}
 <br>
 <br>
    
+
 ### Deleting a Property
  
 
@@ -359,13 +363,16 @@ console.log(weirdObj) // {'null': true}
 
 	```js
 	const geniuses = {
+		Jemison: true,
+		Hopper: true,
 		Einstein: true,
-		Newton: true,
-		Snooki: false
+		McNair: true,
+		Lovelace: true,
+		carrotTop: false
 	};
 	
 	// see ya!
-	delete geniuses.Snooki;
+	delete geniuses.carrotTop;
 	```
 
 - **Try it out!** Use the `delete` operator to remove one of the items from your `catalog` object

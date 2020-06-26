@@ -25,8 +25,6 @@ This lab **is a deliverable**. When completed, please fill out the [Google Form]
 
 For the exercises in this lab, create a `JavaScript` `REPL` from [repl.it](https://repl.it) -- you can name it `"JavaScript Arrays lab"`.
 
-As a reminder, this lab is a **Deliverable**
-
 <br>
 <br>
 
@@ -34,7 +32,7 @@ As a reminder, this lab is a **Deliverable**
 
 Copy the exercises below into the included **script.js** file and code away!
 
-> Please note, you will most likely need to comment out the console.logs for the exercises you've yet to complete to avoid getting a Reference Error
+**Please note:** ***You will most likely need to comment out the `console.logs` for the exercises you've yet to complete to avoid getting a*** **<span style="color: crimson;">Reference Error</span>**
 
 ```js
 /*

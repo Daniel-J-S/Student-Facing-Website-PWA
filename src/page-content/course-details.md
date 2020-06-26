@@ -51,7 +51,7 @@ You will be required to meet 80% completion of homework assignments at the end o
 ##### Send us a message if:
 * You know in advance that you will be missing a class or multiple classes
 * You're sick, overloaded at work, or something comes up and you can't make it to class last minute
-* You will be 10 or more minutes late to class
+* You will be 5 or more minutes late to class
 * You need to leave early
 * You will be submitting your homework late
 * We will get back to you within 12hrs on weekdays! On weekends, expect responses by Monday morning!
@@ -90,7 +90,7 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 
 ## Lesson Recordings
 
-Lessons will be recorded and embedded into the lesson material within 24-48 hours -- you can also view the entire playlist for this program [here]()
+Lessons will be recorded and embedded into the lesson material within 24-48 hours -- you can also view the entire playlist for this program [here](https://www.youtube.com/playlist?list=PLN8j7ZvmsikAdWOeg7bX-2OR2THlu4NpT)
 <br>
 <br>
 

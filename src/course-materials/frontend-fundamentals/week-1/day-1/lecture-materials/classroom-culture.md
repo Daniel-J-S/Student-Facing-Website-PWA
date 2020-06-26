@@ -24,7 +24,7 @@ type: "lecture"
 
 - Daniel Scott - Instructor Lead
 - Morgan Pierson - Instructor Lead
-- TBT - Instructor Associate
+- Melissa Young - Instructor Associate
 
 
 <br>
@@ -64,13 +64,15 @@ type: "lecture"
 
 ### Slack
 
-#### 3 channels
+#### 4 channels
 
 	- seir_629_debugging_dm
 	- seir_629_funnybiz_dm
+	- seir_629_outcomes
 	- seir_629_strictlybiz2
 	
-  <br>
+
+<br>
 <br>
 
 #### How To:
@@ -110,4 +112,4 @@ Our video conferencing tool!
 - We use breakout rooms for group meetings
 - Don't forget to mute!
 - You can share your screen with us / anyone
-- Grid for speaker view
+

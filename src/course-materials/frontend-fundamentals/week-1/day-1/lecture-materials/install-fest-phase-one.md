@@ -23,6 +23,8 @@ For the first phase of "install-fest", we'll install or verify the installation 
 <br>
 <br>
 
+**PLEASE NOTE:** ***if you have a linux machine, [here are some resources](/additional-resources/install-fest-linux) that might be more ideal for your computer***
+
 ## Slack
 
 We'll use slack to communicate throughout the course. <br>By the time you are reading this, you should have received an invite to the relevant channels via e-mail. <br>Although you can login via the web browser, downloading / installing the app is highly recommended.
