@@ -111,11 +111,11 @@ var cohort = {
 ### Review Questions
 
 
-- **What does the acronym OOP stand for?**
+**❓ What does the acronym OOP stand for?**
 
-- **In your own words, describe why Classes exist in OOP.**
+**❓ In your own words, describe why Classes exist in OOP.**
 
-- **In your own words, describe the OOP principle known as _encapsulation_.**
+**❓ In your own words, describe the OOP principle known as _encapsulation_.**
 
 <br>
 <br>
@@ -136,9 +136,10 @@ var cohort = {
 
 - Looks similar to defining a function because classes are in fact, _special_ functions, except...
 
-**What's different compared to a function?**
-<br />
-**What's different about the naming convention?**
+**❓ What's different compared to a function?**
+
+
+**❓ What's different about the naming convention?**
 
 
 <br>
@@ -317,14 +318,19 @@ var cohort = {
 
 ### Review Questions
 
-- You've just learned how to define a class and add prototype methods to it.  This represents about 80% there is to know about classes - congrats! 
+You've just learned how to define a class and add prototype methods to it. This represents about 80% there is to know about classes - congrats! 
   
-<br />  
-Some questions before moving on:
-1. **What is the JS keyword used to define a class?**
-2. **What is the name of the method in a class that is automatically called when we instantiate a class?**
-3. **What is the main purpose of this method?**
-4. **What character(s) separate the methods in a class definition?**
+<br>  
+
+**Some questions before moving on:**
+
+**❓ What is the JS keyword used to define a class?**
+
+**❓ What is the name of the method in a class that is automatically called when we instantiate a class?**
+
+**❓ What is the main purpose of this method?**
+
+**❓ What character(s) separate the methods in a class definition?**
 
 <br>
 <br>
@@ -335,11 +341,11 @@ Some questions before moving on:
 ### Constructor Functions - B.C. (before classes 😀)
 
 
-- Before classes arrived via ES2015, we used _constructor functions_ to do the exact same thing as classes.
+1. Before classes arrived via ES2015, we used _constructor functions_ to do the exact same thing as classes.
 
-- Because of the newness of ES2015, much of the code out there is written using constructor functions, however, most new code today is likely to be written as classes.
+1. Because of the newness of ES2015, much of the code out there is written using constructor functions, however, most new code today is likely to be written as classes.
 
-- It's important that you be able to recognize _constructor functions_, so let's look at how the `Vehicle` class can be written as a constructor function...
+1. It's important that you be able to recognize _constructor functions_, so let's look at how the `Vehicle` class can be written as a constructor function...
 
 <br>
 <br>
@@ -413,23 +419,24 @@ var car = new Vehicle('A1234', 'Toyota', 'Camry');
 
 ### Review Quesitons
 
-- **Is there anything a class can implement that can't be done using constructor functions?**
+**❓ Is there anything a class can implement that can't be done using constructor functions?**
 
-- **When using constructor functions, how are instance methods defined?**
+**❓ When using constructor functions, how are instance methods defined?**
 
-- **What's wrong with the following code?**
+**❓ What's wrong with the following code?**
 
-	```js
-	class Shape {
-	  constructor(x, y) {
-	    this.x = x;
-	    this.y = y;
-	  }
-	  static getPosition() {
-	    return [this.x, this.y];
-	  }
+
+```js
+class Shape {
+	constructor(x, y) {
+		this.x = x;
+		this.y = y;
 	}
-	```
+	static getPosition() {
+		return [this.x, this.y];
+	}
+}
+```
 
 
 <br>
@@ -517,8 +524,7 @@ var car = new Vehicle('A1234', 'Toyota', 'Camry');
 
 ### Final Notes on Classes
 
-> Unlike function declarations, class declarations are not _hoisted_ - they must be declared before using them to create objects.
-
+**Unlike function declarations, class declarations are not _hoisted_ - they must be declared before using them to create objects.**
 
 <br>
 <br>
