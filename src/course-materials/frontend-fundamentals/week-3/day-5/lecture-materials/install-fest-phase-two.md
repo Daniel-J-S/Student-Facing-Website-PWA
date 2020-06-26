@@ -1,8 +1,8 @@
 ---
 track: "Frontend Fundamentals"
 title: "Install-fest Phase Two"
-week: 6
-day: 2
+week: 3
+day: 5
 type: "lecture"
 ---
 
@@ -15,6 +15,15 @@ For the Second phase of "install-fest", we'll install or verify the installation
 - Postman
 - Heroku/Heroku CLI
 - Robo3T (Robomongo) - (Optional)
+
+<br>
+<br>
+<br>
+
+**PLEASE NOTE:** ***if you have a linux machine, [here are some resources](/additional-resources/install-fest-linux) that might be more ideal for your computer***
+
+<br>
+
 
 ## Node.js
 
@@ -33,6 +42,11 @@ The above commands should display versions without any errors. To verify that al
 
 `npm install -g nodemon`
 
+<br>
+<br>
+<br>
+
+
 ## Installing MongoDB
 Install MongoDB using Homebrew using the following commands:
 
@@ -41,6 +55,12 @@ Install MongoDB using Homebrew using the following commands:
 The above command might take a moment or two to complete. When finished, install MongoDB with:
 
 `brew install mongodb-community`
+
+
+<br>
+<br>
+<br>
+
 
 ### Starting the MongoDB Server
 You start the Mongo database server with the following command:
@@ -51,6 +71,12 @@ The above command also ensures that the MongoDB engine runs after restarting you
 
 More info about installing MongoDB using Homebrew can be found [here](https://github.com/mongodb/homebrew-brew).
 
+
+<br>
+<br>
+<br>
+
+
 ## Installing Postman
 
 Postman is a collaboration platform for API development. We can use it to design, build, and test APIs in conjunction with our teammates, and to support developer adoption.
@@ -58,6 +84,13 @@ Postman is a collaboration platform for API development. We can use it to design
 We'll mostly use Postman to test API's in SEIR-Flex.
 
 [Click here](https://www.postman.com/downloads/) to navigate to the download page for Postman.
+
+
+
+<br>
+<br>
+<br>
+
 
 
 ## Heroku
@@ -69,12 +102,19 @@ _Heroku is a platform as a service based on a managed container system, with int
 [Click here](https://signup.heroku.com/t/platform?c=70130000000NZToAAO&gclid=EAIaIQobChMI1LzI6u6r6QIV8PfjBx0EFgqPEAAYASAAEgLo__D_BwE) to sign up for heroku!
 
 
+<br>
+<br>
+<br>
+
+
+
 ### Installing the Heroku CLI
 > The following instructions are sourced from devcenter.heroku.com
 
 You must have node and npm installed already.
 
 `npm install -g heroku`
+
 
 ### Verifying your installation
 To verify your CLI installation, use the `heroku --version` command:
@@ -117,6 +157,12 @@ The CLI saves your email address and an API token to `~/.netr`c for future use.
 For more information, see [Heroku CLI Authentication](https://devcenter.heroku.com/articles/authentication).
 
 Now you’re ready to create your first Heroku app! We'll learn how to do this later on in Unit 2!
+
+
+<br>
+<br>
+<br>
+
 
 ## Robo 3T (Robomongo)
 
