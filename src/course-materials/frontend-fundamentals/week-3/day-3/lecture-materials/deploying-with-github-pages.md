@@ -1,16 +1,19 @@
 ---
 track: "Frontend Fundamentals"
 title: "Deploying Your Static App to GitHub-Pages"
-week: 6
-day: 1
+week: 3
+day: 3
 type: "lecture"
 ---
 
 # Deploying Your Static App to GitHub-Pages
 
-## Walkthrough Recording
 
-[Click Here](https://generalassembly.zoom.us/rec/share/vJ1SMevaqzJJfq_KylzdcIsQOoDsX6a81SUeq6VexUbkHgefrvin1uUM2cp98Ng_?startTime=1589328003000) to access recording
+
+<br>
+<br>
+<br>
+
 
 
 ## Intro
@@ -18,6 +21,13 @@ type: "lecture"
 This quick walk-thru will show you how easy it is to deploy your static web application so that it can be accessed by anyone with Internet access, anywhere in world!
 
 Any GitHub repository containing an _index.html_ and other static assets can become a website by simply creating a _gh-pages_ branch and pushing it to the _origin_ remote.
+
+
+<br>
+<br>
+<br>
+
+
 
 ## What is a _static_ application?
 
@@ -32,7 +42,18 @@ Typical **static assets** include:
 - **javascript** files
 - **image** files
 
+<br>
+<br>
+<br>
+
+
 ## Deploying with ghpages
+
+<br>
+<br>
+
+
+
 
 #### Ensure your project is ready to deploy
 
@@ -42,6 +63,12 @@ Next, make sure that all changes to your code are committed to _master_ in your 
 
 Although not necessary, go ahead and push the latest commit to _origin_:<br>`$ git push origin master`
 
+
+<br>
+<br>
+
+
+
 #### Create a `gh-pages` Branch
 
 You will learn more about git **branches** during Project 3, however, deploying on _ghpages_ requires that we create a new branch:
@@ -49,9 +76,19 @@ You will learn more about git **branches** during Project 3, however, deploying 
 - Ensure that you're in your project's directory and in the `master` branch
 - Run `$ git checkout -b gh-pages`
 
+<br>
+<br>
+
+
+
 #### Deploy the `gh-pages` Branch
 
 All that's left to get the app deployed is to push the `gh-pages` branch to the `origin` remote:<br>`$ git push origin gh-pages`
+
+<br>
+<br>
+
+
 
 ## Browsing to the WebSite
 
@@ -60,6 +97,13 @@ Your website should now be up and running at the following URL:<br>`https://<use
 Be sure to substitute **your GitHub user-name** for `<user-name>` and **your project's repo name** for `<repo-name>`.
 
 >Note: It might take up to 15 minutes for the app to be available.
+
+
+
+<br>
+<br>
+
+
 
 ## Updating your Application's Deployment
 
