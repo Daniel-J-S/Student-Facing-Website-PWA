@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Guess the Number Game Lab"
 week: 1
-day: 3
+day: 4
 type: "lab"
 ---
 
