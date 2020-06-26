@@ -144,7 +144,7 @@ friends.forEach(function(friend) {
 
 
 
-##### YOU DO
+#### YOU DO
 
 Using `forEach` log out each of my `friends` but with the first letter of their name lower-cased. Use the `<str>.toLowerCase()` method. 
 
@@ -167,7 +167,7 @@ Using `forEach` log out each of my `friends` but with the first letter of their 
 
 The returned array is always the same length as the source array.
 
-##### Transform an array
+#### Transform an array
 
 ```js
 const nums = [1, 2, 3];
@@ -181,7 +181,7 @@ const squared = nums.map(function(num) {
 const squared = nums.map(num => num * num);
 ```
 
-##### When we say transform, we mean transform!
+#### When we say transform, we mean transform!
 
 ```js
 const people = [
@@ -208,7 +208,7 @@ const types = Object.keys(obj).map(elem => typeof elem);
 
 
 
-##### YOU DO
+#### YOU DO
 
 Given an array of instructors,
 
@@ -234,7 +234,7 @@ Use `map` to create a new array that adds the string " is awesome" to each eleme
 
 **PURPOSE:** Reduce an array into a single value.  Note that the "single value" can be a single object, array - anything.
 
-##### Sum up the numbers in an array
+#### Sum up the numbers in an array
 
 ```js
 const nums = [25, 6, 100, 3];
@@ -248,7 +248,7 @@ let sum = nums.reduce(function(acc, num) {
 let sum = nums.reduce((acc, num) => acc + num);
 ```
 
-##### Count votes
+#### Count votes
 
 ```js
 const votes = ['Yes', 'No', 'No', 'Yes', 'Yes'];
@@ -278,7 +278,7 @@ let tally = votes.reduce((acc, vote) => {
 
 **PURPOSE:** Select certain elements from a source array.
 
-##### Obtain just the odd numbers
+#### Obtain just the odd numbers
 
 ```js
 const nums = [100, 2, 5, 42, 99];
@@ -292,7 +292,7 @@ console.log(odds);
 const odds = nums.filter(num => num % 2);
 ```
 
-##### YOU DO
+#### YOU DO
 
 Filter out all "jerks"!
 
@@ -308,7 +308,7 @@ const people = ["jerks", "nice people", "jerks", "nice people", "nice people"];
 
 **PURPOSE:** Find an element within an array.
 
-##### Find certain car objects
+#### Find certain car objects
 
 ```js
 const cars = [
@@ -338,7 +338,7 @@ let firstWhiteCar = cars.find(car => car.color === 'white');
 
 
 
-##### YOU DO
+#### YOU DO
 
 Find the first car whose year is older than 2014 and assign it to a variable named `notTooOldCar`;
 
@@ -359,7 +359,7 @@ Find the first car whose year is older than 2014 and assign it to a variable nam
 
 
 
-##### Find the index of the first match
+#### Find the index of the first match
 
 ```js
 const cars = [
@@ -417,7 +417,7 @@ let hasFord = cars.some(car => car.make === 'Ford');
 
 
 
-##### YOU DO
+#### YOU DO
 
 Do I have an _evil monkey_ in my room? 
 
@@ -443,7 +443,7 @@ let isEvilMonkeyInRoom = /* Fill code in here */
 
 
 
-##### Are all cars blue?
+#### Are all cars blue?
 
 ```js
 const cars = [

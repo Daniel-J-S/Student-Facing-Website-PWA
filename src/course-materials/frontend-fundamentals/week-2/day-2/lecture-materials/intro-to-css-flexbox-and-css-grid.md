@@ -250,13 +250,13 @@ type: "lecture"
 ### Review Questions - Flexbox
 
 
-- **When an element has a CSS property of `display: flex;`, that element becomes a flex __________.**
+**❓ When an element has a CSS property of `display: flex;`, that element becomes a flex __________.**
 
-- **When an element has a CSS property of `display: flex;`, its direct children become flex __________.**
+**❓ When an element has a CSS property of `display: flex;`, its direct children become flex __________.**
 
-- **What value is the default for the `flex-direction` property?**
+**❓ What value is the default for the `flex-direction` property?**
 
-- **Is it `justify-content` or `align-items` that controls the alignment along the _cross axis_?**
+**❓ Is it `justify-content` or `align-items` that controls the alignment along the _cross axis_?**
 
 <br>
 <br>
@@ -331,6 +331,10 @@ type: "lecture"
 
 - Using `height: 100vh;` will make the `<body>` fill the height of the browser window so that the `<footer>` is at the bottom.
 
+<br>
+<br>
+
+
 
 - Let's add the additional HTML required by the UI:
 
@@ -347,6 +351,11 @@ type: "lecture"
 	  <footer>FOOTER</footer>
 	</body>
 	```
+
+<br>
+<br>
+
+
 
 - Now for a touch of styling...
 
@@ -378,6 +387,10 @@ type: "lecture"
 	}
 	```
 
+<br>
+<br>
+
+
 - With the class defined - **go ahead and add it to the `<aside>`, `<main>` & `<footer>` elements.**
 
 - Using Chrome DevTools to explore the page's elements, we can make the following observations:
@@ -387,6 +400,8 @@ type: "lecture"
 - Now let's define the columns and rows necessary to layout our page as desired.  Go back, look at the UI we want to layout and answer these questions:
 	- **How many columns will we need to define?**
 	- **How many rows?**
+
+<br>
 
 - Okay, let's define those column and rows:
 
@@ -466,8 +481,8 @@ type: "lecture"
 - We've covered the key properties of these two fine additions to CSS, but...
 
 - Here are a couple of really fun ways to learn more about them:
-	- [FLEXBOX FROGGY](https://flexboxfroggy.com/)
-	- [GRID GARDEN](https://cssgridgarden.com/)
+  - [Flexbox Froggy](https://flexboxfroggy.com/)
+  - [Grid Garden](https://cssgridgarden.com/)
 
 
 <br>
