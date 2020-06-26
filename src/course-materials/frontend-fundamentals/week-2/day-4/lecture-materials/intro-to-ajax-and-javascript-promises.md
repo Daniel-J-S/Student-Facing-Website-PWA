@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Intro to AJAX and JavaScript Promises with jQuery"
 week: 2
-day: 2
+day: 4
 type: "lecture"
 ---
 
@@ -152,14 +152,14 @@ Let's add the below `html` to our practice project.
 
 ```html
 <h1>Movie Info</h1>
-<dl>
-  <dt>Title</dt>
-  <dd id="title"></dd>
-  <dt>Year</dt>
-  <dd id="year"></dd>
-  <dt>Rating</dt>
-  <dd id="rated"></dd>
-</dl>
+<main>
+  <h3>Title</h3>
+  <p id="title"></p>
+  <p>Year</p>
+  <p id="year"></p>
+  <p>Rating</p>
+  <p id="rated"></p>
+</main>
 ```
 
 Now let's use the data to populate the DOM:
@@ -201,12 +201,12 @@ Currently, we're getting data for Frozen every time the page loads.
 
 Let's let the user choose the movie:
 
-We'll use the below `html` to begin adding this functionality. Go ahead and place this form below the closing `<dl>` tag
+We'll use the below `html` to begin adding this functionality. Go ahead and place this form below the closing `<main>` tag
 
 ```html
 <!-- existing code above -->
 ...
-</dl>
+</main >
 
 <form>
   <input type="text" placeholder="Movie Title"/>
@@ -314,11 +314,11 @@ function render() {
 
 ## Review Questions
 
-❓**In your own words describe a JavaScript Promise**
+**❓ In your own words describe a JavaScript Promise**
 
-❓**What is AJAX?**
+**❓ What is AJAX?**
 
-❓**What jQuery method do we use to make AJAX requests**
+**❓ What jQuery method do we use to make AJAX requests**
 
 
 <br>
