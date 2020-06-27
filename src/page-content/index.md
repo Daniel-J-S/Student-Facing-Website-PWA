@@ -2,19 +2,29 @@
 title: "index"
 ---
 
-# SEI-R Classroom Website
+# Welcome to Software Engineering Immersive (Remote)
 
-This website contains assignments and materials for General Assembly's Software Engineering Immersive Program. 
+This website contains assignments and materials for General Assembly's Software Engineering Immersive Program. All material and the following schedule is subject to change at Instructors discretion.
+
+<br>
+<br>
 
 
 ## Current Schedule
 
 <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23D50000&amp;ctz=America%2FLos_Angeles&amp;src=Z2VuZXJhbGFzc2VtYi5seV9zcTVmZzVvdWxnZGhtZGNwZGs3M2lhZWlyY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23D50000&amp;showNav=1&amp;showCalendars=0&amp;showTitle=0&amp;showDate=1&amp;showTabs=0&amp;showTz=1&amp;mode=WEEK" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
+<br>
+<br>
+
 
 ## Curriculum Overview
 
 Curriculum schedule and content is subject to change at the instructor's discretion.
+
+
+<br>
+<br>
 
 
 ### [Unit One: Frontend Fundamentals](/frontend-fundamentals)
