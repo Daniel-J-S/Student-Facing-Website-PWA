@@ -36,7 +36,7 @@ More specifically, a VCS allows you to:
 - Collaborate on a set of files with others
 - Create separate "branches" of the codebase to develop new features on without impacting the "master", or production, branch.
 
-In SEIR, we'll be using the world's most popular version control system - **git**.
+In this program, we'll be using the world's most popular version control system - **git**.
 
 Git was created by Linus Torvolds in 2005 to help with the development of his main project at the time - developing Linux.
 
