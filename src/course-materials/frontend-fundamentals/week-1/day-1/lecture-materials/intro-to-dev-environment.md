@@ -335,12 +335,12 @@ Students will be able to:
 
 #### Deleting Directories
 
-- Deleting directories is almost the same as deleting files except you must use the `-rf` option, which runs the `rm` command "recursively" and "forces" the deletion of directories
+- Deleting directories is almost the same as deleting files except you must use the `-r` option, which runs the `rm` command "recursively" to delete a directory and it's contents.
 
 - To delete the `pjs` folder we could use this command:
 
 	```shell
-	$ rm -rf ~/drawers/pjs
+	$ rm -r ~/drawers/pjs
 	```
 
 
