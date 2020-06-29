@@ -14,7 +14,7 @@ type: "resource"
 **Please note, this is a compilation of resources we've picked up on over time and may not encompass everything you need to install if you are running a Linux Operating System on your computer.**
 
 
-**Also note the entire program is taught from a Maching running MacOSX and Instructors may have limited experience working with a Linux laptop.** 
+**Also note the entire program is taught and demonstrated using a maching running MacOSX. That said, instructors may have limited experience working with a Linux laptop.** 
 
 **So, please be advised there may be a diminished experience in the level of support instructors are able to offer for issues related specifically to linux.**
 
