@@ -8,8 +8,21 @@ type: "lecture"
 
 
 # Intro to Git and Github
+
+
 <br>
 <br>
+
+[Click here](https://generalassembly.zoom.us/rec/share/wfAkBrTz7m5OaLfwtHnYW6AgWafdX6a803ce_PFYmU60WUgU0EE7HgPLhwAQanWw?startTime=1593470959000) to access recording
+
+
+
+<br>
+<br>
+
+
+
+
 
 ## Learning Objectives
 

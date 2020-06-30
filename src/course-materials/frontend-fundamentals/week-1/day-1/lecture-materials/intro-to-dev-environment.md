@@ -10,6 +10,19 @@ type: "lecture"
 # Intro to the Dev Environment
 
 <br>
+<br>
+
+[Click here](https://generalassembly.zoom.us/rec/share/wfAkBrTz7m5OaLfwtHnYW6AgWafdX6a803ce_PFYmU60WUgU0EE7HgPLhwAQanWw?startTime=1593466555000) to access recording
+
+
+
+<br>
+<br>
+
+
+
+
+
 
 
 ## Learning Objectives
