@@ -23,6 +23,18 @@ For the first phase of "install-fest", we'll install or verify the installation 
 <br>
 <br>
 
+[Click here](https://generalassembly.zoom.us/rec/share/wfAkBrTz7m5OaLfwtHnYW6AgWafdX6a803ce_PFYmU60WUgU0EE7HgPLhwAQanWw?startTime=1593461196000) to access recording
+
+
+
+<br>
+<br>
+
+
+
+
+
+
 **PLEASE NOTE:** ***if you have a linux machine, [here are some resources](/additional-resources/install-fest-linux) that might be more ideal for your computer***
 
 ## Slack
