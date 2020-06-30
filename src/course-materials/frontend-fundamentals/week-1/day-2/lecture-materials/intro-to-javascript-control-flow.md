@@ -177,7 +177,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 	```js
 	'hello' && 'goodbye'  // evaluates to 'goodbye'
-	0 || null  // evaluates to 0
+	0 && null  // evaluates to 0
 	```
 
 <br>
