@@ -151,7 +151,7 @@ function sendReport(report) {
 
 #### Review
 
-**Take a minute to discuss with a partner which would be a better programming practice:**
+**❓ Which would be a better programming practice:**
 
 - **Code numerous, smaller functions**<br>-or-<br>
 - **Code fewer, larger functions**
