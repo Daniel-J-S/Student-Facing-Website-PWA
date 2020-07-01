@@ -613,7 +613,7 @@ If we define a variable (or a function) within the global scope, it becomes a pr
 <br>
 
 
-### 6. Local Review & Further Study
+### 6. Further Study
 
 
 <br>
