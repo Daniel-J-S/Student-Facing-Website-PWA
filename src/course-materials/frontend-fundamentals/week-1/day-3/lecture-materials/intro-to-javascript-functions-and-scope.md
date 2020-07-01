@@ -108,6 +108,7 @@ In summary, it would be impractical to create applications without breaking up t
 Here's a simple example of how an app that sends out a daily business report might be broken up into functions:
 
 ```js
+let date = new Date();
 let sales = getSalesData(date);
 let labor = getLaborCosts(date);
 let budget = getBudget(date);
