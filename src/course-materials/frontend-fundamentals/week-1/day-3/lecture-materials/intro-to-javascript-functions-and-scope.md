@@ -188,7 +188,7 @@ function sayHello(name) {
 ##### 2) Function Expression
 
 ```js
-var sayHello = function(name) {
+const sayHello = function(name) {
     console.log('Hello ' + name + '!');
 };
 ```
@@ -245,7 +245,7 @@ Arrow Functions offer:
 
 - A more concise syntax
 - Implicit return of a single expression
-- A single rule for binding the `this` keyword (more on this next week)
+- A single rule for binding the `this` keyword 
 
 However, as cool as Arrow Functions are, they cannot be used in every scenario due to the way they bind `this`.
 
