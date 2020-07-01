@@ -11,6 +11,17 @@ type: "lecture"
 <br>
 <br>
 
+<<<<<<< HEAD
+[Click here](https://generalassembly.zoom.us/rec/share/6uMuC7uhzTJLWJH203v8QpI-BpS0X6a8hiAW8vcOzB0BYrp8126TNY2n1jUqTesa?startTime=1593534530000) to access recording
+
+<br>
+<br>
+
+
+
+
+=======
+>>>>>>> d69834c564551d36d06f8f5e78bc2829a8d9b178
 ## Learning Objectives
 
 | Students will be able to: |

@@ -9,6 +9,20 @@ type: "lecture"
 # JavaScript Arrays
 <br>
 
+<br>
+<br>
+
+[Click here](https://generalassembly.zoom.us/rec/share/6uMuC7uhzTJLWJH203v8QpI-BpS0X6a8hiAW8vcOzB0BYrp8126TNY2n1jUqTesa?startTime=1593555532000) to access recording
+
+
+<br>
+<br>
+
+
+
+
+
+
 ## Learning Objectives
  
 Students will be able to:

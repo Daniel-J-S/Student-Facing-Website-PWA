@@ -12,6 +12,13 @@ type: "lecture"
 <br>
 <br>
 
+[Click here](https://youtu.be/a2hj_hNGacg) to access recording
+
+<br>
+<br>
+
+
+
 ## Learning Objectives
 
 
