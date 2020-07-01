@@ -468,7 +468,7 @@ function setColor(bicycle, color) {
 	bicycle.color = color || 'purple';
 }
 
-var bike = new Bicycle();
+const bike = new Bicycle();
 setColor(bike, 'blue');  // sets color to blue
 setColor(bike);  // sets color to purple by default
 ```
