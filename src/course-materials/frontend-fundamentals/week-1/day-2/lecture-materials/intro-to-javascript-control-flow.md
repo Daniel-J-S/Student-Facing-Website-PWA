@@ -12,7 +12,7 @@ type: "lecture"
 <br>
 <br>
 
-<a href="/downloads/frontend_fundamentals/recordings/zoom_0.mp4.zip" download>Click Here</a> to access recording
+[Click here](https://youtu.be/a2hj_hNGacg) to access recording
 
 <br>
 <br>
