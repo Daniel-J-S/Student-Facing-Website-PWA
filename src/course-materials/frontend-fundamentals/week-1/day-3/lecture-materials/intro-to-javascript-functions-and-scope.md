@@ -18,6 +18,15 @@ type: "lecture"
 <br>
 <br>
 
+[Click here](https://generalassembly.zoom.us/rec/share/5fdKNYypx1tIXNbH0UzbfKgwMN7uT6a8hCZKq_sKzRy7MOVfJreEe5TPvOO59umo?startTime=1593634125000) to access recording
+
+<br>
+<br>
+
+
+
+
+
 ## Roadmap
 1. Lesson Setup
 2. What is a function?
