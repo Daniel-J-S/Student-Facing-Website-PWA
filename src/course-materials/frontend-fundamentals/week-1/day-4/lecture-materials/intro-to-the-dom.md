@@ -180,7 +180,7 @@ intro-to-dom/
 
 - Now try typing this in: `$0.style.backgroundColor = 'yellow'`
 
-- Now that's what I call a DOM!
+
 
 <br>
 <br>
@@ -386,12 +386,11 @@ intro-to-dom/
 
 ### Review Questions
   
+**❓ If we want to change the text (no HTML) inside of a `<div>`, what property should we set?**
 
-- **If we want to change the text (no HTML) inside of a `<div>`, what property should we set?**
+**❓ How many DOM elements are returned by the `querySelector` method?**
 
-- **How many DOM elements are returned by the `querySelector` method?**
-
-- **What DOM element property is used to style a DOM element?**
+**❓ What DOM element property is used to style a DOM element?**
 
 <br>  
 <br>  
