@@ -556,11 +556,15 @@ arr3 === arr1 // true!
 
 **❓ Is the following valid code?**
 
-	```js
-		const name = prompt('Enter your name: ');
-		const age = prompt('Enter your age: ');
-		const person = {name, age};
-	```
+
+
+```js
+const name = prompt('Enter your name: ');
+const age = prompt('Enter your age: ');
+const person = {name, age};
+```
+
+
 
 <br>
 <br>
