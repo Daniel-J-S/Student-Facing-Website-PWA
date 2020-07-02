@@ -497,13 +497,13 @@ intro-to-dom/
 
 ### Final Questions
 
-1. **What method is the most efficient for selecting an element that has an `id`?**
+**❓ What method is the most efficient for selecting an element that has an `id`?**
 
-2. **If we wanted to grab all of the content (including its nested elements) of an element, what property on that element would we use?**
+**❓ If we wanted to grab all of the content (including its nested elements) of an element, what property on that element would we use?**
 
-3. **If you had to pick only one method to select DOM elements with during your career as a developer, which one should you choose?**
+**❓ If you had to pick only one method to select DOM elements with during your career as a developer, which one should you choose?**
 
-4. **Which property on DOM elements is used to set the CSS properties for that element?**
+**❓ Which property on DOM elements is used to set the CSS properties for that element?**
 
 <br>
 <br>
