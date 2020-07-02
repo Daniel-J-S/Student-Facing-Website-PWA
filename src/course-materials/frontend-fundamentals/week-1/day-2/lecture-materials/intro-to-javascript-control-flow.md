@@ -12,7 +12,7 @@ type: "lecture"
 <br>
 <br>
 
-**Recording will be available as an attachment in Slack**
+**Recording will be available by request**
 
 <br>
 <br>
