@@ -431,7 +431,10 @@ console.log(weirdObj) // {'null': true}
 - It's a common scenario to want to pass the values of variables as properties (having the same name as the variable) in an object:
 
 	```js
-	// assume latitude and longitude are existing variables
+
+	const latitude = getLat('Disneyland');
+	const longitude = getLng('Disneyland');
+	
 	const location = {
 		name: 'Disneyland',
 		latitude: latitude,
@@ -445,7 +448,10 @@ console.log(weirdObj) // {'null': true}
 - Thanks to ES2015's **Property Shorthand** syntax, we can now do this
 
 	```js
-	// assume latitude and longitude are existing variables
+
+	const latitude = getLat('Disneyland');
+	const longitude = getLng('Disneyland');
+	
 	const location = {
 		name: 'Disneyland',
 		latitude,
