@@ -451,7 +451,7 @@ console.log(weirdObj) // {'null': true}
 
 	const latitude = getLat('Disneyland');
 	const longitude = getLng('Disneyland');
-	
+
 	const location = {
 		name: 'Disneyland',
 		latitude,
@@ -518,7 +518,7 @@ console.log(weirdObj) // {'null': true}
 - Objects, including Arrays, Functions, etc. are stored in a separate part of memory known as the _heap_. A variable for an object has as its value a "reference" (think pointer):
 
 	```shell
-	                        var | value
+	                        var | value/ref
 	                                   -
 	       let x = 25  -->   x  |  25
 	var msg = 'hello'  -->  msg | 'hello'        HEAP 
