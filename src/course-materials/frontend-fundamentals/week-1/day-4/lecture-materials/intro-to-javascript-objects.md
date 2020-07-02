@@ -274,7 +274,9 @@ game.smallestNum = 0;
 ```js
 console.log(game['title']);
 ```
-	Note that using a string literal like above is being done just to demonstrate the syntax. More efficient code would be `console.log(game.title);`
+
+
+**Please note:** The above example is just a way to demonstrate the syntax. More efficient code would be `console.log(game.title);`
  
 
 - If the result of the expression between the brackets is not a string, JS will convert it to one. For example:
@@ -538,15 +540,15 @@ arr3 === arr1 // true!
    
 ### Essential Questions
 
-- **An object is a collection of zero or more ___________.**
+**❓ An object is a collection of zero or more ___________.**
 
-- **Properties are _____: ______ pairs.**
+**❓ Properties are _____: ______ pairs.**
 
-- **Is it more efficient to access properties via dot or square bracket notation?**
+**❓ Is it more efficient to access properties via dot or square bracket notation?**
 
-- **What type of `for` loop is used to iterate over the keys of an object?**
+**❓ What type of `for` loop is used to iterate over the keys of an object?**
 
-- **Is the following valid code?**
+**❓ Is the following valid code?**
 
 	```js
 		const name = prompt('Enter your name: ');
