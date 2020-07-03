@@ -399,11 +399,11 @@ intro-to-dom-events/
 ### Essential Questions
   
 
-1. **What is the argument that JS passes to an event listener when it calls it?**
+**❓ What is the argument that JS passes to an event listener when it calls it?**
 
-2. **What is the name of the property on the above argument that represents the DOM element that dispatched the event?**
+**❓ What is the name of the property on the above argument that represents the DOM element that dispatched the event?**
 
-3. **Let's say you needed to have an event listener respond to a `click` event on the `<td>`s within a `<table>` - would you have to add event listeners to each `<td>`?  Support your answer.**
+**❓ Let's say you needed to have an event listener respond to a `click` event on the `<td>`s within a `<table>` - would you have to add event listeners to each `<td>`?  Support your answer.**
 
 <br> 
 <br> 
