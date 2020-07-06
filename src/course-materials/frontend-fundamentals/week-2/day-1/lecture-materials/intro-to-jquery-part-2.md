@@ -453,7 +453,7 @@ This syntax in fact uses the `.on` method internally.
 
 We already learned about _event delegation_ in native JavaScript.
 
-**❓ Who can remind us what _event delegation_ is it?**
+**❓ Who can remind us what _event delegation_ is?**
 
 _Event delegation_ in jQuery is a bit more powerful because we can tell jQuery **which specific descendants** we're interested in listening to by specifying another CSS selector.
 
