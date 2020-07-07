@@ -20,6 +20,13 @@ type: "lecture"
 <br>
 <br>
 
+[Click here](https://generalassembly.zoom.us/rec/share/-PwvH4j5yXtJQLfj03j_VIA_ANnjX6a8hHQZqfYLmRk_OjCTHsDVuT-tp57ZaCUK?startTime=1594052333000) to access recording
+
+<br>
+<br>
+
+
+
 
 ## Roadmap
 
