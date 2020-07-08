@@ -141,7 +141,7 @@ Before we can clearly understand what "asynchronous" means, it will help to conf
 
 #### Synchronous Code Execution
 
-So far, most of the code we've written **(...with the exception of the code we wrote for performing `AJAX` requests)** is **synchronous** code.
+So far, most of the code we've written is **synchronous** code.
 
 **Synchronous** code is when a line of code **completely finishes executing** before the next line of code runs.
 
