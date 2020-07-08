@@ -10,12 +10,19 @@ type: "lecture"
 
 # Intro to Responsive Web Design
 
+
+<br>
+<br>
+
+
+[Click here](https://generalassembly.zoom.us/rec/share/yO92MJT5tWhIZo3312bYXZ4jIMfHX6a81SQdqaAPmBuiqC0MysUDQB6aneoYpaVs?startTime=1594152474000) to access recording
+
 <br>
 <br>
 
 
 
----
+
 ## Learning Objectives
 
 | Students Will Be Able To: |
