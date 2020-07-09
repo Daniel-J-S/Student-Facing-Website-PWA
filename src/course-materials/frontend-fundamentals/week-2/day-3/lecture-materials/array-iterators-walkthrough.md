@@ -9,6 +9,12 @@ type: "lecture"
 # Walk-Thru of Array Iterator Methods
 
 <br>
+<br>
+
+[Click Here](https://generalassembly.zoom.us/rec/share/-fQ2cpX5r2NOZq_WuVHvY5MuMIfueaa8gShMq6cOzkluYIdF7c843KfHYkYWn24V?startTime=1594224139000) to access recording
+
+<br>
+<br>
 
 
 ## Intro

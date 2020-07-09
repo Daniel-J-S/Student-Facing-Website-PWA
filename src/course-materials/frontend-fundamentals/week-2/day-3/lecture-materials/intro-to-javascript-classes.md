@@ -8,7 +8,17 @@ type: "lecture"
 
 # Intro to JavaScript Classes  
 
+
+
 <br>
+<br>
+
+[Click here](https://generalassembly.zoom.us/rec/share/7NZTDJ3v12FIbInBwnHeaP54HoDUeaa813ceqfUKzUjv1OgbqrcY4GgMjkmOttVy?startTime=1594243483000) to access recording
+
+<br>
+<br>
+
+
 
 
 ## Learning Objectives
