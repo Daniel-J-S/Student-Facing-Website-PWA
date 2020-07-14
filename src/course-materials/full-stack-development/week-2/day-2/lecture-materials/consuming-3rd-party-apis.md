@@ -113,7 +113,7 @@ type: "lecture"
 
 - As basic as it gets, let's make a GET request to a third-party API straight from the browser's address bar:
 
-	```sh
+	
 	http://pokeapi.co/api/v2/pokemon/1
 	```
 
@@ -424,7 +424,7 @@ type: "lecture"
 
 - Lastly create a `.env` file and add a variable for our token:
 
-	```sh
+	```shell
 	GITHUB_TOKEN=1a1596cfe4484ff...
 	```
 
