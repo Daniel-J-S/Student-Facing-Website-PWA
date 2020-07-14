@@ -10,29 +10,29 @@ export default({ data, location }) => {
     
    const { allMarkdownRemark } = data;
 
-  const weekOneLessons = allMarkdownRemark.edges.filter(({ node }) => 
-    node.frontmatter.week === 1
-  ).map(({ node }) =>
-    <Link to={node.fields.slug}>
-      <h2 className={styles.dayTitle} key={node.fields.id}>{node.frontmatter.title} - <small className={styles.smallText}>{node.frontmatter.topics}</small></h2>
-    </Link> 
-  );
+    const weekOneLessons = allMarkdownRemark.edges.filter(({ node }) => 
+        node.frontmatter.week === 1
+      ).map(({ node }) =>
+        <Link to={node.fields.slug}>
+          <h2 className={styles.dayTitle} key={node.fields.id}>{node.frontmatter.title}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
+        </Link> 
+      );
 
-  const weekTwoLessons = allMarkdownRemark.edges.filter(({ node }) => 
-    node.frontmatter.week === 2
-  ).map(({ node }) =>
-    <Link to={node.fields.slug}>
-      <h2 className={styles.dayTitle} key={node.fields.id}>{node.frontmatter.title} - <small className={styles.smallText}>{node.frontmatter.topics}</small></h2>
-    </Link> 
-  );
+      const weekTwoLessons = allMarkdownRemark.edges.filter(({ node }) => 
+        node.frontmatter.week === 2
+      ).map(({ node }) =>
+        <Link to={node.fields.slug}>
+          <h2 className={styles.dayTitle} key={node.fields.id}>{node.frontmatter.title}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
+        </Link> 
+      );
 
-  const weekThreeLessons = allMarkdownRemark.edges.filter(({ node }) => 
-    node.frontmatter.week === 3
-  ).map(({ node }) =>
-    <Link to={node.fields.slug}>
-      <h2 className={styles.dayTitle} key={node.fields.id}>{node.frontmatter.title} - <small className={styles.smallText}>{node.frontmatter.topics}</small></h2>
-    </Link> 
-  );
+      const weekThreeLessons = allMarkdownRemark.edges.filter(({ node }) => 
+        node.frontmatter.week === 3
+      ).map(({ node }) =>
+        <Link to={node.fields.slug}>
+          <h2 className={styles.dayTitle} key={node.fields.id}>{node.frontmatter.title}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
+        </Link> 
+      );
 
     return (
         <Layout
