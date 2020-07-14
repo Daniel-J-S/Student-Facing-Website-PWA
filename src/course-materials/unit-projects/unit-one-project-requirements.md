@@ -114,7 +114,7 @@ You can also host your github pages with your own domain name.<br>[Here is a wal
 
 
 ## How to Submit Your Project
-Your project is due on Wednesday, May 13th at 7:30 EST. You will present your project and show your code to classmates and instructors.
+You will present your project and show your code to classmates and instructors.
 
 
 
