@@ -178,6 +178,8 @@ node-practice/
 
 
 <br>
+
+
 #### Asynchronous Programming Model
 
 
@@ -238,7 +240,7 @@ node-practice/
 
 
 
-#### So far, so good!Now let's learn aboutNode Modules
+#### So far, so good! <br> Now let's learn about Node Modules
 
 
 #### Node Modules
@@ -310,7 +312,7 @@ node-practice/
 	```js
 	// days-of-week.js
 	
-	module.exports = 'SEIR-FLEX';
+	module.exports = 'SEI';
 	```
 
 - Now let's require the module inside of **script.js**...
@@ -403,14 +405,14 @@ node-practice/
 #### Review Questions - Modules
 
 
-**❓What are modules used for in Node?**
+**❓ What are modules used for in Node?**
 
-**❓How many modules can be defined in a single file?**
+**❓ How many modules can be defined in a single file?**
 
-**❓What is the special object we use in our module to attach or assign functionality to?**
+**❓ What is the special object we use in our module to attach or assign functionality to?**
 
 
-**❓How many times can we `require` a module in our program?**
+**❓ How many times can we `require` a module in our program?**
 
 
 <br>
