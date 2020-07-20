@@ -62,9 +62,9 @@ type: "lecture"
 #### Why Learn Full-Stack Web Development?
 
 
-- According to [this report by U.S. News](https://www.usnews.com/info/blogs/press-room/articles/2018-01-10/us-news-announces-the-2018-best-jobs) the best job to have is that of a **Software Developer**!
+- According to [this report by U.S. News](https://money.usnews.com/careers/best-jobs/rankings/the-100-best-jobs) the best job to have is that of a **Software Developer**!
 
-- Further, according to [this StackOverflow Developer Survey](https://insights.stackoverflow.com/survey/2017#developer-roles), **the role of Web Developer is by far the most popular** as compared to other developer roles.
+- Further, according to [this StackOverflow Developer Survey](https://insights.stackoverflow.com/survey/2020#overview), **the role of Web Developer is by far the most popular** as compared to other developer roles.
 
 - The bottom-line is: **Web Developers are in demand**!
 
