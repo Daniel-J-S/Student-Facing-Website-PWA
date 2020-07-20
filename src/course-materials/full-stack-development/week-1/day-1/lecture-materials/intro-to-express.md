@@ -407,7 +407,7 @@ app.get('/home', function(req, res) {
 
 - Just the file name, not the `ejs` extension.
 
-- Browse to `localhost:3000/home` and - it doesn'twork...
+- Browse to `localhost:3000/home` and - it doesn't work...
 
 - We're going to get a little practice reading Express errors in this lesson.
 
