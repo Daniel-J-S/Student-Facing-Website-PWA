@@ -10,6 +10,21 @@ type: "lecture"
 
 <br>
 <br>
+
+[Click here](https://generalassembly.zoom.us/rec/share/tM1YMYzK_T9LH43d8mHtffEAA6rnaaa82yUX-fMJmEtpVvP1fnPC27ZQOl-5PGCq?startTime=1595265894000) to access recording
+
+
+<br>
+<br>
+
+
+<br>
+<br>
+
+
+[Click here](https://generalassembly.zoom.us/rec/share/tM1YMYzK_T9LH43d8mHtffEAA6rnaaa82yUX-fMJmEtpVvP1fnPC27ZQOl-5PGCq?startTime=1595275669000) to access final exercises walkthrough recording
+
+<br>
 <br>
 
 

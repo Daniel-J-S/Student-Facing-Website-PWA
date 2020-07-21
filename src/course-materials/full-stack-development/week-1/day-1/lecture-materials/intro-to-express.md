@@ -8,9 +8,17 @@ type: "lecture"
 
 # Intro to Express 
 
+
+
 <br>
 <br>
+
+[Click here](https://generalassembly.zoom.us/rec/share/tM1YMYzK_T9LH43d8mHtffEAA6rnaaa82yUX-fMJmEtpVvP1fnPC27ZQOl-5PGCq?startTime=1595277764000) to access recording (*includes lab walkthrough at the end*)
+
 <br>
+<br>
+
+
 
 
 ### Learning Objectives

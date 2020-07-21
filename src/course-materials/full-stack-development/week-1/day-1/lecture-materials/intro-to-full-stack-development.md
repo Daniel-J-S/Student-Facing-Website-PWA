@@ -10,7 +10,13 @@ type: "lecture"
 
 <br>
 <br>
+
+[Click here](https://generalassembly.zoom.us/rec/share/tM1YMYzK_T9LH43d8mHtffEAA6rnaaa82yUX-fMJmEtpVvP1fnPC27ZQOl-5PGCq?startTime=1595260997000) to access recording
+
 <br>
+<br>
+
+
 
 
 ## Learning Objectives
