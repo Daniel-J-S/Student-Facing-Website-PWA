@@ -98,7 +98,7 @@ app.set('view engine', 'ejs');
 
 // add middleware below the above line of code
 app.use(function(req, res, next) {
- console.log('Hello Cyberpunk!');
+ console.log('Hello Intrepid Learner!');
  next();
 });
 ```
@@ -121,7 +121,7 @@ app.use(function(req, res, next) {
 
 ```js
 app.use(function(req, res, next) {
- console.log('Hello Cyberpunk!');
+ console.log('Hello Intrepid Learner!');
  // Add a time property to the req object
  req.time = new Date().toLocaleTimeString();
  next();
@@ -163,7 +163,7 @@ app.use('/', indexRouter);
 app.use('/todos', todosRouter);
 
 app.use(function(req, res, next) {
- console.log('Hello SEI!');
+ console.log('Hello Intrepid Learner!');
  req.time = new Date().toLocaleTimeString();
  next();
 });
