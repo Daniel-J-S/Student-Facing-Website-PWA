@@ -652,26 +652,30 @@ function deleteOne(id) {
 #### Update a To-Do
 
 
-- Exercise #1:
-	- _As a User, when viewing the show page for a To-Do, I want to be able to click a link to edit the text of the To-Do_
-- Exercise #2:
-	- _As a User, when editing a To-Do, I want to be able to toggle whether or not it's done_
+##### Exercise #1:
+
+**_As a User, when viewing the show page for a To-Do, I want to be able to click a link to edit the text of the To-Do_**
 
 
-- Hints:
+##### Exercise #2:
+
+**_As a User, when editing a To-Do, I want to be able to toggle whether or not it's done_**
+
+
+- **Hints:**
 	- Follow the same steps we followed multiple times for adding functionality!
 	- Be sure to reference the Routing Chart to determine the proper routes!
 	- You will want to pre-fill the `<input>` with the todo text - use the `value` attribute and some EJS to pull this off.
 	- Don't forget that the controller action will first have to get the To-Do being edited so that it can be sent to the view.
 
 
-- Hints for Exercise #2 (Toggling `done`):
+- **Hints for Exercise #2 (Toggling `done`):**
 	- Use an `<input type="checkbox" ...>`
 	- Checkboxes are checked when a `checked` attribute exists (no value is assigned).
 	- Use a ternary expression to write in the `checked` attribute, or an empty string.
 	- If the checkbox is checked when submitted, `req.body.done` will have the value of `"on"`, otherwise there won't even be a `req.body.done` property.
 
-- Enjoy!
+- **Enjoy!**
 
 <br>
 <br>
