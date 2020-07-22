@@ -511,7 +511,7 @@ app.use(methodOverride('_method'));  // add this
 #### Delete a To-Do
 
 
-- The user story reads:_As a User, I want to delete a To Do from the list_
+- The user story reads:&nbsp;&nbsp;&nbsp;_As a User, I want to delete a To Do from the list_
 
 - Same process:
 	1. Determine proper route
@@ -558,6 +558,7 @@ DELETE /todos/:id
 
 li {
  list-style: none;
+ margin-bottom: 10px;
 }
 ```
 
