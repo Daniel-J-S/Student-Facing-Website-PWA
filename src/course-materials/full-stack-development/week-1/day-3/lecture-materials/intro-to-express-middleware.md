@@ -204,13 +204,24 @@ const morgan = require('morgan');
 ```
 
 <br>
+
+
 **We'll mount Morgan like this**
 
 ```js
 app.use(morgan('dev'));
 ```
 
-**This is what our "Middleware Stack" should look like**
+**Next, we'll mount our static asset middleware and bodyparser middleware**
+
+
+```js
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended: false }));
+```
+
+
+**...by the end, is what our "Middleware Stack" should look like**
 
 ```js
 
@@ -229,7 +240,7 @@ This is where our stylesheets, images and front-end javascript will live!
 
 <br>
 
-While we're at it, let's make sure all of our templates have this link tag so they can use any CSS rules we've defined in `style.css`
+While we're at it, let's make sure all of our templates have a link tag so they can use any CSS rules we've defined in `style.css`
 
 <br>
 
@@ -500,7 +511,7 @@ app.use(methodOverride('_method'));  // add this
 #### Delete a To-Do
 
 
-- The user story reads:_As a User, I want to delete a To Do from the list_
+- The user story reads:&nbsp;&nbsp;&nbsp;_As a User, I want to delete a To Do from the list_
 
 - Same process:
 	1. Determine proper route
@@ -547,6 +558,7 @@ DELETE /todos/:id
 
 li {
  list-style: none;
+ margin-bottom: 10px;
 }
 ```
 
