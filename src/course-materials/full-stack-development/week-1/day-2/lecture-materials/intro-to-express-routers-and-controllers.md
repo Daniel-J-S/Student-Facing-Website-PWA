@@ -396,7 +396,8 @@ and mounted like this:
 ```js
 app.use('/todos', todoRouter);
 ```
-	**What is the actual path of the route?**
+
+**What is the actual path of the route?**
 
 <br>
 <br>
@@ -727,7 +728,8 @@ const todosCtrl = require('../controllers/todos');
 ```js
 router.get('/', todosCtrl.index);
 ```
-	How clean is that?!?!
+
+**How clean is that?!?!**
 
 - Refresh and everything should be hunky-dory!
 
@@ -801,7 +803,8 @@ GET /todos/:id
      <li>
        <a href="/todos/<%= idx %>"><%= todo.text %></a>
 ```
-	Don't forget to add the `idx` parameter in the callback function
+
+**Don't forget to add the `idx` parameter in the callback function**
 
 
 - Refresh the page and hover over the links. Looking at the bottom-left of the window will verify the paths look correct!
