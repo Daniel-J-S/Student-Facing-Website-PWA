@@ -8,9 +8,15 @@ type: "lecture"
 
 # Express Routers & Controllers
 
+
 <br>
 <br>
+
+[Click here](https://generalassembly.zoom.us/rec/share/_9QsA5f7xmJOU4XGskbQS5ILFIvbT6a80SgWr_MNyEbLYNmF2CGjOHsfeMOnf2TA?startTime=1595347210000) to access recording
 <br>
+<br>
+
+
 
 
 
