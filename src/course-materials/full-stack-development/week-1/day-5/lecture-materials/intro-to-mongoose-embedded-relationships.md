@@ -8,9 +8,19 @@ type: "lecture"
 
 # Intro to Mongoose Embedded Relationships
 
+
+
 <br>
 <br>
+
+[Click here](https://generalassembly.zoom.us/rec/share/7pB8FKHzr05IZ5XS803fV5EQIZT9X6a8gyEb_fVbmUhl4G7PiqZDQWdJc8PR5mrO?startTime=1595606753000) to access recording
+
 <br>
+<br>
+
+
+
+
 
 
 ## Learning Objectives
@@ -103,7 +113,7 @@ $ npm install
 
 - In a SQL Database, how we model data for an application is usually obvious - there isn't much flexibility, for example, there would **have** to be a `Review` model that maps to a _reviews_ table.
 
-- However, modeling data in MongoDB/Mongoose is more flexible, less strict, and  left up to the developer to decide,andthose decisions should be based on how best to implement the features of an application...
+- However, modeling data in MongoDB/Mongoose is more flexible, less strict, and  left up to the developer to decide,and those decisions should be based on how best to implement the features of an application...
 
 <br>
 <br>
