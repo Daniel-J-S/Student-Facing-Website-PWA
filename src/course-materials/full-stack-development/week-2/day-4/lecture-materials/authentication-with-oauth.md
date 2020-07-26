@@ -61,7 +61,7 @@ Students will be able to:
 
 - Authentication is what enables an application to know the **identity** of the person using it.
 
-- In SEIR-Flex, we're going to learn 3 types of **authentication**:
+- In SEIR, we're going to learn 3 types of **authentication**:
 	- **Unit 2**: Logging in via a third-party provider - _OAuth_
 	- **Unit 3**: Token-based username/password login
 	- **Unit 4**: Session-based username/password login
@@ -204,7 +204,7 @@ Students will be able to:
 
 - Today, we are going to take a starter application and add OAuth authentication & authorization to it.
 
-- The app will allow you, as SEIR-Flex Students, to list fun facts about yourself and read facts about fellow students, past and present.
+- The app will allow you, as SEIR Students, to list fun facts about yourself and read facts about fellow students, past and present.
 
 - The app will add you as a student to its database when you log in for the first time using Google's OAuth service.
 
@@ -242,7 +242,7 @@ We will complete these stories today:
 
 ## Setup and Review the Starter Code
 
-<a href="/downloads/backend_fundamentals/authentication-with-oauth/starter-code/seir-flex-students.zip" download>Download</a> the starter code to get started
+<a href="/downloads/backend_fundamentals/authentication-with-oauth/starter-code/seir-students.zip" download>Download</a> the starter code to get started
 
 - Install the node modules:
 
@@ -1191,7 +1191,7 @@ passport.use(new GoogleStrategy({
 	<br>
 
 	**vs**
-	
+
 	<br>
 	<br>
 	<br>
@@ -1245,40 +1245,26 @@ function index(req, res) {
 
 - We're going to need a link for the user to click to login/out.
 
-- Let's modify **views/index.ejs** as follows:
 
-	```html
-	<a href="" class="brand-logo left">SEIR-Flex Student Fun Facts</a>
-	<!-- Place Nav UI Here -->
-	<ul class="right">
-		<li>
-		<li><a href="/students">See All Students</a></li>
-		<!-- new html below -->
-		<% if (user) { %>
-			<a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
-		<% } else { %>
-			<a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
-		<% } %>
-		</li>
-	</ul>
-	```
+- Lets modify **views/students/index.ejs** as follows:
 
-- Then modify **views/students/index.ejs** as follows:
-
-	```html
-	<a href="" class="brand-logo left">SEIR-Flex Student Fun Facts</a>
-	<ul class="right">
-		<li><a href="/">Home</a></li>
-		<!-- new html below -->
-		<li>
-		<% if (user) { %>
-			<a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
-		<% } else { %>
-			<a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
-		<% } %>
-		</li>
-	</ul>
-	```
+```html
+<nav>
+    <div class="nav-wrapper">
+        <a href="" class="brand-logo left">SEI Student Fun Facts</a>
+        <!-- Add login UI here -->
+		<ul>
+            <li>
+        	<% if (user) { %>
+        		<a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+        	<% } else { %>
+        		<a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+        	<% } %>
+            </li>
+		</ul>
+    </div>
+</nav>
+```
 
 
 <br>
