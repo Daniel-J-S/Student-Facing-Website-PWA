@@ -162,7 +162,7 @@ type: "lecture"
 
 ### Setup
 
-To get setup for this lesson, you'll need to <a href="/downloads/backend_fundamentals/consuming-a-third-party-api-with-express/github-users.zip" download>Download</a> the starter code. Once you'll need to:
+To get setup for this lesson, you'll need to <a href="/downloads/backend_fundamentals/consuming-a-third-party-api-with-express/github-users.zip" download>download</a> the starter code. Once you'll need to:
 
 - Install the `node_modules` with `npm i`
 - Navigate to `http://localhost:3000` to ensure everything is working properly (*i.e. you see a landing page*)
