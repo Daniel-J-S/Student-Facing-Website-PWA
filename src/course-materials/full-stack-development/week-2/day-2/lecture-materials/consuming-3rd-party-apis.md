@@ -222,6 +222,10 @@ To get setup for this lesson, you'll need to <a href="/downloads/backend_fundame
 - We'll need a simple form to allow us to submit a GitHub username to retrieve data for:
 
 	```html
+	<h1 class="jumbotron text-center">Welcome to GitHub Users</h1>
+	
+	<!-- Place this 👇 below heading -->
+
 	<div class="row">
 	  <div class="col-xs-6 col-xs-offset-6">
 	    <form action="/" method="POST">
@@ -306,7 +310,7 @@ const request = require('request');
 
 ### 💪 Review the GitHub API docs
 
-- Let's pair up and review the [GitHub API](https://developer.github.com/v3/) docs with the goal of discovering:
+- Let's review the [GitHub API](https://docs.github.com/en/rest) docs with the goal of discovering:
 	1. What is the API's **Root Endpoint**?  The root endpoint is the first part of the API's URL that remains fixed. Paths are then appended to the root endpoint to form other endpoints for specific requests.
 	2. Are there limits to the number of times we can "hit" the API?
 
