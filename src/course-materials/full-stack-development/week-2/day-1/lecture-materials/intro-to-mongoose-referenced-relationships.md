@@ -230,7 +230,7 @@ The `find` method returns a **Query** object that is first logged, followed by t
 
 
 
-- For future reference, here's a gist that documents how to do what we just did:[Perform CRUD Using Mongoose Models in a Node REPL](https://gist.github.com/myDeveloperJourney/1f3c01e199913b09e90988dce3384bb1)
+- For future reference, here's a gist that documents how to do what we just did: [Perform CRUD Using Mongoose Models in a Node REPL](https://gist.github.com/myDeveloperJourney/1f3c01e199913b09e90988dce3384bb1)
 
 <br>
 <br>
@@ -240,7 +240,9 @@ The `find` method returns a **Query** object that is first logged, followed by t
 
 - We are going to implement the following data relationship:<br>
 
-**_A Movie has many Performers; A Performer has many Movies_** `Movie >--< Performer`** (Many-To-Many)
+**_A Movie has many Performers; A Performer has many Movies_**
+
+**`Movie >--< Performer`** *(Many-To-Many)*
 
 <br>
 <br>
