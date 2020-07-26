@@ -79,20 +79,6 @@ type: "lecture"
 <br>
 <br>
 
-### 💪 Practice Exercise (15 Min)
-
-
-- You've created several Express apps and Mongoose Models - time to do it again!
-
-- Try to complete this exercise with minimal collaboration.
-
-- Be "assertive" and code with a purpose - in other words, complete this exercise as quickly as you can!
-
-- Follow the instructions in the next 4 slides...
-
-<br>
-<br>
-<br>
 
 ### 💪 We need an Express app
 
