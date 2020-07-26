@@ -188,13 +188,13 @@ Students will be able to:
 #### OAuth Review Questions
 
 
-- **True or false - if your site allows users to authenticate via OAuth, you should ensure they create a "strong" password.**
+**❓ True or false - if your site allows users to authenticate via OAuth, you should ensure they create a "strong" password.**
 
-- **What are the advantages provided to users by OAuth?**
+**❓ What are the advantages provided to users by OAuth?**
 
-- **The advantages for web sites & developers?**
+**❓ The advantages for web sites & developers?**
 
-- **What is the _client application_ within the context of an OAuth provider?**
+**❓ What is the _client application_ within the context of an OAuth provider?**
 
 <br>
 <br>
@@ -214,7 +214,7 @@ Students will be able to:
 <br>
 <br>
 
-[**Click Here to Check it Out!**](https://seir-flex-students.herokuapp.com/)
+[**Click Here to Check it Out!**](https://seir-students.herokuapp.com/)
 
 <br>
 <br>
@@ -226,7 +226,7 @@ Students will be able to:
 This is the only user story that's complete in the starter code:
 
 - **As a Visitor**:
-	- I want to view fun facts about past and present SEIR-Flex Students so that I can know more about them.
+	- I want to view fun facts about past and present SEIR Students so that I can know more about them.
 
 We will complete these stories today:
  
@@ -246,9 +246,9 @@ We will complete these stories today:
 
 - Install the node modules:
 
-	```
-	$ npm install
-	```
+```bash
+$ npm install
+```
 	
 - `cd` inside the project folder in your code editor.
 
@@ -269,13 +269,13 @@ We will complete these stories today:
 
 - **NOTE:** This file is created at the root of the project's directory.
 
-```shell
+```bash
 touch .env
 ```
 
 - We'll also need to install the `dotenv` npm package in order to make the environment variables available to our application
 
-```shell
+```bash
 npm i dotenv
 ```
 
@@ -543,7 +543,7 @@ require('dotenv').config()
 > EXAMPLE ONLY - DO NOT COPY AND PASTE 
 
 ```shell
-DATABASE_URL=mongodb+srv://someusername:abc1234@seir-flex-students-1btwt.azure.mongodb.net/students?retryWrites=true
+DATABASE_URL=mongodb+srv://someusername:abc1234@seir-students-1btwt.azure.mongodb.net/seir-students?retryWrites=true
 GOOGLE_CLIENT_ID=245025414219-2r7f4bvh3t88s3shh6hhagrki0f6op8t.apps.googleusercontent.com
 GOOGLE_SECRET=Yn9T_2BKzxr4zgprzKDGI5j3
 GOOGLE_CALLBACK=http://localhost:3000/oauth2callback
@@ -637,9 +637,9 @@ GOOGLE_CALLBACK=http://localhost:3000/oauth2callback
 
 - Let's install the module:
 
-	```shell
-	$ npm install express-session
-	```
+```bash
+$ npm install express-session
+```
 
 - Next, require it below the `morgan`:
 
@@ -663,7 +663,7 @@ GOOGLE_CALLBACK=http://localhost:3000/oauth2callback
 	app.use(express.urlencoded({ extended: true }));
 	// new code below
 	app.use(session({
-	  secret: 'SEIRFLEXRocks!',
+	  secret: 'SEIRRocks!',
 	  resave: false,
 	  saveUninitialized: true
 	}));
@@ -715,9 +715,9 @@ GOOGLE_CALLBACK=http://localhost:3000/oauth2callback
 
 - First the easy part:
 
-	```shell
-	$ npm install passport
-	```
+```bash
+$ npm install passport
+```
 
 - Require it below `express-session`:
 
@@ -763,9 +763,9 @@ GOOGLE_CALLBACK=http://localhost:3000/oauth2callback
 
 - Let's create the file:
 
-	```shell
-	$ touch config/passport.js
-	```
+```bash
+$ touch config/passport.js
+```
 
 - In case you're wondering, although the module is named the same as the `passport` module we've already required, it won't cause a problem because a module's full path uniquely identifies it to Node.
 
@@ -821,9 +821,9 @@ GOOGLE_CALLBACK=http://localhost:3000/oauth2callback
 
 - Time to install the strategy that will implement Google's flavor of OAuth:
 
-	```shell
-	$ npm install passport-google-oauth
-	```
+```bash
+$ npm install passport-google-oauth
+```
 
 - This module implements Google's OAuth 2.0 and 1.0 API. 
 
@@ -842,11 +842,11 @@ GOOGLE_CALLBACK=http://localhost:3000/oauth2callback
 
 - Now let's require the `passport-google-oauth` module below that of `passport` in **config/passport.js**:
 
-	```js
-	const passport = require('passport');
-	// new code below
-	const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
-	```
+```js
+const passport = require('passport');
+// new code below
+const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+```
 
 - Note that the variable is named using upper-camel-case.**We cannot flex on this naming when we use it, we must referenced it exactly like this**
 
@@ -1185,15 +1185,19 @@ passport.use(new GoogleStrategy({
 
 - We want the nav bar in **students/index.ejs** to update dynamically depending upon whether there's an authenticated user or not:
 
-	<img src="https://i.imgur.com/zr4if8Y.png">
+	<img src="https://i.imgur.com/t3tQIML.png">
 	<br>
 	<br>
 	<br>
+
 	**vs**
+	
 	<br>
 	<br>
 	<br>
-	<img src="https://i.imgur.com/CXKo29Z.png">
+	<img src="https://i.imgur.com/oLJRWqz.png">
+
+
 <br>
 <br>
 
@@ -1217,7 +1221,7 @@ module.exports = router;
 - Then let's update the `index` action in **controllers/students.js** and also pass in `req.user` :
 
 ```js
-function index(req, res, next) {
+function index(req, res) {
   Student.find({}, function(err, students)
    res.render('students/index', {
     students,
@@ -1324,7 +1328,7 @@ function index(req, res, next) {
 
 	```html
 	<!-- More Code Above... -->
-	    <li class="collection-item blue-grey-text text-darken-2"><%- fact.text %></li>
+	    <li class="collection-item blue-grey-text text-darken-2"><%= fact.text %></li>
 	  <% }) %>
 	</ul>
     <!-- Place Add Fact UI Here -->
