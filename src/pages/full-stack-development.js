@@ -44,9 +44,10 @@ export default({ data, location }) => {
             <main>
               <h2>Week 1</h2>  
               { weekOneLessons }
+              <hr />
               <h2>Week 2</h2>  
               { weekTwoLessons }
-             {/* <hr />
+             {/* 
               <hr />
               <h2>Project Week</h2>  
               { weekThreeLessons } */}

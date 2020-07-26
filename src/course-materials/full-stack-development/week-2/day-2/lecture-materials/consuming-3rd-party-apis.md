@@ -40,7 +40,7 @@ type: "lecture"
 1. Research available APIs
 1. I have a simple request
 1. Different architectural approaches
-1. Generate our starting app
+1. Setup
 1. Code our `index.ejs`
 1. Add the POST route
 1. Install and require the `request` module
@@ -113,11 +113,14 @@ type: "lecture"
 
 - As basic as it gets, let's make a GET request to a third-party API straight from the browser's address bar:
 
-	
+```bash	
 	http://pokeapi.co/api/v2/pokemon/1
-	```
+```
 
-- **❓ What data format was returned?**
+<br>
+
+
+**❓ What data format was returned?**
 
 
 <br>
@@ -157,19 +160,12 @@ type: "lecture"
 <br>
 
 
-### Generate our Starting App
+### Setup
 
-- Once again, we're going to use Express Generator to scaffold a basic app.
+To get setup for this lesson, you'll need to <a href="/downloads/backend_fundamentals/consuming-a-third-party-api-with-express/github-users.zip" download>Download</a> the starter code. Once you'll need to:
 
-- Instead of my direct assistance, work with your pair to pull this off.
-
-- Be sure to specify the EJS view engine.
-
-- Name the app `github-users`.
-
-- Kind of prefer `server.js` instead of `app.js` too.
-
-- Make sure to test it out when you're done.
+- Install the `node_modules` with `npm i`
+- Navigate to `http://localhost:3000` to ensure everything is working properly (*i.e. you see a landing page*)
 
 
 
@@ -182,7 +178,7 @@ type: "lecture"
 
 - We're going to use the existing `index.ejs`.  For now, we will want to:
 
-	- Adjust the existing boilerplate.
+	- Adjust the existing Codebase.
 	
 	- Add the form for submitting GitHub usernames
 
@@ -195,7 +191,7 @@ type: "lecture"
 
 
 
-### Adjust the boilerplate
+### Adjust the Codebase
 
 - We're adding [Bootstrap](http://getbootstrap.com/getting-started/), changing the title and adding a Jumbotron:
 
@@ -206,7 +202,7 @@ type: "lecture"
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body class="container">
-  <h1 class="jumbotron text-center">GitHub Users</h1>
+  <h1 class="jumbotron text-center">Welcome to GitHub Users</h1>
     
 </body>
 ``` 
@@ -256,11 +252,11 @@ type: "lecture"
 - In **routes/index.js**:
 
 	```js
-	router.get('/', function(req, res, next) {
+	router.get('/', function(req, res) {
   	  res.render('index');
 	});
 
-	router.post('/', function(req, res, next) {
+	router.post('/', function(req, res) {
   	  console.log(`username: ${req.body.username}`);
   	  res.render('index');
 	});
@@ -280,9 +276,9 @@ type: "lecture"
 
 - In order to make HTTP requests from our Express server to the GitHub API, we'll need to install and require an NPM module named [request](https://www.npmjs.com/package/request), a simple HTTP request client:
 
-	```
-	$ npm install request
-	```
+```bash
+$ npm install request
+```
 
 
 ### Install and require the "request" module
@@ -290,11 +286,12 @@ type: "lecture"
 
 - Now lets require it in **routes/index.js**:
 
-	```js
-	var express = require('express');
-	var router = express.Router();
-	var request = require('request');
-	```
+```js
+const express = require('express');
+const router = express.Router();
+const request = require('request');
+```
+
 - What? No separate controller module? Let's be rebels this lesson!
 
 - Now, we need to review the documentation for the GitHub API...
@@ -349,22 +346,22 @@ type: "lecture"
 
 - Let's check out the API's rate limiting by making a request in Terminal using `curl`:
 
-	```
-	$ curl -i https://api.github.com/
-	```
+```bash
+$ curl -i https://api.github.com/
+```
 
 - Scroll up to the beginning of the output and check the headers:
 
-	```
-	HTTP/1.1 200 OK
-	Server: GitHub.com
-	Date: Sun, 02 Oct 2016 14:52:10 GMT
-	Content-Type: application/json; charset=utf-8
-	Content-Length: 2064
-	Status: 200 OK
-	X-RateLimit-Limit: 60
-	X-RateLimit-Remaining: 57
-	```
+```bash
+HTTP/1.1 200 OK
+Server: GitHub.com
+Date: Sun, 02 Oct 2016 14:52:10 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 2064
+Status: 200 OK
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 57
+```
 - Run the request again and check out the limits now.
 
 <br>
@@ -388,9 +385,9 @@ type: "lecture"
 
 - Now let's hit the API again but this time providing our token in a query string like this:
 
-	```
-	$ curl -i https://api.github.com/?access_token=1a1596cfe44...
-	```
+```bash
+$ curl -i https://api.github.com/?access_token=1a1596cfe44...
+```
 
 - Inspect the limits in the headers and you'll notice that we each personally have 5000 requests available - and no more sharing!
 
@@ -398,7 +395,7 @@ type: "lecture"
 
 - Remember, we do not want to expose tokens, keys, database connection strings, or other secrets in our source code.
 
-- Instead, for development purposes, we store secrets in a `.env` file and load its contents into the system's environment variables.
+- Instead, for development purposes, we store secrets in a `.env` file and load its contents into the system's environment constiables.
 
 - In Node apps, we use a module called **dotenv**...
 
@@ -410,23 +407,23 @@ type: "lecture"
 ### Access Tokens (cont.)
 - Let's install **dotenv**:
 
-	```
-	$ npm install dotenv
-	```
+```bash
+$ npm install dotenv
+```
 	
 - Then all we have to do is add this code near the top of **server.js**:
 
-	```js
-	var logger = require('morgan');
-	// load secrets from .env file
-	require('dotenv').config();
-	``` 
+```js
+const logger = require('morgan');
+// load secrets from .env file
+require('dotenv').config();
+``` 
 
 - Lastly create a `.env` file and add a variable for our token:
 
-	```shell
-	GITHUB_TOKEN=1a1596cfe4484ff...
-	```
+```bash
+GITHUB_TOKEN=1a1596cfe4484ff...
+```
 
 - No spaces or quotes please!
 
@@ -434,10 +431,11 @@ type: "lecture"
 
 - Now you will be able to access the token in code like this:
 
-	```js
-	var token = process.env.GITHUB_TOKEN;
-	```
-	Each variable in `.env` will become a property on `process.env`
+```js
+const token = process.env.GITHUB_TOKEN;
+```
+
+Each variable in `.env` will become a property on `process.env`
 
 
 <br>
@@ -465,11 +463,11 @@ type: "lecture"
 
 - First, let's define a `const` to hold the _root endpoint_ in **routes/index.js**:
 
-	```js
-	var request = require('request');
+```js
+	const request = require('request');
 	
 	const rootURL = 'https://api.github.com/';
-	```
+```
 
 <br>
 <br>
@@ -520,12 +518,13 @@ type: "lecture"
 - Also, we have to... Pass an object from the GET '/' route as well to prevent a "userData is not defined"_ error when the _index_ view is rendered:
 
 
-	```js
-	router.get('/', function(req, res) {
-	  res.render('index', {userData: null});
-	});
-	```
-	EJS is not forgiving if we access undefined variables :(
+```js
+router.get('/', function(req, res) {
+	res.render('index', {userData: null});
+});
+```
+
+EJS is not forgiving if we access undefined variables :(
 
 
 <br>
@@ -549,9 +548,9 @@ type: "lecture"
 
 - Here's our updated POST route:
 
-	```js
+```js
 	router.post('/', function(req, res) {
-	  var options = {
+	  const options = {
 	    url: rootURL + 'users/' + req.body.username,
 	    headers: {
 	      'User-Agent': 'jim-clark'
@@ -561,7 +560,7 @@ type: "lecture"
 	    res.render('index', {userData: body});
 	  });
 	});
-	```
+```
 
 - The docs suggested we pass our username as the value for the `User-Agent` header.
 
@@ -575,17 +574,17 @@ type: "lecture"
 
 - One more refactor to send our token in a header instead of the query string:
 
-	```js
-	router.post('/', function(req, res) {
-	  var options = {
-	    url: rootURL + 'users/' + req.body.username,
-	    headers: {
-	      'User-Agent': 'jim-clark',
-	      'Authorization': 'token ' + process.env.GITHUB_TOKEN
-	    }
-	  };
-	  ...
-	```
+```js
+router.post('/', function(req, res) {
+ const options = {
+   url: rootURL + 'users/' + req.body.username,
+   headers: {
+     'User-Agent': 'jim-clark',
+     'Authorization': 'token ' + process.env.GITHUB_TOKEN
+   }
+ };
+ ...
+```
 
 - Be sure to refactor the code not to send the token in the query-string also.
 
@@ -597,21 +596,21 @@ type: "lecture"
 
 - We'll use a Bootstrap _panel_:
 
-	```html
-	<% if (userData) { %>
-	  <div class="panel panel-default">
-	    <div class="panel-heading text-center">
-	      <img src="<%= userData.avatar_url %>"
-	        class="img-circle" width="300">
-	      <h2><%= userData.login %></h2>
-	    </div>
-	    <div class="panel-body">
-	      <h3>Repos:</h3>
-	      need to list repos here...
-	    </div>
-	  </div>
-	<% } else { %>
-	```
+```html
+<% if (userData) { %>
+ <div class="panel panel-default">
+   <div class="panel-heading text-center">
+     <img src="<%= userData.avatar_url %>"
+       class="img-circle" width="300">
+     <h2><%= userData.login %></h2>
+   </div>
+   <div class="panel-body">
+     <h3>Repos:</h3>
+     need to list repos here...
+   </div>
+ </div>
+<% } else { %>
+```
 
 - Testing it out we'll find it not working because the response `body` is just a JSON string and needs to be parsed into a JS object...
 
@@ -626,12 +625,12 @@ type: "lecture"
 
 - Update this piece of code in the POST:
 
-	```js
-	request(options, function(err, response, body) {
-	  var userData = JSON.parse(body);
-     res.render('index', {userData: userData});
-	});
-	```
+```js
+request(options, function(err, response, body) {
+ const userData = JSON.parse(body);
+   res.render('index', {userData: userData});
+});
+```
 
 - `JSON.parse()` converts a string into a JS Object and `JSON.stringify()` does just the opposite, converting a JS object into a JSON string.
 
@@ -653,20 +652,20 @@ type: "lecture"
 
 - Of course, multiple requests will result in nested callbacks.  Update this section of the POST:
 
-	```js
-	...
-	request(options, function(err, response, body) {
-	  var userData = JSON.parse(body);
-	  // update the options url to fetch the user's repos
-	  options.url = userData.repos_url;
-	  request(options, function(err, response, body) {
-	    // add a repos property
-	    userData.repos = JSON.parse(body);
-	    console.log(userData.repos[0]);
-	    res.render('index', {userData: userData});
-	  });
-	});
-	``` 
+```js
+...
+request(options, function(err, response, body) {
+ const userData = JSON.parse(body);
+ // update the options url to fetch the user's repos
+ options.url = userData.repos_url;
+ request(options, function(err, response, body) {
+   // add a repos property
+   userData.repos = JSON.parse(body);
+   console.log(userData.repos[0]);
+   res.render('index', {userData: userData});
+ });
+});
+``` 
 
 <br>
 <br>
@@ -679,21 +678,21 @@ type: "lecture"
 
 - Bootstrap has a nice **List Group** component that's great for listing links:
 
-	```html
-	<div class="panel-body">
-	  <h3>Repos:</h3>
-	  <!-- new stuff below -->
-	  <div class="list-group">
-	    <% userData.repos.forEach(function(repo) { %>
-	      <a href="<%= repo.html_url %>" target="_blank"
-	        class="list-group-item">
-	        <%= repo.name %>
-	      </a>
-	    <% }); %>
-	  </div>
-	  <!-- new stuff above -->
-	</div>
-	```
+```html
+<div class="panel-body">
+ <h3>Repos:</h3>
+ <!-- new stuff below -->
+ <div class="list-group">
+   <% userData.repos.forEach(function(repo) { %>
+     <a href="<%= repo.html_url %>" target="_blank"
+       class="list-group-item">
+       <%= repo.name %>
+     </a>
+   <% }); %>
+ </div>
+ <!-- new stuff above -->
+</div>
+```
 
 <br>
 <br>
