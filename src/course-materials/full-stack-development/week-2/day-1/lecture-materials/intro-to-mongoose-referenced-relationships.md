@@ -19,7 +19,6 @@ type: "lecture"
 <p>Students Will Be Able To:</p>
 
 - Use Referencing to Implement 1:M & M:M Data Relationships
-- Explain the Difference Between 1:M & M:M Relationships
 - "Populate" Referenced Documents 
 
 <br>
@@ -28,15 +27,14 @@ type: "lecture"
 ## Roadmap
 
 1. Setup
-2. Review the Starter Code
-3. Use a Node REPL session to perform CRUD using Mongoose Models
-4. A New Data Resource: _Performers_
-5. Create the `Performer` Model
-6. Referencing _Performers_ in the _Movie_ Model
-7. Creating _Performers_
-8. Associating Movies and Performers
-9. _AAU, when viewing a movie's detail page, I want to see a list of the current cast and add a new performer to the list_
-10. Essential Questions
+2. Use a Node REPL session to perform CRUD using Mongoose Models
+3. A New Data Resource: _Performers_
+4. Create the `Performer` Model
+5. Referencing _Performers_ in the _Movie_ Model
+6. Creating _Performers_
+7. Associating Movies and Performers
+8. _AAU, when viewing a movie's detail page, I want to see a list of the current cast and add a new performer to the list_
+9.  Essential Questions
 
 
 <br>
