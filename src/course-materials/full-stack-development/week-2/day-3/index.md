@@ -13,6 +13,6 @@ topics: "Producing an API with Express"
 #### Producing an API With Express
 
 - [**Lecture:** Producing an API with Express](/full-stack-development/week-2/day-3/lecture-materials/producing-an-api-with-express/)
-- [**Lab:** Producing an API Lab](/full-stack-development/week-2/day-3/labs/producing-an-api-lab/) - (Non-Deliverable)
+- [**Lab:** Producing an API Lab](/full-stack-development/week-2/day-3/labs/producing-an-api-lab/) - **Non-Deliverable**
 
 
