@@ -477,12 +477,6 @@ $ touch views/performers/new.ejs
 - Find and update in **public/stylesheets/style.css**:
 
 ```css
-#add-review-form,
-#add-performer-form {
- display: grid;
- ...
-}	
-
 #new-form *,
 #add-review-form *,
 #add-performer-form * {
@@ -490,9 +484,17 @@ $ touch views/performers/new.ejs
  ...
 }
 
+
+#add-review-form,
+#add-performer-form {
+ display: grid;
+ ...
+}	
+
+
 #add-review-form input[type="submit"],
 #add-performer-form input[type="submit"] {
- width: 10rem;
+ width: 10rem; /* <-- change to from 8 to 10rem*/
  ...
 }	
 ``` 
@@ -524,11 +526,6 @@ module.exports = {
 };
 
 function create(req, res) {
-  // Hack to "fix" date formatting to prevent possible day off by 1
-  // https://stackoverflow.com/questions/7556591/is-the-javascript-date-object-always-one-day-off
- var s = req.body.born;
- req.body.born = 
-   `${s.substr(5,2)}-${s.substr(8,2)}-${s.substr(0,4)}`;
  Performer.create(req.body, function(err, performer) {
    res.redirect('/performers/new');
  });
