@@ -127,7 +127,7 @@ type: "lecture"
 #### 4) Temporarily "comment out" the cast property in the `models/movie.js`
 
 ```javascript
-onst movieSchema = new Schema({
+const movieSchema = new Schema({
   title: {
     type: String,
     required: true
