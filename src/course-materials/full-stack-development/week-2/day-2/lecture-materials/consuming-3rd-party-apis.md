@@ -392,7 +392,7 @@ X-RateLimit-Remaining: 57
 - Now let's hit the API again but this time providing our token in a query string like this:
 
 ```bash
-$ curl -i https://api.github.com/?access_token=1a1596cfe44...
+$ curl -i -u <username>:<access_token> https://api.github.com/
 ```
 
 - Inspect the limits in the headers and you'll notice that we each personally have 5000 requests available - and no more sharing!
