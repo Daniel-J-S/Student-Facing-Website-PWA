@@ -352,13 +352,21 @@ function index(req, res) {
 
 <br>
 <br>
+
+### Congratulations, you produced your own API!
+
 <br>
+<br>
+
 
 ### Essential Questions
 
 ❓ How would these two routes be expected to behave differently?
 	`GET /accounts` and`GET /api/accounts`
-	
+
+
 ❓ In addition to responding with JSON, it is proper to set the HTTP Response's _______ _______ as well.
+
+
 
 ❓ What is the use case for exposing an API from a server app?
