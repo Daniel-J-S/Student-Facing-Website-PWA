@@ -96,7 +96,7 @@ $ npm install -g express-generator
 Now that we have the build tool, we can quickly generate an app with the following command:
 
 ```shell
-$ express puppies-api --ejs
+$ express puppies-api --view=ejs
 ```
 
 The express generator provides us with the `express` command, then we simply provide two arguments:
