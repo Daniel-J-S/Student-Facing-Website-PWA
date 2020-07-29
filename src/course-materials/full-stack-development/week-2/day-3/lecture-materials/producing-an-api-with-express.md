@@ -102,7 +102,7 @@ $ express puppies-api --view=ejs
 The express generator provides us with the `express` command, then we simply provide two arguments:
 
 - The name of our application - in this case: `puppies-api`
-- The view engine - in this case, we'll use the `ejs` view engine `--ejs`
+- The view engine flag - in this case, we'll use the `ejs` view engine `--ejs`
 
 > Keep in mind, the app design we get from the express generator is a slightly older suggestion/opinion from the original creators of the express framework. There is really no right or wrong way to build a web server with express, just suggestions/opinions and best practices based on use case. The only benefit of using the express generator is time saved. Although there may seem to be some slight differences, the performance and functionality of a "generated app" is the same as if we'd built it from "scratch".
 
