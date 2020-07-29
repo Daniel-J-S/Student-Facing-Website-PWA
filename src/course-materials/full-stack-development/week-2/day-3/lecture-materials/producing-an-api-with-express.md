@@ -107,7 +107,7 @@ The express generator provides us with the `express` command, then we simply pro
 > Keep in mind, the app design we get from the express generator is a slightly older suggestion/opinion from the original creators of the express framework. There is really no right or wrong way to build a web server with express, just suggestions/opinions and best practices based on use case. The only benefit of using the express generator is time saved. Although there may seem to be some slight differences, the performance and functionality of a "generated app" is the same as if we'd built it from "scratch".
 
 
-- The last thing we need to do is `cd` into `puppies-api` and install the `node-modules` with `npm install` - _(Express generator does not automatically install them)._
+- The last thing we need to do is `cd` into `puppies-api` and install the `node-modules` with `npm install` - _(The Express generator does not automatically install them)._
 
 <br>
 <br>
