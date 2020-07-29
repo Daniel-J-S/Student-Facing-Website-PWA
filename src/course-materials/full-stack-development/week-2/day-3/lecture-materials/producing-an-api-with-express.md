@@ -102,7 +102,7 @@ $ express puppies-api --view=ejs
 The express generator provides us with the `express` command, then we simply provide two arguments:
 
 - The name of our application - in this case: `puppies-api`
-- The view engine flag - in this case, we'll use the `ejs` view engine `--ejs`
+- The view engine flag - in this case, we'll specify the `ejs` view engine `--ejs`
 
 > Keep in mind, the app design we get from the express generator is a slightly older suggestion/opinion from the original creators of the express framework. There is really no right or wrong way to build a web server with express, just suggestions/opinions and best practices based on use case. The only benefit of using the express generator is time saved. Although there may seem to be some slight differences, the performance and functionality of a "generated app" is the same as if we'd built it from "scratch".
 
@@ -156,7 +156,7 @@ The express generator provides us with the `express` command, then we simply pro
 
 - Let's start by renaming the generated **routes/users.js** file to **routes/api.js**.  We'll use this file to hold the routes for our API.
 
-- Make the necessary changes in **server.js**. If done correctly, requests will have to be made as follows...
+- Make the necessary changes in **app.js**. If done correctly, requests will have to be made as follows...
 
 
 - <p>These are the RESTful routes we need to implement:</p>
@@ -194,12 +194,12 @@ The express generator provides us with the `express` command, then we simply pro
 var puppiesCtrl = require('../controllers/api/puppies');
 ```
 	
-	Let's create the routes for these actions:
-	- `puppiesCtrl.index`
-	- `puppiesCtrl.show`
-	- `puppiesCtrl.create`
-	- `puppiesCtrl.update`
-	- `puppiesCtrl.delete`
+Let's create the routes for these actions:
+- `puppiesCtrl.index`
+- `puppiesCtrl.show`
+- `puppiesCtrl.create`
+- `puppiesCtrl.update`
+- `puppiesCtrl.delete`
 	
 <br>
 <br>
@@ -337,7 +337,7 @@ function index(req, res) {
 	$ npm install cors
 	```
 
-- Then we simply have to mount the middleware in **server.js**:
+- Then we simply have to mount the middleware in **app.js**:
 
 	```js
 	var cors = require('cors');
@@ -351,10 +351,6 @@ function index(req, res) {
 
 
 <br>
-<br>
-
-### Congratulations, you produced your own API!
-
 <br>
 <br>
 
