@@ -1204,21 +1204,7 @@ passport.use(new GoogleStrategy({
 
 #### Step 9 - Add Login/Logout UI
 
-- Let's update the `router` in **router/index.js** to pass in `req.user` :
-
-```js
-const router = require('express').Router();
-
-router.get('/', function(req, res) {
-  res.render('index', {
-	  user: req.user
-  });
-});
-
-module.exports = router;
-```
-
-- Then let's update the `index` action in **controllers/students.js** and also pass in `req.user` :
+- Let's update the `router` in **controllers/students.js** and also pass in `req.user` :
 
 ```js
 function index(req, res) {
@@ -1231,7 +1217,7 @@ function index(req, res) {
 }
 ```
 
-- Now the logged in student is in a `user` variable that's available inside of both **views/index.ejs** and **views/students/index.ejs**. If nobody is logged in, `user` will be `undefined` (falsey).
+- Now the logged in student is in a `user` variable that's available inside of **views/students/index.ejs**. If nobody is logged in, `user` will be `undefined` (falsey).
 
 <br>
 <br>
