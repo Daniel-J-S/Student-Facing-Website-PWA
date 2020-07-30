@@ -1392,7 +1392,7 @@ function index(req, res) {
 - We can actually **insert** additional middleware functions before a route's final middleware function!  Let's modify **routes/students.js** to see this in action:
 
 ```js
-  router.get('/students', isLoggedIn, studentsCtrl.index);
+  router.get('/students', studentsCtrl.index);
 
   router.post('/facts', isLoggedIn, studentsCtrl.addFact);
 
