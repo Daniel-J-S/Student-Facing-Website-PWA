@@ -254,7 +254,7 @@ $ npm install
 
 - Use `nodemon` to start the server.
 
-- The app has two server-side views **views/index.ejs** and **views/students/index.ejs**.
+- The app has one server-side view: **views/students/index.ejs**.
 
 - The app uses the [_Materialize_ CSS framework](http://materializecss.com/) based upon [Google's Material Design](https://www.google.com/design/spec/material-design/introduction.html).
 
@@ -262,7 +262,7 @@ $ npm install
 <br>
 <br>
 
-#### Review the Starter Code<small>Config</small>
+#### Review the Starter Code:  <small>Config</small>
 
 
 - We'll need to set up a `.env`, which will be used to provide _environment_ variables such as the database's connection string.
@@ -306,7 +306,7 @@ require('dotenv').config()
 <br>
 <br>
 
-#### Review the Starter Code<small>Database</small>
+#### Review the Starter Code:  <small>Database</small>
 
 
 - Instead of using our own personal database, we are using a MongoDB hosted in the cloud so that we can see each other's fun facts!
@@ -322,7 +322,7 @@ require('dotenv').config()
 <br>
 
 
-#### Review the Starter Code<small>The View</small>
+#### Review the Starter Code:  <small>The View</small>
 
 
 - Reviewing **students/index.ejs** shows that several [Materialize CSS](https://materializecss.com/about.html) classes are being used for layout and styling.
@@ -335,7 +335,7 @@ require('dotenv').config()
 
 
 
-#### Review the Starter Code<small>Models</small>
+#### Review the Starter Code:  <small>Models</small>
 
 
 - There is only a single `Student` Model exported by **models/student.js**.
@@ -356,18 +356,18 @@ require('dotenv').config()
 
 
 
-#### Review the Starter Code<small>Routing</small>
+#### Review the Starter Code:  <small>Routing</small>
 
 
 - We have two separate route files: **routes/index.js** & **routes/students.js**.
 
-- **routes/index.js** currently has only the root route defined that renders a landing page template at **views/index.ejs**.
+- **routes/index.js** currently has only the root route defined that redirects to `'/students'`.
 
 - **routes/students.js** has four routes defined for the following actions:
 
 	| Purpose | Method | Path |
 	|:-------|:-------|:-------|
-	| Go to Landing Page | `GET` | `/` |
+	| Redirect to `/students` | `GET` | `/` |
 	| Display all students | `GET` | `/students` |
 	| Create a fact for a student | `POST` | `/facts` |
 	| Delete a fact | `DELETE`| `/facts/:id` |
@@ -385,7 +385,7 @@ require('dotenv').config()
 
 
 
-#### Review the Starter Code <small>Controller</small>
+#### Review the Starter Code  <small>Controller</small>
 
 
 - The `index` action in **controllers/students.js** is querying the `Student` model and providing the array of students to the **students/index.ejs** view.
@@ -1253,7 +1253,7 @@ function index(req, res) {
     <div class="nav-wrapper">
         <a href="" class="brand-logo left">SEI Student Fun Facts</a>
         <!-- Add login UI here -->
-		<ul>
+		<ul class="right">
             <li>
         	<% if (user) { %>
         		<a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
