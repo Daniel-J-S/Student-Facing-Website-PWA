@@ -87,7 +87,7 @@ Define the `seat` property as follows:<br>`seat: {type: String, match: /[A-F][1-
 
 That regex pattern will match the following characters:
 
-	- An `A` thru `F` character, followed by
+- An `A` thru `F` character, followed by
 - a `1` thru `9` character, followed by
 - zero or one `0` thru `9` character.
 
