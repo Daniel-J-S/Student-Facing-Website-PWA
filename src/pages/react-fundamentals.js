@@ -1,8 +1,7 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/layout';
-import LectureCard from '../components/lecture-card';
 
 import styles from '../styles/course-content-display.module.scss';
 
@@ -11,24 +10,45 @@ export default({ data, location }) => {
     
    const { allMarkdownRemark } = data;
 
-   const lessons = allMarkdownRemark.edges.map(({ node }) => 
-      <LectureCard 
-        key={node.id}
-        slug={node.fields.slug}
-        title={node.frontmatter.title}
-        topics={node.frontmatter.topics} 
-      />
-   );
-
+    const weekOneLessons = allMarkdownRemark.edges.filter(({ node }) => 
+        node.frontmatter.week === 1
+      ).map(({ node }) =>
+        <Link to={node.fields.slug}>
+          <h2 className={styles.dayTitle} key={node.fields.id}>{node.frontmatter.title}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
+        </Link> 
+      );
+      const weekTwoLessons = allMarkdownRemark.edges.filter(({ node }) => 
+      node.frontmatter.week === 2
+      ).map(({ node }) =>
+      <Link to={node.fields.slug}>
+          <h2 className={styles.dayTitle} key={node.fields.id}>{node.frontmatter.title}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
+        </Link> 
+      );
+      
+      const weekThreeLessons = allMarkdownRemark.edges.filter(({ node }) => 
+        node.frontmatter.week === 3
+      ).map(({ node }) =>
+        <Link to={node.fields.slug}>
+          <h2 className={styles.dayTitle} key={node.fields.id}>{node.frontmatter.title}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
+        </Link> 
+      );
+      
     return (
-        <Layout 
-          pageTitle="React Fundamentals"
-          centerContent={true}  
+        <Layout
+          centerContent={true} 
+          pageTitle="React Fundamentals" 
           location={location} 
           crumbLabel={"React Fundamentals"}>
             <h1>React Fundamentals</h1>
-            <main className={styles.main}>
-              {lessons}
+            <main>
+              <h2>Week 1</h2>  
+              { weekOneLessons }
+              <hr />
+              <h2>Week 2</h2>  
+              { weekTwoLessons } 
+              <hr />
+              <h2>Project Week</h2>  
+              { weekThreeLessons }
             </main>
         </Layout>
     );
@@ -37,7 +57,7 @@ export default({ data, location }) => {
 export const query = graphql`
 query {
     allMarkdownRemark (
-          filter: {frontmatter: {track: {eq: "React Fundamentals"}, 
+          filter: {frontmatter: {track: {eq: "Full-Stack Development"}, 
           type: {eq: "homepage"}}}
             sort: {fields:  [frontmatter___week, frontmatter___day]}
         ){
