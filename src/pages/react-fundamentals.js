@@ -57,7 +57,7 @@ export default({ data, location }) => {
 export const query = graphql`
 query {
     allMarkdownRemark (
-          filter: {frontmatter: {track: {eq: "Full-Stack Development"}, 
+          filter: {frontmatter: {track: {eq: "React Fundamentals"}, 
           type: {eq: "homepage"}}}
             sort: {fields:  [frontmatter___week, frontmatter___day]}
         ){
