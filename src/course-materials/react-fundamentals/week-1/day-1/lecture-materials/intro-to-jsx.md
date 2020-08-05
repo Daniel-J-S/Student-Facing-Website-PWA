@@ -25,12 +25,6 @@ type: "lecture"
 
 <br>
 <br>
-
-
-[Click Here](https://generalassembly.zoom.us/rec/share/2sBuCK2r7TpJGq-Q9GbyUL4LIrW6aaa81XUb_KAJyEaBJg5CTn7rwLxcpFXSFa1o?startTime=1593041576000) to access recording
-
-
-<br>
 <br>
 
 ## Roadmap
@@ -216,10 +210,12 @@ export default function App() {
 	
 	export default Greeter;
 	```
-	Note how a **Function Component** (a component defined as a `function`) accepts "props" as an argument and must `return` its UI (defined using JSX).
+
+Note how a **Function Component** (a component defined as a `function`) accepts "props" as an argument and must `return` its UI (defined using JSX).
 
 <br>
 <br>
+
 
 5. Now let's modify `<App>` to render the new `<Greeter>` component instead of the built-in `<h1>` React element:
 
@@ -570,16 +566,17 @@ Note that a `key` prop has been added. Whenever React has a list of components, 
 <br>
 <br>
 
-## ❓ Essential Questions
+## Essential Questions
 
-1. **In your own words, what is JSX and why do we use it?**
+**❓ In your own words, what is JSX and why do we use it?**
 
-2. **How many component nodes can be returned from a function component or the `render` method in the case of a class component?**
+**❓ How many component nodes can be returned from a function component or the `render` method in the case of a class component?**
 
-3. **We use _______ to pass information as key/value pairs to a component.**
+**❓ We use _______ to pass information as key/value pairs to a component.**
 
-4. **To embed JS expressions within JSX, we wrap the expressions with ________?**
+**❓ To embed JS expressions within JSX, we wrap the expressions with ________?**
 
+<br>
 <br>
 <br>
 

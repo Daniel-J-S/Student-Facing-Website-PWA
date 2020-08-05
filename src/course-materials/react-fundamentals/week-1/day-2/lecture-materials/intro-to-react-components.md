@@ -527,15 +527,15 @@ You'll be working with Class Components this afternoon when you start working wi
 <br>
 <br>
 
-## ❓ Essential Questions
+## Essential Questions
 
-1. **A UI in React is a hierarchy of ____________.**
+**❓ A UI in React is a hierarchy of ____________.**
 
-2. **True or False: Components used to render data passed to them via props are known as "presentational" components.**
+**❓ True or False: Components used to render data passed to them via props are known as "presentational" components.**
 
-3. **True or False: "Container" components hold state and may need need to use lifecycle methods to fetch data, etc.?**
+**❓ True or False: "Container" components hold state and may need need to use lifecycle methods to fetch data, etc.?**
 
-4. **True or False: Currently, the common approach is to define "container" components as classes and "presentational" components as functions?**
+**❓ True or False: Currently, the common approach is to define "container" components as classes and "presentational" components as functions?**
 
 <br>
 <br>

@@ -106,11 +106,12 @@ The undisputed champ of client-side rendering today is React!
 <br>
 <br>
 
-### ❓ Review Questions
+### Review Questions
 
-1. **What's the key difference between a traditional web app and a single-page app?**
+**❓ What's the key difference between a traditional web app and a single-page app?**
 
-2. **What development concepts enable the creation of comprehensive single-page applications?**
+
+**❓ What development concepts enable the creation of comprehensive single-page applications?**
 
 <br>
 <br>
@@ -282,11 +283,11 @@ Yeah, rendering happens frequently in a React app (whenever state changes), but 
 <br>
 <br>
 
-### ❓ Review Questions
+### Review Questions
 
-1. **The User Interface in a React app is built using c____________s.**
+**❓ The User Interface in a React app is built using c____________s.**
 
-2. **When ________ changes in a component, that component, and all of its children components are rendered.**
+**❓ When ________ changes in a component, that component, and all of its children components are rendered.**
 
 
 <br>

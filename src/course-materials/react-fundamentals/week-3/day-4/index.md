@@ -4,7 +4,7 @@ title: "Day 4"
 week: 3
 day: 4
 type: "homepage"
-topics: "Students Work On Project 3"
+topics: "Project 3"
 ---
 
 
