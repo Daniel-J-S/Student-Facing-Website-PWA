@@ -2,7 +2,7 @@
 track: "React Fundamentals"
 title: "State and Props in React"
 week: 1
-day: 2
+day: 3
 type: "lecture"
 ---
 
