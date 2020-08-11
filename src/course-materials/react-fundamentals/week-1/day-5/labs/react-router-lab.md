@@ -8,6 +8,10 @@ type: "lab"
 
 # React Router Lab
 
+<br>
+<br>
+
+
 
 ## Intro
 
@@ -27,6 +31,12 @@ In this lab, you'll continue to have fun building out react-mastermind using wha
 
 **This lab is not a deliverable**
 
+<br>
+<br>
+<br>
+
+
+
 ## Set Up
 
 The starter code for this lab is the same as the completed code from the _React Router_ lesson. However, just in case your code wasn't working or to ensure you have no issues following along with this lab, please follow the steps below:
@@ -42,6 +52,13 @@ To get set up for this lab:
 Once the dev server opens a tab to `localhost:3000`, the page should have something like the following at the top:
 
 <img src="https://i.imgur.com/ibMTm9k.png">
+
+
+<br>
+<br>
+<br>
+
+
 
 ## Exercises
 
@@ -101,6 +118,11 @@ Choosing the **Difficult** level will result in the root route displaying this:
 <img src="https://i.imgur.com/IaKWyLR.png">
 
 Good luck cracking the code!
+
+<br>
+<br>
+<br>
+
 
 
 #### Pssssst ... here's one possible solution to this lab (Please, only use if necessary) 
