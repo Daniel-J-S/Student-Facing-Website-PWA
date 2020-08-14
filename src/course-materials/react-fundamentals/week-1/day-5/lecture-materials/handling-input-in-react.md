@@ -46,7 +46,11 @@ Let's create a new React Project on [`codesandbox.io`](https://www.codesandbox.i
 - Replace the existing `<App>` component with this starting code:
 
 ```js
-class App extends React.Component {
+import React from "react";
+import "./styles.css";
+
+
+export default class App extends React.Component {
  state = {
    skills: [{ skill: "JavaScript", level: 4 }]
  };
