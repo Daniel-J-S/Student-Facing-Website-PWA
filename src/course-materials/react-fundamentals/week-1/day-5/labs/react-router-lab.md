@@ -10,6 +10,9 @@ type: "lab"
 
 <br>
 <br>
+<br>
+
+
 
 
 
@@ -43,7 +46,7 @@ The starter code for this lab is the same as the completed code from the _React 
 
 To get set up for this lab:
 
-- Download the <a href="./react-mastermind-starter.zip" download>Starter Code</a>
+- Download the <a href="/downloads/react_fundamentals/intro-to-react-router-lab/react-mastermind.zip" download>Starter Code</a>
 - Extract the folder from the `.zip` file and `cd` into it
 - Install the Node modules: `$ npm i`
 - Open the code in VS Code: `$ code .`
@@ -53,10 +56,10 @@ Once the dev server opens a tab to `localhost:3000`, the page should have someth
 
 <img src="https://i.imgur.com/ibMTm9k.png">
 
+<br>
+<br>
+<br>
 
-<br>
-<br>
-<br>
 
 
 
@@ -125,6 +128,7 @@ Good luck cracking the code!
 
 
 
+
 #### Pssssst ... here's one possible solution to this lab (Please, only use if necessary) 
 
-<a href="./react-mastermind-solution.zip" download>Solution Code</a>
+<a href="/downloads/react_fundamentals/intro-to-react-router-lab-solution/react-mastermind.zip" download>Solution Code<a>
