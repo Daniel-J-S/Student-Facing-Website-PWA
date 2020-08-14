@@ -372,7 +372,7 @@ Let's import it into **App.js**:
 
 ```jsx
 import NewGameButton from '../../components/NewGameButton/NewGameButton';
-import GamePage from '../../pages/GamePage/GamePage';
+import GamePage from '../GamePage/GamePage';
 ```
 
 Then test render it:
