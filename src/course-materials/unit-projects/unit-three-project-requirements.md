@@ -1,33 +1,92 @@
-# Project Three: A MERN Stack Application:
+# Project Three: A MERN Stack Application As a Team:
 
 ## Overview
 
 **You’ve come a long way, and it's time to show it.** This will be your most advanced project to date.
 
-**Before you start working** on the planning for your project, be sure to review your idea with an instructional team to ensure that it both:
+You’ve already worked in small groups to accomplish various labs and exercises, but this time **we’re going to challenge you to work in a small team on a project.**
 
-- **Meets the minimum requirements**, and
-- **Is reasonably scoped**
+You and your teammates together will architect, design, and collaboratively build a full-stack web app.
 
-## Necessary Deliverables
+**This project will push you both technically and collaboratively!**
 
-#### 1) Project Planning
+You'll likely be working as part of a team in the workplace and **this project will provide you with that important team development experience.**
 
-A project consists of more than just code.
+However, working on a project as part of a team can be more challenging due to logistical reasons, differing opinions, etc.
 
-This project requires **planning** organized within a **Trello board** with the following **lists**:
+During this project, your instructors are going to be evaluating **your ability to listen to and respect other opinions; to share and contribute your ideas with the team; and form a consensus and compromise when opinions differ**.
 
-- **Icebox**: Holds user stories that have yet to be moved to the _Current/MVP_ list. All user stories are originally put into the _Icebox_, including both MVP and wish list stories. 
+In fact, **your ability to work in a team during this project is more important to your instructors than the project itself**.
 
-- **Current/MVP**: Holds user stories that must be completed to meet the minimum project requirements (MVP). Once the MVP has been met, additional user stories may be moved from the _Icebox_.
 
-- **Completed**: Hold completed user stories. 
 
-- **Wireframes**: Sketches of each screens's user interface for the major functionality of the application.
+## Planning & Presentation Requirements
 
-- **Entity-Relationship-Diagram (ERD)**: A diagram of the app's models (one per data entity) and the relationships between them.
+Working in a team is going to require more upfront planning to ensure the team is "on the same page"...
 
-> User stories need to be formed properly using this template:<br>`As a <role>, I want <feature> so that <reason>`. The _reason_ is optional if it's patently obvious.
+#### Pitch Deck
+
+☐ **Pitch your project** to the class with a [pitch deck](https://pitchdeck.improvepresentation.com/what-is-a-pitch-deck){:target="_blank"} that includes:
+
+- The application name.
+- Your team members and their roles.
+- The problem you are going to solve with your app.
+- Check out previous decks: [Meal Ticket](https://docs.google.com/presentation/d/1CsBuC-a_AZ1yXJEE-EbptPIdgj1MktiNALyQyhaFfrM/edit#slide=id.p){:target="_blank"}, [Tripio](https://docs.google.com/presentation/d/1gvOypLc4VjKqJzdAW68iwh28uGDSH4Sp1KnA5grDo2g/edit#slide=id.p){:target="_blank"}, [Pantry](https://docs.google.com/presentation/d/1WvHoN5MNaRembgcoog5p0GtivVCOZSzvfPyeevzy08g/edit){:target="_blank"}, [ArtWorld](https://docs.google.com/presentation/d/1yGy2Mh3n6IhPxFu4XKnnMtPPi4OGFPpf-Z_TMYw6wQY/edit#slide=id.g7ba109823e_2_7){:target="_blank"}
+
+#### Trello Board
+
+- A **[Trello](https://trello.com/){:target="_blank"} board** with:
+    
+    ☐ **User Stories**, each moving from left to right in the following 
+      three lists in your board:<br>
+      	- **Ice Box**<br>
+      	- **Current/MVP**<br>
+      	- **Completed**<br>
+      <br>**User Stories** must follow the following template:<br>**_As a \<user role\>, I want \<feature\>, because \<reason\>._**<br>The _reason_ is optional if it's blatantly obvious.
+      <br><br>Note: Prioritize your user stories within the Ice Box with your "wish 
+      list" stories at the bottom.
+    
+    ☐ **Wireframes of the main pages of functionality**, e.g. Landing Page, Posts Index Page, Favorite Posts Page, Add Post Page, etc.
+    
+    ☐ An **ERD** showing the attributes of each entity and the relationships between them. Refer to the Data Modeling lesson for assistance.
+
+### Presentations
+
+**Your entire team must participate in the presentation of the project.**
+
+You will have approximately 15 minutes to present your project following these guidelines:
+
+1. **Introduce the Project:**
+
+	☐ Intro your project by paraphrasing the README.
+	
+2. **Demonstrate the Project:**
+
+	☐ Launch the project by clicking the link in the README.
+	
+	☐ Sign up a new user, then immediately log out.
+	
+	☐ Log in with your preferred user and demonstrate the features of the app.
+	
+	☐ Be sure to demo all CRUD data operations.
+	
+3. **Show/discuss your code:**
+
+	☐ Show the "main" Django model.
+	
+	☐ Show your favorite Django template.
+	
+	☐ Show the code for the main model's view.
+
+4. **Share the experience:**
+
+	☐ What was your biggest challenge? (besides Team Git Workflow)
+	
+	☐ What are your key learnings/takeaways?
+	
+5. **Q & A + Feedback**
+
+
 
 #### 2) Project Source Control & README
 
