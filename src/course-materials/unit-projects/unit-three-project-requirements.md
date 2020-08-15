@@ -1,5 +1,11 @@
 # Project Three: A MERN Stack Application As a Team:
 
+<br>
+<br>
+<br>
+
+
+
 ## Overview
 
 **You’ve come a long way, and it's time to show it.** This will be your most advanced project to date.
@@ -19,23 +25,37 @@ During this project, your instructors are going to be evaluating **your ability 
 In fact, **your ability to work in a team during this project is more important to your instructors than the project itself**.
 
 
+<br>
+<br>
+<br>
+
 
 ## Planning & Presentation Requirements
 
 Working in a team is going to require more upfront planning to ensure the team is "on the same page"...
 
+<br>
+<br>
+<br>
+
+
 #### Pitch Deck
 
-☐ **Pitch your project** to the class with a [pitch deck](https://pitchdeck.improvepresentation.com/what-is-a-pitch-deck){:target="_blank"} that includes:
+☐ **Pitch your project** to the class with a [pitch deck](https://pitchdeck.improvepresentation.com/what-is-a-pitch-deck) that includes:
 
 - The application name.
 - Your team members and their roles.
 - The problem you are going to solve with your app.
-- Check out previous decks: [Meal Ticket](https://docs.google.com/presentation/d/1CsBuC-a_AZ1yXJEE-EbptPIdgj1MktiNALyQyhaFfrM/edit#slide=id.p){:target="_blank"}, [Tripio](https://docs.google.com/presentation/d/1gvOypLc4VjKqJzdAW68iwh28uGDSH4Sp1KnA5grDo2g/edit#slide=id.p){:target="_blank"}, [Pantry](https://docs.google.com/presentation/d/1WvHoN5MNaRembgcoog5p0GtivVCOZSzvfPyeevzy08g/edit){:target="_blank"}, [ArtWorld](https://docs.google.com/presentation/d/1yGy2Mh3n6IhPxFu4XKnnMtPPi4OGFPpf-Z_TMYw6wQY/edit#slide=id.g7ba109823e_2_7){:target="_blank"}
+- Check out previous decks: [Meal Ticket](https://docs.google.com/presentation/d/1CsBuC-a_AZ1yXJEE-EbptPIdgj1MktiNALyQyhaFfrM/edit#slide=id.p), [Tripio](https://docs.google.com/presentation/d/1gvOypLc4VjKqJzdAW68iwh28uGDSH4Sp1KnA5grDo2g/edit#slide=id.p)[Pantry](https://docs.google.com/presentation/d/1WvHoN5MNaRembgcoog5p0GtivVCOZSzvfPyeevzy08g/edit), [ArtWorld](https://docs.google.com/presentation/d/1yGy2Mh3n6IhPxFu4XKnnMtPPi4OGFPpf-Z_TMYw6wQY/edit#slide=id.g7ba109823e_2_7)
+
+
+<br>
+<br>
+<br>
 
 #### Trello Board
 
-- A **[Trello](https://trello.com/){:target="_blank"} board** with:
+- A **[Trello](https://trello.com/) board** with:
     
     ☐ **User Stories**, each moving from left to right in the following 
       three lists in your board:<br>
@@ -49,6 +69,11 @@ Working in a team is going to require more upfront planning to ensure the team i
     ☐ **Wireframes of the main pages of functionality**, e.g. Landing Page, Posts Index Page, Favorite Posts Page, Add Post Page, etc.
     
     ☐ An **ERD** showing the attributes of each entity and the relationships between them. Refer to the Data Modeling lesson for assistance.
+
+<br>
+<br>
+<br>
+
 
 ### Presentations
 
@@ -72,12 +97,10 @@ You will have approximately 15 minutes to present your project following these g
 	
 3. **Show/discuss your code:**
 
-	☐ Show the "main" Django model.
+	☐ Show the "main" data entity/model.
 	
-	☐ Show your favorite Django template.
+	☐ Show your favorite component.
 	
-	☐ Show the code for the main model's view.
-
 4. **Share the experience:**
 
 	☐ What was your biggest challenge? (besides Team Git Workflow)
@@ -86,6 +109,10 @@ You will have approximately 15 minutes to present your project following these g
 	
 5. **Q & A + Feedback**
 
+
+<br>
+<br>
+<br>
 
 
 #### 2) Project Source Control & README
@@ -105,6 +132,12 @@ The project must include a **`README.md`** file with the following sections:
 - **Unsolved Problems**: List any unsolved issues.
 
 - **Future Enhancements**: Identify future features and enhancements planned for the project.
+
+
+<br>
+<br>
+<br>
+
 
 #### 3) Application Technical Requirements/Deliverables
 
@@ -127,6 +160,11 @@ The project must include a **`README.md`** file with the following sections:
 	- Consume a third-party API.
 	- Include _admin_ features.
 	- Utilize multi-user, real-time communications (difficult and time consuming)
+
+
+<br>
+<br>
+<br>
 
 
 #### 4) Project Presentation
@@ -155,6 +193,10 @@ You will have 10 minutes to present and demonstrate the following:
 
 Following your presentation, there will be a brief Q & A period and optional instructor feedback.
 
+<br>
+<br>
+<br>
+
 ## Project Assistance
 
 - At this stage of SEIR, being able to find the the answers to your development issues is of paramount importance. 
@@ -162,6 +204,11 @@ Following your presentation, there will be a brief Q & A period and optional ins
 - Feel free to use all resources available and collaborate with others.
 
 - If you do seek assistance in Slack, explain the issue, include screenshots, and explain what you've done to solve the issue on your own.
+
+<br>
+<br>
+<br>
+
 
 ## Suggestions to Get Started
 
@@ -176,6 +223,11 @@ Following your presentation, there will be a brief Q & A period and optional ins
 - Follow the steps we've done in class to implement features, beginning with the user's interaction, identifying the proper route, etc. 
 
 - Read the docs for whatever technologies / frameworks / API’s you use.
+
+<br>
+<br>
+<br>
+
 
 ## Best Practices
 
