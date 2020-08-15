@@ -17,6 +17,13 @@ type: "lecture"
 | Access URL Parameters with React Router  |
 | Change Routes Programmatically |
 
+
+
+<br>
+<br>
+
+[Click here](https://generalassembly.zoom.us/rec/share/xe1_d5H-xj9LY43c4lzVebB5BaK8aaa81HAb-vFZzE7wHlWmkngGy_ofVt6VanzG?startTime=1597435679000) to access recording
+
 <br>
 <br>
 
