@@ -8,21 +8,25 @@
 
 ## Overview
 
-**You’ve come a long way, and it's time to show it.** This will be your most advanced project to date.
+You’ve come a long way, and it's time to show it.
 
-You’ve already worked in small groups to accomplish various labs and exercises, but this time **we’re going to challenge you to work in a small team on a project.**
+You’ve already worked in small groups to accomplish various labs and exercises, but this time we’re going to challenge you to work in a small team on a project.
 
 You and your teammates together will architect, design, and collaboratively build a full-stack web app.
 
+<br>
+<br>
+
+
 **This project will push you both technically and collaboratively!**
 
-You'll likely be working as part of a team in the workplace and **this project will provide you with that important team development experience.**
+You'll likely be working as part of a team in the workplace and this project will provide you with that important team development experience.
 
 However, working on a project as part of a team can be more challenging due to logistical reasons, differing opinions, etc.
 
-During this project, your instructors are going to be evaluating **your ability to listen to and respect other opinions; to share and contribute your ideas with the team; and form a consensus and compromise when opinions differ**.
+During this project, your instructors are going to be evaluating your ability to listen to and respect other opinions; to share and contribute your ideas with the team; and form a consensus and compromise when opinions differ.
 
-In fact, **your ability to work in a team during this project is more important to your instructors than the project itself**.
+**In fact, your ability to work in a team during this project is more important to your instructors than the project itself**.
 
 
 <br>
@@ -46,7 +50,7 @@ Working in a team is going to require more upfront planning to ensure the team i
 - The application name.
 - Your team members and their roles.
 - The problem you are going to solve with your app.
-- Check out previous decks: [Meal Ticket](https://docs.google.com/presentation/d/1CsBuC-a_AZ1yXJEE-EbptPIdgj1MktiNALyQyhaFfrM/edit#slide=id.p), [Tripio](https://docs.google.com/presentation/d/1gvOypLc4VjKqJzdAW68iwh28uGDSH4Sp1KnA5grDo2g/edit#slide=id.p)[Pantry](https://docs.google.com/presentation/d/1WvHoN5MNaRembgcoog5p0GtivVCOZSzvfPyeevzy08g/edit), [ArtWorld](https://docs.google.com/presentation/d/1yGy2Mh3n6IhPxFu4XKnnMtPPi4OGFPpf-Z_TMYw6wQY/edit#slide=id.g7ba109823e_2_7)
+- Check out previous decks: [Meal Ticket](https://docs.google.com/presentation/d/1CsBuC-a_AZ1yXJEE-EbptPIdgj1MktiNALyQyhaFfrM/edit#slide=id.p), [Tripio](https://docs.google.com/presentation/d/1gvOypLc4VjKqJzdAW68iwh28uGDSH4Sp1KnA5grDo2g/edit#slide=id.p),  [Pantry](https://docs.google.com/presentation/d/1WvHoN5MNaRembgcoog5p0GtivVCOZSzvfPyeevzy08g/edit), [ArtWorld](https://docs.google.com/presentation/d/1yGy2Mh3n6IhPxFu4XKnnMtPPi4OGFPpf-Z_TMYw6wQY/edit#slide=id.g7ba109823e_2_7)
 
 
 <br>
@@ -70,12 +74,66 @@ Working in a team is going to require more upfront planning to ensure the team i
     
     ☐ An **ERD** showing the attributes of each entity and the relationships between them. Refer to the Data Modeling lesson for assistance.
 
+
+
 <br>
 <br>
 <br>
 
 
-### Presentations
+#### 1) Project Source Control & README
+
+The project's source code must be hosted on a personal **GitHub repository**.
+
+The repo is to contain **frequent commits** dated from the beginning of the project through its completion.
+
+The project must include a **`README.md`** file with the following sections:
+
+- **Introduction**: A paragraph used to introduce interested parties to the project and needs to include one or more screenshots.
+
+- **Technologies Used**: A list of all technologies, libraries, APIs, etc. used in the project.
+
+- **Getting Started**: Links to the project's planning (Trello board)  and the **deployed app** on Heroku.
+
+- **Unsolved Problems**: List any unsolved issues.
+
+- **Future Enhancements**: Identify future features and enhancements planned for the project.
+
+
+<br>
+<br>
+<br>
+
+
+#### 2) Application Technical Requirements/Deliverables
+
+- A **working** full-stack, single-page application hosted on Heroku.
+
+- Incorporate the technologies of the **MERN-stack**:
+	- MongoDB/Mongoose
+	- Express
+	- React
+	- Node
+
+- **Have a well-styled interactive front-end** that communicates with the **Express** backend via AJAX.
+
+- Implement token-based **authentication**.  Including the ability of a user to sign-up, log in & log out.
+
+- Implement **authorization** by restricting CUD data functionality to authenticated users. Also, navigation should respond to the login status of the user.
+
+- **Have a comprehensive feature-set**. For example, **if the app does not include full-CRUD** data operations, **ensure the addition** of one or more of the following:
+	
+	- Consume a third-party API.
+	- Include _admin_ features.
+	- Utilize multi-user, real-time communications (difficult and time consuming)
+
+<br>
+<br>
+<br>
+
+
+
+### 3) Presentations
 
 **Your entire team must participate in the presentation of the project.**
 
@@ -114,88 +172,6 @@ You will have approximately 15 minutes to present your project following these g
 <br>
 <br>
 
-
-#### 2) Project Source Control & README
-
-The project's source code must be hosted on a personal **GitHub repository**.
-
-The repo is to contain **frequent commits** dated from the beginning of the project through its completion.
-
-The project must include a **`README.md`** file with the following sections:
-
-- **Introduction**: A paragraph used to introduce interested parties to the project and needs to include one or more screenshots.
-
-- **Technologies Used**: A list of all technologies, libraries, APIs, etc. used in the project.
-
-- **Getting Started**: Links to the project's planning (Trello board)  and the **deployed app** on Heroku.
-
-- **Unsolved Problems**: List any unsolved issues.
-
-- **Future Enhancements**: Identify future features and enhancements planned for the project.
-
-
-<br>
-<br>
-<br>
-
-
-#### 3) Application Technical Requirements/Deliverables
-
-- A **working** full-stack, single-page application hosted on Heroku.
-
-- Incorporate the technologies of the **MERN-stack**:
-	- MongoDB/Mongoose
-	- Express
-	- React
-	- Node
-
-- **Have a well-styled interactive front-end** that communicates with the **Express** backend via AJAX.
-
-- Implement token-based **authentication**.  Including the ability of a user to sign-up, log in & log out.
-
-- Implement **authorization** by restricting CUD data functionality to authenticated users. Also, navigation should respond to the login status of the user.
-
-- **Have a comprehensive feature-set**. For example, **if the app does not include full-CRUD** data operations, **ensure the addition** of one or more of the following:
-	
-	- Consume a third-party API.
-	- Include _admin_ features.
-	- Utilize multi-user, real-time communications (difficult and time consuming)
-
-
-<br>
-<br>
-<br>
-
-
-#### 4) Project Presentation
-
-You will have 10 minutes to present and demonstrate the following:
-
-1. Introduce your project by paraphrasing its README.
-
-2. Click the link in the README to open the deployed app on Heroku.
-
-3. Demonstrate the application's authentication features by signing up a new user, logging out that user, then logging in with your preferred user.
-
-4. Demonstrate your app's main features.
-
-5. Share/discuss the following code (not line-by-line):
-
-	- The main/central Mongoose model
-	- Your "favorite" Express controller method
-	- Your "favorite" React component
-	- The client-side routing
-
-6. Share the experience by answering the following:
-
-	- What was your biggest challenge?
-	- What are your key learnings/takeaways?
-
-Following your presentation, there will be a brief Q & A period and optional instructor feedback.
-
-<br>
-<br>
-<br>
 
 ## Project Assistance
 
