@@ -43,7 +43,7 @@ Working in a team is going to require more upfront planning to ensure the team i
 <br>
 
 
-#### Pitch Deck
+#### 1) Pitch Deck
 
 ☐ **Pitch your project** to the class with a [pitch deck](https://pitchdeck.improvepresentation.com/what-is-a-pitch-deck) that includes:
 
@@ -57,7 +57,7 @@ Working in a team is going to require more upfront planning to ensure the team i
 <br>
 <br>
 
-#### Trello Board
+#### 2) Trello Board
 
 - A **[Trello](https://trello.com/) board** with:
     
@@ -81,7 +81,7 @@ Working in a team is going to require more upfront planning to ensure the team i
 <br>
 
 
-#### 1) Project Source Control & README
+#### 3) Project Source Control & README
 
 The project's source code must be hosted on a personal **GitHub repository**.
 
@@ -105,7 +105,7 @@ The project must include a **`README.md`** file with the following sections:
 <br>
 
 
-#### 2) Application Technical Requirements/Deliverables
+#### 4) Application Technical Requirements/Deliverables
 
 - A **working** full-stack, single-page application hosted on Heroku.
 
@@ -133,7 +133,7 @@ The project must include a **`README.md`** file with the following sections:
 
 
 
-### 3) Presentations
+#### 5) Presentations
 
 **Your entire team must participate in the presentation of the project.**
 
@@ -175,9 +175,9 @@ You will have approximately 15 minutes to present your project following these g
 
 ## Project Assistance
 
-- At this stage of SEIR, being able to find the the answers to your development issues is of paramount importance. 
+- At this stage of SEIR, being able to find the the answers to your development issues is of paramount importance, this is especially important for the success of your team. 
 
-- Feel free to use all resources available and collaborate with others.
+- Feel free to use all resources available including your own team.
 
 - If you do seek assistance in Slack, explain the issue, include screenshots, and explain what you've done to solve the issue on your own.
 
