@@ -8,6 +8,11 @@ type: "lecture"
 
 # Intro to Python Containers
 
+<br>
+<br>
+<br>
+
+
 
 ## Learning Objectives
 
@@ -22,10 +27,22 @@ type: "lecture"
 - Create subsets of a _sequence_ using the _slice_ operator
 
 
+<br>
+<br>
+<br>
+
+
+
 ## Setup
 <br>
 
 - To test some of the examples and complete the exercises, please open a Python [_repl.it_](https://repl.it/)
+
+<br>
+<br>
+<br>
+
+
 
 
 ### General Purpose Containers
@@ -41,7 +58,20 @@ type: "lecture"
 	- **tuples**
 
 
+<br>
+<br>
+<br>
+
+
+
+
 ## Dictionaries
+
+<br>
+<br>
+
+
+
 
 
 ### Dictionaries - Purpose
@@ -52,6 +82,13 @@ type: "lecture"
 - A **dictionary** provides a container for `key: value` pairs. We can refer to `key: value` pairs as **items**.
 
 - _Dictionaries_ have a class (type) of `dict`.
+
+
+
+<br>
+<br>
+<br>
+
 
 
 ### Dictionaries - Basic Syntax
@@ -70,6 +107,11 @@ type: "lecture"
 
 - If not quoted, Python expects the identifier to be a variable holding what you want to use as the key. This is similar to how _computed properties_ work in JS.
 
+<br>
+<br>
+<br>
+
+
 
 ### Dictionaries - Features
 <br>
@@ -84,6 +126,11 @@ type: "lecture"
  	- Existing items can be deleted
  
 - Any immutable type can be used as a key, including _numbers_ and _tuples_ (which we'll cover in a bit).
+
+
+<br>
+<br>
+<br>
 
 
 ### Dictionaries - Getting/Setting Values
@@ -101,6 +148,13 @@ type: "lecture"
 	```
 
 - Unlike JS, you cannot access items in a Python dictionary using **dot notation** (dots are used to invoke methods).
+
+
+<br>
+<br>
+<br>
+
+
 
 
 ### Dictionaries - <span style="text-transform: lowercase">get</span> Method
@@ -121,6 +175,13 @@ type: "lecture"
 	```
 
 
+<br>
+<br>
+<br>
+
+
+
+
 ### Dictionaries - <span style="text-transform: lowercase">in</span> Operator
 <br>
 
@@ -133,6 +194,12 @@ type: "lecture"
 	    print( f"{student['name']} is not enrolled in a course")
 	```
 
+<br>
+<br>
+<br>
+
+
+
 
 ### Dictionaries - Adding Items
 <br>
@@ -142,6 +209,13 @@ type: "lecture"
 	```python
 	student['age'] = 21
 	```
+
+
+<br>
+<br>
+<br>
+
+
 
 
 ### Dictionaries - Deleting Items
@@ -155,6 +229,11 @@ type: "lecture"
 	'age' in student
 	> False
 	```
+
+<br>
+<br>
+<br>
+
 
 
 ### Dictionaries - Number of Items
@@ -170,6 +249,11 @@ type: "lecture"
 	len({})
 	> 0
 	```
+
+<br>
+<br>
+<br>
+
 
 
 ### Dictionaries - Iterating Items
@@ -200,8 +284,13 @@ type: "lecture"
 
 - The `for` statement "unpacks" the tuples by assigning its values to multiple variables like with `key, val` above.
 
+<br>
+<br>
+<br>
 
-## Dictionary - Practice Exercise<br><small>(10 minutes)</small>
+
+
+## 💪 <small>Dictionary Practice Exercise - (10 minutes)</small>
 <br>
 
 - Define a Python _dictionary_ named **`where_my_things_are`** containing a few items; where  the `keys` are things you have, and the `value` is the location you keep those things.
@@ -209,7 +298,18 @@ type: "lecture"
 - Write a `for` loop that iterates over the items in the dictionary and prints each one as _My [thing] is kept [location]_.
 
 
+<br>
+<br>
+<br>
+
+
+
 ## Lists
+
+<br>
+<br>
+<br>
+
 
 
 ### Lists - Purpose
@@ -222,6 +322,12 @@ type: "lecture"
 - **Lists** can contain items of different types, including _dictionaries_ and nested _lists_.
 
 - **Lists** have a class (type) of `list`.
+
+
+<br>
+<br>
+<br>
+
 
 
 ### Lists - Basic Syntax
@@ -240,17 +346,30 @@ type: "lecture"
 	> 3
 	```
 
+<br>
+<br>
+<br>
+
+
+
 ### Lists - Features
 <br>
 
 <p><em>Lists</em></p> have the following features:
 
-- They are considered to be a _sequence_ type in Python. A _sequence_ is a generic term used for an **ordered** collection. Other _sequence_ types in Python include _strings_ and _tuples_.
+- They are considered to be a _sequence_ type in Python. A _sequence_ is a generic term used for an **ordered** collection. 
+- Other _sequence_ types in Python include _strings_ and _tuples_.
 
 - Lists are mutable:
 
- 	- Items within the _list_ can be replaced
- 	- Items can be added and removed from a _list_
+- Items within the _list_ can be replaced
+- Items can be added and removed from a _list_
+
+<br>
+<br>
+<br>
+
+
 
 
 ### Lists - Accessing Items
@@ -273,6 +392,11 @@ type: "lecture"
 	No need to write code like `colors[len(colors) - 1]` - yay!
 
 
+<br>
+<br>
+<br>
+
+
 
 ### Lists - Assigning Items
 <br>
@@ -284,6 +408,12 @@ type: "lecture"
 	print(colors)
 	> ['red', 'green', 'brown']
 	```
+
+
+<br>
+<br>
+<br>
+
 
 
 ### Lists - Adding Items
@@ -303,6 +433,11 @@ type: "lecture"
 	colors.extend(['orange', 'black'])
 	```
 
+<br>
+<br>
+<br>
+
+
 
 ### Lists - Inserting Item
 <br>
@@ -315,6 +450,11 @@ type: "lecture"
 	colors.insert(1, 'yellow')
 	> ['red', 'yellow', 'green', 'brown', 'purple', 'orange', 'black']
 	```
+
+<br>
+<br>
+<br>
+
 
 
 ### Lists - Deleting Items
@@ -352,6 +492,13 @@ type: "lecture"
 	No value is returned by the `remove()` method.
 
 
+<br>
+<br>
+<br>
+
+
+
+
 ### Lists - Clearing
 <br>
 
@@ -364,6 +511,11 @@ type: "lecture"
 	print(colors)
 	> []
 	```
+
+<br>
+<br>
+<br>
+
 
 
 ### Lists - Iteration
@@ -390,27 +542,39 @@ type: "lecture"
 	> 2 blue
 	```
 
+<br>
+<br>
+<br>
 
-## ❓ Dictionary & List Review Questions
 
-1. **What are _dictionaries_ similar to in JS?**
 
-2. **What are _lists_ similar to in JS?**
+## Dictionary & List Review Questions
 
-3. **Why won't the follow code work?**
+**❓ What are _dictionaries_ similar to in JS?**
 
-	```python
-	menu = {
-		hamburger: 4.99,
-		french_fries: 1.99,
-		taco: 2.99
-	}
-	```
+**❓ What are _lists_ similar to in JS?**
 
-4. **What is a way to add items to a _list_?**
+<br>
 
-5. **What is a way to remove an item from the front of a _list_?**
+**❓ Why won't the follow code work?**
 
+```python
+menu = {
+	hamburger: 4.99,
+	french_fries: 1.99,
+	taco: 2.99
+}
+```
+
+<br>
+
+**❓ What is a way to add items to a _list_?**
+
+**❓ What is a way to remove an item from the front of a _list_?**
+
+<br>
+<br>
+<br>
 
 ## List Comprehensions
 
@@ -420,6 +584,10 @@ type: "lecture"
 - _List comprehensions_ provide a concise way to create and work with lists.
 
 - They will probably seem a little confusing as first, but they certainly are a favorite of _Pythonistas_ and you will certainly come across them when googling.
+
+<br>
+<br>
+<br>
 
 
 ### List Comprehensions<br><small>Numerical Example</small>
@@ -437,6 +605,9 @@ type: "lecture"
 	print(squares)
 	> [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 	```
+
+<br>
+
 
 - **What method in JS would we use in this scenario?**
 
@@ -458,16 +629,25 @@ type: "lecture"
 
 - The _comprehension_ is basically an advanced `for` loop within _square brackets_ which, of course, returns a new _list_.
 
+<br>
+<br>
+<br>
+
+
 
 ### List Comprehensions - Basic Syntax
 <br>
 
 - Here's the basic syntax of a _list comprehension_:
 
-	```python
-	# [<expression> for <item> in <list>]
-	# This reads as: I want <expression> for each <item> in <list>
-	```
+```python
+# [<expression> for <item> in <list>]
+# This reads as: I want <expression> for each <item> in <list>
+```
+
+<br>
+<br>
+<br>
 
 
 ### List Comprehensions - Filtering
@@ -507,13 +687,22 @@ type: "lecture"
 	```
 	Nice and readable!
 
-
-### ❓ List Comprehensions - Review Questions
+<br>
+<br>
 <br>
 
-1. **What characters start and end a _list comprehension_**
 
-2. **Does a _list comprehension_ create a new list?**
+### List Comprehensions - Review Questions
+<br>
+
+**❓ What characters start and end a _list comprehension_**
+
+**❓ Does a _list comprehension_ create a new list?**
+
+
+<br>
+<br>
+<br>
 
 
 ### List Comprehensions - Summary
@@ -523,8 +712,19 @@ type: "lecture"
 
 If you'd like to see more interactive information on list comprehentions, [check out this video](https://www.youtube.com/watch?v=AhSvKGTh28Q), there's a lot of great examples here.
 
+<br>
+<br>
+<br>
+
+
 
 ## Tuples
+
+<br>
+<br>
+<br>
+
+
 
 
 ### Tuples - Purpose
@@ -533,6 +733,11 @@ If you'd like to see more interactive information on list comprehentions, [check
 - **Tuples** in Python are very similar to **lists**.
 
 - _Tuples_ have a class (type) of `tuple`.
+
+<br>
+<br>
+<br>
+
 
 
 ### Tuples - Basic Syntax
@@ -549,9 +754,10 @@ If you'd like to see more interactive information on list comprehentions, [check
 	``` 
 	Although it seems that _parentheses_ are used to create _tuples_, it's actually the _commas_...
 
-
-### Tuples - Basic Syntax
 <br>
+<br>
+
+
 
 - For more proof that the use of commas create a tuple, let's say you wanted to create a 1-tuple containing the string of "Hello".
 
@@ -569,8 +775,7 @@ If you'd like to see more interactive information on list comprehentions, [check
 	hello_tuple = 'Hello',
 	```
 
-
-### Tuples - Basic Syntax
+<br>
 <br>
 
 - _Tuples_ can be created without using any parentheses:
@@ -591,6 +796,9 @@ If you'd like to see more interactive information on list comprehentions, [check
 	> ('purple',)
 	```
 
+<br>
+<br>
+<br>
 
 ### Differences Between Tuples & Lists
 
@@ -601,6 +809,10 @@ If you'd like to see more interactive information on list comprehentions, [check
 - Generally, you'll find that _tuples_ are used to contain heterogeneous (different) data types and _lists_ for homogeneous (similar) data types.
 
 - _Tuples_ are often classified based on how many items they contain, e.g., a **2-tuple** would be used to hold a `key` and its `value`
+
+<br>
+<br>
+<br>
 
 
 ### Tuples - Accessing Items
@@ -621,7 +833,11 @@ If you'd like to see more interactive information on list comprehentions, [check
 	print(blue_idx)
 	> 2
 	```
-	
+
+<br>	
+<br>
+
+
 
 ### Tuples - Iteration
 <br>
@@ -637,6 +853,10 @@ If you'd like to see more interactive information on list comprehentions, [check
 	> 2 blue
 	```
 
+<br>
+<br>
+<br>
+
 
 ### Tuples - Unpacking
 <br>
@@ -651,9 +871,15 @@ If you'd like to see more interactive information on list comprehentions, [check
 	```
 	A tuple of variables on the left-side of the assignment operator and a tuple of values on the right is all it takes.
 
+<br>
+<br>
+<br>
+
 
 ## Sequences Can Be "Sliced"
 
+<br>
+<br>
 
 ### Slicing Sequences
 <br>
@@ -662,8 +888,7 @@ If you'd like to see more interactive information on list comprehentions, [check
 
 - Since _sequence_ types are a collection of items (BTW, characters are the items in a _string_), we can target subsets, called _slices_, of those items using `[m:n]`.
 
-
-### Slicing Sequences
+<br>
 <br>
 
 - Just like with indexing, slicing uses _square brackets_, but adds a _colon_:
@@ -677,7 +902,7 @@ If you'd like to see more interactive information on list comprehentions, [check
 - Note that the slice includes up to, but not including the index to the right of the colon.
 
 
-### Slicing Sequences
+<br>
 <br>
 
 - If the first index is omitted, the slice copies the _sequence_ starting at the beginning:
@@ -696,6 +921,8 @@ If you'd like to see more interactive information on list comprehentions, [check
 	> ['green', 'blue']
 	```
 
+<br>
+<br>
 
 ### Slicing Sequences - Question
 <br>
@@ -707,6 +934,9 @@ If you'd like to see more interactive information on list comprehentions, [check
 	fruit_copy = fruit[:]
 	```
 
+<br>
+<br>
+<br>
 
 ## Conclusion
 <br>
@@ -714,6 +944,11 @@ If you'd like to see more interactive information on list comprehentions, [check
 - Python offers amazing power, convenience and readability with features such as _list comprehensions_ and _slicing_.
 
 - However, as usual, it takes practice to become "comfortable" with these concepts, so on to the lab...
+
+<br>
+<br>
+<br>
+
 
 ## Resources
 
