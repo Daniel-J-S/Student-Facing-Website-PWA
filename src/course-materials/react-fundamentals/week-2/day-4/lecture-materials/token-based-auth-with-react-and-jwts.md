@@ -16,7 +16,6 @@ type: "lecture"
 
 
 
-
 ## Learning Objectives
 
 | Students Will Be Able To: |
