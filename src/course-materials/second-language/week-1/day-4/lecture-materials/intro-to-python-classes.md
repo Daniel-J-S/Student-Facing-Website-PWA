@@ -50,7 +50,7 @@ For example, the logged in user would be represented by a _user_ object. Or a _b
 
 <img src="https://i.imgur.com/3AQdh0F.png">
 
-Objects bundle related properties (attributes) and methods (behavior) together. We discussed this principle of OOP in the JS Classes lesson - **who remembers the name of this OOP principle?**
+Objects bundle related properties (attributes) and methods (behavior) together. We discussed this principle of OOP in the JS Classes lesson and a few times in our React lessons - **who remembers the name of this OOP principle?**
 
 Remember the analogy of a **class** being a blueprint for objects? In an OOP language, **classes** are used to create objects. We **instantiate** a _class_ to obtain an **instance** (object) of that _class_.
 
@@ -190,6 +190,10 @@ class Dog():
     return f'Dog named {self.name} is {self.age} years old'
 ```
 
+<br>
+<br>
+
+
 Let's try it out:
 
 ```python
@@ -223,6 +227,9 @@ print(car.running) # -> True
 plane = Vehicle('X99Y', 'Boeing', '747-B')
 print(plane.vin, plane.make, plane.model)
 ```
+
+<br>
+<br>
 
 Time permitting, override the `__str__` method so that it returns a string formatted as:
 
@@ -265,6 +272,11 @@ class Dog():
 Note how the `Dog.next_id` class attribute is being accessed within the `__init__` method.
 
 > Note: Technically, instances can also access class members via `self` due to the fact that if the instance does not have an accessed member, Python will check the class and provide the class version of the member if it exists.
+
+
+<br>
+<br>
+
 
 Now let's make sure it worked :)
 
@@ -325,6 +337,10 @@ The **subclass** can then define additional attributes and/or methods to make a 
 
 For example, in the JS Classes lesson, we specialized the `Vehicle` class by _extending_ it to create a `Plane` subclass.
 
+<br>
+<br>
+
+
 Let's see how inheritance is implemented in Python by creating a `ShowDog` class that specializes the `Dog` class:
 
 ```python
@@ -342,6 +358,9 @@ class ShowDog(Dog):
     self.total_earnings += amount
 ```
 
+<br>
+<br>
+
 It's show time!
 
 ```python
@@ -352,6 +371,11 @@ print(winky.total_earnings) # -> 1000
 winky.add_prize_money(500) # New method that 'Dogs' don't have
 print(winky.total_earnings) # -> 1500
 ```
+
+<br>
+<br>
+<br>
+
 
 Inheritance is critical to OOP languages. In fact, they even have their own **object hierarchies**.  Check this out:
 
