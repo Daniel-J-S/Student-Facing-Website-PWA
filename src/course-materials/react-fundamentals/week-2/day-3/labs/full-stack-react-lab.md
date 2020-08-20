@@ -9,6 +9,14 @@ type: "lab"
 
 # Full-Stack React Lab
 
+<br>
+<br>
+
+[Click here](https://generalassembly.zoom.us/rec/share/_MZ-d4P5sXpOWaec1kL4YI0oOrz-eaa82iUc-_MMzRuZ96zT-f88Ox0_1rv6Eld5?startTime=1597876312000) to access recording
+
+<br>
+<br>
+
 
 **This lab is not a deliverable**
 
