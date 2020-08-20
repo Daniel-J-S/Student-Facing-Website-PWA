@@ -1250,7 +1250,10 @@ One best practice approach is to define your protected routes as follows in **Ap
 ```js
 <Route exact path='/high-scores' render={() => (
   userService.getUser() ?
-    <HighScoresPage />
+    <HighScoresPage 
+      scores={this.state.scores}
+      handleUpdateScores={this.handleUpdateScores}
+    />
    	:
     <Redirect to='/login' />
 )}/>
