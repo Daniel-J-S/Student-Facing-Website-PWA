@@ -249,7 +249,7 @@ $ touch main_app/templates/registration/login.html
 
 Let's put a bit of markup in **login.html** so that we can see things are working:
 
-{% raw %}
+
 ```html
 {% extends 'base.html' %}
 {% block content %}
@@ -258,7 +258,7 @@ Let's put a bit of markup in **login.html** so that we can see things are workin
 
 {% endblock %}
 ```
-{% endraw %}
+
 
 Refresh!
 
@@ -266,7 +266,7 @@ Refresh!
 
 When `LoginView` renders the **login.html** template, it passes in the context a default `form` object we can display in **login.html**:
 
-{% raw %}
+
 ```html
 <h1>Log In</h1>
 
@@ -278,15 +278,15 @@ When `LoginView` renders the **login.html** template, it passes in the context a
   <input type="hidden" name="next" value="{{ next }}">
 </form>
 ```
-{% endraw %}
+
 
 The
 
-{% raw %}
+
 ```html
 <input type="hidden" name="next" value="{{ next }}">
 ```
-{% endraw %}
+
 
 is really cool.  It is a feature of Django's authentication that will automatically redirect a user that tries to access a protected route back to that route after they log in!
 
@@ -338,7 +338,7 @@ To check if the user is logged in, we simply use `user.is_authenticated`, which 
 
 With this knowledge in hand, let's make the nav bar dynamic in **base.html**:
 
-{% raw %}
+
 ```html
 <ul class="right">
     <!-- changes below -->
@@ -354,7 +354,7 @@ With this knowledge in hand, let's make the nav bar dynamic in **base.html**:
   {% endif %}
 </ul>
 ```
-{% endraw %}
+
 
 Note how the **Log In** and **Log Out** links are using the `url` template tag along with the built-in named URL patterns (listed above).
 
@@ -494,7 +494,7 @@ There's really no way to remember that code, so just refer to this lesson, the d
 
 Now that we know the URL, we can add a **Sign Up** link to the nav in **base.html**:
 
-{% raw %}
+
 ```html
 {% else %}
   <!-- New link below -->
@@ -502,7 +502,7 @@ Now that we know the URL, we can add a **Sign Up** link to the nav in **base.htm
   <li><a href="{% url 'login' %}">Log In</a></li>
 {% endif %}
 ```
-{% endraw %}
+
 
 #### Create the **signup.html** Template
 
@@ -515,7 +515,7 @@ $ cp main_app/templates/registration/login.html main_app/templates/registration/
 If you use VS Code's UI to copy it, just make sure **signup.html** is within the **registration** folder.
 
 Make the necessary changes to **signup.html**:
-{% raw %}
+
 ```html
 {% extends 'base.html' %}
 {% block content %}
@@ -532,7 +532,7 @@ Make the necessary changes to **signup.html**:
 
 {% endblock %}
 ```
-{% endraw %}
+
 
 With the above template, clicking the **Sign Up** in the nav should show a page like the following:
 

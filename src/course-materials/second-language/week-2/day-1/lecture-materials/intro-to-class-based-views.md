@@ -9,6 +9,12 @@ type: "lecture"
 # Intro to Django Class-Based Views (CBVs)
 
 
+<br>
+<br>
+<br>
+
+
+
 ## Learning Objectives
 
 | Students Will Be Able To: |
@@ -19,6 +25,12 @@ type: "lecture"
 | Use a CBV to Delete data |
 | Use a CBV to Update data |
 
+
+<br>
+<br>
+<br>
+
+
 ## Road Map
 
 1. Set up
@@ -27,25 +39,24 @@ type: "lecture"
 4. Creating Data Using a CBV
 5. Updating & Deleting Data Using a CBV
 
-## 1. Set Up
 
-This lesson continues to build-out Cat Collector beginning from where the _Intro to Django Models_ lesson left off.
-
-The starter code is the same as the completed code from that lesson except that the nav in **base.html** has been updated to use the `url` template tag instead of hardcoding the URL in the links:
-
-{% raw %}
-```html
-<!-- <li><a href="/about">About</a></li> -->
-<li><a href="{% url 'about' %}">About</a></li>
-<!-- <li><a href="/cats">View All My Cats</a></li> -->
-<li><a href="{% url 'index' %}">View All My Cats</a></li>
-```
-{% endraw %}
-
-❓ **What enables us to use the `url` template tag to automatically generate the proper URL?**
+<br>
+<br>
+<br>
 
 
-Please move into the **starter-code/catcollector** folder and open the folder in VS Code.
+## Review the Starter Code
+
+The starter code for this lesson will pick up where our last lesson, *(Intro to Django Models)* left off.
+
+If you do not have a working version of the Project, you can <a href="/downloads/second_language/intro-to-class-based-views/starter-code/catcollector.zip" download>download one here</a>.
+
+
+
+<br>
+<br>
+<br>
+
 
 ## 2. What are Class-based Views?
 
@@ -95,6 +106,12 @@ In this lesson, we will be extending the `CreateView`, `DeleteView` and `UpdateV
 
 We also could easily replace the existing `cats_index` and `cats_detail` view functions with CBVs, however, we won't as a reminder of how they are structured.
 
+
+<br>
+<br>
+<br>
+
+
 ## 3. Why use Class-based Views?
 
 Much of the code we write in CRUD applications repeats certain patterns again and again.
@@ -113,9 +130,22 @@ class BookList(ListView):
   template_name = 'books/index.html'
 ``` 
 
+
+<br>
+<br>
+<br>
+
+
 ## 4. Creating Data Using a CBV
 
 We need a way to create cats in Cat Collector!
+
+
+
+<br>
+<br>
+<br>
+
 
 #### Add the Route
 
@@ -149,20 +179,32 @@ The `path()` function still needs a view **function** as its second argument, no
 
 We'll need to add the `views.CatCreate` CBV to make the server happy, but first let's add a link to the nav for adding a cat...
 
+
+<br>
+<br>
+<br>
+
+
 #### Update the UI
 
 Now that we know the path used to create cats, let's update **base.html** to add a link to the nav:
 
-{% raw %}
+
 ```html
 <li><a href="{% url 'about' %}">About</a></li>
 <!-- new link below -->
 <li><a href="{% url 'cats_create' %}">Add a Cat</a></li>
 <li><a href="{% url 'index' %}">View All My Cats</a></li>
 ```
-{% endraw %}
+
 
 On to the view!
+
+
+<br>
+<br>
+<br>
+
 
 #### Extending the Generic `CreateView`
 
@@ -195,11 +237,20 @@ class CatCreate(CreateView):
   fields = ['name', 'breed', 'description', 'age']
 ```
 
-That's all of the code we need to write to display a template (where we will have the form) and create a Cat when form is submitted (the request is a `POST` instead of a `GET`).
+That's all of the code we need to write to display a template ...
+
+... where we will have the form and create a Cat when form is submitted; the request is a `POST` instead of a `GET`.
 
 It won't always be quite this easy as we'll see in the future when we need to add some additional attributes or override methods in the CBV.
 
 On to the template!
+
+
+
+<br>
+<br>
+<br>
+
 
 #### Create the Template for Creating Cats
 
@@ -221,7 +272,7 @@ $ touch main_app/templates/main_app/cat_form.html
 
 There's not too much so we'll review as we type it in:
 
-{% raw %}
+
 ```html
 {% extends 'base.html' %}
 
@@ -238,9 +289,9 @@ There's not too much so we'll review as we type it in:
   </form>
 {% endblock %}
 ```
-{% endraw %}
 
-The {% raw %}`{% csrf_token %}`{% endraw %} is a security measure that makes it difficult to perform a [cross-site-request-forgery](https://en.wikipedia.org/wiki/Cross-site_request_forgery) by writing a CSRF (pronounced "see-surf") token that is validated on the server.
+
+The `{% csrf_token %}` is a security measure that makes it difficult to perform a [cross-site-request-forgery](https://en.wikipedia.org/wiki/Cross-site_request_forgery) by writing a CSRF (pronounced "see-surf") token that is validated on the server.
 
 Let's refresh and click the **Add a Cat** link.
 
@@ -255,6 +306,14 @@ Use Devtools to explore the DOM. You'll see how Django's ModelForm wrote the inp
 - `{{ form.as_ul }}` - Wraps an `<li>` tag around the `<label>` & `<input>` tags
 
 > Note: To ease custom styling, you can add an `id` or `class` to your `<table>` and/or `<form>` tags.  Also note how Django automatically assigns an id to each input.
+
+
+<br>
+<br>
+<br>
+
+
+
 
 #### Redirecting
 
@@ -290,6 +349,10 @@ class Cat(models.Model):
 
 The `reverse` function builds a path string. The above will return the correct path for the `detail` named route.  However, since that route requires a `cat_id` route parameter, its value must provided as a shown above.
 
+<br>
+<br>
+
+
 Let's not forget to import `reverse` in **models.py**:
 
 ```python
@@ -300,12 +363,24 @@ from django.urls import reverse
 
 We've covered all of the fundamentals of class-based views above so we'll be a little more brief while adding the functionality to delete and update cats by combining their steps together...
 
+
+<br>
+<br>
+<br>
+
+
 ## 5. Updating & Deleting Data Using a CBV
 
 Here are the user stories we want to implement:
 
 - _AAU, when viewing a cat's detail page, I want to click EDIT to update that cat's information._
 - _AAU, when viewing a cat's detail page, I want to click DELETE to remove that cat from the database._
+
+
+<br>
+<br>
+<br>
+
 
 #### Add the Routes
 
@@ -318,7 +393,16 @@ path('cats/<int:pk>/update/', views.CatUpdate.as_view(), name='cats_update'),
 path('cats/<int:pk>/delete/', views.CatDelete.as_view(), name='cats_delete'),
 ```
 
-By default, CBVs that work with individual model instances will expect to find a named parameter of `pk`. This is why we didn't use `cat_id` as we did in the _detail_ entry.
+By default, CBVs that work with individual model instances will expect to find a named parameter of `pk`. 
+
+This is why we didn't use `cat_id` as we did in the _detail_ entry.
+
+
+<br>
+<br>
+<br>
+
+
 
 #### Update the UI
 
@@ -326,7 +410,7 @@ We need to see EDIT and DELETE links on a cat's detail page.
 
 Let's update **templates/cats/detail.html** by adding to a cat's "card" a `<div>` with a Materialize class of `card-action`:
 
-{% raw %}
+
 ```html
       <p>Age: Kitten</p>
     {% endif %}
@@ -339,9 +423,16 @@ Let's update **templates/cats/detail.html** by adding to a cat's "card" a `<div>
   <!-- New markup above -->
 </div>
 ```
-{% endraw %}
+
 
 Now for the views...
+
+
+<br>
+<br>
+<br>
+
+
 
 #### Subclass the `DeleteView` & `UpdateView`
 
@@ -377,6 +468,12 @@ Updating a cat is working, however, we'll need to add an extra template to imple
 
 First though, to enhance the UX, it would be nice to see the name of the cat we're editing...
 
+
+<br>
+<br>
+<br>
+
+
 #### Customize the `cat_form.html` Template
 
 Since we didn't include `'name'` in the fields list in `CatUpdate`, the `name` attribute isn't listed in the form.
@@ -391,7 +488,7 @@ The CBVs that work with a single model instance automatically pass as part of th
 
 Let's leverage this new knowledge to modify **templates/main_app/cat_form.html** to show the cat's name only when we are editing, not creating, a cat:
 
-{% raw %}
+
 ```html
 {% block content %}
   <!-- New if/else block -->
@@ -401,13 +498,20 @@ Let's leverage this new knowledge to modify **templates/main_app/cat_form.html**
     <h1>Add Cat</h1>
   {% endif %}
 ```
-{% endraw %}
+
 
 Looking good:
 
 <img src="https://i.imgur.com/LEEiTN9.png">
 
 Okay, let's get delete functionality working then we're done!
+
+
+<br>
+<br>
+<br>
+
+
 
 #### Adding a `cat_confirm_delete.html` Template
 
@@ -421,7 +525,7 @@ $ touch main_app/templates/main_app/cat_confirm_delete.html
 
 Now for its content:
 
-{% raw %}
+
 ```html
 {% extends 'base.html' %}
 
@@ -437,7 +541,7 @@ Now for its content:
   </form>
 {% endblock %}
 ```
-{% endraw %}
+
 
 Note how we are allowing the user to cancel the delete by providing a link back to the _detail_ page.
 
@@ -451,25 +555,40 @@ In the next lesson we'll see how to work with One-Many data relationships.
 
 As usual, your lab is to implement the same class-based views in you Finch Collector project.
 
-## ❓ Essential Questions
+
+
+<br>
+<br>
+<br>
+
+
+## Essential Questions
 
 Take a minute to review the following questions:
 
-1. **To be more productive, Class-based Views can be used in lieu of ______ __________.**
+**❓ To be more productive, Class-based Views can be used in lieu of ______ __________.**
 
-2. **What generic class do we extend to create our own CBV for creating model instances?**
+**❓ What generic class do we extend to create our own CBV for creating model instances?**
 
-3. **Every CBV we used in this lesson had a ________ attribute defined to inform the CBV what Model its for.**
+**❓ Every CBV we used in this lesson had a ________ attribute defined to inform the CBV what Model its for.**
+
+
+<br>
+<br>
+<br>
+
 
 ## Challenge Exercise
 
 This challenge exercise is for those of you who don't need to rest and would like some additional reps in addition to the Finch Collector lab.
 
-So far in the Cat Collector, we've implemented full-CRUD for the Cat Model.  Tomorrow we will be learning how to implement a many-to-many association between cats and toys:<br>`Cat >---< Toy`
+So far in the Cat Collector, we've implemented full-CRUD for the Cat Model. For our next lesson, we will be learning how to implement a many-to-many association between cats and toys:<br>`Cat >---< Toy`
 
-The starter code for the many-to-many lesson will have full-CRUD implemented for the Toy Model.
+For the upcoming many-to-many lesson, we will need to have full-CRUD implemented for the Toy Model. <br>*Starter code will be available for this lesson just in case.*
 
-For practice, feel free to implement full-CRUD on the Toy Model yourself.  The Toy Model has the following attributes:
+For practice, feel free to implement full-CRUD on the Toy Model yourself.
+
+The Toy Model has the following attributes:
 
 ```python
 
@@ -480,7 +599,15 @@ class Toy(models.Model):
   # Other goodness such as 'def __str__():' below
 ```
 
-Enjoy!
+<br>
+
+**Enjoy!**
+
+
+<br>
+<br>
+<br>
+
 
 ## References
 

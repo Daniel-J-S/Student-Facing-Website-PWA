@@ -415,7 +415,7 @@ We're going to need to update the _details.html_ template to:
 
 We're going to use Django's nifty `for...empty` template tags to iterate through each cat's photos like this:
 
-{% raw %}
+
 ```html
 ...
     </div>
@@ -427,7 +427,7 @@ We're going to use Django's nifty `for...empty` template tags to iterate through
     {% endfor %}
 ...
 ```
-{% endraw %}
+
 
 > The `for...empty` template tags avoid having to wrap a `for...in` loop with an `if...else` like we did earlier to display a "No Toys" message.
 
@@ -435,33 +435,33 @@ Let's see how it looks:
 
 <img src="https://i.imgur.com/S02DDIX.png">
 
-Since we haven't uploaded any photos yet, we are seeing the _No Photos Uploaded_ `<div>` as expected thanks to the {% raw %}`{% empty %}`{% endraw %} tag.
+Since we haven't uploaded any photos yet, we are seeing the _No Photos Uploaded_ `<div>` as expected thanks to the `{% empty %}` tag.
 
 Reminder - we don't actually invoke methods within Django template tags.  For example, notice that there's no `()` in this line of code:
 
-{% raw %}
+
 ```html
 {% for photo in cat.photo_set.all %}
 ```
-{% endraw %}
+
 
 This is because Django templates automatically call an attribute if it's a function. This can be a problem if you ever need to actually call a function that takes arguments.  For example, the following **will not work**:
 
-{% raw %}
+
 ```html
 {% if len(cat.photo_set.all) > 0 %}
 ```
 
-{% endraw %}
-Django templates provide [filters](https://docs.djangoproject.com/en/2.2/ref/templates/builtins/#ref-templates-builtins-filters) for use in both {% raw %}`{{ }}`{% endraw %} (variable) and {% raw %}`{% %}`{% endraw %} (tags).
+
+Django templates provide [filters](https://docs.djangoproject.com/en/2.2/ref/templates/builtins/#ref-templates-builtins-filters) for use in both `{{ }}` (variable) and `{% %}` (tags).
 
 For example, to check the length, you can use the `length` filter like this:
 
-{% raw %}
+
 ```html
 {% if cat.photo_set.all|length > 0 %}
 ```
-{% endraw %}
+
 
 Filters can also be used to transform/format data, e.g., 
 
@@ -469,7 +469,7 @@ Filters can also be used to transform/format data, e.g.,
 
 Okay, let's code a `<form>` that we can use to upload files to the server:
 
-{% raw %}
+
 ```html
 {% for photo in cat.photo_set.all %}
     <img class="responsive-img card-panel" src="{{photo.url}}">
@@ -485,11 +485,11 @@ Okay, let's code a `<form>` that we can use to upload files to the server:
     <input type="submit" class="btn" value="Upload Photo">
 </form>
 ```
-{% endraw %}
+
 
 When using HTML forms to upload files, it's important to add the `enctype="multipart/form-data"` attribute to the `<form>` tag.
 
-Other than {% raw %}`{% csrf_token %}`{% endraw %}, it's pretty much a generic form that is typically used to upload files to any web app.
+Other than `{% csrf_token %}`, it's pretty much a generic form that is typically used to upload files to any web app.
 
 Another refresh:
 
