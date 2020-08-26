@@ -593,7 +593,7 @@ $ touch main_app/templates/cats/detail.html
 
 Now let's add the following template code:
 
-{% raw %}
+
 ```html
 {% extends 'base.html' %}
 {% block content %}
@@ -615,20 +615,20 @@ Now let's add the following template code:
 
 {% endblock %}
 ```
-{% endraw %}
+
 
 It's basically the same cat "card" from **index.html**, except the wrapping `<a>` tags have been removed.
 
 **What's this business about?**
 
-{% raw %}
+
 
 ```html
 
 {% extends 'base.html' %}{% block content %}
 
 ```
-{% endraw %}
+
 
 Okay, let's refresh and check it out!
 
@@ -670,13 +670,13 @@ In **index.html**, replace this code:
 
 With this code:
 
-{% raw %}
+
 ```html
 
 <a href="{% url 'detail' cat.id %}">
 
 ```
-{% endraw %}
+
 
 The above is the Django way.
 
