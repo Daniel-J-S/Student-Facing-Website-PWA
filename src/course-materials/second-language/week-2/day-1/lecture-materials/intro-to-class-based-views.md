@@ -237,7 +237,9 @@ class CatCreate(CreateView):
   fields = ['name', 'breed', 'description', 'age']
 ```
 
-That's all of the code we need to write to display a template (where we will have the form) and create a Cat when form is submitted (the request is a `POST` instead of a `GET`).
+That's all of the code we need to write to display a template ...
+
+... where we will have the form and create a Cat when form is submitted; the request is a `POST` instead of a `GET`.
 
 It won't always be quite this easy as we'll see in the future when we need to add some additional attributes or override methods in the CBV.
 
@@ -347,6 +349,10 @@ class Cat(models.Model):
 
 The `reverse` function builds a path string. The above will return the correct path for the `detail` named route.  However, since that route requires a `cat_id` route parameter, its value must provided as a shown above.
 
+<br>
+<br>
+
+
 Let's not forget to import `reverse` in **models.py**:
 
 ```python
@@ -387,7 +393,9 @@ path('cats/<int:pk>/update/', views.CatUpdate.as_view(), name='cats_update'),
 path('cats/<int:pk>/delete/', views.CatDelete.as_view(), name='cats_delete'),
 ```
 
-By default, CBVs that work with individual model instances will expect to find a named parameter of `pk`. This is why we didn't use `cat_id` as we did in the _detail_ entry.
+By default, CBVs that work with individual model instances will expect to find a named parameter of `pk`. 
+
+This is why we didn't use `cat_id` as we did in the _detail_ entry.
 
 
 <br>
@@ -558,11 +566,11 @@ As usual, your lab is to implement the same class-based views in you Finch Colle
 
 Take a minute to review the following questions:
 
-** ❓ To be more productive, Class-based Views can be used in lieu of ______ __________.**
+**❓ To be more productive, Class-based Views can be used in lieu of ______ __________.**
 
-** ❓ What generic class do we extend to create our own CBV for creating model instances?**
+**❓ What generic class do we extend to create our own CBV for creating model instances?**
 
-** ❓ Every CBV we used in this lesson had a ________ attribute defined to inform the CBV what Model its for.**
+**❓ Every CBV we used in this lesson had a ________ attribute defined to inform the CBV what Model its for.**
 
 
 <br>
@@ -574,11 +582,13 @@ Take a minute to review the following questions:
 
 This challenge exercise is for those of you who don't need to rest and would like some additional reps in addition to the Finch Collector lab.
 
-So far in the Cat Collector, we've implemented full-CRUD for the Cat Model.  Tomorrow we will be learning how to implement a many-to-many association between cats and toys:<br>`Cat >---< Toy`
+So far in the Cat Collector, we've implemented full-CRUD for the Cat Model. For our next lesson, we will be learning how to implement a many-to-many association between cats and toys:<br>`Cat >---< Toy`
 
-The starter code for the many-to-many lesson will have full-CRUD implemented for the Toy Model.
+For the upcoming many-to-many lesson, we will need to have full-CRUD implemented for the Toy Model. <br>*Starter code will be available for this lesson just in case.*
 
-For practice, feel free to implement full-CRUD on the Toy Model yourself.  The Toy Model has the following attributes:
+For practice, feel free to implement full-CRUD on the Toy Model yourself.
+
+The Toy Model has the following attributes:
 
 ```python
 
@@ -589,7 +599,9 @@ class Toy(models.Model):
   # Other goodness such as 'def __str__():' below
 ```
 
-Enjoy!
+<br>
+
+**Enjoy!**
 
 
 <br>
