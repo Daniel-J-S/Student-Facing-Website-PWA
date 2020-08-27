@@ -216,7 +216,7 @@ Let's review the starter code...
 
 - To use socket.io, we first need to install its module:
 
-	```sh
+	```shell
 	$ npm install socket.io
 	```
 
@@ -228,7 +228,7 @@ Let's review the starter code...
 
 - Let's create a file named `io.js` in our project's root folder:
 
-	```sh
+	```shell
 	$ touch io.js
 	```
 
