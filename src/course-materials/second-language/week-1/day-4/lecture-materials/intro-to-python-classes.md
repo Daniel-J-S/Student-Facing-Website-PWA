@@ -207,7 +207,7 @@ print(spot) # -> Dog named Spot is 8 years old
 <br>
 <br>
 
-## 💪 Exercise - Create a Class (15 min)
+### 💪 Exercise - Create a Class (15 min)
 
 At the top of the repl, define a class named `Vehicle` with the following members:
 
@@ -311,6 +311,10 @@ There's only two differences when defining a class method:
 
 > _Decorators_ in programming are used to implement _metaprogramming_ (when a program has knowledge or manipulates itself).  In Python, decorators are used to modify the behavior of a function or class. They are not very common, but there's a link in the Further Study section if you'd like to learn more about decorators in Python.
 
+<br>
+<br>
+
+
 Let's test out the new class method:
 
 ```python
@@ -321,6 +325,7 @@ pup = Dog('Lassie')
 print(Dog.get_total_dogs())  # -> 2
 ```
 
+<br>
 <br>
 <br>
 <br>
