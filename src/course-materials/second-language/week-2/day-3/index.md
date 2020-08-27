@@ -4,16 +4,20 @@ title: "Day 3"
 week: 2
 day: 3
 type: "homepage"
-topics: "Team Git Workflow Walkthrough & Project 4 Planning"
+topics: "Django Class-Based Views (CBV's)"
 ---
 
 
 # Week 2 - Day 3
 
-#### Team Git Workflow Walkthrough & Project 4 Planning
+#### Django Class-Based Views (CBV's)
+- [**Lecture:** Intro To Django Class-Based Views (CBVs)](/second-language/week-2/day-3/lecture-materials/intro-to-class-based-views)
+- **Lab:**
+<br>
+<br>
+_For practice, do everything we did in this lesson on your Finch Collector project!_
+<br>
+_Don't forget to make commits._
 
-- [**Lecture:** Intro to the Team Git Workflow](/frontend-fundamentals/week-23/day-2/lecture-materials/intro-to-the-team-git-workflow)
-#### Introduce Project 4 & Project Planning
-- [**Activity:** Introduce Project 4](/unit-projects/unit-four-project-requirements) 
-- **Activity:** Project 4 Planning
+
 

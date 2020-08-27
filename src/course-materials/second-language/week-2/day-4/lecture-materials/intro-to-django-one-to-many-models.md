@@ -2,7 +2,7 @@
 track: "Second Language"
 title: "Intro to Django One-to-Many Models"
 week: 2
-day: 1
+day: 4
 type: "lecture"
 ---
 

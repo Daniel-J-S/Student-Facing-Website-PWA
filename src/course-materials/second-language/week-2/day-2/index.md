@@ -4,20 +4,25 @@ title: "Day 2"
 week: 2
 day: 2
 type: "homepage"
-topics: "Django Many to Many Models & Image Upload with AWS S3"
+topics: "Django URLs, Views, Templates & Models"
 ---
-
 
 # Week 2 - Day 2
 
-#### Django Many to Many Models & Image Upload with AWS S3
+#### Django URLs, Views, Templates & Models
 
-- [**Lecture:** Intro to Django Many to Many Models](/second-language/week-2/day-2/lecture-materials/intro-to-django-many-to-many-models) 
-- [**Lecture:** Image Upload with Amazon S3](/second-language/week-2/day-2/lecture-materials/uploading-images-to-amazon-s3/)
-- **Lab:**
+- [**Activity:** Introduce Project 4](/unit-projects/unit-four-project-requirements) 
+- [**Lecture:** Django URLs, Views & Templates](/second-language/week-2/day-2/lecture-materials/django-urls-views-and-templates/)
+- [**Lecture:** Intro to Django Models](/second-language/week-2/day-2/lecture-materials/intro-to-django-models/)
+
+- **Lab:** _The lab for this lesson is repeating everything we just did, except you'll collect something else like Finches and call the project something like finchcollector, or whatever._
+
 <br>
 <br>
-_For practice, do everything we did in this lesson on your Finch Collector project!_
-<br>
-_Don't forget to make commits._
+
+_The final version of your "Finch Collector" project will be a deliverable._
+
+_Because your completed Finch Collector app will be fairly comprehensive and be a nice addition to your portfolio, you should push it to your personal GitHub account._
+
+
 

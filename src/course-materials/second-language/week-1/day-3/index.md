@@ -4,14 +4,12 @@ title: "Day 3"
 week: 1
 day: 3
 type: "homepage"
-topics: "Python Containers & Functions" 
+topics: "Python Containers" 
 ---
 
 
 # Week 1 - Day 3
 
-#### Python Containers & Functions
+#### Python Containers
 - [**Lecture:** Intro to Python Containers](/second-language/week-1/day-3/lecture-materials/intro-to-python-containers/)
 - [**Lab:** Python Containers Lab](/second-language/week-1/day-3/labs/python-containers-lab/) - **Deliverable**
-- [**Lecture:** Intro to Python Functions](/second-language/week-1/day-3/lecture-materials/intro-to-python-functions/)
-- [**Lab:** Python Functions Lab](/second-language/week-1/day-3/labs/python-functions-lab/) - **Non-Deliverable**

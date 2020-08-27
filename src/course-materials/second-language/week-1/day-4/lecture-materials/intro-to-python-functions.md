@@ -2,7 +2,7 @@
 track: "Second Language"
 title: "Intro to Python Functions"
 week: 1
-day: 3
+day: 4
 type: "lecture"
 ---
 

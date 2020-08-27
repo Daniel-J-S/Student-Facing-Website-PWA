@@ -1,7 +1,7 @@
 ---
 track: "Second Language"
 title: "Intro to Django Models"
-week: 21
+week: 2
 day: 2
 type: "lecture"
 ---

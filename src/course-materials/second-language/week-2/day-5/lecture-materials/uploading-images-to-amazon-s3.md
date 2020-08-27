@@ -1,8 +1,8 @@
 ---
 track: "Second Language"
 title: "Uploading Images to Amazon S3"
-week: 22
-day: 3
+week: 2
+day: 5
 type: "lecture"
 ---
 

@@ -1,8 +1,8 @@
 ---
 track: "Second Language"
 title: "Django URLs, Views & Templates"
-week: 21
-day: 1
+week: 2
+day: 2
 type: "lecture"
 ---
 

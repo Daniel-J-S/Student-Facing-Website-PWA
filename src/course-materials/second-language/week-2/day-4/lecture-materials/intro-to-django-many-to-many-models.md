@@ -1,8 +1,8 @@
 ---
 track: "Second Language"
 title: "Intro to Django Many-to-Many Models"
-week: 22
-day: 2
+week: 2
+day: 4
 type: "lab"
 ---
 

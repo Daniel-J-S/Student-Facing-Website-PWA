@@ -2,7 +2,7 @@
 track: "Second Language"
 title: "Intro to Django Authentication and Authorization"
 week: 2
-day: 4
+day: 5
 type: "lecture"
 ---
 
