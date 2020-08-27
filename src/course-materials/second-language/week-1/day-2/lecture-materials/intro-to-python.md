@@ -747,7 +747,7 @@ Let's wrap up with a few questions...
 ```
 
 
-**❓ String interpolation can be performed in Python by using __-Strings or the ________ method.**
+**❓ String interpolation can be performed in Python by using _______-Strings or the ________ method.**
 
 
 <br>
