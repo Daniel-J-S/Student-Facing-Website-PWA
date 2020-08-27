@@ -32,4 +32,4 @@ Possible solutions are [here](https://repl.it/@DanielJS/Python-Control-Flow-Lab-
 
 #### This lab is a DELIVERABLE
 
-Make sure you [submit a link to your repl.it](https://forms.gle/aGLyBqABxeDLv18B9) so we can check your work.
+Make sure you **submit a link to your repl.it** so we can check your work.
