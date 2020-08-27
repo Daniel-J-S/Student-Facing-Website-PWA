@@ -206,7 +206,7 @@ data = 'Hello';
 
 However, statically-typed languages such as Java and C++ required a variable's type to be declared and cannot be changed:
 
-```cpp
+```javascript
 // Declare variable as an integer and initialize
 int data = 123;
 
