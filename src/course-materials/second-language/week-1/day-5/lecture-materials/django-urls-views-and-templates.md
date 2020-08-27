@@ -126,7 +126,7 @@ Databases are not automatically created by Django.
 
 Let's use a command installed with PostgreSQL to create the database for the CatCollector project:
 
-```
+```bash
 $ createdb catcollector
 ```
 
@@ -140,7 +140,7 @@ $ createdb catcollector
 
 There is no starter-code for this lesson. Move into this lesson's folder and run the following command to create the Django project:
 
-```
+```bash
 $ django-admin startproject catcollector
 ```
 
@@ -168,7 +168,7 @@ For catcollector, as well as for your project 3, you will need an app to impleme
 
 It makes sense to name the main app generically, so let's do it:
 
-```
+```bash
 $ python3 manage.py startapp main_app
 ```
 
@@ -192,7 +192,7 @@ INSTALLED_APPS = [
 
 Let's check to make sure the project starts up:
 
-```
+```bash
 $ python3 manage.py runserver
 ```
 
@@ -228,7 +228,7 @@ DATABASES = {
 
 Now let's test our database connection by getting rid of the red unapplied migration message:
 
-```
+```bash
 $ python3 manage.py migrate
 ```
 
@@ -272,9 +272,9 @@ So, let's start by setting up **main_app**'s own **urls.py**:
 
 1. Create the URLconf module:
 
-	```
-	$ touch main_app/urls.py
-	```
+```bash
+$ touch main_app/urls.py
+```
 
 2. Include it in the project's **catcollector/urls.py**
 
@@ -431,7 +431,7 @@ By default, a Django project is configured to look for templates inside of a `te
 
 Let's create that `templates` folder for `main_app` to hold all of its template files:
 
-```
+```bash
 $ mkdir main_app/templates
 ```
 
@@ -448,10 +448,12 @@ Let's start with a simple template for the About page:
 
 1. Create the template:
 
-	```
-	touch main_app/templates/about.html
-	```
-	Note that Django templates have a simple `.html` file extension.
+```bash
+touch main_app/templates/about.html
+```
+
+
+Note that Django templates have a simple `.html` file extension.
 
 
 2. Open **about.html** and add the boilerplate (`! + tab`) and update the `<title>`:
@@ -534,7 +536,7 @@ Next, before we go any further and break the DRY principle by repeating the boil
 
 ## Template Inheritance (Partials)
 
-Django has a [template inheritance](https://docs.djangoproject.com/en/2.1/ref/templates/language/#template-inheritance) feature built-in.
+Django has a [template inheritance](https://docs.djangoproject.com/en/3.1/ref/templates/language/#template-inheritance) feature built-in.
 
 Template inheritance is like using partials in EJS with Express, except they're more flexible.
 
@@ -547,7 +549,7 @@ The reason Django calls it template _inheritance_ is because:
 
 Here's how it works in practice. First let's create a **base.html** template (named by convention):
 
-```
+```bash
 $ touch main_app/templates/base.html
 ```
 
@@ -612,7 +614,7 @@ However, the most important part of the boilerplate in regards to template inher
 
 Hey, that's our first look at DTL **template tags**, `block` & `endblock`, enclosed within the template tag delimiters `{% %}`.
 
-Django [template tags](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#ref-templates-builtins-tags) control logic within a template.  Depending upon the tag, they may, or may not, result in content being emitted in the page. 
+Django [template tags](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#ref-templates-builtins-tags) control logic within a template.  Depending upon the tag, they may, or may not, result in content being emitted in the page. 
 
 Whenever another template **extends** this **base.html**, that other template's `{% block content %}` will replace the same block in **base.html**.
 
@@ -683,19 +685,19 @@ At the bottom of **settings.py**, there is a `STATIC_URL = '/static/'` variable 
 
 We need that, so let's create it:
 
-```
+```bash
 $ mkdir main_app/static
 ```
 
 Next, let's create a folder within `static` dedicated to CSS:
 
-```
+```bash
 $ mkdir main_app/static/css
 ```
 
 Now let's create a `style.css`:
 
-```
+```bash
 $ touch main_app/static/css/style.css
 ```
 
@@ -886,13 +888,13 @@ However, we need to create the **cats/index.html** template we want to render.
 
 First we need the `templates/cats` folder we'll use to organize cat related templates:
 
-```
+```bash
 $ mkdir main_app/templates/cats
 ```
 
 Now create the **cats/index.html** template file:
 
-```
+```bash
 $ touch main_app/templates/cats/index.html
 ```
 
@@ -982,6 +984,6 @@ Because your completed Finch Collector app will be fairly comprehensive and be a
 
 ## References
 
-[Django Template Docs](https://docs.djangoproject.com/en/2.1/ref/templates/)
+[Django Template Docs](https://docs.djangoproject.com/en/3.1/ref/templates/)
 
-[Django Static Files](https://docs.djangoproject.com/en/2.1/howto/static-files/)
+[Django Static Files](https://docs.djangoproject.com/en/3.1/howto/static-files/)

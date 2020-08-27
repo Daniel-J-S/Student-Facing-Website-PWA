@@ -31,7 +31,7 @@ type: "lecture"
 
 ## Set Up
 
-1. <a download href="python_control_flow_practice.zip">Download the exercises folder for this lecture</a>.
+1. <a download href="/downloads/second_language/python-intro-to-control-flow/intro-to-control-flow.zip">Download the exercises folder for this lecture</a>.
 2. Unzip the folder
 3. Open the folder in VS Code: `$ code .`
 
@@ -165,9 +165,6 @@ Note that in Python, there's only one equality operator. The `==` in Python is t
 6 != 7
 # => True — 6 is not equal to 7.
 
-# Note that in addition to the != operator, you can also use this for inequality
-6 <> 7
-# => True - 6 is less than or greater than 7.
 ```
 
 
@@ -315,7 +312,7 @@ Also note that `else` is always optional.
 
 
 
-### 💪 Branching Exercise (5 minutes)
+### 💪 Branching Exercise (7 minutes)
 
 In the **exercise.py** file, you will find the following code that accepts text input from the user:
 
@@ -360,7 +357,7 @@ for (let i = 0; i < 10; i++) {
 
 Instead, the Python `for` loop always iterates over the items in a _sequence_, similar to JavaScript's `for...in` and `for...of` loops.
 
-We'll learn about sequences tomorrow, but here's a taste of how Python's `for` loop is used to loop through a **list** (Python's array):
+We'll learn about sequences soon, but here's a preview of how Python's `for` loop is used to loop through a **list** (Python's array):
 
 ```python
 names = ["Tom", "Deborah", "Murray", "Axel"]
@@ -419,7 +416,7 @@ Just like in JavaScript, the `break` statement in Python can be used to immediat
 
 
 
-### 💪 Looping Exercise (5 minutes)
+### 💪 Looping Exercise (7 minutes)
 
 Wrap the code in **exercise.py** in a `while` loop such that it continues to prompt for a color until the word `quit` is entered.
 
