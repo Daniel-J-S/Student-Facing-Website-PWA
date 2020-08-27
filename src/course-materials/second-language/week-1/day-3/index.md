@@ -13,5 +13,5 @@ topics: "Python Containers & Functions"
 #### Python Containers & Functions
 - [**Lecture:** Intro to Python Containers](/second-language/week-1/day-3/lecture-materials/intro-to-python-containers/)
 - [**Lab:** Python Containers Lab](/second-language/week-1/day-3/labs/python-containers-lab/) - **Deliverable**
-- [**Lecture:** Intro to Python Functions](/second-language/week-3/day-2/lecture-materials/intro-to-python-functions/)
+- [**Lecture:** Intro to Python Functions](/second-language/week-1/day-3/lecture-materials/intro-to-python-functions/)
 - [**Lab:** Python Functions Lab](/second-language/week-1/day-3/labs/python-functions-lab/) - **Non-Deliverable**
