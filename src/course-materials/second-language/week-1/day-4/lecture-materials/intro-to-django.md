@@ -10,6 +10,8 @@ type: "lecture"
 
 <br>
 <br>
+<br>
+
 
 
 ## Learning Objectives
@@ -120,14 +122,14 @@ Django should have been installed during installfest.
 
 Let's verify the installation as follows:
 
-```
+```bash
 $ python3 -m django --version
 # -> 2.2.x
 ```
 
 If it's not installed, do a one-time install of the Django framework using the following command:
 
-```
+```bash
 $ pip3 install Django
 ```
 
@@ -141,7 +143,7 @@ Therefore, from the start, we'll be following the better practice of using a mor
 
 To use PostgreSQL, we need to do a one-time install of the **psycopg2** Python package:
 
-```
+```bash
 $ pip3 install psycopg2-binary
 ```
 
@@ -160,7 +162,7 @@ However, we're not so lucky with SQL databases where we will need to manually cr
 
 Let's create one now in psql for the project we're about to code:
 
-```
+```bash
 $ psql
 # CREATE DATABASE polls;
 ```

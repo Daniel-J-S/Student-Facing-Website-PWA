@@ -105,12 +105,12 @@ All of the Models for an app are defined in the app's `models.py` file.
 
 Let's create the `Cat` Model by typing in the above code.
 
-Note that each field (attribute) is represented by a Field class, e.g., `CharField`. Here are the [docs of available Field types](https://docs.djangoproject.com/en/2.1/ref/models/fields/#model-field-types) - there's plenty of options.
+Note that each field (attribute) is represented by a Field class, e.g., `CharField`. Here are the [docs of available Field types](https://docs.djangoproject.com/en/3.1/ref/models/fields/#model-field-types) - there's plenty of options.
 
 It's important to note that the Field types for a Model don't just determine the column's data type in the table, Django also uses this information:
 
 - To implement some validation in automatically-generated forms.
-- To determine the default HTML [widget](https://docs.djangoproject.com/en/2.1/ref/forms/widgets/) to render in forms for the Model. For example, a `CharField` uses a `<input type="text">` as its _widget_, whereas, a `TextField` uses a `<textarea>`.
+- To determine the default HTML [widget](https://docs.djangoproject.com/en/3.1/ref/forms/widgets/) to render in forms for the Model. For example, a `CharField` uses a `<input type="text">` as its _widget_, whereas, a `TextField` uses a `<textarea>`.
 
 
 
@@ -160,7 +160,7 @@ It's important to note that the Field types for a Model don't just determine the
 
 #### What are Migrations?
 
-[Migrations](https://docs.djangoproject.com/en/2.1/topics/migrations/) are used to synchronize a database's schema with the app's Models.
+[Migrations](https://docs.djangoproject.com/en/3.1/topics/migrations/) are used to synchronize a database's schema with the app's Models.
 
 Migrations are used to evolve a database over time - as the requirements of the application change.  However, they can be "destructive" (cause a loss of data), so be careful with migrations if you're working with an application in _production_.
 
@@ -319,7 +319,7 @@ Django's ORM includes methods for performing:
 - Ordering
 - Even accessing the data from related Models!
 
-Django refers to the ORM functions available as its [database API](https://docs.djangoproject.com/en/2.1/topics/db/queries/). Additional documentation can be [found here](https://docs.djangoproject.com/en/2.1/ref/models/).
+Django refers to the ORM functions available as its [database API](https://docs.djangoproject.com/en/3.1/topics/db/queries/). Additional documentation can be [found here](https://docs.djangoproject.com/en/3.1/ref/models/).
 
 
 
@@ -332,7 +332,7 @@ Django refers to the ORM functions available as its [database API](https://docs.
 
 After creating a new Model, you can take it for a test drive using a Python shell that loads the Django environment:
 
-```
+```bash
 $ python3 manage.py shell
 ```
 
@@ -482,7 +482,7 @@ A single attribute value can be updated by simply assigning the new value and ca
 
 #### Filtering (querying) for Records
 
-We can use [objects.filter()](https://docs.djangoproject.com/en/2.2/ref/models/querysets/#filter) to query a Model's table for data that matches a criteria similar to how we used the `find` Mongoose method.
+We can use [objects.filter()](https://docs.djangoproject.com/en/3.1/ref/models/querysets/#filter) to query a Model's table for data that matches a criteria similar to how we used the `find` Mongoose method.
 
 For example, this query would return all cats with the name "Rubber Biscuit":
 
@@ -493,7 +493,7 @@ For example, this query would return all cats with the name "Rubber Biscuit":
 
 Using `objects.filter()` and `objects.exclude()` is like writing a `WHERE` clause in SQL.
 
-The Django ORM creates several helpful [Field lookups](https://docs.djangoproject.com/en/2.1/topics/db/queries/#field-lookups).
+The Django ORM creates several helpful [Field lookups](https://docs.djangoproject.com/en/3.1/topics/db/queries/#field-lookups).
 
 For example if we wanted to query for all cats whose names _contain_ a string:
 
@@ -556,7 +556,7 @@ Be sure to use error handling if there's a chance that `get()` won't find what y
 
 #### What About Ordering (sorting)?
 
-Similar to what you saw in SQL, there's an [order_by](https://docs.djangoproject.com/en/2.2/ref/models/querysets/#order-by) method:
+Similar to what you saw in SQL, there's an [order_by](https://docs.djangoproject.com/en/3.1/ref/models/querysets/#order-by) method:
 
 ```python
 >>> Cat.objects.order_by('name')
@@ -801,7 +801,7 @@ The `cats_detail` function is using the `get` method to obtain the cat object by
 
 > Django will pass any captured URL parameters as a named argument to the view function!
 
-**What determined the parameter name of cat_id in the cars_detail view function?**
+**What determined the parameter name of cat_id in the cats_detail view function?**
 
 
 <br>
@@ -817,7 +817,7 @@ The `cats_detail` view function is passing a dictionary of data (called the _con
 
 Create that **detail.html** template:
 
-```
+```bash
 $ touch main_app/templates/cats/detail.html
 ```
 
@@ -925,7 +925,7 @@ With this code:
 <br>
 
 
-1. Find the `nav` element inside of `base.html` and refactor the `About` anf the `View All My Cats` menu options to use URL Template tags instead of hard-coded URLs.
+1. Find the `nav` element inside of `base.html` and refactor the `About` and the `View All My Cats` menu options to use URL Template tags instead of hard-coded URLs.
 
 2. Refresh the browser to get the updated markup and check for errors; functionality should be seemless!
 
@@ -956,4 +956,4 @@ Don't forget to make commits.
 
 ## Resources
 
-[Django Model API](https://docs.djangoproject.com/en/2.1/ref/models/)
+[Django Model API](https://docs.djangoproject.com/en/3.1/ref/models/)

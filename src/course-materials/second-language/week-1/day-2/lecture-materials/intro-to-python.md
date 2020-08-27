@@ -130,7 +130,7 @@ For now, type `exit()` or press `control + d` to exit the REPL.
 
 In terminal, we can execute any python script like this:
 
-```
+```bash
 $ python3 <filename>.py
 ```
 
@@ -139,7 +139,7 @@ $ python3 <filename>.py
 
 Let's test this out by running the <a download href="/downloads/second_language/python-intro-exercises/python-intro.zip">included **fizzbuzz.py** script.</a>  <br>Make sure you unzip the folder, `cd` into it, open in `VS Code` and then run:
 
-```
+```bash
 python3 fizzbuzz.py
 ```
 
@@ -741,10 +741,10 @@ Let's wrap up with a few questions...
 
 **❓ Will the following code run without error in Python?**
 
-	```python
+```python
 	num = 25
 	msg = "There are " + num + " tacos"
-	```
+```
 
 
 **❓ String interpolation can be performed in Python by using __-Strings or the ________ method.**

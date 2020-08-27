@@ -11,6 +11,7 @@ type: "lecture"
 
 <br>
 <br>
+<br>
 
 
 ## Learning Objectives
@@ -233,7 +234,7 @@ print(plane.vin, plane.make, plane.model)
 
 Time permitting, override the `__str__` method so that it returns a string formatted as:
 
-```
+```bash
 Vehicle (<vin>) is a <make> model <model> 
 ```
 
@@ -454,7 +455,7 @@ Create two instances, make both deposits and withdrawals, and print the attribut
 
 Override the `__str__` method to return the following formatted string:
 
-```
+```bash
 Account <account_no> / Balance: xxxxx.xx
 ```
 

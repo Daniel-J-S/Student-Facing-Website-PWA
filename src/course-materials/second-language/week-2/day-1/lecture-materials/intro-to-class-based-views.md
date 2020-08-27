@@ -156,7 +156,7 @@ If this was an Express app, we would need to code two separate routes and contro
 
 However, using Django, we only need a single URL-based route because a `CreateView` CBV will automatically:
 
-- Create a Django [ModelForm]() used to automatically create the form's inputs for the Model. 
+- Create a Django [ModelForm](https://docs.djangoproject.com/en/3.1/topics/forms/modelforms/) used to automatically create the form's inputs for the Model. 
 - If the request is a `GET`, render a template (where we'll include a `<form>`)  and
 - In the case of a `POST`, use the posted form's contents to automatically and transparently create data and perform a redirect.
 
@@ -260,13 +260,13 @@ All CBVs by default will use a folder inside of the `templates` folder with a na
 
 Let's give `CatCreate` the template it wants by first creating the `templates/main_app` folder:
 
-```
+```bash
 $ mkdir main_app/templates/main_app
 ```
 
 Now create the template file:
 
-```
+```bash
 $ touch main_app/templates/main_app/cat_form.html
 ```
 
@@ -519,7 +519,7 @@ It's usually wise to perform some type of confirmation when deleting data and Dj
 
 All we have to do is create it named as follows:
 
-```
+```bash
 $ touch main_app/templates/main_app/cat_confirm_delete.html
 ```
 
@@ -611,8 +611,8 @@ class Toy(models.Model):
 
 ## References
 
-[Built-in Class-based Views](https://docs.djangoproject.com/en/2.1/topics/class-based-views/generic-display/)
+[Built-in Class-based Views](https://docs.djangoproject.com/en/3.1/topics/class-based-views/generic-display/)
 
-[Working with Forms in Django](https://docs.djangoproject.com/en/2.1/topics/forms/)
+[Working with Forms in Django](https://docs.djangoproject.com/en/3.1/topics/forms/)
 
 [How Python's import system works](https://realpython.com/absolute-vs-relative-python-imports/)
