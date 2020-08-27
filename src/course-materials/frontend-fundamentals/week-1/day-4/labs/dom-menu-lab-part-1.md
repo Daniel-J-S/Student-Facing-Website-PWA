@@ -230,7 +230,7 @@ Add a class of `flex-around` to `topMenuEl`.
 
 Copy the following data structure to the top of **script.js**:
 
-```js
+```javascript
 // Menu data structure
 var menuLinks = [
   {text: 'about', href: '/about'},

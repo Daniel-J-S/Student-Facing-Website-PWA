@@ -198,6 +198,10 @@ If the first operand is truthy, return it, otherwise return the second operand.
 
 If the first operand is falsey, return it, otherwise return the second operand.
 
+<br>
+<br>
+<br>
+
 #### Examples
 
 ```python
@@ -312,7 +316,7 @@ Also note that `else` is always optional.
 
 
 
-### 💪 Branching Exercise (7 minutes)
+### 💪 Exercise - Branching (7 minutes)
 
 In the **exercise.py** file, you will find the following code that accepts text input from the user:
 
@@ -348,7 +352,7 @@ To run the code, open a terminal in VS Code by typing `control + backtick`, then
 
 Python's `for` statement is not designed like the one you first used in JavaScript:
 
-```js
+```javascript
 // A JavaScript for loop
 for (let i = 0; i < 10; i++) {
   // do stuff
@@ -368,7 +372,7 @@ for name in names:
 
 The above Python code is like the following ES2015 JS:
 
-```js
+```javascript
 var names = ["Tom", "Deborah", "Murray", "Axel"];
 
 for (name of names) {
@@ -416,7 +420,7 @@ Just like in JavaScript, the `break` statement in Python can be used to immediat
 
 
 
-### 💪 Looping Exercise (7 minutes)
+### 💪 Exercise - Looping (7 minutes)
 
 Wrap the code in **exercise.py** in a `while` loop such that it continues to prompt for a color until the word `quit` is entered.
 

@@ -1,8 +1,8 @@
 ---
 track: "Second Language"
 title: "Uploading Images to Amazon S3"
-week: 22
-day: 3
+week: 2
+day: 5
 type: "lecture"
 ---
 
@@ -246,11 +246,16 @@ Note that there is no file extension on the _credentials_ file.
 
 Now let's open it and put our keys in there:
 
-```
+
+
+```shell
 $ code ~/.aws/credentials
 ```
 
+
 Then type the following in the file, substituting your real keys:
+
+
 
 ```bash
 [default]

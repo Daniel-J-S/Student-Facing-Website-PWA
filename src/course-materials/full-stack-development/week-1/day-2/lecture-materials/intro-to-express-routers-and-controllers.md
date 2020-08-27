@@ -94,7 +94,7 @@ express-todos/
 
 - let's set up our initial boilerplate code...
 
-```js
+```javascript
 // Require Modules
 const express = require('express');
 
@@ -285,7 +285,7 @@ Express is listening on port 3000
 - This router object comes exported from the `express` module. 
 - We'll also need to export our index router's functionality so we can require and mount it to `server.js`.
 
-```js
+```javascript
 const express = require('express');
 const router = express.Router();
 
@@ -304,7 +304,7 @@ module.exports = router;
 
 - Now, we're going to remove route handler from `server.js` and place it inside of `routes/index.js`.
 
-```js
+```javascript
 const express = require('express');
 const router = express.Router();
 
@@ -318,7 +318,7 @@ module.exports = router;
 
  Next, we'll `require` our router module inside of `server.js`
 
-```js
+```javascript
 // Require Modules
 const express = require('express');
 const indexRouter = require('./routes/index');
@@ -333,7 +333,7 @@ const app = express();
 
 - Then we'll mount our router to the bottom of the middleware stack with the `app.use` method.
 
-```js
+```javascript
 // Mount Routes
 app.use('/', indexRouter);
 ```
@@ -364,7 +364,7 @@ ReferenceError: app is not defined
 For router objects created by `express.Router()`, we can also call `.get()`
 
 
-```js
+```javascript
 const express = require('express');
 const router = express.Router();
 
@@ -387,13 +387,13 @@ module.exports = router;
 
 Let's say you have a `router` object inside of `routes/todos.js` that defines a route like this:
 
-```js
+```javascript
 router.get('/', function(req, res) {...
 ```
 
 and mounted like this:
 
-```js
+```javascript
 app.use('/todos', todoRouter);
 ```
 
@@ -408,13 +408,13 @@ app.use('/todos', todoRouter);
 
 - Another example, let's say you have a `router` object that defines a route like this:
 
-```js
+```javascript
 router.get('/today', function(req, res) {...
 ```
 
 and mounted like this:
 
-```js
+```javascript
 app.use('/calendar', calendarRouter);
 ```
 	**What is the actual path of that route?**
@@ -502,7 +502,7 @@ $ touch models/todo.js
 
 - Here's the code from our last lesson, just slightly refactored:
 
-```js
+```javascript
 module.exports = {
  getAll
 };
@@ -559,7 +559,7 @@ module.exports = router;
 
 Require it inside of `server.js` ...
 
-```js
+```javascript
 // Require modules
 const express = require('express');
 const indexRouter = require('./routes/index');
@@ -569,7 +569,7 @@ const todosRouter = require('./routes/todos');
 
 Then mount it inside of `server.js` ...
 
-```js
+```javascript
 // Mount routes
 app.use('/', indexRouter);
 app.use('/todos', todosRouter); 
@@ -587,7 +587,7 @@ Let's add an `index` route for our todos resource inside of `routes/todos.js` ..
 
 - We'll place the code below inside of **routes/todos.js** right below our `require` statements, but right above our `module.exports`.
 
-```js
+```javascript
 
 router.get('/', function(req, res) {
  res.render('todos/index');
@@ -602,7 +602,7 @@ router.get('/', function(req, res) {
 
 - We first need to require the Todo model as follows:
 
-```js
+```javascript
 const express = require('express');
 const router = express.Router();
 // require the Todo model
@@ -614,7 +614,7 @@ It's convention to name model variables singularly and with upper-camel-casing.
 
 - With the model required, we can now update our route handler
 
-```js
+```javascript
 router.get('/', function(req, res) {
  res.render('todos/index', {
    todos: Todo.getAll()
@@ -679,7 +679,7 @@ router.get('/', function(req, res) {
 
 - Let's copy **just the function part** of the following route definition:
 
-```js
+```javascript
 router.get('/', function(req, res) {
  res.render('todos/index', {
    todos: Todo.getAll()
@@ -693,7 +693,7 @@ router.get('/', function(req, res) {
 
 - The pasted and refactored code should look like:
 
-```js
+```javascript
 module.exports = {
  index
 };
@@ -712,20 +712,20 @@ function index(req, res) {
 
 - But, the controller does! Let's go cut it from **routes/todos.js** and paste it at the top of **controllers/todos.js**:
 
-```js
+```javascript
 const Todo = require('../models/todo');
 ```
 
 
 - Back in **routes/todos.js**, we need to require the controller in order to have access to its actions (methods):
 
-```js
+```javascript
 const todosCtrl = require('../controllers/todos');
 ```
 
 - Now, the refactor:
 
-```js
+```javascript
 router.get('/', todosCtrl.index);
 ```
 
@@ -821,7 +821,7 @@ GET /todos/:id
 
 - Add the **show** route below the **index** route as follows:
 
-```js
+```javascript
 router.get('/', todosCtrl.index);
 router.get('/:id', todosCtrl.show);
 ```
@@ -832,7 +832,7 @@ router.get('/:id', todosCtrl.show);
 
 - Add the `show` action inside of **controllers/todos.js** and don't forget to export it!
 
-```js
+```javascript
 function show(req, res) {
  res.render('todos/show', {
    todo: Todo.getOne(req.params.id),
@@ -846,7 +846,7 @@ function show(req, res) {
 
 - A route defined like this:
 
-```js
+```javascript
 router.get('/category/:catName/page/:pageNo', ...);
 ```
 and a link like this:
@@ -856,7 +856,7 @@ and a link like this:
 ```
 would have a `req.params` available in the controller of:
 
-```js
+```javascript
 console.log(req.params.catName) //=> "socks"
 console.log(req.params.pageNo) //=> "2"
 ```
@@ -868,7 +868,7 @@ console.log(req.params.pageNo) //=> "2"
 
 - Let's fix that error! In **models/todo.js**:
 
-```js
+```javascript
 module.exports = {
  getAll,
  getOne

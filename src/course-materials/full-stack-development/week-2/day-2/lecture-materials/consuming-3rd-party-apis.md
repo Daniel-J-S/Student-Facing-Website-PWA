@@ -263,7 +263,7 @@ To get setup for this lesson, you'll need to <a href="/downloads/backend_fundame
 
 - In **routes/index.js**:
 
-	```js
+	```javascript
 	router.get('/', function(req, res) {
   	  res.render('index');
 	});
@@ -298,7 +298,7 @@ $ npm install request
 
 - Now lets require it in **routes/index.js**:
 
-```js
+```javascript
 const express = require('express');
 const router = express.Router();
 const request = require('request');
@@ -425,7 +425,7 @@ $ npm install dotenv
 	
 - Then all we have to do is add this code near the top of **server.js**:
 
-```js
+```javascript
 const logger = require('morgan');
 // load secrets from .env file
 require('dotenv').config();
@@ -443,7 +443,7 @@ GITHUB_TOKEN=1a1596cfe4484ff...
 
 - Now you will be able to access the token in code like this:
 
-```js
+```javascript
 const token = process.env.GITHUB_TOKEN;
 ```
 
@@ -475,7 +475,7 @@ Each variable in `.env` will become a property on `process.env`
 
 - First, let's define a `const` to hold the _root endpoint_ in **routes/index.js**:
 
-```js
+```javascript
 	const request = require('request');
 	
 	const rootURL = 'https://api.github.com/';
@@ -493,7 +493,7 @@ Each variable in `.env` will become a property on `process.env`
 
 - In **routes/index.js**:
 
-	```js
+	```javascript
 	router.post('/', function(req, res) {
 	  request(
 	    rootURL + 'users/' + req.body.username + 
@@ -530,7 +530,7 @@ Each variable in `.env` will become a property on `process.env`
 - Also, we have to... Pass an object from the GET '/' route as well to prevent a "userData is not defined"_ error when the _index_ view is rendered:
 
 
-```js
+```javascript
 router.get('/', function(req, res) {
 	res.render('index', {userData: null});
 });
@@ -560,7 +560,7 @@ EJS is not forgiving if we access undefined variables :(
 
 - Here's our updated POST route:
 
-```js
+```javascript
 	router.post('/', function(req, res) {
 	  const options = {
 	    url: rootURL + 'users/' + req.body.username,
@@ -586,7 +586,7 @@ EJS is not forgiving if we access undefined variables :(
 
 - One more refactor to send our token in a header instead of the query string:
 
-```js
+```javascript
 router.post('/', function(req, res) {
  const options = {
    url: rootURL + 'users/' + req.body.username,
@@ -637,7 +637,7 @@ router.post('/', function(req, res) {
 
 - Update this piece of code in the POST:
 
-```js
+```javascript
 request(options, function(err, response, body) {
  const userData = JSON.parse(body);
    res.render('index', {userData: userData});
@@ -664,7 +664,7 @@ request(options, function(err, response, body) {
 
 - Of course, multiple requests will result in nested callbacks.  Update this section of the POST:
 
-```js
+```javascript
 ...
 request(options, function(err, response, body) {
  const userData = JSON.parse(body);

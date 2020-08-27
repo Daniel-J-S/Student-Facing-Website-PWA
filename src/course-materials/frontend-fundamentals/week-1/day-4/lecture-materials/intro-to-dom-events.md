@@ -182,7 +182,7 @@ intro-to-dom-events/
 
 - <p>We're going to use an anonymous callback function in this first example:</p>
 
-	```js
+	```javascript
 	const btn = document.querySelector('button');
 	btn.addEventListener('click', function(evt) {
 	  // testing!
@@ -241,7 +241,7 @@ intro-to-dom-events/
 
 - Here's how we can do it using the `document.createElement` method:
 
-	```js
+	```javascript
 	btn.addEventListener('click', function(evt) {
 	  const li = document.createElement('li');
 	  console.log(li)
@@ -270,7 +270,7 @@ intro-to-dom-events/
 
 - So, now we can set the `textContent` of the new `<li>`:
 
-	```js
+	```javascript
 	btn.addEventListener('click', function(evt) {
 	  const li = document.createElement('li');
 	  const inp = document.querySelector('input');
@@ -287,7 +287,7 @@ intro-to-dom-events/
 
 - A common way to add new elements to another element is by using the `appendChild` method like this:
 
-	```js
+	```javascript
 	  li.textContent = inp.value;
 	  // new code below
 	  document.querySelector('ul').appendChild(li);
@@ -341,7 +341,7 @@ intro-to-dom-events/
 
 - Let's register a listener (this time for kicks we'll use a named function) on the `<ul>` that can respond to clicks on any of its `<li>`s:
 
-	```js
+	```javascript
 	document.querySelector('ul')
 	  .addEventListener('click', handleClick);
 	
@@ -383,7 +383,7 @@ intro-to-dom-events/
 
 - It's possible to remove an added event listener, however, only if a named function was used as the callback:
 
-	```js
+	```javascript
 	btn.removeEventListener('click', handleClick);
 	```
 	This would remove the 'click' event listener (`handleClick`) that was registered on the `btn` element like this:  

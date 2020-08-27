@@ -131,7 +131,7 @@ $ npm init -y
 
 - Let's write the obligatory "Hello World!" application:
 
-	```js
+	```javascript
 	// Load express
 	const express = require('express');
 	
@@ -175,7 +175,7 @@ $ npm init -y
 
 - Here is a helpful outline of what a typical Express app does - let's put this guide right in our `server.js`:
 
-```js
+```javascript
 // Require modules
 const express = require('express');
 
@@ -207,7 +207,7 @@ app.listen(3000, function() {
 
 - Let's replace the content we just sent from our route with something else.
 
-	```js
+	```javascript
 	// Mount routes
 	app.get('/', function(req, res) {
 	  res.send('<h1>Hello Express</h1>');
@@ -263,7 +263,7 @@ app.listen(3000, function() {
 
 - The second argument provided to `app.get()` is a callback function:
 
-	```js
+	```javascript
 	app.get('/', function(req, res) {
 	  res.send('<h1>Hello Express</h1>');
 	});
@@ -274,7 +274,7 @@ app.listen(3000, function() {
 
 - The route's callback function:
 
-	```js
+	```javascript
 	app.get('/', function(req, res) {
 	  res.send('<h1>Hello Express</h1>');
 	});
@@ -311,7 +311,7 @@ app.listen(3000, function() {
 
 - **Is it okay to define more than one route on the same path? <br>For example:**
 
-```js
+```javascript
 app.get('/cars', function(req, res) {
   res.send("Here's a list of my cars...");
 });
@@ -407,7 +407,7 @@ app.post('/cars', function(req, res) {
 
 - Okay, now let's refactor the `GET /home` route's callback to render our new `home.ejs` template:
 
-```js
+```javascript
 app.get('/home', function(req, res) {
   res.render('home');
 });
@@ -423,7 +423,7 @@ app.get('/home', function(req, res) {
 
 - This is our first opportunity to configure our app:
 
-```js
+```javascript
 // Configure the app (app.set)
 app.set('view engine', 'ejs');
 ```
@@ -473,7 +473,7 @@ $ touch data/todo-db.js
 
 - In the spirit of saving time, copy/paste the following inside of `todo-db.js`, then we'll review the code:
 
-```js
+```javascript
 module.exports = {
   getAll
 };
@@ -493,7 +493,7 @@ function getAll() {
 
 - To access our To Do "database", we need to `require` it inside of **server.js**:
 
-```js
+```javascript
 	
 // require the todo "database"
 const todoDb = require('./data/todo-db');
@@ -504,7 +504,7 @@ const todoDb = require('./data/todo-db');
 
 - Add this new route:
 
-```js
+```javascript
 app.get('/todos', function(req, res) {
   res.render('todos/index', {
    todos: todoDb.getAll()
@@ -570,7 +570,7 @@ $ touch views/todos/index.ejs
 
 - Refactor the root route as follows:
 
-```js
+```javascript
 app.get('/', function(req, res) {
  res.redirect('/home');
 });

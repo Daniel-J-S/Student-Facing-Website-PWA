@@ -98,7 +98,7 @@ For this lesson, we're going to code along using a `JavaScript` `REPL` from [rep
 - Here's a code example of encapsulating data (attributes/properties) & behavior (methods):
 
 
-```js
+```javascript
 var cohort = {
   id: 'SEIR Flex',
   students: ['Mary', 'Toni', 'Fred'],
@@ -138,7 +138,7 @@ var cohort = {
 
 - Here's a minimal class definition that's good for nothing but creating empty objects:
 
-	```js
+	```javascript
 	class Vehicle {
 	  // Code to define the class's properties and methods
 	}
@@ -171,7 +171,7 @@ var cohort = {
 
 - In JS, we create objects using the `new` keyword when invoking (instantiating) the class:
 
-	```js
+	```javascript
 	var v1 = new Vehicle();
 	```
 
@@ -186,7 +186,7 @@ var cohort = {
 
 - When a class is being instantiated, the special `constructor` method in the class will **automatically** be called:
 
-	```js
+	```javascript
 	class Vehicle {
 	  constructor(vin, make) {
 	    this.vin = vin;
@@ -218,7 +218,7 @@ var cohort = {
 
 - Test it out by instantiating another object like this:
 
-	```js
+	```javascript
 	var car = new Vehicle('A1234', 'Toyota', 'Camry');
 	```
 
@@ -255,7 +255,7 @@ var cohort = {
 
 - Let's add a `start` method to our `Vehicle` class:
 
-	```js
+	```javascript
 	class Vehicle {
 	  // the constructor will always be called
 	  constructor(vin, make, model) {
@@ -303,13 +303,13 @@ var cohort = {
 
 - In JS, virtually every object inherits from the `Object` class and thus inherits it's methods, such as `toString`:
 
-	```js
+	```javascript
 	car.toString() // outputs something like '[object Object]'
 	```
 
 - If we define a method that already exists in the object hierarchy, we "override" it. For example, we can override the Object's `toString` method by adding it to our class:
 
-	```js
+	```javascript
 	  // existing methods above
 	  
 	  toString() {
@@ -366,7 +366,7 @@ You've just learned how to define a class and add prototype methods to it. This 
 
 ### Constructor Functions
 
-```js
+```javascript
 function Vehicle(vin, make, model) {
   this.vin = vin;
   this.make = make;
@@ -402,7 +402,7 @@ var car = new Vehicle('A1234', 'Toyota', 'Camry');
 
 - Here's how to define a basic static method:
 
-	```js
+	```javascript
 	  static about() {
 	    console.log("I'm the Vehicle class!");
 	  }
@@ -411,7 +411,7 @@ var car = new Vehicle('A1234', 'Toyota', 'Camry');
 
 - As discussed, you invoke static methods on the class:
 
-	```js
+	```javascript
 	// invoke static methods on the class
 	Vehicle.about();
 	
@@ -436,7 +436,7 @@ var car = new Vehicle('A1234', 'Toyota', 'Camry');
 **❓ What's wrong with the following code?**
 
 
-```js
+```javascript
 class Shape {
 	constructor(x, y) {
 		this.x = x;
@@ -469,7 +469,7 @@ class Shape {
 
 - We use the `extends` keyword to define a subclass:
 
-	```js
+	```javascript
 	class Plane extends Vehicle {
 	  constructor(vin, make, model, airline) {
 	    super(vin, make, model);
@@ -494,7 +494,7 @@ class Shape {
 
 - Now we can create instances of `Plane` like this:
 
-	```js	
+	```javascript	
 	var spyPlane = new Plane('secret', 'Lockheed', 'SR-71', 'USA');
 	```
 
@@ -519,7 +519,7 @@ class Shape {
 
 - Test it out by instantiating it like this:
 
-	```js
+	```javascript
 	var fastCar = new Automobile('TS123Z', 'Tesla', 'P100D', 4);
 	```
 

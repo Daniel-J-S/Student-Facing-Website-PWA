@@ -33,7 +33,7 @@ Since you've already used the array `forEach` method before, you've already used
 
 Don't run the following, let's just read the code...
 
-```js
+```javascript
 const colors = ['red', 'green', 'blue'];
 
 colors.forEach(function(color, idx) {
@@ -118,7 +118,7 @@ JavaScript has designed the `forEach` method to:
 
 How many times would the anonymous callback function below be called?**:
 
-```js
+```javascript
 const flowers = ['rose', 'orchid', 'daisy'];
 	
 flowers.forEach(function(flower, idx) {
@@ -153,7 +153,7 @@ So far, most of the code we've written is **synchronous** code.
 
 For example:
 
-```js
+```javascript
 const colors = ['red', 'green', 'blue'];
 
 console.log('BEFORE the forEach...');
@@ -179,7 +179,7 @@ Unlike the synchronous code we saw above, the code following an **asynchronous**
 
 For example:
 
-```js
+```javascript
 console.log('Code before the asynchronous function call');
 
 setTimeout(function() {
@@ -237,7 +237,7 @@ JavaScript provides two ways to run a function **after** an asynchronous operati
 
 The `getFriends()` function below is _synchronous_. It returns an array of friends immediately when invoked, and everything works just peachy:
 
-```js
+```javascript
 // Synchronous function
 function getFriends() {
   return ['Fred', 'Barney'];
@@ -255,7 +255,7 @@ friends.forEach(function(friend) {
 
 Now let's use a `setTimeout` within `getFriends()` to simulate a long-running asynchronous function (as if we were fetching the data across a network):
 
-```js
+```javascript
 // asynchronous function
 function getFriendsAsync() {
   // Using setTimeout to make getFriendsAsync
@@ -291,7 +291,7 @@ What's a programmer to do?
 
 We're going to make it possible to work with the `getFriendsAsync` function by refactoring it to accept a callback function as follows:
 
-```js
+```javascript
 // Refactor to accept a callback function
 // to be called when the data is ready
 function getFriendsAsync(cb) {
@@ -331,7 +331,7 @@ Functions that are asynchronous must be **designed** to either:
 
 Arrow functions have a more terse syntax than regular functions (`function` keyword)
 
-```js
+```javascript
 // regular function
 let squares = [1, 2, 3].map(function (x) { return x * x });
 // arrow function
@@ -346,7 +346,7 @@ let squares = [1, 2, 3].map(x => x * x);
 
 #### A single parameter need not be wrapped in parens:
 
-```js
+```javascript
 x => { ... }  // one parameter
 () => { ... }  // no parameters
 (x, y) => { ... }  // two or more parameters
@@ -360,7 +360,7 @@ x => { ... }  // one parameter
 
 #### The statement block of an arrow function behaves just like that of a regular function:
 
-```js
+```javascript
 const getGrade = score => {
   if (score === 100) return 'A+';
   score = Math.floor(score / 10);
@@ -376,7 +376,7 @@ const getGrade = score => {
 
 #### If there's only a single **expression** (not a statement), curly braces are optional:
 
-```js
+```javascript
 const logThis = () => { console.log(this) };
 const logThis = () => console.log(this);
 ```
@@ -389,7 +389,7 @@ const logThis = () => console.log(this);
 
 #### Arrow functions will implicitly return the result of an **expression** without a block (braces):
 
-```js
+```javascript
 const add = (x, y) => { return x + y };
 
 // Ideal single-statement arrow function
@@ -410,7 +410,7 @@ const add = (x, y) => return x + y;
 
 #### To implicitly return a JS object, wrap it in parens to avoid the curly braces of the object being interpreted as a statement block:
 
-```js
+```javascript
 let todos = ['Buy milk', 'Mow lawn'];
 
 // Below line of code won't work - looks like a statement block
@@ -429,7 +429,7 @@ let todoObjects = todos.map(todo => ({todo: todo, done: false}));
 
 #### All arrow functions are expressions.  There's no such thing as an arrow function definition/declaration.
 
-```js
+```javascript
 // Nope, syntax error (no declarations for arrow functions)
 add(x, y) => x + y;
 

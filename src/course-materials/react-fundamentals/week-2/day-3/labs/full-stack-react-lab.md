@@ -94,7 +94,7 @@ On the server, you'll want to look into chaining the Mongoose `limit` query meth
 
 - If a score has made the list, how about letting the user know by moving to the high-score route! This requires that the `<App>` component be able to access `BrowserRouter`'s `history` object so that it can change routes "programmatically" using the `history.push()` method. A minor refactor in **index.js** to this is needed:
 
-	```js
+	```javascript
 	// Import Route also
 	import { BrowserRouter as Router, Route } from 'react-router-dom';
 	

@@ -290,7 +290,7 @@ type: "lecture"
 
 
 
-## 💪 <small>Dictionary Practice Exercise - (10 minutes)</small>
+## 💪 <small>Exercise - Dictionary Practice - (10 minutes)</small>
 <br>
 
 - Define a Python _dictionary_ named **`where_my_things_are`** containing a few items; where  the `keys` are things you have, and the `value` is the location you keep those things.

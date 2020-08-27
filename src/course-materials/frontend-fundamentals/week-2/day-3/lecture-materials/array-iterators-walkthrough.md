@@ -38,7 +38,7 @@ Imperative programming is a more step-by-step way of writing code.
 
 `for` loops, for example, are imperative: 
 
-```js
+```javascript
 for (let index = 0; index < array.length; index++) {
     // do stuff
 }
@@ -63,7 +63,7 @@ With a `for` loop we're saying:
 
 In declarative programming, we write code that describes what we want to do:
 
-```js
+```javascript
 array.forEach(function(val) {
     // do stuff
 });
@@ -136,7 +136,7 @@ This fact makes it easier to remember the syntax of these important methods, wit
 
 **PURPOSE:** General purpose iterator method.
 
-```js
+```javascript
 const friends = ["Melissa", "Marc", "Andrew", "Nick"];
 
 friends.forEach(function(friend) {
@@ -156,7 +156,7 @@ friends.forEach(function(friend) {
 
 Using `forEach` log out each of my `friends` but with the first letter of their name lower-cased. Use the `<str>.toLowerCase()` method. 
 
-```js
+```javascript
 "Cats".toLowerCase(); //=> cats
 ``` 
 
@@ -177,7 +177,7 @@ The returned array is always the same length as the source array.
 
 #### Transform an array
 
-```js
+```javascript
 const nums = [1, 2, 3];
 const squared = nums.map(function(num) {
   return num * num;
@@ -191,7 +191,7 @@ const squared = nums.map(num => num * num);
 
 #### When we say transform, we mean transform!
 
-```js
+```javascript
 const people = [
   {name: 'Fred', town: 'Bedrock'},
   {name: 'Susan', town: 'Miami'},
@@ -220,13 +220,13 @@ const types = Object.keys(obj).map(elem => typeof elem);
 
 Given an array of instructors,
 
-```js
+```javascript
 const instructors = ["Alex", "Ben", "Daniel", "Morgan", "Micah", "Jims"];
 ```
 
 Use `map` to create a new array that adds the string " is awesome" to each element in the array.
 
-```js
+```javascript
 ["Alex is awesome", "Ben is awesome", "Daniel is awesome", "Morgan is awesome", "Micah is awesome", "Jims is awesome"]
 ```
 
@@ -244,7 +244,7 @@ Use `map` to create a new array that adds the string " is awesome" to each eleme
 
 #### Sum up the numbers in an array
 
-```js
+```javascript
 const nums = [25, 6, 100, 3];
 let sum = nums.reduce(function(acc, num) {
   return acc + num;
@@ -258,7 +258,7 @@ let sum = nums.reduce((acc, num) => acc + num);
 
 #### Count votes
 
-```js
+```javascript
 const votes = ['Yes', 'No', 'No', 'Yes', 'Yes'];
 let tally = votes.reduce(function(acc, vote) {
   acc[vote] = acc[vote] ? acc[vote] + 1 : 1;
@@ -288,7 +288,7 @@ let tally = votes.reduce((acc, vote) => {
 
 #### Obtain just the odd numbers
 
-```js
+```javascript
 const nums = [100, 2, 5, 42, 99];
 const odds = nums.filter(function(num) {
   return num % 2;
@@ -304,7 +304,7 @@ const odds = nums.filter(num => num % 2);
 
 Filter out all "jerks"!
 
-```js
+```javascript
 const people = ["jerks", "nice people", "jerks", "nice people", "nice people"];
 ```
 
@@ -318,7 +318,7 @@ const people = ["jerks", "nice people", "jerks", "nice people", "nice people"];
 
 #### Find certain car objects
 
-```js
+```javascript
 const cars = [
   {color: 'red', make: 'BMW', year: 2001},
   {color: 'white', make: 'Toyota', year: 2013},
@@ -369,7 +369,7 @@ Find the first car whose year is older than 2014 and assign it to a variable nam
 
 #### Find the index of the first match
 
-```js
+```javascript
 const cars = [
   {color: 'red', make: 'BMW', year: 2001},
   {color: 'white', make: 'Toyota', year: 2013},
@@ -403,7 +403,7 @@ let firstWhiteCarIdx = cars.findIndex(car => car.color === 'white');
 
 Henry would be proud...
 
-```js
+```javascript
 const cars = [
   {color: 'red', make: 'BMW', year: 2001},
   {color: 'white', make: 'Toyota', year: 2013},
@@ -429,7 +429,7 @@ let hasFord = cars.some(car => car.make === 'Ford');
 
 Do I have an _evil monkey_ in my room? 
 
-```js
+```javascript
 const myRoom = ["evil monkey", "bed", "lamp"];
 let isEvilMonkeyInRoom = /* Fill code in here */
 ```
@@ -453,7 +453,7 @@ let isEvilMonkeyInRoom = /* Fill code in here */
 
 #### Are all cars blue?
 
-```js
+```javascript
 const cars = [
   {color: 'red', make: 'BMW', year: 2001},
   {color: 'white', make: 'Toyota', year: 2013},

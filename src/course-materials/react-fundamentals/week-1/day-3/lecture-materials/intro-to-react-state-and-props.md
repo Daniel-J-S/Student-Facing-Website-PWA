@@ -120,14 +120,14 @@ When working with data pertaining to the colors, we will find it far  more effic
 
 For example, we can use integers in an array to represent the secret code and the player's guesses like this:
 
-```js
+```javascript
 // Array of color "indexes" can be used for the code & player's guesses
 [3, 0, 2, 2]
 ```
 
 Those numbers would then be used to represent a corresponding color in a colors array:
 
-```js
+```javascript
 // Array of "colors"
 ['#7CCCE5', '#FDE47F', '#E04644', '#B576AD']
 ```
@@ -136,7 +136,7 @@ This way, the state "remembering" the selected color would be a simple integer, 
 
 With that out of the way, let's think about what has to be "remembered" about each guess. Take a look at this object's structure:
 
-```js
+```javascript
 // Structure of a player's "guess" object
 {
   code: [3, 2, 1, 0],
@@ -161,7 +161,7 @@ If evaluating an application's state and data structures seems difficult, that's
 
 Now let's initialize some state by creating a constructor method:
 
-```js
+```javascript
 class App extends React.Component {
   constructor() {
     // super must be called before accessing 'this'
@@ -213,7 +213,7 @@ If the `colors` array is used as a lookup data structure and doesn't change duri
 
 Let's add the `colors` array outside of the `App` class:
 
-```js
+```javascript
 // Add this array above the App class
 const colors = ['#7CCCE5', '#FDE47F', '#E04644', '#B576AD'];
 
@@ -222,7 +222,7 @@ class App extends React.Component {
 
 Now let's update App's `render` method to render the color's hex instead of the `selColorIdx`:
 
-```js
+```javascript
 <div className="App">
   Selected color: {colors[this.state.selColorIdx]}
 ```
@@ -238,7 +238,7 @@ Okay, your turn to add a couple of more pieces of state to react-mastermind:
 
 2. `code`: Add a property named `code` to the `state` object. This is the array that will hold four integers (ranging from `0` to `colors.length - 1`). To obtain the value for `code`, call a method named `genCode` that will return the array of four randomly generated numbers. Define `genCode` as a method in the class between the `constructor` & `render` methods.<br>**Hint:** Remember that to invoke a method from another method, it must be accessed via `this`.<br>This single line of code within `genCode` will do the trick:
 
-	```js
+	```javascript
 	return new Array(4).fill().map(() => Math.floor(Math.random() * colors.length));
 	```
 <br>
@@ -250,7 +250,7 @@ A class component updates its state by calling the `setState` method.
 
 Do not modify state directly like this:
 
-```js
+```javascript
 this.state.selColorIdx = 1;
 ```
 
@@ -258,7 +258,7 @@ this.state.selColorIdx = 1;
 
 Let's add a temporary button to `<App>` with a click handler that will select one color after the other:
 
-```js
+```javascript
 <div className="App">
   <button onClick={() => 
     this.setState({selColorIdx: ++this.state.selColorIdx % 4})}>
@@ -274,7 +274,7 @@ There are a couple of different ways to call `setState`...
 
 The simplest approach is like what we did above, by simply providing an object as the only argument that gets merged with the current state object:
 
-```js
+```javascript
 this.setState({
   someState: 'new value',
   moreState: true
@@ -285,7 +285,7 @@ However, because the `setState` method is asynchronous, if new state depends upo
 
 Notice we are getting warnings with the way we updated `selColorIdx`?  React knows we can do better:
 
-```js
+```javascript
 <button onClick={() => this.setState(state => (
   {selColorIdx: ++state.selColorIdx % 4}
 )}>
@@ -327,7 +327,7 @@ However, as discussed in the JSX lesson, you must use camelCasing to name your p
 
 The first prop we'll pass in react-mastermind will be the `colors` array to the `<ColorPicker>` component within the `render` method in **App.js**:
 
-```js
+```javascript
 <ColorPicker colors={colors}/>
 ```
 
@@ -352,20 +352,20 @@ How exciting!
 
 When a **Function Component** is being rendered, React will pass in props as the first argument to the function like this:
 
-```js
+```javascript
 const ColorPicker = (props) => (
   ...
 ```
 
 However, a **Class Component** will access props via a property on the instance (`this`) like this:
 
-```js
+```javascript
 {this.props.myProp}
 ```
 
 Let's use the `colors` prop inside of `<ColorPicker>` to render a button for each of the colors in the array:
 
-```js
+```javascript
 const ColorPicker = (props) => (
   <div>
     {props.colors.map(color =>
@@ -438,7 +438,7 @@ After the player clicks the `<ScoreGuess>` button, they will expect another gues
 
 Since we'll need to be able to create new guess objects throughout the game play, let's write a method whose responsibility is to return a pristine guess object in **App.js**:
 
-```js
+```javascript
 // Add this method below the constructor method
 getNewGuess() {
   return {
@@ -455,7 +455,7 @@ We're using a `null` in each of the four positions to represent that a guess has
 
 Now we can use this `getNewGuess` method to update how the `guesses` state array is initialized in **App.js**:
 
-```js
+```javascript
 this.state = {
   selColorIdx: 0,
   // Call getNewGuess to create a starting guess object
@@ -472,7 +472,7 @@ However, during development, we often want to "seed" initial data for testing, s
 
 Let's make a change to temporarily create two guess objects in the `guesses` array instead of one, and with "color" indexes instead of the nulls:
 
-```js
+```javascript
   this.state = {
     selColorIdx: 0,
     // For development, let's initialize with two guess objects
@@ -501,7 +501,7 @@ getNewGuess() {
 
 The `<GameBoard>` component currently is rendering two hard-coded `<GameRow>` components:
 
-```js
+```javascript
 const GameBoard = (props) => (
   <div>
     <GuessRow />
@@ -512,7 +512,7 @@ const GameBoard = (props) => (
 
 However, now that `<GameBoard>` is being passed the actual `guesses` array, let's refactor to render a `<GuessRow>` for each guess object in the array instead:
 
-```js
+```javascript
 const GameBoard = (props) => (
   <div>
     {props.guesses.map((guess, idx) =>
@@ -536,7 +536,7 @@ Okay, we should still be seeing two `<GuessRow>` components being rendered.
 
 However, now it has `guess` & `colors` props that can be used. Here's what **GuessRow.jsx** currently has for code:
 
-```js
+```javascript
 const GuessRow = (props) => (
   <div className='flex-h'>
     Guess Row #
@@ -552,7 +552,7 @@ Problem though, `<GuessRow>` doesn't currently have this the "guess row number" 
 
 We're going to have to pass the value of `idx` as a separate prop instead in **GameBoard.jsx**:
 
-```js
+```javascript
 const GameBoard = (props) => (
   <div>
     {props.guesses.map((guess, idx) =>
@@ -570,7 +570,7 @@ const GameBoard = (props) => (
 
 Now we can go back to **GuessRow.jsx** and render the actual row number:
 
-```js
+```javascript
 const GuessRow = (props) => (
   <div className='flex-h'>
     <div>{props.rowIdx + 1}</div>
@@ -592,7 +592,7 @@ The following props will need to be passed to `<GuessPegs>`:
 
 Let's pass these along:
 
-```js
+```javascript
 const GuessRow = (props) => (
   <div className='flex-h'>
     <div>{props.rowIdx + 1}</div>
@@ -615,7 +615,7 @@ Sweet. Make sure the page is not receiving any errors and let's move on to the `
 
 Currently, `<GuessPegs>` is rendering "GuessPegs" text and the four `<GuessPeg>` components in **GuessPegs.jsx**:
 
-```js
+```javascript
 const GuessPegs = (props) => (
   <div className='flex-h'>
     GuessPegs
@@ -635,7 +635,7 @@ But the specific color value to pass as a prop depends upon the color that the p
 
 This is how it's done:
 
-```js
+```javascript
 const GuessPegs = (props) => (
   <div>
     <GuessPeg color={props.colors[props.code[0]]} />
@@ -652,7 +652,7 @@ Now let's get the `<GuessPeg>` component to simply render the color value instea
 
 Update **GuessPeg.jsx** as follows:
 
-```js
+```javascript
 const GuessPeg = (props) => (
   <div>
     {props.color}
@@ -688,7 +688,7 @@ As you've seen already, we'll need to pass a prop to `<GuessRow>` from its paren
 
 Back in **GameBoard.jsx** let's add a `currentGuess` prop in addition to the others:
 
-```js
+```javascript
 const GameBoard = (props) => (
   <div>
     {props.guesses.map((guess, idx) =>
@@ -711,7 +711,7 @@ Now the `<GuessRow>` component has the info necessary to decide which components
 
 Let's add the necessary conditional logic in **GuessRow.jsx**:
 
-```js
+```javascript
 const GuessRow = (props) => (
   <div className='flex-h'>
     <div>{props.rowIdx + 1}</div>
@@ -733,7 +733,7 @@ Ah yes, our friend the ternary expression is the go to for returning one of two 
 
 One last detail, we've referenced the `<ScoreButton>` component without importing it:
 
-```js
+```javascript
 import React from 'react';
 import GuessPegs from '../GuessPegs/GuessPegs';
 import GuessScore from '../GuessScore/GuessScore';
@@ -766,7 +766,7 @@ Take a minute to review the following questions:
 
 4. **What is wrong with the following code:**
 
-	```js
+	```javascript
 	function GameTimer(props) {
 	  props.elapsedTime += 1;
 	  return (

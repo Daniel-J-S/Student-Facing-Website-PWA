@@ -113,7 +113,7 @@ There is a great website dedicated to JWTs that explains in detail their format 
 
 Allow me to take a JWT from the website and demonstrate the fact that the token can be easily decoded in the browser's console:
 
-```js
+```javascript
 > var jwt = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ';
 > var payload = jwt.split('.')[1]  // only interested in the payload (claims)
 > window.atob(payload)
@@ -292,7 +292,7 @@ To perform the actual salting and hashing, we will use the ever so popular **bcr
 
 First, bring in **bcrypt**:
 
-```js
+```javascript
 // models/user.js
 
 const mongoose = require('mongoose');
@@ -301,7 +301,7 @@ const bcrypt = require('bcrypt');
 
 **bcrypt** has a setting that tells it how many times to randomize the generation of salt. Let's add a constant in the module to set it - usually 6 is enough:
 
-```js
+```javascript
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
@@ -312,7 +312,7 @@ Now for the middleware. We will be writing a function that runs before a user is
 
 Type in this skeleton just above the `module.exports`:
 
-```js
+```javascript
 userSchema.pre('save', function(next) {
   // this will be set to the current document
   const user = this;
@@ -324,7 +324,7 @@ Note that we are assigning `this` (the user document being saved) to a variable.
 
 Now let's add the code that checks if the password for this user document has been changed, and if so, salt & hash it, then assign the hash to password, replacing the cleartext version:
 
-```js
+```javascript
 userSchema.pre('save', function(next) {
   const user = this;
   if (!user.isModified('password')) return next();
@@ -371,7 +371,7 @@ Let's install the one for Node apps:
 
 With **jsonwebtoken** installed, **controllers/users.js** is where we're going to use it:
 
-```js
+```javascript
 // controllers/users.js
 
 const User = require('../models/user');
@@ -387,7 +387,7 @@ SECRET=SEIRocks!
 
 Let's create a shortcut variable in our controller to hold the SECRET:
 
-```js
+```javascript
 const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 // Add the SECRET
@@ -396,7 +396,7 @@ const SECRET = process.env.SECRET;
 
 The **jsonwebtoken** library has a `sign` method that creates JWTs. Let's add a `createJWT` helper function at the bottom of **controllers/users.js** that we can use both when a user signs up and when they log in:
 
-```js
+```javascript
 /*----- Helper Functions -----*/
 
 function createJWT(user) {
@@ -412,7 +412,7 @@ function createJWT(user) {
 
 Now let's refactor the `signup` method to return a JWT:
 
-```js
+```javascript
 async function signup(req, res) {
   const user = new User(req.body);
   try {
@@ -458,7 +458,7 @@ Again, we only want to store the token **string** in `localStorage`, however, th
 
 Here's a small refactor to the last line of the `signup` method:
 
-```js
+```javascript
 function signup(user) {
   return fetch(BASE_URL + 'signup', {
     method: 'POST',
@@ -496,7 +496,7 @@ Let's create a file for our token service:
 
 Just a `setToken` method for now:
 
-```js
+```javascript
 function setToken(token) {
   if (token) {
     localStorage.setItem('token', token);
@@ -522,7 +522,7 @@ Now let's refactor the `signup` method in **userService.js** to use the `setToke
 
 First, we need to import **tokenService.js**:
 
-```js
+```javascript
 // utils/userService.js
 
 import tokenService from './tokenService';
@@ -533,7 +533,7 @@ const BASE_URL = '/api/users/';
 
 Now, the refactor of `signup`:
 
-```js
+```javascript
 function signup(user) {
 	...
   // update the last 'then' to this...
@@ -572,7 +572,7 @@ In addition, apps from time-to-time, will need to obtain the logged in user's in
 
 Let's add a `getUser` method to **userService.js**:
 
-```js
+```javascript
 function getUser() {
   return tokenService.getUserFromToken();
 }
@@ -590,7 +590,7 @@ First, let's write a `getToken` method that retrieves and verifies that the toke
 
 In **tokenService.js**:
 
-```js
+```javascript
 function getToken() {
   let token = localStorage.getItem('token');
   if (token) {
@@ -610,7 +610,7 @@ function getToken() {
 
 Next, let's code the `getUserFromToken` method that decodes the token, then extracts and returns the `user` object:
 
-```js
+```javascript
 function getUserFromToken () {
   const token = getToken();
   return token ? JSON.parse(atob(token.split('.')[1])).user : null;
@@ -635,13 +635,13 @@ Time to add a `user` property to `<App>`'s state.
 
 First, import the `userService` in **App.js**:
 
-```js
+```javascript
 import userService from '../../utils/userService';
 ```
 
 Since adding a `user` to state from a token in localStorage is not an asynchronous process, we can do it in the constructor:
 
-```js
+```javascript
 this.state = {
   ...this.getInitialState(),
   difficulty: 'Easy',
@@ -672,7 +672,7 @@ Now that `<NavBar>` has a `user` prop, let's refactor **NavBar.jsx**.
 
 We want to display one of two choices - another opportunity to use a ternary operator as follows:
 
-```js
+```javascript
 const NavBar = (props) => {
   let nav = props.user ?
     <div>
@@ -726,13 +726,13 @@ When the **LOG OUT** link is clicked, we don't want to change routes, instead we
 
 First let's add an `onClick` prop to the link:
 
-```js
+```javascript
 <Link to='' className='NavBar-link' onClick={props.handleLogout} >LOG OUT</Link>
 ```
 
 **Where does the `handleLogout` method needs to go?**
 
-```js
+```javascript
 handleLogout = () => {
   userService.logout();
   this.setState({ user: null });
@@ -743,7 +743,7 @@ handleLogout = () => {
 
 Now let's add the `logout` method to **userService.js**:
 
-```js
+```javascript
 function logout() {
   tokenService.removeToken();
 }
@@ -757,7 +757,7 @@ export default {
 
 Finally, we need that `removeToken` method added to **tokenService.js**:
 
-```js
+```javascript
 function removeToken() {
   localStorage.removeItem('token');
 }
@@ -787,7 +787,7 @@ Let's fix this problem in the next step...
 
 Let's take care of the but by first adding a `handleSignup` method in **App.js**:
 
-```js
+```javascript
 handleSignup = () => {
   this.setState({user: userService.getUser()});
 }
@@ -796,7 +796,7 @@ We need to pass it from `<App>` down to `<SignupForm>` via props - **easy peasy 
 
 Here's the refactor that adds the call to `<App>`'s `handleSignup` in **SignupForm.jsx**:
 
-```js
+```javascript
   handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -833,7 +833,7 @@ We already have a `<LoginPage>` component.
 
 We're using controlled `<input>`s here, however, the `handleChange` method in the `onChange` is not yet implemented - here's the finished product:
 
-```js
+```javascript
 handleChange = (e) => {
   this.setState({
     // Using ES2015 Computed Property Names
@@ -850,14 +850,14 @@ Now a few of tweaks:
 
 1. Since we're using `userService`, we need import it:
 	
-	```js
+	```javascript
 	import userService from '../../utils/userService';
 	```
 
 2. Let's update the code to invoke a `userService.login` method (which we will write in a bit) and also tweak the error handling to something like this:
 
 
-	```js
+	```javascript
 	handleSubmit = async (e) => {
 	  e.preventDefault();
 	  try {
@@ -875,7 +875,7 @@ Now a few of tweaks:
 
 3. We originally named the method that notifies `<App>` when someone signs up `handleSignup`. However, to stay DRY, we're now going to use the same method to notify `<App>` when someone logs in. Let's change the name of the method to something more appropriate:
 
-	```js
+	```javascript
 	handleSubmit = async (e) => {
 	  e.preventDefault();
 	  try {
@@ -916,7 +916,7 @@ Please complete the following three steps:
 
 Awesome, the next step in implementing log in functionality is to add the `login` method to **userService.js**:
 
-```js
+```javascript
 function login(creds) {
   return fetch(BASE_URL + 'login', {
     method: 'POST',
@@ -955,7 +955,7 @@ When adding functionality on the server, a great place to start is defining the 
 
 In **routes/api/users.js**:
 
-```js
+```javascript
 /*---------- Public Routes ----------*/
 router.post('/signup', usersCtrl.signup);
 router.post('/login', usersCtrl.login);
@@ -963,7 +963,7 @@ router.post('/login', usersCtrl.login);
 
 Now we need that `usersCtrl.login` method - in **controllers/users.js**:
 
-```js
+```javascript
 async function login(req, res) {
   try {
     const user = await User.findOne({email: req.body.email});
@@ -994,7 +994,7 @@ When we want to add custom functionality to a particular instance of a Mongoose 
 
 In **models/user.js**:
 
-```js
+```javascript
 userSchema.methods.comparePassword = function(tryPassword, cb) {
   bcrypt.compare(tryPassword, this.password, cb);
 };
@@ -1034,7 +1034,7 @@ Let's refactor **scoresService.js** to provide the JWT when its `create` method 
 
 First we will need to import **tokenService.js** so that we can obtain the token:
 
-```js
+```javascript
 // Add this import at the top of scoresService.js
 import tokenService from './tokenService';
 
@@ -1043,7 +1043,7 @@ const BASE_URL = '/api/scores/';
 
 Here's the refactor that adds simply adds a header:
 
-```js
+```javascript
 function create(score) {
   
     ...
@@ -1109,7 +1109,7 @@ First, let's create a module file for the middleware function:
 
 Here's the custom **auth.js** middleware that we'll discuss as we type it in:
 
-```js
+```javascript
 const jwt = require('jsonwebtoken');
 const SECRET = process.env.SECRET;
 
@@ -1158,7 +1158,7 @@ For efficiency's sake, we don't want to bother checking for a token, verifying i
 
 If all the routes in **routes/api/scores.js** needed to be protected, we could add the middleware in **server.js** like this:
 
-```js
+```javascript
 app.use('/api/users', require('./routes/api/users'));
 // Mount our custom auth middleware to protect routes below it
 app.use(require('./config/auth'));
@@ -1171,7 +1171,7 @@ However, in this app, we just want to check for a token in the `create` high sco
 
 Accordingly, we will need to use the middleware within **routes/api/scores.js** router module like this:
 
-```js
+```javascript
 const express = require('express');
 const router = express.Router();
 const scoresCtrl = require('../../controllers/scores');
@@ -1190,7 +1190,7 @@ Just be sure to mount your auth middleware before mounting any routes/routers th
 
 To test, first let's log out `req.user` from the `highScores` action in **controllers/scores.js**:
 
-```js
+```javascript
 function highScores(req, res) {
   console.log(req.user);
   
@@ -1232,7 +1232,7 @@ The `<Link>` for accessing high-scores is being rendered in `<GamePage>` regardl
 
 A minor tweak, and poof, no more **[High Scores]** unless the user is logged in:
 
-```js
+```javascript
 { props.user && <Link className='btn btn-default GamePage-link-margin' to='/high-scores'>High Scores</Link>}
 ```
 
@@ -1251,7 +1251,7 @@ Instead, we should send that rebel to `/login`!
 
 One best practice approach is to define your protected routes as follows in **App.js**:
 
-```js
+```javascript
 <Route exact path='/high-scores' render={() => (
   userService.getUser() ?
     <HighScoresPage 
@@ -1267,7 +1267,7 @@ Note the use of another `react-router-dom` component, `<Redirect>`. This compone
 
 Be sure to update the import to include `Redirect`:
 
-```js
+```javascript
 import { Route, Switch, Redirect } from 'react-router-dom';
 ```
 
@@ -1285,7 +1285,7 @@ Once again, we'll use a tiny middleware function inserted before the controller 
 
 Here's the updated **routes/api/scores.js**:
 
-```js
+```javascript
 ...
 
 /*---------- Protected Routes ----------*/

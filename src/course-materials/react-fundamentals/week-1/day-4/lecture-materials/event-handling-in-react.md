@@ -81,7 +81,7 @@ For the styling lab, within `<App>`'s `constructor`, the `guesses` array was bei
 
 Let's update **App.js** so that the game loads correctly with only one pending guess:
 
-```js
+```javascript
 constructor() {
   super();
   this.state = {
@@ -101,7 +101,7 @@ Instead, we are going to represent a "no color choice" with a `null` value like 
 
 Let's uncomment that line and delete the other "for testing purposes" line to update `getNewGuess` as follows:
 
-```js
+```javascript
 getNewGuess() {
   return {
     code: [null, null, null, null],
@@ -321,7 +321,7 @@ Within <code>&lt;App /&gt;</code>, of course!
 
 <br><br>Start by defining a method in `<App>` that baby-steps by popping up an alert:
 
-```js
+```javascript
 handleColorSelection() {
   alert('color selected!');
 }
@@ -360,7 +360,7 @@ Now, `<ColorPicker>` will have access to the `handleColorSelection` via `props.h
 
 Now, inside of `<ColorPicker>` we can replace the `onClick={() => alert('clicked!')}` with `props.handleColorSelection`:
 
-```js
+```javascript
 const ColorPicker = (props) => (
   <div className={styles.ColorPicker}>
     {props.colors.map((color, idx) =>
@@ -396,7 +396,7 @@ In regards to clicking a color in `<ColorPicker>`, we want to pass the newly sel
 
 Let's update the `handleColorSelection` method in **App.js** to accept the index as an argument and test it by alerting the value:
 
-```js
+```javascript
 handleColorSelection(colorIdx) {
   alert(`color index ${colorIdx} selected!`);
 }
@@ -408,7 +408,7 @@ Now back to `<ColorPicker>`...
 
 As stated earlier, we must provide a function type, **not invoke** the function. So **this won't work**:
 
-```js
+```javascript
 onClick={props.handleColorSelection(idx)}
 ```
 
@@ -416,7 +416,7 @@ Writing the above code will unfortunately invoke the method each time `<ColorPic
 
 So, what's the solution? Try this on for size:
 
-```js
+```javascript
 onClick={() => props.handleColorSelection(idx)}
 ```
 
@@ -437,7 +437,7 @@ However, there's a bug...
 
 Now that we have the index of the newly selected color being passed to `handleColorSelection`, it seems like we should be able to easily call `setState` to update `state.selColorIdx` like this:
 
-```js
+```javascript
 handleColorSelection(colorIdx) {
   this.setState({selColorIdx: colorIdx});
 }
@@ -461,7 +461,7 @@ The binding of <code>this</code> is determined by how a function is called. In t
 
 In React, prior to an upcoming JS feature that I'm going to show you next, the common way was to use `bind` in the constructor to create a **new** function that has `this` explicitly bound to its first argument:
 
-```js
+```javascript
 class App extends Component {
   constructor(props) {
     super(props);
@@ -497,7 +497,7 @@ Property Initializer Syntax allows properties to be written within the body of a
 
 Here's how property initializer syntax can be used to initialize a `sweet` property and an `eat` property (assigned a function making it a "method"):
 
-```js
+```javascript
 class Candy {
   constructor(name) {
     this.name = name;
@@ -509,7 +509,7 @@ class Candy {
 
 The above code internally gets translated into this:
 
-```js
+```javascript
 class Candy {
   constructor(name) {
     this.name = name;
@@ -525,14 +525,14 @@ Now let's fix the `handleColorSelection` problem using property initializer synt
 
 First, remove the explicit binding line of code we just added in the `constructor`:
 
-```js
+```javascript
 // remove this line of code from the constructor
 this.handleColorSelection = this.handleColorSelection.bind(this);
 ```
 
 Okay, here's the latest and greatest way, using _class fields_, to define a method used as a callback:
 
-```js
+```javascript
 handleColorSelection = (colorIdx) => {
   this.setState({selColorIdx: colorIdx});
 }
@@ -540,7 +540,7 @@ handleColorSelection = (colorIdx) => {
 
 Now, **unlike** the previous method definition:
 
-```js
+```javascript
 handleColorSelection(colorIdx) {
   this.setState({selColorIdx: colorIdx});
 }

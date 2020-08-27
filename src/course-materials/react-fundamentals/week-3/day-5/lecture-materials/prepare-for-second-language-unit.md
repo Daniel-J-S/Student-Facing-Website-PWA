@@ -74,6 +74,7 @@ Python 3's package manager, `pip3` should have automatically been installed with
 
 We will use `pip3` to install Django, a robust web framework for Python. We will be installing the latest version (3.x.x):
 
-```
+
+```shell
 pip3 install Django
 ```

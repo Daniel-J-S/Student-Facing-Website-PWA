@@ -83,10 +83,10 @@ Students will be able to:
 
 
 
-#### Exercise (2 minutes)
+#### 💪 Exercise (2 minutes)
 
 
-- **Identify what other attributes a Book entity might have?** 
+_**Identify what other attributes a Book entity might have?**_
 
 <br>
 <br>
@@ -205,16 +205,16 @@ Students will be able to:
 <br>
 
 
-### Identifying Data Entities - Exercise
+### 💪 Exercise - Identifying Data Entities
 
 
-#### Pair up and analyze the preliminary Ticket entity.
+1. Pair up and analyze the preliminary Ticket entity.
 
-#### The goal is to identify separate Data Entities and their attributes.
+2. The goal is to identify separate Data Entities and their attributes.
 
-#### We will review your findings in 5 minutes.
+3. We will review your findings in 5 minutes.
 
-#### Don't cheat by looking ahead 😊
+4. Don't cheat by looking ahead 😅
 
 
 
@@ -396,9 +396,9 @@ Students will be able to:
 
 - Reads as: **"A Concert has many Tickets"** and **"A Ticket belongs to a Concert"**.
 
-- **Which of the two tables would have to contain the FK?**
+**❓ Which of the two tables would have to contain the FK?**
 
-- Now for **Customer** and **Ticket** **...what's the relationship?**
+❓ Now for **Customer** and **Ticket** **...what's the relationship?**
 
 
 <br>
@@ -417,7 +417,7 @@ Students will be able to:
 
 
 
-#### Is there a relationship between the **Customer** and **Concert** entities? ...
+#### ❓Is there a relationship between the **Customer** and **Concert** entities? ...
 
 
 <br>
@@ -441,7 +441,7 @@ Students will be able to:
 
 
 
-### Creating the ERD - Exercise <small>(5 min)</small>
+### 💪 Exercise - Creating the ERD <small>(5 min)</small>
 
 
 - As a pair exercise, please identify the remaining relationships:

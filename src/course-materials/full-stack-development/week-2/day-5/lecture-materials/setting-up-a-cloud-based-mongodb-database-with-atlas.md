@@ -124,9 +124,12 @@ Next, ensure that the **Node.js** driver and latest version is selected.  Then c
 
 You can now paste the connection string in the app's `.env` file, assigning it to a `DATABASE_URL` environment variable:
 
-```
+
+```shell
 DATABASE_URL=mongodb+srv://sei:<password>@sei-w0kys.azure.mongodb.net/test?retryWrites=true
 ```
+
+
 
 You're almost done, but you need to update the connection string as follows:
 
@@ -143,7 +146,7 @@ You're good to go!
 
 Here's the latest options to include to get rid of the deprecation warnings:
 
-```js
+```javascript
 mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

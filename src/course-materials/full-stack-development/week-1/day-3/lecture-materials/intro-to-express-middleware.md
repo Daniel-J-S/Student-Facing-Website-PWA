@@ -79,7 +79,7 @@ type: "lecture"
 
 - A middleware is simply a function with the following signature:
 
-```js
+```javascript
 function(req, res, next) {}
 ```
 
@@ -99,7 +99,7 @@ function(req, res, next) {}
 
 - Open **server.js** and add this "do nothing" middleware:
 
-```js
+```javascript
 app.set('view engine', 'ejs');
 
 // add middleware below the above line of code
@@ -125,7 +125,7 @@ app.use(function(req, res, next) {
 
 - Let's add a line of code that modifies the `req` object: 
 
-```js
+```javascript
 app.use(function(req, res, next) {
  console.log('Hello Intrepid Learner!');
  // Add a time property to the req object
@@ -141,7 +141,7 @@ app.use(function(req, res, next) {
 
 - Let's update the `index` action in **controllers/todos.js** so that it passes `req.time`:
 
-```js
+```javascript
 function index(req, res) {
  res.render('todos/index', {
    todos: Todo.getAll(),
@@ -164,7 +164,7 @@ function index(req, res) {
 
 - In **server.js**, let's move our custom middleware below where the routers are being mounted:
 
-```js
+```javascript
 app.use('/', indexRouter);
 app.use('/todos', todosRouter);
 
@@ -205,7 +205,7 @@ app.use(function(req, res, next) {
 
 Now we require `morgan` and mount it as middleware
 
-```js
+```javascript
 const morgan = require('morgan');
 ```
 
@@ -214,14 +214,14 @@ const morgan = require('morgan');
 
 **We'll mount Morgan like this**
 
-```js
+```javascript
 app.use(morgan('dev'));
 ```
 
 **Next, we'll mount our static asset middleware and bodyparser middleware**
 
 
-```js
+```javascript
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 ```
@@ -229,7 +229,7 @@ app.use(express.urlencoded({ extended: false }));
 
 **...by the end, is what our "Middleware Stack" should look like**
 
-```js
+```javascript
 
 // Mount middleware (app.use)
 app.use(morgan('dev'));
@@ -301,7 +301,7 @@ GET /todos/new
 
 - Let's add the `new` route in **routes/todos.js** as follows:
 
-```js
+```javascript
 router.get('/', todosCtrl.index);
 router.get('/new', todosCtrl.new);
 router.get('/:id', todosCtrl.show);
@@ -313,7 +313,7 @@ router.get('/:id', todosCtrl.show);
 
 - In **controllers/todos.js**:
 
-```js
+```javascript
 module.exports = {
  index,
  show,
@@ -384,7 +384,7 @@ Same process:
 
 - In **routes/todos.js**:
 
-```js
+```javascript
 router.get('/:id', todosCtrl.show);
 router.post('/', todosCtrl.create);  // add this route
 ```
@@ -405,7 +405,7 @@ Same process:
 
 In **controllers/todos.js**:
 
-```js
+```javascript
   	  ...
   	  create
   	};
@@ -423,7 +423,7 @@ In **controllers/todos.js**:
 
 - `req.body` is courtesy of this middleware in **server.js**:
 	
-```js
+```javascript
 app.use(express.urlencoded({ extended: false }));
 ```
 
@@ -438,7 +438,7 @@ app.use(express.urlencoded({ extended: false }));
 
 - All we need is that `create` in **models/todo.js**:
 
-```js
+```javascript
 module.exports = {
  getAll,
  getOne,
@@ -492,14 +492,14 @@ function create(todo) {
 
 - Require it below `morgan` in **server.js**:
 
-```js
+```javascript
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 ```
 
 - Now let's add `method-override` to the middleware pipeline:
 
-```js
+```javascript
 app.use(express.static('public'));
 app.use(methodOverride('_method'));  // add this
 ```
@@ -581,7 +581,7 @@ li {
 
 - In **routes/todos.js**:
 
-```js
+```javascript
 router.post('/', todosCtrl.create);
 router.delete('/:id', todosCtrl.delete);
 ```
@@ -596,7 +596,7 @@ Same process:
 
 - Similar to `newTodo`, we can't name a function `delete`, so...
 
-```js
+```javascript
  create,
  delete: deleteTodo
 };
@@ -610,7 +610,7 @@ function deleteTodo(req, res) {
 
 - All that's left is to add the `deleteOne` method to the `Todo` model:
 
-```js
+```javascript
 module.exports = {
  getAll,
  getOne,

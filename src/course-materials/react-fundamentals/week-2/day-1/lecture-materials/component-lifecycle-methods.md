@@ -178,7 +178,7 @@ Overriding a lifecycle method is done the same way we override any method inheri
 
 Let's override the `componentDidMount` method in **App.js**:
 
-```js
+```javascript
 class App extends Component {
   constructor() {
     super();
@@ -312,7 +312,7 @@ Let's get coding...
 
 Let's add `elapsedTime` to `<App>`'s state by including it within the `getInitialState`:
 
-```js
+```javascript
  // App.jsx
 
 getInitialState() {
@@ -337,7 +337,7 @@ getInitialState() {
 
 Time to override the `componentDidMount` lifecycle method in **GameTimer.jsx**:
 
-```js
+```javascript
 /*--- Lifecycle Methods ---*/
 
 componentDidMount() {
@@ -356,7 +356,7 @@ We are creating a `timerId` property on the component to save the timer id retur
 
 With the timer's id stored, we can use it to clear the timer when the component is going to be destroyed by overriding the `componentWillUnmount` lifecycle method:
 
-```js
+```javascript
 componentWillUnmount() {
   clearInterval(this.timerId);
 }
@@ -364,7 +364,7 @@ componentWillUnmount() {
 
 Now create the `handleTick` method and add some some code to let `<App>` know to increment `elapsedTime`:
 
-```js
+```javascript
 handleTick = () => {
   this.props.handleTimerUpdate();
 };
@@ -381,7 +381,7 @@ handleTick = () => {
 
 We have to write that `handleTimerUpdate` callback method in **App.js**:
 
-```js
+```javascript
 handleTimerUpdate = () => {
   this.setState((state) => ({elapsedTime: ++state.elapsedTime}));
 }
@@ -398,7 +398,7 @@ handleTimerUpdate = () => {
 
 Finally, let's confirm that `elapsedTime` is being incremented by rendering it's value instead of the text of "GameTimer":
 
-```js
+```javascript
   render() {
     return (
       <div>
@@ -422,7 +422,7 @@ First, let's convert the number of seconds into a `mins:seconds` format by writi
 
 Since `formatTime` is a general purpose function that we might reuse, let's define it outside of the class component:
 
-```js
+```javascript
 function formatTime(seconds) {
   let mins = Math.floor(seconds / 60).toString().padStart(2, '0');
   let secs = (seconds % 60).toString().padStart(2, '0');
@@ -437,7 +437,7 @@ class GameTimer extends Component {
 
 Now we can invoke `formatTime` right in the render method:
 
-```js
+```javascript
 render() {
   return (
     <div>

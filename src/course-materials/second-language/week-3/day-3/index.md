@@ -4,10 +4,10 @@ title: "Day 3"
 week: 3
 day: 3
 type: "homepage"
-topics: "Project Week"
+topics: "Project 4"
 ---
 
 
 # Week 3 - Day 3
 
-#### Project Week
+#### Project 4

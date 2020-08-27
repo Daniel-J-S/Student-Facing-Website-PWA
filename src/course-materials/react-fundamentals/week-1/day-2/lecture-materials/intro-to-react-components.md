@@ -214,9 +214,14 @@ Let's check out what we're going to build [here](https://seir-mastermind.herokua
 
 The **best** way to create a React project is by using the `create-react-app` tool.
 
-```
+
+
+```shell
 $ npx create-react-app react-mastermind
 ```
+
+
+
 
 Creating a new React app takes some time because `create-react-app` also installs the Node modules - and there's a ton of them!
 
@@ -242,7 +247,7 @@ However, 99% of the React code out there uses Class Components to manage state a
 
 Let's modify **App.js** line-by-line, converting it to a class component and so that just a `<header>` is rendered:
 
-```js
+```javascript
 import React, { Component } from 'react';
 import './App.css';
 
@@ -377,7 +382,7 @@ Since most of the components you write will be presentational, Function Componen
 
 Function Components take props as an argument and return the JSX (UI) you want to render, for example:
 
-```js
+```javascript
 // A function component using an ES2015 (ES6) arrow function:
 const ConcertCard = (props) => {
   return (
@@ -395,7 +400,7 @@ const ConcertCard = (props) => {
 
 Function Components are functionally equivalent to Class Components when the class only defines a `render` method.  For example, the equivalent Class Component for the above `<ConcertCard>` component would be:
 
-```js
+```javascript
 class ConcertCard extends React.Component {
   render() {
     return (
@@ -425,7 +430,7 @@ The `<GameBoard />` component based on our wireframe is a great place to start -
 3. Create a **GameBoard.jsx** (GameBoard.js also works) module within the **GameBoard** folder.  Note that the name of the module file is always the same as the component, including the UpperCamelCasing.
 4. Add the following code to **GameBoard.jsx**:
 
-	```js
+	```javascript
 	// When using JSX, React must be in scope
 	import React from 'react';
 	
@@ -440,7 +445,7 @@ The `<GameBoard />` component based on our wireframe is a great place to start -
 	
 5. Update **App.js** to:
 
-	```js
+	```javascript
 	import React, { Component } from 'react';
 	import './App.css';
 	// Must import components used in the JSX
@@ -474,7 +479,7 @@ Let's define a "temporary" CSS class named `component` in **index.css** that wil
 
 Next, add the **component** CSS class to the `<div>` in the `<GameBoard>` component like this:
 
-```js
+```javascript
 const GameBoard = (props) => (
   <div className='component'>
   ...

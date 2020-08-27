@@ -532,7 +532,7 @@ Let's take a look at the first example in the [docs](https://reacttraining.com/r
 
 Let's import it in **App.js**:
 
-```js
+```javascript
 import { Route, Switch } from 'react-router-dom';
 ```
 
@@ -605,13 +605,13 @@ Since the lab is about implementing a Settings Page feature, let's add a `<Link>
 
 First we need to import it:
 
-```js
+```javascript
 import { Link } from 'react-router-dom';
 ```
 
 Now let's add the `<Link>` between the `<GameTimer>` and `<NewGameButton>`:
 
-```js
+```javascript
 <GameTimer />
 <Link className='btn btn-default' to='/settings'>Difficulty</Link>
 <NewGameButton />
@@ -680,7 +680,7 @@ Surely you remember routes we defined in Express that included URL parameters si
 
 In Express:
 
-```js
+```javascript
 router.get('/movies/:id', moviesCtrl.show);
 ```
 
@@ -694,7 +694,7 @@ We typically used such routes to view the show/details page for a single row/doc
 
 When you have similar functionality in a React app, we can define routes with named URL parameters like this:
 
-```js
+```javascript
 <Route path="/movies/:id" render={props => <Movie {...props}/>} />
 ```
 
@@ -712,13 +712,13 @@ The `match` prop passed by the `<Route>` component has a `params` property that'
 
 For example, assuming the following route (same as defined above):
 
-```js
+```javascript
 <Route path="/movies/:id" render={props => <Movie {...props}/>} />
 ```
 
 Browsing to `localhost:3000/movies/123`, would result in the following `<Movie>` component:
 
-```js
+```javascript
 const Movie = ({match}) => (
   <h1>Movie id is: {match.params.id}</h1>
 );
@@ -749,7 +749,7 @@ That's not going to happen in a SPA. Instead, you've got to change the route pro
 
 Assuming `history` has been passed as a prop to a Class Component, you would move to the root route like this:
 
-```js
+```javascript
 // Change to the root route programmatically
 this.props.history.push('/');
 ```

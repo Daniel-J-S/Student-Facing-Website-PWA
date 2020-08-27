@@ -285,7 +285,7 @@ npm i dotenv
 
 - Next, we'll add the config code for `dotenv` inside of `server.js`
 
-```js
+```javascript
 const express = require('express');
 const morgan = require('morgan');
 const port = 3000;
@@ -648,7 +648,7 @@ $ npm install express-session
 - Next, require it below the `morgan`:
 
 
-	```js
+	```javascript
 	const morgan = require('morgan');
 	// new code below
 	const session = require('express-session');
@@ -663,7 +663,7 @@ $ npm install express-session
 
 - Now, we can configure and mount the session middleware below our `body-parsing` middleware:
 
-	```js
+	```javascript
 	app.use(express.urlencoded({ extended: true }));
 	// new code below
 	app.use(session({
@@ -725,7 +725,7 @@ $ npm install passport
 
 - Require it below `express-session`:
 
-	```js
+	```javascript
 	const session = require('express-session');
 	// new code below
 	const passport = require('passport');
@@ -743,7 +743,7 @@ $ npm install passport
 
 - With Passport required, we need to mount it. Be sure to mount it **after** the session middleware and always **before** any of your routes are mounted that would need access to the current user:
 
-	```js
+	```javascript
 	// app.use(session({... code above
 	app.use(passport.initialize());
 	app.use(passport.session());
@@ -788,7 +788,7 @@ $ touch config/passport.js
 
 - Requiring below our database is as good of a place as any in **server.js**:
 
-	```js
+	```javascript
 	require('./config/database');
 	// new code below
 	require('./config/passport');
@@ -806,7 +806,7 @@ $ touch config/passport.js
 
 - In the **config/passport.js** module we will certainly need access to the `passport` module:
 
-	```js
+	```javascript
 	const passport = require('passport');
 	```
 
@@ -846,7 +846,7 @@ $ npm install passport-google-oauth
 
 - Now let's require the `passport-google-oauth` module below that of `passport` in **config/passport.js**:
 
-```js
+```javascript
 const passport = require('passport');
 // new code below
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
@@ -884,7 +884,7 @@ const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
 - Now it's time to call the `passport.use` method to plug-in an instance of the OAuth strategy and provide a _verify_ callback function that will be called whenever a user logs in with OAuth. In **passport.js**:
 
-```js
+```javascript
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 // new code below
 passport.use(new GoogleStrategy({
@@ -925,7 +925,7 @@ passport.use(new GoogleStrategy({
 
 - Looking at the callback's signature:
 
-	```js
+	```javascript
 	function(accessToken, refreshToken, profile, cb) {
 	```
 	
@@ -944,7 +944,7 @@ passport.use(new GoogleStrategy({
 
 - Let's add a property for `googleId` to our `studentSchema` inside `models/student.js` file:
 
-	```js
+	```javascript
 	const studentSchema = new mongoose.Schema({
 	  name: String,
 	  email: String,
@@ -972,7 +972,7 @@ passport.use(new GoogleStrategy({
 
 - We're going to need access to our `Student` model:
 
-	```js
+	```javascript
 	const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 	// new code below
 	const Student = require('../models/student');
@@ -984,7 +984,7 @@ passport.use(new GoogleStrategy({
 
 
 
-```js
+```javascript
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_SECRET,
@@ -1031,7 +1031,7 @@ passport.use(new GoogleStrategy({
 
 - First up is the `passport.serializeUser` method that's used to give Passport the nugget of data to put into the _session_ for this authenticated user. Put this below the `passport.use` method:
 
-	```js
+	```javascript
 	passport.serializeUser(function(student, done) {
 	    done(null, student.id);
 	});
@@ -1052,7 +1052,7 @@ passport.use(new GoogleStrategy({
 
 - The `passport.deserializeUser` method is used to provide Passport with the user from the db we want assigned to the `req.user` object. Put it below the `passport.serializeUser` method:
 
-	```js
+	```javascript
 	passport.deserializeUser(function(id, done) {
 	  Student.findById(id, function(err, student) {
 	    done(err, student);
@@ -1096,7 +1096,7 @@ passport.use(new GoogleStrategy({
 
 - These new routes will need to access the `passport` module, so let's require it in **routes/index.js**:
 
-	```js
+	```javascript
 	const router = require('express').Router();
 	// new code below
 	const passport = require('passport');
@@ -1113,7 +1113,7 @@ passport.use(new GoogleStrategy({
 
 - In **routes/index.js**, let's add our login route below our root route:
 
-	```js
+	```javascript
 	// Google OAuth login route
 	router.get('/auth/google', passport.authenticate(
 	  'google',
@@ -1143,7 +1143,7 @@ passport.use(new GoogleStrategy({
 
 - Below our login route we just added, let's add the callback route that Google will call after the user confirms:
 
-	```js
+	```javascript
 	// Google OAuth callback route
 	router.get('/oauth2callback', passport.authenticate(
 	  'google',
@@ -1169,7 +1169,7 @@ passport.use(new GoogleStrategy({
 
 - The last route to add is the route that will logout our user:
 
-	```js
+	```javascript
 	// OAuth logout route
 	router.get('/logout', function(req, res){
 	  req.logout();
@@ -1210,7 +1210,7 @@ passport.use(new GoogleStrategy({
 
 - Let's update the `router` in **controllers/students.js** and also pass in `req.user` :
 
-```js
+```javascript
 function index(req, res) {
   Student.find({}, function(err, students)
    res.render('students/index', {
@@ -1336,7 +1336,7 @@ function index(req, res) {
 
 - Lastly, let's code the `addFact` action in the **controllers/students.js** controller:
 
-	```js
+	```javascript
 	function addFact(req, res, next) {
 	  req.user.facts.push(req.body);
 	  req.user.save(function(err) {
@@ -1395,7 +1395,7 @@ function index(req, res) {
 
 - We can actually **insert** additional middleware functions before a route's final middleware function!  Let's modify **routes/students.js** to see this in action:
 
-```js
+```javascript
   router.get('/students', studentsCtrl.index);
 
   router.post('/facts', isLoggedIn, studentsCtrl.addFact);
@@ -1421,7 +1421,7 @@ function index(req, res) {
 
 - Let's put our new middleware at the very bottom of **routes/students.js** - just above the `module.exports`:
 
-	```js
+	```javascript
 	// Insert this middleware for routes that require a logged in user
 	function isLoggedIn(req, res, next) {
 	  if (req.isAuthenticated()) return next();

@@ -74,7 +74,7 @@ type: "lecture"
    
 3. Open the folder in `VS Code`
 
-```
+```shell
 node-practice/
      script.js
 ```        
@@ -230,7 +230,7 @@ node-practice/
 
 - Let's type the following JavaScript in **script.js**:
 
-	```js
+	```javascript
 	const multiply = (a, b) => a * b;
 		
 	let n = multiply(5, 8);
@@ -270,7 +270,7 @@ node-practice/
 
 - Let's use the core `fs` module to create a file. Replace the code in **script.js** with this:
 
-	```js
+	```javascript
 	const fs = require('fs');
 	console.log(typeof fs);
 	
@@ -304,7 +304,7 @@ node-practice/
 
 - Let's see what the `module` object it looks like:
 
-	```js
+	```javascript
 	// days-of-week.js
 	
 	console.log(module);
@@ -324,7 +324,7 @@ node-practice/
 
 - Let's verify this by assigning a string to it:
 
-	```js
+	```javascript
 	// days-of-week.js
 	
 	module.exports = 'SEI';
@@ -335,7 +335,7 @@ node-practice/
 
 - Replace the code in **script.js** with this:
 
-	```js
+	```javascript
 	// script.js
 	
 	let daysOfWeek = require('./days-of-week');
@@ -358,7 +358,7 @@ node-practice/
 
 - **You Do:** Instead of exporting a string, change **days-of-week.js** to export the following array instead:
 
-	```js
+	```javascript
 	['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']
 	```
 
@@ -385,7 +385,7 @@ node-practice/
 
 - Let's try it out:
 
-	```js	
+	```javascript	
 	module.exports.weekdays = 
 		['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
 	
@@ -398,7 +398,7 @@ node-practice/
 
 - Now let's test it in **script.js**:
 
-	```js
+	```javascript
 	let daysOfWeek = require('./days-of-week');
 	
 	let day = daysOfWeek.getWeekday(5);
@@ -480,7 +480,7 @@ node-practice/
 
 - We can now require the `request` module in **script.js** and make HTTP requests:
 
-	```js
+	```javascript
 	// Don't specify path when module is in node_modules
 	const request = require('request');
 	request(
@@ -501,7 +501,7 @@ node-practice/
 
 - Examining the `packages.json` file reveals that it's structured something like this:
 
-	```js
+	```javascript
 	{
 	  "name": "first-node",
 	  "version": "1.0.0",
@@ -569,7 +569,7 @@ node-practice/
 <p style="text-align:left">A module named "random" that has a function <strong>assigned</strong> to the <em>module.exports</em> and returns a random number, as an integer, between two numbers provided, inclusive, as arguments; so that we could use it in our program like this:</p>
 
 
-```js
+```javascript
   const random = require('./utilities/random');
   for (let i = 0; i < 10; i++) {
   	console.log( random(100, 200) );
@@ -590,7 +590,7 @@ node-practice/
 - `circumference`: Computes the circumference of a circle (radius X 2 X Pi), with the radius provided as an argument. 
 - Hint: This is JS, so `Math.PI` is available.
 
-```js
+```javascript
   const circle = require('./utilities/circle');
   console.log( circle.area(50) );  // 7853.98...
   console.log( circle.circumference(75) );  // 471.23...

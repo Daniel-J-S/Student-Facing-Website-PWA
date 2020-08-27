@@ -280,7 +280,7 @@ const reviewsRouter = require('./routes/reviews');
 ```
 and mount it like this:
 
-```js
+```javascript
 app.use('/movies', moviesRouter);
 // mount the reviews router
 app.use('/', reviewsRouter);

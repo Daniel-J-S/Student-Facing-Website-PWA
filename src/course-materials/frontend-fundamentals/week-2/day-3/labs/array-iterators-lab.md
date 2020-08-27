@@ -40,7 +40,7 @@ The following exercises provide practice using some of them.
 
 ## Exercises
 
-```js
+```javascript
 // Some data we can work with
 const inventors = [
   { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },

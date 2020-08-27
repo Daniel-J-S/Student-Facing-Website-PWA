@@ -131,7 +131,7 @@ In MongoDB, we save and retrieve _documents_ to and from a _collection_.
 
 Lets take a look of what a MongoDB _document_ might look like:
 
-```js
+```javascript
 {
     _id: ObjectId("5099803df3f4948bd2f98391"),
     name: { first: "Alan", last: "Turing" },
@@ -220,7 +220,7 @@ Show the collections of the current database `> show collections`
 
 To create a new database in the Mongo Shell, we simply have to `use` the database.  Lets create a database named _myDB_:
 
-```
+```shell
 > use myDB
 ```
 
@@ -236,7 +236,7 @@ To create a new database in the Mongo Shell, we simply have to `use` the databas
 
 This is how we can create and insert a document into a collection named _people_:
 
-```
+```shell
 > db.people.insert({
 ... name: "Fred",	// Don't type the dots, they are from the 
 ... age: 21			// shell, indicating multi-line input mode
@@ -249,7 +249,7 @@ __YOU DO: Let's add another person to the _people_ collection. But this time, ad
 
 To list all documents in a collection, we can use the _find_ method on the collection without any arguments:
 
-```
+```shell
 > db.people.find({})
 ```
 
@@ -342,7 +342,7 @@ Here's what an embedding looks like:
 
 A document in the `people` collection:
 
-```js
+```javascript
 // assume a document from a people collection
 {
   _id: ObjectId("5099803df3f4948bd2e983a4"),
@@ -376,7 +376,7 @@ FYI, when we use Mongoose, even those subdocuments will automatically have their
 
 Here's how the above `person --< contact` model would be implemented via **referencing**:
 
-```js
+```javascript
 // assume a document from a people collection
 {
   _id: ObjectId("5099803df3f4948bd2e983a4"),
@@ -390,7 +390,7 @@ Here's how the above `person --< contact` model would be implemented via **refer
 
 Two referenced documents in the `contacts` collection:
 
-```js
+```javascript
 {
   _id: ObjectId("5099803df3f4948bd2f98391"),
   type: "mobile",
@@ -400,7 +400,7 @@ Two referenced documents in the `contacts` collection:
 
 and
 
-```js
+```javascript
 {
   _id: ObjectId("5099803df3f4948bd1f97203"),
   type: "email",

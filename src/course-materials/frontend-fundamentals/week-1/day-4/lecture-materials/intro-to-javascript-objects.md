@@ -141,7 +141,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS` `REPL` from
 
 - Now let's create an object by using **Object Literal notation**, also known as an [Object Initializer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer):
 	
-	```js
+	```javascript
 	const game = {};
 	console.log(typeof game); // "object"
 	```
@@ -161,7 +161,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS` `REPL` from
 
 - Let's change the code so that `game` has a _property_:
 
-	```js
+	```javascript
 	const game = {title: 'Guess the Number!'};
 	console.log(game);
 	```
@@ -172,7 +172,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS` `REPL` from
 
 - Properties are separated by commas:
 
-	```js
+	```javascript
 	const game = {
 	  title: 'Guess the Number!',
 	  biggestNum: 100
@@ -181,7 +181,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS` `REPL` from
 
 - Syntactically, [trailing commas](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas) are permitted (in arrays too):
 
-	```js
+	```javascript
 	const game = {
 	  title: 'Guess the Number!',
 	  biggestNum: 100,
@@ -199,7 +199,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS` `REPL` from
 
 - Considering:
 
-	```js
+	```javascript
 	const game = {
 	  title: 'Guess the Number!',
 	  biggestNum: 100,
@@ -226,7 +226,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS` `REPL` from
 
 - We'll discuss why there are two syntaxes in a bit, for now, let's use _dot notation_ to add another property to the `game` object:
 	
-```js
+```javascript
 game.smallestNum = 0;
 ```
 
@@ -272,13 +272,13 @@ game.smallestNum = 0;
 
 - _Square bracket notation_ has the following syntax:
 
-	```js
+	```javascript
 	someObject[<any JS expression>]
 	```
 
 - For example to access the `game` object's `title` property, we could write this code:
 
-```js
+```javascript
 console.log(game['title']);
 ```
 
@@ -288,7 +288,7 @@ console.log(game['title']);
 
 - If the result of the expression between the brackets is not a string, JS will convert it to one. For example:
 
-```js
+```javascript
 const weirdObj = {};
 weirdObj[null] = true;
 console.log(weirdObj) // {'null': true}
@@ -316,7 +316,7 @@ console.log(weirdObj) // {'null': true}
    
 - Now let's code a price lookup loop:
 
-	```js
+	```javascript
 	let sku = '';
 	while (sku !== 'quit') {
 	  sku = prompt('Enter SKU or "quit" to exit: ');
@@ -345,7 +345,7 @@ console.log(weirdObj) // {'null': true}
 
 - Let's tweak the code to use the `in` operator to check if the user has entered a valid key (SKU):
 
-	```js
+	```javascript
 	let sku = '';
 	while (sku !== 'quit') {
 	  sku = prompt('Enter SKU or "quit" to exit: ');
@@ -370,7 +370,7 @@ console.log(weirdObj) // {'null': true}
 
 - To completely remove a property from an object, we use the `delete` operator:
 
-	```js
+	```javascript
 	const geniuses = {
 		Jemison: true,
 		Hopper: true,
@@ -400,7 +400,7 @@ console.log(weirdObj) // {'null': true}
 
 - We can iterate over the _keys_ of the properties using a `for...in` loop:
 
-	```js
+	```javascript
 	for (let key in game) {
 	  console.log(`The value of the ${key} property is ${game[key]}`);
 	}
@@ -417,7 +417,7 @@ console.log(weirdObj) // {'null': true}
 
 - Each of those methods mentioned returns an array that we can iterate over, for example:
 
-	```js
+	```javascript
 	Object.values(game).forEach(function(val) {
 		console.log(val);
 	});
@@ -437,7 +437,7 @@ console.log(weirdObj) // {'null': true}
 
 - It's a common scenario to want to pass the values of variables as properties (having the same name as the variable) in an object:
 
-	```js
+	```javascript
 
 	const latitude = getLat('Disneyland');
 	const longitude = getLng('Disneyland');
@@ -454,7 +454,7 @@ console.log(weirdObj) // {'null': true}
 
 - Thanks to ES2015's **Property Shorthand** syntax, we can now do this
 
-	```js
+	```javascript
 
 	const latitude = getLat('Disneyland');
 	const longitude = getLng('Disneyland');
@@ -480,7 +480,7 @@ console.log(weirdObj) // {'null': true}
 
 - Let's add a `play` _method_ to the `game` object:
 
-	```js
+	```javascript
 	game.play = function() {
 	  this.secretNum = Math.floor(Math.random() * 
 	    (this.biggestNum - this.smallestNum + 1)) + this.smallestNum;
@@ -538,7 +538,7 @@ console.log(weirdObj) // {'null': true}
 
 <p>Now this all makes sense:</p>
 
-```js
+```javascript
 const arr1 = [];
 const arr2 = [];
 const arr3 = arr1;
@@ -565,7 +565,7 @@ arr3 === arr1 // true!
 
 
 
-```js
+```javascript
 const name = prompt('Enter your name: ');
 const age = prompt('Enter your age: ');
 const person = {name, age};

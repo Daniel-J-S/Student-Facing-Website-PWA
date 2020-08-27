@@ -188,7 +188,7 @@ We invoke `useState()` and provide the initial value for the piece of state as a
 
 We know we will want to track the battery's `level`, so let's start with that:
 
-```js
+```javascript
 // Update the import to include the useState hook
 import React, {useState} from "react";
 // Import the Battery component used for visualization
@@ -215,7 +215,7 @@ Nice...
 
 Now let's add a `<button>` to test out the setter function (don't forget to add the React Fragment):
 
-```js
+```javascript
   ...
   return (
     <>
@@ -241,7 +241,7 @@ It's cleaner and more common to destructure the array returned by `useState()`.
 
 Using destructuring assignment, refactor the following three lines of code:
 
-```js
+```javascript
   const arr = useState(.55);
   const level = arr[0];
   const setLevel = arr[1];
@@ -251,7 +251,7 @@ Into a single line of code.
 
 Also, let's comment out the `<button>` by surrounding it with `{/*  */}` as follows:
 
-```js
+```javascript
 {/* <button onClick={() => setLevel(level + .01)}>Update Level</button> */}
 ```
 
@@ -265,7 +265,7 @@ Also, let's comment out the `<button>` by surrounding it with `{/*  */}` as foll
 
 For example, we _could_ add another `useState()` call to create the `charging` state like this (don't type the following):
 
-```js
+```javascript
   const [level, setLevel] = useState(.55);
   // Add additional state by calling useState multiple times 
   const [charging, setCharging] = useState(false);
@@ -277,7 +277,7 @@ Looking at `<BatteryContainer>`, we see that both `level` and `charging` are bei
 
 Since it would make sense to be able to call a single setter function instead of making two calls when updating the status of the battery, it makes sense to group `level` and `charging` together as follows:
 
-```js
+```javascript
 function BatteryHookContainer() {
   // Initialize batteryData to an object with level & charging properties
   const [batteryData, setBatteryData] = useState({
@@ -316,7 +316,7 @@ Side effects include performing tasks such as:
 
 Like `useState()` and other hooks, because they are functions, we just invoke them from the top-level of the function component:
 
-```js
+```javascript
 // Update the import to include useEffect
 import React, {useState, useEffect} from "react";
 
@@ -342,7 +342,7 @@ function BatteryHookContainer() {
 
 Let's observe this by uncommenting the button and modifying it to call the `setBatteryData()` setter function:
 
-```js
+```javascript
   return (
     <>
       <Battery level={batteryData.level} charging={batteryData.charging}/>
@@ -372,7 +372,7 @@ The array is designed to hold a list of dependencies, that is, a list of variabl
 
 Providing an empty array (`[]`), will result in the side effect only running after the **initial** render.  Let's check this out:
 
-```js
+```javascript
   // Add the [] as a 2nd argument
   useEffect(() => {
     console.log('useEffect was called');
@@ -391,7 +391,7 @@ The time has come to register with the `battery.js` module in `<BatteryHookConta
 
 First let's import `battery.js` in the same way `<BatteryContainer>` is doing:
 
-```js
+```javascript
 import React, {useState, useEffect} from "react";
 import Battery from "../Battery/Battery";
 // Add the import below
@@ -402,7 +402,7 @@ As you can see, there's `register` and `unregister` named exports which are func
 
 We already have a `useEffect()` hook written that runs only once - just what we need to register for battery notifications:
 
-```js
+```javascript
   useEffect(() => {
     register(updateBattery);
     console.log('useEffect was called');
@@ -411,7 +411,7 @@ We already have a `useEffect()` hook written that runs only once - just what we 
 
 The `register` function accepts a callback function that the **battery.js** module will call whenever the battery's status changes; and when it does, it will pass as an arg to the callback a data object with this shape:
 
-```js
+```javascript
 {
   level: battery.level,
   charging: battery.charging
@@ -460,7 +460,7 @@ In a class component, we use the `componentWillUnmount()` lifecycle method to cl
 
 However, a `useEffect()` hook can also run a cleanup process by returning a "cleanup" function from the hook's function:
 
-```js
+```javascript
   useEffect(() => {
     register(updateBattery);
     // Return a "cleanup" function

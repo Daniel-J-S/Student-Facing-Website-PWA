@@ -329,7 +329,7 @@ Let's create and import a CSS stylesheet for `<GuessPegs>` so that we can style 
 
 2. `import` it in **GuessPegs.jsx** as follows:
 
-	```js
+	```javascript
 	import React from 'react';
 	import GuessPeg from '../GuessPeg/GuessPeg';
 	import './GuessPegs.css';
@@ -443,7 +443,7 @@ To check out CSS Modules, let's use one to style `<ScoreButton>`:
 
 - Now let's update **ScoreButton.jsx** to use the CSS Module and while we're at it, render a checkmark:
 
-	```js
+	```javascript
 	import React from 'react';
 	import styles from './ScoreButton.module.css';
 	
@@ -457,7 +457,7 @@ To check out CSS Modules, let's use one to style `<ScoreButton>`:
 	
 Note that the class names become keys on the `styles` object - let's console.log it to check it out:
 
-```js
+```javascript
 import styles from './ScoreButton.module.css';
 	
 // What is styles?
@@ -495,7 +495,7 @@ That looks better!
 
 **❓ What's wrong with the following code:**
 
-```js
+```javascript
 import styles from './SmallComponent.module.css';
 
 function SmallComponent(props) {
@@ -527,7 +527,7 @@ Inline styling in React uses the `style` prop, however, unlike the `style` attri
 
 Let's apply some inline styling to the `<GuessScore>` component. Here's the component's code as it stands thus far:
 
-```js
+```javascript
 const GuessScore = (props) => {
   const scores = ('P'.repeat(score.perfect) + 'A'.repeat(score.almost) +
     'I'.repeat(4 - score.perfect - score.almost)).split('');
@@ -547,7 +547,7 @@ Reviewing the above code reveals that we are building a `scores` array of 4 char
 
 Inline styling requires a JS object, so let's create a JS object for the base (common) styles of the score `<div>`s:
 
-```js
+```javascript
 const scores = ('P'.repeat(score.perfect) + 'A'.repeat(score.almost) + 
   'I'.repeat(4 - score.perfect - score.almost)).split('');
 // existing code above
@@ -575,7 +575,7 @@ As you can see, the JS objects we use for inline styling are just regular JS obj
 
 Now let's apply the styling by assigning the `baseStyle` object to the `style` prop within a JS expression (within curly braces):
 
-```js
+```javascript
 <div className='GuessScore'>
   {scores.map((score, idx) =>
     <div key={idx} style={baseStyle} />
@@ -593,7 +593,7 @@ Now we want to apply dynamically one of three additional style objects depending
 
 An elegant styling solution is to define a style object for each score character within another object, using the score character as keys like this:
 
-```js
+```javascript
 // Add below the baseStyle object
 const pegStyles = {
   'P': {

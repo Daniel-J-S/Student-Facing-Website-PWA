@@ -236,7 +236,7 @@ Let's write our server:
 
 3. At the top of **server.js**, let's do all the familiar stuff: `require` the modules; create the Express app; and mount the `morgan` logging and body parsing middleware:
 
-	```js
+	```javascript
 	const express = require('express');
 	const path = require('path');
 	const favicon = require('serve-favicon');
@@ -250,7 +250,7 @@ Let's write our server:
 
 4. Mount and configure the `serve-favicon` & `static` middleware so that they serve from the **build** (production-ready) folder:
 
-	```js
+	```javascript
 	app.use(express.json());
 	
 	// Configure both serve-favicon & static middlewares
@@ -261,7 +261,7 @@ Let's write our server:
 
 5. A single "catch all" route is required for client-side routing to work properly:
 
-	```js
+	```javascript
 	// Put API routes here, before the "catch all" route
 	
 	// The following "catch all" route (note the *)is necessary
@@ -288,7 +288,7 @@ Let's write our server:
 
 6. Set the port for development to use 3001 so that React's dev server can continue to use 3000 and finally, tell the Express app to listen for incoming requests:
 
-	```js
+	```javascript
 	// Configure to use port 3001 instead of 3000 during
 	// development to avoid collision with React's dev server
 	const port = process.env.PORT || 3001;
@@ -398,7 +398,7 @@ Luckily, the React team has created an easy fix for this dilemma. The React deve
 
 The fix is to add a `"proxy"` key anywhere in the top-level object of  **package.json**:
 
-```js
+```javascript
 ...
   },
   "browserslist": [

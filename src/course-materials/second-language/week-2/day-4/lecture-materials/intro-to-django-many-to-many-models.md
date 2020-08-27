@@ -1,8 +1,8 @@
 ---
 track: "Second Language"
 title: "Intro to Django Many-to-Many Models"
-week: 22
-day: 2
+week: 2
+day: 4
 type: "lab"
 ---
 
@@ -41,15 +41,22 @@ This way, we can focus on how to implement the actual `Cat >--< Toy` relationshi
 
 Because a new `Toy` model has been added, there are migration files in the starter code that have not yet been migrated to the database on your computer. Let's do that now:
 
-```
+
+
+```shell
 $ python3 manage.py migrate
 ```
 
+
+
 Now start up the server:
 
-```
+
+```shell
 $ python3 manage.py runserver
 ```
+
+
 
 ## 2. Review the Starter Code
 
@@ -112,19 +119,21 @@ Because we've made a change to a Model that impacts the database's schema, we mu
 
 First, make the migration:
 
-```
+```shell
 $ python3 manage.py makemigrations
 ```
 
+
+
 Here's how we can check the status of migrations:
 
-```
+```shell
 python3 manage.py showmigrations
 ```
 
 Now, let's migrate the created migration to update the schema:
 
-```
+```shell
 python3 manage.py migrate
 ```
 
@@ -134,13 +143,15 @@ We're ready to test drive the new relationship!
 
 We'll use the shell to check out the `Cat >--< Toy` relationship:
 
-```
+
+```shell
 $ python3 manage.py shell
 ```
 
 Now let's import everything from **models.py**:
 
-```
+
+```shell
 $ from main_app.models import *
 ```
 
@@ -416,9 +427,14 @@ Although Django automatically creates a "hidden" join table to implement a many-
 
 As an example, a `Ticket` Model provides the role of a join table between a `Concert` and a `Customer`:
 
-```
+
+
+```shell
 Concert --< Ticket >-- Customer
 ```
+
+
+
 
 In essence, a _Concert has many Customers through Tickets_
 

@@ -97,7 +97,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - To test what is truthy and what is falsey, let's type the following code into `script.js` inside our `repl.it`:
 
-	```js
+	```javascript
 	if (true) {
 	  console.log('truthy!');
 	} else {
@@ -142,7 +142,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - For example, test the following expressions:
 
-	```js
+	```javascript
 	!false === true // true
 	!null === true // true
 	!3 === false // true
@@ -151,7 +151,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - A double `!` operator is a great way to force an expression into its actual boolean value of `true` or `false`:
 
-	```js
+	```javascript
 	console.log(!!3); // outputs true
 	```
 
@@ -174,7 +174,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - The logical `||` (OR) operator always returns the first operand if it is truthy, otherwise the second operand is returned:
 
-	```js
+	```javascript
 	'hello' || 'goodbye'  // evaluates to 'hello'
 	0 || null  // evaluates to null
 	```
@@ -182,7 +182,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - The logical `&&` (AND) operator always returns the first operand if it is falsey, otherwise the second operand is returned:
 
-	```js
+	```javascript
 	'hello' && 'goodbye'  // evaluates to 'goodbye'
 	0 && null  // evaluates to 0
 	```
@@ -195,7 +195,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - The `if`, `for` and `while` statements all require a _conditional expression_. For example:
 
-	```js
+	```javascript
 	let x = 1;
 	while (x <= 10) {
 	  var msg = 'Item ' + x;
@@ -236,7 +236,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - Single path `if`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-	```js
+	```javascript
 	if (val === 1) {
 	  console.log('This code will run only if val equals 1');
 	}
@@ -246,7 +246,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - If you have only a single statement that needs to execute, you can write that statement without using curly braces (used to define a block statement):
 
-	```js
+	```javascript
 	if (val === 1) console.log('This code will run only if val equals 1');
 	```
 	This code is the same as the example above.
@@ -259,7 +259,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - Dual paths `if` with `else`:
 
-	```js
+	```javascript
 	if (val === 1) {
 	  console.log('val is one');
 	} else {
@@ -274,7 +274,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - If you have three or more code paths use `if` with as many `else if` statements as necessary and optionally a final `else`:
 
-	```js
+	```javascript
 	if (val === 1) {
 	  console.log('val is one');
 	} else if (val === 2) {
@@ -332,7 +332,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - The first looping statement we'll look at is `while`:
 
-	```js
+	```javascript
 	let word = '';
 	let words = [];
 	while (word !== 'end') {
@@ -354,7 +354,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - You may choose to use the `do...while` statement instead of `while` to force the code block to always execute at least once
 
-	```js
+	```javascript
 	let num = 0;
 	do {
 	  console.log(num);
@@ -374,7 +374,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - The next looping statement we'll look at is the `for` statement:
 
-	```js
+	```javascript
 	let colors = ['red', 'white', 'blue'];
 	for (let idx = 0; idx < colors.length; idx++) {
 	  console.log(colors[idx]);
@@ -393,7 +393,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - Use the `break` statement within any `while` or `for` loop to immediately exit the loop:
 
-	```js
+	```javascript
 	let word = '';
 	let words = [];
 	while (true) {
@@ -444,7 +444,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - The following JavaScript code will accept string input from the user and store the string in a variable named `choice`:
 
-	```js
+	```javascript
 	let choice = prompt('Enter a, b or c');
 	```
 
@@ -479,13 +479,13 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - The _ternary_ operator is ideal when you need to return one of two values depending upon a condition:
 
-	```js
+	```javascript
 	let message = score > 100 ? "You rock!" : "Keep trying!";
 	```
 	
 	The above one line of code replaces this code:
 	
-	```js
+	```javascript
 	let message;
 	if (score > 100) {
 	  message = "You rock!";
@@ -496,7 +496,7 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 - It can also be used to evaluate one of two expressions, so you can actually run a method if you'd like:
 
-	```js
+	```javascript
 	score > 100 ? gameWinner() : gameLoop();
 	```
 

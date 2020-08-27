@@ -2,7 +2,7 @@
 track: "Second Language"
 title: "Python Functions Lab"
 week: 1
-day: 3
+day: 4
 type: "lab"
 ---
 

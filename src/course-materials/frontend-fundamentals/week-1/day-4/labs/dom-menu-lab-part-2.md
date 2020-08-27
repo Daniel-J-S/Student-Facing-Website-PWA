@@ -147,7 +147,7 @@ Set the CSS `top` property of `subMenuEl` to the value of `0`.
 
 Update the `menuLinks` array in **script.js** to this:
 
-```js
+```javascript
 var menuLinks = [
   {text: 'about', href: '/about'},
   {text: 'catalog', href: '#', subLinks: [
