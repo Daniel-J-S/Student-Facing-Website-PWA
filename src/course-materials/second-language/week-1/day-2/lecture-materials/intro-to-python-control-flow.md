@@ -198,6 +198,10 @@ If the first operand is truthy, return it, otherwise return the second operand.
 
 If the first operand is falsey, return it, otherwise return the second operand.
 
+<br>
+<br>
+<br>
+
 #### Examples
 
 ```python
@@ -312,7 +316,7 @@ Also note that `else` is always optional.
 
 
 
-### 💪 Branching Exercise (7 minutes)
+### 💪 Exercise - Branching (7 minutes)
 
 In the **exercise.py** file, you will find the following code that accepts text input from the user:
 
@@ -416,7 +420,7 @@ Just like in JavaScript, the `break` statement in Python can be used to immediat
 
 
 
-### 💪 Looping Exercise (7 minutes)
+### 💪 Exercise - Looping (7 minutes)
 
 Wrap the code in **exercise.py** in a `while` loop such that it continues to prompt for a color until the word `quit` is entered.
 
