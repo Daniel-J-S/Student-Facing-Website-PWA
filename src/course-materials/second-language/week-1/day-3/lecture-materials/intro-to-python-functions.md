@@ -153,7 +153,7 @@ However, they cannot have any code block - only a single expression that has its
 
 For example:
 
-```js
+```javascript
 // JavaScript
 const nums = [1, 3, 2, 6, 5];
 let odds = nums.filter(num => num % 2);
@@ -256,7 +256,7 @@ add()
 
 In JavaScript, we were able to access "extra" arguments being passed in to a function by using the special `arguments`:
 
-```js
+```javascript
 // Using the arguments special variable
 function sum() {
   let total = 0;
@@ -269,7 +269,7 @@ console.log( sum(1, 5, 10) );  // -> 16
 
 Or preferably by using ES2015's _rest parameters_:
 
-```js
+```javascript
 function sum(...nums) {
   return nums.reduce((sum, num) => sum + num, 0);
 }

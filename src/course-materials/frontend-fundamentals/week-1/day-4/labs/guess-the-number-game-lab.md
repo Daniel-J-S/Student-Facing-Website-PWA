@@ -34,7 +34,7 @@ For this lab, create a `HTML, CSS & JS` `REPL` from [repl.it](https://repl.it) -
 
 2. To make the `game` object's code 'cleaner', let's move the properties that were added separately during the lesson, into the object literal so that it looks like this:
 
-	```js
+	```javascript
 	const game = {
 	  title: 'Guess the Number!',
 	  biggestNum: 100,

@@ -52,7 +52,7 @@ To get set up for this lesson, please:
 
 - Since we will be working with state, we will want `<App>` to be a class component.  Please replace the current function component with this starting code:
 
-	```js
+	```javascript
 	class App extends React.Component {
 	  render() {
 	    return <div>Hello!</div>;
@@ -72,7 +72,7 @@ To get set up for this lesson, please:
 
 Let's add some basic state to the sandbox using _property initializer_ syntax which eliminates the need for creating a `constructor` method:
 
-```js
+```javascript
 class App extends React.Component {
   // Initialize the state property using a class field
   state = {
@@ -84,7 +84,7 @@ class App extends React.Component {
 
 Now let's render the state and some buttons we can use to change the emotion:
 
-```js
+```javascript
   render() {
     return (
       <>
@@ -101,7 +101,7 @@ Now let's render the state and some buttons we can use to change the emotion:
 
 Finally, let's add the `updateEmotion` method above `render`:
 
-```js
+```javascript
   updateEmotion(emotion) {
     this.setState({emotion});
   }
@@ -125,7 +125,7 @@ Here's a review of what we've learned about updating state so far:
 
 - Don't modify state directly:
 
-	```js
+	```javascript
 	// Don't do this, always call setState instead
 	this.state.emotion = 'Happy';
 	```
@@ -134,26 +134,26 @@ Here's a review of what we've learned about updating state so far:
 
 	Passing an `object` as the argument...
 	
-	```js
+	```javascript
 	this.setState({emotion: 'Excited'});
 	```
 	
 	Passing a `function` as the argument...
 	
-	```js
+	```javascript
 	this.setState(function(state) {
 	  return {emotion: 'Excited'};
 	});
 	```
 	The function passed as an argument needs to return an object that is merged with state.<br><br>Use the above approach when you need to rely on the current value of state or props to determine the new state:
 	
-	```js
+	```javascript
 	this.setState((state) => ({count: state.count + 5}));
 	```
 
 - `setState` merges the new object into the component's current state object:
 
-	```js
+	```javascript
 	// Assuming this.state is currently {emotion: 'Happy'}
 	this.setState({notes: ['Woke up feeling great']});
 	// Now this.state is {emotion: 'Happy', notes: ['Woke up feeling great']}
@@ -161,14 +161,14 @@ Here's a review of what we've learned about updating state so far:
 
 - `setState` is asynchronous:
 
-	```js
+	```javascript
 	this.setState({emotion: 'Surprised'});
 	console.log(this.state.emotion) //-> Won't be 'Surprised'
 	```
 	
 	Both signatures (passing an object or a function) accept an optional callback function as a second argument which is invoked after state has been updated.
 	
-	```js
+	```javascript
 	this.setState({emotion: 'Surprised'}, () => {
 	  console.log(this.state.emotion) //-> Will be 'Surprised'
 	});
@@ -189,7 +189,7 @@ Here's a review of what we've learned about updating state so far:
 
 Let's update `state`'s initialization to include an empty `history` array:
 
-```js
+```javascript
 state = {
   emotion: 'Happy',
   history: ['Happy']
@@ -198,7 +198,7 @@ state = {
 
 Now for some additional code to render the contents of the `history`:
 
-```js
+```javascript
 render() {
   return (
     <>
@@ -237,7 +237,7 @@ When we click one of the "emotion" buttons, we are **replacing** a piece of stat
 
 However, when the state property is a reference type, such as an Object or an Array, we should not mutate (change) that Object/Array:
 
-```js
+```javascript
 updateEmotion(emotion) {
   // The following "works", but is not a good practice
   this.state.history.push(emotion);
@@ -259,7 +259,7 @@ The rule is, if something inside of an Object/Array that's assigned to a **top-l
 
 Here's the latest and greatest way to create a new array by using the `...` [spread operator within an array literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_array_literals):
 
-```js
+```javascript
 updateEmotion(emotion) {
   // implicitly returning an object from the arrow function
   this.setState((state) => ({
@@ -304,14 +304,14 @@ However, React comes with an optimized `PureComponent` that we can extend that p
 
 First, let's update `App` to inherit from `PureComponent`:
 
-```js
+```javascript
 class App extends React.PureComponent {
 ```
 Click on a new emotion button to verify that it still works.
 
 Now let's revert back to mutating `state.history`, but this time, we're still extending `PureComponent`:
 
-```js
+```javascript
 updateEmotion(emotion) {
   this.state.history.push(emotion);
   this.setState({emotion});

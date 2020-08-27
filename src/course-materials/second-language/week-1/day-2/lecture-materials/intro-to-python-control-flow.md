@@ -352,7 +352,7 @@ To run the code, open a terminal in VS Code by typing `control + backtick`, then
 
 Python's `for` statement is not designed like the one you first used in JavaScript:
 
-```js
+```javascript
 // A JavaScript for loop
 for (let i = 0; i < 10; i++) {
   // do stuff
@@ -372,7 +372,7 @@ for name in names:
 
 The above Python code is like the following ES2015 JS:
 
-```js
+```javascript
 var names = ["Tom", "Deborah", "Murray", "Axel"];
 
 for (name of names) {

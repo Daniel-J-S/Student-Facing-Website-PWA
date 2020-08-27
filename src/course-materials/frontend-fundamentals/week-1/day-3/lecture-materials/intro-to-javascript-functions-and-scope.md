@@ -116,7 +116,7 @@ In summary, it would be impractical to create applications without breaking up t
 
 Here's a simple example of how an app that sends out a daily business report might be broken up into functions:
 
-```js
+```javascript
 let date = new Date();
 let sales = getSalesData(date);
 let labor = getLaborCosts(date);
@@ -185,7 +185,7 @@ There are three primary ways to define functions in JS:
 
 ##### 1) Function Declaration (AKA Function Definitions)
 
-```js
+```javascript
 function sayHello(name) {
     console.log('Hello ' + name + '!');
 }
@@ -196,7 +196,7 @@ function sayHello(name) {
 
 ##### 2) Function Expression
 
-```js
+```javascript
 const sayHello = function(name) {
     console.log('Hello ' + name + '!');
 };
@@ -211,7 +211,7 @@ const sayHello = function(name) {
 
 For all practical purposes, the difference between them is that _function expressions_ cannot be invoked before they are defined; whereas _function declarations_ are **hoisted** to the top of their scope and can therefore be invoked even if they are defined later in the source code. <br><br>For example:
 
-```js
+```javascript
 fnDeclaration();  // thank you function declarations :)
 fnExpression();  // TypeError: fnExpression is not a function
 
@@ -236,7 +236,7 @@ ES2015 delivered a third approach to defining functions - **Arrow Functions**.
 
 The following function declaration:
 
-```js
+```javascript
 // Function Declaration
 function add(a, b) {
 	return a + b;
@@ -245,7 +245,7 @@ function add(a, b) {
 
 and the following arrow function are equivalent:
 
-```js
+```javascript
 // Arrow Function
 const add = (a, b) => a + b;
 ```
@@ -269,7 +269,7 @@ Rest assured we'll be using Arrow Functions during this course, however, for thi
 
 Regardless of which of the three approaches are used to define functions, we call them the same way:
 
-```js
+```javascript
 add(25, 100);  // returns 125
 ```
 
@@ -283,7 +283,7 @@ add(25, 100);  // returns 125
 
 Let's write the following function together in our `script.js` file:
 
-```js
+```javascript
 function areBothEven(n1, n2) {
   return !(n1 % 2) && !(n2 % 2);
 }
@@ -405,12 +405,12 @@ Let's pretend you need to write a function that accepts an unknown number of arg
 
 For example, let's say we would like to be able to call a function that accepts a developer's name and any number of their job skills, something like the following:
 
-```js
+```javascript
 let maria = getDevObject('Maria', 'HTML', 'CSS', 'JavaScript', 'jQuery');
 ```
 and want that function to return a JS object shaped like this:
 
-```js
+```javascript
 {
 	devName: 'Maria',
 	jobSkills: ['HTML', 'CSS', 'JavaScript', 'jQuery']
@@ -423,7 +423,7 @@ A non-arrow function can access all of its arguments using a "hidden" variable i
 
 This is how we could use the `arguments` object to code the function:
 
-```js
+```javascript
 function getDevObject(name) {
   let skills = [];
   for (let i = 1; i < arguments.length; i++) {
@@ -442,7 +442,7 @@ Although the above function works, ES2015 delivered a better approach to working
 
 Using _rest parameters_, the above function can be written as follows:
 
-```js
+```javascript
 function getDevObject(name, ...skills) {
   return {
     devName: name,
@@ -471,7 +471,7 @@ What if your function requires certain arguments and you want to provide a defau
 
 Prior to ES2015, here is trivial example of what we had to do:
 
-```js
+```javascript
 function setColor(bicycle, color) {
 	// set color to 'purple' if not provided
 	bicycle.color = color || 'purple';
@@ -483,7 +483,7 @@ setColor(bike);  // sets color to purple by default
 ```
 Now, using **default parameters**, we can do this:
 
-```js
+```javascript
 function setColor(bicycle, color = 'purple') {
 	bicycle.color = color;
 }
@@ -510,7 +510,7 @@ In JavaScript, it's easy to pass around functions like data -  because they are 
 
 Often functions or methods (functions attached to an object) will require a function be provided as an argument.<br><br>For example, the `forEach` method on arrays:
 	
-```js
+```javascript
 var a = ['red', 'green', 'blue'];
 	
 a.forEach(function(color) {
@@ -632,7 +632,7 @@ If we define a variable (or a function) within the global scope, it becomes a pr
 
 One way we can prevent our code from leaking into the global scope is by wrapping it with a construct known as an **Immediately Invoked Function Expression**, or "IIFE" (pronounced "iffy").  It looks like this:
 
-```js
+```javascript
 (function() {
 	'use strict';
 
@@ -655,7 +655,7 @@ A _code block_ is created by using curly braces.
 
 The following code from [MDN's docs about let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) demonstrates differences between `let` and `var`:
 
-```js
+```javascript
 function varTest() {
   var x = 1;
   if (true) {
@@ -693,7 +693,7 @@ As shown above, similarly, a variable's **declaration** (but not its assignment)
 
 For example, when we write code like this:
 
-```js
+```javascript
 function hoist() {
 	console.log(x);  // outputs undefined, not a ReferenceError
 	var x = 25;
@@ -703,7 +703,7 @@ function hoist() {
 
 Internally, the JS engine actually sees this:
 
-```js
+```javascript
 function hoist() {
 	var x;
 	console.log(x);  // outputs undefined, not a ReferenceError
@@ -725,7 +725,7 @@ Why would we want to do this? Well, Perhaps an outer function needs a "helper" f
 
 For example (no need to execute this):
 
-```js
+```javascript
 function openNewAccount(name, openingBalance) {
   let acctNum = generateAcctNum();
   

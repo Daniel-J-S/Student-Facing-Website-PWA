@@ -49,7 +49,7 @@ type: "lecture"
 Let's create a new React Project on [`codesandbox.io`](https://www.codesandbox.io)
 - Replace the existing `<App>` component with this starting code:
 
-```js
+```javascript
 import React from "react";
 import "./styles.css";
 
@@ -233,7 +233,7 @@ React "controlled" inputs have their value assigned to them via the `value` prop
 
 So for our Dev Skills app, if the `<input>` & `<select>` inputs currently in `<App>` are going to get their values from `state`, we're going to need to add two new properties to `state` dedicated to maintaining the "state" of each input:
 
-```js
+```javascript
 state = {
   skills: [{ skill: "JavaScript", level: 4 }],
   // New state for the inputs below
@@ -282,7 +282,7 @@ The React way for controlled inputs requires using event handlers to update the 
 
 First add an `onChange` prop to the `<input>`:
 
-```js
+```javascript
 <span>SKILL</span>
 <input
   name="skill"
@@ -296,7 +296,7 @@ First add an `onChange` prop to the `<input>`:
 
 Now add the `handleChange` method that will be called every time a character is added or deleted:
 
-```js
+```javascript
 // Add the onChange event handler
 handleChange = e => {
   this.setState({ skill: e.target.value });
@@ -317,7 +317,7 @@ Not if you know modern JavaScript you don't!
 
 Refactor `handleChange` as follows to take advantage of [computed property names](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names) within object literals:
 
-```js
+```javascript
 handleChange = e => {
   this.setState({ [e.target.name]: e.target.value });
 };
@@ -329,7 +329,7 @@ That single handler can now update state for any number of inputs - just be sure
 
 Okay, let's add the event handler to the `<select>`:
 
-```js
+```javascript
 <select
   name="level"
   value={this.state.level}
@@ -392,7 +392,7 @@ Let's write the code for the the `newSkill` method.
 
 We'll review as we go:
 
-```js
+```javascript
 addSkill = () => {
   // Using the "function" approach because relying on existing state
   this.setState(state => ({
@@ -432,13 +432,13 @@ However, despite those missing attributes, and despite the fact that the **[ADD 
 
 In React, we need to prevent the browser from submitting forms and we first do this by **always** using the `onSubmit` prop on `<form>` components:
 
-```js
+```javascript
 <form onSubmit={this.addSkill}>
 ```
 
 Then, **always** calling the event object's `preventDefault` method straightaway:
 
-```js
+```javascript
 addSkill = e => {
   e.preventDefault();
 ```
@@ -464,7 +464,7 @@ As we saw in the lesson on Regular Expressions, we can add a `required` and `pat
 
 Let's prevent the ability to add empty skills by adding these props to the skills input:
 
-```js
+```javascript
 <input
   name="skill"
   value={this.state.newSkill.skill}
@@ -486,7 +486,7 @@ However, the API's methods must be called on the actual DOM element, thus requir
 
 As an example, let's test out the `checkValidity` method on just the skills input:
 
-```js
+```javascript
 handleChange = e => {
   // e.target is the DOM element that changed
   console.log(e.target.checkValidity());
@@ -514,7 +514,7 @@ A ref is an object that provides access to a DOM element.
 
 There's no reason to hold a ref in state, so we'll create a ref and store it in a separate property on the instance like this:
 
-```js
+```javascript
 state = {
   skills: [{ skill: "JavaScript", level: 4 }],
   newSkill: {
@@ -528,13 +528,13 @@ formRef = React.createRef();
 
 With the ref created, all that's left is to "link" it to a component's DOM element by using the `ref` prop:
 
-```js
+```javascript
 <form ref={this.formRef} onSubmit={this.addSkill}>
 ```
 
 Let's see what a `ref` looks like by logging it out:
 
-```js
+```javascript
 render() {
   console.log(this.formRef);
 ```
@@ -543,7 +543,7 @@ Checking the console shows that the ref object has a `current` property used to 
 
 Now we can prevent adding a new skill if the form's invalid like this:
 
-```js
+```javascript
 addSkill = e => {
   e.preventDefault();
   // Do nothing if the form is invalid
@@ -565,7 +565,7 @@ What if we want the **[ADD SKILL]** button to be disabled depending upon the val
 
 A typical React approach would be to first create a new property on `state` to track the validity of the form:
 
-```js
+```javascript
 state = {
   skills: [{ skill: "JavaScript", level: 4 }],
   newSkill: {
@@ -580,7 +580,7 @@ formRef = React.createRef();
 
 Now in the `render` method, use `this.state.formInvalid` to  conditionally add the `disabled` prop to the button:
 
-```js
+```javascript
 <button
   disabled={this.state.formInvalid}
 >
@@ -588,7 +588,7 @@ Now in the `render` method, use `this.state.formInvalid` to  conditionally add t
 
 The last part requires updating `formInvalid` each time an input changes, i.e., from within the `handleChange` method:
 
-```js
+```javascript
 handleChange = e => {
   const newSkill = { ...this.state.newSkill };
   newSkill[e.target.name] = e.target.value;

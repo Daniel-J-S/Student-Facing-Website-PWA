@@ -197,7 +197,7 @@ We've used the [defer Attribute](https://www.w3schools.com/tags/att_script_defer
 
 However, jQuery has another option that you should be aware of:
 
-```js
+```javascript
 // the "document ready" approach 
 $(document).ready(function() {
   // all of your app's js goes within this function
@@ -241,7 +241,7 @@ Somebody messed up and styled our _Add Home_ button with Bootstrap's `btn-danger
 
 Change the button from red to green by removing the `btn-danger` class and adding the `btn-success` class with jQuery:
 
-```js
+```javascript
 $('#addHome').removeClass('btn-danger').addClass('btn-success');
 ```
 That's better!
@@ -274,7 +274,7 @@ jQuery's has a `hasClass('<the class(es) as a string>')` method that returns `tr
 
 For example:
 
-```js
+```javascript
 var isStyled = $('p').hasClass('left-aligned big');
 // the isStyled var will be true if any <p> elements have 
 // the classes of "left-aligned" and "big"
@@ -304,7 +304,7 @@ As you've seen, the jQuery function performs different functionality depending u
 
 One way is to just provide a string representing the HTML to the jQuery function:
 
-```js
+```javascript
 // returns a jQuery set of new DOM elements
 var $newLink = $( '<br><br><a id="zillowLink" href="http://www.zillow.com">Visit Zillow.com</a>' );
 ```
@@ -313,15 +313,15 @@ var $newLink = $( '<br><br><a id="zillowLink" href="http://www.zillow.com">Visit
 
 Remember that in programming, there are usually multiple ways to accomplish the same thing, for example, these three code examples are all equivalent ways of creating a`<p class="bold"></p>` element:
 
-```js
+```javascript
 var $p = $('<p class="bold">');
 ```
 
-```js
+```javascript
 var $p = $('<p>', {class: 'bold'});
 ```
 
-```js
+```javascript
 var $p = $('<p>').addClass('bold');
 ```
 
@@ -338,7 +338,7 @@ Which approach you use is up to you (or your boss).
 
 The `$newLink` variable now holds our newly created elements in memory, however, we still need to add them to the page. One of the ways is to use the `append()` method:
 
-```js
+```javascript
 $('body').append($newLink);
 ```
 
@@ -383,7 +383,7 @@ jQuery makes it easy to add/modify the attributes of an element with the `attr()
 
 Lets use it to add a `target` attribute to our link:
 
-```js
+```javascript
 $('#zillowLink').attr( "target", "_blank" );
 ```
 Refresh - Yay!!!
@@ -420,7 +420,7 @@ When our shiny green _Add Home_ button is clicked, we want to add one of the hom
 
 Here is how we can add a _click_ event listener to the _Add Home_ button:
 
-```js
+```javascript
 $('#addHome').on('click', function(evt) {
   console.log(evt);
 });
@@ -434,7 +434,7 @@ jQuery's _event_ object is pretty much the same as native JavaScript's - yes, it
 
 When googling, you will find plenty of jQuery code using a different syntax for adding a event listeners similar to this:
 
-```js
+```javascript
 $('#addHome').click(function(evt){
   console.log(evt, this);
 });
@@ -462,7 +462,7 @@ _Event delegation_ in jQuery is a bit more powerful because we can tell jQuery *
 
 For example, if you would like to listen for clicks on only `<div>` elements with a class of `circle`, you could use jQuery to set a delegated event listener on the `<body>` as follows:
 
-```js
+```javascript
 $('body').on('click', 'div.circle', function() {
   // 'this' will be a <div> with a class of 'circle'
 });
@@ -478,7 +478,7 @@ We just need to decide on which **ancestor** element to attach the delegated eve
 
 Our best bet would be the `<tbody>` element within the `<table>` because it's the nearest common element of the buttons we want to listen to:
 
-```js
+```javascript
 $('#homes tbody').on('click', 'button', function() {
   console.log(this);
 });
@@ -502,7 +502,7 @@ $('#homes tbody').on('click', 'button', function() {
 
 If our users click on the _Remove_ button, we obviously want to remove that home's row from the table:
 
-```js
+```javascript
 $('#homes tbody').on('click', 'button', function() {
   $(this).closest('tr').remove();
 });
@@ -526,7 +526,7 @@ Pretty cool!
 
 Currently, the sudden disappearance of the home's row is a little harsh. Let's use one of jQuery's built-in [effects](http://learn.jquery.com/effects/intro-to-effects/) to help us out:
 
-```js
+```javascript
 $('#homes tbody').on('click', 'button', function() {
   $(this).closest('tr').fadeOut(1000, function() {
     // now that the tr is hidden, let's completely remove it from the DOM
@@ -565,7 +565,7 @@ When the "Add Home" button is clicked:
 
 First, copy this array of new home data to your script:
 
-```js
+```javascript
 var newHomes = [
   {address: "27569 Cedarwood Drive", sf: "2,535", bedrooms: 3, baths: 2.5, price: "$496,500"},
   {address: "316 Annandale Drive", sf: "1,326", bedrooms: 4, baths: 2, price: "$275,000"},

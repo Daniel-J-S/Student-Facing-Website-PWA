@@ -87,7 +87,7 @@ const student = <Student>Jose<br />jose@email.com</Student>;
 You will see the above transpiled into this JS:
 
 
-```js
+```javascript
 const student = React.createElement(
   Student,
   null,
@@ -118,7 +118,7 @@ const student = <Student cohortId='SEI-99'>Jose<br/>jose@email.com</Student>;
 
 Now the transpiled JS looks like this:
 
-```js
+```javascript
 const student = React.createElement(
   Student,
   { "cohortId": "SEI-99" },
@@ -130,7 +130,7 @@ const student = React.createElement(
 
 In summary, in React, JSX is just syntactic sugar for:
 
-```js
+```javascript
 React.createElement(component, props, ...children);
 ```
 
@@ -152,7 +152,7 @@ Let's create a new React Sandbox using [CodeSandbox](https://codesandbox.io/) to
 1. In a future lesson we'll learn a lot about styling in React - and you'll see that like most things React - it's different.  CodeSandbox has already created a CSS stylesheet within the **src** folder. Thanks to tooling, it is able to be "imported" within the **App.js** like this:
 
 
-```js
+```javascript
 import React from "react";
 import "./styles.css"; // <- Already imported for us!
 
@@ -414,7 +414,7 @@ You can embed and render the result of any JavaScript **expression** in JSX by w
 
 Now let's use the `earthling` prop that was passed:
 
-```js
+```javascript
 <div>
   <h1>Greetings Earthling {props.earthling}</h1>
 </div>
@@ -476,7 +476,7 @@ Considering that JSX is a JS expression, leads us to the fact that JSX can be:
 
 For example, here's a component that returns different JSX depending upon the value of `props.user`:
 
-```js
+```javascript
 const Greeting = (props) => {
   if (props.user) return <h1>Hello, {formatName(props.user)}!</h1>;
   return <h1>Hello, Stranger.</h1>;
@@ -522,7 +522,7 @@ Quite often we need to render "lists" of components, for example, a list of To D
 
 How about an array of things the aliens want from Earth:
 
-```js
+```javascript
 function Greeter(props) {
   const things = ["Water", "Cattle", "Plutonium", "Gold"];
   // Create an array of <li> components

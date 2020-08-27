@@ -85,7 +85,7 @@ As you can see, the settings page allows the player to change the difficulty lev
 
 	Hint: The first couple of lines will look like this
 	
-	```js
+	```javascript
 	const colors = {
 	  Easy: ['#7CCCE5', '#FDE47F', '#E04644', '#B576AD'],
 	  ...
@@ -109,7 +109,7 @@ As you can see, the settings page allows the player to change the difficulty lev
 
 	- Since `difficulty` lives in the state of `<App>`, guess where the method to update it will live. Plus, this method's code should update `difficulty` using `setState` of course, however, **after** the `difficulty` state is updated, you will then want to invoke the `handleNewGameClick` method to start a new game.  Running code **after** the asynchronous `setState` method has updated the state is best implemented by providing a callback function to the `setState` method as a second argument:
 	
-	```js
+	```javascript
 	this.setState(<object> or <function>, <callback>);
 	```
 	That callback function can be an anonymous function that simply calls `this.handleNewGameClick();`.

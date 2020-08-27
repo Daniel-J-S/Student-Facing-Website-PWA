@@ -118,7 +118,7 @@ The difference between `var` and `let`/`const` is what we call _scope_. Scope in
 
 The difference between `let` and `const` is that a `const` variable cannot be re-assigned to - you can assign data to it once, and that's it:
 
-```js
+```javascript
 let x = 25;
 x = 100;  // no problem
 
@@ -130,7 +130,7 @@ As we'll learn later,  objects (or an object sub-type like array, function, etc.
 
 Objects are reference types because, if we assign an object to a variable, that variable does not actually hold the object, rather it holds a "reference" that points to the object in memory.  As such, when you assign an object to a `const`, you **can** make changes to the object itself, you just can't re-assign to the `const`:
 
-```js
+```javascript
 const person = {name: 'Fred'};
 person.age = 25;  // no error
 person = {name: 'Barney'}  // Uncaught TypeError: Assignment to constant variable
@@ -140,25 +140,25 @@ person = {name: 'Barney'}  // Uncaught TypeError: Assignment to constant variabl
 
 _Identifiers_ are used to name variables, as well as named functions:
 
-```js
+```javascript
 let points;  // the identifier is "points" and names the variable "points"
 ```
 
 We can also assign a value to a variable at the time we declare it by using the `=` (assignment) operator:
 
-```js
+```javascript
 let name = "Fred Flintstone";  // two birds with one stone!
 ```
 
 and change it's value later...
 
-```js
+```javascript
 name = "Barney";  // note that we only declare a variable once
 ```
 
 Multiple variables can be defined in a single statement, separated by commas:
 
-```js
+```javascript
 let name = 'Wilma', age, town = 'Bedrock';
 
 // above is equivalent to
@@ -195,7 +195,7 @@ Dynamically-typed languages such as JavaScript, Python and Ruby allows variables
 
 For example, in JavaScript we can do this:
 
-```js
+```javascript
 // Declare variable named data and initialize with a number
 var data = 123;
 
@@ -333,7 +333,7 @@ We often assign the value _null_ to a variable to represent the fact that it has
 
 A variable that has not been assigned a value is of type `undefined`.  For example:
 
-```js
+```javascript
 let cohort;  // cohort currently holds undefined
 ```
 
@@ -419,7 +419,7 @@ Yay, we've covered all six data types!
 
 JavaScript is very relaxed when it comes to data types. Contrary to non-dynamic languages, a variable can change its type.
 
-```js
+```javascript
 let m = 15;  // I'm a number
 m = 'hey';   // Now I'm a string!
 ```
@@ -434,7 +434,7 @@ __Try adding a string to a number.  What did JS do?__
 
 __Now try comparing a number and a string containing the same digits using the equality (`==`) comparison operator__
 
-```js
+```javascript
 13 == "13"  // returns true!
 ```
 
@@ -447,7 +447,7 @@ This is why, unless there's a reason not to do so, we use the _strict equality o
 
 We can easily convert a number to a string using the `toString()` and `toFixed()` methods:
 
-```js
+```javascript
 let n = 123.456;
 let s1 = n.toString();  // "123.456"
 let s2 = n.toFixed(2);  // "123.46"
@@ -455,7 +455,7 @@ let s2 = n.toFixed(2);  // "123.46"
 
 There are a couple of handy methods used to convert strings to numbers: `parseInt()` and `parseFloat()`
 
-```js
+```javascript
 let s = "1234.567";
 let n1 = parseInt(s);  // 1234
 let n2 = parseFloat(s);  // 1234.456

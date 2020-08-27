@@ -135,18 +135,18 @@ The following diagram denotes one approach to structuring your code:
 
 - **Use constants** instead of literal values to improve code readability and maintenance. For example, let's say you wanted to limit the number of guesses in a game to a certain number.<br>You could write code like this:
 
-	```js
+	```javascript
 	let lose = numGuesses > 5;
 	```
 	However, code like the following which would be more maintainable because you probably will need to use the maximum guesses value in more than one section of code:
 	
-	```js
+	```javascript
 	let lose = numGuesses > MAX_GUESSES;
 	```
 
 - **Instead of using several separate variables to hold state**, consider using object properties when it makes sense to do so. For example, if you need to track info for two players, instead of using several variables like `player1name`, `player2name`, `player1score`, `player2score`, etc., consider using an object like:
 
-	```js
+	```javascript
 	const players = {
 		'1': {
 			name: '',
@@ -244,7 +244,7 @@ If you're concerned that using the following approach will result in you and you
 	- Create a main `render` function that is responsible for rendering the state of the app to the DOM.
 	- If the `render` function becomes lengthy, add additional rendering oriented functions, for example:
 	
-	```js
+	```javascript
 	function render() {
 		renderHands();
 		renderControls();

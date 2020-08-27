@@ -240,13 +240,17 @@ Open a terminal session and type: `psql`.
 
 You'll see your PostgreSQL version and psql's prompt:
 
-```
+
+
+```shell
 $ psql
 psql (9.6.3)
 Type "help" for help.
 
 jimclark=#
 ```
+
+
 
 Here are some useful commands (note the use of a **backslash**):
 

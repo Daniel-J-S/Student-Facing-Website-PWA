@@ -153,12 +153,12 @@ There are two ways we can include jQuery:
 
 - [Download jQuery](http://jquery.com/download/) and save it somewhere within our project folder. Then use the familiar `<script>` tag like this:
   
-```js
+```javascript
   <script src="js/jquery-3.2.1.min.js"></script>
 ```
 - Use a [CDN](https://en.wikipedia.org/wiki/Content_delivery_network) (content delivery network) like this:
 
-```js
+```javascript
   <script
    src="https://code.jquery.com/jquery-3.2.1.min.js"
    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -353,7 +353,7 @@ Although native DOM elements have numerous useful methods and properties by defa
 
 Luckily, we can turn any regular DOM element into a super-powered jQuery object by wrapping it in the jQuery function.  Still in the console, type...
 
-```js
+```javascript
 // Set a var to reference a raw DOM element
 var li = $li[0];
 
@@ -388,7 +388,7 @@ Although the jQuery object is an array-like object, it does not have the built-i
  
 Instead of `forEach()`, jQuery provides the `each()` method on the jQuery set that can be used to iterate over each raw DOM element:
 
-```js
+```javascript
 $('li').each(function(idx) {
   console.log( idx + ': ' + this.innerHTML );
 });
@@ -408,7 +408,7 @@ Additionally, jQuery has set the `this` keyword to point to the iteration's curr
 
 The `eq()` method can be used to index into the array of DOM elements like we did using square brackets.  However, `eq()` automatically wraps the DOM element in a jQuery object with all of the magic:
 
-```js
+```javascript
 var $li = $('li');
 
 // Fade out just the second <li>
@@ -437,13 +437,13 @@ jQuery's `html()` method is used for both getting & setting a DOM element's `inn
 
 Here's how we can use jQuery to change the text of the "inner" `<div>` from "Inner div" to "jQuery Rocks!":
 
-```js
+```javascript
 $('#inner').html('jQuery Rocks!');
 ```
 
 When using a setter to modify the DOM, the change applies to **all elements in the jQuery set**. For example:
 
-```js
+```javascript
 // Change the content of all <li>'s
 $('li').html('Hello SEI');
 ```
@@ -490,7 +490,7 @@ jQuery has a `css()` method used to get and set the CSS properties of elements.
 
 Here's how we can change the `color` and `font-weight` on all of the `<li>` elements:
  
-```js
+```javascript
 $('li').css( { color: 'green', 'font-weight': 'bold' } );
 ```
 
@@ -500,13 +500,13 @@ Notice how we had to write the key `font-weight` as a string - **why is this?**
 
 You can also use the _normalized_ names of the properties we've seen on the `style` property of DOM elements:
 
-```js
+```javascript
 $('li').css( { color: 'green', fontWeight: 'bold' } );
 ```
 
 The `css()` method also has a different _signature_ that can be used to set a single CSS property at a time:
 
-```js
+```javascript
 $('p').css('font-size', '30px');
 ```
 
@@ -527,14 +527,14 @@ In the console, write the code that will set the background color of _only the l
 
 Each jQuery method, **when used as a setter**, returns the updated jQuery object.  This allows us to **"chain"** methods like this:
 
-```js
+```javascript
 // Change our <p> tag's content and color
 $('p').html('Awesome things jQuery can do:').css('background-color', 'peachpuff');
 ```
 
 Often, you will see method chaining indented like this to enhance readability:
 
-```js
+```javascript
 // Change our <p> tag's content and color
 $('p')
   .html('Awesome things jQuery can do:')

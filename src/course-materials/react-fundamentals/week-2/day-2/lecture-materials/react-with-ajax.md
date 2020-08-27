@@ -159,7 +159,7 @@ The component also uses a `zoom` prop if it's provided, otherwise a default valu
 
 Since the library's `Map` constructor needs a reference to the DOM element to draw the map in, line 7 creates a [ref](https://reactjs.org/docs/refs-and-the-dom.html) that is assigned to the only React Element being rendered:
 
-```js
+```javascript
 <div ref={mapDiv} className={styles.Map}></div>
 ```
 
@@ -174,7 +174,7 @@ This allows us to use the ref (`mapDiv.current`) to provide the library a refere
 
 Take note on how the Google Maps library is being referenced on line 10 (and also on line 18):
 
-```js
+```javascript
 const map = new window.google.maps.Map(
 ``` 
 
@@ -208,7 +208,7 @@ The **services/geolocation.js** module has a single named export, `getCurrentLat
 
 So that we can take advantage of `async/await`, the Geolocation API's `getCurrentPosition` method has been wrapped to return a promise instead of accepting a callback (the Geolocation API was around before promises were):
 
-```js
+```javascript
 export function getCurrentLatLng() {
   // Wrap getCurrentPosition to return a promise
   return new Promise(resolve => {
@@ -251,7 +251,7 @@ However, we currently don't have a backend to act as a "passthrough", so we will
 
 To make `fetch` send the correct CORS headers to the server, we need to include an options object with a `mode: "cors"` property like the following:
 
-```js
+```javascript
 fetch(someUrl, {mode: "cors"}).then(res => res.json())
 ```
 
@@ -271,7 +271,7 @@ Although not an AJAX call, obtaining GPS coordinates is also an asynchronous ope
 
 First though, we will need to add an import inside of **App.js** to be able to access the `getCurrentLatLng` function that's being exported from the **geolocation.js** service module:
 
-```js
+```javascript
 // App.js
 
 import { getCurrentLatLng } from '../../services/geolocation';
@@ -279,7 +279,7 @@ import { getCurrentLatLng } from '../../services/geolocation';
 
 Now let's add the `componentDidMount` lifecycle method and the code to call `getCurrentLatLng`:
 
-```js
+```javascript
 class App extends Component {
 
   // Add this method
@@ -307,7 +307,7 @@ As usual, we're baby stepping our way to glory...
 
 Now that we have the latitude and longitude, we can add them to `state`, then pass them to `<Map>` as props:
 
-```js
+```javascript
 const {lat, lng} = await getCurrentLatLng();
 // Replace the console.log with the following
 this.setState({lat, lng});
@@ -315,7 +315,7 @@ this.setState({lat, lng});
 
 Also, it's a good practice to always initialize all state:
 
-```js
+```javascript
 class App extends Component {
 
   // Initialize state
@@ -327,7 +327,7 @@ class App extends Component {
 
 Finally, we can now pass that state as props to `<Map>` within the `render` method:
 
-```js
+```javascript
 <Map lat={this.state.lat} lng={this.state.lng}/>
 ```
 
@@ -346,7 +346,7 @@ We took a shot at writing `<Map>` as a Function Component but now find ourselves
 
 This is a dandy of a refactor:
 
-```js
+```javascript
 class Map extends React.Component {
   mapDiv = React.createRef();
 
@@ -416,15 +416,19 @@ The API requires an API Key to use, however, you can borrow this one `d3945aa316
 
 According to the docs, to retrieve the current weather data, we can make a call to the following endpoint substituting our desired coordinates:
 
-```
+
+
+```shell
 https://api.openweathermap.org/data/2.5/weather?lat=34.0475869&lon=-117.8985651&units=imperial&appid=d3945aa316355ce92bb8cc10bf63e3da
 ```
+
+
 
 Included in the URL is a query parameter of<br>`units=imperial`<br>that returns the temperature in Fahrenheit (the default is Kelvin).
 
 Let's checkout the JSON returned by pasting that URL into a browser tab.  You should get something like the following returned:
 
-```js
+```javascript
 {
   "coord": {
     "lon": -117.9,
@@ -515,7 +519,7 @@ Looking at the data returned, we see that the temperature can be accessed as `we
 
 Let's log that out to verify, but let's also round it off while we're at it:
 
-```js
+```javascript
 const weatherData = await getCurWeatherByLatLng(lat, lng);
 console.log(Math.round(weatherData.main.temp));
 ```
@@ -528,7 +532,7 @@ Now there's the `icon` property whose value is a short string that we can use to
 
 Now that we know the data paths, let's add them to state:
 
-```js
+```javascript
 state = {
   lat: null,
   lng: null,
@@ -564,7 +568,7 @@ React Developer Tools assure us that we're ready to move on to rendering:
 
 Ignoring CSS for now, let's update the `<header>` in **App.js** as follows:
 
-```js
+```javascript
 <header className='App-header'>
   <div>{this.state.temp}&deg;</div>
   REACT WEATHER

@@ -102,7 +102,7 @@ npm i express ejs morgan
 
 5. Set up boilerplate for `server.js`
 
-```js
+```javascript
 // Require modules
 const express = require('express');
 const morgan = require('morgan');
@@ -171,7 +171,7 @@ touch views/index.ejs routes/index.js controllers/index.js public/css/style.css
 10. Let's set up our routes and controller actions for our root routes
 
 
-```js
+```javascript
 // inside of routes/index.js
 
 const express = require('express');
@@ -184,7 +184,7 @@ router.get('/', indexCtrl.index);
 module.exports = router;
 ```
 
-```js
+```javascript
 // inside of controllers/index.js
 module.exports = {
     index
@@ -198,7 +198,7 @@ function index(req, res) {
 
 11. Now we require and mount our index router inside of `server.js`
 
-```js
+```javascript
 // Require modules
 const express = require('express');
 const morgan = require('morgan');
@@ -211,7 +211,7 @@ const indexRouter = require('./routes/index');
 ```
 **...don't forget to mount your router**
 
-```js
+```javascript
 
 // more code above
 
@@ -309,7 +309,7 @@ _"Mongoose provides a straight-forward, **schema-based** solution to model your 
 
 - Assuming the following schema:
 
-```js
+```javascript
 const postSchema = new mongoose.Schema({
 content: String
 });
@@ -317,13 +317,13 @@ content: String
 
 - It can be compiled into a model and that model exported like this:
 
-```js
+```javascript
 module.exports = mongoose.model('Post', postSchema);
 ```
 
 - The model can then be required and used to perform CRUD on the `posts` collection in the MongoDB:
 
-```js
+```javascript
 const Post = require('./models/post');
 Post.create({content: 'Amazing post...'});
 ```
@@ -398,7 +398,7 @@ $ touch config/database.js
 
 - Then in `database.js`, let's connect to a database named `movies`:
 
-```js
+```javascript
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/movies', {
@@ -413,7 +413,7 @@ mongoose.connect('mongodb://localhost/movies', {
 
 - In order for the code in `database.js` to run and connect to the database, we must require it in `server.js`:
 
-```js
+```javascript
 const express = require('express');
 const morgan = require('morgan');
 const port = 3000; 
@@ -489,7 +489,7 @@ require('./config/database');
 
 - Let's modify our _database.js_ module as follows:
 
-```js
+```javascript
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/movies', {
@@ -578,7 +578,7 @@ $ touch models/movie.js
 
 - In the schema/model module, we will always do this:
 
-```js
+```javascript
 const mongoose = require('mongoose');
 // optional shortcut to the mongoose.Schema class
 const Schema = mongoose.Schema;
@@ -600,7 +600,7 @@ const Schema = mongoose.Schema;
 
 - Here's our basic _Movie_ schema:
 
-```js
+```javascript
 const Schema = mongoose.Schema;
 	
 const movieSchema = new Schema({
@@ -680,7 +680,7 @@ const movieSchema = new Schema({
 
 - Compiling a schema into a model is as easy as calling the `mongoose.model` method:
 
-```js
+```javascript
 const Schema = mongoose.Schema;
 		
 const movieSchema = new Schema({
@@ -792,7 +792,7 @@ touch routes/movies.js
 
 - Inside of `routes/movies.js`, set up the router and code our first route responsible for showing a form for entering a movie:
 
-```js
+```javascript
 const express = require('express');
 const router = express.Router();
 const moviesCtrl = require('../controllers/movies');
@@ -805,11 +805,11 @@ module.exports = router;
 
 - Don't forget to require and mount our router inside of `server.js`
 
-```js
+```javascript
 const moviesRouter = require('./routes/movies');
 ```
 
-```js
+```javascript
 app.use('/movies', moviesRouter);
 ```
 
@@ -846,7 +846,7 @@ touch controllers/movies.js
 
 The code in the `new` action is pretty simple:
 
-```js
+```javascript
 module.exports = {
     new: newMovie
 };
@@ -862,7 +862,7 @@ function newMovie(req, res) {
 
 - As we've discussed, organizing views for a certain model into a dedicated folder makes sense:
 
-```
+```shell
 $ mkdir views/movies
 $ touch views/movies/new.ejs
 ```

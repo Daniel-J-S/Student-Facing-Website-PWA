@@ -263,7 +263,7 @@ Variables are case sensitive - variables named `my_number` and `My_Number` would
 
 When you have a variable name with multiple words, the convention is to **snake_case** the identifier:
 
-```js
+```javascript
 // In JavaScript we use camelCase...
 var myNumber = 10;
 ```
@@ -507,7 +507,7 @@ num *= 3
 
 In JS we used the ternary expression to concisely return one of two values depending upon a conditional expression, for example:
 
-```js
+```javascript
 // Using the ternary operator/expression
 let beverage = age >= 21 ? 'Beer' : 'Milk';
 
@@ -539,7 +539,7 @@ beverage = 'Beer' if age >= 21 else 'Milk'
 
 One thing we kind of took for granted in JavaScript was that it usually performed automatic data type conversion for us - a process known as implicit type coercion.
 
-```js
+```javascript
 // JavaScript
 let numTacos = 25;
 let msg = 'There are ' + numTacos + ' tacos';

@@ -92,7 +92,7 @@ The variables accessible by a function that are not defined locally are called _
 
 Let's first look at a very basic function:
 
-```js
+```javascript
 function f() {
   var x = 5;
   console.log(x);
@@ -107,7 +107,7 @@ function f() {
 
 Now let's refactor this code by including an inner (nested) function inside of function `f()`:
 
-```js
+```javascript
 function f() {
   var x = 5;
   
@@ -133,7 +133,7 @@ function f() {
 
 Now let's see how we can invoke the function `inner()` from outside of function `f()`:
 
-```js
+```javascript
 function f() {
   var x = 5;
   
@@ -210,7 +210,7 @@ Closures typically are more important to the creators of libraries and framework
 
 ### Example 1 (factory pattern #1)
 
-```js
+```javascript
 function adderFactory(fixedOperand) {
   
   return function(secondOperand) {
@@ -237,7 +237,7 @@ Note here that `adderFactory()` returns an anonymous function expression, there'
 
 ### Example 2 (factory pattern #2)
 
-```js
+```javascript
 function elapsedTimeFactory() {
   var startTime = Date.now();
 
@@ -266,7 +266,7 @@ Also, as you know, there is no easy way to "hide", or as developers say, make "p
 
 Now let's see how closures can be used to implement "private" variables in an object or "module":
 
-```js
+```javascript
 // The IIFE will run and assign the object being returned
 var fourLetterWord = (function() {
   var _fourLetterWord = 'love';

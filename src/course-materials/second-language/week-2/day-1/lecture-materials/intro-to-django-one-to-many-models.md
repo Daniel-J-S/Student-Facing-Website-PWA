@@ -388,9 +388,13 @@ There's several steps we're going to need to complete, so let's get started...
 
 We could define the ModelForm inside of the _models.py_ module, but we're going to follow a best practice of defining it inside of a _forms.py_ module instead:
 
-```
+
+
+```shell
 $ touch main_app/forms.py
 ```
+
+
 
 Let's open it and add this code:
 
@@ -518,7 +522,7 @@ Using Materialize, it takes two steps to get the inputs the way we want them:
 Now let's add the JS to inside of the `<script>` tags to initialize the date-picker:
 
 
-```js
+```javascript
 </div>
 
 <script>

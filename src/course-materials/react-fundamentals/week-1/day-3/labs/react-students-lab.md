@@ -40,7 +40,7 @@ Please complete this lab in a React [CodeSandbox](https://codesandbox.io) named 
 
 1. Use the following array of "student" data to initialize a `students` property in the `<App>` component's state:
 
-```js
+```javascript
 [
   {
     name: 'Cait Yomorta',

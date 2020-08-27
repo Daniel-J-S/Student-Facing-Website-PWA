@@ -53,7 +53,7 @@ After each function, call it **at least once** and `console.log` the results.
 
 For example, here's the first function, our gift to you:
 
-```js
+```javascript
 // 1.
 function maxOfTwoNumbers(x, y) {
   if (x >= y) {

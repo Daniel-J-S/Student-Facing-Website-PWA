@@ -212,7 +212,7 @@ At this point, the takeaway should be that:
 - React apps consist of **components** that we code using JavaScript (and a special syntax known as JSX). You will not be creating any *.html files when developing a React app.
 - The line of code that causes all of the components to be rendered for the first time is:
 
-```js
+```javascript
 ReactDOM.render(<App />, rootElement);
 ```
 

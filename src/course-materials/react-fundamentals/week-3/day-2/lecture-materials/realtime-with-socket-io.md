@@ -134,7 +134,7 @@ Just like when naming functions, it's best to use identifiers for our messages t
 
 When sending a message, we can optionally send data that will be received by the listeners for the message.  For example, when sending a `'move-player'` message, we might send the following JS object:
 
-```js
+```javascript
 {
 	from: 'r8c3',
 	to: 'r9c4'
@@ -236,7 +236,7 @@ Let's review the starter code...
 
 - In an Express app scaffolded using `express-generator`, the _http server_ lives inside of the `/bin/www` file, so that is where we will require our new `io.js` module and attach to the _http server_:
 
-	```js
+	```javascript
 	// inside bin/www
 	var server = http.createServer(app);
 	
@@ -247,7 +247,7 @@ Let's review the starter code...
 
 - Now we need to put some code in our `io.js` module. For now let's put some test code in it to make sure things are loading correctly:
 
-	```js
+	```javascript
 	// io.js
 	
 	var io = require('socket.io')();
@@ -297,7 +297,7 @@ Let's review the starter code...
 
 - Let's call it and assign the returned connection object to a variable named `socket`.
 
-	```js
+	```javascript
 	// get our connection to the socket.io server
 	const socket = io();
 	console.log(socket);
@@ -398,7 +398,7 @@ As already noted, each message can be emitted with data. The data can be any typ
 
 - This code for _io.js_ will accomplish the goal for our code logic on the server:
 
-	```js
+	```javascript
 	io.on('connection', function (socket) {
 	  //new code below
 	  socket.on('add-circle', function (data) {
@@ -425,7 +425,7 @@ As already noted, each message can be emitted with data. The data can be any typ
 
 - Listen for an `add-circle` message from the server in `app.js`:
 
-	```js
+	```javascript
 	const socket = io();	
 	// listen to the server for the `add-circle` event
 	socket.on('add-circle', function (data) {
@@ -439,7 +439,7 @@ As already noted, each message can be emitted with data. The data can be any typ
 
 - Now let's update the click event listener to emit an `add-circle` message to the server with the data:
 
-	```js
+	```javascript
 	circles.addEventListener('click', function(evt) {
 	  // replace current line of code with this code
 	  socket.emit('add-circle', {
@@ -469,7 +469,7 @@ Cool!  Let's continue coding the client...
 
 Next, let's refactor `addCircle()` so that we can just pass in the data object received with the message:
 
-```js
+```javascript
 // was -> function addCircle(x, y, dia, rgba) {
 // updated to include initials and take advantage of destructuring assignment
 function addCircle({x, y, dia, rgba, initials}) {
@@ -483,7 +483,7 @@ function addCircle({x, y, dia, rgba, initials}) {
 
 - All that's left is to call the `addCircle()` function from our `socket.on` listener inside `app.js`:
 
-	```js
+	```javascript
 	// listen to the server for the `add-circle` event
 	socket.on('add-circle', function (data) {
 	  // console.log(data);
@@ -598,7 +598,7 @@ Set aside your fears and:
 
 - Define the `players` object to hold player's initials in `io.js`:
 
-	```js
+	```javascript
 	const io = require('socket.io')();
 	
 	// object to hold player's initials as keys
@@ -607,7 +607,7 @@ Set aside your fears and:
 
 - Set up the listener for the `register-player` message in which we will take care of business:
 
-	```js
+	```javascript
 	io.on('connection', function (socket) {
 	  // new code below
 	  socket.on('register-player', function (initials) {
@@ -622,7 +622,7 @@ Set aside your fears and:
 
 - Set up the listener for when the player disconnects. Add this along with the other listeners:
 
-	```js
+	```javascript
 	socket.on('disconnect', function () {
 	  delete players[socket.id];
 	  io.emit('update-player-list', Object.values(players));
@@ -640,7 +640,7 @@ Set aside your fears and:
 
 - After the player has entered their initials, emit the `register-player` message, sending the initials as data.  In `app.js`:
 
-	```js
+	```javascript
 	...
 		
 	  do {
@@ -655,7 +655,7 @@ Set aside your fears and:
 
 - Let's cache the players &lt;ul&gt; element into a `const`:
 
-	```js
+	```javascript
 	...
 		
 	const circles = document.getElementById('circles');
@@ -668,7 +668,7 @@ Set aside your fears and:
 
 - Add the listener for the `update-player-list` event:
 	
-	```js
+	```javascript
 	...
 		
 	// listen for when the player list has changed

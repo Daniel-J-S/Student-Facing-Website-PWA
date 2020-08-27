@@ -34,7 +34,7 @@ Copy the exercises below into the included **script.js** file and code away!
 
 **Please note:** ***You will most likely need to comment out the `console.logs` for the exercises you've yet to complete to avoid getting a*** **<span style="color: crimson;">Reference Error</span>**
 
-```js
+```javascript
 /*
 Exercise 1:
   - Define an empty array named foods

@@ -223,7 +223,7 @@ intro-to-dom/
 
 - The `getElementById` method is the most efficient way to select a DOM element if it has an `id` assigned to it.
 
-	```js
+	```javascript
 	let titleEl = document.getElementById('title');
 	console.log(titleEl);
 	```
@@ -324,7 +324,7 @@ intro-to-dom/
 
 - This is how we can set the `text-align` CSS property of our title:
 
-	```js
+	```javascript
 	let titleEl = document.getElementById('title');
 	titleEl.style.textAlign = 'center';
 	```
@@ -486,7 +486,7 @@ intro-to-dom/
 
 - Let's type this `for...of` loop in the console to log each element:
 
-	```js
+	```javascript
 	for(let commentEl of commentEls) {
 		console.log(commentEl);
 	}

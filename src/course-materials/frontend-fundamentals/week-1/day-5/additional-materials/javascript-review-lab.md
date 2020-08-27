@@ -21,7 +21,7 @@ To answer these questions, you can add them in a multiline comment section insid
 
 > like this:
 
-```js
+```javascript
 /*
 1. How do we assign a value to a variable? A. With the assignment operator
 2. How do we change the value of a...
@@ -60,7 +60,7 @@ For all other questions that involve writing code, you can solve them via the fo
 ### C. Booleans
 - Using the provided variable definitions, replace the blanks so that all log statements print `true` in the console. Answers should be all be valid JS syntax and not weird things that don't make sense but happen to print `true` to the console
 
-```js
+```javascript
   const a = 4;
   const b = 53;
   const c = 57;

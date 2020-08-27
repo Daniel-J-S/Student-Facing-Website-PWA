@@ -194,7 +194,7 @@ The express generator provides us with the `express` command, then we simply pro
 
 - Assuming we are going to require the following controller within _routes/api.js_
 
-```js
+```javascript
 var puppiesCtrl = require('../controllers/api/puppies');
 ```
 	
@@ -216,7 +216,7 @@ Let's create the routes for these actions:
 
 - This is how we can do it:
 
-```js
+```javascript
 function index(req, res) {
 	Puppy.find({}, function(err, puppies) {
 		res.status(200).json(puppies);
@@ -277,7 +277,7 @@ function index(req, res) {
 
 - Let's use the following code to implement `puppiesCtrl.update`:
 
-	```js
+	```javascript
 	function update(req, res) {
 	  Puppy.findByIdAndUpdate(
 	    req.params.id,
@@ -337,13 +337,17 @@ function index(req, res) {
 
 - Install the [CORS](https://www.npmjs.com/package/cors) module:
 
-	```
-	$ npm install cors
-	```
+
+
+```bash
+$ npm install cors
+```
+
+
 
 - Then we simply have to mount the middleware in **app.js**:
 
-	```js
+	```javascript
 	var cors = require('cors');
 	...
 	var app = express();

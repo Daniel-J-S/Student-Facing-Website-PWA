@@ -291,7 +291,7 @@ How about a small custom middleware that relieves us from having to pass `user: 
 
 Just add the following in `server.js` BELOW the two `app.use(passport...)` middleware:
 
-```js
+```javascript
 // Add this middleware BELOW passport middleware
 app.use(function (req, res, next) {
   res.locals.user = req.user;

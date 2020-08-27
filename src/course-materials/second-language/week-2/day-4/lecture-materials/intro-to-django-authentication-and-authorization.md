@@ -146,13 +146,16 @@ However, there will now be a FK constraint on cats, which means that every cat r
 
 Here we go:
 
-```
+
+```shell
 $ python3 manage.py makemigrations
 ```
 
 Which then presents us with this message:
 
-```
+
+
+```shell
 You are trying to add a non-nullable field 'user' to cat without a default;
 we can't do that (the database needs something to populate existing rows).
 Please select a fix:
@@ -161,11 +164,16 @@ Please select a fix:
 Select an option:
 ```
 
+
+
+
 Option `1)` is our best option because it will allow us to enter the `id` of a user, which we created earlier this week (the superuser).
 
 Go ahead and press `1` and `[enter]`, which will then prompt us to enter the value:
 
-```
+
+
+```shell
 Please enter the default value now, as valid Python
 The datetime and django.utils.timezone modules are available,
 so you can do e.g. timezone.now
@@ -177,7 +185,9 @@ Our superuser's `id` should be `1`, so type `1` and press `[enter]`.
 
 The migration file will then be created.  Let's migrate the changes:
 
-```
+
+
+```shell
 $ python3 manage.py migrate
 ```
 
@@ -237,13 +247,17 @@ As we just saw, the default `LoginView` is trying to render a **registration/log
 
 Let's get rid of the error by first creating the folder (make sure "registration" is spelled correctly):
 
-```
+
+
+```shell
 $ mkdir main_app/templates/registration
 ```
 
 Now create **login.html**:
 
-```
+
+
+```shell
 $ touch main_app/templates/registration/login.html
 ```
 
@@ -508,7 +522,7 @@ Now that we know the URL, we can add a **Sign Up** link to the nav in **base.htm
 
 As a start, let's copy the **login.html** file as **signup.html**
 
-```
+```shell
 $ cp main_app/templates/registration/login.html main_app/templates/registration/signup.html
 ```
 
