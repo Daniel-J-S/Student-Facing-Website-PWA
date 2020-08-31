@@ -1,5 +1,5 @@
 ---
-title: "index"
+title: "Home"
 ---
 
 # Welcome to Software Engineering Immersive (Remote)
@@ -64,7 +64,7 @@ Curriculum schedule and content is subject to change at the instructor's discret
 <br>
 <br>
 
-### Unit Four: Second Language (Locked)
+### [Unit Four: Second Language](/second-language)
 
 | Week  | Topics |
 | ----- | ------ |
