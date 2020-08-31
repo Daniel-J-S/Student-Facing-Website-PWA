@@ -8,6 +8,10 @@ type: "lecture"
 
 # Intro to Django One-to-Many Models
 
+<br>
+<br>
+<br>
+
 ## Learning Objectives
 
 | Students will be able to: |
@@ -17,6 +21,13 @@ type: "lecture"
 | Use a `ModelForm` to generate form inputs for a Model |
 | Assign the foreign key when creating a new "child" model instance |
 | Add a custom method to a Model |
+
+
+<br>
+<br>
+<br>
+
+
 
 ## Roadmap
 
@@ -32,17 +43,23 @@ type: "lecture"
 10. Essential Questions
 11. Bonus: Adding a Custom Method to Check the Feeding Status
 
+<br>
+<br>
+<br>
+
+
+
 ## Ready the Starter Code
 
 This lesson will pick up from where the last lesson left off.
 
-**Be sure to be inside of this lesson's `starter-code/catcollector` directory, NOT the `starter-code` directory** before you open VS Code with `code .`.
 
-Then you can start the web server with:
 
-```bash
-$ python3 manage.py runserver
-```
+<br>
+<br>
+<br>
+
+
 
 ## A Cat's Got to Eat!
 
@@ -59,6 +76,14 @@ Since a cat's got to eat, let's go with this relationship:
 	<p><strong>"A Cat has many Feedings" -and- "A Feeding belongs to a Cat"</strong></p>
 </details>
 
+
+<br>
+<br>
+<br>
+
+
+
+
 ## Add the New `Feeding` Model
 
 <details>
@@ -67,6 +92,14 @@ Since a cat's got to eat, let's go with this relationship:
 	</summary>
 	<p><strong>main_app/models.py</strong></p>
 </details>
+
+
+<br>
+<br>
+<br>
+
+
+
 
 #### Creating the basics for Model
 
@@ -80,6 +113,14 @@ class Feeding(models.Model):
 ```
 
 Note that we're going to use just a single character to represent what meal the feeding is for: **B**reakfast, **L**unch or **D**inner.
+
+
+<br>
+<br>
+<br>
+
+
+
 
 #### Field.choices
 
@@ -115,6 +156,14 @@ class Feeding(models.Model):
   )
 ```
 
+
+<br>
+<br>
+<br>
+
+
+
+
 #### Add the `__str__` Method
 
 As always, we should add a `__str__` method to Models so that they provide more meaningful output when they are printed:
@@ -130,6 +179,14 @@ class Feeding(models.Model):
 ```
 
 Check out the convenient `get_meal_display()` method Django automagically creates to access the human-friendly value of a Field.choice like we have on `meal`.
+
+
+<br>
+<br>
+<br>
+
+
+
 
 #### Add the Foreign Key
 
@@ -160,6 +217,15 @@ In a _one-to-many_ relationship, the `on_delete=models.CASCADE` is required.  It
 
 > In the database, the column in the `feedings` table for the FK will actually be called `cat_id` because Django by default appends `_id` to the name of the attribute we use in the Model.
 
+
+
+<br>
+<br>
+<br>
+
+
+
+
 ## Make and Run the Migration
 
 We added/updated a new Model, so it's that time again...
@@ -176,6 +242,14 @@ $ python3 manage.py makemigrations
 </details>
 
 After creating a Model, especially one that relates to another, it's always a good idea to test drive the Model and relationships in the shell.
+
+
+<br>
+<br>
+<br>
+
+
+
 
 ## Test the Models in the Shell
 
@@ -198,6 +272,13 @@ Now let's import everything _models.py_ has to offer:
 ```
 
 So far, so good!
+
+
+<br>
+<br>
+<br>
+
+
 
 #### May the Test Drive Commence
 
@@ -264,6 +345,14 @@ Now how much would you pay for that ORM?
 
 Behind the scenes, an enormous amount of SQL was being generated and sent to the database.
 
+
+<br>
+<br>
+<br>
+
+
+
+
 ## Don't Forget the Admin Portal
 
 Remember, before a Model can be CRUD'd using the built-in Django admin portal, the Model must be registered.
@@ -286,6 +375,14 @@ Now browse to `localhost:8000/admin` and click on the `Feeding` link.
 
 Check out those select drop-downs for assigning both the Meal and the Cat!
 
+
+<br>
+<br>
+<br>
+
+
+
+
 #### Custom Field Labels
 
 Let's say though that you would like a less vague label than **Date**.
@@ -305,6 +402,13 @@ Refresh and...
 <img src="https://i.imgur.com/KMKlEgA.png">
 
 What's cool is that the custom labels will be used in all of Django's ModelForms too!
+
+
+<br>
+<br>
+<br>
+
+
 
 ## Displaying a Cat's Feedings
 
@@ -366,6 +470,14 @@ A refresh results in this:
 
 <img src="https://i.imgur.com/J7H9yiE.png">
 
+
+<br>
+<br>
+<br>
+
+
+
+
 ## Adding New Feeding Functionality
 
 Now we want to add the capability to add a new feeding when viewing a cat's details.
@@ -384,17 +496,21 @@ Because we want to be able to show a form for adding a feeding on the _detail_ p
 
 There's several steps we're going to need to complete, so let's get started...
 
+
+
+<br>
+<br>
+<br>
+
+
+
 #### Create the ModelForm for the `Feeding` Model
 
 We could define the ModelForm inside of the _models.py_ module, but we're going to follow a best practice of defining it inside of a _forms.py_ module instead:
 
-
-
-```shell
+```bash
 $ touch main_app/forms.py
 ```
-
-
 
 Let's open it and add this code:
 
@@ -413,6 +529,13 @@ Note that our custom form inherits from `ModelForm` and has a nested `class Meta
 Many of the attributes in the `Meta` class are in common with CBVs because the CBV was using them behind the scenes to create a ModelForm as we've already mentioned.
 
 For more options, check out the [Django ModelForms documentation](https://docs.djangoproject.com/en/2.1/topics/forms/modelforms/#modelform).
+
+
+<br>
+<br>
+<br>
+
+
 
 #### Passing an Instance of `FeedingForm`
 
@@ -439,6 +562,13 @@ def cats_detail(request, cat_id):
 ```
 
 `feeding_form` is set to an instance of `FeedingForm` and then it's passed to _detail.html_ just like `cat`.
+
+
+<br>
+<br>
+<br>
+
+
 
 #### Displaying `FeedingForm` Inside of **detail.html**
 
@@ -477,6 +607,13 @@ Unfortunately, the _Feeding Date_ field is just a basic text input. This is what
 
 Also, we don't see a drop-down for the _Meal_ field as expected.  However, it's in the HTML, but it's not rendering correctly due to the use of Materialize.
 
+
+<br>
+<br>
+<br>
+
+
+
 ##### Add Materialize's JavaScript Library
 
 Luckily we can use Materialize to solve both problems. However, solving the problems will require that we include Materialize's JavaScript library and add a bit of our own JavaScript to "initialize" the inputs.
@@ -494,6 +631,12 @@ First, update _base.html_ to include the Materialize JS library:
 ```
 
  
+ <br>
+ <br>
+ <br>
+
+
+
 ##### Using a Date-picker for _Feeding Date_
 
 Okay now let's make the `<input>` for _Feeding Date_ a sweet date-picker using Materialize.
@@ -522,7 +665,7 @@ Using Materialize, it takes two steps to get the inputs the way we want them:
 Now let's add the JS to inside of the `<script>` tags to initialize the date-picker:
 
 
-```javascript
+```js
 </div>
 
 <script>
@@ -583,6 +726,13 @@ Refresh and the _Meal_ `<select>` is looking good:
 
 Now with the UI done, let's think about the URL to `POST` the form to...
 
+
+<br>
+<br>
+<br>
+
+
+
 #### Add Another `path(...)` to `urls.py`
 
 Every `Feeding` object needs a `cat_id` that holds the primary key of the cat object that it belongs to.
@@ -599,6 +749,13 @@ urlpatterns = [
 ```
 
 The above route is basically saying that the `<form>`'s **action** attribute will need to look something like `/cats/2/add_feeding`. Let's go there now...
+
+<br>
+<br>
+<br>
+
+
+
 
 #### Add the `action` Attribute to the `<form>`
 
@@ -623,6 +780,13 @@ If the URL requires values for named parameters such as `<int:cat_id>`, the `url
 > Note that arguments provided to template tags are always separated using a space character, not a comma. 
 
 We won't be able to refresh and check it out until we add the `views.add_feeding` function...
+
+
+<br>
+<br>
+<br>
+
+
 
 #### Add the `views.add_feeding` View Function to `views.py`
 
@@ -695,21 +859,37 @@ class Feeding(models.Model):
     ordering = ['-date']
 ```
 
+<br>
+<br>
+
+
 Feed the cats!
 
 Be sure to check out the BONUS section on your own.
 
 Let's wrap up with a few questions...
 
-## ❓ Essential Questions
 
-Take a moment to review, then on to the student picker!
+<br>
+<br>
 
-**1. When two Models have a one-many relationship, which Model must include a field of type `models.ForeignKey`, the one side, or the many side?**
+## Essential Questions
 
-**2. What are `ModelForm`s used for?**
 
-**3. What technique did we use to pass the `id` of the cat to the `add_feeding` _view function_?** 
+**❓ When two Models have a one-many relationship, which Model must include a field of type `models.ForeignKey`, the one side, or the many side?**
+
+
+**❓ What are `ModelForm`s used for?**
+
+
+**❓ What technique did we use to pass the `id` of the cat to the `add_feeding` _view function_?** 
+
+
+<br>
+<br>
+<br>
+
+
 
 ## BONUS: Adding a Custom Method to Check the Feeding Status
 
@@ -719,13 +899,33 @@ This approach is referred to as "fat models / skinny views" and results in keepi
 
 We're going to add a custom method to the `Cat` Model that help's enable the following messaging based upon whether or not the cat has had at least the number of feedings for the current day as there are MEALS.
 
+<br>
+<br>
+
+
+
 When a cat does not have at least the number of MEALS: 
 
 <img src="https://i.imgur.com/3TEZ8nl.png">
 
+<br>
+<br>
+
 And when the cat has been completely fed for the day:
 
+<br>
+<br>
+
+
+
 <img src="https://i.imgur.com/E1yCDHr.png">
+
+
+<br>
+<br>
+<br>
+
+
 
 #### The `fed_for_today` Custom Model Method
 
@@ -755,6 +955,13 @@ len( self.feeding_set.filter(date=date.today()) )
 ```
 because this code would return all objects from the database when all we need is the number of objects returned by `count()`. In other words, don't return data from the database if you don't need it.
 
+
+<br>
+<br>
+<br>
+
+
+
 #### Update the **detail.html** Template
 
 All that's left is to sprinkle in a little template code like this:
@@ -780,8 +987,17 @@ All that's left is to sprinkle in a little template code like this:
 
 ```
 
+<br>
+<br>
+<br>
+
+
 
 Congrats on using a custom Model method to implement business logic!
+
+<br>
+<br>
+
 
 ## Resources
 
