@@ -1,5 +1,5 @@
 ---
-title: "index"
+title: "Home"
 ---
 
 # Welcome to Software Engineering Immersive (Remote)
