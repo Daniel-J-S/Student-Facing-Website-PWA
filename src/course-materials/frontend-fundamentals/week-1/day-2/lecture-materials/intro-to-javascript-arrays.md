@@ -7,8 +7,9 @@ type: "lecture"
 ---
 
 # JavaScript Arrays
-<br>
 
+
+<br>
 <br>
 <br>
 
