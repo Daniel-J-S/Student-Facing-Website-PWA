@@ -8,6 +8,10 @@ type: "lecture"
 
 # Exploring Markdown 
 
+<br>
+<br>
+<br>
+
 ## Intro
 
 For this activity you will practice researching and learning _markdown_
