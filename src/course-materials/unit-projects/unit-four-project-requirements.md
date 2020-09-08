@@ -8,29 +8,37 @@ topics: "Unit Projects"
 
 # Project 4:<br>Build a Full-stack Django App as a Team
 
-### Overview
+<br>
+<br>
+<br>
 
-You’ve already worked in small groups to accomplish various labs and exercises, but this time **we’re going to challenge you to work in a small team on a project.**
+
+### Overview
 
 You and your teammates together will architect, design, and collaboratively build a full-stack web app.
 
 With this project you'll be building an exciting full-stack app that uses the **Python**-based **Django Web Framework**.
-
-**This project will push you both technically and collaboratively!**
-
-You'll likely be working as part of a team in the workplace and **this project will provide you with that important team development experience.**
-
-However, working on a project as part of a team can be more challenging due to logistical reasons, differing opinions, etc.
 
 During this project, your instructors are going to be evaluating **your ability to listen to and respect other opinions; to share and contribute your ideas with the team; and form a consensus and compromise when opinions differ**.
 
 In fact, **your ability to work in a team during this project is more important to your instructors than the project itself**.
 
 
+<br>
+<br>
+<br>
+
+
 
 ## Planning & Presentation Requirements
 
 Working in a team is going to require more upfront planning to ensure the team is "on the same page"...
+
+
+<br>
+<br>
+<br>
+
 
 #### Pitch Deck
 
@@ -40,6 +48,12 @@ Working in a team is going to require more upfront planning to ensure the team i
 - Your team members and their roles.
 - The problem you are going to solve with your app.
 - Check out previous decks: [Meal Ticket](https://docs.google.com/presentation/d/1CsBuC-a_AZ1yXJEE-EbptPIdgj1MktiNALyQyhaFfrM/edit#slide=id.p), [Tripio](https://docs.google.com/presentation/d/1gvOypLc4VjKqJzdAW68iwh28uGDSH4Sp1KnA5grDo2g/edit#slide=id.p), [Pantry](https://docs.google.com/presentation/d/1WvHoN5MNaRembgcoog5p0GtivVCOZSzvfPyeevzy08g/edit), [ArtWorld](https://docs.google.com/presentation/d/1yGy2Mh3n6IhPxFu4XKnnMtPPi4OGFPpf-Z_TMYw6wQY/edit#slide=id.g7ba109823e_2_7)
+
+
+<br>
+<br>
+<br>
+
 
 #### Trello Board
 
@@ -57,6 +71,12 @@ Working in a team is going to require more upfront planning to ensure the team i
     ☐ **Wireframes of the main pages of functionality**, e.g. Landing Page, Posts Index Page, Favorite Posts Page, Add Post Page, etc.
     
     ☐ An **ERD** showing the attributes of each entity and the relationships between them. Refer to the Data Modeling lesson for assistance.
+
+
+<br>
+<br>
+<br>
+
 
 ### Presentations
 
@@ -95,8 +115,17 @@ You will have approximately 15 minutes to present your project following these g
 5. **Q & A + Feedback**
 
 
+<br>
+<br>
+<br>
+
 
 ## Technical Requirements
+
+<br>
+<br>
+
+
 
 ### Your App Must:
 
@@ -110,9 +139,20 @@ You will have approximately 15 minutes to present your project following these g
 
 ☐ Be **deployed online** using **Heroku**.
 
+<br>
+<br>
+<br>
+
+
 #### The app may optionally:
 
 ☐ Consume data from a third-party API.
+
+<br>
+<br>
+<br>
+
+
 
 ### Workflow:
 
@@ -132,6 +172,11 @@ You will have approximately 15 minutes to present your project following these g
 - A link to your **Trello** board that contains your **user stories**, **ERD**, and **wireframes**.
 - A link to your **deployed app on Heroku**.
 - Description of any **future enhancements** planned.
+
+<br>
+<br>
+<br>
+
 
 
 
@@ -169,6 +214,11 @@ You will have approximately 15 minutes to present your project following these g
 9. Consider following a [Mob Programming](https://en.wikipedia.org/wiki/Mob_programming) approach where the team is always developing together on a single computer.  Read [this post](http://underthehood.meltwater.com/blog/2016/06/01/mob-programming/) for more information.
 
 
+<br>
+<br>
+<br>
+
+
 
 ## Potential Project Ideas
 
@@ -176,6 +226,9 @@ You will have approximately 15 minutes to present your project following these g
 - For this project, we want you to work with your team to build a creative product or one that improves on an existing app.
 - One of the best questions to ask yourself is, "Why would I want to use this app?"
 
+<br>
+<br>
+<br>
 
 
 ## Obtaining Assistance from an Instructor
@@ -184,6 +237,10 @@ You will have approximately 15 minutes to present your project following these g
 
 - **All requests for assistance should be slacked to the class support channel, not individual instructors**.  This approach will provide the best and quickest response for your team, as well as be helpful to other teams that may be faced with the same issue.
 
+
+<br>
+<br>
+<br>
 
 
 ## Project Feedback + Evaluation
