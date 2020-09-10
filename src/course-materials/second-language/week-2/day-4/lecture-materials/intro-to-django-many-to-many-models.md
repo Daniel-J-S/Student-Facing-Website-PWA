@@ -199,7 +199,7 @@ We're ready to test drive the new relationship!
 
 
 
-#### Open the Interactive Sheel
+#### Open the Interactive Shell
 
 We'll use the shell to check out the `Cat >--< Toy` relationship:
 
@@ -209,8 +209,8 @@ $ python3 manage.py shell
 
 Now let's import everything from **models.py**:
 
-```bash
-$ from main_app.models import *
+```python
+>>> from main_app.models import *
 ```
 
 <br>
