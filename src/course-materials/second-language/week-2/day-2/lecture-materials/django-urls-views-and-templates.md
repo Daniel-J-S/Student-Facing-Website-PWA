@@ -8,9 +8,18 @@ type: "lecture"
 
 # Django URLs, Views & Templates
 
+
+
 <br>
 <br>
+
+[Click here](https://generalassembly.zoom.us/rec/share/D49zPclNYnvuJ9DfI1m6bgKo2zmvtvUdtW4WyyDgy_pL0703kgnX-voKOpkURWo6.Z2Uyk6uyv0sTXMKk?startTime=1599582342000) to access recording
+
 <br>
+<br>
+
+
+
 
 
 ## Learning Objectives
