@@ -8,9 +8,18 @@ type: "lecture"
 
 # Intro to Django One-to-Many Models
 
+
 <br>
 <br>
+
+[Click here](https://generalassembly.zoom.us/rec/share/fCY3DoHALlX8GMfT4hqmHV-uppFLj5VZ817Qu_-j9EAqcRR3Hy_fNtdDcMDcLdZc.ptvZccgNQ9IBSPXk?startTime=1599753938000) to access recording
+
 <br>
+<br>
+
+
+
+
 
 ## Learning Objectives
 
