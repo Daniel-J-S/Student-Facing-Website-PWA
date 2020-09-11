@@ -9,6 +9,14 @@ type: "lecture"
 # Uploading Images to Amazon S3
 
 
+
+<br>
+<br>
+<br>
+
+
+
+
 ## Learning Objectives
 
 | Students will be able to: |
@@ -16,6 +24,13 @@ type: "lecture"
 | Set up Amazon S3 to hold an app's uploaded images |
 | Use an HTML `<form>` to send a file to the server |
 | Upload a file to S3 from the server |
+
+
+<br>
+<br>
+<br>
+
+
 
 ## Roadmap
 
@@ -29,6 +44,13 @@ type: "lecture"
 8. Test it Out!
 9. Check it Out in Admin
 
+
+<br>
+<br>
+<br>
+
+
+
 ## Intro
 
 Many applications we develop benefit from the ability of its users being able to upload and display images.
@@ -37,23 +59,24 @@ For example, an application that tracks a user's hikes would allow the user to u
 
 This lesson will cover how to add this ability to your Django project should you choose to.
 
+
+<br>
+<br>
+<br>
+
+
+
 ## Ready the Starter Code
 
 This lesson's starter code picks up from the many-to-many models lesson.
 
-If your many-to-many code is working, you can continue working with that codebase, however, it is recommended that you work with the starter code provided with this lesson.
+However, in case your source code is not functioning or if you've misplaced it, you can <a href="/downloads/second_language/uploading-images-to-aws-s3-with-django/starter-code/catcollector.zip" download>download</a> a fresh copy for this lesson.
 
-The starter code is located in this lesson's `/starter-code/catcollector` directory.
 
-**Be sure to be inside of the catcollector directory** before you open VS Code with `code .`.
+<br>
+<br>
+<br>
 
-**Be sure that no other Django server is running!**
-
-Once inside the **catcollector** directory, spin up the Django development server:
-
-```bash
-$ python3 manage.py runserver
-```
 
 ## Set up Amazon S3
 
@@ -62,6 +85,13 @@ AWS (Amazon Web Services) is a cloud platform offering a slew of web services su
 You can see all of the services available by clicking here [Amazon AWS](https://aws.amazon.com/).
 
 The specific web service we are going to use to host our uploaded images is the _Simple Storage Service_, better known as **Amazon S3**.
+
+
+<br>
+<br>
+<br>
+
+
 
 ### Set up an Amazon AWS Account
 
@@ -73,6 +103,13 @@ Click the orange "Sign in to the Console" button, then click "Create a new AWS a
 
 Unfortunately, the signup process is a bit lengthy...
 
+
+<br>
+<br>
+<br>
+
+
+
 ### Sign in to the AWS Console
 
 After you have signed up, log in to the Console.
@@ -83,49 +120,123 @@ The first thing we're going to do is create access keys to access S3 with.
 
 We will be obtaining two keys: An **Access Key ID** and a **Secret Access Key**.
 
+<br>
+<br>
+<br>
+
+
+
 Locate the "Security, Identity & Compliance" section and click **IAM**:
 
 <img src="https://i.imgur.com/2pAZLVG.png">
+
+<br>
+<br>
+<br>
+
+
 
 Click "Users" in the sidebar:
 
 <img src="https://i.imgur.com/oyZtir7.png">
 
+<br>
+<br>
+<br>
+
+
 Click the "Add user" button:
 
 <img src="https://i.imgur.com/HEMERzW.png">
+
+<br>
+<br>
+<br>
+
 
 Enter a user name and select "Programmatic access":
 
 <img src="https://i.imgur.com/PVvaMCt.png">
 
+<br>
+<br>
+<br>
+
+
+
 Click the "Next: Permissions" button.
+
+<br>
+
 
 Now we need to create a group that will have S3 permissions.
 
+
+<br>
+
+
+
 Click the "Create group" button.
+
+<br>
 
 Enter a "Group name" - `django-s3-assets` is fine. Then scroll way down and select the "AmazonS3FullAccess" checkbox:
 
 <img src="https://i.imgur.com/ZcGlCxo.png">
 
+
+<br>
+<br>
+<br>
+
+
+
 Click the "Create group" button (bottom-right).
 
 Click the "Next: Review" button (bottom-right).
+
+
+<br>
+<br>
 
 Then click the "Create user" button (bottom-right):
 
 <img src="https://i.imgur.com/offHztR.png">
 
+<br>
+<br>
+
 Copy both access keys to a safe place - we'll need them later in the lesson.
 
+<br>
+
+
 Click the "Close" button (bottom-right).
+
+<br>
+<br>
+
+
+
+
 
 Now click the "Services" drop-down (top-left):
 
 <img src="https://i.imgur.com/fs8ZZOs.png">
 
+
+<br>
+<br>
+
+
 Click the `S3` link under the "Storage" section.
+
+
+<br>
+<br>
+<br>
+
+
 
 ### Create an S3 Bucket for the `catcollector` App
 
@@ -137,19 +248,40 @@ Let's click the blue button to get started:
 
 <img src="https://i.imgur.com/ux61Yn0.png">
 
-You'll have to enter a **globally unique** _Bucket name_. I'm willing to sell "catcollector" to the highest bidder :)
+<br>
+<br>
+<br>
+
+
+
+You'll have to enter a **globally unique** _Bucket name_. 
 
 Then select the nearest _Region_ as follows:
 
 <img src="https://i.imgur.com/pgQHKMB.png">
 
-For the best performance, always be sure to select the nearest location to where most of your users will be.  For this lesson, be sure to select the Region nearest you.
+
+<br>
+<br>
+<br>
+
+
+
+For the best performance, always be sure to select the nearest location to where most of your users will be.  
+
+For this lesson, be sure to select the Region nearest you.
 
 Click the **Next** button (bottom-right of popup) - **TWICE** to get to this screen:
 
 <img src="https://i.imgur.com/z5FAnTV.png">
 
+
 Be sure to unselect all four checkboxes as shown above.
+
+<br>
+<br>
+<br>
+
 
 Click **Next**, then a new screen will appear where you will click the **Create Bucket** button!
 
@@ -209,9 +341,15 @@ Congrats!  You now have an S3 bucket that, using the access keys, an application
 
 Now let's get on with the app!
 
+<br>
+<br>
+<br>
+
+
+
 ### Install & Configure - Boto 3
 
-#### Install `boto3`
+**Install:**
 
 The official Amazon AWS SDK (Software Development Kit) for Python is a library called _Boto 3_.
 
@@ -221,15 +359,25 @@ Let's install it:
 $ pip3 install boto3
 ```
 
-#### Configure Credentials
+<br>
+<br>
+<br>
+
+
+**Configure**
+
 
 <p style="color:red">Do not ever put your Amazon AWS, or any other secret keys, in your source code!</p>
 
 If you do, and push your code to GitHub, it will be discovered within minutes and could result in a major financial liability!
 
-Have I scared you? Good...
+Have we scared you? Good...
 
 During development (not in a deployed app), boto3 will automatically look in a special file for your AWS keys.
+
+<br>
+<br>
+
 
 First let's create the folder it needs:
 
@@ -237,25 +385,37 @@ First let's create the folder it needs:
 $ mkdir ~/.aws
 ```
 
+<br>
+<br>
+
+
 Now let's create the file:
 
 ```bash
 $ touch ~/.aws/credentials
 ```
+
+<br>
+<br>
+
 Note that there is no file extension on the _credentials_ file.
+
+
+<br>
+<br>
+
 
 Now let's open it and put our keys in there:
 
-
-
-```shell
+```bash
 $ code ~/.aws/credentials
 ```
 
+<br>
+<br>
+
 
 Then type the following in the file, substituting your real keys:
-
-
 
 ```bash
 [default]
@@ -265,7 +425,15 @@ aws_secret_access_key=YOUR_SECRET_KEY
 
 > If you use AWS S3 in your project 3 - when deploying your projects next week, you will need to set these same keys on Heroku using `heroku config:set`, however, **the key names will need to be CAPITALIZED when setting them on Heroku**.
 
+<br>
+<br>
+<br>
+
+
 ## Add a `Photo` Model
+
+<br>
+
 
 #### The Relationship
 
@@ -297,6 +465,10 @@ class Photo(models.Model):
 
 Nice and simple!
 
+<br>
+<br>
+
+
 > **Reminder:** If a Model "belongs to" another Model, it must have a foreign key. More than one "belongs to" relationship - means more than one foreign key. 
 
 <details>
@@ -308,6 +480,10 @@ Nice and simple!
 	<code>$ python3 manage.py migrate</code>
 	</p>
 </details>
+
+<br>
+<br>
+
 
 ## Add the `add_photo` URL
 
@@ -327,9 +503,17 @@ urlpatterns = [
 
 Pretty much like the `add_feeding` route!
 
+<br>
+
 Notice once again, we're going to capture the cat's `id` using a URL parameter named `cat_id`.
 
 The server currently shows an error because we've referenced an `add_photo` _view function_ that doesn't exist.  Let's take care of that next...
+
+
+<br>
+<br>
+<br>
+
 
 ## Add the `add_photo` View Function
 
@@ -361,11 +545,18 @@ from .models import Cat, Toy, Photo
 
 Next, we're going to define a couple of variables we'll use in the _view function_.
 
+<br>
+<br>
+
 First, find the **endpoint** for your the **region** you selected when you created the bucket on the following list: 
 
 <img src="https://i.imgur.com/fQ6Nxpa.png">
 
 > The above screenshot came from this [AWS Regions and Endpoints reference](https://docs.aws.amazon.com/general/latest/gr/rande.html)
+
+<br>
+<br>
+<br>
 
 Use the format of the endpoint below as a guide on how to enter yours.
 
@@ -378,6 +569,10 @@ BUCKET = 'catcollector'
 ```
 
 **Make sure that you use YOUR S3 bucket name instead of `catcollector`.**
+
+<br>
+<br>
+<br>
 
 We'll be using `S3_BASE_URL`, `BUCKET` and a randomly generated key to build a unique URL used for uploading to Amazon S3 and for saving in the `url` attribute or each `Photo` instance.
 
@@ -408,6 +603,11 @@ def add_photo(request, cat_id):
 
 On to the UI...
 
+<br>
+<br>
+<br>
+
+
 ## Update the _details.html_ Template
 
 We're going to need to update the _details.html_ template to:
@@ -415,6 +615,11 @@ We're going to need to update the _details.html_ template to:
 - Display each image beneath the cat's detail "card" (left column).
 - Show a "No Photos Uploaded" message if there are no images for the cat.
 - Show a form below the images used to upload photos.
+
+
+<br>
+<br>
+
 
 #### Display Cat Images
 
@@ -435,6 +640,9 @@ We're going to use Django's nifty `for...empty` template tags to iterate through
 
 
 > The `for...empty` template tags avoid having to wrap a `for...in` loop with an `if...else` like we did earlier to display a "No Toys" message.
+
+<br>
+<br>
 
 Let's see how it looks:
 
@@ -470,6 +678,12 @@ For example, to check the length, you can use the `length` filter like this:
 
 Filters can also be used to transform/format data, e.g., 
 
+
+<br>
+<br>
+<br>
+
+
 #### Form for Uploading Photos
 
 Okay, let's code a `<form>` that we can use to upload files to the server:
@@ -502,6 +716,10 @@ Another refresh:
 
 Looking good...
 
+<br>
+<br>
+
+
 ## Test it Out!
 
 Try uploading your favorite cat pic.
@@ -509,6 +727,13 @@ Try uploading your favorite cat pic.
 Success!
 
 <img src="https://i.imgur.com/lspm2S1.png">
+
+
+<br>
+<br>
+<br>
+
+
 
 ## Check it Out in Admin
 
@@ -535,7 +760,18 @@ You'll see something like this:
 
 Note how the photo's url is formed.
 
+
+<br>
+<br>
+<br>
+
+
 #### Congrats on uploading files to Amazon S3!
+
+<br>
+<br>
+
+
 
 ## Resources
 
