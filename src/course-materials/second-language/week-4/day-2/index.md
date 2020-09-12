@@ -4,10 +4,12 @@ title: "Day 2"
 week: 4
 day: 2
 type: "homepage"
-topics: "Graduation!"
+topics: "Project Presentations and Graduation!"
 ---
 
 
 # Week 4 - Day 2
 
-#### Graduation!
+#### Project Presentations and Graduation!
+
+
