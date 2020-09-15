@@ -10,9 +10,18 @@ type: "walk-thru"
 
 # Deploying a Django App to Heroku
 
+
+
 <br>
 <br>
+
+[Click here](https://generalassembly.zoom.us/rec/share/nKz6qA8hM2WZ49nVadJjm6fLXS9Qsch2UmSsuZg9sQqYSNKWg3fAqutuTJyPCo_R.Olus9e_jJWRO5wgc?startTime=1600101821000) to access walk-thru recording
+
 <br>
+<br>
+
+
+
 
 
 

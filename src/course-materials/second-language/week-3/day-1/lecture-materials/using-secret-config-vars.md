@@ -9,6 +9,17 @@ type: "walk-thru"
 
 # Using "secret" config vars in Django
 
+<br>
+<br>
+
+[Click here](https://generalassembly.zoom.us/rec/share/nKz6qA8hM2WZ49nVadJjm6fLXS9Qsch2UmSsuZg9sQqYSNKWg3fAqutuTJyPCo_R.Olus9e_jJWRO5wgc?startTime=1600100641000) to access walk-thru recording
+
+<br>
+<br>
+
+
+
+
 If you need to use secret keys in your Django project for API access, etc., here’s an approach very similar to what we did in Express:
 
 1. `$ pip3 install django-environ`
