@@ -2,25 +2,19 @@
 title: "Home"
 ---
 
-# Welcome to Software Engineering Immersive (Remote)
+# Welcome to Software Engineering Immersive Remote (SEIR)
 
-This website contains assignments and materials for General Assembly's Software Engineering Immersive Program. All material and the following schedule is subject to change at Instructors discretion.
+This website contains assignments and materials for General Assembly's SEIR Program. 
+
 
 <br>
-<br>
-
-
-## Current Schedule
-
-<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23D50000&amp;ctz=America%2FChicago&amp;src=Z2VuZXJhbGFzc2VtYi5seV9zcTVmZzVvdWxnZGhtZGNwZGs3M2lhZWlyY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23D50000&amp;showTabs=0&amp;mode=WEEK" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-
 <br>
 <br>
 
 
 ## Curriculum Overview
 
-Curriculum schedule and content is subject to change at the instructor's discretion.
+All material is subject to change at Instructors discretion.
 
 
 <br>

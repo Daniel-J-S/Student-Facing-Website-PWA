@@ -43,10 +43,14 @@ export default({ data, location }) => {
             <main>
               <h2>Week 1</h2>  
               { weekOneLessons }
-             <hr />
+              <br />
+              <hr />
+              <br />
               <h2>Week 2</h2>  
               { weekTwoLessons }
+              <br />
               <hr />
+              <br />
               <h2>Project Week</h2>  
               { weekThreeLessons }
             </main>

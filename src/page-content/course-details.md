@@ -1,6 +1,14 @@
+---
+title: "Course Details"
+---
+
 # Course Details
 
 <hr>
+
+<br>
+<br>
+<br>
 
 ## Graduation Requirements
 
@@ -8,6 +16,9 @@ You will be required to meet 80% completion of homework assignments at the end o
 
 <br>
 <br>
+<br>
+
+
 
 ## Schedule and Holidays
 
@@ -19,6 +30,9 @@ You will be required to meet 80% completion of homework assignments at the end o
 
 <br>
 <br>
+<br>
+
+
 
 ## In Class
 * Before class:
@@ -43,10 +57,17 @@ You will be required to meet 80% completion of homework assignments at the end o
 
 <br>
 <br>
+<br>
+
+
 
 ## Communication
 
 <br>
+<br>
+<br>
+
+
 
 ##### Send us a message if:
 * You know in advance that you will be missing a class or multiple classes
@@ -63,6 +84,9 @@ You will be required to meet 80% completion of homework assignments at the end o
 
 <br>
 <br>
+<br>
+
+
 
 ## Course Overview
 Learn to code in JavaScript, the native language of the web used by developers the world over.
@@ -73,6 +97,9 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 
 <br>
 <br>
+<br>
+
+
 
 ## Lab/Homework Submission Procedure
 

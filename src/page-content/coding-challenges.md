@@ -1,6 +1,5 @@
 ---
-title: "coding-challenges"
-date: '2020-06-23'
+title: "Coding Challenges"
 ---
 
 # Coding Challenges
