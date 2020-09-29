@@ -5,7 +5,6 @@ title: "Course Details"
 # Course Details
 
 <hr>
-
 <br>
 <br>
 <br>
@@ -22,11 +21,11 @@ You will be required to meet 80% completion of homework assignments at the end o
 
 ## Schedule and Holidays
 
-- Start date: **06/29/2020**
-- End date: **09/22/2020**
-- Monday-Friday **9 am - 5 pm PST**  
+- Start date: **10/12/2020**
+- End date: **01/20/2021**
+- Monday-Friday **10 am - 6 pm EST**  
 - Office Hours: **TBT** 
-- Holidays: **07/04 & 09/07**
+- Holidays: **11/3, 11/11, 11/25, 11/26, 11/27, 12/24, 12/25, 12/28, 12/29, 12/30, 12/31, 1/1, 1/18**
 
 <br>
 <br>
@@ -50,10 +49,11 @@ You will be required to meet 80% completion of homework assignments at the end o
 
 | Name  | Role |
 | ----- | ----- |
+| Ira Herman  |  Lead Instructor 
 | Daniel Scott  |  Lead Instructor 
-| Morgan Pierson  |  Lead Instructor 
-| Melissa Young | Instructional Associate 
-| Joy Haugen | Outcomes Coach
+| Ayla Ex | Instructional Associate 
+| Aegean Thompson | Instructional Associate 
+| TBT | Outcomes Coach
 
 <br>
 <br>
@@ -108,7 +108,7 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 ### We will walk through this together the first time!
 
 * Depending on the assignment, your homework will be completed on [repl.it](https://repl.it/), [CodeSandbox](https://codesandbox.io/), or [GitHub](https://github.com/)
-* Fill out this [Google Form](https://forms.gle/vA1pSq6N5CkBDNHg9) with a link for that specific homework. It will be the same Google Form for each homework
+* Fill out this [Google Form](https://forms.gle/6kbz69CHAuY63JXc6) with a link for that specific homework. It will be the same Google Form for each homework
 * **Homework is due one week from the day it was assigned**
 * If homework is marked `incomplete`, you may be asked to re-submit it; a new timeline will be discussed how long you have to re-submit the homework
 
@@ -117,7 +117,7 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 
 ## Lesson Recordings
 
-Lessons will be recorded and embedded into the lesson material within 24-48 hours -- you can also view the entire playlist for this program [here](https://www.youtube.com/playlist?list=PLN8j7ZvmsikAdWOeg7bX-2OR2THlu4NpT)
+Lessons will be recorded and embedded as a link into the lesson material within 24-48 hours 
 <br>
 <br>
 

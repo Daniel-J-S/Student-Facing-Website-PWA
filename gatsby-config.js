@@ -5,10 +5,10 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'SEI-R 06/29',
+    title: 'SEIR "Curiosity" 10/12',
     author: 'DanielJS',
     currentYear: new Date().getFullYear(),
-    description: 'An interactive website for students currently enrolled in the General Assembly Software Engineering Immersive Program',
+    description: 'An interactive website for students currently enrolled in the General Assembly Software Engineering Immersive Remote Program',
     keywords: 'software engineer, software engineering, coding, javascript, html, css',
     navigationLinks: [
       {title: 'Home', slug: '/'},
@@ -17,7 +17,7 @@ module.exports = {
     ],
     homeworkSubmissionLink: {
       title: 'Submit Homework',
-      href: 'https://forms.gle/zboNDxW7v3jxKczw7'
+      href: 'https://forms.gle/XJ3RsQ85p8DbYAab9'
     }
   },
   plugins: [
