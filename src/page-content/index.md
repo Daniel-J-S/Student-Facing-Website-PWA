@@ -46,24 +46,24 @@ All material is subject to change at Instructors discretion.
 <br>
 <br>
 
-### [Unit Three: React Fundamentals](/react-fundamentals)
+### Unit Three: React Fundamentals
 
 | Week  | Topics |
 | ----- | ------ |
-| 7 | SPA Architecture, ReactJS Library & Client-side Routing (React)  |
-| 8 | Web Sockets, AJAX, Full-stack React & Token-based Authentication |
-| 9 | Project Week, Project Deployment to Heroku & CS Topics |
+| 7 | TBD |
+| 8 | TBD |
+| 9 | Project Week |
 
 
 <br>
 <br>
 
-### [Unit Four: Second Language](/second-language)
+### Unit Four: Second Language
 
 | Week  | Topics |
 | ----- | ------ |
-| 10  | Relational Databases & SQL, Fundamentals of Python & CS Topics |
-| 11  | Django Web Framework, Uploading Files to Amazon S3 & Username/Password Authentication |
-| 12  | Project Week, Project Deployment to Heroku & CS Topics |
+| 10  | TBD |
+| 11  | TBD |
+| 12  | Project Week |
 
 
