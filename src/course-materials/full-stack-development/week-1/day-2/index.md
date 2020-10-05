@@ -4,12 +4,11 @@ title: "Day 2"
 week: 1
 day: 2
 type: "homepage"
-topics: "Intro to Express Routers and Controllers"
+topics: "Election Day"
 ---
 
+# Week 1 - Day 1
 
-# Week 1 - Day 2
+#### There will be no class today in observance of Election Day
 
-#### Express Routers and Controllers
-- [**Lecture:** Intro to Express Routers and Controllers](/full-stack-development/week-1/day-2/lecture-materials/intro-to-express-routers-and-controllers/)
-- [**Lab:** Express Dev Skills Part 1 of 2](/full-stack-development/week-1/day-2/labs/express-dev-skills-part-1/) - **Parts 1 and 2 Are Deliverable**
+

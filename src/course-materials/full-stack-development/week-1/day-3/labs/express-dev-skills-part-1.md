@@ -2,7 +2,7 @@
 track: "Full-Stack Development"
 title: "Express Dev Skills Lab"
 week: 1
-day: 2
+day: 3
 type: "lab"
 ---
 
