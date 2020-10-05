@@ -10,9 +10,6 @@ type: "lecture"
 
 <br>
 <br>
-
-[Click here](https://generalassembly.zoom.us/rec/share/6uMuC7uhzTJLWJH203v8QpI-BpS0X6a8hiAW8vcOzB0BYrp8126TNY2n1jUqTesa?startTime=1593534530000) to access recording
-
 <br>
 <br>
 
@@ -28,6 +25,8 @@ type: "lecture"
 
 <br>
 <br>
+<br>
+
 
 ## Roadmap
 1. Intro to JavaScript
@@ -54,6 +53,8 @@ The popularity of JavaScript has grown with the growth of web-based applications
 
 <br>
 <br>
+<br>
+
 
 #### JavaScript's Role
 
@@ -65,6 +66,8 @@ The primary responsibility of JavaScript is to allow developers to implement beh
 
 <br>
 <br>
+<br>
+
 
 #### A Few Facts About JavaScript:
 
@@ -75,6 +78,8 @@ The primary responsibility of JavaScript is to allow developers to implement beh
 
 <br>
 <br>
+<br>
+
 
 #### Setup
 
@@ -401,11 +406,13 @@ Yay, we've covered all six data types!
 
 ## 4. Review Questions
 
-1) **Do all variables have a data type?**
+**❓ Do all variables have a data type?**
 
-2) **Is `var _save = '';` a valid statement?**
 
-3) **If a variable is not a string, number, boolean, null, undefined or a symbol, it must be an __________.**
+**❓ Is `var _save = '';` a valid statement?**
+
+
+**❓ If a variable is not a string, number, boolean, null, undefined or a symbol, it must be an __________.**
 
 <br>
 <br>
