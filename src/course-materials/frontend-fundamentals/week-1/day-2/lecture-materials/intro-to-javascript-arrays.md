@@ -12,11 +12,6 @@ type: "lecture"
 <br>
 <br>
 <br>
-
-[Click here](https://generalassembly.zoom.us/rec/share/6uMuC7uhzTJLWJH203v8QpI-BpS0X6a8hiAW8vcOzB0BYrp8126TNY2n1jUqTesa?startTime=1593555532000) to access recording
-
-
-<br>
 <br>
 
 
@@ -38,6 +33,7 @@ Students will be able to:
 - Copy All or Some of an Array
 - Create a Single String from an Array
 
+<br>
 <br>
 <br>
 
@@ -333,18 +329,22 @@ The `splice` method always returns an array containing the removed elements.
 ### Essential Questions
  
 
-- **In your own words, what's an array?**
+**❓ In your own words, what's an array?**
 
-- **What will be the value of the variable `color`:**
+**❓ What will be the value of the variable `color`:**
 
-	```javascript
-	const colors = ['red', 'green', 'blue'];
-	let color = colors[1];
-	```
+```javascript
+const colors = ['red', 'green', 'blue'];
+let color = colors[1];
+```
 
-- **What's the best method to use to iterate through an entire array?**
+<br>
+<br>
 
-- **What method is used to copy a number of elements into a new array?**
+
+**❓ What's the best method to use to iterate through an entire array?**
+
+**❓ What method is used to copy a number of elements into a new array?**
 
 	
 
