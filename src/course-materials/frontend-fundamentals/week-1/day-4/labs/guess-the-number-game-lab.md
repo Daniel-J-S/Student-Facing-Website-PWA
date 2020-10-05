@@ -33,9 +33,8 @@ This lab will provide you with practice working with JavaScript objects, plus so
 
 This lab builds upon the `game` object that was started in the Intro to JS Objects lesson.
 
-This lab is a **deliverable** - when completed, please use the [Google Form](https://forms.gle/zboNDxW7v3jxKczw7) to submit it to your instructional team.
+This lab is a **deliverable** 
 
-<br>
 <br>
 <br>
 
