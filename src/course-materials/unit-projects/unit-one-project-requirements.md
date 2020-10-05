@@ -14,7 +14,9 @@ topics: "Unit Projects"
 
 ## Attendance
 
-There are typically no classes taught during project periods with the exception of optional review time or bonus lectures. However, we still take normal attendance for scheduled classroom days that fall on project periods, so you are still expected to be virtually present in our usual Zoom call. 
+There are typically no classes taught during project periods with the exception of optional review time or bonus workshops. 
+
+However, we still take normal attendance for scheduled classroom days that fall on project periods, so you are still expected to be virtually present in our usual Zoom call. 
 
 
 In most cases we'll place you in breakout rooms to work on your project, but it's your responsibility to be available for meetings with instructors as needed. 

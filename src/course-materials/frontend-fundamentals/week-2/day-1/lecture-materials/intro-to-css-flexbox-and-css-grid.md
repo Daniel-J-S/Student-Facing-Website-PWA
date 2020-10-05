@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Intro to CSS Flexbox & Grid"
 week: 2
-day: 2
+day: 1
 type: "lecture"
 ---
 
@@ -11,10 +11,6 @@ type: "lecture"
 
 <br>
 <br>
-
-
-[Click here](https://generalassembly.zoom.us/rec/share/yO92MJT5tWhIZo3312bYXZ4jIMfHX6a81SQdqaAPmBuiqC0MysUDQB6aneoYpaVs?startTime=1594137980000) to access recording
-
 <br>
 <br>
 

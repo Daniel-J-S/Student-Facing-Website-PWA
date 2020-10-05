@@ -8,6 +8,10 @@ type: "lecture"
 
 # Intro to jQuery - Part 2 
 
+
+<br>
+<br>
+
 | Learning Objectives - SWBAT | 
 | :---:| 
 | Use jQuery to add & remove classes |
@@ -15,12 +19,8 @@ type: "lecture"
 | Use jQuery to add and remove DOM elements|
 | Bind to events with jQuery|
 
-
 <br>
 <br>
-
-[Click here](https://generalassembly.zoom.us/rec/share/-PwvH4j5yXtJQLfj03j_VIA_ANnjX6a8hHQZqfYLmRk_OjCTHsDVuT-tp57ZaCUK?startTime=1594066035000) to access recording
-
 <br>
 <br>
 
@@ -211,6 +211,10 @@ $(function(){
 });
 ```
 
+<br>
+<br>
+
+
 **❓ Since all of the app's code will be within the callback function, what impact does this have in terms of scope?**
 
 
@@ -246,6 +250,10 @@ $('#addHome').removeClass('btn-danger').addClass('btn-success');
 ```
 That's better!
 
+<br>
+<br>
+
+
 **❓ What's it called when we call a method immediately after a previous method like we did above?**
 
 
@@ -255,12 +263,11 @@ That's better!
 
 
 
-##### 💪 &nbsp; PRACTICE EXERCISE
+#### 💪 &nbsp; PRACTICE EXERCISE
 
 **Using jQuery, add the Bootstrap class named "text-center" to the `<h1>` tag.**
 
-> Note: In case you're wondering, "NO", we would not ordinarily style our page using jQuery :) We're doing this just to learn about jQuery. jQuery should be used to change styling dynamically as needed by the app.
-
+*Note: In case you're wondering, "NO", we would not ordinarily style our page using jQuery :) We're doing this just to learn about jQuery. jQuery should be used to change styling dynamically as needed by the app.*
 
 <br>
 <br>
@@ -430,7 +437,13 @@ Refresh the page and open the console to see what the `evt` argument (jQuery's _
 
 jQuery's _event_ object is pretty much the same as native JavaScript's - yes, it has all of the useful properties...
 
+<br>
+<br>
+
 **❓ What property on the event object references the element that dispatched the event?**
+
+<br>
+<br>
 
 When googling, you will find plenty of jQuery code using a different syntax for adding a event listeners similar to this:
 
@@ -456,7 +469,13 @@ This syntax in fact uses the `.on` method internally.
 
 We already learned about _event delegation_ in native JavaScript.
 
+<br>
+<br>
+
 **❓ Who can remind us what _event delegation_ is?**
+
+<br>
+<br>
 
 _Event delegation_ in jQuery is a bit more powerful because we can tell jQuery **which specific descendants** we're interested in listening to by specifying another CSS selector.
 
@@ -546,11 +565,11 @@ That's better!
 
 
 
-#### 💪 Practice Exercise - Add New Homes
+### 💪 Practice Exercise - Add New Homes
 
-Now for a fun challenge.
+**Now for a fun challenge.**
 
-You've already seen everything you need to make this happen! jQuery's there for you and Google and your fellow students are your friend.
+**You've already seen everything you need to make this happen! jQuery's there for you and Google and your fellow students are your friend.**
 
 
 <br>

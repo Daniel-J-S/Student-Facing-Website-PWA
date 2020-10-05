@@ -8,6 +8,11 @@ type: "lecture"
 
 # Intro to jQuery Part One
 
+
+<br>
+<br>
+
+
 | Learning Objectives - SWBAT |
 | :---: | 
 | Explain the use case for jQuery|
@@ -19,9 +24,6 @@ type: "lecture"
 
 <br>
 <br>
-
-[Click here](https://generalassembly.zoom.us/rec/share/-PwvH4j5yXtJQLfj03j_VIA_ANnjX6a8hHQZqfYLmRk_OjCTHsDVuT-tp57ZaCUK?startTime=1594052333000) to access recording
-
 <br>
 <br>
 
@@ -38,11 +40,17 @@ type: "lecture"
 6. Modifying the CSS of Elements
 7. Further Study
 
+<br>
+<br>
+<br>
+
+
+
 ## 1. What is jQuery?
 
 <br>
 <br>
-<br>
+
 
 
 ### JavaScript Library
@@ -256,11 +264,11 @@ All CSS3 selectors rules apply. For example, this is how you could select just t
 <br>
 
 
-##### 💪 &nbsp;PRACTICE EXERCISE
+### 💪 &nbsp;PRACTICE EXERCISE
 
-In Chrome's console (`cmd-opt-J`), use jQuery to select the `<div>` that have a class of `big-and-round`.
+**In Chrome's console (`cmd-opt-J`), use jQuery to select the `<div>` that have a class of `big-and-round`.**
 
-Unlike selection using `querySelectorAll`, which returns a `NodeList`, the jQuery `$()` returns something a little more powerful...
+**Unlike selection using `querySelectorAll`, which returns a `NodeList`, the jQuery `$()` returns something a little more powerful...**
 
 <br>
 <br>
@@ -308,7 +316,7 @@ Aha! Each element in the array is a **native DOM element just like the ones we w
 <br>
 
 
-##### REVIEW QUESTIONS
+#### REVIEW QUESTIONS
 
 **❓ What does the jQuery function return when it is passed a string representing a CSS3 selector rule?**
 
@@ -332,9 +340,9 @@ Those DOM elements can be accessed using bracket notation like with any other ar
 
 
 
-##### 💪 &nbsp; PRACTICE EXERCISE
+#### 💪 &nbsp; PRACTICE EXERCISE
 
-Assuming you don't know how many `<li>` DOM elements are contained in the `$li` jQuery set, assign the last `<li>` in `$li` to a variable named `lastLi`.
+**Assuming you don't know how many `<li>` DOM elements are contained in the `$li` jQuery set, assign the last `<li>` in `$li` to a variable named `lastLi`.**
 
 <br>
 <br>
@@ -515,9 +523,9 @@ $('p').css('font-size', '30px');
 <br>
 
 
-##### 💪 &nbsp; PRACTICE EXERCISE
+#### 💪 &nbsp; PRACTICE EXERCISE
 
-In the console, write the code that will set the background color of _only the last_ `<li>` element to yellow.
+**In the console, write the code that will set the background color of _only the last_ `<li>` element to yellow.**
 
 
 <br>
@@ -546,7 +554,7 @@ $('p')
 <br>
 
 
-##### REVIEW QUESTIONS
+#### REVIEW QUESTIONS
 
 **❓ What jQuery method can be used to both get & set the content of the elements held in a jQuery object?**
 
