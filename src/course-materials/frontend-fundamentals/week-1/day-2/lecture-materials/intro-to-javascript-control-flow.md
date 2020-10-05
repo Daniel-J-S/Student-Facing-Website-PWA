@@ -11,9 +11,6 @@ type: "lecture"
 
 <br>
 <br>
-
-**Recording will be available by request**
-
 <br>
 <br>
 
@@ -213,13 +210,13 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 ## Review Questions
    
 
-1. **Is the value of 0 (zero) truthy or falsey?**
+**❓ Is the value of 0 (zero) truthy or falsey?**
 
-2. **Is an empty string truthy or falsey**
+**❓ Is an empty string truthy or falsey**
 
-3. **Is an "empty" object (an object with no properties) truthy or falsey?**
+**❓ Is an "empty" object (an object with no properties) truthy or falsey?**
 
-4. **What value does `!!0` evaluate to?**
+**❓ What value does `!!0` evaluate to?**
 
 <br>
 <br>
@@ -234,13 +231,13 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 ### The <span style="text-transform:lowercase">if</span> Branching Statement <small>Single Path</small>
 
-- Single path `if`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Single path `if`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-	```javascript
-	if (val === 1) {
-	  console.log('This code will run only if val equals 1');
-	}
-	```
+```javascript
+if (val === 1) {
+	console.log('This code will run only if val equals 1');
+}
+```
 
 - Conditional expression must be surrounded by parens
 
@@ -256,35 +253,35 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 ### The <span style="text-transform:lowercase">if..else</span> <small>(dual path)</small>
    
+Dual paths `if` with `else`:
 
-- Dual paths `if` with `else`:
-
-	```javascript
-	if (val === 1) {
-	  console.log('val is one');
-	} else {
-	  console.log('val is not one');
-	}
-	```
+```javascript
+if (val === 1) {
+	console.log('val is one');
+} else {
+	console.log('val is not one');
+}
+```
 
 <br>
 <br>
 
 ### The <span style="text-transform:lowercase">if..else..if</span> <small>(three or more paths)</small>
 
-- If you have three or more code paths use `if` with as many `else if` statements as necessary and optionally a final `else`:
+If you have three or more code paths use `if` with as many `else if` statements as necessary and optionally a final `else`:
 
-	```javascript
-	if (val === 1) {
-	  console.log('val is one');
-	} else if (val === 2) {
-	  console.log('val is two');
-	} else if (val === 3) {
-	  console.log('val is three');
-	} else {
-	  console.log('not one, two, or three');
-	}
-	```
+
+```javascript
+if (val === 1) {
+	console.log('val is one');
+} else if (val === 2) {
+	console.log('val is two');
+} else if (val === 3) {
+	console.log('val is three');
+} else {
+	console.log('not one, two, or three');
+}
+```
 
 - As always, the final `else` is optional
 
@@ -330,17 +327,17 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 ### Looping Statements   <small><em>while</em></small>
 
-- The first looping statement we'll look at is `while`:
+The first looping statement we'll look at is `while`:
 
-	```javascript
-	let word = '';
-	let words = [];
-	while (word !== 'end') {
-	  word = prompt('Enter a word ("end" to quit)');
-	  if (word !== 'end') words.push(word);
-	  alert("You've entered: " + words.join(', '));
-	}
-	```
+```javascript
+let word = '';
+let words = [];
+while (word !== 'end') {
+	word = prompt('Enter a word ("end" to quit)');
+ 	if (word !== 'end') words.push(word);
+	alert("You've entered: " + words.join(', '));
+}
+```
 
 - Use `while` when you want to continue to execute a block of code _while_ a condition is true
 
@@ -352,15 +349,15 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
   
 ### Looping Statements   <small><em>do...while</em></small>
 
-- You may choose to use the `do...while` statement instead of `while` to force the code block to always execute at least once
+You may choose to use the `do...while` statement instead of `while` to force the code block to always execute at least once
 
-	```javascript
-	let num = 0;
-	do {
-	  console.log(num);
-	  num += 2;
-	} while (num <= 10);
-	```
+```javascript
+let num = 0;
+do {
+	console.log(num);
+	num += 2;
+} while (num <= 10);
+```
 
 - **Do you see why the code block will always run at least once?**
 
@@ -372,14 +369,14 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 ### Looping Statements   <small><em>for</em></small>
 
-- The next looping statement we'll look at is the `for` statement:
+The next looping statement we'll look at is the `for` statement:
 
-	```javascript
-	let colors = ['red', 'white', 'blue'];
-	for (let idx = 0; idx < colors.length; idx++) {
-	  console.log(colors[idx]);
-	}
-	```
+```javascript
+let colors = ['red', 'white', 'blue'];
+for (let idx = 0; idx < colors.length; idx++) {
+	console.log(colors[idx]);
+}
+```
 
 - Notice the `for` loop has three parts after the _for_ keyword:
 	1. The _initializer_ which runs only once before looping begins. It is used to declare and initialize a looping variable.
@@ -391,19 +388,20 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 ### Looping Statements   <small><em>break</em></small>
 
-- Use the `break` statement within any `while` or `for` loop to immediately exit the loop:
+Use the `break` statement within any `while` or `for` loop to immediately exit the loop:
 
-	```javascript
-	let word = '';
-	let words = [];
-	while (true) {
-	  word = prompt('Enter a word ("end" to quit)');
-	  if (word === 'end') break;
-	  words.push(word);
-	  alert("You've entered: " + words.join(', '));
-	}
-	```
-	Note how the `if` statement does not require braces in this case.
+```javascript
+let word = '';
+let words = [];
+while (true) {
+word = prompt('Enter a word ("end" to quit)');
+	if (word === 'end') break;
+	words.push(word);
+	alert("You've entered: " + words.join(', '));
+}
+```
+
+Note how the `if` statement does not require braces in this case.
 
 <br>
 <br>
@@ -412,20 +410,21 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 ### Question - Looping Statements
    
 
-- **When using a `while` or `do...while` loop, we must be careful not put the program's execution into an __________ loop.**
+**❓ When using a `while` or `do...while` loop, we must be careful not put the program's execution into an __________ loop.**
 
-- **How can we avoid the above scenario?**
+
+**❓ How can we avoid the above scenario?**
 
 <br>
 <br>
 
 ## Closing Questions
 
-- **In your own words, how would you describe _Control Flow_?**
+**❓ In your own words, how would you describe _Control Flow_?**
 
-- **The three primary types of _control flow_ are:   1) Sequence   2) ___________   3) ___________**
+**❓ The three primary types of _control flow_ are:   1) Sequence   2) ___________   3) ___________**
 
-- **What does expression `'happy' || 'sad'` return?**
+**❓ What does expression `'happy' || 'sad'` return?**
 
 <br>
 <br>
@@ -477,28 +476,30 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 
 ### Ternary Operator
 
-- The _ternary_ operator is ideal when you need to return one of two values depending upon a condition:
+The _ternary_ operator is ideal when you need to return one of two values depending upon a condition:
 
-	```javascript
-	let message = score > 100 ? "You rock!" : "Keep trying!";
-	```
+```javascript
+let message = score > 100 ? "You rock!" : "Keep trying!";
+```
 	
-	The above one line of code replaces this code:
+The above one line of code replaces this code:
 	
-	```javascript
-	let message;
-	if (score > 100) {
-	  message = "You rock!";
-	} else {
-	  message = "Keep trying!";
-	}
-	```
+```javascript
+let message;
+if (score > 100) {
+	message = "You rock!";
+} else {
+	message = "Keep trying!";
+}
+```
 
-- It can also be used to evaluate one of two expressions, so you can actually run a method if you'd like:
 
-	```javascript
-	score > 100 ? gameWinner() : gameLoop();
-	```
+It can also be used to evaluate one of two expressions, so you can actually run a method if you'd like:
+
+
+```javascript
+score > 100 ? gameWinner() : gameLoop();
+```
 
 <br>
 
