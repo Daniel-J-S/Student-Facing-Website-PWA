@@ -202,11 +202,11 @@ intro-to-dom-events/
 ### Review Questions
   
 
-1. **What is the name of the method used to attach event listeners to elements?**
+**❓ What is the name of the method used to attach event listeners to elements?**
 
-2. **What is that method's _signature_ (a method's name, the number & type of arguments it takes, and what it returns)?**
+**❓ What is that method's _signature_ (a method's name, the number & type of arguments it takes, and what it returns)?**
 
-3. **Name three events that might be triggered in the browser.**
+**❓ Name three events that might be triggered in the browser.**
 
 
 <br>
@@ -361,7 +361,7 @@ intro-to-dom-events/
 
 
   
-### Event Delegation (Practice)
+### 💪 Event Delegation (Practice)
   
 
 - **Practice: Write the code to change the color of the text of a clicked comment.**
