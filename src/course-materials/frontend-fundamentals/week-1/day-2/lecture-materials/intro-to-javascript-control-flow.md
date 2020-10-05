@@ -202,7 +202,8 @@ For this lesson, we're going to code along using an `HTML, CSS & JS`[repl.it](ht
 	```
 	Where, `x <= 10` is the conditional expression.
 	
-- **❓ If `x <= 10` was replaced with just `x`, would it still be considered a valid conditional expression?**
+
+**❓ If `x <= 10` was replaced with just `x`, would it still be considered a valid conditional expression?**
 
 <br>
 <br>
