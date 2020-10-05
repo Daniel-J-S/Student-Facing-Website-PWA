@@ -12,11 +12,6 @@ type: "lecture"
 
 <br>
 <br>
-
-[Click here](https://generalassembly.zoom.us/rec/share/wfAkBrTz7m5OaLfwtHnYW6AgWafdX6a803ce_PFYmU60WUgU0EE7HgPLhwAQanWw?startTime=1593470959000) to access recording
-
-
-
 <br>
 <br>
 
@@ -72,14 +67,12 @@ In summary:
 <br>
 <br>
 
-## Summary of Common Git Commands
+## Summary of the Most Common Git Commands
 
 By following along today and having done the pre-work, you should now be familiar with basic git commands.
 
 In SEIR, you'll get plenty of practice using git, especially during project week because each of your projects will be stored in its own directory and will be made a git repository in that directory tracking the changes.
 
-
-For your convenience, <a href="/downloads/frontend_fundamentals/github-git-cheat-sheet.pdf" download>Click Here</a> for a Git Cheatsheet.
 
 However for a quick reference, the following summary of commands will "git" you far:
 
