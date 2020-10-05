@@ -53,7 +53,7 @@ You will be required to meet 80% completion of homework assignments at the end o
 | Daniel Scott  |  Lead Instructor 
 | Ayla Ex | Instructional Associate 
 | Aegean Thompson | Instructional Associate 
-| TBT | Outcomes Coach
+| Bradform Smith | Outcomes Coach
 
 <br>
 <br>
