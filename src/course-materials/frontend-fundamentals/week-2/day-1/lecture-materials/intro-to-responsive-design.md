@@ -284,7 +284,7 @@ There's a link in the references section you can use to start to learn more abou
 
 
 
-## 💪 Practice Exercise (5 min)
+### 💪 Practice Exercise (5 min)
 
 Adding another media query for another breakpoint at `(min-width: 1024px)`, a common breakpoint width for desktop displays.
 
@@ -298,13 +298,13 @@ Here's a few quick review questions for you...
 
 
 
-## ❓ Essential Questions
+### Essential Questions
 
-1. **In your own words, describe Responsive Design.**
+**❓ In your own words, describe Responsive Design.**
 
-2. **When coding an app that we want to make responsive, is it more common to write the "base" CSS for mobile screens or desktop?**
+**❓ When coding an app that we want to make responsive, is it more common to write the "base" CSS for mobile screens or desktop?**
 
-3. **What key CSS feature did we just learn about that's fundamental to the implementation of responsive design?**
+**❓ What key CSS feature did we just learn about that's fundamental to the implementation of responsive design?**
 
 
 <br>

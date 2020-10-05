@@ -109,7 +109,7 @@ Those new to jQuery are best served by jQuery's newer [Learning Center](http://l
 <br>
 <br>
 
-##### REVIEW QUESTIONS
+##### Review Questions
 
 **❓ What is the difference between a _library_ and a _framework_?**
 
@@ -264,7 +264,7 @@ All CSS3 selectors rules apply. For example, this is how you could select just t
 <br>
 
 
-### 💪 &nbsp;PRACTICE EXERCISE
+### 💪 &nbsp;Practice Exercise
 
 **In Chrome's console (`cmd-opt-J`), use jQuery to select the `<div>` that have a class of `big-and-round`.**
 
@@ -316,7 +316,7 @@ Aha! Each element in the array is a **native DOM element just like the ones we w
 <br>
 
 
-#### REVIEW QUESTIONS
+#### Review Questions
 
 **❓ What does the jQuery function return when it is passed a string representing a CSS3 selector rule?**
 
@@ -340,7 +340,7 @@ Those DOM elements can be accessed using bracket notation like with any other ar
 
 
 
-#### 💪 &nbsp; PRACTICE EXERCISE
+#### 💪 &nbsp;Practice Exercise
 
 **Assuming you don't know how many `<li>` DOM elements are contained in the `$li` jQuery set, assign the last `<li>` in `$li` to a variable named `lastLi`.**
 
@@ -523,7 +523,7 @@ $('p').css('font-size', '30px');
 <br>
 
 
-#### 💪 &nbsp; PRACTICE EXERCISE
+#### 💪 &nbsp; Practice Exercise
 
 **In the console, write the code that will set the background color of _only the last_ `<li>` element to yellow.**
 
@@ -554,7 +554,7 @@ $('p')
 <br>
 
 
-#### REVIEW QUESTIONS
+#### Review Questions
 
 **❓ What jQuery method can be used to both get & set the content of the elements held in a jQuery object?**
 

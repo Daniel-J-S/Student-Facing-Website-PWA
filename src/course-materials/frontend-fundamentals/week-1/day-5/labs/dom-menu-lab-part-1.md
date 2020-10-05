@@ -12,6 +12,13 @@ type: "lab"
 <br>
 <br>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0T8CUxaf8aU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+<br>
+
+
+
 
 
 
@@ -23,8 +30,17 @@ This is the first of a two-part lab that builds a menu bar with a slide-down sub
 
 > Note:  Several of the tasks in this lab would be better done upfront in the markup or CSS instead of using JS, however the goal of this lab is to provide practice modifying the DOM using JS. <br> In your projects, if the HTML or CSS is known in advance and/or static (unchanging), code it in HTML and CSS!
 
-### Part one of this lab is a deliverable.
 
+<br> 
+<br>
+
+
+
+### Although there are two parts to this lab, only part 1 is deliverable.
+
+
+<br>
+<br>
 <br>
 
 
@@ -116,22 +132,35 @@ dom-menu-lab/
 	  background-color: var(--sub-menu-bg);
 	}
 	```
+<br>
+<br>
 
-	> Note: The CSS is complete - **DO NOT** modify it in any way.
-	
-	1. Lastly, be sure to initialize a local repository inside `dom-menu-lab`, then create a remote repository on your github account that you can push your commits to.
-	2. Once you are done with parts 1 and 2 of these labs, you can copy and paste a link to your repo using the [homework submittal form](https://forms.gle/aGLyBqABxeDLv18B9)
-	
-	Take five minutes to familiarize yourself with [CSS Custom Properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) - they are an amazing new addition to CSS. If you're familiar with using variables with SASS/LESS pre-processors, CSS Custom Properties are similar, but far more powerful because they are dynamic (their values can be changed during runtime) - and they are built into the CSS language!
 
-	There are other things you might notice in the above CSS you haven't seen before:
+> Note: The CSS is complete - **DO NOT** modify it in any way.
 
-	- [Display: `grid`](https://css-tricks.com/snippets/css/complete-guide-grid/)
-	- [Display: `flex`](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-	- [`vh` or `vw` units otherwise known as `viewport` units](https://css-tricks.com/fun-viewport-units/)
-	- [`em` or `rem` units](https://www.w3.org/Style/Examples/007/units.en.html)
+<br>
+<br>
 
-	We will cover these in a later lesson, but if you are curious, feel free to check out the links above.
+
+
+2. Lastly, be sure to initialize a local repository inside `dom-menu-lab`, then create a remote repository on your github account that you can push your commits to.
+3. Once you are done with parts 1 and 2 of these labs, you can copy and paste a link to your repo using the [homework submittal form](https://forms.gle/aGLyBqABxeDLv18B9)
+
+Take five minutes to familiarize yourself with [CSS Custom Properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) - they are an amazing new addition to CSS. If you're familiar with using variables with SASS/LESS pre-processors, CSS Custom Properties are similar, but far more powerful because they are dynamic (their values can be changed during runtime) - and they are built into the CSS language!
+
+There are other things you might notice in the above CSS you haven't seen before:
+
+
+- [Display: `grid`](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [Display: `flex`](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [`vh` or `vw` units otherwise known as `viewport` units](https://css-tricks.com/fun-viewport-units/)
+- [`em` or `rem` units](https://www.w3.org/Style/Examples/007/units.en.html)
+
+<br>
+<br>
+
+We will cover these in a later lesson, but if you are curious, feel free to check out the links above.
+
 
 <br>
 <br>

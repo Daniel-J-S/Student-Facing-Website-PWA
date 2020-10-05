@@ -12,6 +12,12 @@ type: "lab"
 <br>
 <br>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/T7oTeAqzFsc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+<br>
+
+
 
 
 ## Intro
@@ -26,7 +32,11 @@ This lab continues where Part 1 left off and provides practice defining event li
 
 
 
-### This par of the lab is not a deliverable.
+### This exercises from the lab are not deliverable.
+
+**However, if you'd like the challenge of completing them, please feel free to do so!**
+
+<p style="color: crimson;"><b>We will only be evaluating up to task 3.1</b></p>
 
 <br>
 

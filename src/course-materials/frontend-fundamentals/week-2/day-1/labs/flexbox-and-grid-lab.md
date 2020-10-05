@@ -37,7 +37,7 @@ This lab is a **deliverable**.
 
 ## Set Up
 
-Use either an HTML, CSS, JS Repl, or create a project folder with `index.html` & `css/style.css` files - your choice.
+For this lab assignment, please use a HTML, CSS, JS on [repl.it](https://repl.it)
 
 <br>
 <br>
