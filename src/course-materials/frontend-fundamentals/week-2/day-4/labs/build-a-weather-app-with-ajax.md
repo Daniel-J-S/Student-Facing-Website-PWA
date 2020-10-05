@@ -10,6 +10,12 @@ type: "lab"
 
 ![example](https://imgur.com/ulqJdjc.gif)
 
+
+<br>
+<br>
+<br>
+
+
 **The Lab is a Deliverable**
 
 - Create an app that uses a search form to show the weather in any city the user searches for.

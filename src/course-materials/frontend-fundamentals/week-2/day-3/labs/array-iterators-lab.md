@@ -10,6 +10,7 @@ type: "lab"
 
 <br>
 <br>
+<br>
 
 
 
@@ -19,7 +20,7 @@ You've been introduced to several very useful array iterator methods such as `fo
 
 The following exercises provide practice using some of them.
 
-**This lab is a DELIVERABLE.**
+**This lab is not a Deliverable.**
 
 <br>
 <br>
@@ -149,15 +150,6 @@ const comments = [
 ```
 
 <br>
-<br>
-
-
-
-## DELIVERABLE?
-
-Yes, this lab is a deliverable.  Please submit the link to your "Array Methods Lab" repl.
-
-
 <br>
 <br>
 
