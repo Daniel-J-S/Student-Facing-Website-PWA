@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Deploying Your Static App to GitHub-Pages"
 week: 3
-day: 3
+day: 2
 type: "lecture"
 ---
 
@@ -12,11 +12,6 @@ type: "lecture"
 
 <br>
 <br>
-
-
-[Click here](https://generalassembly.zoom.us/rec/share/2cVKD5r-325JU9LTrxDUQ6IfHqrcX6a81nUc-aIMyBzDFdqZInTlBNBzoC7GfiVq?startTime=1594830045000) to access recording
-
-
 <br>
 <br>
 
