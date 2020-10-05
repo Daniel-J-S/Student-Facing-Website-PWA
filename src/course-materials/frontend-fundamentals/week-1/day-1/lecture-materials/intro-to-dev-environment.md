@@ -11,16 +11,8 @@ type: "lecture"
 
 <br>
 <br>
-
-[Click here](https://generalassembly.zoom.us/rec/share/wfAkBrTz7m5OaLfwtHnYW6AgWafdX6a803ce_PFYmU60WUgU0EE7HgPLhwAQanWw?startTime=1593466555000) to access recording
-
-
-
 <br>
 <br>
-
-
-
 
 
 
@@ -435,32 +427,6 @@ Students will be able to:
 
 
 <br>
-<br>
-
-### Edit a File in VS Code
-
-
-- To edit a specific file in VS Code, we can simply type the file after `code`, so for example:
-
-```shell
-$ code ~/.bash_profile
-```
-
-- Let's add a simple function called `motivation` to our `.bash_profile` using VS Code
-
-```shell
-motivation(){
-	echo 'Yesterday you said tomorrow!'
-	say 'Yesterday you said tomorrow!'
-	echo 'You can do it!'
-	say 'You can do it!'
-}
-```
-
-- Pressing `cmd-s` will save the file
-
-- Close Terminal then re-open it and type `repo` to test it out
-
 <br>
 <br>
 
