@@ -11,14 +11,8 @@ type: "lecture"
 
 <br>
 <br>
-
-[Click here](https://generalassembly.zoom.us/rec/share/wfAkBrTz7m5OaLfwtHnYW6AgWafdX6a803ce_PFYmU60WUgU0EE7HgPLhwAQanWw?startTime=1593451472000) to access recording
-
-
-
 <br>
 <br>
-
 
 
 
@@ -34,9 +28,12 @@ type: "lecture"
 
 ## Instructors
 
+- Ira Herman - Instructor Lead
 - Daniel Scott - Instructor Lead
-- Morgan Pierson - Instructor Lead
-- Melissa Young - Instructor Associate
+- Ayla Ex - Instructor Associate
+- Paul Chapman - Instructor Associate
+- Aegean Thompson - Teachers Assistant
+- Bradford Smith - Outcomes Coach
 
 
 <br>
@@ -52,8 +49,9 @@ type: "lecture"
   - In-Class Interview Prep
   - Creating Homework
 
-- Instructor Associate (IA)
+- Instructor Associate (IA) & Teachers Assistant (TA)
   - will give you feedback on your homework and score if it is complete or incomplete
+
 
 - Outcomes
   - Outcomes course content
@@ -78,10 +76,11 @@ type: "lecture"
 
 #### 4 channels
 
-	- seir_629_debugging_dm
-	- seir_629_funnybiz_dm
-	- seir_629_outcomes
-	- seir_629_strictlybiz2
+	- curiosity-1012-classroom
+	- curiosity-1012-outcomes
+	- curiosity-1012-partytime
+	- curiosity-1012-techtalk
+	
 	
 
 <br>
