@@ -52,8 +52,9 @@ You will be required to meet 80% completion of homework assignments at the end o
 | Ira Herman  |  Lead Instructor 
 | Daniel Scott  |  Lead Instructor 
 | Ayla Ex | Instructional Associate 
-| Aegean Thompson | Instructional Associate 
-| Bradform Smith | Outcomes Coach
+| Paul Chapman | Instructional Associate 
+| Aegean Thompson | Teachers Assistant
+| Bradford Smith | Outcomes Coach
 
 <br>
 <br>
@@ -108,7 +109,7 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 ### We will walk through this together the first time!
 
 * Depending on the assignment, your homework will be completed on [repl.it](https://repl.it/), [CodeSandbox](https://codesandbox.io/), or [GitHub](https://github.com/)
-* Fill out this [Google Form](https://forms.gle/6kbz69CHAuY63JXc6) with a link for that specific homework. It will be the same Google Form for each homework
+* Fill out this [Google Form](https://forms.gle/LuVKiS1pv9cxueKi8) with a link for that specific homework. It will be the same Google Form for each homework
 * **Homework is due one week from the day it was assigned**
 * If homework is marked `incomplete`, you may be asked to re-submit it; a new timeline will be discussed how long you have to re-submit the homework
 
