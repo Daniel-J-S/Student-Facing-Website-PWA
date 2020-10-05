@@ -4,12 +4,17 @@ title: "Day 5"
 week: 1
 day: 5
 type: "homepage"
-topics: "Holiday - Observance of Independence Day" 
+topics: "Intro the DOM" 
 ---
 
 
 # Week 1 - Day 5
 
-#### Holiday - Observance of Independence Day
+#### Intro the DOM
 
-There will be no classroom activities facilitated this day, however this is a great opportunity to get caught up on labs or get more practice with yesterday's resources!
+- [**Lecture:** Intro to the DOM](/frontend-fundamentals/week-1/day-5/lecture-materials/intro-to-the-dom/)
+- [**Lecture:** Intro to DOM Events](/frontend-fundamentals/week-1/day-5/lecture-materials/intro-to-dom-events/)
+- [**Lab:** DOM Menu Lab - Part 1 of 2](/frontend-fundamentals/week-1/day-5/labs/dom-menu-lab-part-1/) - **Deliverable**
+- [**Lab:** DOM Menu Lab Part 2 of 2](/frontend-fundamentals/week-1/day-5/labs/dom-menu-lab-part-2/) - **Non-Deliverable**
+- [**Optional Activity:** Tic Tac Toe Code Weekend](/frontend-fundamentals/week-1/day-5/labs/tic-tac-toe-weekend/)
+- [**Resource:** Guide to Building a Browser Game](/frontend-fundamentals/week-1/day-5/labs/guide-to-building-a-browser-game/)
