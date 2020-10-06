@@ -59,7 +59,7 @@ All material is subject to change at Instructors discretion.
 | Week  | Topics |
 | ----- | ------ |
 | 7 | Intro to ReactJS, fetching data for our components using AJAX & Thanksgiving Break |
-| 8 | TBD |
+| 8 | React Hooks, Tooling, The MERN Stack, Authentication & Prep for Project 3 |
 | 9 | Project Week |
 
 

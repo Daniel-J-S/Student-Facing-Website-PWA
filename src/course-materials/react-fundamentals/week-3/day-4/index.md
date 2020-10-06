@@ -11,4 +11,3 @@ topics: "Project 3"
 # Week 3 - Day 4
 
 #### Students Work On Project 3
-- **Activity:** Students Work On Project 3

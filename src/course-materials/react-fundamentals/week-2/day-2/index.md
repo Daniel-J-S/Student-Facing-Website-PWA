@@ -16,4 +16,5 @@ topics: "Authentication With JWTs"
 - <a href="/downloads/react_fundamentals/walk-it-out-lectures/walk-it-out-front-end-cra.zip" download><b>Download:</b> Starter Code For Frontend</a>
 - <a href="/downloads/react_fundamentals/walk-it-out-lectures/walk-it-out-back-end.zip" download><b>Download:</b> Starter Code For Backend</a>
 - [**Lab:** Doctor Who's Police Box](/react-fundamentals/week-2/day-2/labs/doctor-whos-police-box/) - **Deliverable**
+- [**Activity:** Final Review - Project 3 Requirements](/unit-projects/unit-three-project-requirements/)
 

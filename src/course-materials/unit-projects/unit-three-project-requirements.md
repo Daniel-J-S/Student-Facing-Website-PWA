@@ -5,91 +5,53 @@ type: "Project Prompt"
 topics: "Unit Projects"
 ---
 
-
-# Project Three: A MERN Stack Application As a Team:
+# Project Three: A MERN Stack Application:
 
 <br>
 <br>
 <br>
-
 
 
 ## Overview
 
-You’ve come a long way, and it's time to show it.
+**You’ve come a long way, and it's time to show it.** This will be your most advanced project to date.
 
-You’ve already worked in small groups to accomplish various labs and exercises, but this time we’re going to challenge you to work in a small team on a project.
+**Before you start working** on the planning for your project, be sure to review your idea with an instructional team to ensure that it both:
 
-You and your teammates together will architect, design, and collaboratively build a full-stack web app.
-
-<br>
-<br>
-
-
-**This project will push you both technically and collaboratively!**
-
-You'll likely be working as part of a team in the workplace and this project will provide you with that important team development experience.
-
-However, working on a project as part of a team can be more challenging due to logistical reasons, differing opinions, etc.
-
-During this project, your instructors are going to be evaluating your ability to listen to and respect other opinions; to share and contribute your ideas with the team; and form a consensus and compromise when opinions differ.
-
-**In fact, your ability to work in a team during this project is more important to your instructors than the project itself**.
-
+- **Meets the minimum requirements**, and
+- **Is reasonably scoped**
 
 <br>
 <br>
 <br>
 
 
-## Planning & Presentation Requirements
+## Necessary Deliverables
 
-Working in a team is going to require more upfront planning to ensure the team is "on the same page"...
+#### 1) Project Planning
 
-<br>
-<br>
-<br>
+A project consists of more than just code.
 
+This project requires **planning** organized within a **Trello board** with the following **lists**:
 
-#### 1) Pitch Deck
+- **Icebox**: Holds user stories that have yet to be moved to the _Current/MVP_ list. All user stories are originally put into the _Icebox_, including both MVP and wish list stories. 
 
-☐ **Pitch your project** to the class with a [pitch deck](https://pitchdeck.improvepresentation.com/what-is-a-pitch-deck) that includes:
+- **Current/MVP**: Holds user stories that must be completed to meet the minimum project requirements (MVP). Once the MVP has been met, additional user stories may be moved from the _Icebox_.
 
-- The application name.
-- Your team members and their roles.
-- The problem you are going to solve with your app.
-- Check out previous decks: [Meal Ticket](https://docs.google.com/presentation/d/1CsBuC-a_AZ1yXJEE-EbptPIdgj1MktiNALyQyhaFfrM/edit#slide=id.p), [Tripio](https://docs.google.com/presentation/d/1gvOypLc4VjKqJzdAW68iwh28uGDSH4Sp1KnA5grDo2g/edit#slide=id.p),  [Pantry](https://docs.google.com/presentation/d/1WvHoN5MNaRembgcoog5p0GtivVCOZSzvfPyeevzy08g/edit), [ArtWorld](https://docs.google.com/presentation/d/1yGy2Mh3n6IhPxFu4XKnnMtPPi4OGFPpf-Z_TMYw6wQY/edit#slide=id.g7ba109823e_2_7)
+- **Completed**: Hold completed user stories. 
 
+- **Wireframes**: Sketches of each screens's user interface for the major functionality of the application.
 
-<br>
-<br>
-<br>
+- **Entity-Relationship-Diagram (ERD)**: A diagram of the app's models (one per data entity) and the relationships between them.
 
-#### 2) Trello Board
-
-- A **[Trello](https://trello.com/) board** with:
-    
-    ☐ **User Stories**, each moving from left to right in the following 
-      three lists in your board:<br>
-      	- **Ice Box**<br>
-      	- **Current/MVP**<br>
-      	- **Completed**<br>
-      <br>**User Stories** must follow the following template:<br>**_As a \<user role\>, I want \<feature\>, because \<reason\>._**<br>The _reason_ is optional if it's blatantly obvious.
-      <br><br>Note: Prioritize your user stories within the Ice Box with your "wish 
-      list" stories at the bottom.
-    
-    ☐ **Wireframes of the main pages of functionality**, e.g. Landing Page, Posts Index Page, Favorite Posts Page, Add Post Page, etc.
-    
-    ☐ An **ERD** showing the attributes of each entity and the relationships between them. Refer to the Data Modeling lesson for assistance.
-
-
+> User stories need to be formed properly using this template:<br>`As a <role>, I want <feature> so that <reason>`. The _reason_ is optional if it's patently obvious.
 
 <br>
 <br>
 <br>
 
 
-#### 3) Project Source Control & README
+#### 2) Project Source Control & README
 
 The project's source code must be hosted on a personal **GitHub repository**.
 
@@ -107,13 +69,12 @@ The project must include a **`README.md`** file with the following sections:
 
 - **Future Enhancements**: Identify future features and enhancements planned for the project.
 
-
 <br>
 <br>
 <br>
 
 
-#### 4) Application Technical Requirements/Deliverables
+#### 3) Application Technical Requirements/Deliverables
 
 - A **working** full-stack, single-page application hosted on Heroku.
 
@@ -135,63 +96,57 @@ The project must include a **`README.md`** file with the following sections:
 	- Include _admin_ features.
 	- Utilize multi-user, real-time communications (difficult and time consuming)
 
-<br>
-<br>
-<br>
-
-
-
-#### 5) Presentations
-
-**Your entire team must participate in the presentation of the project.**
-
-You will have approximately 15 minutes to present your project following these guidelines:
-
-1. **Introduce the Project:**
-
-	☐ Intro your project by paraphrasing the README.
-	
-2. **Demonstrate the Project:**
-
-	☐ Launch the project by clicking the link in the README.
-	
-	☐ Sign up a new user, then immediately log out.
-	
-	☐ Log in with your preferred user and demonstrate the features of the app.
-	
-	☐ Be sure to demo all CRUD data operations.
-	
-3. **Show/discuss your code:**
-
-	☐ Show the "main" data entity/model.
-	
-	☐ Show your favorite component.
-	
-4. **Share the experience:**
-
-	☐ What was your biggest challenge? (besides Team Git Workflow)
-	
-	☐ What are your key learnings/takeaways?
-	
-5. **Q & A + Feedback**
-
 
 <br>
 <br>
 <br>
+
+
+#### 4) Project Presentation
+
+You will have 10 minutes to present and demonstrate the following:
+
+1. Introduce your project by paraphrasing its README.
+
+2. Click the link in the README to open the deployed app on Heroku.
+
+3. Demonstrate the application's authentication features by signing up a new user, logging out that user, then logging in with your preferred user.
+
+4. Demonstrate your app's main features.
+
+5. Share/discuss the following code (not line-by-line):
+
+	- The main/central Mongoose model
+	- Your "favorite" Express controller method
+	- Your "favorite" React component
+	- The client-side routing
+
+6. Share the experience by answering the following:
+
+	- What was your biggest challenge?
+	- What are your key learnings/takeaways?
+
+Following your presentation, there will be a brief Q & A period and optional instructor feedback.
+
+<br>
+<br>
+<br>
+
 
 
 ## Project Assistance
 
-- At this stage of SEIR, being able to find the the answers to your development issues is of paramount importance, this is especially important for the success of your team. 
+- At this stage of SEIR, being able to find the the answers to your development issues is of paramount importance. 
 
-- Feel free to use all resources available including your own team.
+- Feel free to use all resources available and collaborate with others.
 
 - If you do seek assistance in Slack, explain the issue, include screenshots, and explain what you've done to solve the issue on your own.
 
 <br>
 <br>
 <br>
+
+
 
 
 ## Suggestions to Get Started
@@ -211,6 +166,8 @@ You will have approximately 15 minutes to present your project following these g
 <br>
 <br>
 <br>
+
+
 
 
 ## Best Practices
