@@ -11,7 +11,7 @@ topics: "Project 3 Presentations and Prep for Second Language Unit"
 # Week 3 - Day 5
 
 #### Project 3 Presentations and Prep for Second Language Unit
-- **Actvity:** Today Students Will Present Project 3
+- **Activity:** Today Students Will Present Project 3
 - **Activity:** Prepare for Second Language Unit
 
 
