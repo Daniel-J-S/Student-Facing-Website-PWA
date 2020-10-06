@@ -72,8 +72,3 @@ Build an app that let's you make a list of groceries to buy
 - add a 'later' button that toggles the css (gray text, strikeout etc.) if the item should be purchased later
 - expand your app to allow for images (the images should be an http url ) and then render the image in your app - some images may take longer to load and not appear correctly, look into react life cycle events and/or lazy loading (if that is too much just keep trying images, some will work and save lifecycles/lazy loading for later)
 
-
-
----
-
-*Copyright 2018, General Assembly Space. Licensed under [CC-BY-NC-SA, 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)*

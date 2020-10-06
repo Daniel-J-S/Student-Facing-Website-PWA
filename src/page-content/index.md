@@ -58,7 +58,7 @@ All material is subject to change at Instructors discretion.
 
 | Week  | Topics |
 | ----- | ------ |
-| 7 | TBD |
+| 7 | Intro to ReactJS, fetching data for our components using AJAX & Thanksgiving Break |
 | 8 | TBD |
 | 9 | Project Week |
 
