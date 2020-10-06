@@ -9,7 +9,7 @@ type: "lecture"
 # Intro to Relational Databases and SQL Part 2
 
 
-# PostGres - Up and Running hello chris....
+
 
 
 ## Lesson Objectives

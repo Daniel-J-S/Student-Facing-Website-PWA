@@ -14,14 +14,14 @@ type: "lab"
 This assignment will get you comfortable with queries. Start your SQL
 explorations here.
 
-<a href="/downloads/second_language/sql-practice/carmen-sandiego.zip" download>Download the starter project</a> and put your answers in `find_carmen.sql` in the carmen-sandiego folder.
+<a href="/downloads/second_language/sql-practice/carmen-sandiego.zip" download>Download the starter project</a> and put your answers in `find_carmen.sql` located in the `carmen-sandiego` folder.
 
 
 ## Part 2: NFL
 
 This assignment will give you more practice with queries, and get you to deal with some more advanced parts of the SQL language. Start this after having completed Carmen Sandiego.
 
-<a href="/downloads/second_language/sql-practice/nfl.zip" download>Download the starter project</a> and put your answers in the `nfl.sql` file in the nfl folder.
+<a href="/downloads/second_language/sql-practice/nfl.zip" download>Download the starter project</a> and put your answers in the `nfl.sql` file located in the `nfl` folder.
 
 ## Hungry for More? 
 
