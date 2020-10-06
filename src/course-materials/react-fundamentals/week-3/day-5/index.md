@@ -12,6 +12,6 @@ topics: "Project 3 Presentations and Prep for Second Language Unit"
 
 #### Project 3 Presentations and Prep for Second Language Unit
 - **Activity:** Today Students Will Present Project 3
-- **Activity:** Prepare for Second Language Unit
+- [**Activity:** Ruby Jumpstart](/second-language/week-1/day-1/labs/ruby-jumpstart/)
 
 

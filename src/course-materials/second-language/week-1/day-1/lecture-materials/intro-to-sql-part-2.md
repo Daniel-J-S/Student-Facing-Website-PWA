@@ -2,7 +2,7 @@
 track: "Second Language"
 title: "Intro to Relational Databases and SQL Part 2"
 week: 1
-day: 2
+day: 1
 type: "lecture"
 ---
 
