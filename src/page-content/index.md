@@ -2,7 +2,7 @@
 title: "Home"
 ---
 
-# Welcome to Software Engineering Immersive Remote (SEIR)
+# SEIR 10/12/2020 - "Curiosity"
 
 This website contains assignments and materials for General Assembly's SEIR Program. 
 
