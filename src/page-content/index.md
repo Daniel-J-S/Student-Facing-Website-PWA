@@ -11,6 +11,14 @@ This website contains assignments and materials for General Assembly's SEIR Prog
 <br>
 <br>
 
+## Weekly Agenda
+
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23616161&amp;ctz=America%2FNew_York&amp;src=Y19sOGhlZGZwcGJjMGo4aDNiNHNuazhwdHNjMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%234285F4&amp;showNav=0&amp;showDate=1&amp;showTabs=0&amp;showCalendars=1&amp;mode=WEEK" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+<br>
+<br>
+<br>
+
 
 ## Curriculum Overview
 
