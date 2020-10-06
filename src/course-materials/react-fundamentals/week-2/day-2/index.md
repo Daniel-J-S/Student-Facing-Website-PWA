@@ -8,9 +8,9 @@ topics: "Authentication With JWTs"
 ---
 
 
-# Week 15 - Day 2
+# Week 2 - Day 2
 
-#### React With AJAX
+#### Authentication With JWTs
 - [**Warm Up:** Word Frequency](/react-fundamentals/week-2/day-2/lecture-materials/word-frequency/)
 - [**Lecture:** React: Authentication With JWTs](/react-fundamentals/week-2/day-2/lecture-materials/react-auth/)
 - <a href="/downloads/react_fundamentals/walk-it-out-lectures/walk-it-out-front-end-cra.zip" download><b>Download:</b> Starter Code For Frontend</a>
