@@ -4,15 +4,12 @@ title: "Day 2"
 week: 2
 day: 2
 type: "homepage"
-topics: "Consuming a 3rd Party API with Express"
+topics: "Intro to Mongoose Referenced Relationships"
 ---
-
 
 # Week 2 - Day 2
 
-#### Consuming a 3rd Party API with Express
-
-- [**Lecture:** Consuming a 3rd Party API with Express](/full-stack-development/week-2/day-2/lecture-materials/consuming-3rd-party-apis/)
-- [**Lab:** Chuck Norris 3rd Party API Lab](/full-stack-development/week-2/day-2/labs/chuck-norris-api-lab/) - **Non-Deliverable**
-
+#### Mongoose Referenced Relationships
+- [**Lecture:** Intro to Mongoose Referenced Relationships](/full-stack-development/week-2/day-2/lecture-materials/intro-to-mongoose-referenced-relationships/)
+- [**Lab:** Mongoose Flights Part 3 of 3](/full-stack-development/week-2/day-2/labs/mongoose-flights-part-3/) - **Combined Parts 1 - 3 Are Deliverable**
 

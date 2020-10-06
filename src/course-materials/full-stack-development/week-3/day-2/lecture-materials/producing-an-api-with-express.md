@@ -1,8 +1,8 @@
 ---
 track: "Full-Stack Development"
 title: "Producing an API in Express"
-week: 2
-day: 3
+week: 3
+day: 2
 type: "lecture"
 ---
 
@@ -10,9 +10,6 @@ type: "lecture"
 
 <br>
 <br>
-
-[Click here](https://generalassembly.zoom.us/rec/share/48syfuDr7G5OQKvN-GbuW4w4Qar7aaa81SAYqPcNy000FRqfjz9fYl7l4lLoAqXz?startTime=1596038494000) for lesson recording
-
 <br>
 <br>
 

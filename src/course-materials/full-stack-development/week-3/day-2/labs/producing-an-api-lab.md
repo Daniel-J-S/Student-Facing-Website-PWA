@@ -1,7 +1,7 @@
 ---
 track: "Full-Stack Development"
 title: "Producing an API Lab"
-week: 2
+week: 3
 day: 2
 type: "lab"
 ---

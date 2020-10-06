@@ -124,15 +124,18 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 
 <h3 style="color: crimson;">Unit 1</h3>
 
-| Week/Day |  Assignment | Due Date |
-| ------ |  ------------- | ---------|
-|  1/2   | JS Arrays Lab  | 10/20/20 |
-|  1/4   | JS Objects Lab | 10/22/20 | 
-|  1/5   | DOM Menu Lab Part 1 | 10/23/20 |
-|  2/1   | Flexbox/Grid Lab | 10/26/20 |
-|  2/2   | My Developer Skills Lab | 10/27/20 |
-|  2/4   | AJAX Weather Lab | 10/29/20 |
-|  2/5   | Project 1 | 10/29/20 |
+| Assignment | Due Date |
+|  ------------- | ---------|
+| JS Arrays Lab  | 10/20/20 |
+| JS Objects Lab | 10/22/20 | 
+| DOM Menu Lab Part 1 | 10/23/20 |
+| Flexbox/Grid Lab | 10/26/20 |
+| My Developer Skills Lab | 10/27/20 |
+| AJAX Weather Lab | 10/29/20 |
+| Project 1 | 10/29/20 |
+| Express Dev Skills Parts 1 & 2 | 11/12/20 |
+| Mongoose Flights Parts 1, 2 & 3 | 11/17/20 |
+| Project 2 | 11/19/20 |
 
 
 <br>

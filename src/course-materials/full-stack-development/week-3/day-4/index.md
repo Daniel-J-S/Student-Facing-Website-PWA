@@ -10,7 +10,5 @@ topics: "Project 2"
 
 # Week 3 - Day 4
 
-#### Project 2
-
-- **Activity:** Students Work on Project 2
+#### Students Work on Project 2
 

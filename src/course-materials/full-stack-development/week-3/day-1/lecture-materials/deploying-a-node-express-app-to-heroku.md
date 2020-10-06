@@ -1,7 +1,7 @@
 ---
 track: "Backend Fundamentals"
 title: "Deploying a Node/Express App to Heroku"
-week: 10
+week: 3
 day: 1
 type: "lecture"
 ---
@@ -10,10 +10,6 @@ type: "lecture"
 
 <br>
 <br>
-
-[Click here](https://generalassembly.zoom.us/rec/share/-YtWE6jRrHxObKvGsV2GVpwdI631X6a80CQZ8vBcmEg0XHscYeHbubrFUIqcpDQl?startTime=1596215764000) to access recording
-
-
 <br>
 <br>
 

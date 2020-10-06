@@ -1,13 +1,17 @@
 ---
 track: "Full-Stack Development"
 title: "Guide to User-Centric CRUD using Express & Mongoose"
-week: 2
-day: 5
+week: 3
+day: 1
 type: "lecture"
 ---
 
 
 # Guide to User-Centric CRUD using Express & Mongoose
+
+
+<br>
+<br>
 <br>
 <br>
 

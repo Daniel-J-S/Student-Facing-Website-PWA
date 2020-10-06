@@ -1,13 +1,15 @@
 ---
 track: "Full-Stack Development"
 title: "Guide to Add a Feature to a Web App"
-week: 2
-day: 5
+week: 3
+day: 1
 type: "lecture"
 ---
 
 # Guide to Add a Feature to a Web App
 
+<br>
+<br>
 <br>
 <br>
 

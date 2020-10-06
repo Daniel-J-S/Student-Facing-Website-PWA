@@ -2,12 +2,13 @@
 track: "Full-Stack Development"
 title: "Mongoose Flights Part 3"
 week: 2
-day: 1
+day: 2
 type: "lab"
 ---
 
 # Mongoose "Flights" Lab - Part 3
 
+<br>
 <br>
 <br>
 <br>

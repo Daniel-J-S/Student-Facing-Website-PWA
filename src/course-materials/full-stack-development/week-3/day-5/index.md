@@ -10,8 +10,9 @@ topics: "Project Presentations"
 
 # Week 3 - Day 5
 
-#### Project Presentations
+#### Project 2 Presentations
 
-- **Activity:** Project 2 Presentations
+
+
 
 

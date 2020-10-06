@@ -2,7 +2,7 @@
 track: "Full-Stack Development"
 title: "Consuming 3rd Party APIs"
 week: 2
-day: 2
+day: 4
 type: "lecture"
 ---
 
@@ -11,9 +11,6 @@ type: "lecture"
 
 <br>
 <br>
-
-[Click here](https://generalassembly.zoom.us/rec/share/v-h2Aajt9zlLa7fk6E_CYKkuJ63leaa8gCEf-aVfzEY-_fcNLpa_rW8Xb_Fh_Ea2?startTime=1595952411000) to access recording
-
 <br>
 <br>
 

@@ -1,8 +1,8 @@
 ---
 track: "Full-Stack Development"
 title: "Intro to Mongoose Embedded Relationships"
-week: 1
-day: 5
+week: 2
+day: 1
 type: "lecture"
 ---
 
@@ -12,9 +12,6 @@ type: "lecture"
 
 <br>
 <br>
-
-[Click here](https://generalassembly.zoom.us/rec/share/7pB8FKHzr05IZ5XS803fV5EQIZT9X6a8gyEb_fVbmUhl4G7PiqZDQWdJc8PR5mrO?startTime=1595606753000) to access recording
-
 <br>
 <br>
 

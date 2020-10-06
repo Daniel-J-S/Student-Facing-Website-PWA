@@ -2,7 +2,7 @@
 track: "Full-Stack Development"
 title: "Consume a 3rd Party API Lab"
 week: 2
-day: 2
+day: 4
 type: "lab"
 ---
 
