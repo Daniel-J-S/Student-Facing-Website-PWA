@@ -76,7 +76,7 @@ All material is subject to change at Instructors discretion.
 | 13  | Project Week |
 
 
-### Unit Five: Second Language
+### Unit Five: Capstone Essentials
 
 | Week  | Topics |
 | ----- | ------ |
