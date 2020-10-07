@@ -4,25 +4,15 @@ title: "Day 2"
 week: 2
 day: 2
 type: "homepage"
-topics: "Django URLs, Views, Templates & Models"
+topics: "Rails One to Many"
 ---
 
 # Week 2 - Day 2
 
-#### Django URLs, Views, Templates & Models
+#### Rails One to Many
 
-- [**Activity:** Introduce Project 4](/unit-projects/unit-four-project-requirements) 
-- [**Lecture:** Django URLs, Views & Templates](/second-language/week-2/day-2/lecture-materials/django-urls-views-and-templates/)
-- [**Lecture:** Intro to Django Models](/second-language/week-2/day-2/lecture-materials/intro-to-django-models/)
-
-- **Lab:** _The lab for this lesson is repeating everything we just did, except you'll collect something else like Finches and call the project something like finchcollector, or whatever._
-
-<br>
-<br>
-
-_The final version of your "Finch Collector" project will be a deliverable._
-
-_Because your completed Finch Collector app will be fairly comprehensive and be a nice addition to your portfolio, you should push it to your personal GitHub account._
-
-
-
+- [**Warmup:** Airplanes and Airports](/second-language/week-2/day-2/lecture-materials/airplanes-and-airports/)
+- [**Lecture:** One to Many - Science App](/second-language/week-2/day-2/lecture-materials/one-to-many-science-app/)
+- [**Lecture:** One to Many - Science App Continued](/second-language/week-2/day-2/lecture-materials/one-to-many-science-app-continued/)
+- [**Lab:** Rails One to Many Ice Create and Sales](/second-language/week-2/day-2/labs/rails-one-to-many-ice-cream-and-sales/) - **Deliverable**
+- [**Lab:** Products and Reviews App](/second-language/week-2/day-2/labs/products-and-reviews) - **Deliverable**
