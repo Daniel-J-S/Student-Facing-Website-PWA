@@ -6,6 +6,8 @@ title: "Home"
 
 This website contains assignments and materials for General Assembly's SEIR Program. 
 
+<p style="color: crimson;"><b>Scroll down to access curriculum content ↓</b></p>
+
 
 <br>
 <br>
@@ -25,11 +27,14 @@ This website contains assignments and materials for General Assembly's SEIR Prog
 All material is subject to change at Instructors discretion.
 
 
+<p style="color: crimson; text-decoration: underline"><b>Click on Unit Heading to Access Content 🔍</b></p>
+
+<br>
 <br>
 <br>
 
 
-### [Unit One: Frontend Fundamentals](/frontend-fundamentals)
+### [<u>Unit One: Frontend Fundamentals</u>](/frontend-fundamentals)
 
 | Week  | Topics | 
 | ----- | ------ |
@@ -42,7 +47,7 @@ All material is subject to change at Instructors discretion.
 <br>
 <br>
 
-### [Unit Two: Full Stack Development](/full-stack-development)
+### Unit Two: Full Stack Development
 
 | Week  | Topics |
 | ----- | ------ |
@@ -54,7 +59,7 @@ All material is subject to change at Instructors discretion.
 <br>
 <br>
 
-### [Unit Three: React Fundamentals](/react-fundamentals)
+### Unit Three: React Fundamentals
 
 | Week  | Topics |
 | ----- | ------ |
@@ -66,7 +71,7 @@ All material is subject to change at Instructors discretion.
 <br>
 <br>
 
-### [Unit Four: Second Language](/second-language)
+### Unit Four: Second Language
 
 | Week  | Topics |
 | ----- | ------ |
