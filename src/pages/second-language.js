@@ -61,7 +61,7 @@ export default({ data, location }) => {
               <br />
               <hr />
               <br />
-              <h2>Project Week</h2>  
+              <h2>Holiday Week</h2>  
               { weekThreeLessons }
               <br />
               <hr />
