@@ -10,7 +10,6 @@ type: "lecture"
 
 # Sass Calculator
 
-![](https://raw.git.generalassemb.ly/Software-Engineering-Immersive-Remote/SEIR-Arete/master/unit_4/w10d05/morning_exercise/starter-code/calculator-mockup.jpg?token=AAAGIS7OTVY3N4WPQYDELZS7MT7MO)
 
 You've already built a calculator with CSS, now it's time to build one with SASS!
 For this morning exercise, we want you to focus on the styling, so we've provided starter-code for you. However, you've already built the HTML structure for a calculator. So you have two options:
