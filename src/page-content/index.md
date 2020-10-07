@@ -71,7 +71,7 @@ All material is subject to change at Instructors discretion.
 | Week  | Topics |
 | ----- | ------ |
 | 10  | Relational Databases, SQL, Ruby Fundamentals & Rails |
-| 11  | TBD |
-| 12  | Project Week |
+| 11  | Full Stack With Rails & React, 1:M & M:M Relationships, Deployment & Auth |
+| 12  | Christmas Holiday Break |
 
 
