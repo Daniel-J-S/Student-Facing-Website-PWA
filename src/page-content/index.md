@@ -70,7 +70,7 @@ All material is subject to change at Instructors discretion.
 
 | Week  | Topics |
 | ----- | ------ |
-| 10  | TBD |
+| 10  | Relational Databases, SQL, Ruby Fundamentals & Rails |
 | 11  | TBD |
 | 12  | Project Week |
 
