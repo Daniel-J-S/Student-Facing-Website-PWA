@@ -73,5 +73,12 @@ All material is subject to change at Instructors discretion.
 | 10  | Relational Databases, SQL, Ruby Fundamentals & Rails |
 | 11  | Full Stack With Rails & React, 1:M & M:M Relationships, Deployment & Auth |
 | 12  | Christmas Holiday Break |
+| 13  | Project  Week |
 
 
+### Unit Five: Second Language
+
+| Week  | Topics |
+| ----- | ------ |
+| 14  | Self Directed Learning, Review & Capstone Project |
+| 15  | Final Prep of Capstone Project and Graduation 🥳 🎉|
