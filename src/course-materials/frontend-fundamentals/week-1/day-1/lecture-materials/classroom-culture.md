@@ -74,12 +74,13 @@ type: "lecture"
 
 ### Slack
 
-#### 4 channels
+#### 5 channels
 
-	- curiosity-1012-classroom
-	- curiosity-1012-outcomes
-	- curiosity-1012-partytime
-	- curiosity-1012-techtalk
+	- #curiosity-classroom
+	- #curiosity-outcomes
+	- #curiosity-random
+	- #curiosity-tech-support
+	- #curiosity-resources
 	
 	
 
@@ -88,7 +89,7 @@ type: "lecture"
 
 #### How To:
 
-##### Communicate in one of the outrun channels:
+##### Communicate in one of the curiosity channels:
 
 	- @username
 		- sends a notification to a specific user
