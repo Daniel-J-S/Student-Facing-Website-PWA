@@ -144,8 +144,23 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 ## Lesson Recordings
 
 Lessons will be recorded and embedded as a link into the lesson material within 24-48 hours 
+
+<br>
+
+
+*Also, be sure to checkout the video below for more detail*
+
 <br>
 <br>
+<br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wGSg8CybMG8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<br>
+<br>
+<br>
+
 
 ## Managing your Projects
 * At the end of each unit, you will create a repo in your personal github for your project... i.e. Unit One - Project One, Unit Two - Project Two ...etc
