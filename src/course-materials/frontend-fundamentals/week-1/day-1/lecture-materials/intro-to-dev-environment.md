@@ -198,7 +198,7 @@ Students will be able to:
 
 - Here are a few common shortcut characters used when navigating the filesystem:
 	- `~` The logged in user's _home_ directory
-	- `/` The _root_ (top-level) directory on the harddrive
+	- `/` The _root_ (top-level) directory on the hard drive
 	- `.` The current directory
 	- `..` The parent directory of the current directory
 
