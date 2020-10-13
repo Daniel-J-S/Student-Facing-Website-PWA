@@ -1,6 +1,6 @@
 ---
 track: "Frontend Fundamentals"
-title: "Intro to DOM Events"
+title: "Intro to Flexbox"
 week: 1
 day: 5
 type: "lecture"
@@ -8,20 +8,15 @@ type: "lecture"
 
 
 
-# Flexbox
-
-
-<br>
-
-
-## Intro
+# Intro to Flexbox
 
 
 <br>
 <br>
 <br>
+<br>
 
-### A Very Brief History
+### Intro: A Very Brief History
 Once upon a time, monitors were square and monochrome. As display technology advanced, monitors got bigger, more colorful, and wider. Browser technology also improved, allowing browsers to be resized to nearly any size the monitor would allow. Finally, mobile devices came on the market, providing not only new sizes and proportions but also for the display to rotate and change orientation. This provided new challenges for layouts with CSS.
 
 Flexbox was introduced as part of CSS3, it has been around since ~2008. Despite being a technology that has been around for nearly ten years, it lacked consistent browser support (until recently) and thus developers have often had to fall back on floats and relative positioning to solve the kind of layout challenges that flexbox was built to solve.
@@ -66,12 +61,27 @@ Flexbox has just two types of elements. Parent, or better known as `flex contain
 ### Use Case for Flexbox
 One great use case for flexbox is a layout pattern that is often reffered to as `cards`. Cards are often used for online shopping.
 
+<br>
+<br>
 
-Wide:
+**Wide:**
+
+
 ![cards in online shopping cole haan large example](https://i.imgur.com/56uik0T.png)
 
-Narrow:
+<br>
+<br>
+
+
+**Narrow:**
+
+
 ![cards in online shopping cole haan small example](https://i.imgur.com/LwYtndU.png)
+
+
+<br>
+<br>
+
 
 Here are some commonly desired layout patterns:
 - even spacing between cards
@@ -87,6 +97,11 @@ Here are some commonly desired layout patterns:
 
 ### What We Are Building Today
 We will be building cards that just have a single letter on them. As we build we will learn about some properties of Flexbox and their behavoirs.
+
+<br>
+<br>
+
+
 ![Final build](https://i.imgur.com/TFc73Sf.png)
 
 
@@ -113,6 +128,9 @@ We will be building cards that just have a single letter on them. As we build we
 - `code .` inside the starter code folder to open it up in vscode 
 - `open index.html` to open the file in your browser (or open up a live server if you have that set up). It should look like this:
 
+<br>
+<br>
+
 ![stater index.html apperance](https://i.imgur.com/A6nxcmv.png)
 
 <br>
@@ -120,7 +138,13 @@ We will be building cards that just have a single letter on them. As we build we
 
 
 - The buttons should add and remove a letter card when you click on them
-- Set up your workflow. Set up all the different windows you will be working in, in a way that helps you have a smooth work flow, so you are limiting the amount you have to minimize and resize your work and you can instead just focus on coding. Here is my layout for this lesson. Different layouts will work with different lessons. But always take a minute to try to find a good workflow. ![Karolin's workflow](https://i.imgur.com/gsk0jCz.png)
+- Set up your workflow. Set up all the different windows you will be working in, in a way that helps you have a smooth work flow, so you are limiting the amount you have to minimize and resize your work and you can instead just focus on coding. Here is my layout for this lesson. Different layouts will work with different lessons. But always take a minute to try to find a good workflow. 
+
+<br>
+<br>
+
+
+![Karolin's workflow](https://i.imgur.com/gsk0jCz.png)
 
 <br>
 <br>
@@ -262,7 +286,7 @@ Something looks off, instead of neat rows and columns, we seem to have a bit of 
 }
 ```
 
-> NOTE: flex-basis determines the base (minimum) width when the flex-direction is row, and base (minimum) eight when the flex-direction is column
+> **NOTE:** flex-basis determines the base (minimum) width when the flex-direction is row, and base (minimum) eight when the flex-direction is column
 
 - Yay! But wait! now our letters are off to the left and no longer centered! Let's fix that using the `text-align:center;` property
 
@@ -293,7 +317,8 @@ Something looks off, instead of neat rows and columns, we seem to have a bit of 
 
 #### Flex-direction
 By default, the `flex-direction` is `row`, but we can play around with the order of our `flex-items` by changing the `flex-direction` property of the `flex-container`
-Note: we will need to add a `height` in order to see multiple columns
+
+**Note:** we will need to add a `height` in order to see multiple columns
 
 ```css
 .flex-container {
