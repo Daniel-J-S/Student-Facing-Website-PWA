@@ -24,5 +24,5 @@ topics: "Intro to JavaScript Datatypes, Control Flow & Arrays"
 #### Lesson Recordings
 
 - [**Intro to JavaScript**](https://generalassembly.zoom.us/rec/share/GcZS18b2VSBa023R7NckoDqRct8cObSdtEhnYcCK1bJipqkSQPABdz4lRZwk9Sh4.dxJtd4O_HIfllGr4?startTime=1602597609000)
-- [**Intro to JavaScript Control FLow**](https://generalassembly.zoom.us/rec/share/GcZS18b2VSBa023R7NckoDqRct8cObSdtEhnYcCK1bJipqkSQPABdz4lRZwk9Sh4.dxJtd4O_HIfllGr4?startTime=1602605027000)
+- [**Intro to JavaScript Control Flow**](https://generalassembly.zoom.us/rec/share/GcZS18b2VSBa023R7NckoDqRct8cObSdtEhnYcCK1bJipqkSQPABdz4lRZwk9Sh4.dxJtd4O_HIfllGr4?startTime=1602605027000)
 - [**Intro to JavaScript Arrays**](https://generalassembly.zoom.us/rec/share/GcZS18b2VSBa023R7NckoDqRct8cObSdtEhnYcCK1bJipqkSQPABdz4lRZwk9Sh4.dxJtd4O_HIfllGr4?startTime=1602614781000)
