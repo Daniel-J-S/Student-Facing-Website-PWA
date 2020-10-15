@@ -19,3 +19,12 @@ topics: "Intro to JS Objects and Classes"
 
 
 
+
+<br>
+<br>
+<br>
+
+#### Lesson Recordings
+
+- [**Morning Warmup With Paul & Intro to JS Objects with Ira**](https://generalassembly.zoom.us/rec/share/9itm9ga-X2muQXqf-Dl2Yn1mjjoqVQzBwnJn5Kh3d7_X2uh5o6TWvX3vsc93MpyJ.HMuum1pidZcsPkqo?startTime=1602770430000)
+- [**Intro to JS Classes with Ira**](https://generalassembly.zoom.us/rec/share/9itm9ga-X2muQXqf-Dl2Yn1mjjoqVQzBwnJn5Kh3d7_X2uh5o6TWvX3vsc93MpyJ.HMuum1pidZcsPkqo?startTime=1602794716000)
