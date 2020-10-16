@@ -24,12 +24,10 @@ topics: "Intro the DOM"
 - [**Resource:** Guide to Building a Browser Game](/frontend-fundamentals/week-1/day-5/additional-materials/guide-to-building-a-browser-game/)
 
 
-
-
-
 <br>
+<hr>
 <br>
-<br>
+
 
 #### Lesson Recordings
 
