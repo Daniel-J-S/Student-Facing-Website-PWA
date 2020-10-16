@@ -21,4 +21,4 @@ topics: "Intro the DOM"
 <hr>
 
 - [**Optional Activity:** Tic Tac Toe Code Weekend](/frontend-fundamentals/week-1/day-5/labs/tic-tac-toe-weekend/)
-- [**Resource:** Guide to Building a Browser Game](/frontend-fundamentals/week-1/day-5/labs/guide-to-building-a-browser-game/)
+- [**Resource:** Guide to Building a Browser Game](/frontend-fundamentals/week-1/day-5/additional-materials/guide-to-building-a-browser-game/)
