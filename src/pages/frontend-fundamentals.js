@@ -43,13 +43,13 @@ export default({ data, location }) => {
             <main>
               <h2>Week 1</h2>  
               { weekOneLessons }
-              {/* 
-              TODO: Un-Comment To Release More Content
               <br />
               <hr />
               <br />
               <h2>Week 2</h2>  
               { weekTwoLessons }
+              {/* 
+              TODO: Un-Comment To Release More Content
               <br />
               <hr />
               <br />

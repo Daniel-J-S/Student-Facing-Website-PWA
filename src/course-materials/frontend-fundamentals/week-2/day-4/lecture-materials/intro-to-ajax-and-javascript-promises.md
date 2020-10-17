@@ -52,18 +52,22 @@ type: "lecture"
 
 ### Lesson Setup  
 
-- Create a folder called `intro-to-ajax-practice`
+- Create a folder called `intro-to-ajax`
 
-- Inside of `intro-to-ajax-practice` create the following folder/file structure:
+- Inside of `intro-to-ajax` create the following folder/file structure:
 
 ```shell
-intro-to-ajax-practice/
+intro-to-ajax/
   index.html
   js/
     script.js
 ```
 
+<br>
+
 - You can add this HTML to your `.html` file:
+
+<br>
 
 ```html
 <!DOCTYPE html>
@@ -81,6 +85,9 @@ intro-to-ajax-practice/
 </body>
 </html>
 ```
+<br>
+<br>
+
 
 We'll have our page get data from the external site [https://www.omdbapi.com/](https://www.omdbapi.com/)
 
@@ -90,6 +97,10 @@ We'll have our page get data from the external site [https://www.omdbapi.com/](h
 - In order to use this particular API in our projects, we'll need to [request an API key](https://www.omdbapi.com/apikey.aspx)
 
 Let's use JavaScript to get data for our page:
+
+<br>
+<br>
+
 
 ```javascript
 const promise = $.ajax({
@@ -105,6 +116,10 @@ promise.then(
   }
 );
 ```
+<br>
+<br>
+<br>
+
 
 ## Explain promises
 
@@ -123,7 +138,11 @@ Remember: a callback is a function that get's passed to another function, as an 
 
 In this case, when the AJAX request succeeds or fails.
 
+<br>
+
 We can also rewrite the previous code into one expression:
+
+<br>
 
 ```javascript
 $.ajax({
@@ -149,8 +168,11 @@ $.ajax({
 
 Now that we have successfully made an AJAX request, let's use the response from OMDB to populate the DOM. 
 
+<br>
 
 Let's add the below `html` to our practice project.   
+
+<br>
 
 ```html
 <h1>Movie Info</h1>
@@ -163,11 +185,18 @@ Let's add the below `html` to our practice project.
   <p id="rated"></p>
 </main>
 ```
+<br>
+<br>
+
 
 Now let's use the data to populate the DOM:
 
 - First we'll select/cache the DOM elements we'll need to work with.
 - Once the data comes back from our AJAX request, we can set the content of our DOM elements with it.
+
+<br>
+<br>
+
 
 ```javascript
 
@@ -180,9 +209,9 @@ $.ajax({
   url:'https://www.omdbapi.com/?apikey=53aa2cd6&t=Frozen'
   }).then(
     (data) => {
-    $title.html(data.Title);
-    $year.html(data.Year);
-    $rated .html(data.Rated);
+    $title.text(data.Title);
+    $year.text(data.Year);
+    $rated .text(data.Rated);
   },
     (error) => {
    console.log('bad request: ', error);
@@ -205,6 +234,9 @@ Let's let the user choose the movie:
 
 We'll use the below `html` to begin adding this functionality. Go ahead and place this form below the closing `<main>` tag
 
+<br>
+<br>
+
 ```html
 <!-- existing code above -->
 ...
@@ -215,6 +247,9 @@ We'll use the below `html` to begin adding this functionality. Go ahead and plac
   <input type="submit" value="Get Movie Info" />
 </form>
 ```
+<br>
+<br>
+
 
 First, let's set up a state variable to store our movie data.
 
@@ -234,6 +269,9 @@ To summarize, `handleGetData` will just handle requesting the data and assigning
 
 
 By the way, using specialized functions like `handleGetData` and `render` are a great practice to seperate concerns and keep our code organized.
+
+<br>
+<br>
 
 ```javascript
 let movieData;
@@ -258,12 +296,15 @@ function handleGetData(event) {
     
 
 function render() {
-    $title.html(movieData.Title);
-    $year.html(movieData.Year);
-    $rated.html(movieData.Rated);
+    $title.text(movieData.Title);
+    $year.text(movieData.Year);
+    $rated.text(movieData.Rated);
  }
 
 ```
+<br>
+<br>
+
 
 Lastly, let's use the input that user types to modify the AJAX request:
 
@@ -271,6 +312,10 @@ Lastly, let's use the input that user types to modify the AJAX request:
 - Next, we'll select/cache a reference to the input element from the DOM.
 - Whenever `handleGetData` gets called, we want to assign the value from our input element to our state variable and use that value to modify the AJAX request.
 - Very much like our `apikey`, `userInput` becomes what is known as a query parameter in our `URL`.
+
+<br>
+<br>
+
 
 ```javascript
 
@@ -302,9 +347,9 @@ function handleGetData(event) {
 }
 
 function render() {
-    $title.html(movieData.Title);
-    $year.html(movieData.Year);
-    $rated.html(movieData.Rated);
+    $title.text(movieData.Title);
+    $year.text(movieData.Year);
+    $rated.text(movieData.Rated);
  }
 ```
 
