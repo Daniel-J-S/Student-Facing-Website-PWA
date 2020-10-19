@@ -25,20 +25,9 @@ type: "lecture"
 <br>
 
 
-## Git & Github - Getting Started
-
-
-1. Create a file called `answers.md` inside a folder called `resume_page`.
-2. Write your and answer the questions below in your `answers.md` file.
-3. Commit your work at each point when directed (remember to `git add .` and then `git commit -m "your commit message here"`).
-
-<br>
-<br>
-<br>
-
 ## Git & Github - Questions
 
-Refer back to the notes from today and/or use the internet and google-fu to find the answers to the questions below:
+Refer back to the notes from today and/or use the internet and google-fu to find the answers to the questions below with your group:
 
 <br>
 <br>
@@ -55,34 +44,6 @@ Refer back to the notes from today and/or use the internet and google-fu to find
 <br>
 <br>
 <br>
-
-
-🔴 **Commit your work!** <br>
-Your commit message should read something like: 
-
-<br>
-
-`"The 1st set of GIT homework answers are complete"`
-
-
-<br>
-<br>
-<br>
-
-
-## HTML & CSS Videos
-
-You should have covered all of this information during Fundamentals, but if you feel like you need a refresher on some of the basics of HTML and CSS, you can watch the following videos! If you don't need a refresher, feel free to skip this section.
-
-1. [HTML Intro (tags, content, attributes, semantic HTML)](https://www.youtube.com/watch?v=DxhXFpsN5I4&index=1&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)
-1. [HTML Elements (headers, navigation, lists, sections, etc.) and Media (images, audio, videos)](https://www.youtube.com/watch?v=KhbnrDhWDdE&index=2&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)
-1. [CSS Intro (including css files in HTML, elements)](https://www.youtube.com/watch?v=xWiT2TWCFjc&index=3&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)
-1. [CSS Basics (colors, background, font properties)](https://www.youtube.com/watch?v=UMMHsQPmfug&index=4&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)
-
-<br>
-<br>
-<br>
-
 
 ## Fake Resume Page
 
@@ -110,12 +71,13 @@ This is what he wants you to incdlude and do for his resume:
 
 ## Fake Resume Page - Getting Started
 
-1. Make sure you're in your `resume_page` folder (you created this earlier for your Git/GitHub answers).
-2. From inside this folder, create two files: `index.html` and `style.css`.
-3. Open the directory in your text editor and add the HTML boilerplate to your `index.html`.
+1. Create a `resume_page` github repo for your fake resume. 
+2. Commit your work at each point when directed (remember to `git add .` and then `git commit -m "your commit message here"`).
+3. From inside this folder, create two files: `index.html` and `style.css`.
+4. Open the directory in your text editor and add the HTML boilerplate to your `index.html`.
     - _HINT:_ There's a shortcut to quickly create an HTML boilerplate. 
-4. Create a heading level-one tag with the name: Grumpy Cat.
-5. Open the `index.html` in your browser to confirm that everything is set up properly.
+5. Create a heading level-one tag with the name: Grumpy Cat.
+6. Open the `index.html` in your browser to confirm that everything is set up properly.
 Reminder: To open your file with your browser, from the command line, type `open index.html`
 
 <br>
@@ -216,61 +178,7 @@ Your commit message should read something like:
 <br>
 <br>
 
-
-## Loops - Getting Started
-
-
-Now, let's get in a little bit of JavaScript practice.  Specifically, more loops!
-
-1. In tonight's main `homework` folder (not inside `resume_page`!), create a `loops.js` file and complete the following section in that file.
-
-<br>
-<br>
-<br>
-
-
-## Loops - More Reps!
-
-Pick **five** to tackle.
-
-1. Create a loop that logs the numbers from 0-99 (ascending)
-1. Create a loop that logs the numbers from 99-0 (descending)
-1. Create a loop that logs the **EVEN** numbers from 0-98 (ascending)
-1. Create a loop that logs the **EVEN** numbers from 98-0 (descending)
-1. Create a loop that logs the **ODD** numbers from 0-99 (ascending)
-1. Create a loop that logs the **ODD** numbers from 99-0 (descending)
-1. Create a loop that logs the numbers from 49-72 (ascending)
-1. Create a loop that logs the numbers from 81-26 (descending)
-1. Create a loop that logs the numbers from 3-90 **that are multiples of 3** (ascending)
-
-<br>
-<br>
-<br>
-
-
-🔴 **Commit your work!** <br>
-Your commit message should read something like:
-
-<br>
-
-`"finished loop practice"`
-
-
-<br>
-<br>
-<br>
-
-
 ## Hungry for More?
-
-### Git
-- Check out this [tutorial](http://gitreal.codeschool.com/?utm_source=github&utm_medium=codeschool_option&utm_campaign=trygit) that includes videos about using git and some challenges for you to tackle.
-
-
-<br>
-<br>
-<br>
-
 
 ### More for grump cat's site:
 1. Insert a video of grumpy cat's work or his favorite YouTube video ('iframe' tag)
@@ -287,15 +195,3 @@ Your commit message should read something like:
 1. Insert another image of grumpy cat, or an image of one of his projects, but make it round
 1. Insert a button on both pages that links to opening an email to his email address
 1. Style the navigation bar
-
-<br>
-<br>
-<br>
-
-
-### Loops
-- Go back and finish all the loop problems!
-- Go back and tackle the loop problems with a different kind of loop! (for/while)
-
-
-
