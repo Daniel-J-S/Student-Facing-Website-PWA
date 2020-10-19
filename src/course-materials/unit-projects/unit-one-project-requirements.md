@@ -14,12 +14,14 @@ topics: "Unit Projects"
 
 ## Attendance
 
-There are typically no classes taught during project periods with the exception of optional review time or bonus workshops. 
-
-However, we still take normal attendance for scheduled classroom days that fall on project periods, so you are still expected to be virtually present in our usual Zoom call. 
+For project week, the classroom will break into squads, so students can work on their projects independently and check in via slack or a 1:1 zoom with their squad leader as needed/scheduled.
 
 
-In most cases we'll place you in breakout rooms to work on your project, but it's your responsibility to be available for meetings with instructors as needed. 
+There are typically no classes taught during project week with the exception of an occasional concept review or bonus workshop. 
+
+
+Additionally, we still take normal attendance during project period, so you are still expected to be available for a morning & after-lunch check-in from your squad leader. 
+
 
 <br>
 <br>
