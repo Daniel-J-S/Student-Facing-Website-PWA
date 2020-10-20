@@ -20,9 +20,9 @@ Let's hope they don't say yuck! Let's hope they can have a good time together! &
 
 # DATING APP - FRONTEND EXAMPLE
 
-![landing](http://i.imgur.com/a0luMDh.png)
+![landing](https://i.imgur.com/a0luMDh.png)
 
-![match](http://i.imgur.com/KkKfBuU.png)
+![match](https://i.imgur.com/KkKfBuU.png)
 
 Above is a potential frontend for the Dating App. The layout has a header, a column on the left, a column on the right, a middle column with the main content, and a footer. ie. The "[Holy Grail](https://en.wikipedia.org/wiki/Holy_Grail_(web_design))" layout.
 
