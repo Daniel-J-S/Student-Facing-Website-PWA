@@ -27,14 +27,13 @@ The wireframe usually lacks typographic style, color, or graphics, since the mai
 
 ![wireframe](https://i.imgur.com/AbUzbHn.jpg)
 
-
 <br>
 <br>
 <br>
 
 ## Setup
 
-1. <a href="/downloads/frontend_fundamentals/vssl-mockup/vssl_mockup.zip" download>Download</a> the starter code for this exercise and unzip it's contents.
+1. <a href="/downloads/frontend_fundamentals/wireframe/vssl_mockup.zip" download>Download</a> the starter code for this exercise and unzip it's contents.
 2. Inside the provided `vssl_mockup` folder, create an `index.html` file.  Make sure to create it on the same level as the `img` folder and `mockup.png`.  
 3. Add the boilerplate to your html file.
 4. Open `index.html` in your browser.
