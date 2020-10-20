@@ -48,7 +48,7 @@ dev-skills-lab/
 1. Do the usual when setting up a front-end project:
 	- Add the HTML boilerplate to `index.html`
 	- Link in `./js/script.js` - don't forget the `defer` attribute!
-	- Link in `./css/script.css`
+	- Link in `./css/style.css`
 
 4. Load jQuery from the CDN by adding the following **before** your `script.js`:
 	
