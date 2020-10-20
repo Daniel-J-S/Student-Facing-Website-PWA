@@ -21,7 +21,6 @@ topics: "Intro to CSS Flexbox/Grid & Responsive Design"
 <hr>
 <br>
 
-<!-- TODO: Finish Adding Recordings -->
 
 #### Lesson Recordings
 
