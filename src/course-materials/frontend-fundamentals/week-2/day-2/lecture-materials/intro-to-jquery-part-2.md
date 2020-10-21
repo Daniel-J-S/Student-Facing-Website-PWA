@@ -6,7 +6,7 @@ day: 1
 type: "lecture"
 ---
 
-# Intro to jQuery - Part 2 
+# Intro to jQuery - Part Two 
 
 
 <br>
