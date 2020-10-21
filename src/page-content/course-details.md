@@ -124,15 +124,29 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 
 <h3 style="color: crimson;">Unit 1</h3>
 
+<br>
+<br>
+
 | Assignment | Due Date |
 |  ------------- | ---------|
-| JS Arrays Lab  | 10/20/20 |
-| JS Objects Lab | 10/22/20 | 
-| DOM Menu Lab Part 1 | 10/23/20 |
-| Flexbox/Grid Lab | 10/26/20 |
-| My Developer Skills Lab | 10/27/20 |
-| AJAX Weather Lab | 10/29/20 |
-| Project 1 | 10/29/20 |
+| [JS Arrays Lab](/frontend-fundamentals/week-1/day-2/labs/javascript-arrays-lab/)  | 10/20/20 |
+| [JS Objects Lab](/frontend-fundamentals/week-1/day-4/labs/guess-the-number-game-lab/) | 10/22/20 | 
+| [DOM Menu Lab Part 1](/frontend-fundamentals/week-1/day-5/labs/dom-menu-lab-part-1/) | 10/23/20 |
+| [Flexbox/Grid Lab](/frontend-fundamentals/week-2/day-1/labs/flexbox-and-grid-lab/) | 10/26/20 |
+| [My Developer Skills Lab](/frontend-fundamentals/week-2/day-2/labs/my-developer-skills-lab/) | 10/27/20 |
+| [AJAX Weather Lab](/frontend-fundamentals/week-2/day-4/labs/build-a-weather-app-with-ajax/) | 10/29/20 |
+| [Project 1](/unit-projects/unit-one-project-requirements/) | 10/29/20 |
+
+<br>
+<br>
+
+<h3 style="color: crimson;">Unit 2</h3>
+
+<br>
+<br>
+
+|  |  |
+|  ------------- | ---------|
 | Express Dev Skills Parts 1 & 2 | 11/12/20 |
 | Mongoose Flights Parts 1, 2 & 3 | 11/17/20 |
 | Project 2 | 11/19/20 |
