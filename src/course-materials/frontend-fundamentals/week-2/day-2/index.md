@@ -19,10 +19,14 @@ topics: "DOM Manipulation With jQuery"
 - **Activity:** Begin Planning Project 1
 
 
+<br>
+<hr>
+<br>
 
 
 
+#### Lesson Recordings
 
-
-
+- [**jQuery Part 1 with Daniel**](https://generalassembly.zoom.us/rec/share/_W3SrqiMWvlB1jWUWJYeHUGy3bkmmObGIr7LUCugNhoi1DGmQECl3f6MnAU-xKrt.aZXFrm5gTQIPNX_a?startTime=1603206554000)
+- [**jQuery Part 2 with Daniel w/ Exercise Walk-through from Ira**](https://generalassembly.zoom.us/rec/share/_W3SrqiMWvlB1jWUWJYeHUGy3bkmmObGIr7LUCugNhoi1DGmQECl3f6MnAU-xKrt.aZXFrm5gTQIPNX_a?startTime=1603218799000)
 
