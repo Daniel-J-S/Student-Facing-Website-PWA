@@ -207,16 +207,16 @@ const $rated = $('#rated');
 
 $.ajax({
   url:'https://www.omdbapi.com/?apikey=53aa2cd6&t=Frozen'
-  }).then(
+  })
+  .then(
     (data) => {
-    $title.text(data.Title);
-    $year.text(data.Year);
-    $rated .text(data.Rated);
-  },
+      $title.text(data.Title);
+      $year.text(data.Year);
+      $rated .text(data.Rated);
+    },
     (error) => {
-   console.log('bad request: ', error);
-  });
-})
+      console.log('bad request: ', error);
+    });
 ```
 <br>
 <br>
