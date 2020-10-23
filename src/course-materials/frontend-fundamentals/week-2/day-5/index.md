@@ -15,7 +15,7 @@ topics: "Build Another Project That Uses AJAX"
 - **Activity:** Build Another App That Uses an API
 - **Activity:** Students Begin Project 1
 
-br>
+<br>
 <hr>
 <br>
 
