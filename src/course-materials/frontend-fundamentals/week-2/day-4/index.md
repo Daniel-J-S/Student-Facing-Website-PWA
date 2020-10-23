@@ -13,7 +13,7 @@ topics: "Intro to AJAX and JavaScript Promises"
 #### Intro to AJAX and JavaScript Promises
 
 - [**Warmup:** Wireframing Part 2](/frontend-fundamentals/week-2/day-4/lecture-materials/wireframing-part-2/)
-- [**Lecture:** Intro to AJAX and JavaScript Promises with jQuery](https://generalassembly.zoom.us/rec/share/IeCXch0vVouisU10-8BjLUrD_I4iJcmaWfAAPRqk7sVbKkHAlRbAGRdL-8ScQPvS.YkqMWT6H2PrAOQ-6?startTime=1603398767000)
+- [**Lecture:** Intro to AJAX and JavaScript Promises with jQuery](https://seir-curiosity.netlify.app/frontend-fundamentals/week-2/day-4/lecture-materials/intro-to-ajax-and-javascript-promises/)
 - [**Lab:** Build a Weather App With AJAX](/frontend-fundamentals/week-2/day-4/labs/build-a-weather-app-with-ajax/) - **Deliverable**
 
 
