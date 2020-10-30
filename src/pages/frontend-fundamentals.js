@@ -48,13 +48,11 @@ export default({ data, location }) => {
               <br />
               <h2>Week 2</h2>  
               { weekTwoLessons }
-              {/* 
-              TODO: Un-Comment To Release More Content
               <br />
               <hr />
               <br />
               <h2>Project Week</h2>  
-              { weekThreeLessons } */}
+              { weekThreeLessons }
             </main>
         </Layout>
     );
