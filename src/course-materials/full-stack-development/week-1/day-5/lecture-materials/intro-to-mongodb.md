@@ -6,60 +6,36 @@ day: 5
 type: "lecture"
 ---
 
-# Intro to MongoDB
-
-| Learning Objectives - SWBAT: |
-| :--- |
-| Describe the Use Case of Databases |
-| Describe the Format of a Document |
-| Save and Retrieve MongoDB Documents using the Mongo Shell |
-| Describe Embedding & Referencing |
 
 
-
-<br>
-<br>
-<br>
-<br>
-
-
-
-
-## Roadmap
-
-- Tech Check - Make sure we have MongoDB Installed
-- What's a Database?
-- MongoDB vs. Relational SQL Databases
-- More About MongoDB
-- MongoDB Documents
-- Creating a Database and Inserting Documents
-- Data Modeling - Intro
-- Data Modeling in MongoDB
-	- Embedding Subdocuments
-	- Referencing Documents
+# Mongo Database
 
 <br>
 <br>
 <br>
 
 
+## Learning Objective
 
+1. Describe what is a Database
+1. Describe what is Mongo
+1. Understand the difference between a Mongo database, sub-database, collection, and document
+1. Get Mongo running
+1. List sub-databases
+1. choose a sub-database
+1. create a collection
+1. insert a document
+1. insert multiple documents
+1. query the collection
+1. remove a set of documents
+1. update a set of documents
+1. drop a Collection or sub-database
 
-## What's a Database?
+<br>
+<br>
+<br>
 
-Remember when we added new To-Dos in Express and we would "lose" them when nodemon restarted the server?
-
-If we were saving those To-Dos in a database, they would remain there until we deleted them.
-
-Databases are a way to organize and save, or persist, data.
-
-There are lots of different database systems - check out [this site](http://db-engines.com/en/ranking) that tracks the popularity of different database systems.
-
-As you can see, **Relational Database Management Systems (RDMS)** are by far the most popular - they've been around since the 1960s. They are more commonly referred to as **SQL Databases** because they are designed and accessed using **Structured Query Language**.
-
-However, you'll also see that **MongoDB** is by far the most popular **NoSQL** database system.
-
-There are several varieties of NoSQL databases. MongoDB is of the **document-based** variety because it stores and retrieves _documents_.
+## Explain
 
 <br>
 <br>
@@ -67,14 +43,19 @@ There are several varieties of NoSQL databases. MongoDB is of the **document-bas
 
 
 
+### What is a Database
 
-## MongoDB vs. Relational SQL Databases
+A database is an organized collection of data, stored and accessed electronically.
 
-### Terminology
+For our CRUD apps so far we've been hard coding some data. We've been able to make temporary changes, but as soon as we shut down our servers, those changes are gone.
 
-<img src="https://i.imgur.com/XdV3hSs.png" style="width:900px">
+We need a way to make our data persist.
 
-As diagramed above, there is a one-to-one mapping of the key concepts of a database.
+We'll do that by storing/accessing our data from a database.
+
+There are many databases. A common type is a SQL(Structured Query Language) database which stores data in tables and rows, much like an excel spreadsheet/google sheet.
+
+Another type of database is a NoSQL(Not Only SQL) database, which follows a different structure. In our case, we'll be using MongoDB which will store our data in objects (just as we've been seeing with our mock databases)
 
 
 <br>
@@ -83,18 +64,11 @@ As diagramed above, there is a one-to-one mapping of the key concepts of a datab
 
 
 
+### What is Mongo
 
-### Key Differences
+MongoDB is a database that holds JavaScript Objects. The database itself is an application that runs quietly on a computer and waits for connections that make requests and then sends responses (much like a web server).
 
-#### Use Cases
-
-Either a SQL database or MongoDB can be used for most applications.
-
-However, in general:
-
-- **Relational Databases** are preferred in mission-critical financial applications such as banking, stock trading, etc., due to their strength of handling [transactions](https://en.wikipedia.org/wiki/Database_transaction). They are not very good however on handling data that can't be strictly organized into tables of structured columns because they have a strict **schema** (structure) they must adhere to.
-
-- **MongoDB** is preferred for storing vast amounts of unstructured data, such as in social-media type applications.  MongoDB is also a great choice when prototyping applications because it is **schema-less** and more adaptable to change.
+Mongo is designed to be a database that is flexible and easily scalable.
 
 <br>
 <br>
@@ -102,15 +76,25 @@ However, in general:
 
 
 
+### Mongo Sub-Databases
+
+You can have multiple smaller databases stored and available in Mongo.
+
+Imagine a company like Google, they would have multiple databases: one for mail, one for maps, one for drive documents...
+
+For us, we'll have multiple sub-databases, typically one for each lesson, homework and project.
+
+<br>
+<br>
 
 
-## More About MongoDB
+**Here is a way you _COULD_ split up sub-databases for an app**
 
-MongoDB puts the "M" in the MEAN/MERN Stack, technology stacks that emphasizes the use of JavaScript on both the front-end and back-end.
+<br>
+<br>
 
-Instead of _SQL_ (_Structured Query Language_), MongoDB uses JavaScript as its native language for database operations.
+![sub database example](https://i.imgur.com/rHgjaUM.png)
 
-You're going to see that working with **data** in MongoDB is like working with JavaScript objects.
 
 <br>
 <br>
@@ -118,105 +102,227 @@ You're going to see that working with **data** in MongoDB is like working with J
 
 
 
+### Demonstration
+
+<br>
+<br>
+
+![switch_to_jsx (1)](https://media.git.generalassemb.ly/user/15881/files/4cb02600-92e5-11ea-95c3-4a5765bb3bb9)
 
 
-## MongoDB Documents
+<br>
+<br>
+<br>
 
-In MongoDB, we save and retrieve _documents_ to and from a _collection_. 
 
-Lets take a look of what a MongoDB _document_ might look like:
+### Mongo Collections and Documents
 
-```javascript
-{
-    _id: ObjectId("5099803df3f4948bd2f98391"),
-    name: { first: "Alan", last: "Turing" },
-    birth: ISODate("1912-06-23T00:00:00Z"),
-    death: ISODate("1954-06-07T00:00:00Z"),
-    contribs: [ "Turing machine", "Turing test", "Turingery" ],
-    views: 1250000
-}
+MongoDB is considered a NoSQL (not only SQL, non SQL or non relational), rather than storing things in tables with rows and columns, NoSQL databases use other means. In the case of MongoDB, data is stored in JavaScript objects.
+
+A collection is a set of documents. Documents are a set of data records. This is very abstract. Let's use a simplified real world example of an address book.
+
+Here is one document:
+
+```js
+ firstName: "Jennifer",
+ lastName: "Juniper",
+ address: "Upon the Hill",
+ state: "California",
+ telephone: "867-5309",
+ birthday: "June 8, 1968",
+ email: "jenny.juniper@juno.net"
 ```
 
-As you can see, this format looks very much like a JavaScript object.
+A collection, would be many documents: In our case, many contacts.
 
-In fact, you'll be working with documents using JavaScript, therefore they absolutely **are** JS objects!
+Remember: having a collection of documents sounds quite reasonable. But having a document of collections is ... kind of odd.
 
-<br>
-<br>
+If you're coming from a background where you are used to thinking of data in terms of columns and rows, reading the following could be helpful in transitioning into this new way of modeling data:
 
+[Thinking in Documents Part 1](https://www.mongodb.com/blog/post/thinking-documents-part-1?jmp=docs&_ga=2.202168721.1294830246.1530196908-30583944.1529350623)
 
-
-### The Document `_id`
-
-The `_id` is a special field that represents the document's _unique identifier_. If you're familiar with SQL databases, a document's `_id` is like a _primary key_.
-
-MongoDB automatically creates the `_id` when documents are saved for the first time.
-
-MongoDB uses a special `ObjectId` datatype for the value of `_id`.
-
-`ObjectId`s are JS objects, but we'll be able to use their string representation most of the time when we work with them in Mongoose (next lesson).
-
-The value that MongoDB creates for the `_id` is guaranteed to be _globally unique_.
-
+[Thinging in Documents Part 2](https://www.mongodb.com/blog/post/thinking-documents-part-2)
 
 <br>
 <br>
 <br>
 
 
+### Install Mongo
 
+Although the MongoDB Community Server can be installed locally on our machine, it's going to be much easier to work with the cloud-hosted MongoDB server instead.
 
-
-## Creating a Database and Inserting Documents
-
-### Before we Start
-
-In this lesson, we are going to be working directly with MongoDB to create and modify data using the _Mongo Shell_ in a Terminal window.
-
-However, after this first look at MongoDB, you will be better off using _Mongoose_ that we're going to learn about next.
 
 <br>
 <br>
 <br>
 
 
+### Connect to Mongo
 
+There are a few ways to connect to Mongo. In this course, there will be two main ways:
 
+- Through the [MongoDB Atlas web interface](https://cloud.mongodb.com)
+- Through node using an npm module called `mongoose`
 
-### The Mongo Shell
-
-MongoDB installs with a client app, a JavaScript-based shell, that allows us to interact directly with the MongoDB engine.
-
-Start the app in terminal by typing `mongo`
-
-The app will load and change the prompt will change to `>`
-
-List the shell's commands available: `> help`
-
-Show the list of databases: `> show dbs`
-
-Show the name of the currently active database: `> db`
-
-Switch to a different database: `> use [name of database to switch to]`
-
-Let's switch to the `local` database: `> use local`
-
-Show the collections of the current database `> show collections`
 
 <br>
 <br>
 <br>
 
 
+## Connect via MongoDB Atlas
 
 
+Load up and log into [https://cloud.mongodb.com](https://cloud.mongodb.com), then click on `Collections`
 
-### Creating a new Database
+<br>
+<br>
+<br>
 
-To create a new database in the Mongo Shell, we simply have to `use` the database.  Lets create a database named _myDB_:
+
+## Connect/Create to a Sub-Database
+
+Let's see what sub-databases we have available to us:
+
+![](https://i.imgur.com/Nd4mANy.png)
+
+Let's create and use a sub-database called `learn`. 
+
+<br>
+<br>
+<br>
+
+
+## Create a Collection
+
+For today, we'll only be working with one collection, but most apps will have numerous collections.
+
+Let's think about an online store. You might split up the collections like so:
 
 ```shell
-> use myDB
+- users
+    - username
+    - password
+    - address
+    - creditCardInfo
+    - phoneNumber
+
+- products
+    - productName
+    - catalogNum
+    - imageLink
+    - price
+    - inStock
+```
+
+This helps us organize our data.
+
+Let's create a collection of `contacts` in the `learn` sub-database by clicking the "create collection" button.
+
+<br>
+<br>
+<br>
+
+
+## Create, Read, Update and Delete Documents
+We've been creating, reading, updating and deleting our 'data' in our Express apps. Now let's learn how to do it using Mongo.
+
+Remember: users are not going to open a Mongo shell and type everything we're going to type. We'll eventually be building apps to interact with our database.
+
+
+<br>
+<br>
+<br>
+
+
+### Insert a document into a Collection (Create)
+
+Click into the `contacts` collection and then click `insert document`.
+
+Add some key value pairs, for Jennifer. We're going to split it up across multiple lines to make it easier to type and see
+
+```js
+{
+  'name': 'Jennifer',
+  'phone': 8675309,
+  'state': 'California'
+}
+```
+
+We can also type our code in vscode and when we know it's right, copy and paste it over into our interface. Go with whatever is easier.
+
+Let's go ahead and copy paste these into our atlas interface to populate our collection with more documents
+
+```js
+[
+  {
+    "name": "Jennifer",
+    "phone": 8675309,
+    "state": "California"
+  },
+  {
+    "name": "Claire",
+    "phone": 6060842
+  },
+  {
+    "name": "Morris",
+    "phone": 7779311,
+    "state": "Minnesota"
+  },
+  {
+    "firstName": "Alicia",
+    "lastName": "Keys",
+    "phone": 4894608,
+    "state": "New York"
+  },
+  {
+    "name": "Etta",
+    "phone": "842-3089",
+    "state": "California"
+  }
+]
+```
+
+<br>
+<br>
+<br>
+
+
+### HEADS UP: The JSON format required by Atlas doesn't support trailing commas or other JS features. And all strings need to be in full `"` marks and not single ticks `'`.
+
+
+We may notice that our data wasn't consistent.
+
+- Jennifer has a duplicate record
+- Claire, doesn't have a state
+- Alicia's key's are different for her name than others, she also has an extra field for her last name, compared to others.
+- Etta's phone number is a string with a hyphen instead of a number
+
+Mongo is designed to be this flexible. Later, we'll learn how to validate our data with an npm package called `mongoose`.
+
+<br>
+<br>
+<br>
+
+
+
+### Query Documents from a Collection(READ)
+
+We'll use the `Find` button.
+
+We'll do some simple queries. If we provide an empty `{}`, it will find all the documents.
+
+Let's try it! Type in `{}` into the Filter box, and click `Find`.
+
+Many times, we don't want to find all of the records in our collection.
+
+We might want to just find the names of the people who live in California.
+
+We can give our `find` method some key value pairs to narrow it down.
+
+```js
+  { "state": "California" }
 ```
 
 <br>
@@ -225,222 +331,111 @@ To create a new database in the Mongo Shell, we simply have to `use` the databas
 
 
 
+### Remove Documents from a Collection(DELETE)
+
+Let's remove the Jennifer record. We'll use the trash can (delete button) to get rid of it.
 
 
-### Inserting Data into a Collection
+And then let's put Jennifer back again:
 
-This is how we can create and insert a document into a collection named _people_:
+```js
+{
+  "name": "Jennifer",
+  "phone": 8675309,
+  "state": "California"
+}
+```
+
+<br>
+<br>
+<br>
+
+
+
+### Update a document  (Update)
+
+Let's update Jennifer's record to have the name Jenny instead
+
+Let's find Jenny
+
+```js
+{"name": "Jenny"}
+```
+
+We can add a field. Claire has no state, let's give her a state
+
+Click the pencil (edit) button on Clair's record (AKA Document).
+
+```js
+state: "California"
+```
+
+And we should see that Claire now has a state.
+
+
+<br>
+<br>
+<br>
+
+
+
+### Search for Multiple Values
+We can query for multiple values. In our contacts, let's query for people who live in California and are named Etta
+
+```js
+  {
+    "name": "Etta",
+    "state": "California"
+  }
+```
+
+
+<br>
+<br>
+<br>
+
+
+### Search by Quantitative Data
+
+We can search for equal to, not equal to, greater than, less than or equal to, included in an array etc.
+
+[query operators](https://docs.mongodb.com/manual/reference/operator/query/)
+
+Let's just try one together. Let's query for the people who are NOT in California
+
+```js
+{state: {$ne : "California"}}
+```
+
+<br>
+<br>
+
+**NOTE: `$ne` is the "not equal" operator in MongoDB.**
+
+
+<br>
+<br>
+<br>
+
+
+### Drop a collection
+
+
+If you need to remove an entire collection
 
 ```shell
-> db.people.insert({
-... name: "Fred",	// Don't type the dots, they are from the 
-... age: 21			// shell, indicating multi-line input mode
-})
+db.contacts.drop()
 ```
 
-Using a collection for the first time creates it!
+<br>
+<br>
 
-__YOU DO: Let's add another person to the _people_ collection. But this time, add an additional field called _birthDate_ and assign it a date value with something like this: *birthDate: new Date('3/21/1981')*__
+**If you need to drop an entire sub-database, while you are connected to the database you want to drop, click the trash can next to the collection in the left sidebar.**
 
-To list all documents in a collection, we can use the _find_ method on the collection without any arguments:
-
-```shell
-> db.people.find({})
-```
-
-The argument is called a _query object_ and is used to specify criteria.  If we provide an empty query object, `find` will return all documents:
 
 <br>
 <br>
 <br>
-
-
-
-
-
-## Data Modeling - Intro
-
-### Data Entities
-
-A **data entity** represents a certain _type_ of data in an application.
-
-Examples include:  **User**, **Account**, **Post**, **Comment**, etc.
-
-<br>
-<br>
-
-
-
-
-
-### Relationships
-
-**Relationships** exist between entities, for example:
-
-- _A User has many Posts; and a Post belongs to a User_<br>This relationship is called a **one-to-many**.
-
-- _A User has and belongs to many Accounts; and an Account has and belongs to many Users_<br>This relationship is called a **many-to-many**.
-
-There is also a less common **one-to-one** relationship. For example, _A User has a Profile; and a Profile belongs to a User_
-
-You will be asked to model the relationships as part the planning for your CRUD projects.  Here's a [link](https://www.lucidchart.com/pages/er-diagrams?a=0) that talks more about data relationships and how to create what's called an Entity Relationship Diagram (ERD).
-
-<br>
-<br>
-
-
-
-### Database Implementation
-
-##### SQL Databases
-
-In SQL Databases, by design, there would be a **table** for each _data entity_.
-
-Related data is _joined_ together using SQL queries.
-<br>
-
-##### MongoDB
-
-In MongoDB, unlike with SQL tables, there might not be a **collection** for every _data entity_.
-
-Unlike in SQL, there's no requirement to break different _entity types_ into separate **collections**.
-
-The reason is that some _entities_ are better off being **embedded** with its parent document instead, for example, _comments_ that belong to a _post_. It would not make sense to have to query a separate **comments** collection to obtain the comments for a given post...
-
-<br>
-<br>
-<br>
-
-
-
-
-
-## Data Modeling in MongoDB
-
-There are two ways to model related data in MongoDB:
-
-1. Using **embedding**, where "subdocuments" are contained inside of its document.
-
-2. Using **referencing**, where a document contains just the related document's `ObjectId`.
-
-Both approaches can be used simultaneously in the same document.
-
-<br>
-<br>
-
-
-
-
-### Embedded Documents
-
-Here's what an embedding looks like:
-
-A document in the `people` collection:
-
-```javascript
-// assume a document from a people collection
-{
-  _id: ObjectId("5099803df3f4948bd2e983a4"),
-  name: "Joe Smith",
-  contacts: [
-    {
-      type: "mobile",
-      contact: "(555) 555-5555"
-    },
-    {
-      type: "email",
-      contact: "joe@smith.com"
-    }
-  ]
-}
-```
-
-In a relational database, those contacts would **have** to be in a separate table.
-
-Embedding data is more efficient than referencing data because it takes extra queries to fetch related data.
-
-FYI, when we use Mongoose, even those subdocuments will automatically have their own `_id`.
-
-<br>
-<br>
-
-
-
-
-### Referencing Documents (linking)
-
-Here's how the above `person --< contact` model would be implemented via **referencing**:
-
-```javascript
-// assume a document from a people collection
-{
-  _id: ObjectId("5099803df3f4948bd2e983a4"),
-  name: "Joe Smith",
-  contacts: [
-    ObjectId("5099803df3f4948bd2f98391"),
-    ObjectId("5099803df3f4948bd1f97203")
-  ]
-}    
-```
-
-Two referenced documents in the `contacts` collection:
-
-```javascript
-{
-  _id: ObjectId("5099803df3f4948bd2f98391"),
-  type: "mobile",
-  contact: "(555) 555-5555"
-}
-```
-
-and
-
-```javascript
-{
-  _id: ObjectId("5099803df3f4948bd1f97203"),
-  type: "email",
-  contact: "joe@smith.com"
-}
-```
-
-As you can see, the related _contacts_ are separate documents.
-
-We would have to make separate queries to get to that data, although, Mongoose can do this automatically using the `populate` method.
-
-<br>
-<br>
-
-
-
-
-### Which Document Should Hold the "Reference"?
-
-When referencing data in MongoDB, you can hold the `ObjectId` in either document or both!
-
-The decision depends upon the design and functionality of your application and it's not always clear-cut.
-
-<br>
-<br>
-
-
-
-
-### If Embedding is More Efficient, Why Reference at All?
-
-- If the amount of data can exceed the 16MB size limit for a document, an uncommon situation however - the entire body of work of Shakespeare can be stored in 5 megabytes!
-
-- When multiple parent documents need access the same child document and that child's data changes frequently. For example, a document modeling a _bank account_ should be referenced because 
-
-- If it makes sense for your application. For example, if you wanted to view all _posts_ on your landing page, regardless of the user that posted them, it would certainly take more effort to extract the _posts_ from each user if they were embedded. However, it would be gravy to get the _posts_ from their own collection.
-
-For more details regarding data modeling in MongoDB, start with [this section of mongoDB's documentation ](http://docs.mongodb.org/manual/core/data-modeling-introduction/) or this [hour long YouTube video](https://www.youtube.com/watch?v=PIWVFUtBV1Q)
-
-<br>
-<br>
-<br>
-
-
-
 
 
 ## References
