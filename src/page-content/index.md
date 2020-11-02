@@ -47,7 +47,7 @@ All material is subject to change at Instructors discretion.
 <br>
 <br>
 
-### [<u>Unit Two: Full Stack Development</u>](/backend-fundamentals)
+### [<u>Unit Two: Full Stack Development</u>](/full-stack-development)
 
 | Week  | Topics |
 | ----- | ------ |
