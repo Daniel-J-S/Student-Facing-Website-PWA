@@ -15,7 +15,7 @@ type: "lecture"
 <br>
 
 
-## Learning Objective
+## Learning Objectives
 
 1. Describe what is a Database
 1. Describe what is Mongo
