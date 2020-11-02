@@ -27,7 +27,7 @@ As always, the journey toward competence requires practice - so let's get on wit
 
 ## Exercise
 
-The goal of the exercise is to do put in a rep doing everything that you did during the Express lesson!
+The goal of the exercise is to put in a rep doing everything that you did during the Express lesson!
 
 However, instead of To Dos, change up the data resource to something else, like `students` - your call.
 
