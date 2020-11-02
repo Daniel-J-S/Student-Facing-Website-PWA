@@ -347,14 +347,15 @@ Post.create({content: 'Amazing post...'});
 
 
 
-### Including Mongoose in an App
+### Including Mongoose in an App and Connecting to MongoDB
 
+1. [Create a Cloud Hosted MongoDB](/full-stack-development/week-1/day-5/lecture-materials/create-an-atlas-hosted-mongodb/)
 
-1. Install Mongoose
+2. Install Mongoose
 
-2. Configure Mongoose in a module
+3. Configure Mongoose in a module
 
-3. Add an event listener to the Mongoose connection
+4. Add an event listener to the Mongoose connection
 
 <br>
 <br>
@@ -386,12 +387,25 @@ $ npm i mongoose
 
 - We're going to create a separate module named `database.js` and put it in a folder named `config`:
 
+<br>
+<br>
+<br>
+
+
 ```shell
 $ mkdir config
 $ touch config/database.js
 ```
 
-- Then in `database.js`, let's connect to a database named `movies`:
+<br>
+<br>
+
+
+- Then in `database.js`, let's connect to a database named `movies` that we'll first need to set up on **MongoDB Atlas** using [**this guide**](/full-stack-development/week-1/day-5/lecture-materials/create-an-atlas-hosted-mongodb/):
+
+<br>
+<br>
+
 
 ```javascript
 const mongoose = require('mongoose');
@@ -402,8 +416,18 @@ mongoose.connect('mongodb+srv://<username>:<password>@cluster0.oc1n0.mongodb.net
 	useUnifiedTopology: true 
 });
 ```
+
+<br>
+<br>
+
+🚨 <strong style="color: crimson;">PLEASE NOTE 🚨</strong> <u>Make sure you replace the `<username>` & `<password>` in your connection string with your actual username and password</u> ... **without the < > brackets** 😅
+
+
+<br>
+<br>
+
 	
-- The `{useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true}` options avoid deprecation warnings.
+**ALSO NOTE:** The `{useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true}` options avoid deprecation warnings.
 
 
 - In order for the code in `database.js` to run and connect to the database, we must require it in `server.js`:
