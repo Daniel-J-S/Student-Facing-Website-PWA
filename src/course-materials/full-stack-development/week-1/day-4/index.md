@@ -23,5 +23,5 @@ topics: "Express Middleware"
 #### Lesson Recordings
 
 - [**Intro to Express Middleware With Ira**](https://generalassembly.zoom.us/rec/share/omwaFYfYZ-j6mk06EvdpikXTGbunnU5XCKNdAmdpyhy0adMqkr1uCKbvn8QGHch-.7vJN1Mh3MRjOfzwX?startTime=1604588661000)
-- [**Intro to Express Middleware With Ira (final Wrap up)**](https://generalassembly.zoom.us/rec/share/omwaFYfYZ-j6mk06EvdpikXTGbunnU5XCKNdAmdpyhy0adMqkr1uCKbvn8QGHch-.7vJN1Mh3MRjOfzwX?startTime=1604610530000)
+- [**Intro to Express Middleware With Ira (_final wrap up_)**](https://generalassembly.zoom.us/rec/share/omwaFYfYZ-j6mk06EvdpikXTGbunnU5XCKNdAmdpyhy0adMqkr1uCKbvn8QGHch-.7vJN1Mh3MRjOfzwX?startTime=1604610530000)
 
