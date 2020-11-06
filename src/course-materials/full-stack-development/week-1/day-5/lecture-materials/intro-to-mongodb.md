@@ -8,7 +8,7 @@ type: "lecture"
 
 
 
-# Mongo Database
+# Intro to MongoDB
 
 <br>
 <br>
@@ -228,8 +228,6 @@ Let's create a collection of `contacts` in the `learn` sub-database by clicking 
 ## Create, Read, Update and Delete Documents
 We've been creating, reading, updating and deleting our 'data' in our Express apps. Now let's learn how to do it using Mongo.
 
-Remember: users are not going to open a Mongo shell and type everything we're going to type. We'll eventually be building apps to interact with our database.
-
 
 <br>
 <br>
@@ -289,7 +287,7 @@ Let's go ahead and copy paste these into our atlas interface to populate our col
 <br>
 
 
-### HEADS UP: The JSON format required by Atlas doesn't support trailing commas or other JS features. And all strings need to be in full `"` marks and not single ticks `'`.
+**HEADS UP: The JSON format required by Atlas doesn't support trailing commas or other JS features. And all strings need to be in full `"` marks and not single ticks `'`.**
 
 
 We may notice that our data wasn't consistent.
@@ -420,14 +418,6 @@ Let's just try one together. Let's query for the people who are NOT in Californi
 
 ### Drop a collection
 
-
-If you need to remove an entire collection
-
-```shell
-db.contacts.drop()
-```
-
-<br>
 <br>
 
 **If you need to drop an entire sub-database, while you are connected to the database you want to drop, click the trash can next to the collection in the left sidebar.**
