@@ -420,7 +420,7 @@ Let's just try one together. Let's query for the people who are NOT in Californi
 
 <br>
 
-**If you need to drop an entire sub-database, while you are connected to the database you want to drop, click the trash can next to the collection in the left sidebar.**
+If you need to drop an entire sub-database, while you are connected to the database you want to drop, click the trash can next to the collection in the left sidebar.
 
 
 <br>
