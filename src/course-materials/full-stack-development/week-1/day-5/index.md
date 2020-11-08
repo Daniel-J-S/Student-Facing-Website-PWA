@@ -12,7 +12,7 @@ topics: "Intro to MongoDB and Mongoose"
 #### Intro to MongoDB and Mongoose
 - [**Lecture:** Intro to MongoDB](/full-stack-development/week-1/day-5/lecture-materials/intro-to-mongodb/)
 - [**Lecture:** Intro to Mongoose](/full-stack-development/week-1/day-5/lecture-materials/intro-to-mongoose)
-- [**Lab:** Mongoose Flights Part 1 of 3](/full-stack-development/week-1/day-5/labs/mongoose-flights-part-1/) - **Parts 1 Through 3 Are Deliverable**
+- [**Lab:** Mongoose Flights Part 1 of 3](/full-stack-development/week-1/day-5/labs/mongoose-flights-part-1/) - **Only Part 1 is a Deliverable**
 - [**Resource:** Create a Cloud-Hosted MongoDB](/full-stack-development/week-1/day-5/lecture-materials/create-an-atlas-hosted-mongodb/) 
 
 

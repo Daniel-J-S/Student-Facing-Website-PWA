@@ -11,5 +11,5 @@ topics: "Intro to Mongoose Referenced Relationships"
 
 #### Mongoose Referenced Relationships
 - [**Lecture:** Intro to Mongoose Referenced Relationships](/full-stack-development/week-2/day-2/lecture-materials/intro-to-mongoose-referenced-relationships/)
-- [**Lab:** Mongoose Flights Part 3 of 3](/full-stack-development/week-2/day-2/labs/mongoose-flights-part-3/) - **Combined Parts 1 - 3 Are Deliverable**
+- [**Lab:** Mongoose Flights Part 3 of 3](/full-stack-development/week-2/day-2/labs/mongoose-flights-part-3/) - **Only Part 1 is a Deliverable**
 
