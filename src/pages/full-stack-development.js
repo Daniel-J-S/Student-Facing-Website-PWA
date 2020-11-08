@@ -43,13 +43,13 @@ export default({ data, location }) => {
             <main>
               <h2>Week 1</h2>  
               { weekOneLessons }
-              {/* 
-              Uncomment to release next week
               <br />
               <hr />
               <br />
               <h2>Week 2</h2>  
               { weekTwoLessons }
+              {/* 
+              Uncomment to release next week
               <br />
               <hr />
               <br />
