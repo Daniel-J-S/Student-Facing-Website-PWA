@@ -10,7 +10,7 @@ topics: "Veterans Day"
 
 # Week 2 - Day 3
 
-#### Veterans Day
+#### No Class Will Be Held Today In Observance of Veterans Day
 
 
 

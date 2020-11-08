@@ -200,7 +200,7 @@ Students will be able to:
 <br>
 <br>
 
-## Preview the App - The App We Will Build Today
+## The App We Will Build Today
 
 
 - Today, we are going to take a starter application and add OAuth authentication & authorization to it.
@@ -209,14 +209,8 @@ Students will be able to:
 
 - The app will add you as a student to its database when you log in for the first time using Google's OAuth service.
 
-- Let's see what the finished app will look like.
 
 <br>
-<br>
-<br>
-
-[**Click Here to Check it Out!**](https://seir-students.herokuapp.com/)
-
 <br>
 <br>
 <br>
