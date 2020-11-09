@@ -3,7 +3,7 @@ track: "Full-Stack Development"
 title: "HTML / CSS Forms"
 week: 2
 day: 1
-type: "activity"
+type: "lecture"
 ---
 
 # HTML/CSS Forms
