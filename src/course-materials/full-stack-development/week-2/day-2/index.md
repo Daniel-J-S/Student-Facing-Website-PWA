@@ -10,6 +10,7 @@ topics: "Catch up on Labs - Review Express - Bonus Content"
 # Week 2 - Day 2
 
 #### Mongoose Referenced Relationships
+- [**Activity:** Review Project 2 Requirements](/unit-projects/unit-two-project-requirements)
 - [**Advanced Material Resource:** Intro to Mongoose Referenced Relationships](/full-stack-development/week-2/day-2/lecture-materials/intro-to-mongoose-referenced-relationships/)
 - [**Optional Lab:** Mongoose Flights Part 3 of 3](/full-stack-development/week-2/day-2/labs/mongoose-flights-part-3/) - **Only Part 1 is a Deliverable**
 

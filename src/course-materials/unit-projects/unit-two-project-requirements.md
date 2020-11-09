@@ -73,7 +73,7 @@ Here's a [YouTube video to show you how](https://www.youtube.com/watch?v=QpdhBUY
 
 ### Finished Project Presentation 
 
-You will have a maximum of 10 minutes to present your project following these guidelines:
+You will have a maximum of 5 minutes to present your project following these guidelines:
 
 
 1. **Introduce the Project:**
@@ -117,11 +117,9 @@ You will have a maximum of 10 minutes to present your project following these gu
 
 ### Your App Must:
 
-☐ **Have at least 2 data entities in addition to the "User" Model**.  One entity that represents the main functional idea for your app and another with a **1:M** or **M:M** relationship with that main entity (embedded or referenced).
+☐ **Have at least 1 data entity in addition to the "User" Model**. This entity must represent the main functional idea for your app.
 
-☐ **Use OAuth authentication**. 
-
-☐ **Implement basic authorization** by restricting access to certain features, such as editing and deleting a resource, to an authenticated user, or the user that created that resource.
+☐ **Use authentication**. 
 
 ☐ Have **complete CRUD data operations** between all data entities. For example, you can have functionality that **C**reates & **U**pdates a _post_ (data entity) and satisfy **D**elete functionality by implementing the ability to delete _comments_ (data entity).
 
@@ -136,6 +134,8 @@ You will have a maximum of 10 minutes to present your project following these gu
 
 
 ### Optionally, Your App May:
+
+☐ **Implement basic authorization** by restricting access to certain features, such as editing and deleting a resource, to an authenticated user, or the user that created that resource.
 
 ☐ Consume a third-party API.
 
