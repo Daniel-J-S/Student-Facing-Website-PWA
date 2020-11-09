@@ -4,7 +4,7 @@ title: "Day 2"
 week: 2
 day: 2
 type: "homepage"
-topics: "Intro to Mongoose Referenced Relationships"
+topics: "Catch up on Labs - Review Express - Bonus Content"
 ---
 
 # Week 2 - Day 2
