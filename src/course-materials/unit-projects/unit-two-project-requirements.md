@@ -84,9 +84,9 @@ You will have a maximum of 5 minutes to present your project following these gui
 
 	☐ Launch the app by clicking the link in the README.
 	
-	☐ Sign up a new user, then immediately log out.
+	☐ (**If auth added**) - sign up a new user, then immediately log out.
 	
-	☐ Log in with your preferred user and demonstrate the features of the app.
+	☐ (**If auth added**) - log in with your preferred user and demonstrate the features of the app.
 	
 	☐ Be sure to demo full-CRUD data operations.
 	
@@ -119,9 +119,7 @@ You will have a maximum of 5 minutes to present your project following these gui
 
 ☐ **Have at least 1 data entity in addition to the "User" Model**. This entity must represent the main functional idea for your app.
 
-☐ **Use authentication**. 
-
-☐ Have **complete CRUD data operations** between all data entities. For example, you can have functionality that **C**reates & **U**pdates a _post_ (data entity) and satisfy **D**elete functionality by implementing the ability to delete _comments_ (data entity).
+☐ Have **complete CRUD data operations** on one of your data entities. 
 
 ☐ Use a CSS stylesheet **(Additional Use of a CSS Framework such as Bootstrap or Materialize is optional, however your must have your own stylesheet with some styles defined as well)**
 
@@ -134,6 +132,8 @@ You will have a maximum of 5 minutes to present your project following these gui
 
 
 ### Optionally, Your App May:
+
+☐ **Use authentication**. 
 
 ☐ **Implement basic authorization** by restricting access to certain features, such as editing and deleting a resource, to an authenticated user, or the user that created that resource.
 
