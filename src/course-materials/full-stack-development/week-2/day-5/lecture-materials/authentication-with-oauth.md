@@ -11,6 +11,24 @@ type: "lecture"
 <br>
 <br>
 <br>
+
+### Walkthrough Recording Part 1
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/k7R9X02Ayl8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+<br>
+<br>
+<br>
+
+
+### Walkthrough Recording Part 2
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sfMVZ7r_a8o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+<br>
 <br>
 
 
