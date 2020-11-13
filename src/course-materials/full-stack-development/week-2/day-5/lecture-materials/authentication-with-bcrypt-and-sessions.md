@@ -262,7 +262,7 @@ const mongoose = require('mongoose');
 
 // 🚨 Don't forget to add your username and password to your connection URI
 
-const connectionURI = 'mongodb+srv://<username>:<password>@cluster0.oc1n0.mongodb.net/express-blogger?retryWrites=true&w=majority/express-blogger'
+const connectionURI = 'mongodb+srv://<yourusername>:<yourpassword>@cluster0.oc1n0.mongodb.net/express-blogger?retryWrites=true&w=majority'
 
 // shortcut to mongoose.connection object
 const db = mongoose.connection;
@@ -329,7 +329,7 @@ nodemon
 
 ## Explain what bcrypt does
 
-bcrypt is a package that will encrypt passwords so that if a database gets compromised (hacked), people's passwords won't be exposed.
+bcrypt is a package that will encrypt passwords using a process known as hashing, so that if a database gets compromised (hacked), people's passwords won't be exposed.
 
 <br>
 <br>
@@ -372,9 +372,9 @@ const bcrypt = require('bcrypt');
 <br>
 <br>
 
-### Hash a string using bcrypt
+### Salting a Hash using bcrypt
 
-bcrypt does this thing called "salting" a string. It requires you to generate a salt which is used in the encryption process. This must be generated each time you hash a string. 
+In addition to hashing, bcrypt can perform another process known as "salting". It requires you to generate a salt which is used in the encryption process each time a string is hashed. 
 
 If you don't do this, the same string will get hashed to the same value each time. If this were to happen, someone with a common password could hack the database and see who else's hashed password had the same value as theirs and know that they have the same password as them.
 
@@ -388,11 +388,11 @@ const bcrypt = require('bcrypt');
 
 // inside of playground/bcrypt.js
 
-const SALT = bcrypt.genSaltSync(10);
+const SALT_ROUNDS = bcrypt.genSaltSync(10);
 
 const password = 'supersecretpassword';
 
-const hashedString = bcrypt.hashSync(password, SALT);
+const hashedString = bcrypt.hashSync(password, SALT_ROUNDS);
 ```
 
 <br>
@@ -564,7 +564,7 @@ app.use('/', indexRouter);
 
 ### Save user information on the session object
 
-For each of the routes you create, the `req` variable will now have a session property which is itself an object. At the end of the day, it's still JavaScript, so you can add properties to this object.
+For each of the routes you create, the `req` object will now have a session property which is itself an object. At the end of the day, it's still JavaScript, so you can add properties to this object.
 
 ```javascript
 
@@ -734,7 +734,7 @@ First let's add a URI to the signup "navigation link" inside of `views/index.ejs
 ```html
 <ul>
     <li>
-        <a href="/auth/new">Signup</a>
+        <a href="/users/new">Signup</a>
     </li>
     ...
 ```
@@ -748,7 +748,7 @@ First let's add a URI to the signup "navigation link" inside of `views/index.ejs
 Let's build a router to handle our app's authentication needs
 
 ```shell
-touch routes/auth.js
+touch routes/users.js
 
 ```
 
@@ -759,14 +759,14 @@ touch routes/auth.js
 Here's some starter code:
 
 ```javascript
-// inside of routes/auth.js
+// inside of routes/users.js
 
 const express = require('express');
 const router = express.Router();
-const authCtrl = require('../controllers/auth');
+const usersCtrl = require('../controllers/users');
 
 
-router.get('/new', authCtrl.new);
+router.get('/new', usersCtrl.new);
 
 module.exports = router;
 
@@ -777,19 +777,19 @@ module.exports = router;
 <br>
 
 
-Then, we need to mount the router to `server.js` on `/auth`
+Then, we need to mount the router to `server.js` on `/users`
 
 ```javascript
 
 // other code above
 
-const authRouter = require('./routes/auth');
+const usersRouter = require('./routes/users');
 
 
 // more code here
 
 
-app.use('/auth', authRouter);
+app.use('/users', usersRouter);
 
 // more code below
 
@@ -800,14 +800,14 @@ app.use('/auth', authRouter);
 <br>
 
 
-### Create an Auth controller 
+### Create an Users controller 
 
 <br>
 
-It's time to create our auth controller 
+It's time to create our users controller 
 
 ```shell
-controllers/auth.js
+touch controllers/users.js
 
 ```
 <br>
@@ -818,14 +818,14 @@ Here's some starter code for our controller
 
 ```javascript
 
-// inside of controllers/auth.js
+// inside of controllers/users.js
 
 module.exports = {
     new: newUser
 };
 
 function newUser(req, res) {
-    res.render('auth/new');
+    res.render('users/new');
 }
 
 ```
@@ -841,9 +841,9 @@ function newUser(req, res) {
 First, let's make the template inside a dedicated folder inside of `views`
 
 ```shell
-mkdir views/auth
+mkdir views/users
 
-touch views/auth/new.ejs
+touch views/users/new.ejs
 ```
 
 <br>
@@ -865,7 +865,7 @@ Here's some boilerplate markup for our view
 
 <body>
     <h1>Signup</h1>
-    <form action="/auth/signup" method="POST">
+    <form action="/users/signup" method="POST">
         Username: <input type="text" name="username" /><br />
         Password: <input type="password" name="password" /><br />
         <input type="submit" value="Signup" />
@@ -880,7 +880,7 @@ Here's some boilerplate markup for our view
 <br>
 <br>
 
-At this point, we should be able to navigate to our signup page at http://localhost:3000/auth/new
+At this point, we should be able to navigate to our signup page at http://localhost:3000/users/new
 
 
 <br>
@@ -925,21 +925,21 @@ module.exports = mongoose.model('User', userSchema);
 <br>
 <br>
 
-### Create a signup route
+### Create a signUp route
 
 let's set up a signup route to map over requests made by the signup form
 
 ```javascript
 
-// inside of routes/auth.js
+// inside of routes/users.js
 
 const express = require('express');
 const router = express.Router();
-const authCtrl = require('../controllers/auth');
+const usersCtrl = require('../controllers/users');
 
 
-router.get('/new', authCtrl.new);
-router.post('/signup', authCtrl.signup); // new route definition
+router.get('/new', usersCtrl.new);
+router.post('/signup', usersCtrl.signUp); // new route definition
 
 module.exports = router;
 ```
@@ -955,21 +955,22 @@ module.exports = router;
 Now we must define and export a controller action that will be used to create a new user in the database
 
 ```javascript
-
+// inside of controllers/users.js
 const User = require('../models/user'); // require user model
-const bcrypt = require('bcrypt'); // require bcrypt module
+const bcrypt = require('bcrypt');       // require bcrypt module
+const SALT_ROUNDS = 10;                 // the salt round we'll use 
 
 
 module.exports = {
     new: newUser,
-    signup
+    signUp
 };
 
 function newUser(req, res) {
     res.render('auth/new');
 }
 
-function signup(req, res) {
+function signUp(req, res) {
     // we'll add more code here soon
 }
 ```
@@ -981,10 +982,10 @@ function signup(req, res) {
 Once the form is submitted, we can set `req.password` to an encrypted version
 
 ```javascript
-// inside of controllers/auth.js
+// inside of controllers/users.js
 
-function signup(req, res) {
-    req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
+function signUp(req, res) {
+    req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(SALT_ROUNDS));
     res.send(req.body);
 }
 ```
@@ -998,9 +999,9 @@ Create user and then redirect them back home `/`
 
 ```javascript
 
-// inside of controllers/auth.js
+// inside of controllers/users.js
 
-function signup(req, res) {
+function signUp(req, res) {
     req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
     User.create(req.body, function (error, newUser) {
         console.log(newUser) // let's check out our new user
@@ -1023,10 +1024,10 @@ let's add a URI to the login "navigation link" inside of `views/index.ejs`
 ```html
  <ul>
      <li>
-         <a href="/auth/new">Signup</a>
+         <a href="/users/new">Signup</a>
      </li>
      <li>
-         <a href="/auth/login">Login</a>
+         <a href="/users/signin">Login</a>
      </li>
      ...
 ```
@@ -1035,19 +1036,19 @@ let's add a URI to the login "navigation link" inside of `views/index.ejs`
 <br>
 <br>
 
-Then, inside of `routes/auth.js`
+Then, inside of `routes/users.js`
 
 ```javascript
 
 const express = require('express');
 const router = express.Router();
-const authCtrl = require('../controllers/auth');
+const usersCtrl = require('../controllers/users');
 
 
-router.get('/new', authCtrl.new);
-router.post('/signup', authCtrl.signup);
+router.get('/new', usersCtrl.new);
+router.post('/signup', usersCtrl.signUp);
 
-router.get('/login', authCtrl.newLogin); // new route definition
+router.get('/signin', usersCtrl.signIn); // new route definition
 
 module.exports = router;
 ```
@@ -1056,33 +1057,37 @@ module.exports = router;
 <br>
 <br>
 
-Here's what our controller should look like now
+Let's add a controller action that can render a login form
 
 ```javascript
-const User = require('../models/user');
-const bcrypt = require('bcrypt');
+
+// inside of controllers/users.js
+const User = require('../models/user'); // require user model
+const bcrypt = require('bcrypt');       // require bcrypt module
+const SALT_ROUNDS = 10;                 // the salt round we'll use 
 
 
 module.exports = {
     new: newUser,
-    signup,
-    newLogin
+    signUp,
+    signIn // new controller action exported
 };
 
 function newUser(req, res) {
-    res.render('auth/new');
+    res.render('users/new');
 }
 
-function signup(req, res) {
-    req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
+function signUp(req, res) {
+    req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(SALT_ROUNDS));
     User.create(req.body, function (error, newUser) {
         console.log(newUser) // let's check out our new user
         res.redirect('/');
     });
 }
 
-function newLogin(req, res) {
-    res.render('auth/login');
+// new controller action defined
+function signIn(req, res) {
+    res.render('users/login');
 }
 ```
 
@@ -1090,6 +1095,17 @@ function newLogin(req, res) {
 <br>
 <br>
 
+At this point we'll need a view for a user to login in with, so we'll name it `login.ejs`
+
+
+```shell
+touch views/users/login.ejs
+
+```
+
+<br>
+<br>
+<br>
 
 
 ### Login Page
@@ -1097,7 +1113,7 @@ function newLogin(req, res) {
 <br>
 <br>
 
-Let's add this markup to views/auth/login.ejs:
+Let's add this markup to views/users/login.ejs:
 
 ```html
 <!DOCTYPE html>
@@ -1112,7 +1128,7 @@ Let's add this markup to views/auth/login.ejs:
 
 <body>
     <h1>Login</h1>
-    <form action="/auth/login" method="POST">
+    <form action="/users/login" method="POST">
         Username: <input type="text" name="username" /><br />
         Password: <input type="password" name="password" /><br />
         <input type="submit" value="Login" />
@@ -1133,20 +1149,20 @@ Let's add our next route definition
 
 ```javascript
 
-// inside of routes/auth.js
+// inside of routes/users.js
 
 const express = require('express');
 const router = express.Router();
-const authCtrl = require('../controllers/auth');
+const usersCtrl = require('../controllers/users');
 
 
-router.get('/new', authCtrl.new);
+router.get('/new', usersCtrl.new);
 
-router.post('/signup', authCtrl.signup);
+router.post('/signup', usersCtrl.signUp);
 
-router.get('/login', authCtrl.newLogin);
+router.get('/signin', usersCtrl.signIn);
 
-router.post('/login', authCtrl.login); // new route definition - notice how this is for a POST request
+router.post('/login', usersCtrl.login); // new route definition 
 
 module.exports = router;
 ```
@@ -1159,32 +1175,34 @@ Now we just need to export our login action
 
 ```javascript
 
-// inside of controllers/auth.js
-const User = require('../models/user');
-const bcrypt = require('bcrypt');
+// inside of controllers/users.js
+const User = require('../models/user'); // require user model
+const bcrypt = require('bcrypt');       // require bcrypt module
+const SALT_ROUNDS = 10;                 // the salt round we'll use 
 
 
 module.exports = {
     new: newUser,
-    signup,
-    newLogin,
-    login // exporting our login action
+    signUp,
+    signIn,
+    login
 };
 
 function newUser(req, res) {
-    res.render('auth/new');
+    res.render('users/new');
 }
 
-function signup(req, res) {
-    req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
+function signUp(req, res) {
+    req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(SALT_ROUNDS));
     User.create(req.body, function (error, newUser) {
         console.log(newUser) // let's check out our new user
         res.redirect('/');
     });
 }
 
-function newLogin(req, res) {
-    res.render('auth/login');
+// new controller action defined
+function signIn(req, res) {
+    res.render('users/login');
 }
 
 // here's the login action
@@ -1211,13 +1229,13 @@ function login(req, res) {
         username: req.body.username
     }, function (error, foundUser) {
         if (foundUser === null) {
-            res.redirect('/auth/login');
+            res.redirect('/users/signin');
         } else {
             const doesPasswordMatch = bcrypt.compareSync(req.body.password, foundUser.password);
             if (doesPasswordMatch) {
                 res.redirect('/');
             } else {
-                res.redirect('/auth/login');
+                res.redirect('/users/signin');
             }
         }
     });
@@ -1236,7 +1254,7 @@ function login(req, res) {
         username: req.body.username
     }, function (error, foundUser) {
         if (foundUser === null) {
-            res.redirect('/auth/login');
+            res.redirect('/users/signin');
         } else {
             const doesPasswordMatch = bcrypt.compareSync(req.body.password, foundUser.password);
             if (doesPasswordMatch) {
@@ -1244,7 +1262,7 @@ function login(req, res) {
                 console.log(req.session) // we can also log out the session to see the results
                 res.redirect('/');
             } else {
-                res.redirect('/auth/login');
+                res.redirect('/users/signin');
             }
         }
     });
