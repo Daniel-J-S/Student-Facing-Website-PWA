@@ -39,11 +39,11 @@ type: "lecture"
 We need a brand new express app to learn with. 
 
 
-1. Make a directory called `express-blogger` then change into it
+1. Make a directory called `expresstagram` then change into it
 
 ```bash
-mkdir express-blogger
-cd express-blogger/
+mkdir expresstagram
+cd expresstagram/
 ```
 
 
@@ -127,12 +127,12 @@ touch views/index.ejs routes/index.js controllers/index.js public/css/style.css
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel='stylesheet' href='/css/style.css' />
-    <title>Express Blogger</title>
+    <title>Expresstagram</title>
 </head>
 
 <body>
     <header>
-        <h1>Express Blogger</h1>
+        <h1>Expresstagram</h1>
         <ul>
             <li>
                 <a href="#">Signup</a>
@@ -215,7 +215,7 @@ app.use('/', indexRouter);
 ### Including Mongoose and Connecting to MongoDB
 
 1. [Create a Cloud Hosted MongoDB](/full-stack-development/week-1/day-5/lecture-materials/create-an-atlas-hosted-mongodb/)
-2. The name of the database will be `express-blogger` and the first collection name will be `users`
+2. The name of the database will be `expresstagram` and the first collection name will be `users`
 
 3. Install Mongoose
 
@@ -262,7 +262,7 @@ const mongoose = require('mongoose');
 
 // 🚨 Don't forget to add your username and password to your connection URI
 
-const connectionURI = 'mongodb+srv://<yourusername>:<yourpassword>@cluster0.oc1n0.mongodb.net/express-blogger?retryWrites=true&w=majority'
+const connectionURI = 'mongodb+srv://<yourusername>:<yourpassword>@cluster0.oc1n0.mongodb.net/expresstagram?retryWrites=true&w=majority'
 
 // shortcut to mongoose.connection object
 const db = mongoose.connection;
@@ -860,7 +860,7 @@ Here's some boilerplate markup for our view
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='/css/style.css' />
-    <title>Signup</title>
+    <title>Expresstagram</title>
 </head>
 
 <body>
@@ -1123,7 +1123,7 @@ Let's add this markup to views/users/login.ejs:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='/css/style.css' />
-    <title>Login</title>
+    <title>Expresstagram</title>
 </head>
 
 <body>
