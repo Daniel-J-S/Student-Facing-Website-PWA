@@ -12,7 +12,7 @@ topics: "Bonus Lectures & Project 2"
 
 #### Bonus Lectures
 
-- [**Bonus Lecture:** Producing an API with Express](/full-stack-development/week-3/day-2/lecture-materials/producing-an-api-with-express/)
+- [**Bonus Material:** Producing an API with Express](/full-stack-development/week-3/day-2/lecture-materials/producing-an-api-with-express/)
 - [**Bonus Lab:** Producing an API Lab](/full-stack-development/week-3/day-2/labs/producing-an-api-lab/) - **Non-Deliverable**
 
 
