@@ -9,9 +9,21 @@ type: "lecture"
 
 # Collaborating with GitHub
 
+<br>
+<br>
+<br>
+
 
 ## Intro
-GitHub allows for amazing collaboration to happen! For this weekend's homework, you will be asked to complete the task in pairs. For this morning’s exercise, you will work together in those pairs to get setup for collaboration to go smoothly.
+
+GitHub allows for amazing collaboration to happen! For this assignment, you will be asked to complete the task in pairs. For this morning’s exercise, you will work together in those pairs to get setup for collaboration to go smoothly.
+
+
+<br>
+<br>
+<br>
+
+
 
 ## Deliverables
 
@@ -20,7 +32,12 @@ GitHub allows for amazing collaboration to happen! For this weekend's homework, 
 
 Using collaboration via GitHub, each group will create a new repo **outside the class repo** and collaborate to complete the jService homework. Each person must make significant contributions (and commits!) to the functionality of the homework to get a passing grade. 
 
-The jService assignment can be found [here](../homework)
+The jService assignment can be found [here](/react-fundamentals/week-1/day-2/labs/jservice-api/)
+
+<br>
+<br>
+<br>
+
 
 ## Morning Exercise Goals:
 
@@ -33,12 +50,23 @@ The jService assignment can be found [here](../homework)
 
 ---
 
+<br>
+<br>
+<br>
+
+
 ## Setup
 
 ### Make a plan/assign tasks
 - [Read over the homework together once again so you can start to discuss who will do what and plan](../homework)
 - To be sure everyone is getting practice pulling and pushing as you work, be sure to keep communication open on who is working on what task
 - _Note:_ It is fine for the group to screenshare and work on one file simultaneously - feel free to create a way of working together that will help you get the deliverable complete. Just remember to take turns so you are each getting a chance to type, to add and commit and push, to create pull requests and to merge pull requests from feature branches to the dev branch. 
+
+
+<br>
+<br>
+<br>
+
 
 ### Delegate the roles
 
@@ -47,6 +75,12 @@ The jService assignment can be found [here](../homework)
 - The collaborators will **clone** this repo onto their local computer
     - Reminder: you will be working within the same repo, so the collaborators do **not** need to fork the repo - only clone!
 - _Note:_ This is a simplified workflow that is appropriate for a homework/group unit project for SEI. In a job environment, you'll likely see much more complex workflows. That's ok! Choose the right tools for the job, don't over engineer for the task at hand and don't be like Kath and Dave from Portlandia:  [Get the Gear](https://www.youtube.com/watch?v=R3SFqV0hMyo)
+
+
+<br>
+<br>
+<br>
+
 
 ### THE OWNER: Create the GitHub Enterprise repo and add everyone else as collaborators
 - [Create a new repository on GitHub Enterprise](https://git.generalassemb.ly/new)
@@ -61,6 +95,13 @@ The jService assignment can be found [here](../homework)
 - Add them and they should be able to access the repo immediately! Give them the link to the repo
     - If not, GitHub Enterprise will send an email and they must respond in order to gain access to the repo
 - Remember to `git clone` onto your computer OUTSIDE of the class repo and OUTSIDE of any other repos to get your own local version 
+
+
+
+<br>
+<br>
+<br>
+
 
 ### THE COLLABORATOR(S): Clone the repository and make sure you can make changes
 
@@ -80,6 +121,12 @@ The jService assignment can be found [here](../homework)
     - **NOTE** This is the ONLY time you should push directly to master! From this point forward, you should only push to your feature branches or the `dev` branch, then merge to master when needed. But for now we just want to be sure you have the ability to push/pull
 - Check the repo on your browser and you should now see your changes to the README!
 
+
+<br>
+<br>
+<br>
+
+
 ### ALL MEMBERS: Create dev branch
 
 - In terminal, inside your new repo directory...
@@ -87,6 +134,13 @@ The jService assignment can be found [here](../homework)
    - `git pull origin master` - you should pull the changes from the master branch, even though you are now on the dev branch to update your code to the working functional code
    - check via your code editor that you all have the updated `README.md`
 - Agree on who will write the `server.js` file
+
+
+
+<br>
+<br>
+<br>
+
 
 ### ONE MEMBER AS DECIDED ABOVE: Create the API `server.js` 
 
@@ -110,6 +164,12 @@ The jService assignment can be found [here](../homework)
   - Choose another teammate to check your work and if it all looks good (no merge conflicts, expected files uploaded)
   - Teammate merges (via GitHub Enterprise)
 
+
+<br>
+<br>
+<br>
+
+
 #### ALL MEMBERS: Pull changes, install the needed npm packages, make sure the server is running
 
  - Everyone should be on the `dev` branch (`git branch` to confirm)
@@ -121,17 +181,47 @@ The jService assignment can be found [here](../homework)
  
 ---
 
+<br>
+<br>
+<br>
+
+
+
 ### Workflow
 - Try to abide by the below workflow. You will make mistakes and that's ok - figure out how to move forward rather than to start over or do really hard to understand git commands we haven't covered. Keep practicing to get the work flow right!
+
+
+<br>
+<br>
+
+
 ![git/GitHub workflow](https://i.imgur.com/aAmxC0G.png)
+
+
+
+<br>
+<br>
+<br>
+
 
 ### Commit Messages
 - Making informative commit messages can be challenging especially when you are tired/stressed/pressed for time.  While you may remember what the message `asdfjkl;` meant and what you were working on - your collaborators won't.
 
-### Next Steps
 
+<br>
+<br>
+<br>
+
+
+### Next Steps
 - Plan how you will tackle this project together
 - Remember this is just a weekend homework. Keep it simple but make it watertight and polish it! This assignment's main goal is to help you all practice collaborating on projects.
+
+
+<br>
+<br>
+<br>
+
 
 ### Resources
 - [GitHub Guides](https://guides.GitHub.com/introduction/flow/?utm_source=onboarding-series&utm_medium=email&utm_content=read-the-guide-cta&utm_campaign=learn-GitHub-flow-email)
