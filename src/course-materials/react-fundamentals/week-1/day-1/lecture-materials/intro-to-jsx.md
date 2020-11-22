@@ -224,7 +224,7 @@ Note how a **Function Component** (a component defined as a `function`) accepts 
 5. Now let's modify `<App>` to render the new `<Greeter>` component instead of the built-in `<h1>` React element:
 
 	```jsx
-	function App() {
+	export default function App() {
 	  return (
 	    <div>
 	      <Greeter />
@@ -365,7 +365,7 @@ However, most of the props we use will be custom props that are unique to the ap
 Let's pass a prop named `earthling`to the `<Greeter />` component:
 
 ```jsx
-function App() {
+export default function App() {
   return (
     <div>
       <Greeter earthling='Wilma'/>
@@ -379,7 +379,7 @@ Note that we can assign a string value to a prop as shown above using single or 
 
 ```jsx
 
-function App() {
+export default function App() {
   const character = {name: 'Wilma', town: 'Roswell'};
   return (
     <div>
@@ -496,7 +496,7 @@ We just have to be careful not to try to write _JS statements_ within the JSX.
 
 #### When & How Components Get Rendered
 
-Components can be defined as either a `class` or a `function`.
+In this Unit, we'll learn more about components and how they can be defined as either a `class` or a `function`; the latter is becoming more popular nowadays and soon enough you'll see why.
 
 A **Function Component** must `return` its JSX.
 
