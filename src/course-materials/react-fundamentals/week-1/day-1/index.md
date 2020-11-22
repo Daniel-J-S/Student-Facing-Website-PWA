@@ -12,6 +12,7 @@ topics: "Intro to SPA's and ReactJS"
 
 #### Intro to SPA's and ReactJS
 
-- [**Warmup:** Git Branches and Merging](/react-fundamentals/week-1/day-1/lecture-materials/git-branches-and-merging/)
 - [**Lecture:** Intro to SPA's and ReactJS](/react-fundamentals/week-1/day-1/lecture-materials/intro-to-spas-and-reactjs/)
+- [**Lecture:** Intro to JSX](/react-fundamentals/week-1/day-1/lecture-materials/intro-to-jsx/)
+- [**Lab:** React Floorplan](/react-fundamentals/week-1/day-1/labs/react-floorplan/) - **Deliverable**
 - [**Lab:** Official React Tutorial **Option 2**](https://reactjs.org/tutorial/tutorial.html) - **Non-Deliverable**

@@ -2,7 +2,7 @@
 track: "React Fundamentals"
 title: "React Floor Plan Lab"
 week: 1
-day: 2
+day: 1
 type: "lab"
 ---
 
