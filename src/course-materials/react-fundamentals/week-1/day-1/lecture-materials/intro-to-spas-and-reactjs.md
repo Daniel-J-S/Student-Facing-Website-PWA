@@ -375,9 +375,8 @@ We will be using `create-react-app` to start all React apps in SEI from this poi
 
 [React's official tutorial](https://reactjs.org/tutorial/tutorial.html) assumes no existing React knowledge and is therefore a great place to get your feet wet.
 
-Note that the tutorial has two different setup options.  Please use the [starter code for Option 1](https://codepen.io/gaearon/pen/oWWQNa?editors=0010).
+Note that the tutorial has two different setup options. Please complete [Option 2](https://reactjs.org/tutorial/tutorial.html).
 
-After opening the starter code (a CodePen), start the tutorial [here](https://reactjs.org/tutorial/tutorial.html#inspecting-the-starter-code).
 
 This lab is not a deliverable.
 
