@@ -59,7 +59,7 @@ All material is subject to change at Instructors discretion.
 <br>
 <br>
 
-### Unit Three: React Fundamentals
+### [<u>Unit Three: React Fundamentals</u>](/react-fundamentals)
 
 | Week  | Topics |
 | ----- | ------ |
