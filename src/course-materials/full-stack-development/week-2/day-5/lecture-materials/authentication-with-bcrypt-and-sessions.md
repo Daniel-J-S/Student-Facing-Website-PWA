@@ -480,7 +480,7 @@ Sessions typically only last for as long as the user keeps their window open, an
 
 Here's the standard install
 
-```npm
+```shell
 npm i express-session 
 ```
 
