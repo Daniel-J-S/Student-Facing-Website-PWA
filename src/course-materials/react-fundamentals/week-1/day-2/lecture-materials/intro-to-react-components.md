@@ -280,9 +280,7 @@ Let's review the following common approach:
 3. Start coding components in a top-down approach.
 4. Put state in top-level components (at least initially).
 5. Add layout CSS to components (including "wrapper" built-in components such as `<div>`s) as needed to properly layout/group other components.
-6. As development progresses, consider moving state closer to the components that need common state and "below" the components that don't. More on state later today. This ongoing refactoring is like a lot of development - as much art as science.
-
-In the next lesson we'll focus on the data model (state) that a game of Mastermind requires.
+6. As development progresses, consider moving state closer to the components that need common state and "below" the components that don't. This ongoing refactoring is like a lot of development - as much art as science.
 
 Lastly, [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html) from the docs is a fantastic read that covers many of the above concepts in greater detail.
 
@@ -296,7 +294,7 @@ Let's start defining some components...
 
 #### What Are They?
 
-**Function Components** were introduced in version 0.14 of React (current version is 16.9 - yes, they changed their versioning scheme).
+**Function Components** were introduced in version 0.14 of React (current version is 70.0 - yes, they changed their versioning scheme).
 
 Function Components provide a simpler syntax vs. defining components using classes.
 
