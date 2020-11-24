@@ -446,7 +446,7 @@ Add `<ColorPicker>` to `<App>` and the display should look like this:
 <br>
 <br>
 
-## Quick Review Question
+## Final Review Question
 
 **❓ A UI in React is a hierarchy of ____________.**
 
