@@ -360,8 +360,8 @@ The `<GameBoard />` component based on our wireframe is a great place to start -
 
 1. Create a **components** folder within the **src** folder. All our new components will go inside this new folder.
 2. Create a **GameBoard** folder within the **components** folder. This is a best practice that allows you to organize a component's module file with other files used by that component (primarily CSS files and tests).
-3. Create a **GameBoard.jsx** (GameBoard.js also works) module within the **GameBoard** folder.  Note that the name of the module file is always the same as the component, including the UpperCamelCasing.
-4. Add the following code to **GameBoard.jsx**:
+3. Create a **GameBoard.js** (GameBoard.js also works) module within the **GameBoard** folder.  Note that the name of the module file is always the same as the component, including the UpperCamelCasing.
+4. Add the following code to **GameBoard.js**:
 
 	```javascript
 	import React from 'react';
