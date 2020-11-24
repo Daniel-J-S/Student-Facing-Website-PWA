@@ -54,6 +54,14 @@ module.exports = {
             }
           },
           {
+            resolve: `gatsby-plugin-scroll-indicator`,
+            options: {
+              color: '#dc143c',
+              height: '4px',
+              zIndex: `9999`,
+            },
+          },
+          {
             resolve: `gatsby-remark-responsive-iframe`
           },
           {
