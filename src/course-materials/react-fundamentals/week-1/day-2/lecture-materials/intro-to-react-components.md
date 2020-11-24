@@ -446,15 +446,10 @@ Add `<ColorPicker>` to `<App>` and the display should look like this:
 <br>
 <br>
 
-## Essential Questions
+## Quick Review Question
 
 **❓ A UI in React is a hierarchy of ____________.**
 
-**❓ True or False: Components used to render data passed to them via props are known as "presentational" components.**
-
-**❓ True or False: "Container" components hold state and may need need to use lifecycle methods to fetch data, etc.?**
-
-**❓ True or False: Currently, the common approach is to define "container" components as classes and "presentational" components as functions?**
 
 <br>
 <br>
