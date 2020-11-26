@@ -4,12 +4,13 @@ title: "Day 4"
 week: 2
 day: 4
 type: "homepage"
-topics: "C.R.A.P. Web Design"
+topics: "Intro to Full-Stack React"
 ---
 
 
-# Week 4 - Day 3
+# Week 2 - Day 4
 
-#### C.R.A.P. Web Design
-- [**Lecture:** C.R.A.P. Web Design](/react-fundamentals/week-2/day-4/lecture-materials/crap-web-design)
+#### Intro to Full-Stack React
+- [**Lecture:** Intro to Full-Stack React](/react-fundamentals/week-2/day-4/lecture-materials/full-stack-react)
+- [**Lab:** Full-Stack React Lab](/react-fundamentals/week-2/day-4/labs/full-stack-react-lab) - **Deliverable**
 

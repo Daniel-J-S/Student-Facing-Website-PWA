@@ -4,17 +4,15 @@ title: "Day 2"
 week: 2
 day: 2
 type: "homepage"
-topics: "Authentication With JWTs"
+topics: "Intro to Event Handling, Input & AJAX"
 ---
 
 
 # Week 2 - Day 2
 
-#### Authentication With JWTs
-- [**Warm Up:** Word Frequency](/react-fundamentals/week-2/day-2/lecture-materials/word-frequency/)
-- [**Lecture:** React: Authentication With JWTs](/react-fundamentals/week-2/day-2/lecture-materials/react-auth/)
-- <a href="/downloads/react_fundamentals/walk-it-out-lectures/walk-it-out-front-end-cra.zip" download><b>Download:</b> Starter Code For Frontend</a>
-- <a href="/downloads/react_fundamentals/walk-it-out-lectures/walk-it-out-back-end.zip" download><b>Download:</b> Starter Code For Backend</a>
-- [**Lab:** Doctor Who's Police Box](/react-fundamentals/week-2/day-2/labs/doctor-whos-police-box/) - **Deliverable**
-- [**Activity:** Final Review - Project 3 Requirements](/unit-projects/unit-three-project-requirements/)
-
+#### Intro to Event Handling, Input & AJAX
+- [**Lecture:** Intro to Event Handling in React](/react-fundamentals/week-2/day-2/lecture-materials/event-handling-in-react/)
+- [**Lecture:** Intro to Handling Input in React](/react-fundamentals/week-2/day-2/lecture-materials/handling-input-in-react/)
+- [**Lecture:** React with AJAX](/react-fundamentals/week-2/day-2/lecture-materials/react-with-ajax/)
+- [**Lab:** React Event Handling Lab](/react-fundamentals/week-2/day-2/labs/react-event-handling-and-program-logic-lab) - **Non-Deliverable**
+- [**Lab:** React Star Wars AJAX Lab](/react-fundamentals/week-2/day-2/labs/star-wars-api-react-lab) - **Non-Deliverable**
