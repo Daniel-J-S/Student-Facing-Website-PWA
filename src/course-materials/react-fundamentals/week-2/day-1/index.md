@@ -11,7 +11,7 @@ topics: "Intro to State, Props & Styling Components"
 # Week 2 - Day 1
 
 #### Intro to State, Props & Styling Components
-- [**Lecture:** Intro to React State and Props](/react-fundamentals/week-2/day-1/lecture-materials/intro-to-react-state-and-props)
+- [**Lecture:** Introducing State with Hooks and Props](/react-fundamentals/week-2/day-1/lecture-materials/introducing-state-with-hooks-and-props)
 - [**Lecture:** Intro to Styling Components](/react-fundamentals/week-2/day-1/lecture-materials/intro-to-styling-components/)
 - [**Lab:** React Students Lab](/react-fundamentals/week-2/day-1/labs/react-students-lab/) - **Deliverable**
 - [**Lab:** Styling Components Lab](/react-fundamentals/week-2/day-1/labs/styling-components-lab/) - **Non-Deliverable**
