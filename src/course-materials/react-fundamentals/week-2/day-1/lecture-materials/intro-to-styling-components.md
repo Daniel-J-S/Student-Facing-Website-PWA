@@ -60,7 +60,7 @@ type: "lecture"
 
 To get set up for this lesson:
 
-- Download the <a href="/downloads/react_fundamentals/intro-to-styling-react-components/react-mastermind.zip" download>Starter Code</a>
+- Download the <a href="/downloads/react_fundamentals/styling-components/react-mastermind.zip" download>Starter Code</a>
 - Extract the folder from the `.zip` file and `cd` into it
 - Install the Node modules: `$ npm i`
 - Open the code in VS Code: `$ code .`
@@ -113,24 +113,21 @@ Today, we will look at a few of the more popular ways to style the components th
 
 ## The Starter Code
 
-It's the Mastermind app from where we left off in the _React State and Props_ lesson with a few additions:
+It's the Mastermind app from where we left off in the _State and Props_ lesson with a few additions:
 
 - `<NewGameButton>` now renders a `<button>` instead of a `<div>`.
 
-- A `getWinTries` method has been added to `<App>` and used in its `render` method to render the `<footer>` component's content.
+- A `getWinTries` helper function has been added to `<App>` and used to display data in the `<footer>` component's content.
 
-- The `<GuessScore>` component is now being passed the guess object's `score` as a prop. The `score` object in turn is then being used to generate an array of **P**erfect, **A**lmost & **I**ncorrect characters that is then subsequently mapped and displayed using `<div>` components. 
+- The `<GuessScore>` component is now being passed the guess object's score as a prop. The score object in turn is then being used to generate an array of **P**erfect, **A**lmost & **I**ncorrect characters that is then subsequently mapped and displayed using `<div>` components.
 
-In this lesson we will begin to apply the above styling approaches to style react-mastermind. Today's lab will be completing the styling for the app.
+In this lesson we will begin to apply the above styling approaches to style react-mastermind. 
 
+Today's lab will be completing the styling for the app.
 
 <br>
 <br>
 <br>
-
-
-
-
 
 
 
@@ -218,11 +215,16 @@ Quickly add Bootstrap's:
 
 #### Loading Via NPM Packages
 
-Using CDNs is usually the way to go, however, if you prefer enlarging your **bundle.js** and other static assets, increasing both load-time and bandwidth usage, you're in luck! Chances are your framework of choice is available as an NPM package.
+Using CDNs is usually the way to go, however, if you prefer enlarging your **bundle.js** and other static assets, increasing both load-time and bandwidth usage, you're in luck! 
+
+Chances are your framework of choice is available as an NPM package.
 
 Look [here](https://www.npmjs.com/package/bootstrap) if you'd like to install Bootstrap.
 
-As a final note regarding external CSS frameworks, due to the popularity of React, component libraries that encapsulate a framework's styling into custom React components are available. Knowing how much you love Bootstrap, here's a [link to React-Bootstrap](https://react-bootstrap.github.io/).
+As a final note regarding external CSS frameworks, due to the popularity of React, component libraries that encapsulate a framework's styling into custom React components are available. 
+
+
+Knowing how much you love Bootstrap, here's a [link to React-Bootstrap](https://react-bootstrap.github.io/).
 
 
 
@@ -250,6 +252,11 @@ button:focus, .btn:focus {
 ```
 
 That `.btn:focus` selector is for Bootstrap buttons.
+
+
+**NOTE: Removing the focus outline feature is a bad practice in regard to accessibility and normally something we wouldn't do.**
+
+**However, we're doing it today to demonstrate global styling and because we want to remove the "blue glow" from our game's UI.**
 
 
 <br>
@@ -324,7 +331,7 @@ Let's create and import a CSS stylesheet for `<GuessPegs>` so that we can style 
 1. Create a CSS stylesheet file named **components/GuessPegs/GuessPegs.css**.
 
 
-2. `import` it in **GuessPegs.jsx** as follows:
+2. `import` it in **GuessPegs.js** as follows:
 
 	```javascript
 	import React from 'react';
@@ -338,10 +345,6 @@ Let's create and import a CSS stylesheet for `<GuessPegs>` so that we can style 
 	```css
 	.GuessPegs {
 	  display: flex;
-	  flex-direction: row; /* FYI, 'row' is the default */
-	  flex-wrap: nowrap;   /* FYI, 'nowrap' is the default */
-	  /* below is a shortcut for the above two declarations */
-	  /* flex-flow: row nowrap; */
 	  align-items: center;
 	}
 	```
@@ -364,11 +367,17 @@ Now it's your turn:
 
 2. Create a `GuessScore` class and apply it to the wrapping `<div>`.
 
-	Use the same flexbox properties as the `<GuessPegs>` component, however, we're going to want 2 rows of 2 scores each. You can easily accomplish this by changing `flex-wrap: nowrap;` to `flex-wrap: wrap;`, then add `width: 10px;`:
+	Use the same flexbox properties as the `<GuessPegs>` component, however, we're going to want 2 rows of 2 scores each. You can easily accomplish this by adding `flex-wrap: wrap;`, then add `width: 10px;`:
 
 	<img src="https://i.imgur.com/pRf8UCX.png">
 
-In a bit, when the `<div>`s for the individual scores are sized and styled, we will come back and further adjust the `width` to ensure they wrap in a 2-by-2 pattern.
+
+<br>
+<br>
+<br>
+
+
+**Once the `<div>`s for the individual scores are sized and styled, we will come back and further adjust the `width` to ensure they wrap in a 2-by-2 pattern.**
 
 
 <br>
@@ -415,21 +424,29 @@ button {
 
 CSS Modules became available with the release of **create-react-app v2.0**, which improved the configuration of Webpack.
 
-With **CSS Modules**, a CSS file's **class names** will be made unique by the tooling and will be dedicated to the component that imports the CSS Module - no more worrying about class name collisions!
+With **CSS Modules**, a CSS file's **class names** will be made unique by the tooling and will be dedicated to the component that imports the CSS Module. 
+
+No more worrying about class name collisions! 😄
 
 Using a CSS Module differs from using a CSS stylesheet in three ways:
 
-- The filename ends with `module.css`, e.g., `App.module.css` instead of `App.css`.
+1. The filename ends with `module.css`, e.g., `App.module.css` instead of `App.css`.
+2. The CSS Module is imported with the `from` syntax.
+3. **Class selectors** are unique to the component.  Other selectors however become global CSS rules just like with CSS stylesheets.
 
-- The CSS Module is imported with the `from` syntax.
+<br>
+<br>
 
-- **Class selectors** are unique to the component.  Other selectors however become global CSS rules just like with CSS stylesheets.
+**To check out CSS Modules, let's use one to style `<ScoreButton>`:**
 
-To check out CSS Modules, let's use one to style `<ScoreButton>`:
+💪 Create a **ScoreButton.module.css** file within the **ScoreButton** folder.
 
-- Create a **ScoreButton.module.css** file within the **ScoreButton** folder.
+<br>
+<br>
+<br>
 
-- Now let's add a rule that will resize the button:
+
+**Now let's add a rule that will resize the button:**
 
 	```css
 	.button {
@@ -438,9 +455,15 @@ To check out CSS Modules, let's use one to style `<ScoreButton>`:
 	```
 	Be sure to define the rule using a class selector (`.button`), not an element selector (`button`).
 
-- Now let's update **ScoreButton.jsx** to use the CSS Module and while we're at it, render a checkmark:
+<br>
+<br>
+<br>
 
-	```javascript
+
+**Now let's update `ScoreButton.js` to use the CSS Module and while we're at it, render a checkmark:**
+
+
+```javascript
 	import React from 'react';
 	import styles from './ScoreButton.module.css';
 	
@@ -449,10 +472,14 @@ To check out CSS Modules, let's use one to style `<ScoreButton>`:
 	    ✔
 	  </button>
 	);
-	```
-	Oh yeah, copy and paste that checkmark!
+```
+
+**Oh yeah, copy and paste that checkmark!**
+
+<br>
 	
-Note that the class names become keys on the `styles` object - let's console.log it to check it out:
+
+**Note that the class names become keys on the `styles` object - let's console.log it to check it out:**
 
 ```javascript
 import styles from './ScoreButton.module.css';
@@ -461,7 +488,14 @@ import styles from './ScoreButton.module.css';
 console.log(styles);
 	
 const ScoreButton = (props) => (
+
 ```
+
+<br>
+<br>
+<br>
+
+
 
 Logging out `styles` reveals that the tooling has generated a unique class name in place of `.button`:
 
@@ -489,6 +523,10 @@ That looks better!
 **❓ What's the difference when naming the files for CSS stylesheets vs. CSS Modules?**
 
 **❓ True or False: Importing CSS Modules results in an object where the keys are the names of the classes we defined in the module and the values are the unique class names generated by the tooling.**
+
+<br>
+<br>
+
 
 **❓ What's wrong with the following code:**
 
@@ -570,6 +608,11 @@ As you can see, the JS objects we use for inline styling are just regular JS obj
 
 - Other units like the `50%`, or values like the `2px solid` must be a string.
 
+
+<br>
+<br>
+<br>
+
 Now let's apply the styling by assigning the `baseStyle` object to the `style` prop within a JS expression (within curly braces):
 
 ```javascript
@@ -582,9 +625,19 @@ Now let's apply the styling by assigning the `baseStyle` object to the `style` p
 
 Note that we also removed the content from the `<div>` and made it self-closing because we are now "visualizing" the score using styling, not content.
 
-Looking good, except we need to increase the CSS `width` property in the `GuessScore` class to `24px` so that we can get a nice 2x2 display of scores like this:
+<br>
+<br>
+<br>
+
+
+Looking good, **except we need to increase the CSS `width` property in the `GuessScore` class to `24px` so that we can get a nice 2x2 display of scores like this:**
 
 <img src="https://i.imgur.com/L2SH0qo.png">
+
+<br>
+<br>
+<br>
+
 
 Now we want to apply dynamically one of three additional style objects depending upon the score character ('P', 'A' or 'I').
 
@@ -608,6 +661,12 @@ const pegStyles = {
 };
 ```
 
+<br>
+<br>
+<br>
+<br>
+
+
 Then, we can _merge_ the styles into a new object using the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals):
 
 
@@ -629,12 +688,18 @@ The spread operator, `...` is being used to "spread" each property of `baseStyle
 
 > We can accomplish the same thing using the slightly less concise [`Object.assign`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) method. However, the spread operator has become the go to approach.
 
-To test out the styling, let's use React Developer Tools to change the first guesses `score` in the state of the `<App>` component. Changing  to two Perfect and one Almost results in the following being rendered:
+<br>
+<br>
+<br>
 
-<img src="https://i.imgur.com/jg1bjLO.png">
+
+To test out the styling, let's use React Developer Tools to change the first guesses `score` in the state of the `<App>` component. Changing to two Perfect and one Almost results in the following being rendered:
+
+<img src="https://i.imgur.com/fG585d1.png">
 
 ### Nice!
 
+<br>
 <br>
 <br>
 
@@ -658,6 +723,7 @@ const GuessRow = (props) => (
 ```
 
 
+<br>
 <br>
 <br>
 <br>
@@ -724,9 +790,16 @@ Generally, styling components in a React app requires a blended approach:
 
 [This 35 minute video](https://www.youtube.com/watch?v=tkuxR-b9aTI) suggests that approximately 80% of your styling will be CSS-based with the remaining 20% inline.
 
-Regardless of what you do, as always, keep your eyes open for new approaches. For example, [Styled Components](https://styled-components.com/) are interesting, however, they are certainly more complex than the other approaches.
+Regardless of what you do, as always, keep your eyes open for new approaches. 
 
-Lastly, there are several open-sourced libraries that make inline styling more powerful. For example, it's not easy to style pseudo-classes, such as `:hover` inline. One of the more popular libraries is [Radium](https://github.com/FormidableLabs/radium).
+
+For example, [Styled Components](https://styled-components.com/) are interesting, however, they are certainly more complex than the other approaches.
+
+Lastly, there are several open-sourced libraries that make inline styling more powerful. 
+
+For example, it's not easy to style pseudo-classes, such as `:hover` inline. 
+
+One of the more popular libraries is [Radium](https://github.com/FormidableLabs/radium).
 
 <br>
 <br>
