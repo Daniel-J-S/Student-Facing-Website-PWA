@@ -11,13 +11,14 @@ type: "lab"
 
 <br>
 <br>
+<br>
 
 
 ## Set Up
 
 To get set up for this lesson:
 
-- Download the <a href="/downloads/react_fundamentals/intro-to-styling-react-components-lab/react-mastermind.zip" download>Starter Code</a>
+- Download the <a href="/downloads/react_fundamentals/styling-components-lab/react-mastermind.zip" download>Starter Code</a>
 - Extract the folder from the `.zip` file and `cd` into it
 - Install the Node modules: `$ npm i`
 - Open the code in VS Code: `$ code .`
