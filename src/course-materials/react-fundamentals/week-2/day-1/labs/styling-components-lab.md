@@ -28,6 +28,7 @@ To get set up for this lesson:
 <br>
 <br>
 <br>
+<br>
 
 
 ## Intro
@@ -40,9 +41,8 @@ The purpose of this lab is to practice styling React components by:
 
 2. Writing JS objects in a component's module that contain key:value pairs representing CSS properties and applying those styling objects to DOM components using the [`style`](https://facebook.github.io/react/docs/dom-elements.html#style) prop.
 
-##### This lab is a deliverable.
 
-Please create a repository on `GitHub Enterprise` for your work, then submit a URL to your repo using the homework tracker form as usual.
+##### This lab is not a deliverable.
 
 
 <br>
@@ -73,59 +73,88 @@ When finished, the react-mastermind app should look something like this:
 	- A color of grey
 	- A top & bottom margin of 30px
 
-- Don't be afraid to add extra `<div>` React elements to group other components to assist with layout.
 
-- The solution code uses flexbox for laying out items on the page.
+Don't be afraid to add extra `<div>` React elements to group other components to assist with layout.
 
-	Flexbox dramatically **improves** our ability to layout elements on a page and elements within other elements.
+The solution code uses flexbox for laying out items on the page.
 
-- Flexbox makes it easier to:
+Flexbox dramatically **improves** our ability to layout elements on a page and elements within other elements.
 
-	- Align items (including centering horizontally & vertically).
-	- Spread out items evenly.
-	- Display items at one end or the other.
-	- Reverse the order items are laid out (handy for reversing the order of the `<GuessRow>`s).
-	- And more!
 
-	No more floats! No more CSS tricks to center vertically!
+<br>
+<br>
 
-	Flexbox can even modify the width/height of its children to fill available space on different screen sizes.
+Flexbox makes it easier to:
 
-	Simply by setting the CSS property to flex like so:
+- Align items (including centering horizontally & vertically).
+- Spread out items evenly.
+- Display items at one end or the other.
+- Reverse the order items are laid out (handy for reversing the order of the `<GuessRow>`s).
+- And more!
+
+
+No more floats! No more CSS tricks to center vertically!
+
+
+Flexbox can even modify the width/height of its children to fill available space on different screen sizes.
+
+<br>
+<br>
+<br>
+
+
+Simply by setting the CSS property to flex like so:
 	
-	```css
-	.GameBoard {
-	  display: flex;
-	}
-	```
+```css
+.GameBoard {
+	display: flex;
+}
+```
 
-	...makes the `<GameBoard>` component become a **flexbox container**. Accordingly, all of its children become **flexbox items**.
+...makes the `<GameBoard>` component become a **flexbox container**. Accordingly, all of its children become **flexbox items**.
 
-	By default, a flexbox container lays out its children in a row - this is the **opposite** of how the browser lays out block elements by default, where elements stack on top of each other, not laid out horizontally.
+By default, a flexbox container lays out its children in a row - this is the **opposite** of how the browser lays out block elements by default, where elements stack on top of each other, not laid out horizontally.
 
-- In regards to the `<GuessRow>` components within `<GameBoard>`, we will have more control over how they stack vertically by making `<GameBoard>` a flexbox with a `flex-direction: column;` declaration:
+<br>
+<br>
+<br>
 
-	```css
-	.GameBoard {
-	  display: flex;
-	  flex-direction: column;
-	}
-	```
 
-	Now that wrapping `<div>` `<GameBoard>` is a flexbox, we can easily make it's flex children display in reverse order (with the current guess on top) as follows:
+In regards to the `<GuessRow>` components within `<GameBoard>`, we will have more control over how they stack vertically by making `<GameBoard>` a flexbox with a `flex-direction: column;` declaration:
 
-	```css
-	.GameBoard {
-	  display: flex;
-	  flex-direction: column-reverse;
-	}
-	```
+```css
+.GameBoard {
+	display: flex;
+	flex-direction: column;
+}
+```
 
-	By adding the `-reverse` caused the stacking to start at the bottom, which is exactly what we wanted:
+<br>
+<br>
 
-	<img src="https://i.imgur.com/cNrGkdA.png">
 
-	- Bringing up [A Visual Guide to CSS3 Flexbox](https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties?utm_content=bufferbb7b2&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer#comments-section) will help you with using flexbox as you continue to style react-mastermind.
+Now that wrapping `<div>` `<GameBoard>` is a flexbox, we can easily make it's flex children display in reverse order (with the current guess on top) as follows:
+
+```css
+.GameBoard {
+	display: flex;
+	flex-direction: column-reverse;
+}
+```
+
+<br>
+<br>
+
+
+By adding the `-reverse` caused the stacking to start at the bottom, which is exactly what we wanted:
+
+<img src="https://i.imgur.com/cNrGkdA.png">
+
+<br>
+<br>
+<br>
+
+Bringing up [A Visual Guide to CSS3 Flexbox](https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties?utm_content=bufferbb7b2&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer#comments-section) will help you with using flexbox as you continue to style react-mastermind.
 
 <br>
 <br>
@@ -135,4 +164,4 @@ When finished, the react-mastermind app should look something like this:
 
 #### Pssssst ... here's one possible solution to this lab (Please, only use as a last resort reference) 
 
-<a href="/downloads/react_fundamentals/intro-to-styling-react-components-lab-solution/react-mastermind.zip" download>Solution Code</a>
+<a href="/downloads/react_fundamentals/styling-components-lab-solution/react-mastermind.zip" download>Solution Code</a>
