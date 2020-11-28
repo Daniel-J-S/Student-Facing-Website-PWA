@@ -19,29 +19,37 @@ type: "lab"
 
 Okay, you just saw:
 
-1. How references to methods are passed from a parent component to a child component via props - no differently than passing data.
- 
-2. How to define methods in a class component that always have `this` bound to that component - thanks to ES2017's  _property initializer_ (AKA _class fields_) syntax.
+1. How references to function are passed from a parent component to a child component via props - no differently than passing data.
 
-3. How to assign a method to an event prop, such as `onClick`.
+2. How to wrap an event handler function with an arrow function if the handler function needs to be invoked with arguments.
 
-4. How to wrap a method with an arrow function if the method needs to be invoked with arguments.
+<br>
+<br>
 
-Now it's time to have some fun building out Mastermind using what you know about components, state, props, styling, methods, event handlers, and of course, JavaScript.
+Now it's time to have some fun building out Mastermind using what you know about components, state, props, styling, event handlers, and of course, JavaScript.
 
 If you can implement each of the exercises below - you will have a fully functioning game of Mastermind!
 
-After completing the events lesson, here's what our app looks like:
+
+<br>
+<br>
+<br>
+
+
+**After completing the events lesson, here's what our app looks like:**
 
 <img src="https://i.imgur.com/7CX8Dfs.png">
 
-The event handling code in the `handleColorSelection` method we wrote for changing the selected color is working great - be sure to reference it for help.
-
 **This lab is not a DELIVERABLE**
+
+<br>
+<br>
+<br>
+
 
 We'll use the same version of mastermind we left off at from today's lesson.
 
-In case you don't have a working version to start with, you can download this <a href="/downloads/react_fundamentals/intro-to-event-handling-with-react-lab/react-mastermind.zip" download>Starter Code</a>
+In case you don't have a working version to start with, you can download this <a href="/downloads/react_fundamentals/event-handling-lab/react-mastermind.zip" download>Starter Code</a>
 
 
 <br>
@@ -55,7 +63,7 @@ In case you don't have a working version to start with, you can download this <a
 
 1. Write the code that initializes the game's state when the  `[ New Game ]` button is clicked.
 
-	Hint: You already have the initialization code in the `constructor` method.  Stay DRY and refactor into a function that returns the initialized object.
+	Hint: You already have the initialization code in your call to `useState`. Stay DRY and refactor into a function that returns the initialized object.
 
 2. Make the `[ ✔ ]` (score) button disabled until all four pegs for the current guess have a color chosen.
 
@@ -94,13 +102,17 @@ In case you don't have a working version to start with, you can download this <a
 
 - To get the score to show for the last winning guess will require a tweak to the `<GuessRow>` component's render logic.
 
-BAM!
+<br>
+<br>
+<br>
+
+## BAM! 💥
 
 <img src="https://i.imgur.com/zbUUDUs.png">
 
 
 #### Pssssst ... here's one possible solution to this lab (Please, only use as a last resort reference) 
 
-<a href="/downloads/react_fundamentals/intro-to-event-handling-with-react-lab-solution/react-mastermind.zip" download>Solution Code</a>
+<a href="/downloads/react_fundamentals/event-handling-lab-solution/react-mastermind.zip" download>Solution Code</a>
 
  
