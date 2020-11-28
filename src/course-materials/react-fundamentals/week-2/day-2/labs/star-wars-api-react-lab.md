@@ -18,7 +18,7 @@ type: "lab"
 
 In the lesson earlier you:
 
-1. Learned to consume a third-party API in React from the `componentDidMount` lifecycle method.
+1. Learned to consume a third-party API in React and invoke the call to that API using the `useEffect` hook.
  
 2. Created a "service" module to organize `fetch` calls within.
 
@@ -36,7 +36,6 @@ In this lab, you'll consume the [Star Wars API](https://swapi.dev/) and render i
 To get set up for this lesson:
 
 - Use `create-react-app` to create a React app named `react-star-wars`
-- You can create this app inside a wk16 folder inside your homework and labs folder.
 - `cd` into `react-star-wars` and open VS Code.
 - Open a terminal in VS Code.
 - Start the React Dev Server.
@@ -49,41 +48,45 @@ To get set up for this lesson:
 
 ## Exercises
 
-> Styling in this lab is secondary to completing the functionality
+**Styling in this lab is secondary to completing the functionality**
 
 1. Research documentation of [SWAPI](https://swapi.dev/documentation) to find the endpoint for the `starships` resource.
 
-2. Create a `services/sw-api.js` service module and ensure that all API/fetch calls are made from this module. Use named exports to expose AJAX functionality as needed, e.g., `export function getAllStarships() {...}`to obtain all starships.
+2. Create a `services/sw-api.js` service module and ensure that all API/fetch calls are made from this module. 
 
-3. Obtain all of the starships from the API and render in `<App>` a clickable `<Link>` (imported from `react-router-dom`) for each starship. The link should be styled to look like a button and contain the text of the starship's name.  For example:
+3. Use named exports to expose AJAX functionality as needed, e.g., `export function getAllStarships() {...}`to obtain all starships.
 
-	<img src="https://i.imgur.com/VERV0nk.png">
+4. Obtain all of the starships from the API and render in `<App>` a card for each starship. 
 
-4. When a starship `<Link>` is clicked a `<StarshipPage>` component should be rendered that displays the starship's `name`, `model` and a "Return to Starship List" `<Link>` that routes back to the root route that renders `<App>`. For example:
-
-	<img src="https://i.imgur.com/IjRwsHk.png">
-
-5. Because the data is being loaded asynchronously, there are times, such as if the user refreshes the page while viewing the `<StarshipPage>`, that the data won't be available to render, in this case, display a "Loading..." message instead.
-
+5. Cards should contain the text of the starship's name.  
 
 <br>
 <br>
 <br>
+
+
+**For example:**
+
+<img src="https://i.imgur.com/VERV0nk.png">
+
+
 
 
 ## Hints
 
-- Hold the starships in state.
+- Hold the starship objects in state with the `useState` hook, don't forget to initialize to an empty array!
 
-- The challenge is to be able to have the `<StarshipPage>` component obtain the specific starship object it needs to render. Here are a couple of approaches:
+- Use the `useEffect` hook to make the AJAX request once the app loads.
 
-	1. One approach would be to pass `<StarshipPage>` (within `<Route>`) a method as a prop that it can call, passing the method an argument identifying which starship object it wants. That argument's value could come from a URL parameter in the link that was clicked...
+- Once the starship data comes from the API, be sure to update state with the setter function.
 
-		Review the Client-side Routing in React lesson's _Defining Routes with URL Parameters_ section for assistance with how to define routes with parameters used to pass information to components.
-		
-	2. Another approach is to use a slightly more complex syntax that React Router's `<Link>` offers.  This approach relies on assigning an object instead of a string to its `to` prop.  Check the docs [here](https://reacttraining.com/react-router/web/api/Link/to-object) for more details.
+- Create and import a `StarShipCard` component into `App.js`.
 
-	3. The third approach would be to use the data service to fetch the specific starship from the `<StarshipPage>` component.  However, this approach is wasteful unless the data resource changes frequently, e.g., you want to display the latest comments.  In this case, a starship's data does not change and you already have the data stored in state, so this is not an efficient approach.
+- `.map()` over each starship object in state to transform them into a `<StarshipCard />` component
+
+- CORS issue? Try changing your `/starships` endpoint to `/starships/`  **👈 *trust us on that one* 😎**.
+
+
 
 <br>
 <br>
@@ -93,8 +96,7 @@ To get set up for this lesson:
 
 ## Bonus
 
-- Enhance the `<StarshipPage>` component to render a `<PilotList>` component that lists the names of the pilots for that starship.
+- Display additional details for each Starship in it's respectable card.
+- This API has a pagination feature that allows you to get additional starships to display - find out how to use this to your advantage and allow users to get more starships at the click of a button
+- [Here's an informative article on pagination](https://nordicapis.com/everything-you-need-to-know-about-api-pagination/)
 
-- If the starship has no pilots, display a "No Pilots" message.
-
-	Hint: This requires a call to the API for each of the endpoints listed in the starship's `pilots` array. Using `async`/`await` can help with this - [here's a repl](https://repl.it/@DanielJS/Multiple-AJAX-Calls) that shows how to fetch the pilots in parallel.

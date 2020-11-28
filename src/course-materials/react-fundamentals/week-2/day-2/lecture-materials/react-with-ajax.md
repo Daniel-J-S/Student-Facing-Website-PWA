@@ -11,13 +11,14 @@ type: "lecture"
 
 <br>
 <br>
+<br>
 
 
 ## Learning Objectives
 
 | Students Will Be Able To |
 |---|
-| Make AJAX requests from a React app |
+| Make Asynchronous/AJAX Calls with the useEffect hook in React |
 | Use third-party libraries such as Google Maps |
 | Modularize code using "service" modules |
 
@@ -36,7 +37,7 @@ type: "lecture"
 - Review the Functionality of the App
 - Including Third-Party Libraries
 - Accessing the Browser's Current Coordinates
-- Making Asynchronous/AJAX Calls in React
+- Making Asynchronous/AJAX Calls with the `useEffect` hook in React
 - Implement the _As a Visitor..._ User Story
 - Essential Questions
 
@@ -51,7 +52,7 @@ This lesson has starter-code.
 
 To get set up for this lesson:
 
-- Download the <a href="/downloads/react_fundamentals/intro-to-react-with-ajax/react-weather.zip" download>Starter Code</a>
+- Download the <a href="/downloads/react_fundamentals/react-with-ajax/react-weather.zip" download>Starter Code</a>
 - Extract the folder from the `.zip` file and `cd` into it
 - Install the Node modules: `$ npm i`
 - Open the code in VS Code: `$ code .`
@@ -91,7 +92,9 @@ To focus on how to make an AJAX call in a React app, the app purposely is minima
 
 In the starter code, `<App>` is currently rendering only a `<header>` and the custom `<Map>` component which currently does not render a map because it's waiting for us to provide a couple of props, which we'll do in a bit.
 
-Also, take a peek at **index.css** & **App.css** to see how [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) (AKA CSS Variables) are being used. They are really cool addition to the CSS spec.
+Also, take a peek at **index.css** & **App.css** to see how [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) (AKA CSS Variables) are being used. 
+
+They are really cool addition to the CSS spec.
 
 <br>
 <br>
@@ -148,30 +151,70 @@ Note that Google Map's API keys are intended to be used client-side.
 
 The starter code includes a simple `<Map>` function component that can be reused to render as many maps desired.
 
-Reviewing the code in **Map.jsx** reveals that, thanks to the `if` statement on line 9, a map is only created and displayed in the `<div>` if both a `lat` and a `lng` prop is provided.
+Reviewing the code in **Map.js** reveals that, thanks to the `if` statement on line 9, a map is only created and displayed in the `<div>` if both a `lat` and a `lng` prop is provided.
 
 The component also uses a `zoom` prop if it's provided, otherwise a default value of `12` is used (line 12).
 
-Since the library's `Map` constructor needs a reference to the DOM element to draw the map in, line 7 creates a [ref](https://reactjs.org/docs/refs-and-the-dom.html) that is assigned to the only React Element being rendered:
+Since the library's `Map` constructor needs a reference to the DOM element to draw the map in, line 7 creates a [ref](https://reactjs.org/docs/hooks-reference.html#useref) using rReact's `useRef` hook that is assigned to the only React Element being rendered:
 
 ```javascript
 <div ref={mapDiv} className={styles.Map}></div>
 ```
 
-This allows us to use the ref (`mapDiv.current`) to provide the library a reference to the mounted `<div>` on line 11.
+This allows us to use the ref (`mapDiv.current`) to provide the library a reference to the mounted `<div>` on line 14.
+
+
+<br>
+<br>
+<br>
+
+**[More on React's `useRef` hook:](https://reactjs.org/docs/hooks-reference.html#useref)**
+
+*useRef returns a mutable ref object whose .current property is initialized to the passed argument (initialValue).* 
+
+*The returned object will persist for the full lifetime of the component.*
+
+*Essentially, useRef is like a “box” that can hold a mutable value in its .current property.*
+
+*If you pass a ref object to React with `<div ref={myRef} />`, React will set its .current property to the corresponding DOM node whenever that node changes.*
+
+*However, `useRef()` is useful for more than the ref attribute. It’s handy for keeping any mutable value around similar to how you’d use instance fields in classes.*
+
+*This works because useRef() creates a plain JavaScript object.* 
+
+*The only difference between useRef() and creating a {current: ...} object yourself is that useRef will give you the same ref object on every render.* **- ReactJS.org**
+
+
+<br>
+<br>
+<br>
+
+### Simpler explaination for why we're using this
+
+The Google Maps library needs a place in the actual DOM to stick our map after we provide needed information such as coordinates. 
+
+Since we don't use `document.getElementById()` or `document.querySelector()` in our components, React provides us with a convenient alternative: **The `useRef` hook and the JSX element's `ref` prop**. 
+
+Both of these combined provides our component access to the **actual** resulting DOM element in the browser. 
+
+Also, we don't lose this reference even with the component is re-rendered, which is pretty neat. 😄
 
 <br>
 <br>
 <br>
 
 
-#### Accessing Libraries Loaded Outside of React
+### Accessing Libraries Loaded Outside of React
 
-Take note on how the Google Maps library is being referenced on line 10 (and also on line 18):
+Take note on how the Google Maps library is being referenced on line 14 (and also on line 22):
 
 ```javascript
 const map = new window.google.maps.Map(
 ``` 
+
+<br>
+<br>
+<br>
 
 Normally, as shown in the docs, you would access the global `google` object created by the library directly.  However, due to the way the module system works in React, `google` is not in scope and the app will fail to build if we try to access `google` directly:
 
@@ -184,7 +227,7 @@ The solution is to access `google`, as well as other global variables, such as `
 <br>
 
 
-## Accessing the Browser's Current Coordinates
+### Accessing the Browser's Current Coordinates
 
 The [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) is a Web API available in the browser that can return an object that contains the current GPS coordinates of the browser.
 
@@ -201,7 +244,7 @@ The project's starter code has a `services` folder for holding such modules.
 
 The **services/geolocation.js** module has a single named export, `getCurrentLatLng`.
 
-So that we can take advantage of `async/await`, the Geolocation API's `getCurrentPosition` method has been wrapped to return a promise instead of accepting a callback (the Geolocation API was around before promises were):
+So that we can take advantage of [`async/await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function), the Geolocation API's `getCurrentPosition` method has been wrapped to return a promise instead of accepting a callback (the Geolocation API was around before promises were):
 
 ```javascript
 export function getCurrentLatLng() {
@@ -228,7 +271,14 @@ Let's see how to use this service to provide the coordinates to the `<Map>` comp
 
 You may be wondering why we have a dedicated lesson to cover making AJAX calls from a React app.
 
-After all, we've already seen how to use `fetch` to make AJAX calls.
+After all, we've already seen how to make AJAX calls in Units 1 & 2.
+
+If you take a look at a React component, it's not easy to figure out where to put the AJAX code. There's a subtle answer to this problem, as we briefly discussed in our state and props lesson. 
+
+When our components need to initiate calls to asynchronous operations, such as making AJAX calls when a component mounts or run other code when it's state or props are updated, we can use the [`useEffect()`](https://reactjs.org/docs/hooks-reference.html#useeffect) hook.
+
+
+**Let's learn more!**
 
 <br>
 <br>
@@ -236,151 +286,286 @@ After all, we've already seen how to use `fetch` to make AJAX calls.
 
 
 
-#### CORS Restrictions
+### Performing Side Effects Using useEffect()
 
-**It's always recommended that you make calls to APIs from your server, not the browser.**
+**Side effects include performing tasks such as:**
 
-Doing so avoids exposing API keys in the browser and avoids the [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) security restrictions that can prevent a browser from being able to access an API if the server does not participate in CORS.
+- Fetching data
+- Using timers
+- Manually updating the DOM
+- Managing subscriptions
+  
+> **Key Point: When performing a task that needs to be carried out after a function component mounts, when it's state/props are updated, or when it must be removed from the DOM, the `useEffect` hook is the perfect tool for the job!**
 
-However, we currently don't have a backend to act as a "passthrough", so we will be using `fetch` to make calls to an API directly.
 
-To make `fetch` send the correct CORS headers to the server, we need to include an options object with a `mode: "cors"` property like the following:
+<br>
+<br>
+<br>
+
+### Adding the useEffect() Hook
+
+**Like `useState()` and other hooks, because they are functions, we just invoke them from the top-level of the function component:**
+
 
 ```javascript
-fetch(someUrl, {mode: "cors"}).then(res => res.json())
+// first we import the useEffect hook from react
+import { useEffect } from 'react';
+import './App.css';
+import Map from './components/Map/Map';
+
+function App() {
+  
+  // then we set it up like this
+  useEffect(() => {
+    console.log('useEffect was called');
+  });
+
+  return (
+    <div className='App'>
+      <Map />
+      <header className='App-header'>REACT WEATHER</header>
+    </div>
+  );
+}
+
+export default App;
+
 ```
 
+**`useEffect()` takes a callback function as its first and only required argument.**
+
 <br>
 <br>
-<br>
 
 
+**By default, useEffect's callback function will be invoked after every render of the component, this includes whenever the component is rendered as a result of state changing.**
 
-#### Adding a `componentDidMount` Method
 
-If you take a look at a React component, it's not easy to figure out where to put the AJAX code. You can't put it in `render` because you can't invoke `setState` when the data comes back from within `render` because it will cause an infinite loop.
-
-The answer, as you learned earlier in the Lifecycle lesson, is to initiate calls to asynchronous operations, such as making AJAX calls, from inside of the `componentDidMount` and `componentDidUpdate` lifecycle methods.
-
-Although not an AJAX call, obtaining GPS coordinates is also an asynchronous operation, so we should make the call to `getCurrentLatLng` from within `componentDidMount`.
-
-First though, we will need to add an import inside of **App.js** to be able to access the `getCurrentLatLng` function that's being exported from the **geolocation.js** service module:
+**Let's test this out by adding state to our `<App>` component ... *(we'll need state anyways to store our coordinates and weather info)***
 
 ```javascript
-// App.js
+  // first, we import the useState hook  
+  import { useEffect, useState } from 'react';
+  import './App.css';
+  import Map from './components/Map/Map';
 
-import { getCurrentLatLng } from '../../services/geolocation';
-```
+  function App() {
 
-Now let's add the `componentDidMount` lifecycle method and the code to call `getCurrentLatLng`:
+    // then we'll initialize our state passing in some blank data our app eventually needs 
+    const [appData, setAppData] = useState({
+      lat: null,
+      lng: null, 
+    });
+    
+    useEffect(() => {
+      console.log('useEffect was called');
+    });
 
-```javascript
-class App extends Component {
-
-  // Add this method
-  async componentDidMount() {
-    // Destructure the object returned from getCurrentLatLng()
-    const {lat, lng} = await getCurrentLatLng();
-    console.log(lat, lng);
+    return (
+      <div className='App'>
+        <Map />
+        <header className='App-header'>
+          REACT WEATHER
+          {/* we can then add a button to set component state on click */}
+          <button onClick={() => setAppData({
+              lat: 32.8203525,
+              lng: -97.011731
+          })}>Set Weather Data</button>
+        </header>
+      </div>
+    );
   }
+
+  export default App;
+
+```
+
+<br>
+<br>
+<br>
+
+
+### Preventing Side Effects from Running
+
+In many cases, you will want to optimize the component so that side effects only run if:
+
+- Certain data changes (typically a prop or state variable).
+- After the initial render, but not after subsequent renders.
+
+
+The useEffect() hook provides for these scenarios by accepting an array as a second argument.
+
+The array is designed to hold a list of dependencies, that is, a list of variables and/or object properties that causes the side effect to run only if at least one of the dependencies change their value.
+
+Providing an empty array ([]), will result in the side effect only running after the initial render. Let's check this out:
+
+```javascript
+  // Add the [] as a 2nd argument
+  useEffect(() => {
+    console.log('useEffect was called');
+  }, []);
+
+```
+Clear the console and refresh. The "useEffect was called" message will be logged. However, unlike without the [] arg, clicking the button will no longer run the side effect!
+
+<br>
+<br>
+<br>
+
+
+### Getting our App Data when App mounts to the DOM
+
+Once our Weather App loads, it will need to gather current GPS coordinates of the browser and eventually some weather data.
+
+Let's use what we've learned about the `useEffect` hook to help us with this task!
+
+<br>
+<br>
+<br>
+
+**First, we will need to add an import inside of **App.js** to be able to access the `getCurrentLatLng` function that's being exported from the **geolocation.js** service module, we'll also remove the button we added to the `header`:**
+
+```javascript
+  import { useEffect, useState } from 'react';
+  import './App.css';
+  import Map from './components/Map/Map';
+
+  // here's our latest import statement  
+  import { getCurrentLatLng } from './services/geolocation';
+
+  function App() {
+
+    const [appData, setAppData] = useState({
+      lat: null,
+      lng: null
+    });
+    
+    useEffect(() => {
+      console.log('useEffect was called');
+    }, []);
+
+    return (
+      <div className='App'>
+        <Map />
+        <header className='App-header'>
+          REACT WEATHER
+        </header>
+      </div>
+    );
+  }
+
+  export default App;
+```
+
+<br>
+<br>
+<br>
+
+**Now let's create an [async](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) helper function to call `getCurrentLatLng`**
+
+```javascript
+  import { useEffect, useState } from 'react';
+  import './App.css';
+  import Map from './components/Map/Map';
+
+  import { getCurrentLatLng } from './services/geolocation';
+
+
+function App() {
+
+  const [appData, setAppData] = useState({
+    lat: null,
+    lng: null
+  })
+  
+  // here's our helper function to get our data
+  async function getAppData() {
+    const data = await getCurrentLatLng();
+    console.log(data)
+  }
+
+      
+  useEffect(() => {
+    // we can then call the function inside our hook!
+    getAppData();
+  }, []);
+
+  ...
+  // more code below
 ```
 
 The browser may be asking your permission to access you location - best grant it for this lesson to work 😊
 
-How cool is it that we can declare instance methods in a class to be `async`?!?!
+Also notice how our helper function is an [`async` function!](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) 
 
-As usual, we're baby stepping our way to glory...
-
-<img src="https://i.imgur.com/T3BeGec.png">
+*The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner (almost appearing synchronous) style, avoiding the need to explicitly configure promise chains.*
 
 <br>
 <br>
-<br>
 
-
-#### Providing the Coordinates to `<Map>`
-
-Now that we have the latitude and longitude, we can add them to `state`, then pass them to `<Map>` as props:
+**After that last change, we should see our coordinates printing in the JavaScript console:**
 
 ```javascript
-const {lat, lng} = await getCurrentLatLng();
-// Replace the console.log with the following
-this.setState({lat, lng});
+► {lat: 32.7915176, lng: -96.7944713}
 ```
 
-Also, it's a good practice to always initialize all state:
+<br>
+<br>
+
+**As usual, we're baby stepping our way to glory...**
+
+<br>
+<br>
+<br>
+
+
+### Providing the Coordinates to `<Map>`
+
+<br>
+<br>
+
+**Now that we have the latitude and longitude, we can add them to `state`, then pass them to `<Map>` as props:**
 
 ```javascript
-class App extends Component {
+import { useEffect, useState } from 'react';
+import './App.css';
+import Map from './components/Map/Map';
 
-  // Initialize state
-  state = {
+import { getCurrentLatLng } from './services/geolocation';
+
+function App () {
+
+  const [appData, setAppData] = useState({
     lat: null,
     lng: null
-  };
+  });
+  
+
+  // async is like telling JavaScript we'd like to run some asynchronous code ... synchronously 😄
+  async function getAppData() {
+    // await is like telling JavaScript ... "wait for this to run"
+    const {lat, lng} = await getCurrentLatLng();
+    // then we set our state
+    setAppData({lat, lng })
+    
+  }
+
+      
+  useEffect(() => {
+    getAppData();
+  }, []);
 ```
 
-Finally, we can now pass that state as props to `<Map>` within the `render` method:
+<br>
+<br>
+<br>
+
+**Finally, we can now pass that state as props to `<Map>` within the `render` method:**
 
 ```javascript
-<Map lat={this.state.lat} lng={this.state.lng}/>
+<Map lat={appData.lat} lng={appData.lng}/>
 ```
 
-Oh so lovely - we have errors...
-
-<br>
-<br>
-<br>
-
-
-#### Refactoring `<Map>` into a Class Component
-
-Unfortunately, we're receiving errors because there are now coordinates being provided, however, the component has not been mounted yet, thus the ref does not reference a DOM element - making the Google Maps library sad.
-
-We took a shot at writing `<Map>` as a Function Component but now find ourselves needing to tap into lifecycle methods, e.g., `componentDidMount`.
-
-This is a dandy of a refactor:
-
-```javascript
-class Map extends React.Component {
-  mapDiv = React.createRef();
-
-  setMap() {
-    if (this.props.lat && this.props.lng) {
-      const location = {lat: this.props.lat, lng: this.props.lng};
-      const map = new window.google.maps.Map(
-        this.mapDiv.current, {
-          zoom: this.props.zoom || 12,
-          center: location,
-          disableDefaultUI: true,
-          styles: mapStyle
-        }
-      );
-      new window.google.maps.Marker({position: location, map: map});
-    }
-  }
-
-  // Called after the first render
-  componentDidMount() {
-    this.setMap();
-  }
-
-  // Called when props or state change
-  componentDidUpdate() {
-    this.setMap();
-  }
-
-  render() {
-    return (
-      <div ref={this.mapDiv} className={styles.Map}></div>
-    );
-  }
-}
-```
-
-Okay, assuming the refactor went well, the `<Map>` component will be displaying the map:
-
-<img src="https://i.imgur.com/ZnIwsAt.png">
 
 <br>
 <br>
@@ -407,21 +592,32 @@ Scroll down to here:
 
 <img src="https://i.imgur.com/frr3qFs.png">
 
-The API requires an API Key to use, however, you can borrow this one `d3945aa316355ce92bb8cc10bf63e3da`.
+The API requires an API Key to use, however, you can borrow this one `5b3c5a41e420b342a7d2e498f5e3fd82`.
+
+<br>
+<br>
+<br>
 
 According to the docs, to retrieve the current weather data, we can make a call to the following endpoint substituting our desired coordinates:
 
 
 
 ```shell
-https://api.openweathermap.org/data/2.5/weather?lat=34.0475869&lon=-117.8985651&units=imperial&appid=d3945aa316355ce92bb8cc10bf63e3da
+https://api.openweathermap.org/data/2.5/weather?lat=34.0475869&lon=-117.8985651&units=imperial&appid=5b3c5a41e420b342a7d2e498f5e3fd82
 ```
 
 
 
-Included in the URL is a query parameter of<br>`units=imperial`<br>that returns the temperature in Fahrenheit (the default is Kelvin).
+Included in the URL is a query parameter of `units=imperial`. 
 
-Let's checkout the JSON returned by pasting that URL into a browser tab.  You should get something like the following returned:
+This param tells the API to return the temperature in Fahrenheit (the default is Kelvin).
+
+<br>
+<br>
+<br>
+
+
+**Let's checkout the JSON returned by pasting that URL into a browser tab.  You should get something like the following returned:**
 
 ```javascript
 {
@@ -471,9 +667,10 @@ Let's checkout the JSON returned by pasting that URL into a browser tab.  You sh
 <br>
 <br>
 <br>
+<br>
 
 
-### Exercise - Create a `weather-api.js` Service Module (15 min)
+### 💪 Exercise - Create a `weather-api.js` Service Module (15 min)
 
 Putting `fetch` calls in service/utility modules is a best practice - do not litter your components with `fetch` calls!
 
@@ -485,19 +682,22 @@ Using the **geolocation.js** module as an example, create a **weather-api.js** s
 
 - The `getCurWeatherByLatLng` function should:
 
-  - Define two parameters: `lat` & `lng`.
-  - Use `fetch` to make a call to the same endpoint as above, substituting the values of `lat` and `lng` passed as arguments. Be sure to assign our `lng` value to the `lon` query param that the API uses.
-  - Be sure to provide the `{mode: 'cors'}` option object as a second argument to `fetch`.
-  - Return the result of `fetch(...).then(res => res.json())` so that we can work with the promise that returns the actual data.
+  1. Define two parameters: `lat` & `lng`.
+  2. Use `fetch` to make a call to the same endpoint as above, substituting the values of `lat` and `lng` passed as arguments. 
+  3. Be sure to assign our `lng` value to the `lon` query param that the API uses.
+  4. Return the result of `fetch(...).then(res => res.json())` so that we can work with the promise that returns the actual data.
 
 - Import the named export , `getCurWeatherByLatLng`, into **App.js**.
 
-- Before the `this.setState` line in `componentDidMount`, use `getCurWeatherByLatLng` to obtain the data, assigning it to a variable named `weatherData`.
+- Inside the `getAppData` helper function, use `getCurWeatherByLatLng` to obtain the data by passing in the `lat` and `lng` values from `getCurrentLatLng`.
+- Make sure you use the `await` keyword the same way we had to use it with `getCurrentLatLng`
+-  Assign the returned value to a variable named `weatherData`.
 
 - `console.log(weatherData)` and verify that the data is being logged:
 
 	<img src="https://i.imgur.com/y8JXo71.png">
 
+<br>
 <br>
 <br>
 <br>
@@ -512,73 +712,97 @@ We're going to keep it simple and display:
 
 Looking at the data returned, we see that the temperature can be accessed as `weatherData.main.temp`.
 
-Let's log that out to verify, but let's also round it off while we're at it:
+
+<br>
+<br>
+<br>
+
+
+**Let's log that out to verify, but let's also round it off while we're at it:**
 
 ```javascript
 const weatherData = await getCurWeatherByLatLng(lat, lng);
 console.log(Math.round(weatherData.main.temp));
 ```
 
-Cool.
+<br>
+<br>
+<br>
 
-Now there's the `icon` property whose value is a short string that we can use to build out a URL for use as an `<img>` element's `src` attribute.
+Now there's the `icon` property whose value is a short string that we can use to build out a URL for use as an `<img>` element's `src` attribute, do you know where we can find it?
 
-**Figure out the data path like we just did for `temp` and slack it in the lessons channel when you've got it.**
+The ["How to get icon URL" section](https://openweathermap.org/weather-conditions) of OpenWeatherMap's docs shows us how to form the URL that points to the current condition's icon. Be sure to always use `https` however.
 
-Now that we know the data paths, let's add them to state:
+<br>
+<br>
+<br>
+
+
+**Now that we know the data paths, let's add them to state:**
 
 ```javascript
-state = {
-  lat: null,
-  lng: null,
-  // Add the initializations
-  temp: null,
-  icon: ''
-};
-
-async componentDidMount() {
-  const {lat, lng} = await getCurrentLatLng();
-  const weatherData = await getCurWeatherByLatLng(lat, lng);
-  this.setState({
-    lat,
-    lng,
-    // Add temp & icon to state
-    temp: Math.round(weatherData.main.temp),
-    icon: weatherData.weather[0].icon
+  const [appData, setAppData] = useState({
+    lat: null,
+    lng: null,
+    // Add the initializations
+    temp: null,
+    icon: ''
   });
-  console.log(Math.round(weatherData.main.temp));
-}
+
+  async function getAppData() {
+    const {lat, lng} = await getCurrentLatLng();
+    const weatherData = await getCurWeatherByLatLng(lat, lng);
+    
+    setAppData({
+      lat, 
+      lng,
+      temp: Math.round(weatherData.main.temp),
+      icon: weatherData.weather[0].icon 
+    });
+    
+  }
 ```
-
-React Developer Tools assure us that we're ready to move on to rendering:
-
-<img src="https://i.imgur.com/uaYgTCq.png">
-
 <br>
 <br>
 <br>
 
 
-#### Render the Temperature and Condition Icon
+**React Developer Tools assure us that we're ready to move on to rendering:**
+
+<img src="https://i.imgur.com/Oy0FXi6.png">
+
+<br>
+<br>
+<br>
+<br>
+
+
+### Render the Temperature and Condition Icon
 
 Ignoring CSS for now, let's update the `<header>` in **App.js** as follows:
 
 ```javascript
-<header className='App-header'>
-  <div>{this.state.temp}&deg;</div>
-  REACT WEATHER
-  {this.state.icon && 
-    <img
-      src={`https://openweathermap.org/img/w/${this.state.icon}.png`}
-      alt='Current Conditions'
-    />
-  }
-</header>
+  <header className='App-header'>
+    {
+    appData.temp && 
+      <div>{appData.temp}&deg;</div>
+    }
+    REACT WEATHER
+    {appData.icon && 
+      <img
+        src={`https://openweathermap.org/img/w/${appData.icon}.png`}
+        alt='Current Conditions'
+      />
+    }
+  </header>
 ```
 
-The ["How to get icon URL" section](https://openweathermap.org/weather-conditions) of OpenWeatherMap's docs shows us how to form the URL that points to the current condition's icon. Be sure to always use `https` however.
+<br>
+<br>
+<br>
 
-Note how we're using the `&&` operator within a JSX expression to prevent the rendering of a "broken image" tag that would show until the data arrives.
+
+Note how we're using the `&&` operator within a JSX expression to prevent the rendering of a "broken image" or empty `<div>` element to show until the data arrives.
 
 Lastly, React will give a warning in the console if you don't include an `alt` prop in all `<img>` components.
 
@@ -587,14 +811,14 @@ Lastly, React will give a warning in the console if you don't include an `alt` p
 <br>
 
 
-#### Update the CSS for the `<header>`
+### Update the CSS for the `<header>`
 
 The `<header>` already has a `App-header` class being applied that makes it a flexbox.
 
 Let's update the `justify-content` property:
 
 ```css
-justify-content: space-between;
+justify-content: space-around;
 ```
 
 All that's left is to add a touch of CSS to style the temp and image:
@@ -602,16 +826,21 @@ All that's left is to add a touch of CSS to style the temp and image:
 ```css
 .App-header div {
   color: white;
-  font-size: 8vmin;
+  font-size: 5vmin;
   font-weight: bold;
 }
 
 .App-header img {
-  height: 15vmin;
+  height: 10vmin;
 }
 ```
 
-Congrats!
+<br>
+<br>
+<br>
+
+
+## Congrats! 🎉
 
 <img src="https://i.imgur.com/rUTkeVb.png">
 
@@ -627,18 +856,8 @@ Take a moment to review the following questions:
 
 **❓ Assuming you loaded jQuery via a CDN in a React app's index.html, what object must you precede `$()` (jQuery function) with?**
 
-**❓ What lifecycle method(s) do we typically initiate asynchronous calls from?**
+**❓ What React hook do we initiate asynchronous calls from?**
 
-**❓ Why is the following code not a best practice?**
-
-
-```jsx
-	componentDidMount() {
-	  fetch('https//api.somehost.com/endpoint', {mode: 'cors'})
-	    .then(res => res.json())
-	    .then(data => this.setState({ data }));
-	}
-```
 
 <br>
 <br>
@@ -647,11 +866,12 @@ Take a moment to review the following questions:
 
 ## References
 
-[Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/tutorial)
+- [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/tutorial)
+- [OpenWeatherMap API](https://openweathermap.org/api)
+- [React's `useEffect` hook](https://reactjs.org/docs/hooks-effect.html)
+- [React's `useRef` hook](https://reactjs.org/docs/hooks-reference.html#useref)
 
-[OpenWeatherMap API](https://openweathermap.org/api)
 
-[React - Refs and the DOM](https://reactjs.org/docs/refs-and-the-dom.html)
 
 
 
