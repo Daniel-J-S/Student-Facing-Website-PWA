@@ -27,7 +27,7 @@ In the lesson earlier you:
 
 4. Created a minimal `<SettingsPage>` component that included a "HOME" `<Link>`.
 
-In this lab, you'll continue to have fun building out react-mastermind using what you know about components, state, props, styling, methods, event handlers, routing and of course, JavaScript.
+In this lab, you'll continue to have fun building out react-mastermind using what you know about components, state, props, styling, event handlers, routing and of course, JavaScript.
 
 **This lab is not a deliverable**
 
@@ -43,13 +43,13 @@ The starter code for this lab is the same as the completed code from the _React 
 
 To get set up for this lab:
 
-- Download the <a href="/downloads/react_fundamentals/intro-to-react-router-lab/react-mastermind.zip" download>Starter Code</a>
+- Download the <a href="/downloads/react_fundamentals/react-router-lab/react-mastermind.zip" download>Starter Code</a>
 - Extract the folder from the `.zip` file and `cd` into it
 - Install the Node modules: `$ npm i`
 - Open the code in VS Code: `$ code .`
 - Start the dev server: `$ npm start`
 
-Once the dev server opens a tab to `localhost:3000`, the page should have something like the following at the top:
+Once the dev server opens a tab to `localhost:3000`, the page should have something like the following:
 
 <img src="https://i.imgur.com/ibMTm9k.png">
 
@@ -70,15 +70,15 @@ When completed, clicking the "Difficulty" link (styled as a button) will display
 
 As you can see, the settings page allows the player to change the difficulty level by selecting the number of colors available to choose from!
 
-1. Currently, the `<GamePage>` component is relying on CSS classes defined in **App.css**. Refactor to cure this inappropriateness by copying the classes in **App.css** over to **GamePage.css** created during the lesson. Update the class names and update **GamePage.jsx** as required to use those class names. 
+1. Currently, the `<GamePage>` component is relying on CSS classes defined in **App.css**. Refactor to cure this inappropriateness by copying the classes in **App.css** over to **GamePage.css** created during the lesson. Update the class names and update **GamePage.js** as required to use those class names. 
 
-2. Since both `<App>` & `<GamePage>` rely on a `*-header-footer` class with the same styling, refactor by renaming it to `header-footer` and putting it in **index.css** instead. Update **App.js** & **GamePage.jsx** to use `header-footer`, then you can delete `GamePage-header-footer` from **GamePage.css** and all of the CSS in **App.css**.
+2. Since both `<App>` & `<GamePage>` rely on a `*-header-footer` class with the same styling, refactor by renaming it to `header-footer` and putting it in **index.css** instead. Update **App.js** & **GamePage.js** to use `header-footer`, then you can delete `GamePage-header-footer` from **GamePage.css** and all of the CSS in **App.css**.
 
-3. There will be three levels of difficulty: 'Easy'; 'Moderate'; and 'Difficult'.  The game's difficulty will be held in a state property named `difficulty`. Add the `difficulty` property to `state` and initialize it with a value of `'Easy'`. However, `difficulty` should not be "reset" if the player clicks the **[New Game]** button.
+3. There will be three levels of difficulty: 'Easy'; 'Moderate'; and 'Difficult'.  The game's difficulty will be held in a seperate piece of state named `difficulty`. 
 
-	Hint: Not resetting `difficulty` requires that it not be part of the object returned by the `getInitialState` method.  Instead, `difficulty` should be initialized one time on the `state` state object within the `constructor`. 
+4. Using a `useState` hook, initialize the `difficulty` state with a value of `'Easy'`. However, `difficulty` should not be "reset" if the player clicks the **[New Game]** button.
 	
-4. Using strings such as 'Easy', etc., to represent the `difficulty` is a fantastic way to access the array of colors for a particular difficulty level by using an object as a lookup. Refactor the `colors` array in **App.js** to be an object with keys of `Easy`, `'Moderate` and `Difficult` which hold arrays of 4, 5, or 6 color strings respectively.
+5. Using strings such as 'Easy', etc., to represent the `difficulty` is a fantastic way to access the array of colors for a particular difficulty level by using an object as a lookup. Refactor the `colors` array in **App.js** to be an object with keys of `Easy`, `'Moderate` and `Difficult` which hold arrays of 4, 5, or 6 color strings respectively.
 
 	Hint: The first couple of lines will look like this
 	
@@ -98,22 +98,21 @@ As you can see, the settings page allows the player to change the difficulty lev
 
 	- Clicking one of difficulty buttons should update the `difficulty` state, initialize a new game, and programmatically route back to the `<GamePage>` page (root route).
 	
-	Hints:
-	
 	- As always, use React Developer Tools to browse components and check/modify state & props.
 	
-	- `<SettingsPage>` is going to need both the `colors` object and the `difficulty` state property.
+	- `<SettingsPage>` is going to need both the `colors` object, the `difficulty` state & the `setDifficulty` setter function.
 
-	- Since `difficulty` lives in the state of `<App>`, guess where the method to update it will live. Plus, this method's code should update `difficulty` using `setState` of course, however, **after** the `difficulty` state is updated, you will then want to invoke the `handleNewGameClick` method to start a new game.  Running code **after** the asynchronous `setState` method has updated the state is best implemented by providing a callback function to the `setState` method as a second argument:
-	
+	- Since we need to reset the `gameState` after the difficulty has been changed, can add a `useEffect` hook inside of `App.js` to reset `gameState` whenever `difficulty` state changes:
+
 	```javascript
-	this.setState(<object> or <function>, <callback>);
+	useEffect(() => {
+      handleNewGameClick()
+    }, [difficulty]) 
 	```
-	That callback function can be an anonymous function that simply calls `this.handleNewGameClick();`.
 
-	- The above mentioned method will need to be passed down to the `<SettingsPage>` where it can be invoked to update `difficulty`.  Then, after invoking the method you can use the technique shown in the _React Router_ lesson to programmatically route to `/`.
+	- Then, after calling the `setDifficulty` setter function, you can use the technique shown in the [**further reading section**](/react-fundamentals/week-2/day-3/lecture-materials/intro-to-react-router/#routing-programmatically) of _React Router_ lesson to programmatically route to `/`.
 
-Choosing the **Difficult** level will result in the root route displaying this:
+Choosing the **Difficulty** level will result in the root route displaying this:
 
 <img src="https://i.imgur.com/IaKWyLR.png">
 
@@ -128,4 +127,4 @@ Good luck cracking the code!
 
 #### Pssssst ... here's one possible solution to this lab (Please, only use if necessary) 
 
-<a href="/downloads/react_fundamentals/intro-to-react-router-lab-solution/react-mastermind.zip" download>Solution Code<a>
+<a href="/downloads/react_fundamentals/react-router-lab-solution/react-mastermind.zip" download>Solution Code<a>
