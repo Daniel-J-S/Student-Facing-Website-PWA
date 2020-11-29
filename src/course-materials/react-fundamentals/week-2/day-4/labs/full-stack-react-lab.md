@@ -21,7 +21,56 @@ You enjoy challenges - you've come to the right place!
 
 Now that we've taken Mastermind full-stack, you're ready to get some practice interacting with a backend's API by persisting high-scores!
 
-**(Optional) Just in case your codebase from the lecture didn't work you can use this <a href="/downloads/react_fundamentals/intro-to-full-stack-react-lab/starter-code/react-mastermind.zip" download>Starter Code</a>**
+
+<br>
+<br>
+<br>
+
+
+#### Backend (Express/Mongoose) Hints:
+
+**NOTE: before you begin, make sure to remove this dummy/test code:**
+
+```javascript
+const scores = [
+    {
+        numGuesses: 2,
+        initials: 'DJS',
+        elapsedTime: 62
+    },
+    {
+        numGuesses: 4,
+        initials: 'DJS',
+        elapsedTime: 90
+    },
+
+]
+
+app.get('/api/scores', function(req, res) {
+    res.json(scores);
+});
+```
+
+<br>
+<br>
+<br>
+
+- Don't forget to install the necessary node modules like `dotenv` & `mongoose`. 
+
+- You will **not** need `method-override` (you know why - right?).
+
+- The backend API will be just like what we've previously worked with in class.  Define API routes on the server. Remember to follow the best practice of namespacing your API routes with `/api` and follow RESTful routing conventions, i.e., `POST /api/scores` to add a high score.
+
+- You'll need a `/config/database.js` module to connect to a MongoDB. Don't forget to `require` the `database.js` module within `server.js`.  
+
+- You'll need a hosted MongoDB and you already have an MongoDB Atlas account, so go for it.
+
+- What will the `Score` schema/model look like? Keep it simple, the player's `initials`, `numGuesses` and `seconds` should work.
+
+- You'll need an Express controller for the `scores` data resouce. Because this is a SPA, remember to respond with JSON from your controller actions.
+
+- When composing the Mongoose query to return high-scores so that the "best" scores are first, `numGuesses` should be prioritized over `seconds`. Mongoose's `sort` query method will help with this.
+
 
 <br>
 <br>
@@ -35,9 +84,9 @@ Now that we've taken Mastermind full-stack, you're ready to get some practice in
 
 - You're going to need another client-side route, e.g., `/high-scores`, and a new React "page" component dedicated to displaying the high-scores.
 
-- The time to check for a high-score is when `perfect === 4` (a chicken dinner) in the `handleScoreClick` method.
+- The time to check for a high-score is when `perfect === 4` (a chicken dinner) in the `handleScoreClick` helper function.
 
-- If there is a winner, you'll want to stop the timer immediately using `setState`.
+- If there is a winner, you'll want to stop the timer immediately.
 
 - When a player has won, that's the time to get their initials and make the AJAX request to persist the score. FYI, the solution code took the easy way out and used a JS `prompt()` to ask the player for their initials. Feel free to improve upon this!
 
@@ -48,28 +97,6 @@ Now that we've taken Mastermind full-stack, you're ready to get some practice in
 <br>
 
 
-
-
-#### Backend (Express/Mongoose) Hints:
-
-- Don't forget to install the necessary node modules like `dotenv` & `mongoose`. You will **not** need `method-override` (you know why - right?).
-
-- The backend API will be just like what we've previously worked with in class.  Define API routes on the server. Remember to follow the best practice of namespacing your API routes with `/api` and follow RESTful routing conventions, i.e., `POST /api/scores` to add a high score.
-
-- You'll need a `/config/database.js` module to connect to a MongoDB. Don't forget to `require` the `database.js` module within `server.js`.  
-
-- You'll need a hosted MongoDB if you want to deploy. You already have an MongoDB Atlas account, so go for it.
-
-- What will the `Score` schema/model look like? Keep it simple, the player's `initials`, `numGuesses` and `seconds` should work.
-
-- You'll need an Express controller for the `scores` data resouce.  Because this is a SPA, remember to return JSON from your controller actions.
-
-- When composing the Mongoose query to return high-scores so that the "best" scores are first, `numGuesses` should be prioritized over `seconds`. Mongoose's `sort` query method will help with this.
-
-
-<br>
-<br>
-<br>
 
 
 #### Bonus
@@ -89,23 +116,41 @@ On the server, you'll want to look into chaining the Mongoose `limit` query meth
 
 #### Super Bonus
 
-- If a score has made the list, how about letting the user know by moving to the high-score route! This requires that the `<App>` component be able to access `BrowserRouter`'s `history` object so that it can change routes "programmatically" using the `history.push()` method. A minor refactor in **index.js** to this is needed:
+If a score has made the list, how about letting the user know by moving to the high-score route! 
 
-	```javascript
-	// Import Route also
-	import { BrowserRouter as Router, Route } from 'react-router-dom';
-	
-	...
-	
-	ReactDOM.render(
-	  <Router><Route component={App}/></Router>,
-	  document.getElementById('root')
-	);
-	```
+<br>
+<br>
 
-- Program the backend to limit the number of high-scores in the collection to 20 (or whatever number of scores you want to limit to). Before adding a new high-score to the database, you will want to:
-	1. Verify that the high score sent by the client is indeed a worthy high score (better than the "worst" high-score in the database). This would be a great use case for a **custom validator** function in the schema.  Check out the **Custom** section of [the docs](http://mongoosejs.com/docs/validation.html). For further assistance, perhaps [this StackOverflow](https://stackoverflow.com/questions/43962430/mongoose-how-to-prevent-mongodb-to-save-duplicate-email-records-in-database) will help.
-	2. After adding the new high-score, remove the worst score if the collection grows larger than the number of high-scores you want to keep.  This would be a good use case for Mongoose **post save** [middleware](http://mongoosejs.com/docs/middleware.html) on the high score schema.
+This requires that the `<App>` component be able to access `BrowserRouter`'s `history` object so that it can change routes "programmatically" using the `history.push()` method. A minor refactor in **index.js** to this is needed:
+
+```jsx
+// Import Route also
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+...
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Router>
+      <Route component={App}/>
+    </Router>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+```
+
+<br>
+<br>
+<br>
+
+
+**Program the backend to limit the number of high-scores in the collection to 20 (or whatever number of scores you want to limit to).**
+
+Before adding a new high-score to the database, you will want to:
+
+1. Verify that the high score sent by the client is indeed a worthy high score (better than the "worst" high-score in the database). This would be a great use case for a **custom validator** function in the schema.  Check out the **Custom** section of [the docs](http://mongoosejs.com/docs/validation.html). For further assistance, perhaps [this StackOverflow](https://stackoverflow.com/questions/43962430/mongoose-how-to-prevent-mongodb-to-save-duplicate-email-records-in-database) will help.
+
+2. After adding the new high-score, remove the worst score if the collection grows larger than the number of high-scores you want to keep.  This would be a good use case for Mongoose **post save** [middleware](http://mongoosejs.com/docs/middleware.html) on the high score schema.
 
 
 <br>
