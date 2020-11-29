@@ -359,9 +359,6 @@ Cool it works!
 
 Also note how easily we can use the current value of `selColorIdx` in the `selColorIdx + 1` expression... 
 
-The `useState` hook doesn't care how we use existing state to update to new state, this must be handled differently with class components.
-
-
 > NOTE: Calling the setter function **replaces** the current state value with the argument provided.
 
 <br>
