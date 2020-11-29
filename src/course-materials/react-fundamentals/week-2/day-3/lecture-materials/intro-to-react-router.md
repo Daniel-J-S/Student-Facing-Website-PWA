@@ -677,7 +677,7 @@ The `to` prop specifies what URL path to route to if the link is clicked.
 
 It looks good, except we need a little margin between the `<Link>` and `<NewGameButton>`.
 
-**YOU DO:** Take a few minutes to add a style prop to `<Link>` with `margin-bottom` set to `'10px'`.
+**YOU DO:** Take a few minutes to add a style prop to `<Link>` with `marginBottom` key set to `10`.
 
 <br>
 <br>
@@ -686,7 +686,7 @@ It looks good, except we need a little margin between the `<Link>` and `<NewGame
 
 ```jsx
 
-<Link style={{ "margin-bottom": "10px" }} className="btn btn-default" to="/settings">Difficulty</Link>
+<Link style={{ marginBottom: 10 }} className="btn btn-default" to="/settings">Difficulty</Link>
 ```
 
 <br>
