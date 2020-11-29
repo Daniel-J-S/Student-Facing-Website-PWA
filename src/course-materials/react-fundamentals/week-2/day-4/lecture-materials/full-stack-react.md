@@ -299,12 +299,12 @@ app.use(express.json());
 const scores = [{
 		numGuesses: 2,
 		initials: 'DJS',
-		elapsedTime: 62
+		seconds: 62
 	},
 	{
 		numGuesses: 4,
 		initials: 'DJS',
-		elapsedTime: 90
+		seconds: 90
 	},
 
 ]
@@ -337,12 +337,12 @@ Let's go ahead and start our express server and navigate to `localhost:3001/scor
   {
     "numGuesses": 2,
     "initials": "DJS",
-    "elapsedTime": 62
+    "seconds": 62
   },
   {
     "numGuesses": 4,
     "initials": "DJS",
-    "elapsedTime": 90
+    "seconds": 90
   }
 ]
 
