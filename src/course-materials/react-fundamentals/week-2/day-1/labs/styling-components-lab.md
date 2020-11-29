@@ -42,7 +42,7 @@ The purpose of this lab is to practice styling React components by:
 2. Writing JS objects in a component's module that contain key:value pairs representing CSS properties and applying those styling objects to DOM components using the [`style`](https://facebook.github.io/react/docs/dom-elements.html#style) prop.
 
 
-##### This lab is not a deliverable.
+##### This lab is a deliverable.
 
 
 <br>
