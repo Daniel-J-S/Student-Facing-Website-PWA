@@ -159,7 +159,7 @@ Before adding a new high-score to the database, you will want to:
 
 
 
-**Psssst... only use this if necessary, but here's the <a href="/downloads/react_fundamentals/intro-to-full-stack-react-lab/solution-code/react-mastermind.zip" download>Solution Code</a> to this lab**
+**Psssst... only use this if necessary, but here's the <a href="/downloads/react_fundamentals/full-stack-react-lab-solution/full-stack-react-mastermind.zip" download>Solution Code</a> to this lab**
 
 
 
