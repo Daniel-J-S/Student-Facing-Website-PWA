@@ -327,11 +327,11 @@ app.get('/api/scores', function (req, res) {
 
 #### Try It Out
 
-Let's go ahead and start our express server and navigate to `localhost:3001/scores` to see how express responds:
+Let's go ahead and start our express server and navigate to `localhost:3001/api/scores` to see how express responds:
 
 
 ```json
-// http://localhost:3001/scores
+// http://localhost:3001/api/scores
 
 [
   {
@@ -363,21 +363,12 @@ Let's go ahead and start our express server and navigate to `localhost:3001/scor
 
 Now that everything is working, let's double check that our React app is running in development mode. 
 
-Make sure to shut down the static server we had running earlier and switching back to our development server with `npm start`.
+Make sure to shut down the static server we had running earlier and switch back to our development server with `npm start`.
 
-**Next, let's create a services folder inside for our React App for holding our service modules.**
+During the **"Add a Timer Feature code-along"**, we created a `services` directory inside our `src` directory to organize our `service/utility` modules; we're going to use that same folder for this next step.
 
-[**REMINDER:** this is what we had to do for our React with AJAX lesson.](/react-fundamentals/week-2/day-2/lecture-materials/react-with-ajax/#modularization-using-service-modules)
 
-```bash
-mkdir src/services
-```
-
-<br>
-<br>
-<br>
-
-**Then, we'll create a "scores service" modules for getting high scores data from Express**
+**Let's add a "scores service" module to `services` for getting high scores data from Express**
 
 ```bash
 touch src/services/scoresService.js
@@ -390,9 +381,11 @@ touch src/services/scoresService.js
 **We'll add this boilerplate code that will make the request to the route we defined inside of `server.js`**
 
 ```javascript
+// local constant for holding the URL to our api
 const BASE_URL = 'http://localhost:3001/api';
 
 
+// named export of function for making AJAX request
 export function fetchScoreData() {
     return fetch(BASE_URL + '/scores').then(res => res.json());
 }
@@ -423,12 +416,16 @@ import { useState, useEffect } from "react";
 import { fetchScoreData } from './services/scoresService';
 ```
 
-
 <br>
 <br>
 <br>
 
-Finally, we can define a helper function called `getScores` for making the request and invoke it inside our `useEffect` hook!
+**Next, we just have a few more steps:**
+
+1. Define an async helper-function called `getScores` for making the AJAX request with our service module. 
+2. When invoked, `getScores` will request the data and then console log it.
+3. Then, with the useEffect hook, we can invoke our getScores function when the component first renders.
+   
 
 ```javascript
 	// ... more code above
@@ -459,6 +456,49 @@ Finally, we can define a helper function called `getScores` for making the reque
 <br>
 
 
+**Once we get our scores data using AJAX, we'll need a piece of state to remember it with, let's initialize it**
+
+```javascript
+// Let's create a piece of state to hold our scores data
+    const [ scores, setScores ] = useState([]);
+```
+
+<br>
+<br>
+<br>
+<br>
+
+**Then we can just refactor the `getStores` helper function to set our score state instead of console logging it:**
+
+```javascript
+
+    // Let's create a piece of state to hold our scores data
+    const [ scores, setScores ] = useState([]);
+
+    /* helper functions */
+
+    // another cleanly written function with async/await
+    async function getScores() {
+      const data = await fetchScoreData();
+      // add data from AJAX request to state
+      setScores(data)
+    }
+
+    // make AJAX request when component first renders
+    useEffect(() => {
+      getScores()
+    }, []) // don't forget the empty dependency array 
+```
+<br>
+<br>
+
+**Awesome, we can now verify that our state is there using the react dev tools extension**
+
+<br>
+<br>
+<br>
+<br>
+
 
 ### IMPORTANT REMINDER - Backend Development
 
@@ -470,7 +510,7 @@ To solve this issue, we can introduce a middleware package called `cors`, which 
 <br>
 <br>
 
-**We can install it like so:**
+**First we install it:**
 
 ```shell
 npm i cors
@@ -480,7 +520,7 @@ npm i cors
 <br>
 <br>
 
-**A simple configuration to allow access from any origin could be accomplished as follows:**
+**Then, add a simple configuration to allow access from any origin.**
 
 ```javascript
 // first require it

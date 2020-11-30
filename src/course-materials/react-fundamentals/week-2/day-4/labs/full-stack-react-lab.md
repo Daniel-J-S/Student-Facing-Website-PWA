@@ -21,6 +21,8 @@ You enjoy challenges - you've come to the right place!
 
 Now that we've taken Mastermind full-stack, you're ready to get some practice interacting with a backend's API by persisting high-scores!
 
+This lab begins with the code from where we left off at in the full stack react lesson, but if your code doesn't work, here's some <a href="/downloads/react_fundamentals/full-stack-react-lab/full-stack-react-mastermind.zip">starter code</a>.
+
 
 <br>
 <br>
