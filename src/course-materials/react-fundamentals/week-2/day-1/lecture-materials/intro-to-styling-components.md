@@ -334,7 +334,6 @@ Let's create and import a CSS stylesheet for `<GuessPegs>` so that we can style 
 2. `import` it in **GuessPegs.js** as follows:
 
 	```javascript
-	import React from 'react';
 	import GuessPeg from '../GuessPeg/GuessPeg';
 	import './GuessPegs.css';
 	```
@@ -448,12 +447,13 @@ Using a CSS Module differs from using a CSS stylesheet in three ways:
 
 **Now let's add a rule that will resize the button:**
 
-	```css
-	.button {
-	  padding: 2px 6px;
-	}
-	```
-	Be sure to define the rule using a class selector (`.button`), not an element selector (`button`).
+```css
+.button {
+	padding: 2px 6px;
+}
+```
+
+Be sure to define the rule using a class selector (`.button`), not an element selector (`button`).
 
 <br>
 <br>
@@ -464,7 +464,6 @@ Using a CSS Module differs from using a CSS stylesheet in three ways:
 
 
 ```javascript
-	import React from 'react';
 	import styles from './ScoreButton.module.css';
 	
 	const ScoreButton = (props) => (
