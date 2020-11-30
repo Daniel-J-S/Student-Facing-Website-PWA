@@ -183,7 +183,7 @@ Specifically, a hook:
 |---|---|
 |[`useState()`](https://reactjs.org/docs/hooks-reference.html#usestate)|Used to implement class components' `this.state` and `setState()`.|
 |[`useEffect()`](https://reactjs.org/docs/hooks-reference.html#useeffect)|Used to implement "side effects", e.g., fetching data, using timers, subscriptions, etc.<br>`useEffect()` implements the functionality of class component lifecycle methods such as `componentDidMount`, `componentDidUpdate` & `componentWillUnmount` with a single hook!|
-|[`useRef()`](https://reactjs.org/docs/hooks-reference.html#useref)| Used to access DOM elements in class components, and can be also used more generally to "remember" any non-state data that needs to be persisted between renders similar to how instance properties are used in class components. |
+|[`useRef()`](https://reactjs.org/docs/hooks-reference.html#useref)| Used to access DOM elements, and can be also used more generally to "remember" any non-state data that needs to be persisted between renders similar to how instance properties are used in class components. |
 |[`useReducer()`](https://reactjs.org/docs/hooks-reference.html#usereducer)|An alternative to `useState()` for when the state is more complex.  It uses a reducer function and "actions" to update state - similar to how Redux does (but not as comprehensive).|
 | Other built-in hooks|[`useContext()`](https://reactjs.org/docs/hooks-reference.html#usecontext)<br>[`useMemo()`](https://reactjs.org/docs/hooks-reference.html#usememo)<br>[and other less common hooks here...](https://reactjs.org/docs/hooks-reference.html#useimperativehandle)|
 
