@@ -114,7 +114,7 @@ After all considerations made, the approach we decided to take is as follows:
 
 <br>
 
-- So, this is what our `gameState` object should be initialized to:
+So, this is what our `gameState` object should be initialized to:
 
 ```javascript
 {
@@ -342,6 +342,7 @@ mkdir src/services
 ```
 
 <br>
+<br>
 
 **Then, inside of `services/` we'll create a file called `utilities.js`:**
 
@@ -350,8 +351,9 @@ touch src/services/utilities.js
 ```
 
 <br>
+<br>
 
-**Now, let's export the formatter function from above from `utilities.js`**
+**Now, let's export the formatter function from `utilities.js`**
 
 ```javascript
 // inside of utilties.js
@@ -413,7 +415,7 @@ export default GameTimer;
 <br>
 <br>
 
-Now its all left up to the fun part of programming the game timer to tick!
+**Now its all left up to the fun part of programming the game timer to tick!**
 
 <br>
 <br>
@@ -461,7 +463,7 @@ Alright, so all there's left to do is to call our helper function with a 1 secon
 <br>
 <br>
 
-This function takes a callback, and a delay value for arguments, and then uses that data to create an object in a special part of your browser's memory called the heap.
+**This function takes a callback, and a delay value for arguments, and then uses that data to create an object in a special part of your browser's memory called the heap.**
 
 ```javascript
 setInterval(callback, delay);
@@ -581,7 +583,7 @@ Line 26:6:  React Hook useEffect has a missing dependency: 'handleTick'. Either 
 
 This is a real head scratcher, because it's totally unexpected.
 
-Basically whats happening is that every time the `GameTimer` component re-renders after a new second is added to `elapsedTime`, the `handleTick` function isn't persisting between re-renders. 
+Basically whats happening is whenever a new second is added to `elapsedTime` that every time the `GameTimer` component re-renders , the `handleTick` function isn't persisting between re-renders. 
 
 So, in other words, we're creating a new `handleTick` function every time 
 
