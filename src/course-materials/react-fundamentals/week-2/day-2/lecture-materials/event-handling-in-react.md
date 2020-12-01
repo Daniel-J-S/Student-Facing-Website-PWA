@@ -236,12 +236,12 @@ Let's see this by adding an anonymous arrow function as a click handler on the c
     <div className={styles.ColorPicker}>
       {props.colors.map((color, idx) =>
         <button
-          key={color}
           className={styles.button}
           style={{
             backgroundColor: props.selColorIdx === idx ? 'white' : color,
             borderColor: color
           }}
+          key={color}
           {/* add the click handler below */}
           onClick={() => alert('clicked!')}
         />
