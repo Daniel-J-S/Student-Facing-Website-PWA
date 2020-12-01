@@ -166,6 +166,7 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 | [React Components Lab](/react-fundamentals/week-1/day-2/lecture-materials/intro-to-react-components/#lab-define-the-remaining-components-for-mastermind)| 12/01/20 |
 | [React Students Lab](/react-fundamentals/week-2/day-1/labs/react-students-lab/)| 12/07/20 |
 | [Styling React Components Lab](/react-fundamentals/week-2/day-1/labs/styling-components-lab/)| 12/07/20 |
+| [React Star Wars Lab](/react-fundamentals/week-2/day-2/lecture-materials/react-with-ajax/)| 12/08/20 |
 
 
 
