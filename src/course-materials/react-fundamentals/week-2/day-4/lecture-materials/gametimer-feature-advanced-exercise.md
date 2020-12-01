@@ -134,9 +134,11 @@ After all considerations made, the approach we decided to take is as follows:
 
 **Step 3:** We'll pass the `handleTimerUpdate` helper function, `elapsedTime` and `isTiming` to our `<GameTimer>` component so we can visualize changes to that data there.
 
-**Step 4:** This is where we set up the logic of the `<GameTimer>` component. We'll use a `useEffect` hook to initialize the timer object instance created by `setInterval`. This method will be used to repeatedly call our timer update function on a fixed delay [as described here](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval). We'll also use the `useEffect` hook to perform a clean up of our `interval` object whenever the component is unmounted from the DOM to prevent causing a memory leak ... more on this later.
+**Step 4:** We'll also need to build a custom time formatter function to convert total seconds from our `elapsedTime` prop to minutes and seconds.
 
-**Step 5:** We'll also need to build a custom time formatter function to convert total seconds passed to minutes and seconds.
+**Step 5:** This is where we set up the logic of the `<GameTimer>` component. We'll use a `useEffect` hook to initialize a timer object instance created by `setInterval`. This method will be used to repeatedly call our timer update function on a fixed delay [as described here](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval). We'll also use the `useEffect` hook to perform a clean up of our `interval` object whenever the component is unmounted from the DOM to prevent causing a memory leak ... more on this later.
+
+
 
 
 <br>
@@ -254,3 +256,332 @@ Here's one of the easier parts, lets pass our data: `elapsedTime`, `isTiming` an
 ## Step 4: GameTimer Component Set up and Logic
 
 Now it's time to program our GameTimer component to perform it's tasks!
+
+<br>
+<br>
+<br>
+
+**This is what our `<GameTimer>` component should look like right now:**
+
+```jsx
+import styles from './GameTimer.module.css';
+
+const GameTimer = (props) => (
+  <div className={styles.GameTimer}>
+    00:00
+  </div>
+);
+
+export default GameTimer;
+```
+
+<br>
+<br>
+<br>
+
+**The first thing we'll do is replace the hard-coded timer with the actual `elapsedTime` prop we passed down from `App.js`.**
+
+```jsx
+import styles from './GameTimer.module.css';
+
+const GameTimer = (props) => (
+  <div className={styles.GameTimer}>
+    {props.elapsedTime}
+  </div>
+);
+
+export default GameTimer;
+
+```
+
+<br>
+<br>
+<br>
+
+
+**We should notice immediately that now our timer looks like this...**
+
+<img src="https://i.imgur.com/hOlYkVs.png" alt="screenshot" />
+
+<br>
+<br>
+<br>
+
+To replace this value with the value that looks like an actual timer, we'll need to write a helper function that formats the `elapsedTime` value; we'll take care of this next.
+
+
+<br>
+<br>
+<br>
+
+
+
+## Step 4: Write a helper function for formatting time
+
+For this next step, we need to create a special helper function for taking seconds as an argument, and then converting total seconds into minutes and seconds.
+
+```javascript
+function formatTime(seconds) {
+  const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
+  const secs = (seconds % 60).toString().padStart(2, '0');
+  return `${mins}:${secs}`;
+}
+```
+<br>
+<br>
+
+To better organize our code, we're going to export this function from a service module we'll use to define special utility functions for tasks like this.
+
+<br>
+<br>
+
+**Let's create a directory inside of `src` called `services`:**
+
+```bash
+mkdir src/services
+```
+
+<br>
+
+**Then, inside of `services/` we'll create a file called `utilities.js`:**
+
+```bash
+touch src/services/utilities.js
+```
+
+<br>
+
+**Now, let's export the formatter function from above from `utilities.js`**
+
+```javascript
+// inside of utilties.js
+
+export function formatTime(seconds) {
+  const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
+  const secs = (seconds % 60).toString().padStart(2, '0');
+  return `${mins}:${secs}`;
+}
+```
+
+
+<br>
+<br>
+
+**Next, let's import this function inside of `GameTimer.js`**
+
+```jsx
+import styles from './GameTimer.module.css';
+import { formatTime } from '../../services/utilities';
+
+const GameTimer = (props) => (
+  <div className={styles.GameTimer}>
+    {props.elapsedTime}
+  </div>
+);
+
+export default GameTimer;
+```
+
+<br>
+<br>
+
+**Now, all we have to do is call the function in place of where we're rendering out `{props.elapsedTime}`, passing in the value `props.elapsedTime` as an argument.**
+
+```jsx
+import styles from './GameTimer.module.css';
+import { formatTime } from '../../services/utilities';
+
+const GameTimer = (props) => (
+  <div className={styles.GameTimer}>
+    {formatTime(props.elapsedTime)}
+  </div>
+);
+
+export default GameTimer;
+
+```
+
+
+<br>
+<br>
+<br>
+
+**Awesome! We should have what looks like a timer now!**
+
+<img src="https://i.imgur.com/6d2d0jy.png" alt="screenshot" />
+
+<br>
+<br>
+
+Now its all left up to the fun part of programming the game timer to tick!
+
+<br>
+<br>
+<br>
+
+
+## Step 5: Setting up our Game Timer Logic
+
+To get started with this step lets first set up a local helper function inside of `GameTimer.js` to invoke `props.handleTimerUpdate` every second. 
+
+
+<br>
+
+**This step will also involve refactoring the `<GameTimer>` component from the implicit return syntax to the explicit return syntax:**
+
+
+```jsx
+import styles from './GameTimer.module.css';
+import { formatTime } from '../../services/utilities';
+
+const GameTimer = (props) => {
+  
+  // here's our helper function
+  function handleTick() {
+    props.handleTimerUpdate();
+  }
+
+  // we need to add an explicit return statement now
+  return (
+    <div className={styles.GameTimer}>
+      {formatTime(props.elapsedTime)}
+    </div>
+  );
+}
+
+export default GameTimer;
+```
+
+<br>
+<br>
+<br>
+
+Alright, so all there's left to do is to call our helper function with a 1 second delay as soon as the GameTimer components is mounted to the DOM. To accomplish this, we're going to use the [`setInterval`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval) function that comes with most modern web browsers. 
+
+<br>
+<br>
+
+This function takes a callback, and a delay value for arguments, and then uses that data to create an object in a special part of your browser's memory called the heap.
+
+```javascript
+setInterval(callback, delay);
+```
+
+<br>
+<br>
+
+**So, in our case, we could configure `setInterval` to call our helper function with a **1000** millisecond delay like this:**
+
+```javascript
+setInterval(handleTick, 1000);
+```
+
+<br>
+<br>
+
+Using this function does come with some concerns though.
+
+If we're not careful, it can create multiple timer objects in the browser as a result from the `<GameTimer>` component being mounted and unmounted several times in one session.
+
+We don't want this to happen as it could lead to a memory leak and other possible performance issues.
+
+So, we need to clean up or ... destroy this timer object whenever the `<GameTimer>` component is unmounted from the DOM.
+
+
+Fortunately, this function returns a reference we can use to essentially "clear" the object from memory; the name of the function we use to clear our interval object is called ... `clearInterval`.
+
+```javascript
+
+// create the timer
+const timerId = setInterval(handleTick, 1000);
+
+// clear the timer from memory
+clearInterval(timerId);
+
+```
+
+<br>
+<br>
+<br>
+
+So, having explained how we're going to make our timer tick, and that we need to clear our timer from memory once the `<GameTimer>` is removed from the DOM, let's talk about how we're going to bring all this together.
+
+We'll need to set all this up as a side effect to set the timer interval and the clear the interval at the right phases within the component lifecycle.
+
+<br>
+
+**For example:**
+
+- Component Mounted - **Create the interval.**
+- Component Updated - _No action needed, let React re-render the component._
+- Component Un-mounted from DOM and Destroyed - **Clear the interval from memory.**
+
+<br>
+<br>
+
+The best way to hook into this behavior is with the `useEffect` hook, which we're learned about recently!
+
+<br>
+
+**Let's go ahead and import the `useEffect` hook inside of `GameTimer.js`**
+
+```jsx
+// import the useEffect hook as a named Import
+import { useEffect } from 'react';
+import styles from './GameTimer.module.css';
+import { formatTime } from '../../services/utilities';
+
+const GameTimer = (props) => {
+  
+  
+  function handleTick() {
+    props.handleTimerUpdate();
+  }
+
+  // set up useEffect to set the interval when the component is mounted
+  useEffect(() => {
+    // call the setInterval function 👇 passing in the handleTick callback and time delay value
+    const timerId = setInterval(handleTick, 1000);
+   /* 
+      the useEffect callback 
+      also returns a cleanup function 👇 
+      we can use to invoke the cleanup behavior
+    */
+   return () => clearInterval(timerId) // 👈 clear the timer interval once component is destroyed
+  }, []); /* 👈 empty dependency array 
+              to prevent side effect from running 
+              on every re-render 
+            */
+
+  
+  return (
+    <div className={styles.GameTimer}>
+      {formatTime(props.elapsedTime)}
+    </div>
+  );
+}
+
+export default GameTimer;
+
+```
+
+<br>
+<br>
+
+Great! You should have a ticking timer now!
+
+... but now there's one small problem, if you open your JS console in the browser, you should see this error:
+
+```shell
+► react_devtools_backend.js:2430 src/components/GameTimer/GameTimer.js
+Line 26:6:  React Hook useEffect has a missing dependency: 'handleTick'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+```
+
+<br>
+
+This is a real head scratcher, because it's totally unexpected.
+
+Basically whats happening is that every time the `GameTimer` component re-renders after a new second is added to `elapsedTime`, the `handleTick` function isn't persisting between re-renders. 
+
+So, in other words, we're creating a new `handleTick` function every time 
+
