@@ -201,7 +201,7 @@ import { Route } from 'react-router-dom';
 ```jsx
 return (
   <div className="App">
-    <header className='App-header-footer'>R E A C T &nbsp;&nbsp;&nbsp;M A S T E R M I N D</header>
+    <header className='App-header-footer'>R E A C T&nbsp;&nbsp;&nbsp;M A S T E R M I N D</header>
     <Route component={GameTimer} />
 ```
 
