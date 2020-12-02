@@ -20,6 +20,8 @@ topics: "Intro to Client-Side Routing"
 <hr>
 <br>
 
+#### Lesson Recordings
+
 - [**Intro to React Router with Daniel**](https://generalassembly.zoom.us/rec/share/FzBq4ta1ewD4Wx-p6y7R0-AVPQEycqpgnN_g9Vyn_yNRDdy5rBfjnD6cKYbBJqSz.jWB9l0RZGDQPR02A?startTime=1606921222000)
 
 
