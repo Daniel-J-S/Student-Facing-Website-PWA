@@ -472,7 +472,7 @@ setInterval(callback, delay);
 <br>
 <br>
 
-**So, in our case, we could configure `setInterval` to call our helper function with a **1000** millisecond delay like this:**
+**So, in our case, we could configure `setInterval` to call our helper function with a 1000 millisecond delay like this:**
 
 ```javascript
 setInterval(handleTick, 1000);
@@ -483,14 +483,14 @@ setInterval(handleTick, 1000);
 
 Using this function does come with some concerns though.
 
-If we're not careful, it can create multiple timer objects in the browser as a result from the `<GameTimer>` component being mounted and unmounted several times in one session.
+If we're not careful, it can create multiple timer objects in the browser as a result from the `<GameTimer>` component being mounted and unmounted multiple times in one session.
 
 We don't want this to happen as it could lead to a memory leak and other possible performance issues.
 
 So, we need to clean up or ... destroy this timer object whenever the `<GameTimer>` component is unmounted from the DOM.
 
 
-Fortunately, this function returns a reference we can use to essentially "clear" the object from memory; the name of the function we use to clear our interval object is called ... `clearInterval`.
+Fortunately, the `setInterval` function returns a reference we can use to essentially "clear" the object from memory; the name of the function we use to clear our interval object is called ... `clearInterval`.
 
 ```javascript
 
@@ -506,26 +506,47 @@ clearInterval(timerId);
 <br>
 <br>
 
-So, having explained how we're going to make our timer tick, and that we need to clear our timer from memory once the `<GameTimer>` is removed from the DOM, let's talk about how we're going to bring all this together.
+Now that we know how to make our timer tick, amd how to clear our timer from memory once the `<GameTimer>` is removed from the DOM, let's bring all this together in our project.
 
-We'll need to set all this up as a side effect to set the timer interval and the clear the interval at the right phases within the component lifecycle.
+As a side effect of the React mounting the component, we need to set and the clear the interval at the right phases within the component lifecycle.
 
 <br>
+<br>
 
-**For example:**
+### What is the Component Lifecycle?
 
-- Component Mounted - **Create the interval.**
-- Component Updated - _No action needed, let React re-render the component._
+[The concept of component lifecycle](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/) orignally came along with Class-Based components and it described the various phases on how React mounts components, updates them whenever state changes, and then removes (unmounts) components. This was a very powerful concept because it allowed developers to **"hook"** their own code into these different phases using something known as [Lifecycle Methods](https://reactjs.org/docs/react-component.html#the-component-lifecycle). 
+
+
+So, in the beginning, Lifecycle Methods were important to understand because they allowed developers to perform side effects during lifecycle phases such as fetching data from an API, showing or removing content, or subscribing to 3rd party services that enable additional functionality.
+
+<img src="https://i.imgur.com/kkHX7CA.png" alt="screenshot">
+
+<br>
+<br>
+
+Originally, with function components, we never had to understand component lifecycle as they didn't give us the ability to hook into these phases ... **until now ...**
+
+With the addition of React Hooks, **(React v16.8)** and the `useEffect` hook, we can now perform side effects whenever a function component is first mounted, updated and even unmounted from the DOM! So, in essense, the `useEffect` hook provides *"component lifecycle behavior"* to function components. Keep in mind, this was a huge change for React and there's so much more to learn about what React Hooks, what they bring to the table, and the considerations that must be made when working with Class-Based Components.
+
+
+Alright, let's look over how we'll use the `useEffect` hook to perform side effects in our `<GameTimer>` component:
+
+
+<br>
+<br>
+
+**Here's the side effects we'll execute**
+
+- Component Mounted - **Set the timer interval in browser memory.**
+- Component Updated - _No action needed, let React re-render the component with the updated time value._
 - Component Un-mounted from DOM and Destroyed - **Clear the interval from memory.**
 
 <br>
 <br>
-
-The best way to hook into this behavior is with the `useEffect` hook, which we're learned about recently!
-
 <br>
 
-**Let's go ahead and import the `useEffect` hook inside of `GameTimer.js`**
+**Let's import the `useEffect` hook inside of `GameTimer.js` and have it call our `handleTick` helper function on a 1 second delay interval**
 
 ```jsx
 // import the useEffect hook as a named Import
@@ -570,7 +591,7 @@ export default GameTimer;
 <br>
 <br>
 
-Great! You should have a ticking timer now!
+**Great! You should have a ticking timer now! 🎉**
 
 ... but now there's one small problem, if you open your JS console in the browser, you should see this error:
 
@@ -581,9 +602,100 @@ Line 26:6:  React Hook useEffect has a missing dependency: 'handleTick'. Either 
 
 <br>
 
-This is a real head scratcher, because it's totally unexpected.
+This is a real head scratcher, because it's totally unexpected. 🤔
 
-Basically whats happening is whenever a new second is added to `elapsedTime` that every time the `GameTimer` component re-renders , the `handleTick` function isn't persisting between re-renders. 
+**Let's evaluate what's happening in React:**
 
-So, in other words, we're creating a new `handleTick` function every time 
+1. `GameTimer` mounts and `useEffect` runs our `handleTick` helper function on a 1 second delay interval.
+2. `handleTick` calls `props.handleTimerUpdate`, which updates our `gameState.elapsedTime` to `gameState.elapsedTime + 1`
+3. State was changed, so React re-renders the components.
+4. `<GameTimer>` was re-rendered and even though our `setInterval` timer remembers which function it should call back to ... **(`handleTick`)**, the `useEffect` hook does not remember anything from the previous render, including the previous "version" of `handleTick` from the previous render.
+5. This results in some really odd behavior such as `useEffect` telling us that `handleTick` should be marked as a dependency.
+
+
+So, in other words, we're creating a new `handleTick` function every time `<GameTimer>` is re-rendered but `setInterval` is still calling the orginal callback from the first render 🤯. This might seem very confusing ... *because it is 🤣* .., and you may be wondering why this is important as our timer seems to be working perfectly fine. There's a lot to unpack here, unfortunately, but it has been well explained by one of the most highly regarded experts on the React team, Dan Abramov, in his article titled [*"Making setInterval Declarative with React Hooks"*](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)
+
+*By the way, this is a really big article, so the section we're going to get our inspiration from is* [right here](https://overreacted.io/making-setinterval-declarative-with-react-hooks/#refs-to-the-rescue)
+
+
+After looking over the article, you'll find the recommended approach to solving this problem is to create a `reference` with the `useRef` hook to our`handleTick` function that we can update to the latest version of `handleTick` each time the component re-renders.
+
+The `useRef` hook gives us a mutable reference we can persist between renders, which is the perfect tool for this particular task.
+
+Also, we'll need to before this dynamic updating of the new reference between renders using another call to the `useEffect` hook.
+
+<br>
+<br>
+
+**Here's what the final refactor should look like:**
+
+```jsx
+// import useRef to create a mutable reference
+import { useEffect, useRef } from 'react';
+import styles from './GameTimer.module.css';
+import { formatTime } from '../../services/utilities';
+
+const GameTimer = (props) => {
+  
+  // initialize our mutable reference
+  const savedCallback = useRef()
+  
+  function handleTick() {
+    props.handleTimerUpdate();
+  }
+  /* 
+    update our mutable reference whenever the component 
+    re-renders to the latest version of handleTick
+  */
+  useEffect(() => {
+    savedCallback.current = handleTick;
+  });
+
+  // update the interval callback to call the saved reference we set up instead
+  useEffect(() => {
+    const timerId = setInterval(savedCallback.current, 1000);
+   return () => clearInterval(timerId)
+  }, []);
+
+  
+  return (
+    <div className={styles.GameTimer}>
+      {formatTime(props.elapsedTime)}
+    </div>
+  );
+}
+
+export default GameTimer;
+
+```
+
+<br>
+<br>
+<br>
+
+**Success! 🎉 we should still have a functioning timer with no dependency - congratulations!**
+
+
+<br>
+<br>
+<br>
+
+## Summary
+
+We hope you enjoyed this exercise and encourage you to keep finding opportunities to dive deeper into these concepts so you can gain for confidence and understanding of them.
+
+Cheers! 🥂
+
+
+
+<br>
+<br>
+<br>
+
+## Resources
+
+- [**Dan Abramov's Article on Making setInterval Declarative with React Hooks**](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)
+- [**Solution Code to this Exercise**](/downloads/react_fundamentals/game-timer-solution/react-mastermind.zip)
+- [**Component Lifecycle with Class-Based Components**](https://reactjs.org/docs/react-component.html)
+- [**Using the `useEffect` Hook**](https://reactjs.org/docs/hooks-effect.html)
 
