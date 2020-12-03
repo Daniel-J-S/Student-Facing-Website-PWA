@@ -170,7 +170,7 @@ When making an HTTP request, a token can be sent in an HTTP header (or even the 
 
 ## Review the Starter Code
 
-The <a href="/downloads/react_fundamentals/intro-to-react-auth-with-jwts/react-mastermind.zip" download>**Starter Code**</a> is the full-stack Mastermind app with some minor additions to aid our authentication implementation.
+The <a href="/downloads/react_fundamentals/token-based-auth-with-react/full-stack-react-mastermind.zip" download>**Starter Code**</a> is the full-stack Mastermind app with some minor additions to aid our authentication implementation.
 
 
 
@@ -180,13 +180,12 @@ The <a href="/downloads/react_fundamentals/intro-to-react-auth-with-jwts/react-m
 
 ## Set Up
 
-- Extract the folder from the `.zip` file and `cd` into it
-- Install the Node modules: `$ npm i`
-- Open the code in VS Code: `$ code .`
-
-Next, do `$ npm run build` so that the server can boot up without errors (it needs a favicon in the build folder).
-
-Also, there is a `config/database.js` module that connects to a hosted MongoDB. The `DATABASE_URL` is stored in a a **.env** file, which you will need to create because they are git ignored. I will provide the connection string or you can use your own.
+- Extract the folder from the `.zip` file.
+- Open the folder `"full-stack-react-mastermind"`
+- The folder contains your backend app and your frontend app
+- Open both apps in their own VS Code window
+- Install the `node_modules`: `$ npm i`
+- Inside of `config/database.js`, a `.env` variable is being referenced to connect to a cloud-hosted database on MongoDB Atlas; we need to create the `.env` file, and then add an `env` variable that references our own MongoDB Connection URI
 
 <br>
 <br>
@@ -243,15 +242,15 @@ Here are a few of the highlights of the starter code:
 	
 	Note how the `Sign Up` button is disabled using a custom `isFormInvalid` method.
 	
-	After a user signs up, we want to switch to the root route, thus inside of `handleSignup` we are **programmatically** changing the route using `this.props.history.push('/')`. Where did the `history` prop come from? Well, each `<Route>` component has the `history` object as a prop. Check the `<SignupPage>` route in **App.js** to see how `history` is being destructured and passed in to the `<SignupPage>`. This is an alternative to passing all of the `<Route>` component's props via `{...props}` as being done on a couple of other routes.
+	After a user signs up, we want to switch to the root route, thus inside of `handleSignup` we are **programmatically** changing the route using `props.history.push('/')`. Where did the `history` prop come from? Well, each `<Route>` component has the `history` object as a prop. Check the `<SignupPage>` route in **App.js** to see how `history` is being destructured and passed in to the `<SignupPage>`. This is an alternative to passing all of the `<Route>` component's props via `{...props}` as being done on a couple of other routes.
 
-- `<App>` is initializing `scores` to be an empty array within the `constructor`.
+- `<App>` is using another call to `useState` to initialize `scores` to be an empty array.
 
-	Upon mounting, `<App>` makes an AJAX call within `componentDidMount` to fetch the scores.
+	Upon mounting, `<App>` makes an AJAX call with `useEffect` to fetch the scores.
 
-	Although the scores are going to be returned by the server almost instantly, we're still initializing `state.scores` to be an empty array - **always do this**.
+	Although the scores are going to be returned by the server almost instantly, we're still initializing `scores` to be an empty array - **always do this**.
 
-- There is a **utils/userService.js** "service" module that provides user related functionality. It can be imported by any component that needs to perform anything user related, including signing up, logging in and logging out.
+- There is a **services/userService.js** "service" module that provides user related functionality. It can be imported by any component that needs to perform anything user related, including signing up, logging in and logging out.
 
 	Currently, it has a working `signup` method.
 
