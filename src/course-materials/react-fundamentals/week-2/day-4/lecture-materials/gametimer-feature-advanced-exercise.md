@@ -18,11 +18,13 @@ type: "lecture"
 ## Roadmap
 
 - Set Up
-- What we're building?
-- Building the React App's Production Code
-- Code the Express App
-- Deployment
-- Essential Questions
+- What Are We Building?
+- The User Story
+- Considerations Before Getting Started
+- The 5 Steps of Implementation
+- Summary
+- Resources and Solution Code
+
 
 <br>
 <br>
@@ -86,8 +88,8 @@ So, before implementing this new feature we need to make some consideration as t
 - Should we create a seperate piece of state to store time or should we combine it with existing state?
 - What should we name this piece of state? ... "`elapsedTime`"?
 - How should we increment `elapsedTime`?
-- How often or *(by which interval)* should we update `elapsedTime` every ... millisecond? ... second? ... minute?
-- What type of data should we use to represent elapsed time ... a string? ... a number?
+- How often or *(by which interval)* should we update `elapsedTime`, ... every second? ... minute?
+- What type of data should we use to represent elapsed time? ... a string? ... a number?
 - Should we consider if we might want to start/stop the timer? 
 - How do we toggle a timer from **"timing"** to **"not timing"**?
 - Should we store an additional piece of state to represent whether or not the timer is timing?
@@ -110,11 +112,11 @@ After all considerations made, the approach we decided to take is as follows:
 
 **Why are we adding these two properties to existing state?**
 
-*This choice was made because the game timer is part of a game instance ... in other words, the timer is part of the game, so it only makes sense to manage with the other game-related pieces of state.*
+*This choice was made because the game timer is part of a game instance ... in other words, the timer is part of the information representing our game performance, so it only makes sense to manage `elapsedTime` with other game-related pieces of state.*
 
 <br>
 
-So, this is what our `gameState` object should be initialized to:
+This is what our refactored `gameState` object should be initialized to:
 
 ```javascript
 {
@@ -130,11 +132,11 @@ So, this is what our `gameState` object should be initialized to:
 <br>
 
 
-**Step 2:** We'll create a helper function called `handleTimerUpdate` responsible for invoking our `setGameState` setter function and updating existing state with new state with the `elapsedTime` value incremented by one second.
+**Step 2:** We'll create a helper function called `handleTimerUpdate`; this function is responsible for invoking our `setGameState` setter function and updating existing state with new state with the `elapsedTime` value incremented by one second.
 
-**Step 3:** We'll pass the `handleTimerUpdate` helper function, `elapsedTime` and `isTiming` to our `<GameTimer>` component so we can visualize changes to that data there.
+**Step 3:** We'll pass the `handleTimerUpdate` helper function, `elapsedTime` and `isTiming` to our `<GameTimer>` component as props so we can visualize *(render)* changes to the data there.
 
-**Step 4:** We'll also need to build a custom time formatter function to convert total seconds from our `elapsedTime` prop to minutes and seconds.
+**Step 4:** We need a custom formatter function to convert total seconds from our `elapsedTime` prop to minutes and seconds.
 
 **Step 5:** This is where we set up the logic of the `<GameTimer>` component. We'll use a `useEffect` hook to initialize a timer object instance created by `setInterval`. This method will be used to repeatedly call our timer update function on a fixed delay [as described here](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval). We'll also use the `useEffect` hook to perform a clean up of our `interval` object whenever the component is unmounted from the DOM to prevent causing a memory leak ... more on this later.
 
@@ -194,18 +196,18 @@ As we remember, the setter function we get from our `useState` hook **replaces**
 
 Interesting huh? This syntax and behavior it produces [is well documented here](https://reactjs.org/docs/hooks-reference.html#usestate) in the ReactJS docs.
 
-So, basically what's happening is that we're using the `useState` setter function like we have before only this time we're passing in a callback function instead of the new state.
+In this example, we're passing in a callback function to `useState` instead of the new state.
 
-There's a lot of power in this new pattern as it allows us to access previous state, so we can only worry about updating the values we too and leave the rest intact.
+There's a lot of power in this new pattern as it allows us to access previous state, so we can update the values we need and leave the remaining value intact.
 
-This is important because the `useState` setter function replaces state with whatever we pass to it, so without this nifty callback pattern, we would have needed to make a copy the entire state object first, update the properties we need to and then pass the new object into the setter function when we invoke it.
+This is important because the `useState` setter function replaces state with whatever we pass to it. So, without this nifty callback pattern, we have to copy the entire state object, update the properties we need to and then pass the new object into the setter function.
 
 
 <br>
 <br>
 <br>
 
-## Step 3: Pass our props!
+## Step 3: Pass and render our props!
 
 Here's one of the easier parts, lets pass our data: `elapsedTime`, `isTiming` and `handleTimerUpdate` as props to our `<GameTimer>` component.
 
@@ -253,14 +255,6 @@ Here's one of the easier parts, lets pass our data: `elapsedTime`, `isTiming` an
 <br>
 
 
-## Step 4: GameTimer Component Set up and Logic
-
-Now it's time to program our GameTimer component to perform it's tasks!
-
-<br>
-<br>
-<br>
-
 **This is what our `<GameTimer>` component should look like right now:**
 
 ```jsx
@@ -279,7 +273,7 @@ export default GameTimer;
 <br>
 <br>
 
-**The first thing we'll do is replace the hard-coded timer with the actual `elapsedTime` prop we passed down from `App.js`.**
+**Replace the hard-coded timer with the actual `elapsedTime` prop we passed down from `App.js`.**
 
 ```jsx
 import styles from './GameTimer.module.css';
@@ -299,7 +293,7 @@ export default GameTimer;
 <br>
 
 
-**We should notice immediately that now our timer looks like this...**
+**Following that change, our timer should look like this ...**
 
 <img src="https://i.imgur.com/hOlYkVs.png" alt="screenshot" />
 
@@ -307,7 +301,7 @@ export default GameTimer;
 <br>
 <br>
 
-To replace this value with the value that looks like an actual timer, we'll need to write a helper function that formats the `elapsedTime` value; we'll take care of this next.
+To make this single `0` value look like an actual timer, we'll need a helper function that formats `elapsedTime`; we'll take care of this next.
 
 
 <br>
@@ -316,9 +310,9 @@ To replace this value with the value that looks like an actual timer, we'll need
 
 
 
-## Step 4: Write a helper function for formatting time
+## Step 4 Write a helper function for formatting time
 
-For this next step, we need to create a special helper function for taking seconds as an argument, and then converting total seconds into minutes and seconds.
+**Here's our helper function for taking seconds as an argument and converting them into minutes and seconds.**
 
 ```javascript
 function formatTime(seconds) {
@@ -330,7 +324,7 @@ function formatTime(seconds) {
 <br>
 <br>
 
-To better organize our code, we're going to export this function from a service module we'll use to define special utility functions for tasks like this.
+To organize our code, we'll export this function from a service module for special utility functions like this.
 
 <br>
 <br>
@@ -353,7 +347,7 @@ touch src/services/utilities.js
 <br>
 <br>
 
-**Now, let's export the formatter function from `utilities.js`**
+**Export the formatter function from `utilities.js`**
 
 ```javascript
 // inside of utilties.js
@@ -369,7 +363,7 @@ export function formatTime(seconds) {
 <br>
 <br>
 
-**Next, let's import this function inside of `GameTimer.js`**
+**Now, let's import this function inside of `GameTimer.js`**
 
 ```jsx
 import styles from './GameTimer.module.css';
@@ -387,7 +381,7 @@ export default GameTimer;
 <br>
 <br>
 
-**Now, all we have to do is call the function in place of where we're rendering out `{props.elapsedTime}`, passing in the value `props.elapsedTime` as an argument.**
+**Next, we'll replace `{props.elapsedTime}`, with a call to `formatTime` passing the value `props.elapsedTime` as an argument.**
 
 ```jsx
 import styles from './GameTimer.module.css';
@@ -415,7 +409,7 @@ export default GameTimer;
 <br>
 <br>
 
-**Now its all left up to the fun part of programming the game timer to tick!**
+**Now we're left with the fun part: Programming the game timer to tick!**
 
 <br>
 <br>
@@ -424,12 +418,12 @@ export default GameTimer;
 
 ## Step 5: Setting up our Game Timer Logic
 
-To get started with this step lets first set up a local helper function inside of `GameTimer.js` to invoke `props.handleTimerUpdate` every second. 
+Lets set up a local helper function inside of `GameTimer.js` to invoke `props.handleTimerUpdate` every second. 
 
 
 <br>
 
-**This step will also involve refactoring the `<GameTimer>` component from the implicit return syntax to the explicit return syntax:**
+**This step involves refactoring the `<GameTimer>` component from the implicit return syntax to the explicit return syntax:**
 
 
 ```jsx
@@ -443,7 +437,11 @@ const GameTimer = (props) => {
     props.handleTimerUpdate();
   }
 
-  // we need to add an explicit return statement now
+  /* 
+    we need to an explicit return statement 
+    to allow for addition logic in the function body
+  */
+
   return (
     <div className={styles.GameTimer}>
       {formatTime(props.elapsedTime)}
@@ -458,12 +456,12 @@ export default GameTimer;
 <br>
 <br>
 
-Alright, so all there's left to do is to call our helper function with a 1 second delay as soon as the GameTimer components is mounted to the DOM. To accomplish this, we're going to use the [`setInterval`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval) function that comes with most modern web browsers. 
+All we need to do is to call our helper function with a 1 second delay as soon as the GameTimer is mounted to the DOM. To accomplish this, we'll use the [`setInterval`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval) function that comes with the web browser. 
 
 <br>
 <br>
 
-**This function takes a callback, and a delay value for arguments, and then uses that data to create an object in a special part of your browser's memory called the heap.**
+**This function takes a callback and a delay value for arguments to create a "timer interval" object in your browser's memory**
 
 ```javascript
 setInterval(callback, delay);
@@ -472,7 +470,7 @@ setInterval(callback, delay);
 <br>
 <br>
 
-**So, in our case, we could configure `setInterval` to call our helper function with a 1000 millisecond delay like this:**
+**In our case, we could configure `setInterval` to call our helper function with a 1000 millisecond delay like this:**
 
 ```javascript
 setInterval(handleTick, 1000);
@@ -481,16 +479,16 @@ setInterval(handleTick, 1000);
 <br>
 <br>
 
-Using this function does come with some concerns though.
+Using `setInterval` comes with concerns though ...
 
-If we're not careful, it can create multiple timer objects in the browser as a result from the `<GameTimer>` component being mounted and unmounted multiple times in one session.
+If we're not careful, we can create multiple timer objects in the browser as a result of `<GameTimer>` being mounted and unmounted multiple times in one session.
 
-We don't want this to happen as it could lead to a memory leak and other possible performance issues.
+We don't want this to happen as it could lead to a memory leak and other performance-related issues.
 
-So, we need to clean up or ... destroy this timer object whenever the `<GameTimer>` component is unmounted from the DOM.
+The solution is to clean up/destroy this timer object whenever the `<GameTimer>` component is unmounted from the DOM.
 
 
-Fortunately, the `setInterval` function returns a reference we can use to essentially "clear" the object from memory; the name of the function we use to clear our interval object is called ... `clearInterval`.
+Fortunately, the `setInterval` function returns a reference we can use to essentially "clear" the object from memory using another browser function called ... `clearInterval`.
 
 ```javascript
 
@@ -506,7 +504,7 @@ clearInterval(timerId);
 <br>
 <br>
 
-Now that we know how to make our timer tick, amd how to clear our timer from memory once the `<GameTimer>` is removed from the DOM, let's bring all this together in our project.
+Now that we know how to make our timer tick, and how to clear the timer from memory, let's bring this all together in our project.
 
 As a side effect of the React mounting the component, we need to set and the clear the interval at the right phases within the component lifecycle.
 
@@ -515,19 +513,19 @@ As a side effect of the React mounting the component, we need to set and the cle
 
 ### What is the Component Lifecycle?
 
-[The concept of component lifecycle](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/) orignally came along with Class-Based components and it described the various phases on how React mounts components, updates them whenever state changes, and then removes (unmounts) components. This was a very powerful concept because it allowed developers to **"hook"** their own code into these different phases using something known as [Lifecycle Methods](https://reactjs.org/docs/react-component.html#the-component-lifecycle). 
+[The concept of component lifecycle](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/) originally came along with Class-Based components and it described the various phases of how React mounts components, updates them whenever state changes, and then removes (unmounts) components. This was a very powerful concept because it allowed developers to **"hook"** their own code into these different phases using something known as [Lifecycle Methods](https://reactjs.org/docs/react-component.html#the-component-lifecycle). 
 
 
-So, in the beginning, Lifecycle Methods were important to understand because they allowed developers to perform side effects during lifecycle phases such as fetching data from an API, showing or removing content, or subscribing to 3rd party services that enable additional functionality.
+So, in the beginning, Lifecycle Methods were important to understand because they allowed developers to perform side effects during different lifecycle phases such as fetching data from an API, showing or removing content, or subscribing to 3rd party services that enable additional functionality.
 
 <img src="https://i.imgur.com/kkHX7CA.png" alt="screenshot">
 
 <br>
 <br>
 
-Originally, with function components, we never had to understand component lifecycle as they didn't give us the ability to hook into these phases ... **until now ...**
+Prior to React Hooks **(React v16.8)**, we disregarded the concept of component lifecycle for function components because it was a feature reserved exclusively for Class-Based Components ... **until now ...**
 
-With the addition of React Hooks, **(React v16.8)** and the `useEffect` hook, we can now perform side effects whenever a function component is first mounted, updated and even unmounted from the DOM! So, in essense, the `useEffect` hook provides *"component lifecycle behavior"* to function components. Keep in mind, this was a huge change for React and there's so much more to learn about what React Hooks, what they bring to the table, and the considerations that must be made when working with Class-Based Components.
+With the addition of React Hooks, the `useEffect` hook provides *"component lifecycle behavior"* to function components! This means we can perform side effects when function components are first mounted to the DOM, updated and even unmounted from the DOM! Keep in mind, hooks were a huge change for React and there's so much more to learn about what they bring to the table.
 
 
 Alright, let's look over how we'll use the `useEffect` hook to perform side effects in our `<GameTimer>` component:
@@ -536,7 +534,7 @@ Alright, let's look over how we'll use the `useEffect` hook to perform side effe
 <br>
 <br>
 
-**Here's the side effects we'll execute**
+**Here's the side effects we'll perform**
 
 - Component Mounted - **Set the timer interval in browser memory.**
 - Component Updated - _No action needed, let React re-render the component with the updated time value._
@@ -573,7 +571,7 @@ const GameTimer = (props) => {
    return () => clearInterval(timerId) // 👈 clear the timer interval once component is destroyed
   }, []); /* 👈 empty dependency array 
               to prevent side effect from running 
-              on every re-render 
+              on every re-render after updating state
             */
 
   
@@ -610,19 +608,19 @@ This is a real head scratcher, because it's totally unexpected. 🤔
 2. `handleTick` calls `props.handleTimerUpdate`, which updates our `gameState.elapsedTime` to `gameState.elapsedTime + 1`
 3. State was changed, so React re-renders the components.
 4. `<GameTimer>` was re-rendered and even though our `setInterval` timer remembers which function it should call back to ... **(`handleTick`)**, the `useEffect` hook does not remember anything from the previous render, including the previous "version" of `handleTick` from the previous render.
-5. This results in some really odd behavior such as `useEffect` telling us that `handleTick` should be marked as a dependency.
+5. This results in some really odd behavior such as `useEffect` telling us that `handleTick` should be marked as a dependency and added to the dependency array.
 
 
-So, in other words, we're creating a new `handleTick` function every time `<GameTimer>` is re-rendered but `setInterval` is still calling the orginal callback from the first render 🤯. This might seem very confusing ... *because it is 🤣* .., and you may be wondering why this is important as our timer seems to be working perfectly fine. There's a lot to unpack here, unfortunately, but it has been well explained by one of the most highly regarded experts on the React team, Dan Abramov, in his article titled [*"Making setInterval Declarative with React Hooks"*](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)
+So, in other words, a new `handleTick` function is created every time `<GameTimer>` is re-rendered but `setInterval` is still calling the original callback from the first render 🤯. This might seem very confusing ... *because it is* 🤣.., and you're probably wondering why this is so important as our timer seems to be working perfectly fine. There's a lot to unpack here, and for the record, this strange behavior is by design. This issue has a lot to do with the declarative programming model of React clashing with the imperative programming model of `setInterval`. Fortunately, this anomaly is well explained by one of the most highly regarded experts on the React team, Dan Abramov. He explains all of this and more in his article titled [*"Making setInterval Declarative with React Hooks"*](https://overreacted.io/making-setinterval-declarative-with-react-hooks/). 
 
-*By the way, this is a really big article, so the section we're going to get our inspiration from is* [right here](https://overreacted.io/making-setinterval-declarative-with-react-hooks/#refs-to-the-rescue)
+*By the way, this is a really big article, so the section for inspiration is available* [here](https://overreacted.io/making-setinterval-declarative-with-react-hooks/#refs-to-the-rescue)
 
 
-After looking over the article, you'll find the recommended approach to solving this problem is to create a `reference` with the `useRef` hook to our`handleTick` function that we can update to the latest version of `handleTick` each time the component re-renders.
+In the article, Dan recommends solving this problem by creating a mutable reference to our`handleTick` function with the `useRef` hook. We can dynamically update this reference to the latest version of `handleTick` each time the component re-renders.
 
-The `useRef` hook gives us a mutable reference we can persist between renders, which is the perfect tool for this particular task.
+The secret sauce to `useRef` is that it gives us a mutable reference we can persist between renders, which is the perfect tool for addressing this issue.
 
-Also, we'll need to before this dynamic updating of the new reference between renders using another call to the `useEffect` hook.
+We'll also need another side effect to handle the dynamic updating of the reference between renders; we'll accomplish this using another call to the `useEffect` hook.
 
 <br>
 <br>
@@ -638,22 +636,25 @@ import { formatTime } from '../../services/utilities';
 const GameTimer = (props) => {
   
   // initialize our mutable reference
-  const savedCallback = useRef()
+  const callbackRef = useRef()
   
   function handleTick() {
     props.handleTimerUpdate();
   }
-  /* 
-    update our mutable reference whenever the component 
-    re-renders to the latest version of handleTick
-  */
-  useEffect(() => {
-    savedCallback.current = handleTick;
-  });
 
-  // update the interval callback to call the saved reference we set up instead
+
   useEffect(() => {
-    const timerId = setInterval(savedCallback.current, 1000);
+  /* 
+    update our mutable reference to the latest version of handleTick
+    whenever the component re-renders👇
+  */
+    callbackRef.current = handleTick;
+  }); // 👈 no dependency array - run this side effect on each render
+
+
+  useEffect(() => {
+  // update the interval callback👇 to call the saved reference we set up instead
+    const timerId = setInterval(callbackRef.current, 1000);
    return () => clearInterval(timerId)
   }, []);
 
@@ -673,7 +674,7 @@ export default GameTimer;
 <br>
 <br>
 
-**Success! 🎉 we should still have a functioning timer with no dependency - congratulations!**
+**Success! 🎉 we should have a functioning timer with no weird dependency issues - Congratulations!**
 
 
 <br>
@@ -682,7 +683,7 @@ export default GameTimer;
 
 ## Summary
 
-We hope you enjoyed this exercise and encourage you to keep finding opportunities to dive deeper into these concepts so you can gain for confidence and understanding of them.
+We hope you enjoyed this exercise and we encourage you to keep finding opportunities to dive deeper into these concepts so you can gain more confidence and understanding of them.
 
 Cheers! 🥂
 
@@ -695,7 +696,8 @@ Cheers! 🥂
 ## Resources
 
 - [**Dan Abramov's Article on Making setInterval Declarative with React Hooks**](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)
-- [**Solution Code to this Exercise**](/downloads/react_fundamentals/game-timer-solution/react-mastermind.zip)
+- [**Solution Code to this Exercise**](/downloads/react_fundamentals/token-based-auth-with-react/full-stack-react-mastermind.zip)
 - [**Component Lifecycle with Class-Based Components**](https://reactjs.org/docs/react-component.html)
 - [**Using the `useEffect` Hook**](https://reactjs.org/docs/hooks-effect.html)
+- [**JavaScript Timers**](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 
