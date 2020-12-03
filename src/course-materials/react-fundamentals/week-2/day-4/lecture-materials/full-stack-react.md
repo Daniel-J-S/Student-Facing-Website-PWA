@@ -48,7 +48,7 @@ type: "lecture"
 
 The starter code is the React Mastermind app that includes the timer implemented from the previous walkthrough.
 
-- Download the <a href="/downloads/react_fundamentals/intro-to-full-stack-react/react-mastermind.zip" download>Starter Code</a>
+- Download the <a href="/downloads/react_fundamentals/full-stack-react/react-mastermind.zip" download>Starter Code</a>
 - Extract the folder from the `.zip` file and `cd` into it
 - Install the Node modules: `$ npm i`
 - Open the code in VS Code: `$ code .`
