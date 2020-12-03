@@ -48,15 +48,15 @@ The starter code is the React Mastermind app from the completed React Router Lab
 
 Once you run the React Dev Server, you should see the following Screen:
 
-<img src="https://i.imgur.com/IaeY5P6.png" alt="screenshot">
+<img src="https://i.imgur.com/ScWtx2B.png" alt="screenshot">
 
 <br>
 <br>
 <br>
 
-You'll also notice we have a functional Difficulty Screen as Well:
+here's also a /settings route that displays:
 
-<img src="https://i.imgur.com/cTzH576.png" alt="screenshot">
+<img src="https://i.imgur.com/YI6qBcX.png" alt="screenshot">
 
 
 ## What are we building?
