@@ -182,10 +182,10 @@ The <a href="/downloads/react_fundamentals/token-based-auth-with-react/full-stac
 
 - Extract the folder from the `.zip` file.
 - Open the folder `"full-stack-react-mastermind"`
-- The folder contains your backend app and your frontend app
+- The folder contains your backend and frontend app
 - Open both apps in their own VS Code window
 - Install the `node_modules`: `$ npm i`
-- Inside of `config/database.js`, a `.env` variable is being referenced to connect to a cloud-hosted database on MongoDB Atlas; we need to create the `.env` file, and then add an `env` variable that references our own MongoDB Connection URI
+- Inside `config/database.js`, an environment variable is referenced for connecting to a cloud-hosted MongoDB; we need to create the `.env` file, and then add the variable that references our own MongoDB Connection URI
 
 <br>
 <br>
@@ -207,15 +207,15 @@ Here are a few of the highlights of the starter code:
 
 - API Routes for `User` are defined in **routes/api/users.js** (just one for now).
 
-- There is a **controllers/users.js** module that at this point, only has a `signup` method for creating user models when they sign up. 
+- There is a **controllers/users.js** module that at this point, only has a `signup` action for creating users when they sign up. 
 
 	Currently, the method returns the JSON of the created user, however, we will soon refactor this to return a JWT.
 
-- There is a `Score` model and a  **controllers/scores.js** module with `create` and `highScores` methods.
+- There is a `Score` model and a  **controllers/scores.js** module with `create` and `highScores` actions.
 
 	Later in the lesson, we will make these "protected" routes that require a user to be logged in.
 	
-	Note that the `highScores` method returns only 20 high scores by default, however, it's designed to accept a `limit` query parameter to override the default of 20. 
+	Note that the `highScores` action returns only 20 high scores by default, however, it's designed to accept a `limit` query parameter to override the default of 20. 
 
 <br>
 <br>
@@ -225,24 +225,19 @@ Here are a few of the highlights of the starter code:
 
 - Client-side routes and components have been defined for:
 	- `/signup`: Shows the `<SignupPage>` component.
-	- `/login`: Shows the `<LoginPage>` component.
+	- `/login`: Shows an empty`<LoginPage>` component, we'll use this opportunity to learn how to build forms as a "controlled component" in this module.
 	- `/high-scores`: Shows the `<HighScoresPage>` component. Again, later in this lesson we will learn how how to make this a "protected" route that allows only authenticated users to access it.
 
 - A `<NavBar>` component has been created and added that currently has `<Link>`s to the `/signup` and `/login` routes. It's only rendered in `<GamePage>`.
 
-- `<LoginPage>` displays a `<form>` with **controlled** `<input>`s. 
 
-	**What are "controlled" inputs and how do they differ from "uncontrolled" inputs?**
-	
-	There's a `handleSubmit` method defined, but all it does right now is call `preventDefault`. Plus, we need to code the `handleChange` method later.
-
-- `<SignupPage>` displays a `<SignupForm>` that is working!
+- `<SignupPage>` displays a `<SignupForm>` that is working, we can use this as a slightly more advanced solution/reference for creating forms!
 
 	Submitting the form adds a user to the database, via the `userService.signup` method.
 	
 	Note how the `Sign Up` button is disabled using a custom `isFormInvalid` method.
 	
-	After a user signs up, we want to switch to the root route, thus inside of `handleSignup` we are **programmatically** changing the route using `props.history.push('/')`. Where did the `history` prop come from? Well, each `<Route>` component has the `history` object as a prop. Check the `<SignupPage>` route in **App.js** to see how `history` is being destructured and passed in to the `<SignupPage>`. This is an alternative to passing all of the `<Route>` component's props via `{...props}` as being done on a couple of other routes.
+	After a user signs up, we want to switch to the root route, thus inside of `handleSignup` we are **programmatically** changing the route using `props.history.push('/')`. Where did the `history` prop come from? Well, each `<Route>` component is passing it's props to our page components, which includes the `history` object; we can verify this using the Chrome React Dev Tools.
 
 - `<App>` is using another call to `useState` to initialize `scores` to be an empty array.
 

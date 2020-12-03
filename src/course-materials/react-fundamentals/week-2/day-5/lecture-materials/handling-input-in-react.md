@@ -2,7 +2,7 @@
 track: "React Fundamentals"
 title: "Handling Input In React"
 week: 2
-day: 2
+day: 5
 type: "lecture"
 ---
 
