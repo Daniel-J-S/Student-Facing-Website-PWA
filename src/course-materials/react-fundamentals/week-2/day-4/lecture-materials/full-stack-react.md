@@ -46,7 +46,7 @@ type: "lecture"
 
 ## Set Up
 
-The starter code is the React Mastermind app that includes the timer implemented from the previous walkthrough.
+The starter code is the React Mastermind app that includes the timer implemented.
 
 - Download the <a href="/downloads/react_fundamentals/full-stack-react/react-mastermind.zip" download>Starter Code</a>
 - Extract the folder from the `.zip` file and `cd` into it
