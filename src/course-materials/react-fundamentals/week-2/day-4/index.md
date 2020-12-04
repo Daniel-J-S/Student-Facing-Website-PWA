@@ -20,6 +20,5 @@ topics: "Game Timer Feature & Intro to Full-Stack React"
 <br>
 
 #### Recordings
-
-- [**Full Stack React With Ira](https://generalassembly.zoom.us/rec/share/PWF8OILa25YqzQku4ZgMiZPDwMWGctW85PwXcwarE3uDDdn503E4okvEekPC-ZvR.LOe318BcVJK5b_aZ?startTime=1607010143000)
+- [**Full Stack React With Ira**](https://generalassembly.zoom.us/rec/share/PWF8OILa25YqzQku4ZgMiZPDwMWGctW85PwXcwarE3uDDdn503E4okvEekPC-ZvR.LOe318BcVJK5b_aZ?startTime=1607010143000)
 
