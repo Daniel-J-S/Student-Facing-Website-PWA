@@ -294,12 +294,15 @@ const bcrypt = require('bcrypt');
 
 ```javascript
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+// require bcrypt 👇
 const bcrypt = require('bcrypt');
 
+// set up a salt rounds constant value
 const SALT_ROUNDS = 6;
 ```
 
-Now for the middleware. We will be writing a function that runs before a user is saved. This is called **pre** middleware, also known as a "hook".
+Now for the middleware. We'll write a function that runs before a user is saved. This is called **pre** middleware, also known as a mongoose "hook".
 
 Type in this skeleton just above the `module.exports`:
 
@@ -311,7 +314,7 @@ userSchema.pre('save', function(next) {
 });
 ```
 
-Note that we are assigning `this` (the user document being saved) to a variable. The reason is that we will need to access this user doc from within the `bcrypt.hash()` method's callback (see code below). **What is another option we have at our disposal to solve this problem?**
+Note that we are assigning `this` (the user document being saved) to a variable. The reason is that we will need to access this user doc from within the `bcrypt.hash()` method's callback (see code below). 
 
 Now let's add the code that checks if the password for this user document has been changed, and if so, salt & hash it, then assign the hash to password, replacing the cleartext version:
 
@@ -329,13 +332,7 @@ userSchema.pre('save', function(next) {
 });
 ```
 
-Let's check our code by signing up a new user and using the Mongo Shell to check that the password has been hashed:
-
-```shell
-$ mongo mongodb://<user>:<pw>@ds064799.mlab.com:64799/mastermind
-> use mastermind
-> db.users.find({})
-```
+Let's check our code by signing up a new user and using the Mongo Shell to check that the password has been hashed
 
 The user's password should be hashed!
 
@@ -358,7 +355,6 @@ Let's install the one for Node apps:
 
 `$ npm install jsonwebtoken`
 
-> Note: There are additional modules available to help implement JWTs in Express apps. However, it does not take much code to do what needs to be done and at SEI, we want to give you your money's worth :)
 
 With **jsonwebtoken** installed, **controllers/users.js** is where we're going to use it:
 
@@ -483,7 +479,7 @@ Just like with the `userService` module, we're going to follow the single-respon
 
 Let's create a file for our token service:
 
-`$ touch src/utils/tokenService.js`
+`$ touch src/services/tokenService.js`
 
 Just a `setToken` method for now:
 
@@ -496,7 +492,7 @@ function setToken(token) {
   } 
 }
 
-export default {
+export {
   setToken
 };
 ```
@@ -514,12 +510,12 @@ Now let's refactor the `signup` method in **userService.js** to use the `setToke
 First, we need to import **tokenService.js**:
 
 ```javascript
-// utils/userService.js
+// services/userService.js
 
-import tokenService from './tokenService';
+import { setToken } from './tokenService';
 
 // existing code below
-const BASE_URL = '/api/users/';
+const BASE_URL = 'http://localhost:3001/api/users/';
 ```
 
 Now, the refactor of `signup`:
@@ -529,13 +525,13 @@ function signup(user) {
 	...
   // update the last 'then' to this...
   .then(({ token }) => {
-    tokenService.setToken(token);
+        setToken(token);
   });
 }
 
 ```
 
-Now sign up another user and go to **Local Storage** within the **Application** tab of DevTools. Verify that the token is in `localStorage` stored as a string.
+Now sign up another user and go to **`localStorage`** within the **Application** tab of DevTools. Verify that the token is in `localStorage` stored as a string.
 
 > For fun, decode the payload portion of the token string.
 
@@ -565,11 +561,11 @@ Let's add a `getUser` method to **userService.js**:
 
 ```javascript
 function getUser() {
-  return tokenService.getUserFromToken();
+  return getUserFromToken();
 }
 
 // Be sure to add getUser to the export
-export default {
+export {
   signup,
   getUser
 }
@@ -602,19 +598,19 @@ function getToken() {
 Next, let's code the `getUserFromToken` method that decodes the token, then extracts and returns the `user` object:
 
 ```javascript
-function getUserFromToken () {
+function getUserFromToken() {
   const token = getToken();
   return token ? JSON.parse(atob(token.split('.')[1])).user : null;
 }
 
-export default {
+export {
   setToken,
   getToken,
   getUserFromToken
 };
 ```
 
-Be sure to update the `export default` as shown above as well.
+Be sure to update the `export` as shown above as well.
 
 <br>
 <br>
@@ -627,22 +623,17 @@ Time to add a `user` property to `<App>`'s state.
 First, import the `userService` in **App.js**:
 
 ```javascript
-import userService from '../../utils/userService';
+import { getUser } from './services/userService';
 ```
 
-Since adding a `user` to state from a token in localStorage is not an asynchronous process, we can do it in the constructor:
+Since adding a `user` to state from a token in localStorage is not an asynchronous process, we'll set up another `useState` hook to store the logged-in user:
 
 ```javascript
-this.state = {
-  ...this.getInitialState(),
-  difficulty: 'Easy',
-  scores: [],
   // Initialize user if there's a token, otherwise null
-  user: userService.getUser()
-};
+const [userState, setUserState] = useState({user: getUser()});
 ```
 
-The last user we signed up should now be in the state of `<App>`. Use the React DevTool to check it out!
+The last user we signed up should now be in the state of `<App>`. Use the React DevTools to check it out!
 
 <br>
 <br>
@@ -655,11 +646,11 @@ Just like in the other two authentication lessons, we want the navigation links 
 - **Logged in:** Display a greeting and a **Log Out** link.
 - **Not logged in:** Display **Log In** and **Sign Up** links like we are currently doing.
 
-Now that we've added a `user` property to `<App>`'s `state` object, we need to pass it on down to the `<NavBar>` component as a prop.
+Now that we've added a `user` to `<App>`'s `state`, we need to pass it on down to the `<NavBar>` component as a prop.
 
 **I bet you can do it in 5 minutes or less!**
 
-Now that `<NavBar>` has a `user` prop, let's refactor **NavBar.jsx**.
+Now that `<NavBar>` has a `user` prop, let's refactor **NavBar.js**.
 
 We want to display one of two choices - another opportunity to use a ternary operator as follows:
 
@@ -713,47 +704,60 @@ We just added a `<Link to='' className='NavBar-link'>LOG OUT</Link>` for logging
 When the **LOG OUT** link is clicked, we don't want to change routes, instead we want to:
 
 1. Remove the token from `localStorage`
-2. Set `state.user` to `null`
+2. Set `user` state to `null`
 
 First let's add an `onClick` prop to the link:
 
 ```javascript
-<Link to='' className='NavBar-link' onClick={props.handleLogout} >LOG OUT</Link>
+<Link to='' className='NavBar-link' onClick={props.handleLogout}>LOG OUT</Link>
 ```
 
-**Where does the `handleLogout` method needs to go?**
+**Write the below helper function in App.js**
 
 ```javascript
-handleLogout = () => {
-  userService.logout();
-  this.setState({ user: null });
+function handleLogout (){
+  logout(); // 👈 We'll define this inside of userService shortly
+  setUser({ user: null });
 }
 ```
 
-**As usual, pass that method down to where it's needed (NavBar.jsx) - you got this.**
+**Don't forget to add `logout` to your named import**
+
+```javascript
+import { getUser, logout } from './services/userService';
+```
+
+**As usual, pass that method down to where it's needed (NavBar.js) - you got this.**
 
 Now let's add the `logout` method to **userService.js**:
 
 ```javascript
 function logout() {
-  tokenService.removeToken();
+  removeToken(); // 👈 we'll create this shortly
 }
 
-export default {
+export {
   signup,
   getUser,
   logout
 }
 ```
 
-Finally, we need that `removeToken` method added to **tokenService.js**:
+You'll notice we're using a `removeToken` function inside `logout`, let's import that at the top of `userService`
+
+```javascript
+
+import { setToken, getUserFromToken, removeToken } from './tokenService';
+```
+
+Next, we need that `removeToken` method added to **tokenService.js**:
 
 ```javascript
 function removeToken() {
   localStorage.removeItem('token');
 }
 
-export default {
+export {
   setToken,
   getToken,
   removeToken,
@@ -776,24 +780,24 @@ Let's fix this problem in the next step...
 
 **Why didn't the display update?**
 
-Let's take care of the but by first adding a `handleSignup` method in **App.js**:
+Let's take care of this by first adding a `handleSignup` helper in **App.js**:
 
 ```javascript
-handleSignup = () => {
-  this.setState({user: userService.getUser()});
-}
+    function handleSignup() {
+      setUserState({user: getUser()});
+    }
 ```
 We need to pass it from `<App>` down to `<SignupForm>` via props - **easy peasy because all props are already being passed from the `<SignupPage>` to `<SignupForm>` using the spread operator**. Just pass it to `<SignupPage>` and it does the rest.
 
-Here's the refactor that adds the call to `<App>`'s `handleSignup` in **SignupForm.jsx**:
+Here's the refactor that adds the call to `<App>`'s `handleSignup` in **SignupForm.js**:
 
 ```javascript
-  handleSubmit = async (e) => {
+  async function handleSubmit (e) {
     e.preventDefault();
     try {
-      await userService.signup(this.state);
+      await signup(formState);
       // Let <App> know a user has signed up!
-      this.props.handleSignup();
+      props.handleSignup();
 ```
 
 That should do the trick! Feel free to sign up and log out all you want!
@@ -825,12 +829,12 @@ We already have a `<LoginPage>` component.
 We're using controlled `<input>`s here, however, the `handleChange` method in the `onChange` is not yet implemented - here's the finished product:
 
 ```javascript
-handleChange = (e) => {
-  this.setState({
-    // Using ES2015 Computed Property Names
-    [e.target.name]: e.target.value
-  });
-}
+ function handleChange(e) {
+    setFormState((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value
+    }));
+  }
 ```
 
 The above code is sweet like bear meat because this single method can handled updating the state for any number of `<input>`s! This is more elegant than writing dedicated methods for each `<input>`.
@@ -842,18 +846,18 @@ Now a few of tweaks:
 1. Since we're using `userService`, we need import it:
 	
 	```javascript
-	import userService from '../../utils/userService';
+	import { login } from '../../services/userService';
 	```
 
-2. Let's update the code to invoke a `userService.login` method (which we will write in a bit) and also tweak the error handling to something like this:
+2. Let's update the code to invoke a `login` function (which we will write in a bit) and also tweak the error handling to something like this:
 
 
 	```javascript
-	handleSubmit = async (e) => {
-	  e.preventDefault();
-	  try {
+  async function handleSubmit (e) {
+    e.preventDefault();
+    try {
 	    // Update to call login instead of signup
-	    await userService.login(this.state);
+	    await login(formState);
 	    
 	    ...
 	  
@@ -867,13 +871,13 @@ Now a few of tweaks:
 3. We originally named the method that notifies `<App>` when someone signs up `handleSignup`. However, to stay DRY, we're now going to use the same method to notify `<App>` when someone logs in. Let's change the name of the method to something more appropriate:
 
 	```javascript
-	handleSubmit = async (e) => {
+	async function handleSubmit (e) {
 	  e.preventDefault();
 	  try {
 	    ...
 	    
 	    // Rename the method below
-	    this.props.handleSignupOrLogin();
+	    props.handleSignupOrLogin();
 	
 	    ...
 	
@@ -893,17 +897,6 @@ Please complete the following three steps:
 
 3. Pass `handleSignupOrLogin` from `<App>` to `<LoginPage>`.
 
-4. The `handleSubmit` method in `<LoginPage>` is using the `history` object to route to `/` programmatically by using the `history.push` method.
-
-	However, React Developer Tools reveals that `<LoginPage>` does not have access to the `history` object:
-	
-	<img src="https://i.imgur.com/uqq3E8l.png">
-
-	Fix this by ensuring that the `<Route>` component that renders `<LoginPage>` passes its `history` prop (or all of its props) to `<LoginPage>`.
-	
-	Hint: Checkout how it's being done for `<SignupPage>`.
-
----
 
 Awesome, the next step in implementing log in functionality is to add the `login` method to **userService.js**:
 
@@ -991,7 +984,7 @@ userSchema.methods.comparePassword = function(tryPassword, cb) {
 };
 ```
 
-As you can see, `bcrypt` includes a 	`compare` method for verifying that a cleartext password matches a given hash.
+As you can see, `bcrypt` includes a `compare` method for verifying that a plain text password matches a given hash.
 
 Also note that we coded the `comparePassword`'s function to accept a callback function that has the same signature that bcrypt's `compare` method expects, which results in that single line of sweet code.
 
@@ -1023,11 +1016,11 @@ As just mentioned, we need to send the JWT along with each HTTP request made to 
 
 Let's refactor **scoresService.js** to provide the JWT when its `create` method is called.
 
-First we will need to import **tokenService.js** so that we can obtain the token:
+First we need to import the `getToken` function from **tokenService.js**, so we can obtain the token:
 
 ```javascript
 // Add this import at the top of scoresService.js
-import tokenService from './tokenService';
+import { getToken } from './tokenService';
 
 const BASE_URL = '/api/scores/';
 ```
@@ -1035,14 +1028,14 @@ const BASE_URL = '/api/scores/';
 Here's the refactor that adds simply adds a header:
 
 ```javascript
-function create(score) {
+function fetchScoreData(score) {
   
     ...
     
     headers: {
       'Content-type': 'application/json',
       // Add this header - don't forget the space after Bearer
-      'Authorization': 'Bearer ' + tokenService.getToken()
+      'Authorization': 'Bearer ' + getToken()
     },
     
     ...
@@ -1070,15 +1063,12 @@ Inspecting the Request Headers should make you feel warm & fuzzy:
 
 ## Step 10: Verify JWTs sent by the client and add the `user` to the Express `request` object
 
-Remember how **passport** added the logged in `user` object to Express' `request` (req) object?
 
-We want some of that!
+We're sending the JWT in an `Authorization` header when requesting scores. 
 
-We've been sending the JWT in an `Authorization` header when requesting scores. 
+The token already contains the user's info we can attach to the `req` object - we won't have to hit the database! No session, no querying the database - that's scalability!
 
-The token we've been sending already contains the user's info that we can attach to the `req` object - we won't have to hit the database! No session, no querying the database - that's scalability!
-
-> Note, although we will have `req.user` like when we used **passport**, this `user` property will **not** be an actual Mongoose document, it's just a plain JS object that we're grabbing from the token. This is very lightweight and performant. However, if you need to perform any CRUD on an actual document for the logged in user, you will have to query the DB to obtain the user document first using `req.user._id` provided by the token.
+> Note, this `user` property will **not** be an actual Mongoose document, it's just a plain JS object that we're grabbing from the token. This is very lightweight and performant. However, if you need to perform any CRUD on an actual document for the logged in user, you will have to query the DB to obtain the user document first using `req.user._id` provided by the token.
 
 
 <br>
@@ -1087,12 +1077,12 @@ The token we've been sending already contains the user's info that we can attach
 
 #### Create the Custom Middleware
 
-On the server, we're going to create a module that will export a custom middleware function that:
+On the server, we'll create a module that exports a custom middleware function responsible for:
 
-1. Checks if there's a token in the headers of the HTTP request. For additional flexibility, we'll also check for a token being sent in the query string or the body of the request.
-2. Verifies the token is valid and hasn't expired.
-3. Decodes the token to obtain the user data from its payload.
-4. Then finally, adds the user payload to the Express request object
+1. Checking if there's a token in the headers of the HTTP request. For additional flexibility, we'll also check for a token being sent in the query string or the body of the request.
+2. Verifying the token is valid and hasn't expired.
+3. Decode the token to obtain the user data from its payload.
+4. Adding the user payload to the Express request object
 
 First, let's create a module file for the middleware function:
 
@@ -1190,7 +1180,7 @@ function highScores(req, res) {
   ... 
 ```
 
-As expected, you will see `user: undefined` logged out in the server terminal because that route is above the auth middleware.
+As expected, you will see `undefined` logged out in the server terminal because that route is above the auth middleware.
 
 Before checking the `create` action, let me delete the high scores from the database...
 
@@ -1224,7 +1214,7 @@ The `<Link>` for accessing high-scores is being rendered in `<GamePage>` regardl
 A minor tweak, and poof, no more **[High Scores]** unless the user is logged in:
 
 ```javascript
-{ props.user && <Link className='btn btn-default GamePage-link-margin' to='/high-scores'>High Scores</Link>}
+{ props.user && <Link className='btn btn-default' style={{ marginBottom: 10 }} to='/high-scores'>High Scores</Link>}
 ```
 
 <img src="https://i.imgur.com/zn3dYEk.png">
@@ -1234,7 +1224,7 @@ A minor tweak, and poof, no more **[High Scores]** unless the user is logged in:
 <br>
 
 
-#### But What About the Rebels?
+#### What About the Rebels?
 
 Just because the **[High Scores]** "button" is no displayed doesn't mean that a user can't type `http://localhost:3000/high-scores` into the address bar - and if they do, it currently triggers an error.
 
@@ -1242,16 +1232,12 @@ Instead, we should send that rebel to `/login`!
 
 One best practice approach is to define your protected routes as follows in **App.js**:
 
-```javascript
-<Route exact path='/high-scores' render={() => (
-  userService.getUser() ?
-    <HighScoresPage 
-      scores={this.state.scores}
-      handleUpdateScores={this.handleUpdateScores}
-    />
-   	:
-    <Redirect to='/login' />
-)}/>
+```jsx
+<Route exact path="/high-scores" render={props =>
+  getUser() ? 
+  <HighScoresPage {...props} scores={scores} />
+  : <Redirect to="/login" />
+}/>
 ```
 
 Note the use of another `react-router-dom` component, `<Redirect>`. This component is great for performing client-side redirects.
@@ -1270,9 +1256,7 @@ The final step, coming up!
 
 ## Step 12: Protect server-side routes with custom middleware
 
-We protected certain server routes back in the Express unit - remember `isLoggedIn`?  If you do, you have an amazing memory!
-
-Once again, we'll use a tiny middleware function inserted before the controller methods.  This time, we'll call it `checkAuth`...
+We'll use a tiny middleware function inserted before the controller methods.  This time, we'll call it `checkAuth`...
 
 Here's the updated **routes/api/scores.js**:
 
@@ -1291,9 +1275,7 @@ function checkAuth(req, res, next) {
 }
 ```
 
-Well, feed the babies and wash my hair!
-
-We did it!
+We did it! 🎉
 
 <br>
 <br>
