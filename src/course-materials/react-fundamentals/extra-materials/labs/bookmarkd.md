@@ -42,7 +42,7 @@ Listed below is the basic required functionality that your Bookmark'd app should
 
 #### Express API
   - You should have a model for bookmarks that has the following schema:
-      ```
+      ```shell
       title: string
       url: string
        ```
@@ -77,7 +77,7 @@ While we suggest just trying to build off the user stories and specifications gi
      - what npm packages do you need?
    - Connect it to mongo with mongoose
    - Create a schema that has the following
-      ```
+      ```shell
       title: string
       url: string ( remember: the links must start with http/https )
       ```
