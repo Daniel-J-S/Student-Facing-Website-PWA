@@ -1,13 +1,13 @@
 ---
 track: "React Fundamentals"
-title: "Handling Input In React"
+title: "Advanced Exercise Resource: Handling Input In React"
 week: 2
 day: 5
 type: "lecture"
 ---
 
 
-# Handling Input In React
+# Advanced Exercise Resource: Handling Input In React
 
 | Students Will Be Able To: |
 |---|
@@ -21,8 +21,6 @@ type: "lecture"
 <br>
 <br>
 <br>
-
-
 
 
 
@@ -44,62 +42,62 @@ type: "lecture"
 ## Set Up
 
 Let's create a new React Project on [`codesandbox.io`](https://www.codesandbox.io)
-- Replace the existing `<App>` component with this starting code:
+
+**Replace the existing `<App>` component with this starting code:**
 
 ```javascript
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
+export default function App() {
+  const [state, setState] = useState({
+    skills: [{ skill: "JavaScript", level: 4 }]
+  });
 
-export default class App extends React.Component {
- state = {
-   skills: [{ skill: "JavaScript", level: 4 }]
- };
+  function addSkill() {
+    alert("ADD SKILL CLICKED");
+  }
 
- addSkill = () => {
-   alert("ADD SKILL CLICKED");
- };
-
- render() {
-   return (
-     <section>
-       <h2>DEV SKILLS</h2>
-       <hr />
-       {this.state.skills.map(s => (
-         <article key={s.skill}>
-           <div>{s.skill}</div> <div>{s.level}</div>
-         </article>
-       ))}
-       <hr />
-       <form>
-         <label>
-           <span>SKILL</span>
-           <input name='skill'/>
-         </label>
-         <label>
-           <span>LEVEL</span>
-           <select name='level'>
-             <option value="1">1</option>
-             <option value="2">2</option>
-             <option value="3">3</option>
-             <option value="4">4</option>
-             <option value="5">5</option>
-           </select>
-         </label>
-         <button onClick={this.addSkill}>ADD SKILL</button>
-       </form>
-     </section>
-   );
- }
+  return (
+    <section>
+      <h2>DEV SKILLS</h2>
+      <hr />
+      {state.skills.map((s) => (
+        <article key={s.skill}>
+          <div>{s.skill}</div> <div>{s.level}</div>
+        </article>
+      ))}
+      <hr />
+      <form>
+        <label>
+          <span>SKILL</span>
+          <input name="skill" />
+        </label>
+        <label>
+          <span>LEVEL</span>
+          <select name="level">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </label>
+        <button>ADD SKILL</button>
+      </form>
+    </section>
+  );
 }
+
 ```
 
 <br>
 
 
-- Let's replace the contents of **styles.css** with:
+**Let's replace the contents of `styles.css` with:**
+
 		
-	```css
+```css
 	* {
 	  box-sizing: border-box;
 	}
@@ -178,9 +176,15 @@ export default class App extends React.Component {
 	  color: white;
 	  background-color: #737495;
 	}
-	```
+
+```
+<br>
+<br>
+<br>
 	
-The sandbox will look something like this once the above setup is complete:
+
+
+**The sandbox will look something like this once the above setup is complete:**
 
 <img src="https://i.imgur.com/ntFDX0q.png">
 
@@ -190,15 +194,12 @@ The sandbox will look something like this once the above setup is complete:
 
 
 
-## Review the Starter Code (Peer Discussion- 5 min)
+## Review the Starter Code
 
 Currently the app is not functional - it doesn't add new Dev Skills to the list. 
 
-We will implement this functionality during the lesson.
+We will implement this functionality soon.
 
-Please review the code in the `App` class and discuss your observations amongst your peers in a breakout room.
-
-We will discuss any lingering questions you may have once we close the breakout rooms.
 
 
 <br>
@@ -210,7 +211,12 @@ We will discuss any lingering questions you may have once we close the breakout 
 
 ## Controlled Inputs in React
 
-#### Controlled Inputs - The "React Way" to Handle Input
+<br>
+<br>
+
+**Controlled Inputs - The "React Way" to Handle Input**
+
+<br>
 
 How many times have you heard us say that things are a little different in React?
 
@@ -222,36 +228,35 @@ So, if we don't access an input's value like we typically do in JS, e.g., `input
 
 The secret, like many things in React is `state`! React, wants the text/value of inputs to be held in `state`.
 
-React "controlled" inputs have their value assigned to them via the `value` prop, which will be bound to the appropriate `state` property using a JSX expression.  For example, if you had a `title` property on the `state` object, you could bind that `title` property to an `<input>` as follows:
+React "controlled" inputs have their value assigned to them via the `value` prop, which will be bound to the appropriate `state` property using a JSX expression.  For example, if you had a `title` property in the `state`, you could bind that `title` property to an `<input>` as follows:
 
 ```html
-<input value={this.state.title} />
+<input value={state.title} />
 ```
 
 So for our Dev Skills app, if the `<input>` & `<select>` inputs currently in `<App>` are going to get their values from `state`, we're going to need to add two new properties to `state` dedicated to maintaining the "state" of each input:
 
 ```javascript
-state = {
-  skills: [{ skill: "JavaScript", level: 4 }],
-  // New state for the inputs below
-  skill: "",
-  level: "3"
-};
+  const [state, setState] = useState({
+    skills: [{ skill: "JavaScript", level: 4 }],
+    skill: "",
+    level: "3"
+  });
 ```
 
 Notice that we intend to initialize the value of the `<select>` for the skills's `level` to `"3"`.
 
 Now, we can "connect" those state properties to their respective inputs using the `value` prop:
 
-```html
+```jsx
   ...
   {/* Connect the input to state.skill */}
-  <input name="skill" value={this.state.skill} />
+  <input name="skill" value={state.skill} />
 </label>
 <label>
   <span>LEVEL</span>
   {/* Connect the select to state.level */}
-  <select name="level" value={this.state.level}>
+  <select name="level" value={state.level}>
   ...
 ```
 
@@ -259,7 +264,7 @@ As predicted, the `<select>` has been initialized to `"3"`:
 
 <img src="https://i.imgur.com/yjQL04t.png">
 
-**YOU DO: Try assigning a "default" string value to the `skill` property in `state`**
+**Try assigning a "default" string value to the `skill` property in `state`**
 
 
 <br>
@@ -271,7 +276,7 @@ As predicted, the `<select>` has been initialized to `"3"`:
 
 #### Updating Inputs
 
-Since the inputs are linked to state, updating the values displayed requires us to use `setState` to update their state properties.
+Since the inputs are linked to state, updating the values displayed requires us to use the setter function to update their state properties.
 
 Go ahead and try to change their values by interacting with the inputs - denied!
 
@@ -283,41 +288,50 @@ First add an `onChange` prop to the `<input>`:
 <span>SKILL</span>
 <input
   name="skill"
-  value={this.state.skill}
+  value={state.skill}
   {/* Add an event handler */}
-  onChange={this.handleChange}
+  onChange={handleChange}
 />
 ```
 
 > Unlike the `change` event in vanilla JS which is triggered only after an `<input>` or `<textarea>` loses the focus, the `onChange` prop's assigned event listener will be invoked each time the user types something.
 
-Now add the `handleChange` method that will be called every time a character is added or deleted:
+Now add the `handleChange` function that will be called every time a character is added or deleted:
 
 ```javascript
 // Add the onChange event handler
-handleChange = e => {
-  this.setState({ skill: e.target.value });
-};
-
-render() {
+ function handleChange(e) {
+   /* 
+    the setter function 
+    allows us to access previous state 
+    and override it with new values 
+   */
+    setState((prevState) => ({
+      ...prevState,
+      skill: e.target.value
+    }));
+  }
 ```
 
 Rock and roll!
 
 Now let's do the same for the `<select>`.
 
-However, the current `handleChange` method is dedicated to the updating the `skill` property.
+However, the current `handleChange` function is dedicated to the updating the `skill` property.
 
-Does this mean you have to create a new method for each input?
+Does this mean you have to create a new function for each input?
 
 Not if you know modern JavaScript you don't!
 
 Refactor `handleChange` as follows to take advantage of [computed property names](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names) within object literals:
 
 ```javascript
-handleChange = e => {
-  this.setState({ [e.target.name]: e.target.value });
-};
+function handleChange(e) {
+    setState((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value
+    }));
+  }
 ```
 
 Those square brackets on the left-hand side of the colon allow us to use an expression to "compute" the property name!
@@ -329,8 +343,8 @@ Okay, let's add the event handler to the `<select>`:
 ```javascript
 <select
   name="level"
-  value={this.state.level}
-  onChange={this.handleChange}
+  value={state.level}
+  onChange={handleChange}
 >
 ```
 
@@ -343,7 +357,7 @@ Now you know how "Controlled" inputs work in React!
 
 
 
-#### 💪 Practice Exercise (10 min)
+#### 💪 Practice Exercise 
 
 When gathering data from the user using inputs, at some point you're going to want to do something with that data, for example:
 
@@ -360,7 +374,7 @@ Do the following refactor:
 
 	> Hint: You will also need to update the `value` props of the inputs.
 
-2. Update the `handleChange` method so that it replaces, not mutates, the `newSkill` object when either `skill` or `level` are being changed.
+2. Update the `handleChange` function so that it replaces, the `newSkill` object when either `skill` or `level` are being changed.
 
 When finished, be sure to test it out by changing both inputs.	
 
@@ -368,7 +382,34 @@ When finished, be sure to test it out by changing both inputs.
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
+**How'd you do? ... no worries if you weren't able to figure it out**
+
+<br>
+<br>
+
+**Here's one possible solution:**
+
+```javascript
+  function handleChange(e) {
+    setState((prevState) => ({
+      ...prevState,
+      newSkill: {
+        ...prevState.newSkill,
+        [e.target.name]: e.target.value
+      },
+    }));
+  }
+```
+
+<br>
+<br>
+<br>
 
 
 
@@ -385,20 +426,17 @@ Further, we don't need to wrap the **skill** or **level** inputs in a `<form>` t
 
 It's just a matter of updating state by adding the `newSkill` object to the `skills` array - and we don't need a form to do that. No form or submit button is necessary - we can update state whenever we want to: when the user interacts with the app, when a timer event happens, etc.
 
-Let's write the code for the the `newSkill` method.
+Let's write the code for the the `newSkill` function.
 
 We'll review as we go:
 
 ```javascript
-addSkill = () => {
-  // Using the "function" approach because relying on existing state
-  this.setState(state => ({
-    // Always replace, don't mutate top-level state properties
-    skills: [...state.skills, state.newSkill],
-    // Reset the inputs for better UX
-    newSkill: {skill: '', level: "3"}
-  }));
-};
+  function addSkill() {
+    setState((prevState) => ({
+      skills: [...prevState.skills, state.newSkill],
+      newSkill: { skill: "", level: "3" }
+    }));
+  }
 ```
 
 <img src="https://i.imgur.com/C6QvZQo.png">
@@ -430,19 +468,19 @@ However, despite those missing attributes, and despite the fact that the **[ADD 
 In React, we need to prevent the browser from submitting forms and we first do this by **always** using the `onSubmit` prop on `<form>` components:
 
 ```javascript
-<form onSubmit={this.addSkill}>
+<form onSubmit={addSkill}>
 ```
 
-Then, **always** calling the event object's `preventDefault` method straightaway:
+Then, **always** calling the event object's `preventDefault` function straight away:
 
 ```javascript
-addSkill = e => {
+function addSkill() {
   e.preventDefault();
 ```
 
 Be sure to add a parameter (`e` in this case) to accept the event object.
 
-Problem solved!  The `preventDefault` method does just what it says, it prevents the default submit from happening.
+Problem solved!  The `preventDefault` function does just what it says, it prevents the default submit from happening.
 
 
 <br>
@@ -457,18 +495,18 @@ Problem solved!  The `preventDefault` method does just what it says, it prevents
 
 Although the app is working as planned, we're not taking advantage of the form's HTML5 validation capabilities.
 
-As we saw in the lesson on Regular Expressions, we can add a `required` and `pattern` attribute to HTML inputs to validate their data.
+We can add a `required` and `pattern` attribute to HTML inputs to validate their data.
 
 Let's prevent the ability to add empty skills by adding these props to the skills input:
 
 ```javascript
 <input
   name="skill"
-  value={this.state.newSkill.skill}
-  onChange={this.handleChange}
+  value={newSkill.skill}
+  onChange={handleChange}
   {/* Add these two additional props to set constraints */}
   required
-  pattern=".{2,}"
+  pattern=".{3,}"
 />
 ```
 
@@ -484,12 +522,12 @@ However, the API's methods must be called on the actual DOM element, thus requir
 As an example, let's test out the `checkValidity` method on just the skills input:
 
 ```javascript
-handleChange = e => {
+function handleChange(e) {
   // e.target is the DOM element that changed
   console.log(e.target.checkValidity());
 ``` 
 
-Testing it shows that at least two characters need to be entered in the skill input before `true` is logged.
+Testing it shows that at least three characters need to be entered in the skill input before `true` is logged.
 
 Now that we've seen how we can check an individual input's validity, let's see what it takes to check the validity of the entire form...
 
@@ -503,37 +541,46 @@ Now that we've seen how we can check an individual input's validity, let's see w
 
 Unfortunately, the event object's `target` property is not providing us with access to the `<form>` DOM element from within the `addSkill` method.
 
-We could use the `element.closest(selector)` method on the inputs to find the form, however, let's take advantage of this opportunity to learn about how React provides access to DOM element by using a [ref](https://reactjs.org/docs/refs-and-the-dom.html).
+We could use the `element.closest(selector)` method on the inputs to find the form, however, let's take advantage of this opportunity to learn about how React provides access to DOM element by using a [ref](https://reactjs.org/docs/hooks-reference.html#useref).
 
 > Key Point: Although using a ref has a few useful use cases like third-party library integration, they should be used sparingly and never to bypass React's way of updating the DOM, etc.
 
 A ref is an object that provides access to a DOM element.
 
-There's no reason to hold a ref in state, so we'll create a ref and store it in a separate property on the instance like this:
+There's no reason to hold a ref in state, so we'll create one using a ref using the `useRef` hook like this:
 
 ```javascript
-state = {
-  skills: [{ skill: "JavaScript", level: 4 }],
-  newSkill: {
-    skill: "",
-    level: 3
-  }
-};
-// Create a ref and store in a property named formRef
-formRef = React.createRef();
+// import the useRef hook
+import React, { useState, useRef } from "react";
+import "./styles.css";
+
+export default function App() {
+  
+  // initialize our ref for our form, we'll name it formRef
+  const formRef = useRef();
+
+  const [state, setState] = useState({
+    skills: [{ skill: "JavaScript", level: 4 }],
+    newSkill: {
+      skill: "",
+      level: "3"
+    }
+  });
 ```
 
 With the ref created, all that's left is to "link" it to a component's DOM element by using the `ref` prop:
 
 ```javascript
-<form ref={this.formRef} onSubmit={this.addSkill}>
+<form ref={formRef} onSubmit={addSkill}>
 ```
 
 Let's see what a `ref` looks like by logging it out:
 
 ```javascript
-render() {
-  console.log(this.formRef);
+  ...
+  console.log(formRef);
+    return (
+  ...
 ```
 
 Checking the console shows that the ref object has a `current` property used to access the DOM element.
@@ -541,10 +588,10 @@ Checking the console shows that the ref object has a `current` property used to 
 Now we can prevent adding a new skill if the form's invalid like this:
 
 ```javascript
-addSkill = e => {
-  e.preventDefault();
+function addSkill(e) {
+    e.preventDefault();
   // Do nothing if the form is invalid
-  if (!this.formRef.current.checkValidity()) return;
+  if (!formRef.current.checkValidity()) return;
 ```
 
 Take a moment to think about how you could use the `required` and `pattern` attributes to prevent bogus data from being processed.
@@ -560,41 +607,44 @@ Take a moment to think about how you could use the `required` and `pattern` attr
 
 What if we want the **[ADD SKILL]** button to be disabled depending upon the validity status of the form?
 
-A typical React approach would be to first create a new property on `state` to track the validity of the form:
+A typical React approach would be to first create a new property in `state` to track the validity of the form:
 
 ```javascript
-state = {
-  skills: [{ skill: "JavaScript", level: 4 }],
-  newSkill: {
-    skill: "",
-    level: 3
-  },
-  // New state property to track validity of the form
-  formInvalid: true
-};
-formRef = React.createRef();
+  const [state, setState] = useState({
+    skills: [{ skill: "JavaScript", level: 4 }],
+    newSkill: {
+      skill: "",
+      level: "3"
+    },
+    formInvalid: true
+  });
 ```
 
-Now in the `render` method, use `this.state.formInvalid` to  conditionally add the `disabled` prop to the button:
+Use `state.formInvalid` to conditionally add the `disabled` prop to the button:
 
 ```javascript
 <button
-  disabled={this.state.formInvalid}
+  disabled={state.formInvalid}
 >
 ```
 
-The last part requires updating `formInvalid` each time an input changes, i.e., from within the `handleChange` method:
+The last part requires updating `formInvalid` each time an input changes, i.e., from within the `handleChange` function:
 
 ```javascript
-handleChange = e => {
-  const newSkill = { ...this.state.newSkill };
-  newSkill[e.target.name] = e.target.value;
-  this.setState({
-    newSkill,
-    // update using the formRef
-    formInvalid: !this.formRef.current.checkValidity()
-  });
-};
+  function handleChange(e) {
+    // first, we update using the formRef
+    const formInvalid = !formRef.current.checkValidity();
+
+    setState((prevState) => ({
+      ...prevState,
+      newSkill: {
+        ...prevState.newSkill,
+        [e.target.name]: e.target.value
+      },
+      // then we update state
+      formInvalid
+    }));
+  }
 ```
 
 That takes care of the functionality, however, the button won't look disabled unless we add a touch more CSS:
@@ -607,12 +657,17 @@ button:disabled {
 
 <img src="https://i.imgur.com/gYpjVm1.png">
 
-Nice!
-
 <br>
 <br>
 <br>
 
+
+**Nice! Congratulations on making it this far! 🎉**
+
+<!-- 
+<br>
+<br>
+<br>
 
 
 ## Essential Questions
@@ -621,10 +676,9 @@ Take a moment to review the following questions:
 
 **❓ Where does a "controlled" `<input>` get its value from?**
 
-
 **❓ True or False: All input-related components must be wrapped by a `<form>` component.**
 
-**❓ A React "controlled" `<input>` requires both a `value` and an `________` prop.**
+**❓ A React "controlled" `<input>` requires both a `value` and an `________` prop.** -->
 
 <br>
 <br>
