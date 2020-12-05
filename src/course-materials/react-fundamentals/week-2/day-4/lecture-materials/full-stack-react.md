@@ -224,6 +224,17 @@ In a MERN-stack app, the backend Express app only does two things:
 
 #### Create and Code the Express App 
 
+**Let's write our server:**
+
+1. First, create a directory for our server called `react-mastermind-backend`
+
+2. Then, `cd` into the directory and create the server entry point with `touch server.js`.
+
+3. Let's create our `package.json` with `npm init -y`
+
+<br>
+<br>
+
 For now, we're only going to install a minimal number of modules for the Express app:
 
 `$ npm i express morgan`
@@ -237,20 +248,6 @@ For the lab, to add additional features such as database access, etc., you'll ne
 
 <br>
 <br>
-<br>
-
-
-**Let's write our server:**
-
-1. First, create a directory for our server called `react-mastermind-backend`
-
-2. Then, `cd` into the directory and create the server entry point with `touch server.js`.
-
-3. Let's create our `package.json` with `npm init -y`
-
-<br>
-<br>
-
 
 **At the top of`server.js`, let's do all the familiar stuff: `require` the modules; create the Express app; and mount the `morgan` logging and body parsing middleware:**
 
@@ -492,7 +489,11 @@ import { fetchScoreData } from './services/scoresService';
 <br>
 <br>
 
-**Awesome, we can now verify that our state is there using the react dev tools extension**
+Try to verify that our state is there using the react dev tools extension
+
+Oops, you should see a CORS error in the console. Let's fix that now.
+
+
 
 <br>
 <br>
@@ -547,6 +548,8 @@ You will also want to refer to the Mongoose related lessons to refresh your reco
 <br>
 
 
+
+**Awesome, we can now verify that our state is there using the react dev tools extension. Since we set up a CORS header in our backend, it should not be blocked anymore.**
 
 
 ## Deployment of Express App
@@ -695,18 +698,18 @@ If the deployment fails, there will be error messages that can be used to track 
 Each of the key:value pairs in your app's `.env` file must be set on Heroku using the following command:
 
 ```shell
-$ heroku config:set KEY=VALUE
+$ heroku config:set KEY="VALUE"
 ```
 
 For example: 
 
 ```shell
-$ heroku config:set DATABASE_URL=mongodb+srv://username:pw@sei-students-1btwt.azure.mongodb.net/students?retryWrites=true
+$ heroku config:set DATABASE_URL="mongodb+srv://username:pw@sei-students-1btwt.azure.mongodb.net/students?retryWrites=true"
 ```
 
 Multiple key:value pairs can be space separated, or the command can be run as many times as necessary.
 
-> Note:  If using zsh, it may be necessary to quote the KEY=VALUE pair, for example:<br>`heroku config:set "DATABASE_URL=mongodb+srv://username:pw@sei-students-1btwt.azure.mongodb.net/students?retryWrites=true"`
+> Note:  Make sure to use those quotation marks! If using zsh or similar shells, you'll get an error if you don't wrap the KEY=VALUE pair in quotes!
 
 <br>
 <br>
