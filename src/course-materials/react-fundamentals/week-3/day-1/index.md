@@ -22,6 +22,7 @@ topics: "AJAX Activity/React Review & Project Planning"
 
 - [**Full-Stack MERN code-along with Ira & Daniel Part 1**](https://youtu.be/x0wWAofthZA)
 - [**Full-Stack MERN code-along with Ira & Daniel Part 2**](https://generalassembly.zoom.us/rec/share/KDgMeev4d5Dtj1_PpIBU35uYSHEh7-KKv_6sfCgnJB-d6u[…]tYOmKhiOPaoKgrZw.boUTgjGSBzWhxVQ1?startTime=1607443957000)
+- [**Full-Stack MERN code-along with Daniel Part 3**](https://generalassembly.zoom.us/rec/share/BLixb2J8hOzRJQZ87f98GyJbVPJfewxqwsiPwdYtnB66LSukGg_8YX17fBs-khfi.BybjJTXXG1uCgOu1?startTime=1607526042000)
 
 
 
