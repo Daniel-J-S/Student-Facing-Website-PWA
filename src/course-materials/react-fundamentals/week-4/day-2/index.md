@@ -13,5 +13,6 @@ topics: "Project 3, Second Language Installfest & Ruby Tutorials"
 #### Students Work On Project 3
 - **Activity:** Students Present Project 3
 - [**Activity:** Install Fest Phase 3](/react-fundamentals/week-4/day-2/lecture-materials/install-fest-phase-three)
-- **Self-paced Activity:** Ruby Tutorials
+- [**Pre-Work Resource:** Ruby Tutorial Playlist 1 by Alex Merced](https://www.youtube.com/playlist?list=PLY6oTPmKnKbZp8Kh6jS5A6j-6H2kGY12e)
+- [**Pre-Work Resource:** Ruby Tutorial Playlist 2 by Alex Merced](https://www.youtube.com/playlist?list=PLY6oTPmKnKbZp8Kh6jS5A6j-6H2kGY12e)
 
