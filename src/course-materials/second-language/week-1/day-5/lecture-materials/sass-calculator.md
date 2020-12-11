@@ -18,11 +18,16 @@ For this morning exercise, we want you to focus on the styling, so we've provide
 
 2. If you'd rather use your own HTML structure from week 3 day 2, feel free to do so! Copy and paste the html file or code into your morning exercise directory for today and then follow the instructions below. (Remember to disconnect your .css file for best practices - No unused code!)
 
+<br>
+<br>
+<br>
+
+
 ## Set up
 
-**In a `morning_exercise` folder (or the <a href="/downloads/second_language/sass-calculator/starter-code.zip" download>starter-code</a> folder)**
-- `mkdir css`
-- `touch css/main.scss`
+**Download the <a href="/downloads/second_language/sass-calculator/starter-code.zip" download>starter-code</a> then create the following folders/files below:**
+  - `mkdir css`
+  - `touch css/main.scss`
 - start a new tab
   - `sass --watch css/main.scss css/main.css`
   - some new files should generate, including `main.css` (inside your css folder)

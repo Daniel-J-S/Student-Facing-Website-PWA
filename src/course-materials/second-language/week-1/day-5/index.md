@@ -4,19 +4,15 @@ title: "Day 5"
 week: 1
 day: 5
 type: "homepage"
-topics: "Rails Controllers"
+topics: "SQL and Relational Databases"
 ---
 
 
-# Week 1 Day 5
+# Week 1 - Day 5
 
-#### Rails Controllers
-
-- [**Lecture:** Sass Calculator](/second-language/week-1/day-5/lecture-materials/sass-calculator/)
-- [**Lecture:** Rails Controllers](/second-language/week-1/day-5/lecture-materials/rails-controllers-part1/)
-- [**Lecture:** Rails Controllers Part 2](/second-language/week-1/day-5/lecture-materials/rails-controllers-part2/)
-- [**Lab:** Books App](/second-language/week-1/day-5/labs/books-app/) - **Non-Deliverable**
-- [**Lab:** Regftr](/second-language/week-1/day-5/labs/regftr/) - **Non-Deliverable**
-
-
-
+#### SQL and Relational Databases
+- [**Warmup Exercise:** SASS Calculator](/second-language/week-1/day-5/lecture-materials/sass-calculator/)
+- [**Lecture:** Intro to SQL and Relational Databases](/second-language/week-1/day-5/lecture-materials/intro-to-sql-and-relational-databases/)
+- [**Lab:** Carmen San Diego Lab](/second-language/week-1/day-5/labs/carmen-san-diego-lab/) - **Non-Deliverable**
+- [**Lecture:** Relational Data Design and Modeling](/second-language/week-1/day-5/lecture-materials/relational-data-design-and-modeling/)
+- [**Lab:** Data Modeling Lab](/second-language/week-1/day-5/labs/data-modeling-lab/) - **Non-Deliverable**
