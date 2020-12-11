@@ -4,17 +4,16 @@ title: "Day 4"
 week: 1
 day: 4
 type: "homepage"
-topics: "Introduction to Rails"
+topics: "Review of Ruby Methods/Enumerables & Intro to Ruby Classes"
 ---
 
 # Week 1 - Day 4
 
-#### Introduction to Rails 
-- [**Lecture:** Intro to SASS](/second-language/week-1/day-4/lecture-materials/intro-to-sass/)
-- [**Lecture:** Intro to Rails](/second-language/week-1/day-4/lecture-materials/intro-to-rails/)
-- [**Lab:** Rails Blog API Part 1](/second-language/week-1/day-4/labs/rails-blog-api-part1/) - **Non-Deliverable**
-- [**Lab:** Rails Blog API Part 2](/second-language/week-1/day-4/labs/rails-blog-api-part2/) - **Non-Deliverable**
-- [**Lab:** Glitch In the Matrix](/second-language/week-1/day-4/labs/glitch-in-the-matrix/) - **Deliverable**
+#### Review of Ruby Methods & Intro to Ruby Classes 
+
+- [**Activity:** Review of Ruby Methods & Enumerables](/second-language/week-1/day-4/lecture-materials/ruby-methods-and-enumerables)
+- [**Lecture:** Intro  to Ruby Classes & Objects](/second-language/week-1/day-4/lecture-materials/ruby-classes)
+- [**Lab:** Ruby Black Jack](/second-language/week-1/day-4/labs/ruby-blackjack)
 
 
 
