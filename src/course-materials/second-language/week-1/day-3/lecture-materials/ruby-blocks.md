@@ -1,13 +1,18 @@
 ---
 track: "Second Language"
-title: "Ruby - Blocks"
+title: "Ruby Blocks"
 week: 1
-day: 1
+day: 3
 type: "lecture"
 ---
 
 
-# Ruby - Blocks
+# Ruby Blocks
+
+<br>
+<br>
+<br>
+
 
 ## Lesson Objectives
 
@@ -15,6 +20,13 @@ type: "lecture"
 1. Compare JS map with Ruby map
 1. Create custom functions that use blocks
 1. Describe and use a proc
+
+
+<br>
+<br>
+<br>
+
+
 
 ## Compare JS forEach with Ruby each
 
@@ -42,6 +54,11 @@ There's even a version of the code that takes only one line
 ```ruby
 ['one', 'two', 'three'].each { |str| puts 'the value is ' + str } #short form
 ```
+
+<br>
+<br>
+<br>
+
 
 ## Compare JS map with Ruby map
 
@@ -71,6 +88,12 @@ Here's the version that takes only one line
 ```ruby
 p [1,2,3].map {|num| num * 2}
 ```
+
+
+<br>
+<br>
+<br>
+
 
 ## Creating your own blocks
 
@@ -121,6 +144,12 @@ each 0...5 do |currentNum|
 	puts currentNum
 end
 ```
+
+
+<br>
+<br>
+<br>
+
 
 ## Describe and use a proc
 

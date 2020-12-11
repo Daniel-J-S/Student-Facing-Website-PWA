@@ -1,30 +1,32 @@
 ---
 track: "Second Language"
-title: "Ruby Basics Practice"
+title: "Ruby vs. Javascript - The Differences"
 week: 1
-day: 2
+day: 3
 type: "lab"
 ---
+
 
 # Ruby Basics Practice
 
 For this assignment, you'll complete reps and practice problem solving with Ruby to get familiar with the language.
 
-#### Learning Objectives
+<br>
+<br>
+<br>
 
-- Problem solving in Ruby
-
-#### Prerequisites
-
-- Ruby
-
----
 
 # Getting Started
 
-1. In today's homework folder, create a file called `student_solution.rb`
+1. Create a file called `student_solution.rb`
 
-1. To run this ruby file in your terminal as you go along, use the command `ruby student_solution.rb`
+2. To run this ruby file in your terminal as you go along, use the command `ruby student_solution.rb`
+
+<br>
+<br>
+<br>
+
+
 
 ### Resources
 
@@ -37,9 +39,19 @@ The Ruby documentation is excellent, take advantage of it! Load the following pa
 - [Enumerators](http://ruby-doc.org/core-2.5.3/Enumerator.html) + [Enumberables](https://ruby-doc.org/core-2.5.3/Enumerable.html)
 - [Hashes](http://ruby-doc.org/core-2.5.3/Hash.html)
 
+<br>
+<br>
+<br>
+
+
 # Deliverables
 
 Complete all problems below in the `student_solution.rb` file you created.
+
+<br>
+<br>
+<br>
+
 
 ## Get Started With a Few Reps
 
@@ -61,10 +73,16 @@ Expected output:
 => Hello Big Bad World
 ```
 
-3. Save "Hello World" to a variable. Without changing the letters in your code manually, permanently change "Hello World" to uppercased letters.
+3. Save "Hello World" to a variable. Without changing the letters in your code manually, permanently change "Hello World" to all uppercased letters.
 
 &#x1F534; **Commit your work**
 <hr>
+
+<br>
+<br>
+<br>
+
+
 
 ### Nums Array and Enumerables
 
@@ -107,6 +125,12 @@ With the following array:
 &#x1F534; **Commit your work**
 <hr>
 
+<br>
+<br>
+<br>
+
+
+
 ### Color Array
 
 With the following array:
@@ -121,6 +145,13 @@ With the following array:
 
 &#x1F534; **Commit your work**
 <hr>
+
+
+<br>
+<br>
+<br>
+
+
 
 ### Methods
 
@@ -145,6 +176,12 @@ Write a method named `multiply_each_by_five` that will loop over the given `nums
 
 &#x1F534; **Commit your work**
 <hr>
+
+<br>
+<br>
+<br>
+
+
 
 ### Methods With a Hash
 
@@ -174,15 +211,18 @@ table = {
 }
 ```
 
-
 1. Write a method named `print_price` that will take in any hash and return the price of the item.
-
 
 2. Write a method named `print_item_sums` that will take in two hashes and will return the sum of the prices for the items in the hashes.
 
-
 &#x1F534; **Commit your work**
 <hr>
+
+<br>
+<br>
+<br>
+
+
 
 ## Solving Problems with Ruby
 
@@ -194,6 +234,12 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 
 &#x1F534; **Commit your work**
 <hr>
+
+<br>
+<br>
+<br>
+
+
 
 ### Primes
 
@@ -212,32 +258,49 @@ Reminders:
 &#x1F534; **Commit your work**
 <hr>
 
+<br>
+<br>
+<br>
+
+
+
 ## Hungry For More?
 
 ### Pandigital Numbers
 
 A number of length n is _1-to-n pandigital_ if it makes use of all the digits 1 to n exactly once.
 
-- The number `15234` is _1-to-n pandigital_.
+- The number `15234` is _1-to-5 pandigital_.
 
 - The number `333` is **not** _1-to-n pandigital_.
 
 - The number `0` is **not** _1-to-n pandigital_.
 - The number `10` is **not** _1-to-n pandigital_.
 
-- The number `987654321` is _1-to-n pandigital_.
+- The number `987654321` is _1-to-9 pandigital_.
 
-Write a method that checks if a number is _1-to-n pandigital_.
+Write a method that takes an argument `n` and returns `true` if the number is _1-to-n pandigital_, and `false` if it is not.
+
+
+<br>
+<br>
+<br>
+
+
 
 ### Word Frequency
 
 Write a method that will find the word that appears in a given sentence with the greatest frequency. If there is a tie, either of the words will do as a result.
 
+
+<br>
+<br>
+<br>
+
+
 ### More?
 
-- Finish the labs from today.
+- Finish the bonus MBTA lab from earlier.
 - Solve [this problem](https://projecteuler.net/problem=13) in both Ruby & JavaScript. You can sign in to Project Euler to submit your answer and check if it's correct.
+- Do a kata or two on [Codewars](https://www.codewars.com/)
 
-## Submission Guidelines
-
-- Must be submitted no later than **before the next class at 10 AM Eastern**.

@@ -2,50 +2,54 @@
 track: "Second Language"
 title: "Ruby vs. Javascript - The Differences"
 week: 1
-day: 2
+day: 3
 type: "lab"
 ---
-
 
 
 # Ruby vs. Javascript - The Differences
 
 Let's take a look at the differences between Ruby and Javascript
 
-#### Learning Objectives
-
-- Converting Javascript functions into Ruby
-
-#### Prerequisites
-
-- Ruby
-- Javascript
-
----
+<br>
+<br>
+<br>
 
 ## Getting Started
 
 1. In today's lab folder, create a `differences.rb` file and convert all the Javascript functions below into Ruby in that file.
+2. You can run this file with `ruby differences.rb`. We suggest finishing one function, then commenting it out before moving on to the next function.
 
-## The Functions 
+<br>
+<br>
+<br>
 
-### Get Name 
 
-Write a method that accepts a name from the user and then returns it. Here's the javascript: 
+## The Functions
 
-```
+### Get Name
+
+
+Write a method that accepts a name from the user and then returns it. Here's the javascript:
+
+```javascript
 const getName = () => {
   let name = prompt("what is your name?");
   return name;
 };
 ```
 
-### Reverse It 
+
+<br>
+<br>
+<br>
+
+
+### Reverse It
 
 Write a method that reverses a string. Here's the javascript:
 
-```
-
+```javascript
 const reverseIt = () => {
   let string = "a man, a plan, a canal, frenemies!";
 
@@ -59,11 +63,17 @@ const reverseIt = () => {
 };
 ```
 
-### Swap Em 
+
+<br>
+<br>
+<br>
+
+
+### Swap Em
 
 Write a method that swaps the values of two variables around. Here's the javascript:
 
-```
+```javascript
 const swapEm = () => {
   let a = 10;
   let b = 30;
@@ -77,11 +87,17 @@ const swapEm = () => {
 };
 ```
 
-### Multiply Array 
+
+<br>
+<br>
+<br>
+
+
+### Multiply Array
 
 Write a method that multiplies all numbers in a given array and returns the final product. Here's the javascript:
 
-```
+```javascript
 const multiplyArray = (ary) => {
   if (ary.length == 0) { return 1; };
 
@@ -96,11 +112,17 @@ const multiplyArray = (ary) => {
 };
 ```
 
-### Fizz Buzzer 
+
+<br>
+<br>
+<br>
+
+
+### Fizz Buzzer
 
 Write a method that takes a number argument and returns "fizz" if the number is divisible by three, "buzz" if the number is divisible by five, and "fizzbuzz" if it's divisible by both. Here's the javascript:
 
-```
+```javascript
 const fizzbuzzer = (x) => {
   if( x%(3*5) == 0 ) {
     return 'fizzbuzz'
@@ -114,11 +136,16 @@ const fizzbuzzer = (x) => {
 }
 ```
 
-### Nth Fibonacci 
+
+<br>
+<br>
+<br>
+
+### Nth Fibonacci
 
 Write a method that finds the fibonacci number at the nth position and returns it. Here is the javascript:
 
-```
+```javascript
 const nthFibonacciNumber = () => {
   let fibs = [1, 1];
   let num = prompt("which fibonacci number do you want?");
@@ -133,11 +160,17 @@ const nthFibonacciNumber = () => {
 };
 ```
 
-### Search Array 
+<br>
+<br>
+<br>
+
+
+
+### Search Array
 
 Write a method that searches through an array for a value and returns true or false depending on whether or not the value is present in the array. Here is the javascript:
 
-```
+```javascript
 const searchArray = (array, value) => {
   for(let i = 0; i < array.length-1; i++) {
     if(array[i] == value) {
@@ -150,11 +183,16 @@ const searchArray = (array, value) => {
 
 ```
 
-### Palindrome 
+<br>
+<br>
+<br>
+
+
+### Palindrome
 
 Write a method that checks whether or not a string is a palindrome. Here is the javascript:
 
-```
+```javascript
 const isPalindrome = (str) => {
   for(let i = 0; i < str.length/2; i++){
     if(str[i] != str[str.length-i-1]){
@@ -166,11 +204,16 @@ const isPalindrome = (str) => {
 };
 ```
 
+<br>
+<br>
+<br>
+
+
 ### hasDupes
 
 Write a method that checks whether or not an array has any duplicates. Here is the javascript:
 
-```
+```javascript
 const hasDupes = (arr) => {
   let obj = {};
   for (i = 0; i < arr.length; i++) {
@@ -185,11 +228,14 @@ const hasDupes = (arr) => {
 };
 ```
 
+
+<br>
+<br>
+<br>
+<br>
+
+
 ## Hungry for More?
 
-
 1. If you haven't already, sign up for [Code Wars](https://www.codewars.com/) and try out some Ruby code challenges! Find a good one? Share it in slack!
-
-
-
 
