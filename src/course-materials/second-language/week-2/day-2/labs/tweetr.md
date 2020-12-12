@@ -48,10 +48,12 @@ rails db:create
 ```
 
 <hr>
+
 **Commit your work** <br>
 The commit message should read: <br>
 "Commit 1: Set up Rails with postgres".
 <hr>
+
 
 
 
@@ -65,12 +67,11 @@ Let's walk through how to set up your database.
 
 **This involves:**
 
-```   
-	1. Creating the database    
-	2. Setting up a migration   
-	3. Filling in a schema  
-	4. Running the migration
-```  
+1. Creating the database    
+2. Setting up a migration   
+3. Filling in a schema  
+4. Running the migration
+
 
 A migration is a proposed change to the database. You set up a migration, enter your changes, then run the migration to lock in the changes. Rails then keeps a record of all migrations so that you can see the full history changes to your database schema.
 
@@ -101,10 +102,12 @@ In here, you will add your model's columns and datatypes, as if making  a `schem
 
 
 <hr>
+
 **Commit your work** <br>
 The commit message should read: <br>
 "Commit 2: Generated first migration".
 <hr>
+
 
 
 <br>
@@ -174,10 +177,12 @@ CONGRATULATIONS. You have successfully created and run a migration.
 ```
 
 <hr>
+
 **Commit your work** <br>
 The commit message should read: <br>
 "Commit 3: Successfully run the Tweets migration".
 <hr>
+
 
 
 <br>
@@ -231,10 +236,12 @@ Tweet.create({
 
 
 <hr>
+
 **Commit your work** <br>
 The commit message should read: <br>
 "Commit 4: Created model and seeded db".
 <hr>
+
 
 
 <br>
@@ -287,10 +294,12 @@ Now that we've set up a whole hunk-a stuff, let's now try running your app to se
 ![screenshot](http://i.imgur.com/WzD0Xiv.png)
 
 <hr>
+
 **Commit your work** <br>
 The commit message should read: <br>
 "Commit 5: Added routes and controller".
 <hr>
+
 
 
 <br>
@@ -319,10 +328,12 @@ Render it as json with `render json:`
 Send every Tweet to the endpoint!
 
 <hr>
+
 **Commit your work** <br>
 The commit message should read: <br>
 "Commit 6: All Tweets are visible at the index route".
 <hr>
+
 
 
 <br>
@@ -355,10 +366,12 @@ Answer:
 Check `rails routes` to see the URI, and go to it in the browser.
 
 <hr>
+
 **Commit your work** <br>
 The commit message should read: <br>
 "Commit 7: Tweet show".
 <hr>
+
 
 
 <br>
@@ -442,10 +455,12 @@ curl -X POST -d "tweet[title]=Crentist" -d "tweet[author]=Dwight" -d tweet[conte
 
 
 <hr>
+
 **Commit your work** <br>
 The commit message should read: <br>
 "Commit 8: Can POST new Tweets".
 <hr>
+
 
 
 <br>
@@ -470,10 +485,12 @@ Then, it will render the json of that tweet along with a status code of 200.
 * Test that it works with either cURL or Postman.
 
 <hr>
+
 **Commit your work** <br>
 The commit message should read: <br>
 "Commit 9: Tweets update".
 <hr>
+
 
 
 <br>
@@ -494,10 +511,12 @@ First, it will `.destroy()` a tweet according to the the id stored in `params[:i
 Then, it will render a status code of 204.
 
 <hr>
+
 **Commit your work** <br>
 The commit message should read: <br>
 "Commit 10: Tweets delete".
 <hr>
+
 
 
 <br>
@@ -528,10 +547,12 @@ render json: { author: "President Kool-chair", last_updated: "10 Jan 2017" }
 
 
 <hr>
+
 **Commit your work** <br>
 The commit message should read: <br>
 "Commit 11: Added an extra controller".
 <hr>
+
 
 
 
@@ -542,6 +563,9 @@ The commit message should read: <br>
 
 ## Hungry For More?
 
+<br>
+<br>
+
 ### Validations
 
 Look into Rails [ActiveRecord validations](http://guides.rubyonrails.org/active_record_validations.html). There are many of them.
@@ -551,10 +575,12 @@ Add validations for
 * uniqueness
 
 <hr>
+
 **Commit your work** <br>
 The commit message should read: <br>
 "Commit 12: Added validations".
 <hr>
+
 
 
 <br>
@@ -580,10 +606,12 @@ change_column_default :table, :column, 'default value'
 Note: defaults will not be added to existing data entries. New ones will have to be added.
 
 <hr>
+
 **Commit your work** <br>
 The commit message should read: <br>
 "Commit 13: Added default data".
 <hr>
+
 
 
 <br>
@@ -595,10 +623,12 @@ The commit message should read: <br>
 Add a second model for Replies. A Tweet has many replies, a reply belongs to a tweet. You may need do research how to do this (one-to-many relationship).
 
 <hr>
+
 **Commit your work** <br>
 The commit message should read: <br>
 "Commit 14: Added a second model".
 <hr>
+
 
 
 <br>
@@ -614,7 +644,9 @@ render json: { tweet: Tweet.find(SOMENUMBER), replies: Tweet.find(SOMENUMBER).re
 ```
 
 <hr>
+
 **Commit your work** <br>
 The commit message should read: <br>
 "Commit 15: The show pages shows the tweets and their replies".
 <hr>
+
