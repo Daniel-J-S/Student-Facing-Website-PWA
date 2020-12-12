@@ -102,7 +102,7 @@ This lab was meant to be completed by a team, so make sure you organize your tea
 
 From [these programming principles](http://www.artima.com/weblogs/viewpost.jsp?thread=331531)
 
-![](https://i.imgur.com/G8gyTJU.png)
+![screenshot](https://i.imgur.com/G8gyTJU.png)
 
 Use **pseudo code** to get a sketch of your game first.
 
@@ -243,7 +243,7 @@ Move on to the bonuses.
 
 Output in Chrome console: 
 
-![](https://i.imgur.com/ehyNTL0.png)
+![screenshot](https://i.imgur.com/ehyNTL0.png)
 
 You can use CSS in your Chrome console messages. Above is a simple example where messages are easier to differentiate.
 

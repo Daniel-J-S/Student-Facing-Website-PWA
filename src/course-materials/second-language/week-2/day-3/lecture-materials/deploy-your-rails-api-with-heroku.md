@@ -25,7 +25,7 @@ rails generate controller welcome
 
 This will make `app/controllers/welcome_controller.rb`
 
-![](https://i.imgur.com/obbUkh8.png)
+![screenshot](https://i.imgur.com/obbUkh8.png)
 
 If you don't set a root, Heroku will get confused. Let's make it so our app will root to the index method of the welcome controller:
 
@@ -35,7 +35,7 @@ In `config/routes.rb`:
     root 'welcome#index'
 ```
 
-![](https://i.imgur.com/bg7F7rz.png)
+![screenshot](https://i.imgur.com/bg7F7rz.png)
 
 In the welcome controller file, let's send some stuff from the index method:
 
@@ -45,7 +45,7 @@ In the welcome controller file, let's send some stuff from the index method:
   end
 ```
 
-![](https://i.imgur.com/14nBStv.png)
+![screenshot](https://i.imgur.com/14nBStv.png)
 
 **Open your Rails API in the browser to check that the root works**
 
@@ -61,7 +61,7 @@ In the directory of your own desktop copy of the Rails api, create and deploy a 
 
 Example from a books app:
 
-![](https://i.imgur.com/hf6oZlz.png)
+![screenshot](https://i.imgur.com/hf6oZlz.png)
 
 * `git push heroku master`
 
@@ -69,7 +69,7 @@ If it works, you should be able to open your live API with:
 
 * `heroku open`
 
-![](https://i.imgur.com/h83oezN.png)
+![screenshot](https://i.imgur.com/h83oezN.png)
 
 ## Production database
 
@@ -77,7 +77,7 @@ Set up your database:
 
 * `heroku run rails db:migrate`
 
-![](https://i.imgur.com/oxx83gd.png)
+![screenshot](https://i.imgur.com/oxx83gd.png)
 
 If you have seed data:
 
@@ -87,6 +87,6 @@ You can run Rails on heroku commands with `heroku run <rails command>`
 
 * `heroku run rails c`
 
-![](https://i.imgur.com/0Coz9K6.png)
+![screenshot](https://i.imgur.com/0Coz9K6.png)
 
 Note that this is your **production database**, you should not run any commands to drop or reset. `heroku run rails db:reset` will raise an error.

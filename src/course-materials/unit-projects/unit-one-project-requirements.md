@@ -110,7 +110,7 @@ You will be using GitHub, **not** GitHub Enterprise!
 
 1. After your project has been approved, [make a new github repo for your project](https://help.github.com/articles/create-a-repo/). You will be deploying this project onto github pages, so you **must** name your repo `yourgithubusername.github.io` (for example, if my github username was octocat I would do: octocat.github.io)
 
-![](https://i.imgur.com/bzBJdZ5.png)
+![screenshot](https://i.imgur.com/bzBJdZ5.png)
 
 From there, follow the instructions outlined by github themselves on [github.io](https://pages.github.com/)
 

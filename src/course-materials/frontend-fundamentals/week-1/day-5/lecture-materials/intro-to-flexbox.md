@@ -267,7 +267,7 @@ We will be building cards that just have a single letter on them. As we build we
 #### Flex-basis
 
 Something looks off, instead of neat rows and columns, we seem to have a bit of a skew from row to row:
-![](https://i.imgur.com/SSAhahH.png)
+![screenshot](https://i.imgur.com/SSAhahH.png)
 
 - By default, Flex items grow to fit their content and no more. These letters all have different widths (quick compare: `H`, `I`, `J`), sometimes, this look is desirable. In our case it isn't. Let's set the minimum width using flexbox's `flex-basis` property
 
@@ -371,7 +371,7 @@ The `justify-content` property is jam packed with great responsive layout option
 
 
 
-![](https://i.imgur.com/WFQl4Sz.png)
+![screenshot](https://i.imgur.com/WFQl4Sz.png)
 
 - Right now the elements are clustered in the middle. What if we wanted them centered, but just have ... more space around?
 - Flexbox has a `space-around` property! Let's give it a whirl
@@ -391,7 +391,7 @@ The `justify-content` property is jam packed with great responsive layout option
 
 
 
-![](https://i.imgur.com/s3InQM7.png)
+![screenshot](https://i.imgur.com/s3InQM7.png)
 
 - Ok! That's cool, but what if you want the start and end to align with the edges and then any additional elements to have even space between?
 - Yes flexbox can! With the `space-between` property
@@ -409,7 +409,7 @@ The `justify-content` property is jam packed with great responsive layout option
 
 
 
-![](https://i.imgur.com/TSCzomg.png)
+![screenshot](https://i.imgur.com/TSCzomg.png)
 
 **Bonus:** read https://css-tricks.com/fighting-the-space-between-inline-block-elements/ - one of the best articles on how to work through challenging css problems.
 
@@ -510,7 +510,7 @@ You can also change the order of the flex items. Let's say we want our `selected
 }
 ```
 
-![](https://i.imgur.com/2aYPXWC.png)
+![screenshot](https://i.imgur.com/2aYPXWC.png)
 
 <br>
 <br>

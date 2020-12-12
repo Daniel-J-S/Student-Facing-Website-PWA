@@ -105,7 +105,7 @@ rbenv install 2.7.1
 rbenv versions
 ```
 
-![](https://i.imgur.com/ZEICt8R.png)
+![screenshot](https://i.imgur.com/ZEICt8R.png)
 
 * system is your system Ruby
 * asterisk is next to the version that you are using

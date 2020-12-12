@@ -21,7 +21,7 @@ type: "lab"
 <br>
 
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/USRC_Salmon_P_Chase_-_LoC_4a25817u.jpg/440px-USRC_Salmon_P_Chase_-_LoC_4a25817u.jpg)
+![screenshot](https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/USRC_Salmon_P_Chase_-_LoC_4a25817u.jpg/440px-USRC_Salmon_P_Chase_-_LoC_4a25817u.jpg)
 
 <br>
 <br>
@@ -45,14 +45,14 @@ We'll create an ERD (Entity Relationship Diagram).
 This activity is recommended to be done in pairs.
 
 Here is an example
-![](https://www.researchgate.net/profile/Waheed_Iqbal/publication/283635381/figure/fig1/AS:294185682518019@1447150740787/EERD-of-Telemedicine-Web-Service.png)
+![screenshot](https://www.researchgate.net/profile/Waheed_Iqbal/publication/283635381/figure/fig1/AS:294185682518019@1447150740787/EERD-of-Telemedicine-Web-Service.png)
 
 [source](https://www.researchgate.net/figure/EERD-of-Telemedicine-Web-Service_fig1_283635381)
 
 Each table is represented as a rectangle, there a multiple lines connecting the tables, which represent relationships
 
 Here is a really nice key (but note, there are a lot of different flavors to these symbols)
-![](https://cacoo.com/wp-app/uploads/2018/05/ER-notation-1.png)
+![screenshot](https://cacoo.com/wp-app/uploads/2018/05/ER-notation-1.png)
 
 [source](https://cacoo.com/blog/er-diagrams-vs-eer-diagrams-whats-the-difference/)
 

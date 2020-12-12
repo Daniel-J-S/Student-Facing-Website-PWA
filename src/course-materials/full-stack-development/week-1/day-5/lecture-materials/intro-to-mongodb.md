@@ -185,7 +185,7 @@ Load up and log into [https://cloud.mongodb.com](https://cloud.mongodb.com), the
 
 Let's see what sub-databases we have available to us:
 
-![](https://i.imgur.com/Nd4mANy.png)
+![screenshot](https://i.imgur.com/Nd4mANy.png)
 
 Let's create and use a sub-database called `learn`. 
 

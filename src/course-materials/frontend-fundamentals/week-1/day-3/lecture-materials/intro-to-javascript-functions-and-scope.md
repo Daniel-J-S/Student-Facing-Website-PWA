@@ -571,7 +571,7 @@ A practical benefit of having different scope, however, is being able to use the
 
 Ignoring _block scope_ for the moment, let's review the following diagram demonstrates both _global_ and _function_ scope:
 
-![](https://i.imgur.com/UtIoe7F.png)
+![screenshot](https://i.imgur.com/UtIoe7F.png)
 
 The diagram identifies 3 different scopes along with the identifiers (variables and functions) that live within each scope.
 

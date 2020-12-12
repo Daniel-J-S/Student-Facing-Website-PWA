@@ -18,7 +18,7 @@ Instead of storing the 'session' on the server, we will store it in the browser.
 
 * How it would work with a front-end
 
-![](https://i.imgur.com/hZcoOia.png)
+![screenshot](https://i.imgur.com/hZcoOia.png)
 
 This lesson is for JWT on the backend only. You will need to store this JWT on the front end in `localStorage`.
 
@@ -33,7 +33,7 @@ Let's create a sandbox project for testing. (Create this outside of any existing
 rails new auth_test_api --api -d postgresql
 ```
 
-![](https://i.imgur.com/nJzHECx.png)
+![screenshot](https://i.imgur.com/nJzHECx.png)
 
 Create a user with two columns:
 
@@ -44,7 +44,7 @@ Create a user with two columns:
 rails g scaffold user username password_digest
 ```
 
-![](https://i.imgur.com/gI8fIbG.png)
+![screenshot](https://i.imgur.com/gI8fIbG.png)
 
 Let's use an [Active Model method](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html) `has_secure_password` in our user model to "to set and authenticate against a BCrypt password".
 
@@ -56,11 +56,11 @@ class User < ApplicationRecord
 end  
 ```
 
-![](https://i.imgur.com/CgVseg8.png)
+![screenshot](https://i.imgur.com/CgVseg8.png)
 
 To use `has_secure_password`, we must have provided the `password_digest` column and included the `bcrypt gem` (we will do this next).
 
-![](https://i.imgur.com/2F7QnwE.png)
+![screenshot](https://i.imgur.com/2F7QnwE.png)
 
 Uncomment the bcrypt line in the Gemfile.
 
@@ -70,7 +70,7 @@ Uncomment the bcrypt line in the Gemfile.
 gem 'bcrypt', '~> 3.1.7'
 ```
 
-![](https://i.imgur.com/hKBD5XU.png)
+![screenshot](https://i.imgur.com/hKBD5XU.png)
 
 ```bash
 bundle
@@ -103,7 +103,7 @@ ActiveRecord::Schema.define(version: 2018_01_13_000311) do
 end
 ```
 
-![](https://i.imgur.com/lKEqwD9.png)
+![screenshot](https://i.imgur.com/lKEqwD9.png)
 
 Now that our user resource has been created, we can begin to create some users.
 
@@ -122,7 +122,7 @@ Even though we called our password column `password_digest` when we created the 
 user = User.new( username: 'Thomas', password: 'Thomas')
 ```
 
-![](https://i.imgur.com/y0ZcIGk.png)
+![screenshot](https://i.imgur.com/y0ZcIGk.png)
 
 You can see that the hashed password was saved in `password_digest`. Again, we never directly add a password here, instead passing it to **password**.
 
@@ -132,13 +132,13 @@ Save the user.
 user.save
 ```
 
-![](https://i.imgur.com/2ac7bC4.png)
+![screenshot](https://i.imgur.com/2ac7bC4.png)
 
 [has secure password validation](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html#method-i-has_secure_password)
 
 Documentation
 
-![](https://i.imgur.com/5COikd7.png)
+![screenshot](https://i.imgur.com/5COikd7.png)
 
 Great, we successfully created a user with username and hashed password.
 
@@ -163,7 +163,7 @@ Rails.application.routes.draw do
 end
 ```
 
-![](https://i.imgur.com/nOzz6Tz.png)
+![screenshot](https://i.imgur.com/nOzz6Tz.png)
 
 Add a **collection** not a **member**. A member will add a param to the route, which we don't want. With this collection, we are manually telling rails to run the login method within the user controller upon a POST request to `/login`.
 
@@ -184,7 +184,7 @@ def login
 end
 ```
 
-![](https://i.imgur.com/KSV5MHR.png)
+![screenshot](https://i.imgur.com/KSV5MHR.png)
 
 Run your server, and let's test login from an HTTP client (Postman is good). Login as the user you previously created. If successful, should get the user info in response. If unsuccessful, should get a 401 (Unauthorized).
 
@@ -195,15 +195,15 @@ Send the username and password through
 
 Remember to use **password** and not `password_digest`.
 
-![](https://i.imgur.com/DQqnV4B.png)
+![screenshot](https://i.imgur.com/DQqnV4B.png)
 
 Successful request:
 
-![](https://i.imgur.com/ncKwWKQ.png)
+![screenshot](https://i.imgur.com/ncKwWKQ.png)
 
 Username or password is wrong:
 
-![](https://i.imgur.com/jc27IJA.png)
+![screenshot](https://i.imgur.com/jc27IJA.png)
 
 Where does that very useful `.authenticate()` method come from? It comes from [`has_secure_password`](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html#method-i-has_secure_password).
 
@@ -248,13 +248,13 @@ Good reading here:
 
 [JSON Web Tokens](https://jwt.io/introduction/)
 
-![](https://i.imgur.com/obNqWIa.png)
+![screenshot](https://i.imgur.com/obNqWIa.png)
 
 All we are really sending is an encoded piece of information. When the information is decoded, it's a good ole Javascript Object with keys and values and such. Useful stuff.
 
 Another picture of the Auth process using JWT (from the docs):
 
-![](https://i.imgur.com/YVoufUm.png)
+![screenshot](https://i.imgur.com/YVoufUm.png)
 
 We will be encoding and decoding our JWTs using the `jwt-ruby` gem that we installed earlier:
 
@@ -294,7 +294,7 @@ def create_token(id, username)
 end
 ```
 
-![](https://i.imgur.com/2PhVUWf.png)
+![screenshot](https://i.imgur.com/2PhVUWf.png)
 
 `JWT` is how we use use the `jwt` gem. `JWT.encode` is a method within the `jwt` gem. It will encode / generate a JSON Web Token for us. A token has a
 
@@ -308,7 +308,7 @@ Our create_token also requires an env variable we will do soon.
 
 Our create_token method is calling on the `payload` method we defined earlier.
 
-![](https://i.imgur.com/goZUFdu.png)
+![screenshot](https://i.imgur.com/goZUFdu.png)
 
 <br>
 <hr>
@@ -321,7 +321,7 @@ We can set Environment Variables with the `dotenv-rails` gem we installed earlie
 
 * `touch .env` in the root of your rails project.
 
-![](https://i.imgur.com/6dwe4bQ.png)
+![screenshot](https://i.imgur.com/6dwe4bQ.png)
 
 * Write your environment variables into the `.env` file.
 
@@ -330,7 +330,7 @@ JWT_SECRET=whateversecretyouwant
 JWT_ISSUER=whoeveryouwant
 ```
 
-![](https://i.imgur.com/oLGXkG2.png)
+![screenshot](https://i.imgur.com/oLGXkG2.png)
 
 * Write `.env` in to your `.gitignore`. This will prevent your secrets being pushed to github. This is the entire point of using dotenv, so add it to your gitignore now.
 
@@ -340,7 +340,7 @@ JWT_ISSUER=whoeveryouwant
 
 * In rails console enter `ENV['JWT_SECRET']` to check that particular env variable exists. It's the _same one_ you entered into the .env file.
 
-![](https://i.imgur.com/mFtIzRh.png)
+![screenshot](https://i.imgur.com/mFtIzRh.png)
 
 **BUG**  
 
@@ -357,7 +357,7 @@ If for some reason it stubbornly refuses to work, try writing this into your `co
 require "dotenv-rails"
 ```
 
-![](https://i.imgur.com/2wB7C1E.png)
+![screenshot](https://i.imgur.com/2wB7C1E.png)
 
 <br>
 <hr>
@@ -372,7 +372,7 @@ Create and save a token to a variable:
 token = create_token(user.id, user.username)
 ```
 
-![](https://i.imgur.com/2KaOQaA.png)
+![screenshot](https://i.imgur.com/2KaOQaA.png)
 
 Put it into the rendered json with login authentication:
 
@@ -388,18 +388,18 @@ Put it into the rendered json with login authentication:
   end
 ```
 
-![](https://i.imgur.com/cLoyMAJ.png)
+![screenshot](https://i.imgur.com/cLoyMAJ.png)
 
 
 ## Test: Postman
 
 Make sure your rails server is running.
 
-![](https://i.imgur.com/Jz17VdD.png)
+![screenshot](https://i.imgur.com/Jz17VdD.png)
 
 The response has all the stuff it had before, plus a JWT string
 
-![](https://i.imgur.com/BxFiOll.png)
+![screenshot](https://i.imgur.com/BxFiOll.png)
 
 Congrats! We can send a token through to our client when they login.
 
@@ -426,7 +426,7 @@ Test method in ApplicationController:
    end
 ```
 
-![](https://i.imgur.com/zqqhDL4.png)
+![screenshot](https://i.imgur.com/zqqhDL4.png)
 
 In the `users_controller`, we can run the `authenticate_token` method. Let's run it for all user actions except login and create:
 
@@ -436,7 +436,7 @@ In the `users_controller`, we can run the `authenticate_token` method. Let's run
 before_action :authenticate_token, except: [:login, :create]
 ```
 
-![](https://i.imgur.com/AAXDdc5.png)
+![screenshot](https://i.imgur.com/AAXDdc5.png)
 
 [Controller filters, such as: before_action](http://guides.rubyonrails.org/action_controller_overview.html#filters)
 
@@ -444,7 +444,7 @@ before_action :authenticate_token, except: [:login, :create]
 
 If you now visit `/localhost:3000/users`, the puts statement in the console appears (the authenticate method runs):
 
-![](https://i.imgur.com/6CAhvSE.png)
+![screenshot](https://i.imgur.com/6CAhvSE.png)
 
 What we want to do is send a 401 if the incoming token does not exist (if there is no Authorization header) or is not a valid token:
 
@@ -452,14 +452,14 @@ What we want to do is send a 401 if the incoming token does not exist (if there 
 render json: { status: 401, message: 'Unauthorized' } unless decode_token(bearer_token)
 ```
 
-![](https://i.imgur.com/oJu05nt.png)
+![screenshot](https://i.imgur.com/oJu05nt.png)
 
 
 What we are doing is passing the result of a method `bearer_token` into a method `decode_token`. We need to write these methods.
 
 Let's get `bearer_token` working and just have a shell for `decode_token` for now. All we want `bearer_token` to do is parse the incoming header from the frontend.
 
-![](https://i.imgur.com/BOPeon0.png)
+![screenshot](https://i.imgur.com/BOPeon0.png)
 
 ```ruby
 class ApplicationController < ActionController::API
@@ -504,35 +504,35 @@ The key is `Authorization` the value is `Bearer <token>`. Note: this is right th
 
 We will be denied, but we should see the console output for the `request.env` Authorization header.
 
-![](https://i.imgur.com/QFxwqTI.png)
+![screenshot](https://i.imgur.com/QFxwqTI.png)
 
 We should see the puts statements, including the one that shows us what was in the Authorization header:
 
-![](https://i.imgur.com/cwqRYJ0.png)
+![screenshot](https://i.imgur.com/cwqRYJ0.png)
 
 ## regex
 
 Use Regular Expressions to pass just the token without the 'Bearer':
 
-![](https://i.imgur.com/kQtkcNA.png)
+![screenshot](https://i.imgur.com/kQtkcNA.png)
 
 Make another request to GET `/users`, and see the result in Terminal (you should be able to see the token without 'Bearer':
 
-![](https://i.imgur.com/6kgmf8n.png)
+![screenshot](https://i.imgur.com/6kgmf8n.png)
 
 ## decode token
 
 Make it so that `bearer_token` returns its result, and that we send a puts to test that `decode_token` receives the JWT
 
-![](https://i.imgur.com/fPInUVe.png)
+![screenshot](https://i.imgur.com/fPInUVe.png)
 
 Terminal:
 
-![](https://i.imgur.com/lVxh88c.png)
+![screenshot](https://i.imgur.com/lVxh88c.png)
 
 Add in the decode method and send a response with the decoded token stuff:
 
-![](https://i.imgur.com/LYuxzyU.png)
+![screenshot](https://i.imgur.com/LYuxzyU.png)
 
 **NOTE** If you get an error like:
 
@@ -551,14 +551,14 @@ You will need to pass a fourth argument to the `JWT.decode()` method:
 
 Postman response. The decoded token information looks like this:
 
-![](https://i.imgur.com/NGXWngZ.png)
+![screenshot](https://i.imgur.com/NGXWngZ.png)
 
 Make it so that `decode_token` returns the decoded token. If the decode fails, the method will error, meaning that the original authentication will fail. Otherwise, you should have access to the users route:
-![](https://i.imgur.com/Zy5inkb.png)
+![screenshot](https://i.imgur.com/Zy5inkb.png)
 
 Add in a convenient message in case of failure (rescue the error)
 
-![](https://i.imgur.com/shwyZK8.png)
+![screenshot](https://i.imgur.com/shwyZK8.png)
 
 * Remove the test messages when auth works.
 
@@ -602,17 +602,17 @@ See the currently logged in user's details server-side. In application_controlle
   end
 ```
 
-![](https://i.imgur.com/GLHXSPL.png)
+![screenshot](https://i.imgur.com/GLHXSPL.png)
 
 Use the method in the show route:
 
 > app/controllers/users_controller.rb
 
-![](https://i.imgur.com/d1XoPzI.png)
+![screenshot](https://i.imgur.com/d1XoPzI.png)
 
 Go to the the show route in Postman (sending  the currently logged in token) and just see who's logged in `localhost:3000/users/1`.
 
-![](https://i.imgur.com/1U3wKrW.png)
+![screenshot](https://i.imgur.com/1U3wKrW.png)
 
 <br>
 
@@ -628,13 +628,13 @@ Restrict a user from user-params routes if they are the wrong user with an **aut
   end
 ```
 
-![](https://i.imgur.com/Cq4qUOk.png)
+![screenshot](https://i.imgur.com/Cq4qUOk.png)
 
 ```
   before_action :authorize_user, except: [:login, :create, :index]
 ```
 
-![](https://i.imgur.com/502WNUL.png)
+![screenshot](https://i.imgur.com/502WNUL.png)
 
 * Create a second user in Rails console.
 
@@ -644,17 +644,17 @@ User.create( username: 'Gollum', password: 'Gollum' )
 
 * Log in as this second user through Postman, and copy the token
 
-![](https://i.imgur.com/aAswlxT.png)
+![screenshot](https://i.imgur.com/aAswlxT.png)
 
 * Using the Bearer token as before in the Authorization header, try to access the same show route as the user's id:
 
 Success (user 2 visits `/users/2`) :
 
-![](https://i.imgur.com/CUP47en.png)
+![screenshot](https://i.imgur.com/CUP47en.png)
 
 But if this logged-in user tries to see another user's data (user 2 visits `/users/11`) :
 
-![](https://i.imgur.com/Jefxn95.png)
+![screenshot](https://i.imgur.com/Jefxn95.png)
 
 No access.
 

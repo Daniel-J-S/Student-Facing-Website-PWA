@@ -10,7 +10,7 @@ type: "lab"
 # Rails-React Dating App
 
 
-![](https://i.imgur.com/EFFIuoD.png)
+![screenshot](https://i.imgur.com/EFFIuoD.png)
 
 Let's get Rails and React together on a date!
 
@@ -78,13 +78,13 @@ rails generate scaffold User name starsign age:integer img ltl:boolean
 
 * Check the migration file has the correct fields for the upcoming migration:
 
-![](https://i.imgur.com/7MAhSmJ.png)
+![screenshot](https://i.imgur.com/7MAhSmJ.png)
 
 * Migrate the migrations
 
 * Check the `schema.rb`
 
-![](https://i.imgur.com/ebC3YhF.png)
+![screenshot](https://i.imgur.com/ebC3YhF.png)
 
 * Seed the db with the seed data below
 
@@ -322,12 +322,12 @@ The commit message should read: <br>
 
 In your Rails project, open up `config/initializers/cors.rb`
 
-![](https://i.imgur.com/0KP1OFR.png)
+![screenshot](https://i.imgur.com/0KP1OFR.png)
 
 Uncomment the code, and let's just make it so your localhost can access your Rails app.  
 **Your Rails app is running on 3000 so we'll need to choose another port. Go with 3001 or * to allow all origins**
 
-![](https://i.imgur.com/t8IqiGy.png)
+![screenshot](https://i.imgur.com/t8IqiGy.png)
 
 **RESTART your Rails app: it should NOT work**
 
@@ -335,13 +335,13 @@ It's broken, isn't it? That's because we didn't uncomment the `rack-cors` gem
 
 In the Gemfile, uncomment the gem:
 
-![](https://i.imgur.com/lKHkcGg.png)
+![screenshot](https://i.imgur.com/lKHkcGg.png)
 
 In Terminal, run `bundle`.
 
 Re-run your Rails server, refresh the page and make the AJAX request.
 
-![](https://i.imgur.com/KzKtY7h.png)
+![screenshot](https://i.imgur.com/KzKtY7h.png)
 
 <hr>
 **&#x1F534; Commit your work** <br>
@@ -420,7 +420,7 @@ An example way to render your data
 
 * Refer to the class notes from today for how to make a Flexbox layout with header, footer, columns, main content, etc. Or, use this [tutorial](https://philipwalton.github.io/solved-by-flexbox/demos/holy-grail/), but for crying out loud, don't use the word `HolyGrail` in your class names. In fact, you can set the css just on the elements: `body`, `nav`, `aside`, etc.
 
-![](https://i.imgur.com/53rO9fz.png)
+![screenshot](https://i.imgur.com/53rO9fz.png)
 
 <hr>
 **&#x1F534; Commit your work** <br>
@@ -440,17 +440,17 @@ You can use `.sample` with an argument of 6 on your index route to get a random 
 
 `dating_app_api/app/controllers/uers_controller.rb`:
 
-![](https://i.imgur.com/3rqX8PB.png)
+![screenshot](https://i.imgur.com/3rqX8PB.png)
 
-![](https://i.imgur.com/IrnP28m.png)
+![screenshot](https://i.imgur.com/IrnP28m.png)
 
 Figure out how to use Javascript to split this data up so that three of these are on the left, and three are on the right. Remember, they have already been 'shuffled' so to speak by the Rails controller.
 
-![](https://i.imgur.com/pnRuaOG.png)
+![screenshot](https://i.imgur.com/pnRuaOG.png)
 
 When you refresh the page, a **new random batch** should populate on the page:
 
-![](https://i.imgur.com/7QiJZAL.png)
+![screenshot](https://i.imgur.com/7QiJZAL.png)
 
 <hr>
 **&#x1F534; Commit your work** <br>
@@ -473,7 +473,7 @@ The form should submit to a function that will process the form data.
 
 Example form:
 
-![](https://i.imgur.com/qudjQaA.png)
+![screenshot](https://i.imgur.com/qudjQaA.png)
 
 
 Write the function that will process the form upon submit.
@@ -488,11 +488,11 @@ The function should make an AJAX request to create a dater and console.log the r
 
 Console.log the created item, and clear the form:
 
-![](https://i.imgur.com/gPgmBEp.png)
+![screenshot](https://i.imgur.com/gPgmBEp.png)
 
 Keep refreshing the page to see your new dater randomly appear:
 
-![](https://i.imgur.com/aOB2uay.png)
+![screenshot](https://i.imgur.com/aOB2uay.png)
 
 <hr>
 **&#x1F534; Commit your work** <br>

@@ -576,7 +576,7 @@ console.log(combineCats(cat1, cat2));
 
 Result:
 
-![](https://i.imgur.com/CEB2ire.png)
+![screenshot](https://i.imgur.com/CEB2ire.png)
 
 **This is to demonstrate that a function can return an object**
 
@@ -605,5 +605,5 @@ The above console.log is **two levels** deep of combineCats.
 
 Your output should look something like:
 
-![](https://i.imgur.com/zuTzm5X.png)
+![screenshot](https://i.imgur.com/zuTzm5X.png)
 

@@ -87,7 +87,7 @@ tardis: {
 ```
 
 Check your State in React Dev Tools:
-![](https://i.imgur.com/MXGaT1M.png)
+![screenshot](https://i.imgur.com/MXGaT1M.png)
 
 - Add a function that gets called on click and changes the text
 

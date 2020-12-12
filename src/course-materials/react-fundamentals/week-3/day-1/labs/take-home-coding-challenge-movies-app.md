@@ -34,7 +34,7 @@ This will help you practice/prepare to build a mini-project off of specs, and gi
 
 ### Wireframe:
 
-![](https://i.imgur.com/LJBc5yv.png)
+![screenshot](https://i.imgur.com/LJBc5yv.png)
 
 ### Hints:
 

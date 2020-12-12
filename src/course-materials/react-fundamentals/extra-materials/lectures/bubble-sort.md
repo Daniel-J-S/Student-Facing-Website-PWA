@@ -13,7 +13,7 @@ Bubble sort is one of the first sorting algorithms you should master. While it i
 
 #### How it works:
 
-![](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)
+![screenshot](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)
 
 Bubble sort steps through the list to be sorted, compares each pair of adjacent items, and swaps the items if they are in the wrong order. 
 

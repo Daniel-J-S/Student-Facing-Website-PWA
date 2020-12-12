@@ -181,11 +181,11 @@ Start the Rails server and open in browser:
 
 `localhost:3000/traders`
 
-![](https://i.imgur.com/WiJ04c5.png)
+![screenshot](https://i.imgur.com/WiJ04c5.png)
 
 `localhost:3000/commodities`
 
-![](https://i.imgur.com/dvXe062.png)
+![screenshot](https://i.imgur.com/dvXe062.png)
 
 <!--SEI1 8:32 -->
 
@@ -211,7 +211,7 @@ Since we are not storing array data, we need a better solution.
 
 A Join Table.
 
-![](https://i.imgur.com/vxqyUqp.png)
+![screenshot](https://i.imgur.com/vxqyUqp.png)
 
 We can make a **third table** to map the relationships between traders and commodities.
 
@@ -244,7 +244,7 @@ Since it will be its own model, we can add extra columns to the table. Let's add
 
 >Table for a **Ledger model** with an extra column for qty.
 
-![](https://i.imgur.com/6VMhd1p.png)
+![screenshot](https://i.imgur.com/6VMhd1p.png)
 
 We can **scaffold** the Ledger and provide foreign-key columns to the table that are associated with our traders and commodities.
 
@@ -296,7 +296,7 @@ Don't worry that it looks a little funny. Just imagine it's doing the same thing
 
 * Open the log file and watch it as you migrate the file
 
-![](https://i.imgur.com/bmncS2R.png)
+![screenshot](https://i.imgur.com/bmncS2R.png)
 
 <!--SEI1 8:46 -->
 
@@ -319,12 +319,12 @@ gem 'rb-readline'
 
 Now you can use `ap <query>` to get nicer output. Example `ap Trader.all` or `ap Commodity.all`
 
-![](https://i.imgur.com/NV2fJwu.png)
+![screenshot](https://i.imgur.com/NV2fJwu.png)
 
 * Query for all Ledgers (there should be none) `ap Ledger.all`
 * Query for all column names `ap Ledger.column_names`
 
-![](https://i.imgur.com/QigilLt.png)
+![screenshot](https://i.imgur.com/QigilLt.png)
 
 We can see that the 'references' type created columns called `trader_id` and `commodities_id`.
 
@@ -338,7 +338,7 @@ We have a few traders and commodities created already. Let's create an **associa
 ap Ledger.create(trader_id: 1, commodity_id: 1, qty: 1)
 ```
 
-![](https://i.imgur.com/cOyUaaa.png)
+![screenshot](https://i.imgur.com/cOyUaaa.png)
 
 This creates a relationship between trader 1 and commodity 1 (it's the only relationship we created so far).
 
@@ -354,7 +354,7 @@ ap Ledger.create(trader_id: 2, commodity_id: 1, qty: 1)
 ap Ledger.all
 ```
 
-![](https://i.imgur.com/L5DF1wB.png)
+![screenshot](https://i.imgur.com/L5DF1wB.png)
 
 Looking at this, we can deduce that we ought to be able to query for:
 
@@ -419,7 +419,7 @@ Restart Rails console, then see trader 1's commodities:
 ap Trader.find(1).commodities
 ```
 
-![](https://i.imgur.com/z7yQwQ4.png)
+![screenshot](https://i.imgur.com/z7yQwQ4.png)
 
 > This trader has 'Oil'
 
@@ -429,7 +429,7 @@ See trader 2's commodities:
 ap Trader.find(2).commodities
 ```
 
-![](https://i.imgur.com/Sl4wTPT.png)
+![screenshot](https://i.imgur.com/Sl4wTPT.png)
 
 > This trader also has oil.
 
@@ -441,7 +441,7 @@ ap Commodity.find(1).traders
 
 > 'Oil' is owned by both "Skeletor" and "Slimer"
 
-![](https://i.imgur.com/AQiqIeS.png)
+![screenshot](https://i.imgur.com/AQiqIeS.png)
 
 <!--SEI1 8:59 -->
 
@@ -463,13 +463,13 @@ ap Ledger.create( trader_id: 2, commodity_id: 2, qty: 1 )
 ap Trader.find(1).commodities
 ```
 
-![](https://i.imgur.com/C7h6Wth.png)
+![screenshot](https://i.imgur.com/C7h6Wth.png)
 
 ```ruby
 ap Trader.find(2).commodities
 ```
 
-![](https://i.imgur.com/zC6kocn.png)
+![screenshot](https://i.imgur.com/zC6kocn.png)
 
 Traders 1 and 2 have both commodities, just as those same commodities have both traders.
 
@@ -483,7 +483,7 @@ See Trader 1's ledgers:
 ap Trader.find(1).ledgers
 ```
 
-![](https://i.imgur.com/sL9hXnR.png)
+![screenshot](https://i.imgur.com/sL9hXnR.png)
 
 > This way we can see the qty of each commodity the trader owns
 
@@ -493,7 +493,7 @@ See Commodity 1's ledgers
 ap Commodity.find(1).ledgers
 ```
 
-![](https://i.imgur.com/Z9GJAth.png)
+![screenshot](https://i.imgur.com/Z9GJAth.png)
 
 > For this commodity, we can see that trader 1 has  qty 1, and trader 2 has qty 1
 
@@ -507,7 +507,7 @@ ap Trader.find(1).ledgers.create( commodity_id: 8, qty: 8 )
 ap Trader.find(1).commodities
 ```
 
-![](https://i.imgur.com/sVUrdVN.png)
+![screenshot](https://i.imgur.com/sVUrdVN.png)
 
 #### Unless you create a ledger, the relationship will not have a qty
 
@@ -523,7 +523,7 @@ ap Trader.find(3).ledgers
 
 The commodity will be added to the Ledger with qty nil:
 
-![](https://i.imgur.com/3NvxlH7.png)
+![screenshot](https://i.imgur.com/3NvxlH7.png)
 
 Create a new trader that owns commodity 6. It will be added to the Ledger with qty nil
 
@@ -535,7 +535,7 @@ ap Commodity.find(4).traders.create( name: "Dumbo", money: 1 )
 ap Commodity.find(4).ledgers
 ```
 
-![](https://i.imgur.com/avYNywD.png)
+![screenshot](https://i.imgur.com/avYNywD.png)
 
 <!--SEI1 9:10 -->
 
@@ -559,7 +559,7 @@ Send Commodities with related Traders using `to_json`:
   end
 ```
 
-![](https://i.imgur.com/PRkV4hJ.png)
+![screenshot](https://i.imgur.com/PRkV4hJ.png)
 
 Send Traders with related Commodities using `to_json`:
 
@@ -579,7 +579,7 @@ Send Traders with related Commodities using `to_json`:
   end
 ```
 
-![](https://i.imgur.com/yOoZXyR.png)
+![screenshot](https://i.imgur.com/yOoZXyR.png)
 
 Send Ledgers with related Traders and Commodities using array syntax:
 
@@ -599,7 +599,7 @@ Send Ledgers with related Traders and Commodities using array syntax:
   end
 ```
 
-![](https://i.imgur.com/xhvCtZ1.png)
+![screenshot](https://i.imgur.com/xhvCtZ1.png)
 
 <!--SEI1 9:21 -->
 
@@ -621,7 +621,7 @@ Playlists and songs will be related with a two-column join table:
 * `playlist_id`
 * `song_id`
 
-![](https://i.imgur.com/42vVJ1F.png)
+![screenshot](https://i.imgur.com/42vVJ1F.png)
 
 Song 2 is associated with Playlist 4 _and_ Playlist 6.
 
@@ -637,7 +637,7 @@ Each **playlist** can, in addition, also track how many **plays** a song has had
 
 For that the join table will need an additional column, `plays`. Any columns in the join table tell you _about_ the relationship between the related models. In this case, `plays` is extra information _about_ the relation of a song to a playlist.
 
-![](https://i.imgur.com/GhAZKec.png)
+![screenshot](https://i.imgur.com/GhAZKec.png)
 
 What can we say _about_ Song 2 in Playlist 4? We can say it has 3 plays.
 
@@ -661,19 +661,19 @@ If you create a Ledger that is a duplicate of a relationship between a trader an
 
 Run this twice to create duplicates:
 
-![](https://i.imgur.com/lCa08UF.png)
+![screenshot](https://i.imgur.com/lCa08UF.png)
 
 Run a query to see all ledgers formatted on their own lines:
 
-![](https://i.imgur.com/pbp2V0Z.png)
+![screenshot](https://i.imgur.com/pbp2V0Z.png)
 
 See the duplicate entries:
 
-![](https://i.imgur.com/YnG5IBN.png)
+![screenshot](https://i.imgur.com/YnG5IBN.png)
 
 We would want to think that pairings of trader-commodity would be unique, but they are not. Does Trader 1 have 8 of commodity 5, or 16 of commodity 5?
 
-![](https://i.imgur.com/EQ4FQWz.png)
+![screenshot](https://i.imgur.com/EQ4FQWz.png)
 
 Use a validation, either `validates_uniqueness_of :commodity_id, scope: :trader_id`
 
@@ -681,17 +681,17 @@ OR
 
 `validates_uniqueness_of :trader_id, scope: :commodity_id`
 
-![](https://i.imgur.com/l4z1fRB.png)
+![screenshot](https://i.imgur.com/l4z1fRB.png)
 
 Now, Trader 1 cannot have two entries of Commodity 8 or vice versa.
 
 If we try add a duplicate, we'll get an error
 
-![](https://i.imgur.com/dumrTP7.png)
+![screenshot](https://i.imgur.com/dumrTP7.png)
 
 We can destroy ledgers we don't want:
 
-![](https://i.imgur.com/tkEGLMx.png)
+![screenshot](https://i.imgur.com/tkEGLMx.png)
 
 PLAYLISTS APP activity
 

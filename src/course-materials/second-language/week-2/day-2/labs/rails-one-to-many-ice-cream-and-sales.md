@@ -51,7 +51,7 @@ type: "lab"
 ###### Nest the resources
 - `config/routes.rb` nest :pints inside ice_creams so that when you run `rails routes`
 
-![](https://i.imgur.com/khemhL6.png)
+![screenshot](https://i.imgur.com/khemhL6.png)
 
 ###### Add Foreign Key
 - generate a migration AddIceCreamIdToPints
@@ -89,7 +89,7 @@ Test
   - IceCreams should *only* have Index and Show
   - Pints should have everything *except* show
 
-  ![](https://i.imgur.com/dEhUWm2.png)
+  ![screenshot](https://i.imgur.com/dEhUWm2.png)
 
 ###### Configure Controllers
   - Fix index controller to only show pints assoicated with an IceCream
@@ -118,7 +118,7 @@ http://localhost:3000/ice_creams/2/pints
 
 <details><summary>hint</summary>
 
-![](https://i.imgur.com/7SgwLWW.png)
+![screenshot](https://i.imgur.com/7SgwLWW.png)
 
 </details>
 
@@ -128,7 +128,7 @@ Finally
 ```
 http://localhost:3000/ice_creams/1
 ```
-![](https://i.imgur.com/tNS8UbJ.png)
+![screenshot](https://i.imgur.com/tNS8UbJ.png)
 
 ###### Create React App and Chart.js
 
@@ -150,7 +150,7 @@ http://localhost:3000/ice_creams/1
 
 - Make fetch to rails api `/ice_creams/1`
 
-![](https://i.imgur.com/dKzV9xm.png)
+![screenshot](https://i.imgur.com/dKzV9xm.png)
 
 ###### In LineChart Component, make a chart!
 
@@ -161,7 +161,7 @@ http://localhost:3000/ice_creams/1
 
 ##### Champion! You Win!
 
-![](https://i.imgur.com/dpuYtgz.png)
+![screenshot](https://i.imgur.com/dpuYtgz.png)
 
 
 ##### Hungry For More

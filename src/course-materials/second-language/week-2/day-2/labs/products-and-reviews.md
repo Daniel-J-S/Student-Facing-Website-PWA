@@ -9,7 +9,7 @@ type: "lab"
 
 ### RAILS ONE-TO-MANY: PRODUCTS AND REVIEWS APP
 
-![](https://i.imgur.com/YUD0yOM.png)
+![screenshot](https://i.imgur.com/YUD0yOM.png)
 
 **A product has many reviews, a review belongs to a product**
 
@@ -44,13 +44,13 @@ rails new products_reviews_app_api --api -d postgresql --skip-git
 <br>
 
 ## SCAFFOLD PRODUCTS
-![](https://i.imgur.com/JJ0LvHN.png)
+![screenshot](https://i.imgur.com/JJ0LvHN.png)
 
 <br>
 
 ## CREATE AND MIGRATE DB
-![](https://i.imgur.com/1FFBUx0.png)
-![](https://i.imgur.com/SDVp819.png)
+![screenshot](https://i.imgur.com/1FFBUx0.png)
+![screenshot](https://i.imgur.com/SDVp819.png)
 
 <br>
 
@@ -75,7 +75,7 @@ Product.create([
 ]);
 ```
 
-![](https://i.imgur.com/hSEJob5.png)
+![screenshot](https://i.imgur.com/hSEJob5.png)
 
 <hr>
 &#x1F534; **Commit your work** <br>
@@ -90,10 +90,10 @@ The commit message should read: <br>
 
 Unfortunately there is no official way to do a scaffold with nested resources and associations. There is a gem: [Nested scaffold gem](https://github.com/amatsuda/nested_scaffold). But what we will do is scaffold as usual and then make tweaks to our code. That way we will be able to operate on our code a bit and see how it works.
 
-![](https://i.imgur.com/gYuEXzR.png)
+![screenshot](https://i.imgur.com/gYuEXzR.png)
 
 `rails routes` gives us the routes below: **but** we only want reviews to be accessed in relation to a product. Ie. First get a product by its id, then get the relevant review that belongs that product. We don't really want free-floating CRUDdable reviews.
-![](https://i.imgur.com/gWFE08E.png)
+![screenshot](https://i.imgur.com/gWFE08E.png)
 
 <br>
 
@@ -103,11 +103,11 @@ So let's change our resources. Nest reviews inside of products:
 
 `config/routes.rb`
 
-![](https://i.imgur.com/Ye7EgeK.png)
+![screenshot](https://i.imgur.com/Ye7EgeK.png)
 
 When we `rails routes`, we should see:
 
-![](https://i.imgur.com/YhdjQ7H.png)
+![screenshot](https://i.imgur.com/YhdjQ7H.png)
 
 We can see that in our `reviews` controller the first param will be called `:product_id` and the second param will be called `:id`. We can only ever create or alter a review in relation to a product. This is the restriction we have chosen! No free-floating reviews!
 
@@ -124,9 +124,9 @@ The commit message should read: <br>
 
 Good practice is to add the foreign key with a migration rather than up-front in the scaffold or generator or original migration or what-have-you.
 
-![](https://i.imgur.com/qPVpLkn.png)
+![screenshot](https://i.imgur.com/qPVpLkn.png)
 
-![](https://i.imgur.com/yB82yqp.png)
+![screenshot](https://i.imgur.com/yB82yqp.png)
 
 
 Open Rails console and test the association.
@@ -137,13 +137,13 @@ Open Rails console and test the association.
 
 Look at that horrible error. At the top is this:
 
-![](https://i.imgur.com/fpp1B7J.png)
+![screenshot](https://i.imgur.com/fpp1B7J.png)
 
 NoMethodError for 'reviews'. We must first add the relations to our models:
 
-![](https://i.imgur.com/WIIMtZ0.png)
+![screenshot](https://i.imgur.com/WIIMtZ0.png)
 
-![](https://i.imgur.com/6uvP9Jv.png)
+![screenshot](https://i.imgur.com/6uvP9Jv.png)
 
 
 Try again:
@@ -152,7 +152,7 @@ Try again:
 
 Zig-a-zig ahhh:
 
-![](https://i.imgur.com/FaQGTup.png)
+![screenshot](https://i.imgur.com/FaQGTup.png)
 
 It works. There are no reviews yet, but it works.
 
@@ -199,22 +199,22 @@ The commit message should read: <br>
 
 Tell the router that for Products we **only** want index and show, and leave out the others:
 
-![](https://i.imgur.com/c1j1NfX.png)
+![screenshot](https://i.imgur.com/c1j1NfX.png)
 
 `rails routes`, alot less routes:
 
-![](https://i.imgur.com/0Uw5WH2.png)
+![screenshot](https://i.imgur.com/0Uw5WH2.png)
 
 
 ### Review routes: except
 
 Tell the router that for Reviews we want everything **except** show:
 
-![](https://i.imgur.com/GbH1qfk.png)
+![screenshot](https://i.imgur.com/GbH1qfk.png)
 
 `rails routes`, even less routes:
 
-![](https://i.imgur.com/XxMZIID.png)
+![screenshot](https://i.imgur.com/XxMZIID.png)
 
 <br>
 <hr>
@@ -234,7 +234,7 @@ In the products controller, we'll need to make some changes given that we have c
 
 Complete Products controller with rendered status codes:
 
-![](https://i.imgur.com/r564LHl.png)
+![screenshot](https://i.imgur.com/r564LHl.png)
 
 <br>
 <hr>
@@ -291,12 +291,12 @@ Answer:
   end
 ```
 
-![](https://i.imgur.com/UHsctzm.png)
+![screenshot](https://i.imgur.com/UHsctzm.png)
 
 
 Check out the reviews for Product 1 in the browser, `/products/1/reviews`:
 
-![](https://i.imgur.com/FEZROKL.png)
+![screenshot](https://i.imgur.com/FEZROKL.png)
 
 
 <hr>
@@ -315,11 +315,11 @@ We can set its `product_id` column to the `:product_id` param from the **params 
 
 Remove `location: @review` because we don't need or want a URL redirect.
 
-![](https://i.imgur.com/GLEO4PM.png)
+![screenshot](https://i.imgur.com/GLEO4PM.png)
 
 Test Review Create with Postman:
 
-![](https://i.imgur.com/jnI9Ztp.png)
+![screenshot](https://i.imgur.com/jnI9Ztp.png)
 
 
 <hr>
@@ -338,7 +338,7 @@ Turns out we don't need a `product_id` to reference which review to update or de
 
 In our routes, we can remove update and destroy from the nested routes, and give them their own domain:
 
-![](https://i.imgur.com/dNIPgup.png)
+![screenshot](https://i.imgur.com/dNIPgup.png)
 
 `:update` and `:destroy` removed from nested resources.
 
@@ -346,7 +346,7 @@ Reviews resources gets `:update` and `:destroy` on its own.
 
 `rails routes` gives us some modified routes:
 
-![](https://i.imgur.com/wAUWn0A.png)
+![screenshot](https://i.imgur.com/wAUWn0A.png)
 
 Correspondingly, we don't need to alter either the update or delete methods in the Reviews controller.
 

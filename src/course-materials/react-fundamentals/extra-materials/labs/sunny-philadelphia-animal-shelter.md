@@ -8,7 +8,7 @@ type: "lab"
 
 # Sunny Philadelphia Animal Shelter
 
-![](https://phz8.petinsurance.com/-/media/all-phz-images/2016-images-850/dogandcatonbed850.jpg)
+![screenshot](https://phz8.petinsurance.com/-/media/all-phz-images/2016-images-850/dogandcatonbed850.jpg)
 
 The Sunny Philadelphia Animal Shelter has been looking for volunteers to set up their website, so you offered your help because what better way to add onto your resume and use your newly acquired knowledge for web development? Let's get started, there are animals that need to be adopted!
 

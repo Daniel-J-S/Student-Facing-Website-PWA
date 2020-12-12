@@ -78,9 +78,9 @@ This has added boilerplate files and code to
 
 Check that the **migration files** are correct.
 
-![](https://i.imgur.com/2byNjnP.png)
+![screenshot](https://i.imgur.com/2byNjnP.png)
 
-![](https://i.imgur.com/B8XKvIQ.png)
+![screenshot](https://i.imgur.com/B8XKvIQ.png)
 
 We have two fully-formed but independent resources: Locations and Temperatures. What we need to do next is **relate** them together.
 <br>
@@ -105,18 +105,18 @@ Answer: The foreign key always goes in the many. In this case there will be many
 </details>
 
 **Locations table:**
-![](https://i.imgur.com/iPDwBBA.png)
+![screenshot](https://i.imgur.com/iPDwBBA.png)
 
 **Temperatures table:**
-![](https://i.imgur.com/ZHZGdbq.png)
+![screenshot](https://i.imgur.com/ZHZGdbq.png)
 
-![](https://i.imgur.com/q3KqO1D.png)
+![screenshot](https://i.imgur.com/q3KqO1D.png)
 
 Inside the migration we want to **add a column** that is a foreign key connecting to `temperatures` called `location_id` that is an `integer`.
 
 <details><summary>Click for Migration Code</summary>
 
-![](https://i.imgur.com/7vMizUm.png)
+![screenshot](https://i.imgur.com/7vMizUm.png)
 
 </details>
 
@@ -124,7 +124,7 @@ We have three migrations pending, let's run them and generate our schema.
 
 **schema.rb**
 
-![](https://i.imgur.com/dpVEaCI.png)
+![screenshot](https://i.imgur.com/dpVEaCI.png)
 
 <br>
 <hr>
@@ -139,11 +139,11 @@ Now we need to clarify that the `Location` model `has_many` `:temperatures` and 
 
 **models/location.rb**
 
-![](https://i.imgur.com/7DkIqsS.png)
+![screenshot](https://i.imgur.com/7DkIqsS.png)
 
 **models/temperature.rb**
 
-![](https://i.imgur.com/uEvVl9y.png)
+![screenshot](https://i.imgur.com/uEvVl9y.png)
 
 Note Rails's plural / singular conventions.
 
@@ -196,11 +196,11 @@ Open the Rails console.
 
 Use `ActiveRecord` to see all temperatures belonging to a location:
 
-![](https://i.imgur.com/pPMz4CB.png)
+![screenshot](https://i.imgur.com/pPMz4CB.png)
 
 Use `ActiveRecord` to see a temperature's associated location:
 
-![](https://i.imgur.com/JpRLxlC.png)
+![screenshot](https://i.imgur.com/JpRLxlC.png)
 
 <br>
 <hr>
@@ -225,7 +225,7 @@ Therefore the only routes I need are **index** and **show** for Locations. In Ex
 
 **config/routes.rb**
 
-![](https://i.imgur.com/9S1AqeH.png)
+![screenshot](https://i.imgur.com/9S1AqeH.png)
 
 **Temperatures**
 
@@ -239,11 +239,11 @@ All I need are **index** and **create** for Temperatures.
 
 **config/routes.rb**
 
-![](https://i.imgur.com/2IKEv6T.png)
+![screenshot](https://i.imgur.com/2IKEv6T.png)
 
-![](https://i.imgur.com/nkt52i8.png)
+![screenshot](https://i.imgur.com/nkt52i8.png)
 
-![](https://i.imgur.com/Y6rtmGY.png)
+![screenshot](https://i.imgur.com/Y6rtmGY.png)
 
 The _only_ keeps it nice and tidy.
 
@@ -258,7 +258,7 @@ The _only_ keeps it nice and tidy.
 
 We want only an **index** and a **show** for Locations. Let's remove everything else except the boilerplate `set_location` method, and edit the `before_action` call just to have `[:show]`:
 
-![](https://i.imgur.com/zhBsWwz.png)
+![screenshot](https://i.imgur.com/zhBsWwz.png)
 
 **Run the server with `rails s` and check out the index and show routes in the browser.**
 
@@ -278,7 +278,7 @@ locations/1
 
 And receive JSON for the location that includes the temperatures for that location:
 
-![](https://i.imgur.com/Vb5Xs6E.png)
+![screenshot](https://i.imgur.com/Vb5Xs6E.png)
 
 The frontend developer would get location data from `result` and temperatures with `result.temperatures`.
 
@@ -288,7 +288,7 @@ We can format our data this way with the `.to_json` method that takes a hash as 
 render json: @location.to_json(include: :temperatures)
 ```
 
-![](https://i.imgur.com/A5d3Bf4.png)
+![screenshot](https://i.imgur.com/A5d3Bf4.png)
 
 <br>
 
@@ -298,7 +298,7 @@ render json: @location.to_json(include: :temperatures)
 
 We can do the same for our Locations index if we want:
 
-![](https://i.imgur.com/Jw4nmKk.png)
+![screenshot](https://i.imgur.com/Jw4nmKk.png)
 
 We get an array of locations, each with related temperatures data.
 
@@ -311,7 +311,7 @@ We get an array of locations, each with related temperatures data.
 
 We want to have an **index** and a **create** in our `temperature` routes. Let's remove everything else. Remove the `before_action` call and the `set_temperature` method, too, since we won't be needing them.
 
-![](https://i.imgur.com/JVoAF85.png)
+![screenshot](https://i.imgur.com/JVoAF85.png)
 
 ### Temperatures create
 
@@ -381,11 +381,11 @@ We will want to add the incoming `location_id` to our new temperature record:
 
 Finally, we will remove `location: @temperature`, because it will try to force a redirect and may give us errors in Postman if it stays.
 
-![](https://i.imgur.com/KYTWXYR.png)
+![screenshot](https://i.imgur.com/KYTWXYR.png)
 
 **temperatures_controller.rb**
 
-![](https://i.imgur.com/0LhS7m4.png)
+![screenshot](https://i.imgur.com/0LhS7m4.png)
 
  * Here we create a new Temperature using `temperature_params`
  * On the new temperature, we set the id column to the `location_id` from the url
@@ -396,7 +396,7 @@ Finally, we will remove `location: @temperature`, because it will try to force a
 
 ## TEST CREATE ROUTE WITH POSTMAN
 
-![](https://i.imgur.com/AFrC64b.png)
+![screenshot](https://i.imgur.com/AFrC64b.png)
 
 We want to send the following temperature object to the API:
 
@@ -410,7 +410,7 @@ We will add this new temperature record for location 2.
 
 <details><summary>Successful Postman Request</summary>
 
-![](https://i.imgur.com/qeg3dNf.png)
+![screenshot](https://i.imgur.com/qeg3dNf.png)
 
 Note that the temperature was saved with a `location_id` as intended.
 
@@ -418,13 +418,13 @@ Note that the temperature was saved with a `location_id` as intended.
 
 **Location 2 in the browser should now have the new temperature:**
 
-![](https://i.imgur.com/HNtmSWz.png)
+![screenshot](https://i.imgur.com/HNtmSWz.png)
 
 <!--But again, why? This seems unnecessary
 
 **Temperatures index in the browser has the new temperature:**
 
-![](https://i.imgur.com/qt0d7p0.png)
+![screenshot](https://i.imgur.com/qt0d7p0.png)
 
 -->
 
@@ -432,7 +432,7 @@ Note that the temperature was saved with a `location_id` as intended.
 
 Whenever we make a CREATE request with Postman, we should see the following in the Terminal tab running `rails s`:
 
-![](https://i.imgur.com/sKDIr4N.png)
+![screenshot](https://i.imgur.com/sKDIr4N.png)
 
 This is like the `request object` in Express.
 

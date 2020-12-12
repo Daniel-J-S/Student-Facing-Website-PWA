@@ -45,7 +45,7 @@ type: "lecture"
 > _\- Jeff Atwood, co-founder of Stack Overflow_
 
 *Languages on GitHub - Percentage of Monthly Active Users:*
-![](https://i.imgur.com/HJapAIF.png)
+![screenshot](https://i.imgur.com/HJapAIF.png)
 
 The popularity of JavaScript has grown with the growth of web-based applications because it is the only language included in web browsers.
 
@@ -60,7 +60,7 @@ The popularity of JavaScript has grown with the growth of web-based applications
 
 The primary responsibility of JavaScript is to allow developers to implement behavior in web applications via client-side script that runs in the browser.
 
-![](https://i.imgur.com/FwvjQVO.jpg)
+![screenshot](https://i.imgur.com/FwvjQVO.jpg)
 
 > The popularity of a technology known as _Node.js_ has made JavaScript popular outside the browser as well.
 

@@ -9,7 +9,7 @@ type: "lab"
 
 # Ruby Jumpstart
 
-![](https://cdn-images-1.medium.com/max/2000/1*nLYGAk0_YP5JejzTi5_G7A.png)
+![screenshot](https://cdn-images-1.medium.com/max/2000/1*nLYGAk0_YP5JejzTi5_G7A.png)
 
 ## Activity
 
@@ -19,7 +19,7 @@ Congratulations everyone on completing unit 3! Now, let's move on to Unit 4! In 
 1. [Learn Ruby the Hard Way](https://learnrubythehardway.org/book/ex1.html) - make sure to click the table of contents in the upper left corner to find more exercises
     <details> <summary>Expand to see table of contents</summary>
 
-    ![](https://i.imgur.com/2R78i5x.png)
+    ![screenshot](https://i.imgur.com/2R78i5x.png)
 
     </details>
 1. [The Bastard's Book of Ruby](http://ruby.bastardsbook.com/toc/)

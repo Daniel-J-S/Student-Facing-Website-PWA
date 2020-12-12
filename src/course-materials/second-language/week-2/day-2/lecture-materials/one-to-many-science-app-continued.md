@@ -28,7 +28,7 @@ At the end of this lesson, students will be able to:
 This is the final product we're shooting for:
 
 **Temperatures for Location 1**
-![](https://i.imgur.com/OC4GolP.png)
+![screenshot](https://i.imgur.com/OC4GolP.png)
 ---
 
 # SETUP
@@ -40,9 +40,9 @@ In the top-level `temperatures`
 - `cd temperatures_client`
 - `touch .env`
     - insisde `.env` type `PORT=3001` (set default port to always be 3001, since rails default port is 3000 - notice: no spaces, no quotes, port is all caps)
-    - ![](https://i.imgur.com/9sgKZDq.png)
+    - ![screenshot](https://i.imgur.com/9sgKZDq.png)
 - in `package.json` set `proxy` to be `http://localhost:3000`
-    - ![](https://i.imgur.com/f6o4zfB.png)
+    - ![screenshot](https://i.imgur.com/f6o4zfB.png)
 - install chart.js
   - `yarn add chart.js`
   - `mkdir src/components`
@@ -111,14 +111,14 @@ getData();
 
 If you get this...
 
-![](https://i.imgur.com/k7dxkEa.png)
+![screenshot](https://i.imgur.com/k7dxkEa.png)
 
 ...then restart rails (control c and `rails s`) and restart create react app (control c and `yarn
 start`).
 
 We may get our single-origin policy obstruction. (And if we don't, we would definitely get it when we deploy to production.)
 
-![](https://i.imgur.com/GzmHqb3.png)
+![screenshot](https://i.imgur.com/GzmHqb3.png)
 
 <!--SEI1 5:15 -->
 
@@ -128,13 +128,13 @@ Switch over to `temperatures_api` for the next couple steps.
 
 Uncomment rack-cors in `Gemfile`:
 
-![](https://i.imgur.com/mzc0HBi.png)
+![screenshot](https://i.imgur.com/mzc0HBi.png)
 
 Run `bundle`.
 
 Allow all origins in `config/initializers/cors.rb`
 
-![](https://i.imgur.com/aXEXx9E.png)
+![screenshot](https://i.imgur.com/aXEXx9E.png)
 
 **Restart the Rails server.**
 
@@ -152,7 +152,7 @@ Change the URL to get `/locations/1`:
 
 In the developer console, you should see something like this:
 
-![](https://i.imgur.com/N9oPpus.png)
+![screenshot](https://i.imgur.com/N9oPpus.png)
 
 **fetch** worked! We received location 1 along with that location's temperatures.
 
@@ -246,7 +246,7 @@ const createChart = (data) => {
 
 If it's working, we should see something like the chart below:
 
-![](https://i.imgur.com/ndle1zg.png)
+![screenshot](https://i.imgur.com/ndle1zg.png)
 
 All the code:
 
@@ -339,7 +339,7 @@ Push in the low temps:
 
 Possible Result:
 
-![](https://i.imgur.com/nDipjm9.png)
+![screenshot](https://i.imgur.com/nDipjm9.png)
 
 <br>
 <hr>
@@ -352,21 +352,21 @@ Try hardcoding each one of these into your chartData options separately and seei
 
 Example:
 
-![](https://i.imgur.com/sD21kGI.png)
+![screenshot](https://i.imgur.com/sD21kGI.png)
 
 Result:
 
-![](https://i.imgur.com/C71r4FA.png)
+![screenshot](https://i.imgur.com/C71r4FA.png)
 
 ## Change the chart type
 
 Bar chart
 
-![](https://i.imgur.com/xD2IKNJ.png)
+![screenshot](https://i.imgur.com/xD2IKNJ.png)
 
 Result:
 
-![](https://i.imgur.com/FSnnmBW.png)
+![screenshot](https://i.imgur.com/FSnnmBW.png)
 
 ## Chart options
 

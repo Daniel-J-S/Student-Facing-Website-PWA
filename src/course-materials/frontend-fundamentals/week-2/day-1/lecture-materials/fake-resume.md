@@ -47,7 +47,7 @@ Refer back to the notes from today and/or use the internet and google-fu to find
 
 ## Fake Resume Page
 
-![](https://imgur.com/gpMfn6n.png)
+![screenshot](https://imgur.com/gpMfn6n.png)
 
 Grumpy cat is looking for a new job! Using what you know about HTML and CSS, help him by creating a resume website for him. (Note: You don't need to know 'real information' about Grumpy Cat -- just make things up!)
 

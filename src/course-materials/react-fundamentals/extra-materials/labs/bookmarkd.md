@@ -10,7 +10,7 @@ type: "lab"
 
 # Bookmark'd 
 
-![](https://fthmb.tqn.com/N8UHZxApLqho5sUDbpSRyEy1tV8=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/Bookmarks-56d0cca45f9b5879cc7123a4.jpg)
+![screenshot](https://fthmb.tqn.com/N8UHZxApLqho5sUDbpSRyEy1tV8=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/Bookmarks-56d0cca45f9b5879cc7123a4.jpg)
 
 Your goal for this week's homework is to build a bookmark app that lets users add a title and a link to save websites in one neat list.
 
@@ -32,7 +32,7 @@ You will be building an app that lets users add a title and a link to save websi
 
 _Example:_
 
-![](https://i.imgur.com/yq9Ygeu.png)
+![screenshot](https://i.imgur.com/yq9Ygeu.png)
 
 ✨ Fun Fact: This homework was inspired by a coding challenge used during a company's hiring process. So, treat it like you're trying to get that job!
 
