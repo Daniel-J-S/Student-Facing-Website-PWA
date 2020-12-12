@@ -1,6 +1,6 @@
 ---
 track: "Second Language"
-title: "Day 2"
+title: "Week 2 Day 2"
 week: 2
 day: 2
 type: "homepage"
