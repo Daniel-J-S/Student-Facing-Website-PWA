@@ -134,6 +134,15 @@ When it's your turn to present, post your topic, notes, and comment in Slack so 
 
 Make sure your notes include at least one code example.
 
+
+### Formatting for Slack:
+![formatting](https://i.imgur.com/R1J1OOg.png)
+
+
+### Example
+
+![slack](https://i.imgur.com/jd2Xg3y.png)
+
 <br>
 <br>
 <br>
