@@ -35,6 +35,7 @@ type: "lecture"
 - Most variables use `snake_case` naming conventions
 
 Open up `pry` in your Terminal, but please only type if your instructor tells you to.
+> NOTE: If you don't have pry installed, you can use `irb` instead.
 
 ```ruby
 long_variable_name = 1 #assign long_variable_name the value of 1. Note snake_case naming convention
@@ -95,6 +96,7 @@ puts "Ruby" #double quotes
 puts 'Python' #single quotes
 
 puts "Ruby".size #string method to get length of string
+puts "Ruby".length #also works to get length of string
 puts "Ruby".upcase #uppercase a string
 
 puts 23.to_s #convert a number to a string
@@ -286,6 +288,10 @@ p domains
 p domains['de']
 p domains[1]
 p domains[:us]
+
+# Shortcut syntax:
+countries = { de: "Germany", us: "United States" }
+# Produces this hash: { :de => "Germany", :us => "United States" }
 ```
 
 <br>

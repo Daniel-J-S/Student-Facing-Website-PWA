@@ -23,7 +23,7 @@ This morning you will each get a Ruby method to explore. Your job is to look in 
 
 You'll have 15 minutes to research and prepare. You will then take turns sharing your screen and presenting your findings to the class. When you are not presenting, it's your job to listen, learn, take notes, and ask questions.
 
-[Google Sheet with assignments](https://docs.google.com/spreadsheets/d/1dQCXdrgUsIj509Xha1XZdAYh8CUFXdRyNsZPiHSIJ4w/edit#gid=0)
+[Google Sheet with assignments](https://docs.google.com/spreadsheets/d/1aDxGP2wm_CBdCWGcq09-ZIyt2TltSuayVes4x0wgGbI/edit?usp=sharing)
 
 <br>
 <br>
@@ -133,6 +133,15 @@ When it's your turn to present, post your topic, notes, and comment in Slack so 
 
 
 Make sure your notes include at least one code example.
+
+
+### Formatting for Slack:
+![formatting](https://i.imgur.com/R1J1OOg.png)
+
+
+### Example
+
+![slack](https://i.imgur.com/jd2Xg3y.png)
 
 <br>
 <br>
