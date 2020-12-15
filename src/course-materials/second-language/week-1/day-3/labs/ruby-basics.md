@@ -18,9 +18,8 @@ For this assignment, you'll complete reps and practice problem solving with Ruby
 
 # Getting Started
 
-1. Create a file called `student_solution.rb`
+1. Create a [Ruby Repl.it for this lab](https://repl.it/@DanielScott2/Ruby-Basics-Practice-Lab#main.rb)
 
-2. To run this ruby file in your terminal as you go along, use the command `ruby student_solution.rb`
 
 <br>
 <br>
@@ -46,7 +45,7 @@ The Ruby documentation is excellent, take advantage of it! Load the following pa
 
 # Deliverables
 
-Complete all problems below in the `student_solution.rb` file you created.
+Complete all problems below in the ruby repl.it you created and submit using the usual homework submission tracker.
 
 <br>
 <br>
@@ -75,8 +74,6 @@ Expected output:
 
 3. Save "Hello World" to a variable. Without changing the letters in your code manually, permanently change "Hello World" to all uppercased letters.
 
-&#x1F534; **Commit your work**
-<hr>
 
 <br>
 <br>
@@ -122,9 +119,6 @@ With the following array:
 
 16. use `.select` to return all the numbers divisible by 5
 
-&#x1F534; **Commit your work**
-<hr>
-
 <br>
 <br>
 <br>
@@ -142,9 +136,6 @@ With the following array:
 1. Print out the `colors` array in reverse order.
 
 1. Print out all of the colors in the array with all capital letters.
-
-&#x1F534; **Commit your work**
-<hr>
 
 
 <br>
@@ -173,9 +164,6 @@ Write a method named `multiply_each_by_five` that will loop over the given `nums
 
   end
   ```
-
-&#x1F534; **Commit your work**
-<hr>
 
 <br>
 <br>
@@ -215,9 +203,6 @@ table = {
 
 2. Write a method named `print_item_sums` that will take in two hashes and will return the sum of the prices for the items in the hashes.
 
-&#x1F534; **Commit your work**
-<hr>
-
 <br>
 <br>
 <br>
@@ -231,9 +216,6 @@ table = {
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
 Find the sum of all the multiples of 3 or 5 below 1000.
-
-&#x1F534; **Commit your work**
-<hr>
 
 <br>
 <br>
@@ -254,9 +236,6 @@ Reminders:
 
 > A Prime number is a number that is not evenly divisible by another number except 1 and itself.
 > To test whether a number is Prime, you only need to test as far as the square root of that number. This is advisable for optimization and testing large numbers.
-
-&#x1F534; **Commit your work**
-<hr>
 
 <br>
 <br>

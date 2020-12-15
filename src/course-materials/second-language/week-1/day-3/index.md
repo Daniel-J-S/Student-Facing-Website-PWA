@@ -13,6 +13,6 @@ topics: "Intro to Ruby"
 #### Intro to Ruby
 - [**Lecture:** Intro to Ruby](/second-language/week-1/day-3/lecture-materials/intro-to-ruby)
 - [**Lecture:** Ruby Blocks](/second-language/week-1/day-3/lecture-materials/ruby-blocks)
-- [**Lab:** Ruby vs. JavaScript](/second-language/week-1/day-3/labs/ruby-vs-javascript)
-- [**Lab:** Ruby Basics](/second-language/week-1/day-3/labs/ruby-basics)
+- [**Lab:** Ruby vs. JavaScript](/second-language/week-1/day-3/labs/ruby-vs-javascript) - **Non-Deliverable**
+- [**Lab:** Ruby Basics](/second-language/week-1/day-3/labs/ruby-basics) - **Deliverable**
 

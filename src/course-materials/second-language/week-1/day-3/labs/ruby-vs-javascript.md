@@ -17,8 +17,7 @@ Let's take a look at the differences between Ruby and Javascript
 
 ## Getting Started
 
-1. In today's lab folder, create a `differences.rb` file and convert all the Javascript functions below into Ruby in that file.
-2. You can run this file with `ruby differences.rb`. We suggest finishing one function, then commenting it out before moving on to the next function.
+1. Create a [Ruby repl.it](https://repl.it/@DanielScott2/Ruby-vs-JavaScript) and name it Ruby vs JavaScript
 
 <br>
 <br>
