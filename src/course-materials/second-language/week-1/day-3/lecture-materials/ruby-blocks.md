@@ -99,6 +99,7 @@ p [1,2,3].map {|num| num * 2}
 
 While ruby looks simple at first, you can accomplish some very complex tasks in it - even extend the language. Here are a couple of those advanced features. You can code without them in most cases, but you have these powerful options for when you need them.
 
+
 ## Creating your own blocks
 
 You can create functions that execute blocks.
