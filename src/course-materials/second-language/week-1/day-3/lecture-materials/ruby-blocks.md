@@ -18,8 +18,8 @@ type: "lecture"
 
 1. Compare JS forEach with Ruby each
 1. Compare JS map with Ruby map
-1. Create custom functions that use blocks
-1. Describe and use a proc
+1. Bonus: Create custom functions that use blocks
+1. Bonus: Describe and use a proc
 
 
 <br>
@@ -95,6 +95,10 @@ p [1,2,3].map {|num| num * 2}
 <br>
 
 
+## Bonus Content (self study):
+
+While ruby looks simple at first, you can accomplish some very complex tasks in it - even extend the language. Here are a couple of those advanced features. You can code without them in most cases, but you have these powerful options for when you need them.
+
 ## Creating your own blocks
 
 You can create functions that execute blocks.
@@ -155,6 +159,8 @@ end
 
 - A block is just a type of variable called a proc
 - procs are just ways to save functions into variables for later use
+
+Ruby methods don't act like JS first-class functions by default, however, if you want to use a similar pattern to pass methods around, create an anonymous method, or store a method in a variable then look no further than `proc`!
 
 ```ruby
 log = Proc.new do |el|
