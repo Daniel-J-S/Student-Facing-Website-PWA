@@ -72,8 +72,7 @@ All material is subject to change at Instructors discretion.
 <br>
 <br>
 
-### Unit Four: Second Language
-<!-- ### [<u>Unit Four: Second Language</u>](/second-language) -->
+### [<u>Unit Four: Second Language</u>](/second-language)
 
 | Week  | Topics |
 | ----- | ------ |

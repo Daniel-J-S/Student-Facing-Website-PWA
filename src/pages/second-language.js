@@ -17,7 +17,7 @@ export default({ data, location }) => {
           <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
         </Link> 
       );
-
+    /* uncomment out when ready to release
       const weekTwoLessons = allMarkdownRemark.edges.filter(({ node }) => 
       node.frontmatter.week === 2
       ).map(({ node }) =>
@@ -42,7 +42,7 @@ export default({ data, location }) => {
           <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
         </Link> 
       );
-      
+      */
     return (
         <Layout
           centerContent={true} 
@@ -53,6 +53,7 @@ export default({ data, location }) => {
             <main>
               <h2>Week 1</h2>  
               { weekOneLessons }
+              {/* uncomment out when ready to release
               <br />
               <hr />
               <br />
@@ -67,7 +68,7 @@ export default({ data, location }) => {
               <hr />
               <br />
               <h2>Project Week & Graduation</h2>  
-              { weekFourLessons } 
+              { weekFourLessons }  */}
             </main>
         </Layout>
     );
