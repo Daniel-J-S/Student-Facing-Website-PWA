@@ -16,3 +16,11 @@ topics: "SQL and Relational Databases"
 - [**Lab:** Carmen San Diego Lab](/second-language/week-1/day-5/labs/carmen-san-diego-lab/) - **Non-Deliverable**
 - [**Lecture:** Relational Data Design and Modeling](/second-language/week-1/day-5/lecture-materials/relational-data-design-and-modeling/)
 - [**Lab:** Data Modeling Lab](/second-language/week-1/day-5/labs/data-modeling-lab/) - **Non-Deliverable**
+
+<br>
+<hr>
+<br>
+
+### Recordings
+
+- [**Intro to Relational Databases and SQL with Daniel**](https://generalassembly.zoom.us/rec/share/3UWg5B3W0vqAjTNRl0Aejce6v0eOEMfgpz6x_2zgdBd764H9IA88AIolhdfaS77t.WZtBsJmKmDCwy-lI?startTime=1608312353000)
