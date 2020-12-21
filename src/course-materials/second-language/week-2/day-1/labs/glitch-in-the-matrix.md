@@ -14,17 +14,10 @@ type: "lab"
 
 ## Initialize a new Rails project
 
-* In the `homework` folder for today
-
 * Use `rails new` to make a new Rails project called `matrix_app_api`
+* You'll also want to push this homework to your Github Enterprise account; be sure to commit often when prompted.
 
 * [Do it now!](https://getyarn.io/yarn-clip/6595a4af-f212-4fe4-a26a-95afae185ff7)
-
-**Glitch?**
-
-* Forgot to use the `--skip-git` flag? If you forgot that then it creates a git project in the `matrix_app_api` directory and then your commits won't work normally.
-
-**Solution:** Navigate into the directory: `cd matrix_app_api` and remove the hidden git directory: `rm -rf .git`
 
 **Glitch?**
 
