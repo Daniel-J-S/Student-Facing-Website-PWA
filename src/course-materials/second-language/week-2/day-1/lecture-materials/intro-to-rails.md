@@ -120,7 +120,7 @@ This flag slims Rails down considerably, removing files, folders, and middleware
 
 ## Build a new Rails App
 
-To start a new rails app, you **do not** have to make a directory. Navigate to `student_examples`.
+To start a new rails app, you **do not** have to make a directory.
 
 We are going to build an app called
 
@@ -139,7 +139,7 @@ rails new intro_app_api --api -d postgresql --skip-git
 
 In English:
 
-Hey `rails` make a `new` project called `intro_app_api` as just an `--api` (as opposed to full Rails, because we'll be rendering our views with React later), set the database `-d` to `postgresql`, and do not initialize this project with `git` (since we're doing this in our class repo, which is already a git repository, we don't want to cause git-ception, so we will `--skip-git`).
+Hey `rails` make a `new` project called `intro_app_api` as just an `--api` (as opposed to full Rails, because we'll be rendering our views with React later), set the database `-d` to `postgresql`, and do not initialize this project with `git`xe
 
 What's all this stuff, one more time?
 
@@ -147,13 +147,15 @@ What's all this stuff, one more time?
 * The name of our app is `intro_app_api`. It's important to name it with `_api` to differentiate it from other apps later.
 * The `--api` flag is new in Rails 5 and slims down the app just to serve json.
 * With the `-d` flag we specify which type of database to use. In our case, we use `postgresql`.
-* `--skip-git` skips Rails automatically running a `git init` in this new folder, which would mess us up for class. In most situations outside this classroom, you don't need this however.
+* `--skip-git` skips Rails automatically running a `git init` in this new folder, in most situations outside this classroom, you don't need this however.
 
 You can learn more about the `rails new` command by running:
 
 `rails new --help`
 
-💥💥 Made a mistake typing `rails new`? Just remove the folder that was created and re-run the command. It is far faster to do that than go into the config files and update stuff💥💥
+💥💥 Made a mistake typing `rails new`? 
+
+Just remove the folder that was created and re-run the command. It is far faster to do that than go into the config files and update stuff💥💥
 
 <br>
 <br>
@@ -229,7 +231,7 @@ This is all we will do. There are very specific processes for doing these things
 
 We can check that the database was created by typing
 
-```
+```shell
 rails dbconsole
 ```
 
@@ -267,7 +269,7 @@ Open the `db` folder. We are going to make some changes to it. For the most part
 
 First, create a migration in Terminal. This migration will allow us to make a **table** in our database:
 
-```
+```shell
 rails generate migration CreateTodos
 
 => CREATED db/migrate/20191010152405_create_todos.rb
@@ -323,7 +325,7 @@ When we run the migration it will create/alter our database.
 
 Run the migration with `rails db:migrate`.
 
-```
+```shell
 == 20190710152405 CreateTodosTable: migrating ===============================
 == 20190710152405 CreateTodosTable: migrated (0.0000s) ======================
 ```
@@ -365,13 +367,13 @@ Same goes for your migrations. Once you've run a migration *DO NOT TOUCH IT*.
 
 Open up the Postgres console:
 
-```
+```shell
 $ rails dbconsole
 ```
 
 See the columns created for the todos table:
 
-```
+```shell
 SELECT * FROM todos;
 ```
 
@@ -400,7 +402,7 @@ Now that our database has been constructed with tables and columns, let's get so
 
 **Activity (20 mins)**
 
-In `student_examples` for today (**NOT inside your Rails project folder**), perform the following commands, and look back over the lesson to double-check that you are writing the correct syntax. If you get it wrong, you'll probably have to delete the app and start over.
+In a seperate location (**NOT inside your Rails project folder**), perform the following commands, and look back over the lesson to double-check that you are writing the correct syntax. If you get it wrong, you'll probably have to delete the app and start over.
 
 * Make a new Rails app called `blog_app_api`.
 * Remember the `--api` flag. If you forget, **delete this app and start over**.
@@ -490,13 +492,13 @@ In addition, we can open up a console and just write `ActiveRecord` queries dire
 
 Open Rails console
 
-```
+```shell
 rails console
 ```
 
 OR
 
-```
+```shell
 rails c
 ```
 
