@@ -381,7 +381,9 @@ SELECT * FROM todos;
 
 Quit with `\q`.
 
-Now that our database has been constructed with tables and columns, let's get some data in there.
+Now that our database has been constructed with tables and columns, we'll need to get some data in there.
+
+However, first we'll let you practice these first steps
 
 <br>
 <br>
