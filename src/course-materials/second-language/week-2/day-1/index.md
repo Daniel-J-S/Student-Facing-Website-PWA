@@ -14,5 +14,5 @@ topics: "Intro to Rails & Rails Relationships"
 
 - [**Lecture:** Intro to Rails](/second-language/week-2/day-1/lecture-materials/intro-to-rails/)
 - [**Lecture:** Rails Relationships](/second-language/week-2/day-1/lecture-materials/rails-relationships/)
-- [**Lab:** Rails Relationships Group Lab](/second-language/week-2/day-1/labs/rails-relationships-group-lab)
+- [**Lab:** Rails Relationships Group Lab](/second-language/week-2/day-1/labs/rails-relationships-group-lab) - **Non Deliverable**
 - [**Lab:** Glitch in the Matrix](/second-language/week-2/day-1/labs/glitch-in-the-matrix) - **Deliverable**
