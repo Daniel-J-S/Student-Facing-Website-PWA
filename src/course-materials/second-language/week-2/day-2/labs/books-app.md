@@ -29,7 +29,7 @@ In this lab you will
 
 ## Make a Books App
 
-In `student_labs` we will make an app called `books_app_api`
+Make an app called `books_app_api`
 
 * Make a new Rails app called `books_app_api`. Remember the `--api` and `--skip-git` flags. Set `postgresql` as the database.
 
