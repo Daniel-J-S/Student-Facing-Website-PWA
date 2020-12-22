@@ -236,7 +236,7 @@ type: "lecture"
 
 - We saw earlier that every HTTP request message begins with a request-line like this:
 
-	```
+	```shell
 	GET /sample_page.html HTTP/1.1
 	```
 

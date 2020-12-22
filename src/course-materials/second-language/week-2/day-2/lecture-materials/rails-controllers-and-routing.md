@@ -381,7 +381,7 @@ end
 
 Checking our `rails routes`, what is the URI for our index route? Let's go to that route in the browser.
 
-```
+```shell
 localhost:3000/songs
 ```
 
