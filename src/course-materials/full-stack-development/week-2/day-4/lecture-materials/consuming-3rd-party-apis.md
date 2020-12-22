@@ -117,7 +117,7 @@ type: "lecture"
 - As basic as it gets, let's make a GET request to a third-party API straight from the browser's address bar:
 
 ```bash	
-	http://pokeapi.co/api/v2/pokemon/1
+	https://pokeapi.co/api/v2/pokemon/1
 ```
 
 <br>
@@ -196,7 +196,7 @@ To get setup for this lesson, you'll need to <a href="/downloads/backend_fundame
 
 ### Adjust the Codebase
 
-- We're adding [Bootstrap](http://getbootstrap.com/getting-started/), changing the title and adding a Jumbotron:
+- We're adding [Bootstrap](https://getbootstrap.com/getting-started/), changing the title and adding a Jumbotron:
 
 ```html
 <head>

@@ -101,9 +101,9 @@ Okay, so _what_ can it do?
 
 ### jQuery Documentation
 
-[jQuery's main documentation](http://api.jquery.com/) can be unwieldy.
+[jQuery's main documentation](s://api.jquery.com/) can be unwieldy.
 
-Those new to jQuery are best served by jQuery's newer [Learning Center](http://learn.jquery.com/) as the first reference.
+Those new to jQuery are best served by jQuery's newer [Learning Center](https://learn.jquery.com/) as the first reference.
 
 <br>
 <br>
@@ -159,7 +159,7 @@ To use any JavaScript library in our web app, we need to ensure that the script 
 
 There are two ways we can include jQuery:
 
-- [Download jQuery](http://jquery.com/download/) and save it somewhere within our project folder. Then use the familiar `<script>` tag like this:
+- [Download jQuery](https://jquery.com/download/) and save it somewhere within our project folder. Then use the familiar `<script>` tag like this:
   
 ```javascript
   <script src="js/jquery-3.2.1.min.js"></script>
@@ -431,7 +431,7 @@ $li.eq(1).fadeOut();
 
 ## 5. Modifying the Content of Elements
 
-[This page from the Learning Center](http://learn.jquery.com/using-jquery-core/manipulating-elements/) contains methods and techniques we can use to manipulate elements.
+[This page from the Learning Center](https://learn.jquery.com/using-jquery-core/manipulating-elements/) contains methods and techniques we can use to manipulate elements.
 
 
 <br>
@@ -609,4 +609,4 @@ The **downside** of using minified code is that it can't easily be understood or
 
 [Official jQuery website](https://jquery.com/)
 
-[jQuery Learning Center](http://learn.jquery.com/)
+[jQuery Learning Center](https://learn.jquery.com/)

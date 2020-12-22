@@ -143,4 +143,4 @@ Using a numbered outline is not required but helps organize the more complex ste
 
 
 ## Resources
-[DOM Events](http://www.smashingmagazine.com/2013/11/12/an-introduction-to-dom-events/)
+[DOM Events](https://www.smashingmagazine.com/2013/11/12/an-introduction-to-dom-events/)

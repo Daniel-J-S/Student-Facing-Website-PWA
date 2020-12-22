@@ -58,7 +58,7 @@ Dougie the Donut and Pizza Rat have become best buds taking New York City by sto
 
 ## The App 
 
-Overall, Dougie and Pizza Rat want this app to provide a search feature. <br>The data it will search through will be the [311 call data](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9) provided by the [NYC Open Data API](http://opendata.cityofnewyork.us/), and display all the complaints made to the NYPD, filtered by borough. <br>They also want to see how the police responded to the complaint, since that's what they'll use to determine whether or not they can cause the same trouble without consequences! 
+Overall, Dougie and Pizza Rat want this app to provide a search feature. <br>The data it will search through will be the [311 call data](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9) provided by the [NYC Open Data API](https://opendata.cityofnewyork.us/), and display all the complaints made to the NYPD, filtered by borough. <br>They also want to see how the police responded to the complaint, since that's what they'll use to determine whether or not they can cause the same trouble without consequences! 
 
 
 <br>

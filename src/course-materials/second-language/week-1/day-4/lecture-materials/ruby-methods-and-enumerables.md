@@ -29,7 +29,7 @@ You'll have 15 minutes to research and prepare. You will then take turns sharing
 <br>
 <br>
 
-[String](http://ruby-doc.org/core-2.5.5/String.html)
+[String](https://ruby-doc.org/core-2.5.5/String.html)
 
 1. `rstrip` /`rstrip!`
 2. `reverse` /`reverse!`
@@ -46,7 +46,7 @@ Example string: `"we researched ruby methods"`
 <br>
 <br>
 
-[Array](http://ruby-doc.org/core-2.5.5/Array.html)
+[Array](https://ruby-doc.org/core-2.5.5/Array.html)
 
 1. `compact` / `compact!`
 1. `delete_at` /`delete_if`
@@ -70,7 +70,7 @@ students = ["An", "Todd", "Mark", "Jim", "Cathleen", "Ky", "Biren", "Geraldine",
 <br>
 <br>
 
-[Hash](http://ruby-doc.org/core-2.5.5/Hash.html)
+[Hash](https://ruby-doc.org/core-2.5.5/Hash.html)
 
 1. `has_key?`
 1. `keys`
@@ -88,7 +88,7 @@ cohort = {name: "Hopper", instructors: 4, "never_gonna_give_you_up" => "favorite
 <br>
 
 
-[Integer](http://ruby-doc.org/core-2.5.5/Integer.html)
+[Integer](https://ruby-doc.org/core-2.5.5/Integer.html)
 
 1. `odd?` / `even?`
 1. `floor` / `next`
@@ -105,7 +105,7 @@ Example integers:
 <br>
 <br>
 
-[Method](http://www.skorks.com/2009/08/method-arguments-in-ruby/)
+[Method](https://www.skorks.com/2009/08/method-arguments-in-ruby/)
 1. Default values in parameters
 
 <br>
@@ -114,7 +114,7 @@ Example integers:
 
 ### Enumerables
 
-[The Enumerable module provides a set of methods to traverse, search, sort and manipulate collections](http://ruby.bastardsbook.com/chapters/enumerables/)
+[The Enumerable module provides a set of methods to traverse, search, sort and manipulate collections](https://ruby.bastardsbook.com/chapters/enumerables/)
 1. for in
 1. each do
 1. each with index

@@ -83,7 +83,7 @@ Run the queries in psql by typing `\i clues.sql`.
 
 - Google and collaborate to reach the goal of finding out where Carmen's destination is.
 
-- For example, you'll certainly need to know about the [ORDER BY](http://www.postgresqltutorial.com/postgresql-order-by/). clause.
+- For example, you'll certainly need to know about the [ORDER BY](https://www.postgresqltutorial.com/postgresql-order-by/). clause.
 
 <br>
 <br>
@@ -93,7 +93,7 @@ Run the queries in psql by typing `\i clues.sql`.
 
 ## Additional Resources
 
-- [PostgreSQL official documentation](http://www.postgresql.org/docs/).
+- [PostgreSQL official documentation](https://www.postgresql.org/docs/).
 
 
 <br>

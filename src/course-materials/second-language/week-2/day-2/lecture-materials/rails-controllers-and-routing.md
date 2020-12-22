@@ -159,7 +159,7 @@ end
 
 [Faker documentation](https://github.com/stympy/faker)
 
-[What is :: the double colon](http://stackoverflow.com/questions/3009477/what-is-rubys-double-colon)
+[What is :: the double colon](https://stackoverflow.com/questions/3009477/what-is-rubys-double-colon)
 
 * Run the seed file: `rails db:seed`
 
@@ -245,7 +245,7 @@ As for the others, they are the same pattern we have seen for RESTFul routing of
 
 For **show, update, and destroy**, Rails tells us that the first param will be called `:id`. We don't have a choice what it will be called. But at least `rails routes` tells us what is expected.
 
-[Rails routes docs](http://api.rubyonrails.org/classes/ActionDispatch/Routing.html)
+[Rails routes docs](https://api.rubyonrails.org/classes/ActionDispatch/Routing.html)
 
 <br>
 <br>

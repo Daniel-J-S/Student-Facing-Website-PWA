@@ -74,7 +74,7 @@ The primary responsibility of JavaScript is to allow developers to implement beh
 - Created in 10 days in 1995 by [Brendan Eich](https://en.wikipedia.org/wiki/Brendan_Eich)
 - Not to be confused with Java (although both have syntaxes based upon the "C" programming language)
 - JavaScript is an implementation of ECMAScript, a standard maintained by the European Computer Manufacturers Association)
-- Modern browsers have fully implemented version ES2015 (formerly named ES6) [This website](http://kangax.github.io/compat-table/es6/) reports the implementation status in all major browsers. ES2015 was a major update that added numerous new features which we'll cover in SEI
+- Modern browsers have fully implemented version ES2015 (formerly named ES6) [This website](https://kangax.github.io/compat-table/es6/) reports the implementation status in all major browsers. ES2015 was a major update that added numerous new features which we'll cover in SEI
 
 <br>
 <br>

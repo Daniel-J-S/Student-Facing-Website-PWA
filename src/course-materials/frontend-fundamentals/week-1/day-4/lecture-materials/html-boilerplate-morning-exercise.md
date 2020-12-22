@@ -140,7 +140,7 @@ Note: if you have more than one JavaScript file, it would be typical to put thos
 - Create a  new folder for your css `mkdir css`
 - Navigate inside the `css` folder and create a file called `style.css`
 - Use your text editor  to edit your `style.css` file.
-- Select the `body` and give it a `background-color` [of any color of your choosing](http://htmlcolorcodes.com/)
+- Select the `body` and give it a `background-color` [of any color of your choosing](https://htmlcolorcodes.com/)
 - Take a moment to think about how you can tell if you have successfully linked your stylesheet.
 
 

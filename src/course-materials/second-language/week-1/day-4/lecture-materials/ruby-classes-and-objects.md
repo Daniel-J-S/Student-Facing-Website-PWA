@@ -24,7 +24,7 @@ Let's start with an abstraction of Classes:
 
 ## Everything is an object
 
-Caveat: [Not quite](http://rubylearning.com/blog/2010/09/27/almost-everything-is-an-object-and-everything-is-almost-an-object/)
+Caveat: [Not quite](https://rubylearning.com/blog/2010/09/27/almost-everything-is-an-object-and-everything-is-almost-an-object/)
 
 Deeper Dive: [What is an object?](https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/39-ruby-s-object-model/lessons/127-object-identity-what-is-an-object)
 

@@ -293,7 +293,7 @@ Are you ready for a tropical vacation ... I mean, a haircut?
 1. Share your projects with your friends, family, and fellow classmates!  The best way to find fault in a project is for someone else to try and use it.  Try to give them as little outside instruction as possible.
 2. User stories!  Write user stories from the perspective of the user: "As a user I want to be able to click on x and have y happen" or “As a ____, I need a ____ in order to ____”.
 
-✏️ [Writing Good User Stories](http://www.mariaemerson.com/user-stories/)
+✏️ [Writing Good User Stories](https://www.mariaemerson.com/user-stories/)
 
 
 <br>
@@ -320,6 +320,6 @@ Share your user stories in the tech-talk channel as you write them!
 
 📙 [How Users Read on the Web](https://www.nngroup.com/articles/how-users-read-on-the-web/)
 
-📙 [The Design of Everyday Things](http://a.co/7wYcUD5)
+📙 [The Design of Everyday Things](https://a.co/7wYcUD5)
 
 🎥 [CSS Design Tips](https://www.youtube.com/watch?v=M1syJPviLkU&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J&index=13)

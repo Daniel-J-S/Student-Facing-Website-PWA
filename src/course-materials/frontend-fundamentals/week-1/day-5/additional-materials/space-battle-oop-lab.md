@@ -100,7 +100,7 @@ This lab was meant to be completed by a team, so make sure you organize your tea
 
 * Plan the game. This is an act of simplification.
 
-From [these programming principles](http://www.artima.com/weblogs/viewpost.jsp?thread=331531)
+From [these programming principles](https://www.artima.com/weblogs/viewpost.jsp?thread=331531)
 
 ![screenshot](https://i.imgur.com/G8gyTJU.png)
 

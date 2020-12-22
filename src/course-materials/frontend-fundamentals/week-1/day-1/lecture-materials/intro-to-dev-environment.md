@@ -89,7 +89,7 @@ Students will be able to:
 
 ### Imgur
 
-- One of the most popular image hosting services on the Internet is [Imgur](http://imgur.com/).
+- One of the most popular image hosting services on the Internet is [Imgur](https://imgur.com/).
 
 - Go there now and open a free account
 

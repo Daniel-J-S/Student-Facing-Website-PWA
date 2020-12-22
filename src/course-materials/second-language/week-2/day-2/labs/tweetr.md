@@ -91,11 +91,11 @@ The `g` is short for generate. `Create` is a Rails keyword helper for making mig
 
 In your text editor project folder, look in the `db` folder. The migration command created another folder `migrate`, and you should see a migration file in there that looks like a bunch of numbers:
 
-![screenshot](http://i.imgur.com/RarDqMv.png)
+![screenshot](https://i.imgur.com/RarDqMv.png)
 
 Click on the migration file, and you should see some code like this:
 
-![screenshot](http://i.imgur.com/V41ANnV.png)
+![screenshot](https://i.imgur.com/V41ANnV.png)
 
 
 In here, you will add your model's columns and datatypes, as if making  a `schema`.
@@ -132,7 +132,7 @@ class CreateTweets < ActiveRecord::Migration[5.2]
 end
 ```
 
-![screenshot](http://i.imgur.com/Ou0ZkQD.png)
+![screenshot](https://i.imgur.com/Ou0ZkQD.png)
 
 You can see that we are going to set the columns in our database to **title**, **content**, and **author**, and they will all take input of text/string type.
 
@@ -169,7 +169,7 @@ What does the migration do? It adds the schema to our database, and also makes u
 
 - Test that your db has been schema-fied by going into the console and typing `rails dbconsole`. Perform a `SELECT * FROM tweets;` to test that your db has the correct columns, then quit the dbconsole with `\q`.
 
-![screenshot](http://i.imgur.com/8LOEOym.png)
+![screenshot](https://i.imgur.com/8LOEOym.png)
 
 
 ```shell
@@ -226,7 +226,7 @@ Tweet.create({
 })
 ```
 
-![screenshot](http://i.imgur.com/2PKTRO1.png)
+![screenshot](https://i.imgur.com/2PKTRO1.png)
 
 - If you are feeling saucy, you can try to install and use [Faker](https://github.com/stympy/faker) to generate a bunch of tweets (look over the notes from today).
 
@@ -280,7 +280,7 @@ called `tweets_controller.rb`. Don't put it into the concerns folder. **The word
 
 3. Add the methods that correspond to your restful routes you'll be using for now: `index` and `show`.
 
-![screenshot](http://i.imgur.com/UvmitFh.png)
+![screenshot](https://i.imgur.com/UvmitFh.png)
 
 
 
@@ -291,7 +291,7 @@ called `tweets_controller.rb`. Don't put it into the concerns folder. **The word
 #### Test run
 Now that we've set up a whole hunk-a stuff, let's now try running your app to see if it will break. Run the server with `rails s`. The `s` is short for server. It won't do anything yet, but you should get it to where it won't break. Check if you get the Rails splash page at `localhost:3000`
 
-![screenshot](http://i.imgur.com/WzD0Xiv.png)
+![screenshot](https://i.imgur.com/WzD0Xiv.png)
 
 <hr>
 
@@ -568,7 +568,7 @@ The commit message should read: <br>
 
 ### Validations
 
-Look into Rails [ActiveRecord validations](http://guides.rubyonrails.org/active_record_validations.html). There are many of them.
+Look into Rails [ActiveRecord validations](https://guides.rubyonrails.org/active_record_validations.html). There are many of them.
 
 Add validations for
 * presence

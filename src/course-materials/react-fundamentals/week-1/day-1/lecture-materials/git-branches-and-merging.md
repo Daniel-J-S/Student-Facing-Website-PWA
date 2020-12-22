@@ -627,7 +627,7 @@ Note: if you do not get the yellow bar, you will have slightly different navigat
 
 
 #### VS Code - main.css:
-- Now let's update the colors in the `body`, let's change `color` (font color), and `background-color` to whatever our heart desires. [Go ahead and use hexadecimal colors, rgb, hsl or some of the standard web colors.]( http://htmlcolorcodes.com/color-names/)
+- Now let's update the colors in the `body`, let's change `color` (font color), and `background-color` to whatever our heart desires. [Go ahead and use hexadecimal colors, rgb, hsl or some of the standard web colors.]( https://htmlcolorcodes.com/color-names/)
 
 Make changes here in main.css ![main.css](https://i.imgur.com/1WY4xj8.png)
 - When we've found the colors we like, we can go ahead and
