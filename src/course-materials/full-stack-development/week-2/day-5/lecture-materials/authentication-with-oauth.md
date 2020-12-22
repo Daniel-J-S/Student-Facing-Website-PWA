@@ -269,7 +269,7 @@ $ npm install
 
 - The app has one server-side view: **views/students/index.ejs**.
 
-- The app uses the [_Materialize_ CSS framework](http://materializecss.com/) based upon [Google's Material Design](https://www.google.com/design/spec/material-design/introduction.html).
+- The app uses the [_Materialize_ CSS framework](https://materializecss.com/) based upon [Google's Material Design](https://www.google.com/design/spec/material-design/introduction.html).
 
 <br>
 <br>
@@ -593,7 +593,7 @@ GOOGLE_CALLBACK=http://localhost:3000/oauth2callback
 
 - Passport is by far the most popular authentication framework out there for Express apps.
 
-- [Passport's website](http://passportjs.org/) states that it provides _Simple, unobtrusive authentication for Node.js_.
+- [Passport's website](https://passportjs.org/) states that it provides _Simple, unobtrusive authentication for Node.js_.
 
 - Basically this means that it handles much of the mundane tasks related to authentication for us, but leaves the details up to us, for example, not forcing us to configure our user model a certain way.
 
@@ -603,7 +603,7 @@ GOOGLE_CALLBACK=http://localhost:3000/oauth2callback
 
 - Each Express app with Passport can use one or more of these strategies.
 
-- [Passport's site](http://passportjs.org/) currently shows over 500 strategies available.
+- [Passport's site](https://passportjs.org/) currently shows over 500 strategies available.
 
 - OAuth, or more specifically, OAuth2, although a standard, can be implemented slightly differently by OAuth providers such as Facebook and Google.
 
@@ -760,7 +760,7 @@ $ npm install passport
 
 
 	
-- The way `passport` middleware is being mounted is [straight from the docs](http://www.passportjs.org/docs/configure/).
+- The way `passport` middleware is being mounted is [straight from the docs](https://www.passportjs.org/docs/configure/).
 
 <br>
 <br>
@@ -1481,6 +1481,6 @@ function index(req, res) {
 
 - [Google OAuth2](https://developers.google.com/identity/protocols/OAuth2)
 
-- [Mongoose](http://mongoosejs.com/)
+- [Mongoose](https://mongoosejs.com/)
 
-- [Materialize CSS](http://materializecss.com/)
+- [Materialize CSS](https://materializecss.com/)

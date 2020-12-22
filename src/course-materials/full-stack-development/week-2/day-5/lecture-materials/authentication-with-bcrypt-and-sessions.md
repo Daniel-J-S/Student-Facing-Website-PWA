@@ -1290,5 +1290,5 @@ Please see the references below for more information regarding these technologie
 ## References
 
 - [Express Session Middleware](https://www.npmjs.com/package/express-session)
-- [Express.js Docs on Session Middleware](http://expressjs.com/en/resources/middleware/session.html)
+- [Express.js Docs on Session Middleware](https://expressjs.com/en/resources/middleware/session.html)
 - [Bcrypt](https://www.npmjs.com/package/bcrypt)

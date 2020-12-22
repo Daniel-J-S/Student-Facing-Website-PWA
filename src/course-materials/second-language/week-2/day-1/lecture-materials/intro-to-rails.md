@@ -285,7 +285,7 @@ rails generate migration CreateTodos
 
 The numbers are just a timestamp. All migration files are kept here in sequence so that we have a permanent record of all alterations to our database.
 
-[Why do we use migrations?](http://guides.rubyonrails.org/v3.2.8/migrations.html)
+[Why do we use migrations?](https://guides.rubyonrails.org/v3.2.8/migrations.html)
 
 <br>
 <br>
@@ -679,5 +679,5 @@ The `--api` flag from the docs:
 
 ![screenshot](https://i.imgur.com/BzZzZM4.png)
 
-Read more about using Rails as an API [here](http://edgeguides.rubyonrails.org/api_app.html)
+Read more about using Rails as an API [here](https://edgeguides.rubyonrails.org/api_app.html)
 

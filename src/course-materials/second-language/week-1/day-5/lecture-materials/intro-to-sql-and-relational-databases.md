@@ -399,7 +399,7 @@ SELECT * FROM bands JOIN musicians ON bands.id = musicians.band_id;
 
 Note that no records are returned for bands without any musicians. This is called an **INNER JOIN**, which is the default.
 
-There are several types of [joins](http://www.postgresqltutorial.com/postgresql-joins/).
+There are several types of [joins](https://www.postgresqltutorial.com/postgresql-joins/).
 
 If we want to return all bands, regardless of whether or not there's any matches for musicians, we use whats called a `LEFT JOIN`:
 
@@ -418,7 +418,7 @@ LEFT JOIN musicians m ON b.id = m.band_id;
 
 ### Querying Data using a `WHERE` Clause
 
-The [WHERE clause](http://www.postgresqltutorial.com/postgresql-where/) allows selecting records that meet a condition or conditions:
+The [WHERE clause](https://www.postgresqltutorial.com/postgresql-where/) allows selecting records that meet a condition or conditions:
 
 ```sql
 SELECT *
@@ -515,13 +515,13 @@ Before moving on to the lab, let's answer a few questions...
 If you'd like to go deeper into SQL, look into:
 
 - [Functions & Operators](https://www.postgresql.org/docs/11/functions.html)
-- [Aggregations](http://www.postgresqltutorial.com/postgresql-aggregate-functions/)
+- [Aggregations](https://www.postgresqltutorial.com/postgresql-aggregate-functions/)
 
 ## Additional Practice
 
 - [PG Exercises](https://pgexercises.com/)
 
-- [PostreSQL Tutorial](http://www.postgresqltutorial.com/)
+- [PostreSQL Tutorial](https://www.postgresqltutorial.com/)
 
 ## References
 

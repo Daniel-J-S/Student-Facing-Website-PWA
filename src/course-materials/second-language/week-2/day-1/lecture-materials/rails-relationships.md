@@ -54,7 +54,7 @@ In SQL you saw how to use a foreign key. A foreign key just maps a number to the
 
 The user with `id` 22 will have associated Todos as specified by the Todos' foreign key, `user_id`.
 
-[ActiveRecord Association Basics](http://edgeguides.rubyonrails.org/association_basics.html)
+[ActiveRecord Association Basics](https://edgeguides.rubyonrails.org/association_basics.html)
 
 In postgres we could ask for all the Todos that belong to a specific user:
 

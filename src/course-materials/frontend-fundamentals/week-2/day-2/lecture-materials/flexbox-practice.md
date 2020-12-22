@@ -17,13 +17,13 @@ Let's get some more practice with Flexbox! Use the sites below to practice your 
 <br>
 
 
-### [Flexbox Froggy](http://flexboxfroggy.com/)
+### [Flexbox Froggy](https://flexboxfroggy.com/)
 ![Flexbox Froggy](https://i.imgur.com/CULsppR.png)
 
 <br>
 <br>
 
-### [Flexbox Defense](http://www.flexboxdefense.com/)
+### [Flexbox Defense](https://www.flexboxdefense.com/)
 ![Flexbox Defense](https://i.imgur.com/xaZxg7I.png)
 
 <br>

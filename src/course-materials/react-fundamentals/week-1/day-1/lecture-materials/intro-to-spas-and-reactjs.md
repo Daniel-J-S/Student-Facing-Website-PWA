@@ -334,7 +334,7 @@ Setting up a project initially is pretty mundane, thus there are tools that do i
 
 For example, we've been using **express-generator** to set up our Express apps.
 
-[**Yeoman**](http://yeoman.io/) is a general purpose scaffolding tool that has a huge ecosystem of _generators_ for just about any framework or workflow structure you can think of.
+[**Yeoman**](https://yeoman.io/) is a general purpose scaffolding tool that has a huge ecosystem of _generators_ for just about any framework or workflow structure you can think of.
 
 <br>
 <br>
@@ -357,7 +357,7 @@ Just about any task a developer does repeatedly manually, can benefit from tooli
 
 Developing a React app requires tooling because a typical React app is spread across numerous files/modules with dependencies that need to be bundled together. In addition, JSX needs to be transpiled into pure JS.
 
-When you need tooling, you have several options. One of the early build tools/task runners to become popular was [**Grunt**](https://gruntjs.com/). However, most developers have found [**Gulp**](http://gulpjs.com/) to be more friendly and faster.
+When you need tooling, you have several options. One of the early build tools/task runners to become popular was [**Grunt**](https://gruntjs.com/). However, most developers have found [**Gulp**](https://gulpjs.com/) to be more friendly and faster.
 
 Over time, [**webpack**](https://webpack.github.io/) has become the tool of choice in the React community and it is what the `create-react-app` CLI uses.
 

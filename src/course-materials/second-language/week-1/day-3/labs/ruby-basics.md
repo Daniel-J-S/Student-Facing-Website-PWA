@@ -33,10 +33,10 @@ For this assignment, you'll complete reps and practice problem solving with Ruby
 
 The Ruby documentation is excellent, take advantage of it! Load the following pages in your browser so that you can search for any useful Ruby methods to help you solve the problems (look through the 'methods' column on the left)
 
-- [Arrays](http://ruby-doc.org/core-2.5.3/Array.html)
-- [Strings](http://ruby-doc.org/core-2.5.3/String.html)
-- [Enumerators](http://ruby-doc.org/core-2.5.3/Enumerator.html) + [Enumberables](https://ruby-doc.org/core-2.5.3/Enumerable.html)
-- [Hashes](http://ruby-doc.org/core-2.5.3/Hash.html)
+- [Arrays](https://ruby-doc.org/core-2.5.3/Array.html)
+- [Strings](https://ruby-doc.org/core-2.5.3/String.html)
+- [Enumerators](https://ruby-doc.org/core-2.5.3/Enumerator.html) + [Enumberables](https://ruby-doc.org/core-2.5.3/Enumerable.html)
+- [Hashes](https://ruby-doc.org/core-2.5.3/Hash.html)
 
 <br>
 <br>
@@ -230,7 +230,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 1. Write another method called `get_primes` that will print all the Primes up to an arbitrary limit. For example, if you invoke your method with `get_primes 100`, it will print all the Prime numbers up to and including 100.
   - This method can call on the previous check_prime? method.
 
-Check out the [documentation on Ruby's Prime class](http://ruby-doc.org/stdlib-2.5.3/libdoc/prime/rdoc/Prime.html)
+Check out the [documentation on Ruby's Prime class](https://ruby-doc.org/stdlib-2.5.3/libdoc/prime/rdoc/Prime.html)
 
 Reminders:
 

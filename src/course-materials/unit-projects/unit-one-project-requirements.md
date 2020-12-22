@@ -67,12 +67,12 @@ Below is a non-exhaustive list of some free API's you can use. There are _many_ 
   2. Weather: <a href="https://openweathermap.org/api" target="_blank">https://openweathermap.org/api</a>
   3. News: <a href="https://newsapi.org/" target="_blank">https://newsapi.org/</a>
   4. Giphy: <a href="https://developers.giphy.com/">https://developers.giphy.com/</a>
-  5. Pokemon: <a href="http://pokeapi.co/">http://pokeapi.co/</a>
+  5. Pokemon: <a href="https://pokeapi.co/">https://pokeapi.co/</a>
   6. Card Deck: <a href="https://deckofcardsapi.com/" target="_blank">https://deckofcardsapi.com/</a>
   7. Google Books: <a href="https://developers.google.com/books/" target="_blank">https://developers.google.com/books/</a>
   8. City of Chicago: <a href="https://data.cityofchicago.org/" target="_blank">https://data.cityofchicago.org/</a>
   9.  Beer: <a href="https://www.brewerydb.com/developers" target="_blank">https://www.brewerydb.com/developers</a>
-  10. Chuck Norris: <a href="http://www.icndb.com/" target="_blank">http://www.icndb.com/</a>
+  10. Chuck Norris: <a href="https://www.icndb.com/" target="_blank">https://www.icndb.com/</a>
   11. Rick and Morty: <a href="https://rickandmortyapi.com/documentation/#rest" target="_blank">https://rickandmortyapi.com/documentation/#rest</a>
   12. Open Trivia DB: <a href="https://opentdb.com/" target="_blank">https://opentdb.com/</a>
   
@@ -195,7 +195,7 @@ Consider framing your project around a problem. For example, if I were to create
 ## Useful Resources
 
 * **[MDN Javascript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)**
-* **[jQuery Docs](http://api.jquery.com)**
+* **[jQuery Docs](https://api.jquery.com)**
 * **[GitHub Pages](https://pages.github.com)**
 * **[Trello](trello.com)**
 

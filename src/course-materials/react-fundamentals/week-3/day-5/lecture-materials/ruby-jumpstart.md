@@ -22,7 +22,7 @@ Congratulations everyone on completing unit 3! Now, let's move on to Unit 4! In 
     ![screenshot](https://i.imgur.com/2R78i5x.png)
 
     </details>
-1. [The Bastard's Book of Ruby](http://ruby.bastardsbook.com/toc/)
+1. [The Bastard's Book of Ruby](https://ruby.bastardsbook.com/toc/)
 
 #### While you go through one of the above tutorials, we suggest particularly paying attention on:
 

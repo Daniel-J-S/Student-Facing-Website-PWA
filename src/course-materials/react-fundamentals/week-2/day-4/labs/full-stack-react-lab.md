@@ -150,9 +150,9 @@ ReactDOM.render(
 
 Before adding a new high-score to the database, you will want to:
 
-1. Verify that the high score sent by the client is indeed a worthy high score (better than the "worst" high-score in the database). This would be a great use case for a **custom validator** function in the schema.  Check out the **Custom** section of [the docs](http://mongoosejs.com/docs/validation.html). For further assistance, perhaps [this StackOverflow](https://stackoverflow.com/questions/43962430/mongoose-how-to-prevent-mongodb-to-save-duplicate-email-records-in-database) will help.
+1. Verify that the high score sent by the client is indeed a worthy high score (better than the "worst" high-score in the database). This would be a great use case for a **custom validator** function in the schema.  Check out the **Custom** section of [the docs](https://mongoosejs.com/docs/validation.html). For further assistance, perhaps [this StackOverflow](https://stackoverflow.com/questions/43962430/mongoose-how-to-prevent-mongodb-to-save-duplicate-email-records-in-database) will help.
 
-2. After adding the new high-score, remove the worst score if the collection grows larger than the number of high-scores you want to keep.  This would be a good use case for Mongoose **post save** [middleware](http://mongoosejs.com/docs/middleware.html) on the high score schema.
+2. After adding the new high-score, remove the worst score if the collection grows larger than the number of high-scores you want to keep.  This would be a good use case for Mongoose **post save** [middleware](https://mongoosejs.com/docs/middleware.html) on the high score schema.
 
 
 <br>

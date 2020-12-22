@@ -27,7 +27,7 @@ Flexbox was introduced as part of CSS3, it has been around since ~2008. Despite 
 
 
 ### Can I use flexbox?
-Flexbox, currently has near universal support from all major modern browsers. You can find out what browsers support by going to [caniuse.com](http://caniuse.com/) , this website also documents support for just about anything else you might want to put in the browser, inclulding HTML and JavaScript. If you are wondering if you should be using `vendor prefixes` (looks like the code below) and how to write them, a great resourse is [shouldiprefix](http://shouldiprefix.com/):
+Flexbox, currently has near universal support from all major modern browsers. You can find out what browsers support by going to [caniuse.com](https://caniuse.com/) , this website also documents support for just about anything else you might want to put in the browser, inclulding HTML and JavaScript. If you are wondering if you should be using `vendor prefixes` (looks like the code below) and how to write them, a great resourse is [shouldiprefix](https://shouldiprefix.com/):
 
 ```css
 .page-wrap {
@@ -534,7 +534,7 @@ There are a handful of things this lesson did not cover. Below is the CSS-Tricks
 
 [CSS-Tricks:](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-[Flexplorer:](http://bennettfeely.com/flexplorer/)
+[Flexplorer:](https://bennettfeely.com/flexplorer/)
 
 <br>
 <br>

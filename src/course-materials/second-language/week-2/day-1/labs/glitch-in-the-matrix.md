@@ -540,7 +540,7 @@ The commit message should read: <br>
 
 ## Hungry For More?
 
-* Read through the documentation on Migrations [Active Record Migrations](http://edgeguides.rubyonrails.org/active_record_migrations.html)
+* Read through the documentation on Migrations [Active Record Migrations](https://edgeguides.rubyonrails.org/active_record_migrations.html)
 
 * Read about controllers to prepare you for your next lesson [Rails controllers](https://github.com/ga-students/wdi-remote-hopper/blob/master/unit_4/w10d05/instructor_notes/RAILS_CONTROLLERS.md)
 

@@ -68,7 +68,7 @@ If you look in those files you'll see that the generator has also provided boile
 
 * `t.timestamps` in the migration file will make handy timestamp columns in your db. It appends columns of type `:datetime` called `:created_at` and `:updated_at` to the table. You won't need to provide any data for these, they'll work automatically. Leave timestamps in for now.
 
-[Rails column types](http://stackoverflow.com/questions/11889048/is-there-documentation-for-the-rails-column-types)
+[Rails column types](https://stackoverflow.com/questions/11889048/is-there-documentation-for-the-rails-column-types)
 
 
 <br>

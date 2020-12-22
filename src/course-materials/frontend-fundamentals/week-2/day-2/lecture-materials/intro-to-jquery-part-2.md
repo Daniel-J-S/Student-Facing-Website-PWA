@@ -101,7 +101,7 @@ Let's take the above's advice and add our `app.js` **after** jQuery:
 
 ### Sprinkle in Some CSS - Bootstrap
 
-Let's also include the CDN of a popular CSS framework, [Bootstrap](http://getbootstrap.com/).
+Let's also include the CDN of a popular CSS framework, [Bootstrap](https://getbootstrap.com/).
 
 Bootstrap defines a 12-column layout grid, lots of pre-defined CSS classes for styling, components such as carousels, etc.
 
@@ -123,7 +123,7 @@ Here's what we should have so far:
 </html>
 ```
 
-[Bootstrap](http://getbootstrap.com/) also changes the default styling of most elements thus making your site more eye-pleasing out of the box.
+[Bootstrap](https://getbootstrap.com/) also changes the default styling of most elements thus making your site more eye-pleasing out of the box.
 
 <br>
 <br>
@@ -313,7 +313,7 @@ One way is to just provide a string representing the HTML to the jQuery function
 
 ```javascript
 // returns a jQuery set of new DOM elements
-var $newLink = $( '<br><br><a id="zillowLink" href="http://www.zillow.com">Visit Zillow.com</a>' );
+var $newLink = $( '<br><br><a id="zillowLink" href="https://www.zillow.com">Visit Zillow.com</a>' );
 ```
 
 > Note that the jQuery function recognizes the fact that we are passing in a string that resembles HTML instead of a CSS selector - that's how it knows to create a new element instead of selecting elements. jQuery - you're so smart!
@@ -457,7 +457,7 @@ This syntax in fact uses the `.on` method internally.
 
 > Note: Generally, more weight should be given to newer results when googling for answers to development questions.
 
-[These docs](http://api.jquery.com/category/events/) has a complete list of event methods.
+[These docs](s://api.jquery.com/category/events/) has a complete list of event methods.
 
 <br>
 <br>
@@ -543,7 +543,7 @@ Pretty cool!
 
 ### Removing Elements "Gracefully"
 
-Currently, the sudden disappearance of the home's row is a little harsh. Let's use one of jQuery's built-in [effects](http://learn.jquery.com/effects/intro-to-effects/) to help us out:
+Currently, the sudden disappearance of the home's row is a little harsh. Let's use one of jQuery's built-in [effects](s://learn.jquery.com/effects/intro-to-effects/) to help us out:
 
 ```javascript
 $('#homes tbody').on('click', 'button', function() {
@@ -635,6 +635,6 @@ var newHomes = [
 
 ## References
 
-[Manipulating Elements - jQuery Learning Center](http://learn.jquery.com/using-jquery-core/manipulating-elements/)
+[Manipulating Elements - jQuery Learning Center](s://learn.jquery.com/using-jquery-core/manipulating-elements/)
 
 [jQuery Learning Center](https://learn.jquery.com/)

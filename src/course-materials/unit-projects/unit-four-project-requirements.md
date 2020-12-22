@@ -211,7 +211,7 @@ You will have approximately 15 minutes to present your project following these g
 
 8. **Pair programming** can be a great way for team members to share knowledge and contribute to the project.
 
-9. Consider following a [Mob Programming](https://en.wikipedia.org/wiki/Mob_programming) approach where the team is always developing together on a single computer.  Read [this post](http://underthehood.meltwater.com/blog/2016/06/01/mob-programming/) for more information.
+9. Consider following a [Mob Programming](https://en.wikipedia.org/wiki/Mob_programming) approach where the team is always developing together on a single computer.  Read [this post](https://underthehood.meltwater.com/blog/2016/06/01/mob-programming/) for more information.
 
 
 <br>

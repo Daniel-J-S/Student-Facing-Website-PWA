@@ -61,7 +61,7 @@ Here are a few links that will help you learn _Markdown_:
 
 - [Another Amazing Markdown Guide](https://www.markdownguide.org/basic-syntax/)
 
-- [Markdown Tutorial](http://markdowntutorial.com/)
+- [Markdown Tutorial](https://markdowntutorial.com/)
 
 
 <br>
@@ -71,7 +71,7 @@ Here are a few links that will help you learn _Markdown_:
 
 ### Install a _Markdown_ Editor
 
-For editing and viewing _Markdown_, use VS Code or a dedicated markdown editor such as [MacDown](http://macdown.uranusjr.com/).
+For editing and viewing _Markdown_, use VS Code or a dedicated markdown editor such as [MacDown](https://macdown.uranusjr.com/).
 
 
 <br>
