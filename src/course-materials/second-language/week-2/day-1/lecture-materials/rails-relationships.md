@@ -138,7 +138,7 @@ Yay, we have two tables! Now we just need to relate them.
 
 * Generate a migration to add a column to the Todo table.
 
-```
+```shell
 rails g migration AddUserIdToTodos
 ```
 
@@ -394,7 +394,7 @@ In **seed.rb**
 
 Undoing migrations:
 
-```
+```shell
 rails db:rollback
 ```
 
@@ -402,7 +402,7 @@ Rolls back the last migration.
 
 To go all the way back to the beginning, we can use
 
-```
+```shell
 rails db:migrate VERSION=0
 ```
 

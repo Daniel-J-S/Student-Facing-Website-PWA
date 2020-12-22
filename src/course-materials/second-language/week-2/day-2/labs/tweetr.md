@@ -256,7 +256,7 @@ The commit message should read: <br>
 
 Test your routes by typing `rails routes` in the console. You should get a table with all of your paths laid out for each route:
 
-```
+```shell
       Prefix Verb   URI Pattern               Controller#Action
      tweets GET    /tweets(.:format)          tweets#index
            POST   /tweets(.:format)          tweets#create
