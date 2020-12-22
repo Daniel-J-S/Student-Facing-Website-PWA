@@ -12,5 +12,5 @@ topics: "Rails Scaffold API & CRA"
 
 #### Rails Scaffold API & CRA
 
-<!-- - [**Warmup:** Rails Scaffold API & Create React App](/second-language/week-2/day-3/lecture-materials/rails-scaffold-api-cra) -->
-- **Warmup:** Rails Scaffold API & Create React App
+- [**Warmup:** Rails Scaffold API & Create React App](/second-language/week-2/day-3/lecture-materials/rails-scaffold-api-cra)
+<!-- - **Warmup:** Rails Scaffold API & Create React App -->
