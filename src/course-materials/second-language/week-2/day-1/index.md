@@ -17,6 +17,11 @@ topics: "Intro to Rails & Rails Relationships"
 - [**Lab:** Rails Relationships Group Lab](/second-language/week-2/day-1/labs/rails-relationships-group-lab) - **Non Deliverable**
 - [**Lab:** Glitch in the Matrix](/second-language/week-2/day-1/labs/glitch-in-the-matrix) - **Deliverable**
 
+<br>
+<hr>
+<br>
+
+
 ### Recordings
 
 - [**Intro to Rails with Daniel**](https://generalassembly.zoom.us/rec/share/QApB-K5tVkZkAyD7G9WNwNqpkIakj3HzR960DYA-J91k_HHSeG3yPCPrjyFx_kns.EDqYE59qR9HV32fp?startTime=1608563008000)
