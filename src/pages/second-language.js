@@ -11,37 +11,37 @@ export default({ data, location }) => {
    const { allMarkdownRemark } = data;
 
     const weekOneLessons = allMarkdownRemark.edges.filter(({ node }) => 
-        node.frontmatter.week === 1
+      node.frontmatter.week === 1
       ).map(({ node }) =>
         <Link to={node.fields.slug}>
           <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
         </Link> 
-      );
+    );
       const weekTwoLessons = allMarkdownRemark.edges.filter(({ node }) => 
-      node.frontmatter.week === 2
-      ).map(({ node }) =>
-      <Link to={node.fields.slug}>
-          <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
-        </Link> 
+        node.frontmatter.week === 2
+        ).map(({ node }) =>
+          <Link to={node.fields.slug}>
+            <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
+          </Link> 
       );
       
       
       const weekThreeLessons = allMarkdownRemark.edges.filter(({ node }) => 
-      node.frontmatter.week === 3
-      ).map(({ node }) =>
-        <Link to={node.fields.slug}>
-          <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
-        </Link> 
+        node.frontmatter.week === 3
+        ).map(({ node }) =>
+          <Link to={node.fields.slug}>
+            <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
+          </Link> 
       );
       
-      /* uncomment out when ready to release
       const weekFourLessons = allMarkdownRemark.edges.filter(({ node }) => 
         node.frontmatter.week === 4
-      ).map(({ node }) =>
-        <Link to={node.fields.slug}>
-          <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
-        </Link> 
+        ).map(({ node }) =>
+          <Link to={node.fields.slug}>
+            <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
+          </Link> 
       );
+      /* uncomment out when ready to release
       */
     return (
         <Layout
@@ -63,12 +63,13 @@ export default({ data, location }) => {
               <br />
               <h2>Holiday Week</h2>  
               { weekThreeLessons }
-              {/* uncomment out when ready to release
               <br />
               <hr />
               <br />
-              <h2>Project Week & Graduation</h2>  
-              { weekFourLessons }  */}
+              <h2>Week 4</h2>  
+              { weekFourLessons }  
+              {/* uncomment out when ready to release
+              */}
             </main>
         </Layout>
     );
