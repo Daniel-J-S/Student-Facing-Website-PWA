@@ -63,12 +63,12 @@ export default({ data, location }) => {
               <br />
               <h2>Holiday Week</h2>  
               { weekThreeLessons }
+              {/* uncomment out when ready to release
               <br />
               <hr />
               <br />
               <h2>Week 4</h2>  
               { weekFourLessons }  
-              {/* uncomment out when ready to release
               */}
             </main>
         </Layout>
