@@ -40,7 +40,7 @@ rails new books_app_api --api -d postgresql --skip-git
 * Change into your project directory:
 
 ```bash
-cd tweeter_app_api
+cd books_app_api
 ```
 
 * Create your database in your project directory

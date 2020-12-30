@@ -25,16 +25,16 @@ export default({ data, location }) => {
         </Link> 
       );
       
-      /* uncomment out when ready to release
       
       const weekThreeLessons = allMarkdownRemark.edges.filter(({ node }) => 
       node.frontmatter.week === 3
       ).map(({ node }) =>
-      <Link to={node.fields.slug}>
+        <Link to={node.fields.slug}>
           <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
         </Link> 
       );
-   
+      
+      /* uncomment out when ready to release
       const weekFourLessons = allMarkdownRemark.edges.filter(({ node }) => 
         node.frontmatter.week === 4
       ).map(({ node }) =>
@@ -58,12 +58,12 @@ export default({ data, location }) => {
               <br />
               <h2>Week 2</h2>  
               { weekTwoLessons }
-              {/* uncomment out when ready to release
               <br />
               <hr />
               <br />
               <h2>Holiday Week</h2>  
               { weekThreeLessons }
+              {/* uncomment out when ready to release
               <br />
               <hr />
               <br />
