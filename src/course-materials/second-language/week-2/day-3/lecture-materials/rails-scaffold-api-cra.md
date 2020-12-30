@@ -81,11 +81,11 @@ React App (our frontend): consumes the API
 
 The directory `noticeboard_app` will contain both our Rails server and our Create React App (`noticeboard_client` is our Create React app that has some starter code).  
 
-Inside this directory we will put both our apps. 
+Inside this directory we will put both our apps - the front-end (client) and back-end (api AKA server). 
 
-We are only putting them together in here for convenience so that we can open them in our text editor easily. 
+We are only putting them together in here to keep them organized. Make sure you open each one in a separate VS Code window, and each one has it's own separate git repo. WARNING: Do not create a git repo in the `noticeboard_app` folder or you will have deployment issues. 
 
-They can exist on separate systems (that is the point).
+These 2 separate apps can exist on separate systems (that is the point).
 
 <br>
 <br>
@@ -99,16 +99,15 @@ Remember to add flags for
 
 * api option `--api`
 * database option `-d postgresql`
-* skip git option `--skip-git`
 * skip active storage option `--skip-active-storage` (this is some extra stuff that assists with uploading photos and other media/large files to a service like S3 or Amazon Cloud services)
 
-* `rails new noticeboard_api --api -d postgresql --skip-git --skip-active-storage`
-
-Do not go into the directory yet.
+* `rails new noticeboard_api --api -d postgresql --skip-active-storage`
 
 Tree structure: The `noticeboard_app` directory contains both the `_api` and `_client` directories.
 
-* Open up the entire `noticeboard_app` directory in your text editor. You should **eventually** see both `noticeboard_api` and `noticeboard_client` in there. But for now, we'll just have the api back end folder. We'll make the react client in the next lesson.
+* Open each child folder (noticeboard_api, and noticeboard_client) in a separate window of your text editor.
+
+If you would like help keeping each window separate so you remember which is which, download the Peacock VS Code extension. It lets you give each window a different color.
 
 <br>
 <br>

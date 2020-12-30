@@ -1,16 +1,18 @@
 ---
 track: "Second Language"
-title: "Day 1"
+title: "Week 4 Day 1"
 week: 4
 day: 1
 type: "homepage"
-topics: "Project 4"
+topics: "One to Many Relationships"
 ---
 
 
 # Week 4 - Day 1
 
-#### Project 4
+#### Rails Relationships
 
-**Students Finish Project 4**
+- [**Lecture:** Rails One to Many Relationships](/second-language/week-4/day-1/lecture-materials/rails-one-to-many)
+- [**Lecture:** One to Many Relationships (React Frontend)](/second-language/week-4/day-1/lecture-materials/one-to-many-frontend)
+- [**Lecture:** Rails One to Many Lab](/second-language/week-4/day-1/labs/rails-one-to-many-lab)
 
