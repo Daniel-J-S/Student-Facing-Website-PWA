@@ -15,4 +15,5 @@ topics: "Many to Many Relationships"
 - [**Lecture:** Rails Many to Many Relationships](/second-language/week-4/day-2/lecture-materials/rails-many-to-many)
 - [**Lab:** Playlists **>--<** Songs Lab](/second-language/week-4/day-2/lecture-materials/rails-many-to-many#another-example---playlists-and-songs)
 - [**Lecture:** Rails Heroku Deployment](/second-language/week-4/day-2/lecture-materials/rails-heroku-deployment)
+- [**Activity:** Review Project 4 Requirements](/unit-projects/unit-four-project-requirements)
 
