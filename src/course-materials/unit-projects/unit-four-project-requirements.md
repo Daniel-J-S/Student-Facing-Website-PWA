@@ -69,6 +69,7 @@ Working in a team is going to require more upfront planning to ensure the team i
 <br>
 <br>
 <br>
+<br>
 
 ### Project Approval
 
@@ -78,6 +79,11 @@ Be sure to write out what features you will need to build in order to meet MVP a
 - A repo with a `README` for the front end
 - A Trello with sized user stories that encompass all major features of the project
 - A role assignment for all group members (at least one)
+
+<br>
+<br>
+<br>
+
 
 ### Project Assignment and Roles
 
@@ -89,6 +95,10 @@ Once teams are set, groups should decide upon the following roles. Everyone must
 - Lead back-end dev (responsible for breaking ties when the group has disagreements on back-end coding, and for designing a general plan for back-end development, e.g. file structure and schema definitions)
 
 These roles may not seem important now, but when disagreements inevitably enter the dialog, it is important for someone to be responsible for specific parts of the application.
+
+<br>
+<br>
+<br>
 
 ### Presentations
 
