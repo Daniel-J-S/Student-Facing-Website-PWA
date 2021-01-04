@@ -40,10 +40,11 @@ This is the final product we're shooting for:
 Make our Frontend app.
 
 In the top-level `temperatures`
-- `create-react-app temperatures_client`
+- `npx create-react-app temperatures_client`
 - `cd temperatures_client`
+- Open with VS Code `code .`
 - `touch .env`
-    - insisde `.env` type `PORT=3001` (set default port to always be 3001, since rails default port is 3000 - notice: no spaces, no quotes, port is all caps)
+    - inside `.env` type `PORT=3001` (set default port to always be 3001, since rails default port is 3000 - notice: no spaces, no quotes, port is all caps) - _You can also do this with one command like this: `echo 'PORT=3001' > .env`_
     - ![screenshot](https://i.imgur.com/9sgKZDq.png)
 - in `package.json` set `proxy` to be `http://localhost:3000`
     - ![screenshot](https://i.imgur.com/f6o4zfB.png)
@@ -51,6 +52,7 @@ In the top-level `temperatures`
   - `npm install chart.js`
   - `mkdir src/components`
   - `touch src/components/BarChart.js`
+- Get your Dev Server started with `npm start`
 
 
 <br>
@@ -113,7 +115,7 @@ Using Chrome's **fetch** command we can make AJAX requests with 'vanilla' javaSc
 
 Let's get all of our locations from our Rails API.
 
-Make an AJAX request to get locations in `App.js`:
+Make an AJAX request to get locations in `BarChart.js`:
 
 ```javascript
 // make sure we import the useEffect hook from react
@@ -126,7 +128,7 @@ import { useEffect } from 'react';
 // Make the AJAX request using helper function below once the component mounts to the DOM
 useEffect(() => {
   getAppData();
-}, []);
+});
 
 
 // Define a helper for making our AJAX request
@@ -230,7 +232,7 @@ Now let's bring in our data:
 
 useEffect(() => {
   getAppData();
-}, []);
+});
 
 
 function getAppData() {
@@ -289,7 +291,7 @@ function prepareData(data) {
 
 useEffect(() => {
   getAppData();
-}, []);
+});
 
 function getAppData() {
   fetch('/locations/1')
@@ -319,7 +321,7 @@ function prepareData(data) {
 
 function createChart(data) {
   const ctx = document.querySelector('#temperatures');
-  const tempsChart = new Chart(ctx, {
+  new Chart(ctx, {
     type: 'line',
     data: data
   });
@@ -342,7 +344,7 @@ function BarChart() {
 
   useEffect(() => {
      getAppData();
-  }, []);
+  });
 
   function getAppData() {
     fetch('/locations/1')
