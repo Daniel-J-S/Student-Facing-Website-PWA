@@ -70,6 +70,26 @@ Working in a team is going to require more upfront planning to ensure the team i
 <br>
 <br>
 
+### Project Approval
+
+Be sure to write out what features you will need to build in order to meet MVP and some stretch goal ideas. Come prepared with:
+
+- A repo with a `README` for the back end
+- A repo with a `README` for the front end
+- A Trello with sized user stories that encompass all major features of the project
+- A role assignment for all group members (at least one)
+
+### Project Assignment and Roles
+
+Once teams are set, groups should decide upon the following roles. Everyone must have **at least one** of these roles, but smaller groups will have a member with two roles. We **do not advise one person to be both release manager and product manager**, as it is a direct conflict of interest ("let's get those features out--no, we need to make sure the code is clean first!").
+
+- Release manager (responsible for handling branches, keeping `master` safe, and resolving merge conflicts if the developers cannot resolve them)
+- Product manager (responsible for prioritizing tasks so that the user gets the most out of the app -- this will usually be the originator of the project idea)
+- Lead front-end dev (responsible for breaking ties when the group has disagreements on front-end coding, and for designing a general plan for front-end development, e.g. file structure and `state` management)
+- Lead back-end dev (responsible for breaking ties when the group has disagreements on back-end coding, and for designing a general plan for back-end development, e.g. file structure and schema definitions)
+
+These roles may not seem important now, but when disagreements inevitably enter the dialog, it is important for someone to be responsible for specific parts of the application.
+
 ### Presentations
 
 **Your entire team must participate in the presentation of the project.**
