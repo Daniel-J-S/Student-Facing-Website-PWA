@@ -12,6 +12,7 @@ topics: "Many to Many Relationships"
 
 #### Many to Many Relationships
 
+- [**Morning Warmup:** Happy Fun Ball - More Practice with Git](/second-language/week-4/day-2/lecture-materials/happy-fun-ball/)
 - [**Lecture:** Rails Many to Many Relationships](/second-language/week-4/day-2/lecture-materials/rails-many-to-many)
 - [**Lab:** Playlists **>--<** Songs Lab](/second-language/week-4/day-2/lecture-materials/rails-many-to-many#another-example---playlists-and-songs)
 - [**Lecture:** Rails Heroku Deployment](/second-language/week-4/day-2/lecture-materials/rails-heroku-deployment)
