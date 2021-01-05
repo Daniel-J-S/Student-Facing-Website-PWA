@@ -29,6 +29,10 @@ This will make `app/controllers/welcome_controller.rb`
 
 If you don't set a root, Heroku will get confused. Let's make it so our app will root to the index method of the welcome controller:
 
+
+<br>
+
+
 In `config/routes.rb`:
 
 ```ruby
@@ -36,6 +40,12 @@ root 'welcome#index'
 ```
 
 ![screenshot](https://i.imgur.com/bg7F7rz.png)
+
+
+<br>
+<br>
+<br>
+
 
 In the welcome controller file, let's send some stuff from the index method:
 
