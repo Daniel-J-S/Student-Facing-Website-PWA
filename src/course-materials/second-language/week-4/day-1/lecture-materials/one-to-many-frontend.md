@@ -320,10 +320,10 @@ function prepareData(data) {
 }
 
 function createChart(data) {
-  const ctx = document.querySelector('#temperatures');
+  const ctx = document.getElementById('temperatures');
   new Chart(ctx, {
     type: 'line',
-    data: data
+    data
   });
 }
 
@@ -377,10 +377,10 @@ function BarChart() {
   }
   
   function createChart(data) {
-      const ctx = document.querySelector('#temperatures')
+      const ctx = document.getElementById('temperatures')
       new Chart(ctx, {
           type: 'line',
-          data: data,
+          data,
       });
   }
     return (
@@ -423,7 +423,7 @@ We'll push in the `average_low_f` data.
 Push in the low temps:
 
 ```javascript
-  json.temperatures.forEach((temperature) => {
+  data.temperatures.forEach(temperature => {
     chartData.labels.push(temperature.month);
     chartData.datasets[0].data.push(temperature.average_high_f);
     chartData.datasets[1].data.push(temperature.average_low_f);
