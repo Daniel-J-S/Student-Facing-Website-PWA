@@ -30,15 +30,6 @@ During this project, your instructors are going to be evaluating **your ability 
 
 In fact, **your ability to work in a team during this project is more important to your instructors than the project itself**.
 
-<br>
-<br>
-<br>
-<br>
-
-
-## Planning & Presentation Requirements
-
-Working in a team is going to require more upfront planning to ensure the team is "on the same page"... we recommend that you take full advantage of all the planning tools and techniques we've shown you thus far ... i.e. Trello, Wireframes, ERD's ... etc.
 
 <br>
 <br>
