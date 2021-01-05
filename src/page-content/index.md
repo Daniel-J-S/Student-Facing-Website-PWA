@@ -6,16 +6,6 @@ title: "Home"
 
 This website contains assignments and materials for General Assembly's SEIR Program. 
 
-<p style="color: crimson;"><b>Scroll down to access curriculum content ↓</b></p>
-
-
-<br>
-<br>
-<br>
-
-## Weekly Agenda
-
-<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23616161&amp;ctz=America%2FNew_York&amp;src=Y19sOGhlZGZwcGJjMGo4aDNiNHNuazhwdHNjMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%234285F4&amp;showNav=0&amp;showDate=1&amp;showTabs=0&amp;showCalendars=1&amp;mode=WEEK" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
 <br>
 <br>
@@ -27,7 +17,7 @@ This website contains assignments and materials for General Assembly's SEIR Prog
 All material is subject to change at Instructors discretion.
 
 
-<p style="color: crimson; text-decoration: underline"><b>Click on Unit Heading to Access Content 🔍</b></p>
+<p style="color: crimson; text-decoration: underline"><b>Click on A Unit Heading Below to Access Content 🔍</b></p>
 
 <br>
 <br>
