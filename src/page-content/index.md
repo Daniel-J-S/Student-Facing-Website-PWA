@@ -80,5 +80,6 @@ All material is subject to change at Instructors discretion.
 
 | Week  | Topics |
 | ----- | ------ |
-| 14  | Self Directed Learning, Review & Capstone Project |
+| 14  | [Self Directed Learning, Review & Capstone Project](/capstone) |
 | 15  | Final Prep of Capstone Project and Graduation 🥳 🎉|
+| Post Graduation  | [Guide for building a Portfolio Site](/portfolio)|
