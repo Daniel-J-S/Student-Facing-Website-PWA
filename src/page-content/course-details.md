@@ -165,7 +165,7 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 | [Styling React Components Lab](/react-fundamentals/week-2/day-1/labs/styling-components-lab/)| 12/07/20 |
 | [React Star Wars Lab](/react-fundamentals/week-2/day-2/lecture-materials/react-with-ajax/)| 12/08/20 |
 
- -->
+-->
 
 <br>
 <br>
