@@ -18,14 +18,17 @@ topics: "Many to Many Relationships"
 - [**Lecture:** Rails Heroku Deployment](/second-language/week-4/day-2/lecture-materials/rails-heroku-deployment)
 - [**Activity:** Review Project 4 Requirements](/unit-projects/unit-four-project-requirements)
 
-
+<!-- 
+<br>
 <br>
 <hr>
 <br>
+<br>
 
-#### Recordings
+#### Lesson Recordings
 
-- [**Happy Fun Ball Exercise with Ayla**](https://generalassembly.zoom.us/rec/share/fljLilUIvB2yibyTzJesf-a5J58lGapom6FifzQIWvHV4PGO9T-9YDvX12rdj1Cx.0Dna72RfpxgtQKQI?startTime=1609859021000)
-- [**Many to Many Relationships with Ira**](https://generalassembly.zoom.us/rec/share/fljLilUIvB2yibyTzJesf-a5J58lGapom6FifzQIWvHV4PGO9T-9YDvX12rdj1Cx.0Dna72RfpxgtQKQI?startTime=1609864429000)
-- [**Project 4 Requirements Review with Instructional Team**](https://generalassembly.zoom.us/rec/share/fljLilUIvB2yibyTzJesf-a5J58lGapom6FifzQIWvHV4PGO9T-9YDvX12rdj1Cx.0Dna72RfpxgtQKQI?startTime=1609883303000)
+- [**Happy Fun Ball Exercise**]()
+- [**Many to Many Relationships**]()
+- [**Project 4 Requirements Review**]()
 
+-->
