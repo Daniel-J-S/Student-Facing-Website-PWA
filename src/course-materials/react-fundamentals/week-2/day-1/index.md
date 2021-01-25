@@ -16,11 +16,17 @@ topics: "Intro to State, Props & Styling Components"
 - [**Lab:** React Students Lab](/react-fundamentals/week-2/day-1/labs/react-students-lab/) - **Deliverable**
 - [**Lab:** Styling Components Lab](/react-fundamentals/week-2/day-1/labs/styling-components-lab/) - **Deliverable**
 
+<!-- 
+
+<br>
 <br>
 <hr>
+<br>
 <br>
 
 #### Lesson Recordings
 
-- [**Intro to State and Props with Daniel**](https://generalassembly.zoom.us/rec/share/ZxatvKcRBJF4qDMPiH-UkQmYVWTW3kDfOz41sknCNRAYB-B7j5zo3hJKLnc_E60.2znlMi3kISLEBhfO?startTime=1606748655000)
-- [**Intro to Styling React Components with Ira**](https://generalassembly.zoom.us/rec/share/ZxatvKcRBJF4qDMPiH-UkQmYVWTW3kDfOz41sknCNRAYB-B7j5zo3hJKLnc_E60.2znlMi3kISLEBhfO?startTime=1606764911000)
+- [**Intro to State and Props**]()
+- [**Intro to Styling React Components**]() 
+
+-->
