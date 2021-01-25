@@ -15,10 +15,15 @@ topics: "SQL and Relational Databases"
 - [**Lecture:** Intro to SQL and Relational Databases](/second-language/week-1/day-5/lecture-materials/intro-to-sql-and-relational-databases/)
 - [**Lab:** Carmen San Diego Lab](/second-language/week-1/day-5/labs/carmen-san-diego-lab/) - **Non-Deliverable**
 
+<!-- 
+<br>
 <br>
 <hr>
 <br>
+<br>
 
-### Recordings
+### Lesson Recordings
 
-- [**Intro to Relational Databases and SQL with Daniel**](https://generalassembly.zoom.us/rec/share/3UWg5B3W0vqAjTNRl0Aejce6v0eOEMfgpz6x_2zgdBd764H9IA88AIolhdfaS77t.WZtBsJmKmDCwy-lI?startTime=1608312353000)
+- [**Intro to Relational Databases and SQL**]() 
+
+-->
