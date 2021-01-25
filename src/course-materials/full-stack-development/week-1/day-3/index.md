@@ -15,14 +15,18 @@ topics: "Intro to Express Routers and Controllers"
 - [**Lab:** Express Dev Skills Part 1 of 2](/full-stack-development/week-1/day-3/labs/express-dev-skills-part-1/) - **Parts 1 and 2 Are Deliverable**
 
 
-
+<!-- 
 
 <br>
+<br>
 <hr>
+<br>
 <br>
 
 
 
 #### Lesson Recordings
 
-- [**Intro to Express Routers and Controllers With Ira**](https://generalassembly.zoom.us/rec/share/py6e9qXt3cAU9tcyVepSy2YYNPHfMWJAxaRuSKphCXFKb_MEAWjfY-_IztHS0KAn.Om9n_N5tZ8C9G4UK?startTime=1604502435000)
+- [**Intro to Express Routers and Controllers**]() 
+
+-->
