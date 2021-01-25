@@ -15,22 +15,20 @@ topics: "Authentication"
 - [**Lecture:** Intro to Authentication With Bcrypt & Sessions](/full-stack-development/week-2/day-5/lecture-materials/authentication-with-bcrypt-and-sessions/)
 - [**Advanced Material Resource:** Intro to Authentication With Oauth](/full-stack-development/week-2/day-5/lecture-materials/authentication-with-oauth/)
 
+
+<!-- 
+<br>
 <br>
 <hr>
+<br>
 <br>
 
 
 
 #### Lesson Recordings
 
-- [**Intro to Authentication With Daniel**](https://generalassembly.zoom.us/rec/share/Fl0qAAQOGjKawt50BiY3cifCl6TaWI4GctWmBsdAzNlTJO3Uih0avBqRoAgzZSCT.eXSqLAjMBTqSiJU3?startTime=1605282262000)
-
-  
+- [**Intro to Authentication**]()
 
 
 
-
-
-
-
-
+-->
