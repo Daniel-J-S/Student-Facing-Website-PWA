@@ -16,19 +16,22 @@ topics: "Catch up on Labs - Review Express - Bonus Content"
 
 
 
-
+<!-- 
 
 <br>
+<br>
 <hr>
+<br>
 <br>
 
 
 
 #### Lesson Recordings
 
-- [**HTML/CSS Forms With Ayla**](https://generalassembly.zoom.us/rec/share/hxL8fTuEi9dNaWXtY_Nq4ICLbi4zApt-lHvnx1sw93AuBz6GJRpWS1TPdm2oTFQ7.lL5sI2Gf6y21fBp6?startTime=1604934172000)
-- [**Express/Mongoose Review With Daniel**](https://generalassembly.zoom.us/rec/share/hxL8fTuEi9dNaWXtY_Nq4ICLbi4zApt-lHvnx1sw93AuBz6GJRpWS1TPdm2oTFQ7.lL5sI2Gf6y21fBp6?startTime=1604951368000)
+- [**HTML/CSS Forms**]()
+- [**Express/Mongoose Review**]()
 
+-->
 
 
 

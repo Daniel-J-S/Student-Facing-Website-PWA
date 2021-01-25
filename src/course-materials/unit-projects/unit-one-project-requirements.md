@@ -72,9 +72,8 @@ Below is a non-exhaustive list of some free API's you can use. There are _many_ 
   7. Google Books: <a href="https://developers.google.com/books/" target="_blank">https://developers.google.com/books/</a>
   8. City of Chicago: <a href="https://data.cityofchicago.org/" target="_blank">https://data.cityofchicago.org/</a>
   9.  Beer: <a href="https://www.brewerydb.com/developers" target="_blank">https://www.brewerydb.com/developers</a>
-  10. Chuck Norris: <a href="https://www.icndb.com/" target="_blank">https://www.icndb.com/</a>
-  11. Rick and Morty: <a href="https://rickandmortyapi.com/documentation/#rest" target="_blank">https://rickandmortyapi.com/documentation/#rest</a>
-  12. Open Trivia DB: <a href="https://opentdb.com/" target="_blank">https://opentdb.com/</a>
+  10. Rick and Morty: <a href="https://rickandmortyapi.com/documentation/#rest" target="_blank">https://rickandmortyapi.com/documentation/#rest</a>
+  11. Open Trivia DB: <a href="https://opentdb.com/" target="_blank">https://opentdb.com/</a>
   
 Lastly, the following sites congregates a bunch of API's together, so you can take a look through their libraries and try to find an API that interests you! <br>Note, however, that not all API's are free and many listed may require payment. <br>We **highly suggest** to use a free API for your first project dealing with one. 
 

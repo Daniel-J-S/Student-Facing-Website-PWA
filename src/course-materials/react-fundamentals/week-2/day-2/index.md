@@ -16,12 +16,17 @@ topics: "Intro to Event Handling & AJAX"
 - [**Lab:** React Event Handling Lab](/react-fundamentals/week-2/day-2/labs/react-event-handling-and-program-logic-lab) - **Non-Deliverable**
 - [**Lab:** React Star Wars AJAX Lab](/react-fundamentals/week-2/day-2/labs/star-wars-api-react-lab) - **Deliverable**
 
+<!-- 
 
 <br>
+<br>
 <hr>
+<br>
 <br>
 
 #### Lesson Recordings
 
-- [**Event Handling With React with Daniel**](https://generalassembly.zoom.us/rec/share/TZU-UkbCdAPj6Pu7uUC7Aw3ujG7zyW6mp0n6H7gWznZWEsVDADGHAGDAoKlhK0m-.3Dj4TSMEyNlEvb4-?startTime=1606836113000)
-- [**React With AJAX with Ira**](https://generalassembly.zoom.us/rec/share/TZU-UkbCdAPj6Pu7uUC7Aw3ujG7zyW6mp0n6H7gWznZWEsVDADGHAGDAoKlhK0m-.3Dj4TSMEyNlEvb4-?startTime=1606851130000)
+- [**Event Handling With React**]()
+- [**React With AJAX**]() 
+
+-->

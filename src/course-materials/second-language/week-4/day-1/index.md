@@ -18,11 +18,16 @@ topics: "One to Many Relationships"
 - [**Lab:** Stock Prices Lab](/second-language/week-4/day-1/labs/stock-prices-lab)
 - [**Additional Credit Lab:** Products and Reviews](/second-language/week-4/day-1/labs/products-and-reviews-lab)
 
+
+<!-- 
+<br>
 <br>
 <hr>
 <br>
+<br>
 
-#### Recordings
+#### Lesson Recordings
 
-- [**One to Many Relationships with Rails (React Frontend) with Ira & Daniel**](https://generalassembly.zoom.us/rec/share/N_MkZVM6n0yhgyQ5VFHWqG9gJ0ODQvtYg4eXSY_nrBNrD2zLz_ycHQkyxOPBN8_T.3EJ6OoxJDyzGn7WM?startTime=1609772709000)
+- [**One to Many Relationships with Rails (React Frontend)**]()
 
+-->

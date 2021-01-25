@@ -255,6 +255,8 @@ __pycache__/
 <br>
 <br>
 
+<!-- 
+
 ## Installing Spectacle
 
 Install [Spectacle](https://www.spectacleapp.com/) for resizing windows.
@@ -268,3 +270,5 @@ This free "productivity" tool is invaluable when it comes to minimizing the time
 
 Create an account on [imgur.com](https://imgur.com/) and install [mac2imgur](https://github.com/mileswd/mac2imgur) to ease uploading screenshots and other images from your computer to your imgur account.
 
+
+-->

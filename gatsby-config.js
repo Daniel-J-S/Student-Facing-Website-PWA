@@ -5,19 +5,21 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'SEIR "Curiosity" 10/12',
+    title: 'SEIR 02/08',
     author: 'DanielJS',
     currentYear: new Date().getFullYear(),
-    description: 'An interactive website for students currently enrolled in the General Assembly Software Engineering Immersive Remote Program',
+    description: 'An interactive website for students currently enrolled in the General Assembly Software Engineering Immersive remote program',
     keywords: 'software engineer, software engineering, coding, javascript, html, css',
     navigationLinks: [
       {title: 'Home', slug: '/'},
       {title: 'Course Details', slug: '/course-details'},
+      /* Will consider adding this back once we have more challenges
       {title: 'Coding Challenges', slug: '/coding-challenges'},
+      */
     ],
     homeworkSubmissionLink: {
       title: 'Submit Homework',
-      href: 'https://forms.gle/XJ3RsQ85p8DbYAab9'
+      href: 'https://forms.gle/1bfEN8cxnArVqjnc8'
     }
   },
   plugins: [
@@ -107,9 +109,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `General Assembly - SEIR Flex 04/07 Cyberpunk 2020`,
+        name: `General Assembly - Full Time SEIR Program`,
         short_name: `GA`,
-        description: `Our Student-Facing website expressed as a progressive web app!`,
+        description: `Our student-facing website expressed as a progressive web app!`,
         lang: `en`,
         display: `standalone`,
         icon: `static/ga-logo.svg`,

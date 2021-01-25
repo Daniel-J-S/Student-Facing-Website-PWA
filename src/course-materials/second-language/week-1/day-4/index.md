@@ -16,16 +16,16 @@ topics: "Review of Ruby Methods/Enumerables & Intro to Ruby Classes"
 - [**Lab:** Ruby Black Jack](/second-language/week-1/day-4/labs/ruby-blackjack) - **Deliverable**
 - [**Optional Lab:** Ruby Classes (More Practice)](/second-language/week-1/day-4/labs/ruby-classes-lab)
 
+<!-- 
+<br>
 <br>
 <hr>
 <br>
+<br>
 
-### Recordings
+### Lesson Recordings
 
-- [**Ruby Methods and Enumerables Activity**](https://generalassembly.zoom.us/rec/share/z0AU7wNqF3_cFX8NER1zHSJIqiWetECWZTZi5Ke1ViTk_CHiT-KKEINKftdK6Ip_.oy775p_NemKVwNnM?startTime=1608220429000)
-- [**Ruby Classes with Ira**](https://generalassembly.zoom.us/rec/share/z0AU7wNqF3_cFX8NER1zHSJIqiWetECWZTZi5Ke1ViTk_CHiT-KKEINKftdK6Ip_.oy775p_NemKVwNnM?startTime=1608225595000)
+- [**Ruby Methods and Enumerables Activity**]()
+- [**Ruby Classes**]()
 
-
-
-
-
+-->

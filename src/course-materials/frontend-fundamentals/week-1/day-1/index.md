@@ -19,17 +19,18 @@ topics: "Classroom Culture, the Dev Environment & Git/Github"
 - [**Lab:** Exploring Markdown](/frontend-fundamentals/week-1/day-1/labs/exploring-markdown/) - **Non-Deliverable**
 - [**Lab:** Git/Github and the Terminal Lab](/frontend-fundamentals/week-1/day-1/labs/git-github-and-the-terminal/) - **Non-Deliverable**
 
+<!-- 
 
 <br>
 <br>
-
 <hr>
+<br>
+<br>
 
-<br>
-<br>
 
 #### Lesson Recordings
 
-- [**Classroom Culture & Success Tips**](https://generalassembly.zoom.us/rec/share/zgul6vZ_WStL3JxL4fE5bYvFrx1J3gIgqy41Nm-CdXOFxCSHEfLz7VelhKW3Fk0u.aSBR3E0wLKx9w9A-?startTime=1602511271000)
-- [**Installfest - Phase One: Mac Users**](https://generalassembly.zoom.us/rec/play/IlQgEOW8gU7GYg4512J5EFwICuEQkxEY7qJNVGWhjJC9xQtUM_ulZl_xmtpLLYRVhWJ6BE9RVTtAaPjA.INTI53apJKTjw7cf?autoplay=true&startTime=1602520294000)
-- [**Intro to the Dev Environment & Intro to Git/Github**](https://generalassembly.zoom.us/rec/share/zgul6vZ_WStL3JxL4fE5bYvFrx1J3gIgqy41Nm-CdXOFxCSHEfLz7VelhKW3Fk0u.aSBR3E0wLKx9w9A-?startTime=1602527705000)
+- [**Classroom Culture & Success Tips**]()
+- [**Installfest - Phase One: Mac Users**]()
+- [**Intro to the Dev Environment & Intro to Git/Github**]()
+-->

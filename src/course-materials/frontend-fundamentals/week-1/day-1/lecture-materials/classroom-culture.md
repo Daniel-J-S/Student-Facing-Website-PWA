@@ -30,10 +30,9 @@ type: "lecture"
 
 - Ira Herman - Instructor Lead
 - Daniel Scott - Instructor Lead
-- Ayla Ex - Instructor Associate
 - Paul Chapman - Instructor Associate
-- Aegean Thompson - Teachers Assistant
-- Bradford Smith - Outcomes Coach
+- Michael Merlo - Teachers Assistant
+- TBT - Outcomes Coach
 
 
 <br>
@@ -76,11 +75,11 @@ type: "lecture"
 
 #### 5 channels
 
-	- #curiosity-classroom
-	- #curiosity-outcomes
-	- #curiosity-random
-	- #curiosity-tech-support
-	- #curiosity-resources
+	- #cohort-name-classroom
+	- #cohort-name-outcomes
+	- #cohort-name-random
+	- #cohort-name-tech-support
+	- #cohort-name-resources
 	
 	
 
@@ -89,7 +88,7 @@ type: "lecture"
 
 #### How To:
 
-##### Communicate in one of the curiosity channels:
+##### Communicate in one of the classroom slack channels:
 
 	- @username
 		- sends a notification to a specific user
