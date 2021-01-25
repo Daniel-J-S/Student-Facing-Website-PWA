@@ -2,9 +2,9 @@
 title: "Home"
 ---
 
-# SEIR 10/12/2020 - "Curiosity"
+# SEIR 02/08/2021
 
-This website contains assignments and materials for General Assembly's SEIR Program. 
+This website contains assignments and materials for General Assembly's SEIR program. 
 
 
 <br>
