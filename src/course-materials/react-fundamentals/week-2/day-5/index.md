@@ -15,13 +15,17 @@ topics: "Token-Based Authentication with React"
 - **Activity:** Project Planning
 - [**Advanced Exercise Resource:** Handling Input In React](/react-fundamentals/week-2/day-5/lecture-materials/handling-input-in-react/)
 
+
+<!-- 
+<br>
 <br>
 <hr>
 <br>
+<br>
 
-#### Recordings
+#### Lesson 
 
-- [**Controlled Components with Daniel**](https://generalassembly.zoom.us/rec/share/pOptuSFKz3ZMqED-5m_MVMT4CpzBytIWW_SoG4sinYVqJ28MPtloIezpp2UrW9Y.vdZwSLLhxJww1C9X?startTime=1607094998000)
-- [**Auth with React and JWT's with Daniel**](https://generalassembly.zoom.us/rec/share/pOptuSFKz3ZMqED-5m_MVMT4CpzBytIWW_SoG4sinYVqJ28MPtloIezpp2UrW9Y.vdZwSLLhxJww1C9X?startTime=1607101392000)
+- [**Controlled Components**]()
+- [**Auth with React and JWT's**]()
 
-
+-->
