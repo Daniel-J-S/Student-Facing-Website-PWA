@@ -15,19 +15,23 @@ topics: "Intro to Full-Stack Development, Express & Node"
 - [**Lecture**: Intro to Express](/full-stack-development/week-1/day-1/lecture-materials/intro-to-express/)
 - [**Lab**: Intro to Express Lab](/full-stack-development/week-1/day-1/labs/intro-to-express-lab/) - **Non-Deliverable**
 
-
+<!-- 
 
 <br>
+<br>
 <hr>
+<br>
 <br>
 
 
 
 #### Lesson Recordings
 
-- [**Intro to Full Stack Development and HTTP with Daniel**](https://generalassembly.zoom.us/rec/share/W9X34sLUdzs8Q5BI254I8-lTLnlnZQURSRoMJ65wLp_J-Zo8NH9pev6SHrBEJCyg.puHQN1ToBL_IpgrC?startTime=1604329444000)
-- [**Intro to Node with Daniel**](https://generalassembly.zoom.us/rec/share/W9X34sLUdzs8Q5BI254I8-lTLnlnZQURSRoMJ65wLp_J-Zo8NH9pev6SHrBEJCyg.puHQN1ToBL_IpgrC?startTime=1604334113000)
-- [**Exercise Walk-throughs & Intro to Express With Ira**](https://generalassembly.zoom.us/rec/share/W9X34sLUdzs8Q5BI254I8-lTLnlnZQURSRoMJ65wLp_J-Zo8NH9pev6SHrBEJCyg.puHQN1ToBL_IpgrC?startTime=1604345735000)
+- [**Intro to Full Stack Development and HTTP**]()
+- [**Intro to Node**]()
+- [**Exercise Walk-throughs & Intro to Express**]() 
+
+-->
 
 
 
