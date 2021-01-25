@@ -70,6 +70,8 @@ Students will be able to:
 <br>
 <br>
 
+<!--
+
 ## Uploading Screenshots and Images to _imgur.com_
 
 <br>
@@ -108,6 +110,7 @@ Students will be able to:
 - You can now upload images from your computer by clicking the _mac2imgur_ icon in the menubar and selecting `Upload images...`
 
 - Screenshots can also now be automatically uploaded to Imgur...
+-->
 
 
 <br>
@@ -123,6 +126,7 @@ Students will be able to:
 <br>
 <br>
 
+<!-- 
 ## Using _Spectacle_ to<br>Move and Size Windows
 <br>
 
@@ -157,6 +161,7 @@ Students will be able to:
 <br>
 <br>
 
+-->
 ## Using the _Terminal_<br>Command Line Interface
 
 <br>
