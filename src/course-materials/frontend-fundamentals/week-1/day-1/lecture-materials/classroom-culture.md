@@ -88,7 +88,7 @@ type: "lecture"
 
 #### How To:
 
-##### Communicate in one of the curiosity channels:
+##### Communicate in one of the classroom slack channels:
 
 	- @username
 		- sends a notification to a specific user
