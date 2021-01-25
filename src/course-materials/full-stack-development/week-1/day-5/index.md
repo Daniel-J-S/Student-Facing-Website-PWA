@@ -17,18 +17,20 @@ topics: "Intro to MongoDB and Mongoose"
 
 
 
-
+<!-- 
+<br>
 <br>
 <hr>
+<br>
 <br>
 
 
 
 #### Lesson Recordings
 
-- [**Intro to MongoDB With Daniel**](https://generalassembly.zoom.us/rec/share/jt6Sp3HPrU8Tq_-E98MfC7vrQbryKPFsS8uSXXwzRn1hnqZzlEVDgLGRBmzzsn6b.tnianQ_7wBH4K9T8?startTime=1604675370000)
-- [**Intro to Mongoose With Daniel**](https://generalassembly.zoom.us/rec/share/jt6Sp3HPrU8Tq_-E98MfC7vrQbryKPFsS8uSXXwzRn1hnqZzlEVDgLGRBmzzsn6b.tnianQ_7wBH4K9T8?startTime=1604681113000)
-
+- [**Intro to MongoDB**]()
+- [**Intro to Mongoose**]()
+-->
 
 
 
