@@ -3,8 +3,6 @@ title: "Course Details"
 ---
 
 # Course Details
-
-<hr>
 <br>
 <br>
 <br>
@@ -21,11 +19,11 @@ You will be required to meet 80% completion of homework assignments at the end o
 
 ## Schedule and Holidays
 
-- Start date: **10/12/2020**
-- End date: **01/20/2021**
+- Start date: **02/08/2020**
+- End date: **05/03/2021**
 - Monday-Friday **10 am - 6 pm EST**  
 - Office Hours: **TBT** 
-- Holidays: **11/3, 11/11, 11/25, 11/26, 11/27, 12/24, 12/25, 12/28, 12/29, 12/30, 12/31, 1/1, 1/18**
+- Holidays: **TBT**
 
 <br>
 <br>
@@ -51,10 +49,9 @@ You will be required to meet 80% completion of homework assignments at the end o
 | ----- | ----- |
 | Ira Herman  |  Lead Instructor 
 | Daniel Scott  |  Lead Instructor 
-| Ayla Ex | Instructional Associate 
 | Paul Chapman | Instructional Associate 
-| Aegean Thompson | Teachers Assistant
-| Bradford Smith | Outcomes Coach
+| Michael Merlo | Teachers Assistant
+| TBT | Outcomes Coach
 
 <br>
 <br>
@@ -109,14 +106,14 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 ### We will walk through this together the first time!
 
 * Depending on the assignment, your homework will be completed on [repl.it](https://repl.it/), [CodeSandbox](https://codesandbox.io/), or [GitHub](https://github.com/)
-* Fill out this [Google Form](https://forms.gle/LuVKiS1pv9cxueKi8) with a link for that specific homework. It will be the same Google Form for each homework
+* Fill out this [Google Form](https://forms.gle/msMPKsoeYVr41fsv7) with a link for that specific homework. It will be the same Google Form for each homework
 * **Homework is due one week from the day it was assigned**
 * If homework is marked `incomplete`, you may be asked to re-submit it; a new timeline will be discussed how long you have to re-submit the homework
 
 <br>
 <br>
 
-### Homework/Project Assignments & Due Dates
+<!-- ### Homework/Project Assignments & Due Dates
 
 <br>
 <br>
@@ -168,7 +165,7 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 | [Styling React Components Lab](/react-fundamentals/week-2/day-1/labs/styling-components-lab/)| 12/07/20 |
 | [React Star Wars Lab](/react-fundamentals/week-2/day-2/lecture-materials/react-with-ajax/)| 12/08/20 |
 
-
+ -->
 
 <br>
 <br>
@@ -180,7 +177,7 @@ Lessons will be recorded and embedded as a link into the lesson material within 
 <br>
 
 
-*Also, be sure to checkout the video below for more detail*
+*Also, be sure to checkout the video below for more details*
 
 <br>
 <br>
