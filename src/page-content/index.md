@@ -2,9 +2,9 @@
 title: "Home"
 ---
 
-# SEIR 02/08/2021
+# Welcome to SEIR "Perseverance"
 
-This website contains assignments and materials for General Assembly's SEIR program. 
+This website contains the course curriculum and learning assigmments for General Assembly's SEIR program. 
 
 
 <br>
@@ -14,7 +14,7 @@ This website contains assignments and materials for General Assembly's SEIR prog
 
 ## Curriculum Overview
 
-All material is subject to change at Instructors discretion.
+All content is subject to change at Instructors discretion.
 
 
 <p style="color: crimson; text-decoration: underline"><b>Click on A Unit Heading Below to Access Content 🔍</b></p>
@@ -80,6 +80,6 @@ All material is subject to change at Instructors discretion.
 
 | Week  | Topics |
 | ----- | ------ |
-| 14  | [Self Directed Learning, Review & Capstone Project](/capstone) |
+| 14  | Intro to Python/Django Week, [Self Directed Learning, Review & Capstone Project](/capstone) |
 | 15  | Final Prep of Capstone Project and Graduation 🥳 🎉|
 | Post Graduation  | [Guide for building a Portfolio Site](/portfolio)|
