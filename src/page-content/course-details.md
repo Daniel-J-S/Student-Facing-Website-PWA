@@ -21,7 +21,7 @@ You will be required to meet 80% completion of homework assignments at the end o
 
 - Start date: **02/08/2020**
 - End date: **05/03/2021**
-- Monday-Friday **10 am - 6 pm EST**  
+- Monday-Friday **9 am - 5 pm EST**  
 - Office Hours: **TBT** 
 - Holidays: **TBT**
 
