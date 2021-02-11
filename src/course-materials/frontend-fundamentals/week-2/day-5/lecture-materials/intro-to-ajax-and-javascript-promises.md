@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Intro to AJAX and JavaScript Promises with jQuery"
 week: 2
-day: 4
+day: 5
 type: "lecture"
 ---
 

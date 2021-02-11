@@ -4,21 +4,19 @@ title: "Day 4"
 week: 2
 day: 4
 type: "homepage"
-topics: "Intro to AJAX and JavaScript Promises"
+topics: "JavaScript Callbacks and Arrow Functions"
 ---
-
 
 # Week 2 - Day 4
 
-#### Intro to AJAX and JavaScript Promises
+#### JavaScript Callbacks and Arrow Functions
+- [**Warmup** Wireframing](/frontend-fundamentals/week-2/day-4/lecture-materials/wireframing/) 
+- [**Lecture** Array Iterators Walkthrough](/frontend-fundamentals/week-2/day-4/lecture-materials/array-iterators-walkthrough/) 
+- [**Lab:** Array Iterators Lab](/frontend-fundamentals/week-2/day-4/labs/array-iterators-lab/) - **Non-Deliverable**
+- [**Lecture:** JavaScript Callbacks and Arrow Functions](/frontend-fundamentals/week-2/day-4/lecture-materials/javascript-callbacks-and-arrow-functions/)
 
-- [**Warmup:** Wireframing Part 2](/frontend-fundamentals/week-2/day-4/lecture-materials/wireframing-part-2/)
-- [**Lecture:** Intro to AJAX and JavaScript Promises with jQuery](/frontend-fundamentals/week-2/day-4/lecture-materials/intro-to-ajax-and-javascript-promises/)
-- [**Lab:** Build a Weather App With AJAX](/frontend-fundamentals/week-2/day-4/labs/build-a-weather-app-with-ajax/) - **Deliverable**
 
 <!-- 
-
-
 <br>
 <br>
 <hr>
@@ -28,7 +26,8 @@ topics: "Intro to AJAX and JavaScript Promises"
 
 #### Lesson Recordings
 
-- [**Intro to AJAX and JavaScript Promises**]()
-- [**Walk-through of AJAX Weather Lab**]()
+- [**Walk-through of Array Iterator Methods**]()
+- [**Walk-through of Callbacks and Arrow Functions**]()
 
 -->
+

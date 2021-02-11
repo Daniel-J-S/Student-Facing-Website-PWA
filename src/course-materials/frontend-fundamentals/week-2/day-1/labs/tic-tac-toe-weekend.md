@@ -1,7 +1,7 @@
 ---
 track: "Frontend Fundamentals"
 title: "Tic-Tac-Toe Code Weekend"
-week: 5
+week: 2
 day: 1
 type: "lab"
 ---

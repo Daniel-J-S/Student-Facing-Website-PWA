@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Intro to CSS Flexbox & Grid"
 week: 2
-day: 1
+day: 2
 type: "lecture"
 ---
 

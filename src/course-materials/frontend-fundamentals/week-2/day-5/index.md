@@ -4,18 +4,21 @@ title: "Day 5"
 week: 2
 day: 5
 type: "homepage"
-topics: "Build Another Project That Uses AJAX"
+topics: "Intro to AJAX and JavaScript Promises"
 ---
 
 
 # Week 2 - Day 5
 
-#### Build Another Project That Uses AJAX
-- [**Warmup:** Beginners Guide to UX](/frontend-fundamentals/week-2/day-5/lecture-materials/beginners-guide-to-ux/)
-- **Activity:** Build Another App That Uses an API
-- **Activity:** Students Begin Project 1
+#### Intro to AJAX and JavaScript Promises
+
+- [**Warmup:** Wireframing Part 2](/frontend-fundamentals/week-2/day-5/lecture-materials/wireframing-part-2/)
+- [**Lecture:** Intro to AJAX and JavaScript Promises with jQuery](/frontend-fundamentals/week-2/day-5/lecture-materials/intro-to-ajax-and-javascript-promises/)
+- [**Lab:** Build a Weather App With AJAX](/frontend-fundamentals/week-2/day-5/labs/build-a-weather-app-with-ajax/) - **Deliverable**
 
 <!-- 
+
+
 <br>
 <br>
 <hr>
@@ -23,10 +26,9 @@ topics: "Build Another Project That Uses AJAX"
 <br>
 
 
-
 #### Lesson Recordings
 
-- [**Beginners Guide to UX**]()
-- [**PokeGallery Code Along**]() 
+- [**Intro to AJAX and JavaScript Promises**]()
+- [**Walk-through of AJAX Weather Lab**]()
 
 -->

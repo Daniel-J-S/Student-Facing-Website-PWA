@@ -1,8 +1,8 @@
 ---
 track: "Frontend Fundamentals"
 title: "Install-fest Phase Two"
-week: 3
-day: 5
+week: 4
+day: 1
 type: "lecture"
 ---
 

@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Intro to Responsive Web Design"
 week: 2
-day: 1
+day: 2
 type: "lecture"
 ---
 

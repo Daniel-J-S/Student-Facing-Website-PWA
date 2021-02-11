@@ -1,8 +1,8 @@
 ---
 track: "Frontend Fundamentals"
 title: "Guide to Building a Browser Game"
-week: 1
-day: 4
+week: 2
+day: 1
 type: "lecture"
 ---
 

@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Space Battle OOP Lab"
 week: 2
-day: 3
+day: 1
 type: "lab"
 ---
 
