@@ -37,7 +37,10 @@ All content is subject to change at Instructors discretion.
 <br>
 <br>
 
-### [<u>Unit Two: Full Stack Development</u>](/full-stack-development)
+<div style="color: grey;">
+
+### 🔒 Unit Two: Full Stack Development
+<!-- ### [<u>Unit Two: Full Stack Development</u>](/full-stack-development) -->
 
 | Week  | Topics |
 | ----- | ------ |
@@ -49,7 +52,8 @@ All content is subject to change at Instructors discretion.
 <br>
 <br>
 
-### [<u>Unit Three: React Fundamentals</u>](/react-fundamentals)
+### 🔒 Unit Three: React Fundamentals
+<!-- ### [<u>Unit Three: React Fundamentals</u>](/react-fundamentals) -->
 
 | Week  | Topics |
 | ----- | ------ |
@@ -62,7 +66,7 @@ All content is subject to change at Instructors discretion.
 <br>
 <br>
 
-### [<u>Unit Four: Second Language</u>](/second-language)
+### 🔒 Unit Four: Second Language
 
 | Week  | Topics |
 | ----- | ------ |
@@ -76,10 +80,20 @@ All content is subject to change at Instructors discretion.
 <br>
 
 
+### 🔒 Unit Five: Capstone Essentials
+
+| Week  | Topics |
+| ----- | ------ |
+| 14  | Intro to Python/Django Week, Self Directed Learning, Review & Capstone Project |
+| 15  | Final Prep of Capstone Project and Graduation 🥳 🎉|
+| Post Graduation  | Guide for building a Portfolio Site|
+
+<!-- 
 ### Unit Five: Capstone Essentials
 
 | Week  | Topics |
 | ----- | ------ |
 | 14  | Intro to Python/Django Week, [Self Directed Learning, Review & Capstone Project](/capstone) |
 | 15  | Final Prep of Capstone Project and Graduation 🥳 🎉|
-| Post Graduation  | [Guide for building a Portfolio Site](/portfolio)|
+| Post Graduation  | [Guide for building a Portfolio Site](/portfolio)| -->
+</div>
