@@ -28,7 +28,7 @@ type: "resource"
 - Git
 - Node.js/NVM/Nodemon
 - PostgreSQL
-- MongoDB
+<!-- - MongoDB -->
 - Python
 - Django
 - Zoom
@@ -221,7 +221,7 @@ __pycache__/
 <br>
 
 
-
+<!-- 
 
 ### MongoDB:
 
@@ -230,7 +230,7 @@ __pycache__/
 
 <br>
 <br>
-
+ -->
 
 
 
