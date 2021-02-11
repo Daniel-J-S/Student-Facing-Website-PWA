@@ -30,9 +30,11 @@ type: "lecture"
 
 - Ira Herman - Instructor Lead
 - Daniel Scott - Instructor Lead
+- Ayla Ex - Instructional Associate 
 - Paul Chapman - Instructor Associate
 - Michael Merlo - Teachers Assistant
-- TBT - Outcomes Coach
+- Riana Shahid - Teachers Assistant
+- Becca Kronenbitter - Outcomes Coach
 
 
 <br>
@@ -73,13 +75,14 @@ type: "lecture"
 
 ### Slack
 
-#### 5 channels
+#### 6 channels
 
-	- #cohort-name-classroom
-	- #cohort-name-outcomes
-	- #cohort-name-random
-	- #cohort-name-tech-support
-	- #cohort-name-resources
+	- #seir-perseverance-classroom
+	- #seir-perseverance-help
+	- #seir-perseverance-linux-users
+	- #seir-perseverance-random
+	- #seir-perseverance-resources
+	- #seir-perseverance-outcomes
 	
 	
 
