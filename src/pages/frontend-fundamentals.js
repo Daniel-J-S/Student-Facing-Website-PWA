@@ -9,29 +9,39 @@ import styles from '../styles/course-content-display.module.scss';
 export default({ data, location }) => {
     
    const { allMarkdownRemark } = data;
+
    
    const weekOneLessons = allMarkdownRemark.edges.filter(({ node }) => 
-      node.frontmatter.week === 1
+      node.frontmatter.week === 1 
       ).map(({ node }) =>
+        node.frontmatter.topics !== 'Project 1' ?
         <Link to={node.fields.slug}>
           <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
-        </Link> 
+        </Link>
+        : 
+        <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
       );
 
       const weekTwoLessons = allMarkdownRemark.edges.filter(({ node }) => 
         node.frontmatter.week === 2
       ).map(({ node }) =>
+        node.frontmatter.topics !== 'Project 1' ?
         <Link to={node.fields.slug}>
           <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
-        </Link> 
+        </Link>
+        : 
+        <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
       );
 
       const weekThreeLessons = allMarkdownRemark.edges.filter(({ node }) => 
         node.frontmatter.week === 3
       ).map(({ node }) =>
+        node.frontmatter.topics !== 'Project 1' ?
         <Link to={node.fields.slug}>
           <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
-        </Link> 
+        </Link>
+        : 
+        <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
       );
     return (
         <Layout
