@@ -12,8 +12,11 @@ topics: "Project 1 Presentations & Installfest Phase II"
 
 #### Project 1 Presentations & Installfest Phase II
 
+- **Activity:** Students Present Project 1
 <!-- 
 
 - [**Activity:** Students Present Project 1 - Click For Recording]()
-- [**Activity:** "Install-Fest" Phase Two]() 
--->
+
+  -->
+
+- [**Activity:** "Install-Fest" Phase Two](/frontend-fundamentals/week-4/day-1/lecture-materials/install-fest-phase-two) 
