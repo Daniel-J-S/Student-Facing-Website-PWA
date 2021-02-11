@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Intro to Git and Github"
 week: 1
-day: 1
+day: 2
 type: "lecture"
 ---
 

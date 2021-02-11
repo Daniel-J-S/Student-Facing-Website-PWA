@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Intro to JavaScript Classes"
 week: 1
-day: 4
+day: 5
 type: "lecture"
 ---
 

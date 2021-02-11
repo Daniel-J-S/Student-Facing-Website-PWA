@@ -4,29 +4,33 @@ title: "Day 2"
 week: 1
 day: 2
 type: "homepage"
-topics: "Intro to JavaScript Datatypes, Control Flow & Arrays"
+topics: "Classroom Culture, the Dev Environment & Git/Github"
 ---
 
 
 # Week 1 - Day 2
 
-#### Intro Git/Github and JavaScript
+#### Expectations, Classroom Culture, the Dev Environment, and Git/Github
+- [**Lecture:** Classroom Culture](/frontend-fundamentals/week-1/day-2/lecture-materials/classroom-culture/)
+- [**Lecture:** Success Tips](/frontend-fundamentals/week-1/day-2/lecture-materials/success-tips/)
+- [**Activity:** "Install-Fest" Phase One](/frontend-fundamentals/week-1/day-2/lecture-materials/install-fest-phase-one/)
+- [**Lecture:** Introduction to the Dev Environment](/frontend-fundamentals/week-1/day-2/lecture-materials/intro-to-dev-environment/)
+- [**Lecture:** Intro to Git/Github](/frontend-fundamentals/week-1/day-2/lecture-materials/intro-to-git-and-github)
+- [**Lab:** Exploring Markdown](/frontend-fundamentals/week-1/day-2/labs/exploring-markdown/) - **Non-Deliverable**
+- [**Lab:** Git/Github and the Terminal Lab](/frontend-fundamentals/week-1/day-2/labs/git-github-and-the-terminal/) - **Non-Deliverable**
 
-- [**Lecture:** Intro to JavaScript](/frontend-fundamentals/week-1/day-2/lecture-materials/intro-to-javascript/)
-- [**Lecture:** Intro to JavaScript Control Flow](/frontend-fundamentals/week-1/day-2/lecture-materials/intro-to-javascript-control-flow/)
-- [**Lecture:** JavaScript Arrays](/frontend-fundamentals/week-1/day-2/lecture-materials/intro-to-javascript-arrays/)
-- [**Lab**: JavaScript Arrays Lab](/frontend-fundamentals/week-1/day-2/labs/javascript-arrays-lab/) - **Deliverable**
+<!-- 
 
-<!--
 <br>
 <br>
 <hr>
 <br>
 <br>
 
+
 #### Lesson Recordings
 
-- [**Intro to JavaScript**]()
-- [**Intro to JavaScript Control Flow**]()
-- [**Intro to JavaScript Arrays**]()
+- [**Classroom Culture & Success Tips**]()
+- [**Installfest - Phase One: Mac Users**]()
+- [**Intro to the Dev Environment & Intro to Git/Github**]()
 -->

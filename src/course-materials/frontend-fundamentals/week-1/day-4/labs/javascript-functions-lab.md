@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "JavaScript Functions Lab"
 week: 1
-day: 3
+day: 4
 type: "lab"
 ---
 
@@ -15,6 +15,7 @@ type: "lab"
 <br>
 <br>
 
+<!-- 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Q4_HGERJ3AM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -23,7 +24,7 @@ type: "lab"
 <br>
 <br>
 <br>
-
+ -->
 
 
 ## Introduction
