@@ -8,7 +8,7 @@ type: "resource"
 
 
 
-# Install-Fest for Linux (Ubuntu 18.XX):
+# Install-Fest for Linux (Ubuntu 20.XX):
 
 
 **Please note, this is a compilation of resources we've picked up on over time and may not encompass everything you need to install if you are running a Linux Operating System on your computer.**
@@ -28,7 +28,7 @@ type: "resource"
 - Git
 - Node.js/NVM/Nodemon
 - PostgreSQL
-- MongoDB
+<!-- - MongoDB -->
 - Python
 - Django
 - Zoom
@@ -221,7 +221,7 @@ __pycache__/
 <br>
 
 
-
+<!-- 
 
 ### MongoDB:
 
@@ -230,7 +230,7 @@ __pycache__/
 
 <br>
 <br>
-
+ -->
 
 
 

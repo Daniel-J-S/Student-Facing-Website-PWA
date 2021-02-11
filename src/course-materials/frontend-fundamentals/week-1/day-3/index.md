@@ -4,17 +4,20 @@ title: "Day 3"
 week: 1
 day: 3
 type: "homepage"
-topics: "JavaScript Functions & Scope"
+topics: "Intro to JavaScript Datatypes, Control Flow & Arrays"
 ---
+
 
 # Week 1 - Day 3
 
-#### JavaScript Functions & Scope 
-- [**Warmup**: Setting up for Success](/frontend-fundamentals/week-1/day-3/lecture-materials/setting-up-for-success/) 
-- [**Lecture**: JavaScript Functions and Scope](/frontend-fundamentals/week-1/day-3/lecture-materials/intro-to-javascript-functions-and-scope/) 
-- [**Lab**: JavaScript Functions Lab](/frontend-fundamentals/week-1/day-3/labs/javascript-functions-lab/) - **Non-Deliverable**
+#### Intro Git/Github and JavaScript
 
-<!-- 
+- [**Lecture:** Intro to JavaScript](/frontend-fundamentals/week-1/day-3/lecture-materials/intro-to-javascript/)
+- [**Lecture:** Intro to JavaScript Control Flow](/frontend-fundamentals/week-1/day-3/lecture-materials/intro-to-javascript-control-flow/)
+- [**Lecture:** JavaScript Arrays](/frontend-fundamentals/week-1/day-3/lecture-materials/intro-to-javascript-arrays/)
+- [**Lab**: JavaScript Arrays Lab](/frontend-fundamentals/week-1/day-3/labs/javascript-arrays-lab/) - **Deliverable**
+
+<!--
 <br>
 <br>
 <hr>
@@ -23,7 +26,7 @@ topics: "JavaScript Functions & Scope"
 
 #### Lesson Recordings
 
-- [**Morning Warmup**]()
-- [**Bonus Control Flow Exercise Walk-through**]()
-- [**Intro to JavaScript Functions**]() 
+- [**Intro to JavaScript**]()
+- [**Intro to JavaScript Control Flow**]()
+- [**Intro to JavaScript Arrays**]()
 -->

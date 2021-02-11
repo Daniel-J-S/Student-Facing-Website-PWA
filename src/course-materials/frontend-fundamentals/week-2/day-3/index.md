@@ -1,22 +1,24 @@
 ---
 track: "Frontend Fundamentals"
-title: "Day 3"
+title: "Day 2"
 week: 2
-day: 3
+day: 2
 type: "homepage"
-topics: "JavaScript Callbacks and Arrow Functions"
+topics: "DOM Manipulation With jQuery"
 ---
 
-# Week 2 - Day 3
 
-#### JavaScript Callbacks and Arrow Functions
-- [**Warmup** Wireframing](/frontend-fundamentals/week-2/day-3/lecture-materials/wireframing/) 
-- [**Lecture** Array Iterators Walkthrough](/frontend-fundamentals/week-2/day-3/lecture-materials/array-iterators-walkthrough/) 
-- [**Lab:** Array Iterators Lab](/frontend-fundamentals/week-2/day-3/labs/array-iterators-lab/) - **Non-Deliverable**
-- [**Lecture:** JavaScript Callbacks and Arrow Functions](/frontend-fundamentals/week-2/day-3/lecture-materials/javascript-callbacks-and-arrow-functions/)
+# Day 2
 
+#### Intro to DOM Manipulation With jQuery
 
+- [**Warmup:** Flexbox Practice](/frontend-fundamentals/week-2/day-2/lecture-materials/flexbox-practice/)
+- [**Lecture:** Intro To jQuery Part 1](/frontend-fundamentals/week-2/day-2/lecture-materials/intro-to-jquery-part-1/)
+- [**Lecture:** Intro To jQuery Part 2](/frontend-fundamentals/week-2/day-2/lecture-materials/intro-to-jquery-part-2/)
+- [**Lab:** My Developer Skills Lab](/frontend-fundamentals/week-2/day-2/labs/my-developer-skills-lab/) - **Deliverable**
+- **Activity:** Begin Planning Project 1
 <!-- 
+
 <br>
 <br>
 <hr>
@@ -24,10 +26,11 @@ topics: "JavaScript Callbacks and Arrow Functions"
 <br>
 
 
+
 #### Lesson Recordings
 
-- [**Walk-through of Array Iterator Methods**]()
-- [**Walk-through of Callbacks and Arrow Functions**]()
+- [**jQuery Part 1**]()
+- [**jQuery Part 2**]() 
 
 -->
 

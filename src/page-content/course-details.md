@@ -19,11 +19,12 @@ You will be required to meet 80% completion of homework assignments at the end o
 
 ## Schedule and Holidays
 
-- Start date: **02/08/2020**
-- End date: **05/03/2021**
-- Monday-Friday **9 am - 5 pm EST**  
-- Office Hours: **TBT** 
-- Holidays: **TBT**
+- Start date: **02/16/2020**
+- End date: **05/10/2021**
+- Classroom runtime: **Monday-Friday 9 AM - 5 PM EST**  
+- Office Hours: **Monday - Thursday (6PM - 10PM EST) and Sunday (4PM - 9PM EST)**
+- Outcomes: **Wednesdays from  3:30 - 5PM EST**
+- Holidays: **N/A**
 
 <br>
 <br>
@@ -49,9 +50,11 @@ You will be required to meet 80% completion of homework assignments at the end o
 | ----- | ----- |
 | Ira Herman  |  Lead Instructor 
 | Daniel Scott  |  Lead Instructor 
+| Ayla Ex | Instructional Associate 
 | Paul Chapman | Instructional Associate 
 | Michael Merlo | Teachers Assistant
-| TBT | Outcomes Coach
+| Riana Shahid | Teachers Assistant
+| Becca Kronenbitter | Outcomes Coach
 
 <br>
 <br>
@@ -105,7 +108,7 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 
 ### We will walk through this together the first time!
 
-* Depending on the assignment, your homework will be completed on [repl.it](https://repl.it/), [CodeSandbox](https://codesandbox.io/), or [GitHub](https://github.com/)
+* Depending on the assignment, your homework will be completed on [repl.it](https://repl.it/), [CodeSandbox](https://codesandbox.io/), [GitHub Enterprise](https://git.generalassemb.ly/), or [GitHub](https://github.com/)
 * Fill out this [Google Form](https://forms.gle/msMPKsoeYVr41fsv7) with a link for that specific homework. It will be the same Google Form for each homework
 * **Homework is due one week from the day it was assigned**
 * If homework is marked `incomplete`, you may be asked to re-submit it; a new timeline will be discussed how long you have to re-submit the homework
@@ -192,7 +195,7 @@ Lessons will be recorded and embedded as a link into the lesson material within 
 
 
 ## Managing your Projects
-* At the end of each unit, you will create a repo in your personal github for your project... i.e. Unit One - Project One, Unit Two - Project Two ...etc
+* At the end of each unit, you will create a repo in your personal github for your project... i.e. Project One, Project Two, or whatever you've decided to name your project ...etc
 * Pushing your labs/homework to your personal github is not recommended
 
 <br>

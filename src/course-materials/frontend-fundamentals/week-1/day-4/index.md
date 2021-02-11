@@ -4,23 +4,17 @@ title: "Day 4"
 week: 1
 day: 4
 type: "homepage"
-topics: "Intro to JS Objects and Classes" 
+topics: "JavaScript Functions & Scope"
 ---
-
 
 # Week 1 - Day 4
 
-#### Intro to JS Objects and Classes
-- [**Warmup:** The HTML5 Boilerplate](/frontend-fundamentals/week-1/day-4/lecture-materials/html-boilerplate-morning-exercise/)
-- [**Lecture:** Intro to JavaScript Objects](/frontend-fundamentals/week-1/day-4/lecture-materials/intro-to-javascript-objects/)
-- [**Lecture:** Intro to JavaScript Classes](/frontend-fundamentals/week-1/day-4/lecture-materials/intro-to-javascript-classes/)
-- [**Lab:** Guess the Number Game Lab](/frontend-fundamentals/week-1/day-4/labs/guess-the-number-game-lab/) - **Deliverable**
-- [**Lab:** JavaScript Classes Lab](/frontend-fundamentals/week-1/day-4/labs/javascript-classes-lab/) - **Non-Deliverable**
-
-
+#### JavaScript Functions & Scope 
+- [**Warmup**: Setting up for Success](/frontend-fundamentals/week-1/day-4/lecture-materials/setting-up-for-success/) 
+- [**Lecture**: JavaScript Functions and Scope](/frontend-fundamentals/week-1/day-4/lecture-materials/intro-to-javascript-functions-and-scope/) 
+- [**Lab**: JavaScript Functions Lab](/frontend-fundamentals/week-1/day-4/labs/javascript-functions-lab/) - **Non-Deliverable**
 
 <!-- 
-
 <br>
 <br>
 <hr>
@@ -30,6 +24,6 @@ topics: "Intro to JS Objects and Classes"
 #### Lesson Recordings
 
 - [**Morning Warmup**]()
-- [**Intro to JS Objects**]()
-- [**Intro to JS Classes**]() 
+- [**Bonus Control Flow Exercise Walk-through**]()
+- [**Intro to JavaScript Functions**]() 
 -->
