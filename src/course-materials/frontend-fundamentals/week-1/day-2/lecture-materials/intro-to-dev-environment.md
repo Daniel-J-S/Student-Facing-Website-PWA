@@ -9,10 +9,13 @@ type: "lecture"
 
 # Intro to the Dev Environment
 
+
+
 <br>
 <br>
 <br>
 <br>
+
 
 
 
@@ -30,10 +33,12 @@ Students will be able to:
 
 <br>
 <br>
+<br>
 
 ## Being More Productive by using the Keyboard vs. the Mouse
 
 
+<br>
 <br>
 <br>
 
@@ -49,6 +54,7 @@ Students will be able to:
 
 <br>
 <br>
+<br>
 
 ### Switching Between Applications
 - Quickly switch between running applications by pressing `cmd+tab`
@@ -60,6 +66,7 @@ Students will be able to:
 
 <br>
 <br>
+<br>
 
 ### Switching Between Instances of an Application
 
@@ -69,8 +76,7 @@ Students will be able to:
 
 <br>
 <br>
-
-<!--
+<br>
 
 ## Uploading Screenshots and Images to _imgur.com_
 
@@ -91,7 +97,7 @@ Students will be able to:
 
 ### Imgur
 
-- One of the most popular image hosting services on the Internet is [Imgur](https://imgur.com/).
+- One of the most popular image hosting services on the Internet is [Imgur](http://imgur.com/).
 
 - Go there now and open a free account
 
@@ -99,7 +105,13 @@ Students will be able to:
 
 <br>
 <br>
+<br>
 
+### Upload Tools for Imgur
+
+[Click this link](https://help.imgur.com/hc/en-us/articles/209592766-Tools-for-Imgur) to go to a page of different tools you can use to conveniently upload images to imgur from your computer
+
+<!-- 
 ### mac2imgur
 - [mac2imgur](https://github.com/mileswd/mac2imgur) is a simple Mac app that makes uploading images and screenshots to your Imgur account a snap
 
@@ -109,10 +121,12 @@ Students will be able to:
 
 - You can now upload images from your computer by clicking the _mac2imgur_ icon in the menubar and selecting `Upload images...`
 
-- Screenshots can also now be automatically uploaded to Imgur...
+- Screenshots can also now be automatically uploaded to Imgur... 
+
 -->
 
 
+<br>
 <br>
 <br>
 
@@ -126,7 +140,6 @@ Students will be able to:
 <br>
 <br>
 
-<!-- 
 ## Using _Spectacle_ to<br>Move and Size Windows
 <br>
 
@@ -143,25 +156,9 @@ Students will be able to:
 
 <br>
 <br>
-
-### _Spectacle_'s Basic Default Hotkeys
-
-- Here are the most popular hotkeys:
-
-	- Make window full-size — `opt + cmd + F`
-	- Move to the left half — `opt + cmd + ←`
-	- Move to the right half — `opt + cmd + →`
-	- Move to the top half — `opt + cmd + ↑`
-	- Move to the bottom half — `opt + cmd + ↓`
-
-- Pressing the same hotkey will size the window by thirds!
-
-- You can find more info about Spectacle [here](https://github.com/eczarny/spectacle).
-
-<br>
 <br>
 
--->
+
 ## Using the _Terminal_<br>Command Line Interface
 
 <br>
@@ -174,9 +171,28 @@ Students will be able to:
 
 - Go ahead and open _Terminal_ (remember - use Spotlight!)
 
+<br>
+<br>
+<br>
+
 
 ### Command Line Basics
-<p>Here are the basic command tasks we'll try out:</p>
+
+Before we get started with this section, it might be helpful to ensure we are all using the same shell configuration.
+
+That said, here are some screenshots to show how your instructor has set up their shell:
+
+![screenshot](https://i.imgur.com/XWfZzKt.png)
+![screenshot](https://i.imgur.com/8dvHVnq.png)
+![screenshot](https://i.imgur.com/7MdUP9k.png)
+
+
+
+<br>
+<br>
+<br>
+
+<p>Now that we've reviewed shell config, here are the basic command tasks we'll try out:</p>
 
 - Change directories (folders)
 - List a directory's contents
@@ -203,7 +219,7 @@ Students will be able to:
 
 - Here are a few common shortcut characters used when navigating the filesystem:
 	- `~` The logged in user's _home_ directory
-	- `/` The _root_ (top-level) directory on the hard drive
+	- `/` The _root_ (top-level) directory on the harddrive
 	- `.` The current directory
 	- `..` The parent directory of the current directory
 
@@ -431,6 +447,7 @@ Students will be able to:
 > For the above to work, VS Code must be installed in the **Applications** folder
 
 
+<br>
 <br>
 <br>
 <br>
