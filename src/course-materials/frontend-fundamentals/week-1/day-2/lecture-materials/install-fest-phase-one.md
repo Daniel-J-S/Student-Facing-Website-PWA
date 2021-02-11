@@ -8,10 +8,6 @@ type: "lecture"
 
 # Install-fest Phase One
 
-<br>
-<br>
-
-
 For the first phase of "install-fest", we'll install or verify the installation of the following tools on our machines:
 
 - Slack
@@ -21,23 +17,36 @@ For the first phase of "install-fest", we'll install or verify the installation 
 - VS Code
 - Git / Github / Github Enterprise
 - Global Gitignore
-- Spectacle
-- Imgur
+- Spectacle - **(optional)**
+- Imgur - **(optional)**
+
+
+
+
 
 <br>
 <br>
 <br>
 <br>
+
 
 
 
 
 **PLEASE NOTE:** ***if you have a linux machine, [here are some resources](/additional-resources/install-fest-linux) that might be more ideal for your computer***
 
+
+<br>
+<br>
+<br>
+
+
+
 ## Slack
 
 We'll use slack to communicate throughout the course. <br>By the time you are reading this, you should have received an invite to the relevant channels via e-mail. <br>Although you can login via the web browser, downloading / installing the app is highly recommended.
 
+<br>
 <br>
 <br>
 
@@ -49,6 +58,7 @@ We'll use slack to communicate throughout the course. <br>By the time you are re
 
 Remember to drag the Slack app into the Applications folder when you open the downloaded archive.
 
+<br>
 <br>
 <br>
 
@@ -70,6 +80,7 @@ Lastly, make sure to run `brew update` to make sure you have the latest lists of
 
 <br>
 <br>
+<br>
 
 ## Xcode
 
@@ -83,6 +94,7 @@ If you need to, you can install Xcode through the App Store. (You probably don't
 
 <br>
 <br>
+<br>
 
 ## Visual Studio Code
 
@@ -94,6 +106,7 @@ Download and install VS Code from [https://code.visualstudio.com/](https://code.
 
 **Important**: Be sure that VS Code is in your Mac's `Applications` folder.
 
+<br>
 <br>
 <br>
 
@@ -125,6 +138,7 @@ brew install git
 
 <br>
 <br>
+<br>
 
 #### Github
 
@@ -132,6 +146,7 @@ brew install git
 
 You should have already opened a personal Github account, however, you need to have a General Assembly Github Enterprise account as well. <br>You can get one by signing up here: [https://git.generalassemb.ly/join](https://git.generalassemb.ly/join)
 
+<br>
 <br>
 <br>
 
@@ -254,10 +269,29 @@ __pycache__/
 
 <br>
 <br>
+<br>
+<br>
 
-<!-- 
+## Optional Installs
 
-## Installing Spectacle
+_Some of these options below might not work properly on your machine depending on how old or new your computer is, so use at your own risk. However, the tradeoff is that these tools offer powerful conveniences_
+
+<br>
+<br>
+<br>
+
+
+
+### Installing Imgur
+
+Create an account on [imgur.com](https://imgur.com/) and install [mac2imgur](https://github.com/mileswd/mac2imgur) to ease uploading screenshots and other images from your computer to your imgur account.
+
+<br>
+<br>
+<br>
+
+
+### Installing Spectacle
 
 Install [Spectacle](https://www.spectacleapp.com/) for resizing windows.
 
@@ -265,10 +299,21 @@ This free "productivity" tool is invaluable when it comes to minimizing the time
 
 <br>
 <br>
-
-## Installing Imgur
-
-Create an account on [imgur.com](https://imgur.com/) and install [mac2imgur](https://github.com/mileswd/mac2imgur) to ease uploading screenshots and other images from your computer to your imgur account.
+<br>
 
 
--->
+### _Spectacle_'s Basic Default Hotkeys
+
+- Here are the most popular hotkeys:
+
+	- Make window full-size — `opt + cmd + F`
+	- Move to the left half — `opt + cmd + ←`
+	- Move to the right half — `opt + cmd + →`
+	- Move to the top half — `opt + cmd + ↑`
+	- Move to the bottom half — `opt + cmd + ↓`
+
+- Pressing the same hotkey will size the window by thirds!
+
+- You can find more info about Spectacle [here](https://github.com/eczarny/spectacle).
+
+
