@@ -1,8 +1,26 @@
-# SEIR Perseverance 02/16
+
+# Student-Facing PWA for SEIR "Perseverance" 02/16
+
+
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a78e52d3-b788-4a8c-94fa-ab0a4ad17d4f/deploy-status)](https://app.netlify.com/sites/seir-02-08/deploys)
 
 ![perseverance](https://bsmedia.business-standard.com/_media/bs/img/article/2020-06/15/full/1592214363-2978.jpg)
+
+- **Author:** [DanielJS](https://github.com/myDeveloperJourney)
+- **Version:** 2.1.1
+
+<br>
+<br>
+<br>
+
+## Technologies Used
+
+- React
+- Gatsby
+- PrismJS (syntax highlighting)
+- MarkdownRemark
+- Netlify
 
 <br>
 <br>
@@ -34,3 +52,5 @@
 - "Student Dashboard" for viewing course progress, outstanding assignments, % homework completion
 - Feedback Submission form
 - Instructor-facing dashboard for notes and lesson-prep content
+
+
