@@ -20,6 +20,8 @@ export default({ data, location }) => {
             <main>
               <h2>Week 1</h2>  
               { week1 }
+              {/* 
+              Locked for Now
               <br />
               <hr />
               <br />
@@ -34,7 +36,7 @@ export default({ data, location }) => {
               <hr />
               <br />
               <h2>Presentations</h2>  
-              { week4 }
+              { week4 } */}
             </main>
         </Layout>
     );
