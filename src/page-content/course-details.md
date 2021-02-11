@@ -19,12 +19,12 @@ You will be required to meet 80% completion of homework assignments at the end o
 
 ## Schedule and Holidays
 
-- Start date: **02/08/2020**
-- End date: **05/03/2021**
-- Monday-Friday **9 AM - 5 PM EST**  
+- Start date: **02/16/2020**
+- End date: **05/10/2021**
+- Classroom runtime: **Monday-Friday 9 AM - 5 PM EST**  
 - Office Hours: **Monday - Thursday (6PM - 10PM EST) and Sunday (4PM - 9PM EST)**
 - Outcomes: **Wednesdays from  3:30 - 5PM EST**
-- Holidays: **TBT**
+- Holidays: **N/A**
 
 <br>
 <br>
