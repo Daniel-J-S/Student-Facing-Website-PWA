@@ -110,7 +110,7 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 
 * Depending on the assignment, your homework will be completed on [repl.it](https://repl.it/), [CodeSandbox](https://codesandbox.io/), [GitHub Enterprise](https://git.generalassemb.ly/), or [GitHub](https://github.com/)
 * Fill out this [Google Form](https://forms.gle/msMPKsoeYVr41fsv7) with a link for that specific homework. It will be the same Google Form for each homework
-* **Homework is due one week from the day it was assigned**
+<!-- * **Homework is due one week from the day it was assigned** -->
 * If homework is marked `incomplete`, you may be asked to re-submit it; a new timeline will be discussed how long you have to re-submit the homework
 
 <br>
@@ -175,10 +175,10 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 
 ## Lesson Recordings
 
-Lessons will be recorded and embedded as a link into the lesson material within 24-48 hours 
+Lessons will be recorded and embedded as a link into the lesson day homepage within 24-48 hours 
 
+<!-- 
 <br>
-
 
 *Also, be sure to checkout the video below for more details*
 
@@ -188,10 +188,12 @@ Lessons will be recorded and embedded as a link into the lesson material within 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wGSg8CybMG8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+-->
 
 <br>
 <br>
-<br>
+<br> 
+
 
 
 ## Managing your Projects
