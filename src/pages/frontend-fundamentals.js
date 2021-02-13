@@ -8,7 +8,7 @@ import genLinks from '../utils/genLinks';
 
 export default({ data, location }) => {
 
-   const {week1, week2, week3, week4 } = genLinks(data.allMarkdownRemark.edges);
+   const {week1 } = genLinks(data.allMarkdownRemark.edges);
 
     return (
         <Layout
