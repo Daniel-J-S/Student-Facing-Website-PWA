@@ -17,7 +17,7 @@ This website contains the course curriculum and learning assigmments for General
 All content is subject to change at Instructors discretion.
 
 
-<p style="color: crimson; text-decoration: underline"><b>Click on A Unit Heading Below to Access Content 🔍</b></p>
+<p style="color: #673ab7; text-decoration: underline"><b>Click on A Unit Heading Below to Access Content 🔍</b></p>
 
 <br>
 <br>
