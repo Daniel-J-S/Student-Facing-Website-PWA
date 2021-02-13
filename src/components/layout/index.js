@@ -53,7 +53,7 @@ export default ({
                             location={location} 
                             crumbLabel={crumbLabel}
                             crumbStyle={{ color: "#000" }}
-                            crumbActiveStyle={{ color: "crimson" }} 
+                            crumbActiveStyle={{ color: "#673ab7" }} 
                         />
                     </div>
                     { children }
