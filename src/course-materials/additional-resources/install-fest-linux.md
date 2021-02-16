@@ -27,10 +27,10 @@ type: "resource"
 - VS Code
 - Git
 - Node.js/NVM/Nodemon
-- PostgreSQL
+<!-- - PostgreSQL -->
 <!-- - MongoDB -->
-- Python
-- Django
+<!-- - Python -->
+<!-- - Django -->
 - Zoom
 
 <br>
@@ -85,6 +85,14 @@ You should have already opened a personal Github account, however, you need to h
 1. First, create the file: touch ~/.gitignore_global
 1. Next, configure git to use this file: git config --global core.excludesfile ~/.gitignore_global
 1. Finally, lets put some good stuff in there (.gitignore_global):
+
+A. `nano ~/.gitignore_global` - opens the file in the nano text editor.
+
+B. Copy the contents from the code block below.
+
+C. `ctrl+v` in nano to paste them in
+
+D. `ctrl+x` which will prompt you to save, hit y for yes then hit enter, then enter again.
    
 ```shell   
 # This is a list of rules for ignoring files in every Git repositories on your computer.
@@ -212,6 +220,7 @@ __pycache__/
 <br>
 
 
+<!--
 ### PostgreSQL:
 
 [Click Here For the Guide](https://linuxize.com/post/how-to-install-postgresql-on-ubuntu-18-04/)
@@ -219,6 +228,8 @@ __pycache__/
 
 <br>
 <br>
+
+-->
 
 
 <!-- 
@@ -234,6 +245,7 @@ __pycache__/
 
 
 
+<!--
 
 ### Python 3 (Comes standard with Ubuntu 18.04):
 
@@ -243,8 +255,10 @@ __pycache__/
 <br>
 <br>
 
+-->
 
 
+<!--
 
 ### Django:
 
@@ -255,7 +269,7 @@ sudo apt install python3-django
 
 <br>
 <br>
-
+-->
 
 
 
@@ -271,6 +285,8 @@ sudo apt install python3-django
 
 ### Recommendations:
 
+<!--
+
 ```shell
 zsh:
 ```
@@ -280,7 +296,7 @@ zsh:
 
 <br>
 <br>
-
+-->
 
 
 
