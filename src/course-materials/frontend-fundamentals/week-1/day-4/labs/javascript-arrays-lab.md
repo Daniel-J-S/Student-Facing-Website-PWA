@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "JavaScript Arrays Lab"
 week: 1
-day: 3
+day: 4
 type: "lab"
 ---
 
