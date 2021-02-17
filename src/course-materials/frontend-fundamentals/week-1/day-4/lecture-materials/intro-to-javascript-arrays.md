@@ -173,6 +173,10 @@ For this lesson, we're going to code along using a `JavaScript` `REPL` from [rep
 	shift <- [...] -> pop
 	```
 
+- Or the trick I use:
+	- When you `shift` gears in a car, the shifter `pops` into place.
+	- Also `unshift` and `push` both have a `u` in them.
+
 <br>
 <br>
   
