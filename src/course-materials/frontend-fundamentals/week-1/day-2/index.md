@@ -20,7 +20,7 @@ topics: "Classroom Culture, the Dev Environment & Git/Github"
 - [**Lab:** Exploring Markdown](/frontend-fundamentals/week-1/day-2/labs/exploring-markdown/) - **Non-Deliverable**
 - [**Lab:** Git/Github and the Terminal Lab](/frontend-fundamentals/week-1/day-2/labs/git-github-and-the-terminal/) - **Non-Deliverable**
 
-<!-- 
+
 
 <br>
 <br>
@@ -31,7 +31,7 @@ topics: "Classroom Culture, the Dev Environment & Git/Github"
 
 #### Lesson Recordings
 
-- [**Classroom Culture & Success Tips**]()
-- [**Installfest - Phase One: Mac Users**]()
-- [**Intro to the Dev Environment & Intro to Git/Github**]()
--->
+- [**Classroom Culture**](https://generalassembly.zoom.us/rec/share/uB_-yYPm7U1VW4YvR5HqNhE9vkHWRrcBvcGvPGV57rp0uzM9L9mEpAfOFz1tjiGa.LciTlOygog9DovzR?startTime=1613484349000)
+- [**Success Tips**](https://generalassembly.zoom.us/rec/share/uB_-yYPm7U1VW4YvR5HqNhE9vkHWRrcBvcGvPGV57rp0uzM9L9mEpAfOFz1tjiGa.LciTlOygog9DovzR?startTime=1613488583000)
+- [**Installfest - Phase One: Mac Users**](https://generalassembly.zoom.us/rec/share/uB_-yYPm7U1VW4YvR5HqNhE9vkHWRrcBvcGvPGV57rp0uzM9L9mEpAfOFz1tjiGa.LciTlOygog9DovzR?startTime=1613492986000)
+- [**Intro to the Dev Environment & Intro to Git/Github**](https://generalassembly.zoom.us/rec/share/uB_-yYPm7U1VW4YvR5HqNhE9vkHWRrcBvcGvPGV57rp0uzM9L9mEpAfOFz1tjiGa.LciTlOygog9DovzR?startTime=1613500601000)
