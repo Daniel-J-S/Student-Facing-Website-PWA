@@ -4,7 +4,7 @@ title: "Day 3"
 week: 1
 day: 3
 type: "homepage"
-topics: "Intro to JavaScript Datatypes, Control Flow & Arrays"
+topics: "Intro to JavaScript Datatypes & Control Flow"
 ---
 
 
@@ -14,19 +14,17 @@ topics: "Intro to JavaScript Datatypes, Control Flow & Arrays"
 
 - [**Lecture:** Intro to JavaScript](/frontend-fundamentals/week-1/day-3/lecture-materials/intro-to-javascript/)
 - [**Lecture:** Intro to JavaScript Control Flow](/frontend-fundamentals/week-1/day-3/lecture-materials/intro-to-javascript-control-flow/)
-- [**Lecture:** JavaScript Arrays](/frontend-fundamentals/week-1/day-3/lecture-materials/intro-to-javascript-arrays/)
-- [**Lab**: JavaScript Arrays Lab](/frontend-fundamentals/week-1/day-3/labs/javascript-arrays-lab/) - **Deliverable**
 
-<!--
+
 <br>
 <br>
 <hr>
 <br>
 <br>
 
+
+
 #### Lesson Recordings
 
-- [**Intro to JavaScript**]()
-- [**Intro to JavaScript Control Flow**]()
-- [**Intro to JavaScript Arrays**]()
--->
+- [**Intro to JavaScript**](https://generalassembly.zoom.us/rec/share/_lSn0fbVf0L0wuF0Gkd50sXFcqQSQCaeOcEkpT6KTNLty2Iv5wScxcC61P_5umlS.bHELEIVvGrFZQtpF?startTime=1613570506000)
+- [**JavaScript Control Flow**](https://generalassembly.zoom.us/rec/share/_lSn0fbVf0L0wuF0Gkd50sXFcqQSQCaeOcEkpT6KTNLty2Iv5wScxcC61P_5umlS.bHELEIVvGrFZQtpF?startTime=1613580173000)
