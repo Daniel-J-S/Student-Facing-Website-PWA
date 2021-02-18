@@ -4,12 +4,12 @@ title: "Day 4"
 week: 1
 day: 4
 type: "homepage"
-topics: "JavaScript Functions & Scope"
+topics: "JavaScript Arrays, Functions & Scope"
 ---
 
 # Week 1 - Day 4
 
-#### JavaScript Functions & Scope 
+#### JavaScript Arrays, Functions & Scope 
 - [**Warmup**: Setting up for Success](/frontend-fundamentals/week-1/day-4/lecture-materials/setting-up-for-success/)
 - [**Lecture:** JavaScript Arrays](/frontend-fundamentals/week-1/day-4/lecture-materials/intro-to-javascript-arrays/)
 - [**Lab**: JavaScript Arrays Lab](/frontend-fundamentals/week-1/day-4/labs/javascript-arrays-lab/) - **Deliverable**
