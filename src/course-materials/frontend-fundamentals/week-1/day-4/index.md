@@ -26,5 +26,5 @@ topics: "JavaScript Arrays, Functions & Scope"
 #### Lesson Recordings
 
 - [**Setting up for Success**](https://generalassembly.zoom.us/rec/share/CD-AR9SEpAFC1O8fe4xIg3pWMUGWZcV-1lZVE8vZFx06Lh59ZV08aIbd1uCXliM.t-pO_-8Uk5H1X_GQ?startTime=1613656918000)
-- [**Bonus Control Flow Exercise Walk-through, Ice Breakers & Begin JavaScript Arrays Lesson**](https://generalassembly.zoom.us/rec/share/CD-AR9SEpAFC1O8fe4xIg3pWMUGWZcV-1lZVE8vZFx06Lh59ZV08aIbd1uCXliM.t-pO_-8Uk5H1X_GQ?startTime=1613656918000)
-- [**Finish JavaScript Arrays Lesson and Intro to JavaScript Functions**](https://generalassembly.zoom.us/rec/share/CD-AR9SEpAFC1O8fe4xIg3pWMUGWZcV-1lZVE8vZFx06Lh59ZV08aIbd1uCXliM.t-pO_-8Uk5H1X_GQ?startTime=1613656918000) 
+- [**Bonus Control Flow Exercise Walk-through, Ice Breakers & Begin JavaScript Arrays Lesson**](https://generalassembly.zoom.us/rec/share/CD-AR9SEpAFC1O8fe4xIg3pWMUGWZcV-1lZVE8vZFx06Lh59ZV08aIbd1uCXliM.t-pO_-8Uk5H1X_GQ?startTime=1613661453000)
+- [**Finish JavaScript Arrays Lesson and Intro to JavaScript Functions**](https://generalassembly.zoom.us/rec/share/CD-AR9SEpAFC1O8fe4xIg3pWMUGWZcV-1lZVE8vZFx06Lh59ZV08aIbd1uCXliM.t-pO_-8Uk5H1X_GQ?startTime=1613673382000) 
