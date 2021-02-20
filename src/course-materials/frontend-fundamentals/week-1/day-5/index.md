@@ -19,8 +19,6 @@ topics: "Intro to JS Objects and Classes"
 
 
 
-<!-- 
-
 <br>
 <br>
 <hr>
@@ -29,7 +27,9 @@ topics: "Intro to JS Objects and Classes"
 
 #### Lesson Recordings
 
-- [**Morning Warmup**]()
-- [**Intro to JS Objects**]()
-- [**Intro to JS Classes**]() 
--->
+- [**Morning Warmup**](https://generalassembly.zoom.us/rec/share/Ng7tl7i2JNRyD_gxux_dLYyd-DBEYiREseueM8cX8_RG8V7CQCh6ztlz48F-Jbyz.IXHGJ5E6oYGSS9l0?startTime=1613743310000)
+- [**Discussion on Scope**](https://generalassembly.zoom.us/rec/share/Ng7tl7i2JNRyD_gxux_dLYyd-DBEYiREseueM8cX8_RG8V7CQCh6ztlz48F-Jbyz.IXHGJ5E6oYGSS9l0?startTime=1613748178000)
+- [**Intro to JS Objects**](https://generalassembly.zoom.us/rec/share/E0liJePVH2SX-uuiRyHa5iO8Dq7GZ3DDUMApUta2ePAeGpxlsNjbUgUfHoqpbdxW.PnRBt3oq2g50OAqE?startTime=1613750391000)
+- [**Intro to JS Classes**](https://generalassembly.zoom.us/rec/share/E0liJePVH2SX-uuiRyHa5iO8Dq7GZ3DDUMApUta2ePAeGpxlsNjbUgUfHoqpbdxW.PnRBt3oq2g50OAqE?startTime=1613764895000) 
+- [**Brief Setup of JS Objects Lab**](https://generalassembly.zoom.us/rec/share/E0liJePVH2SX-uuiRyHa5iO8Dq7GZ3DDUMApUta2ePAeGpxlsNjbUgUfHoqpbdxW.PnRBt3oq2g50OAqE?startTime=1613770940000) 
+
