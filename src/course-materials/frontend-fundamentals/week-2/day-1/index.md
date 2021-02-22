@@ -18,12 +18,12 @@ topics: "Intro the DOM"
 - [**Lab:** DOM Menu Lab - Part 1 of 2](/frontend-fundamentals/week-2/day-1/labs/dom-menu-lab-part-1/) - **Deliverable**
 - [**Lab:** DOM Menu Lab Part 2 of 2](/frontend-fundamentals/week-2/day-1/labs/dom-menu-lab-part-2/) - **Non-Deliverable**
 
-<!-- 
 <hr>
 
-- [**Optional Activity:** Tic Tac Toe Code Weekend](/frontend-fundamentals/week-2/day-1/labs/tic-tac-toe-weekend/)
+- [**Optional Challenge:** Tic Tac Toe](/frontend-fundamentals/week-2/day-1/labs/tic-tac-toe/)
 - [**Resource:** Guide to Building a Browser Game](/frontend-fundamentals/week-2/day-1/additional-materials/guide-to-building-a-browser-game/)
 
+<!-- 
 <br>
 <br>
 <hr>

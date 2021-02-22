@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Walk-Thru of Array Iterator Methods"
 week: 2
-day: 4
+day: 3
 type: "lecture"
 ---
 

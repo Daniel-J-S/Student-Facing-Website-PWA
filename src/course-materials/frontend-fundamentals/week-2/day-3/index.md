@@ -1,22 +1,21 @@
 ---
 track: "Frontend Fundamentals"
-title: "Day 2"
+title: "Day 3"
 week: 2
-day: 2
+day: 3
 type: "homepage"
 topics: "DOM Manipulation With jQuery"
 ---
 
 
-# Day 2
+# Day 3
 
 #### Intro to DOM Manipulation With jQuery
 
-- [**Warmup:** Flexbox Practice](/frontend-fundamentals/week-2/day-2/lecture-materials/flexbox-practice/)
-- [**Lecture:** Intro To jQuery Part 1](/frontend-fundamentals/week-2/day-2/lecture-materials/intro-to-jquery-part-1/)
-- [**Lecture:** Intro To jQuery Part 2](/frontend-fundamentals/week-2/day-2/lecture-materials/intro-to-jquery-part-2/)
-- [**Lab:** My Developer Skills Lab](/frontend-fundamentals/week-2/day-2/labs/my-developer-skills-lab/) - **Deliverable**
-- **Activity:** Begin Planning Project 1
+- [**Warmup:** Flexbox Practice](/frontend-fundamentals/week-2/day-3/lecture-materials/flexbox-practice/)
+- [**Lecture:** Intro To jQuery Part 1](/frontend-fundamentals/week-2/day-3/lecture-materials/intro-to-jquery-part-1/)
+- [**Lecture** Array Iterators Walkthrough](/frontend-fundamentals/week-2/day-3/lecture-materials/array-iterators-walkthrough/) 
+- [**Lab:** Array Iterators Lab](/frontend-fundamentals/week-2/day-3/labs/array-iterators-lab/) - **Non-Deliverable**
 <!-- 
 
 <br>

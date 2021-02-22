@@ -1,13 +1,14 @@
 ---
 track: "Frontend Fundamentals"
-title: "Tic-Tac-Toe Code Weekend"
+title: "Tic-Tac-Toe"
 week: 2
 day: 1
 type: "lab"
 ---
 
-# Tic-Tac-Toe Code Weekend
+# Tic-Tac-Toe
 
+<br>
 <br>
 <br>
   
@@ -22,6 +23,7 @@ Build a Tic-Tac-Toe game incorporating the three web app technologies you've wor
 
 <br>
 <br>
+<br>
 
 
 ## Minimum Requirements
@@ -33,9 +35,12 @@ Build a Tic-Tac-Toe game incorporating the three web app technologies you've wor
 
 <br>
 <br>
+<br>
 
 
 ### Getting Started
+
+- First, we recommend checking out the "[Guide to Building a Browser Game](/frontend-fundamentals/week-2/day-1/additional-materials/guide-to-building-a-browser-game/)" resource
 
 - Create a new project folder named `tic-tac-toe`.
 
@@ -58,6 +63,7 @@ Build a Tic-Tac-Toe game incorporating the three web app technologies you've wor
 - Lots of little functions!
 
 
+<br>
 <br>
 <br>
 
@@ -129,6 +135,7 @@ Using a numbered outline is not required but helps organize the more complex ste
 
 <br>
 <br>
+<br>
 
 
 ## Bonuses
@@ -137,6 +144,7 @@ Using a numbered outline is not required but helps organize the more complex ste
 - Provide logic for a cat's game (tie), also displaying a message.
 - Add your personal touch with unique styling.
 
+<br>
 <br>
 <br>
 

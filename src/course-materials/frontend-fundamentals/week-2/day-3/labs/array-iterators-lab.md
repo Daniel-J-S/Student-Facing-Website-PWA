@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Array Iterator Methods Lab"
 week: 2
-day: 4
+day: 3
 type: "lab"
 ---
 

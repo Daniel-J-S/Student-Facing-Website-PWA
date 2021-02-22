@@ -11,11 +11,11 @@ topics: "Intro to CSS Flexbox/Grid & Responsive Design"
 
 #### Intro to CSS Flexbox/Grid & Responsive Design
 - [**Warmup:** Fake Resume & Github Practice](/frontend-fundamentals/week-2/day-2/lecture-materials/fake-resume/)
-- [**Activity** Review Project 1 Requirements](/unit-projects/unit-one-project-requirements/)
 - [**Lecture:** Intro to CSS Flexbox and Grid](/frontend-fundamentals/week-2/day-2/lecture-materials/intro-to-css-flexbox-and-css-grid/)
 - [**Lecture:** Intro to Responsive Design](/frontend-fundamentals/week-2/day-2/lecture-materials/intro-to-responsive-design/)
 - [**Lab:** CSS Flexbox and Grid Lab](/frontend-fundamentals/week-2/day-2/labs/flexbox-and-grid-lab/) - **Deliverable**
-
+- [**Activity** Review Project 1 Requirements](/unit-projects/unit-one-project-requirements/)
+- **Activity** Begin Planning Project 1
 <!-- 
 
 <br>
