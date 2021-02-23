@@ -19,11 +19,8 @@ topics: "Intro to JS Objects and Classes"
 
 
 
-<br>
-<br>
+
 <hr>
-<br>
-<br>
 
 #### Lesson Recordings
 

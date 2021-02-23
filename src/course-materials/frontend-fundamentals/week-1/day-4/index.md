@@ -17,11 +17,9 @@ topics: "JavaScript Arrays, Functions & Scope"
 - [**Lab**: JavaScript Functions Lab](/frontend-fundamentals/week-1/day-4/labs/javascript-functions-lab/) - **Non-Deliverable**
 
 
-<br>
-<br>
+
 <hr>
-<br>
-<br>
+
 
 #### Lesson Recordings
 

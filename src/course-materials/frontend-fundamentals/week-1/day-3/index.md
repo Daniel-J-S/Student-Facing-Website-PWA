@@ -16,11 +16,9 @@ topics: "Intro to JavaScript Datatypes & Control Flow"
 - [**Lecture:** Intro to JavaScript Control Flow](/frontend-fundamentals/week-1/day-3/lecture-materials/intro-to-javascript-control-flow/)
 
 
-<br>
-<br>
+
 <hr>
-<br>
-<br>
+
 
 
 

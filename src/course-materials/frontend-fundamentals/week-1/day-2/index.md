@@ -22,11 +22,8 @@ topics: "Classroom Culture, the Dev Environment & Git/Github"
 
 
 
-<br>
-<br>
+
 <hr>
-<br>
-<br>
 
 
 #### Lesson Recordings
