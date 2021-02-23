@@ -16,19 +16,17 @@ topics: "Intro to CSS Flexbox/Grid & Responsive Design"
 - [**Lab:** CSS Flexbox and Grid Lab](/frontend-fundamentals/week-2/day-2/labs/flexbox-and-grid-lab/) - **Deliverable**
 - [**Activity** Review Project 1 Requirements](/unit-projects/unit-one-project-requirements/)
 - **Activity** Begin Planning Project 1
-<!-- 
 
-<br>
-<br>
+
+
 <hr>
-<br>
-<br>
 
 
 #### Lesson Recordings
 
-- [**Intro to CSS Flexbox and Grid Part 2**]()
-- [**CSS Flexbox and Grid Part 2**]() 
-- [**Intro to Responsive Design & CSS Flexbox & Grid Lab Walkthrough**]() 
+- [**Fake Resume Walkthrough**](https://generalassembly.zoom.us/rec/share/BNDYdu93W00bFSBtGxAkT9tlXaUY_9CJrs6Lj7KW4Uaa1v-GhAfo_ZtSfpdaXBmw.rObgNnrcNJxoik9d?startTime=1614091432000)
+- [**Intro to CSS Flexbox and Grid Part**](https://generalassembly.zoom.us/rec/share/BNDYdu93W00bFSBtGxAkT9tlXaUY_9CJrs6Lj7KW4Uaa1v-GhAfo_ZtSfpdaXBmw.rObgNnrcNJxoik9d?startTime=1614095823000)
+- [**Success Tips**](https://generalassembly.zoom.us/rec/share/BNDYdu93W00bFSBtGxAkT9tlXaUY_9CJrs6Lj7KW4Uaa1v-GhAfo_ZtSfpdaXBmw.rObgNnrcNJxoik9d?startTime=1614111483000) 
+- [**Intro to Responsive Design**](https://generalassembly.zoom.us/rec/share/BNDYdu93W00bFSBtGxAkT9tlXaUY_9CJrs6Lj7KW4Uaa1v-GhAfo_ZtSfpdaXBmw.rObgNnrcNJxoik9d?startTime=1614112931000) 
 
--->
+
