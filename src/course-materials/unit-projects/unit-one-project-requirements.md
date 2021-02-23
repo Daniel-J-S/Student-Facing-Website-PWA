@@ -190,6 +190,14 @@ Consider framing your project around a problem. For example, if I were to create
 <br>
 
 
+## Example README.md
+
+Here's an example readme for inspiration:
+![Example Readme](https://imgur.com/Xyu5ngf.png)
+
+<br>
+<br>
+
 
 ## Useful Resources
 
