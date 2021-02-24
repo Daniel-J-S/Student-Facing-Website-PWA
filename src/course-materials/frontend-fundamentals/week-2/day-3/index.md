@@ -16,20 +16,15 @@ topics: "DOM Manipulation With jQuery"
 - [**Lecture:** Intro To jQuery Part 1](/frontend-fundamentals/week-2/day-3/lecture-materials/intro-to-jquery-part-1/)
 - [**Lecture** Array Iterators Walkthrough](/frontend-fundamentals/week-2/day-3/lecture-materials/array-iterators-walkthrough/) 
 - [**Lab:** Array Iterators Lab](/frontend-fundamentals/week-2/day-3/labs/array-iterators-lab/) - **Non-Deliverable**
-<!-- 
 
-<br>
-<br>
 <hr>
-<br>
-<br>
 
 
 
 #### Lesson Recordings
 
-- [**jQuery Part 1**]()
-- [**jQuery Part 2**]() 
+- [**jQuery Part 1**](https://generalassembly.zoom.us/rec/share/JLLCJQut_vOwgI-DpJScuRMDCzyms0Ho86wT4ePCICrYbZ2BC2f52TnIPZQhk8wk.suRNFjFCoMmN6_0h?startTime=1614179908000)
+- [**Array Iterators Walkthrough**](https://generalassembly.zoom.us/rec/share/JLLCJQut_vOwgI-DpJScuRMDCzyms0Ho86wT4ePCICrYbZ2BC2f52TnIPZQhk8wk.suRNFjFCoMmN6_0h?startTime=1614191666000) 
 
--->
+
 
