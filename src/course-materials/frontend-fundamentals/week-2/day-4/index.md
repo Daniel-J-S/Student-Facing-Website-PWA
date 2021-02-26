@@ -16,19 +16,13 @@ topics: "DOM Manipulation with jQuery Part 2"
 - [**Lecture:** JavaScript Callbacks and Arrow Functions](/frontend-fundamentals/week-2/day-4/lecture-materials/javascript-callbacks-and-arrow-functions/)
 - **Activity:** Project 1 Planning
 
-
-<!-- 
-<br>
-<br>
 <hr>
-<br>
-<br>
+
 
 
 #### Lesson Recordings
 
-- [**Walk-through of Array Iterator Methods**]()
-- [**Walk-through of Callbacks and Arrow Functions**]()
+- [**jQuery Part 2 - JS Callbacks & Arrow Functions**](https://generalassembly.zoom.us/rec/share/CehyT5luJpmVilihvWf9Z7Pise2uOMLqqXVJGNmaNQ5G_fmpSBJl1DPjfvH-fCVO.AV1sydt4Ra_JwTDy?startTime=1614265997000)
 
--->
+
 
