@@ -63,7 +63,7 @@ Additionally, we still take normal attendance during project period, so you are 
 
 Below is a non-exhaustive list of some free API's you can use. There are _many_ API's out there, however, so if you find one not on this list that you'd like to use, feel free! Please note that some may require signing up for an API key (e.g. the Marvel API).
 
-  1. Marvel: <a href="https://developer.marvel.com/" target="_blank">https://developer.marvel.com/</a>
+  1. Super Hero API: <a href="https://superheroapi.com/" target="_blank">https://superheroapi.com/</a>
   2. Weather: <a href="https://openweathermap.org/api" target="_blank">https://openweathermap.org/api</a>
   3. News: <a href="https://newsapi.org/" target="_blank">https://newsapi.org/</a>
   4. Giphy: <a href="https://developers.giphy.com/">https://developers.giphy.com/</a>
