@@ -11,22 +11,15 @@ topics: "Build Another Project That Uses AJAX"
 # Week 3 - Day 1
 
 #### Build Another Project That Uses AJAX
-- [**Warmup:** Beginners Guide to UX](/frontend-fundamentals/week-3/day-1/lecture-materials/beginners-guide-to-ux/)
+<!-- - [**Warmup:** Beginners Guide to UX](/frontend-fundamentals/week-3/day-1/lecture-materials/beginners-guide-to-ux/) -->
 - **Activity:** Build Another App That Uses an API
-- **Activity:** Students Begin Project 1
+- **Activity:** Students Continue with Project 1
 
-<!-- 
-<br>
-<br>
+
 <hr>
-<br>
-<br>
-
-
 
 #### Lesson Recordings
 
-- [**Beginners Guide to UX**]()
-- [**PokeGallery Code Along**]() 
+<!-- - [**Beginners Guide to UX**]() -->
+- [**"PokeGallery" Code Along**](https://generalassembly.zoom.us/rec/share/SQAhZNVqXiwH23JhUaV8jD0U5x92LQ-JyAfTIvtsuleJc9yJtgncnhhp9iojEsTF.SktkINyxIW4lhKgF?startTime=1614611059000)
 
--->
