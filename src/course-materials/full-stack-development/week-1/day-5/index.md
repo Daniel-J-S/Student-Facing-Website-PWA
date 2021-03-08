@@ -18,11 +18,8 @@ topics: "Intro to MongoDB and Mongoose"
 
 
 <!-- 
-<br>
-<br>
+
 <hr>
-<br>
-<br>
 
 
 

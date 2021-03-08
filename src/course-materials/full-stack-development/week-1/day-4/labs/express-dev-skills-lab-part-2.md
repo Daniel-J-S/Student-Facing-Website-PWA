@@ -25,7 +25,7 @@ to perform **Create**, **Update** & **Delete** data operations in an Express app
 
 This lab builds upon the `express-dev-skills` project you created in the _My Dev Skills - Part 1_ lab where the **Read** data operation was implemented.
 
-#### This Lab is a Deliverable
+#### This lab (part 2) combined with (part 1) is deliverable
 
 <br>
 <br>

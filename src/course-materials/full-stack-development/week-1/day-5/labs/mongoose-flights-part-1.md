@@ -13,11 +13,6 @@ type: "lab"
 <br>
 <br>
 <br>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mjzeQsHbbkE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br>
-<br>
 <br>
 
 
@@ -38,7 +33,7 @@ FYI, future lessons will expand upon the `mongoose-movies` project, and the labs
 
 
 
-#### The final version of `mongoose-flights` will be a deliverable, so do each part so you don't fall behind.
+#### There are three parts to `mongoose-flights`, however, only <u style="color: #673ab7;">part 1 is deliverable</u>.
 
 <br>
 <br>

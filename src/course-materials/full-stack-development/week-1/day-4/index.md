@@ -14,12 +14,8 @@ topics: "Express Middleware"
 - [**Lab:** Express Dev Skills Part 2 of 2](/full-stack-development/week-1/day-4/labs/express-dev-skills-lab-part-2/) - **Parts 1 and 2 Are Deliverable**
 
 <!-- 
-<br>
-<br>
-<hr>
-<br>
-<br>
 
+<hr>
 
 
 #### Lesson Recordings

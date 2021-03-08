@@ -2,7 +2,7 @@
 track: "Full-Stack Development"
 title: "Intro to Express"
 week: 1
-day: 1
+day: 2
 type: "lecture"
 ---
 
