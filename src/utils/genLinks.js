@@ -10,7 +10,7 @@ export default function genLinks(data) {
         lessonData[`week${node.frontmatter.week}`] = [
           ...data.filter(({ node }) => 
           node.frontmatter.week === currentWeek).map(function({ node }) {
-            return node.frontmatter.topics !== 'Project 1' ?
+            return node.frontmatter.topics !== 'Project 1' || 'Project 2' || 'Project 3' || 'Project 4' || 'Capstone Project' ?
             <Link to={node.fields.slug} key={node.id}>
               <h2 className={styles.dayTitle}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
             </Link>
