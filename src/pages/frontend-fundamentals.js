@@ -8,7 +8,7 @@ import genLinks from '../utils/genLinks';
 
 export default({ data, location }) => {
 
-   const { week1, week2, week3 } = genLinks(data.allMarkdownRemark.edges);
+   const { week1, week2, week3, week4 } = genLinks(data.allMarkdownRemark.edges);
 
     return (
         <Layout
@@ -30,13 +30,12 @@ export default({ data, location }) => {
               <br />
               <h2>Project Week</h2>  
               { week3 }
-              {/* 
-              Locked for Now
               <br />
               <hr />
               <br />
               <h2>Presentations</h2>  
-              { week4 } */}
+              { week4 } 
+              {/* Use this to lock content */}
             </main>
         </Layout>
     );
