@@ -415,7 +415,8 @@ and mounted like this:
 ```javascript
 app.use('/calendar', calendarRouter);
 ```
-	**What is the actual path of that route?**
+
+**What is the actual path of that route?**
 
 <br>
 <br>
