@@ -2,7 +2,7 @@
 track: "Full-Stack Development"
 title: "Intro to Express Middleware"
 week: 1
-day: 4
+day: 5
 type: "lecture"
 ---
 

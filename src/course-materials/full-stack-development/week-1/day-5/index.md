@@ -4,30 +4,13 @@ title: "Day 5"
 week: 1
 day: 5
 type: "homepage"
-topics: "Intro to MongoDB and Mongoose"
+topics: "Express Middleware & MongoDB"
 ---
 
 # Week 1 - Day 5
 
-#### Intro to MongoDB and Mongoose
+#### Express Middleware & MongoDB
+- [**Lecture:** Intro to Express Middleware](/full-stack-development/week-1/day-5/lecture-materials/intro-to-express-middleware/)
+- [**Lab:** Express Dev Skills Part 2 of 2](/full-stack-development/week-1/day-5/labs/express-dev-skills-lab-part-2/) - **Parts 1 and 2 Are Deliverable**
 - [**Lecture:** Intro to MongoDB](/full-stack-development/week-1/day-5/lecture-materials/intro-to-mongodb/)
-- [**Lecture:** Intro to Mongoose](/full-stack-development/week-1/day-5/lecture-materials/intro-to-mongoose)
-- [**Lab:** Mongoose Flights Part 1 of 3](/full-stack-development/week-1/day-5/labs/mongoose-flights-part-1/) - **Only Part 1 is a Deliverable**
 - [**Resource:** Create a Cloud-Hosted MongoDB](/full-stack-development/week-1/day-5/lecture-materials/create-an-atlas-hosted-mongodb/) 
-
-
-
-<!-- 
-
-<hr>
-
-
-
-#### Lesson Recordings
-
-- [**Intro to MongoDB**]()
-- [**Intro to Mongoose**]()
--->
-
-
-

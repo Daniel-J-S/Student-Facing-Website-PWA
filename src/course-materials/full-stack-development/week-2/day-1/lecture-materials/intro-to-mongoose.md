@@ -1,8 +1,8 @@
 ---
 track: "Full-Stack Development"
 title: "Intro to Mongoose"
-week: 1
-day: 4
+week: 2
+day: 1
 type: "lecture"
 ---
 
