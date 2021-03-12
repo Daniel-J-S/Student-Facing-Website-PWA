@@ -25,5 +25,3 @@ topics: "Intro to Express Routers and Controllers"
 - [**Finish Routers and Controllers Lesson**](https://generalassembly.zoom.us/rec/share/39y8N-EMOPeYT4zmcnwI2GyipSIJwIOhZe9XSP2Gn3PW6BOcreg82hl7WEZE_8ft.j-WSk4PvhQ2OyB8N?startTime=1615471362000) 
 - [**Intro to Express Lab Walkthrough**](https://generalassembly.zoom.us/rec/share/lsdvkRq6iu5lZMFDCUtQrKLsP8LxdDu7U2WP4I7GXKVLzuQanQESkxHsA4_tS5ml.zY9vr7_YTsV9b3jI?startTime=1615401711000) 
 
-
--->
