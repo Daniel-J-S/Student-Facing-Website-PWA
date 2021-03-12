@@ -1,10 +1,11 @@
 ---
-track: "Frontend Fundamentals"
+track: "Full-Stack Development"
 title: "Beginners Guide to UX"
-week: 2
+week: 1
 day: 5
 type: "lecture"
 ---
+
 
 
 
