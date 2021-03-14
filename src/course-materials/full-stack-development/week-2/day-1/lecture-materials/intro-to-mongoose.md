@@ -67,6 +67,12 @@ For this lecture, we'll need to get setup with a brand new express app in our pr
 
 We're going to make a movies app!
 
+🚨 **NOTE:** If you're unable to produce a working version of the starter project before we begin the lesson, you're instructor will have you [clone this repo](https://git.generalassemb.ly/Instructional-Materials/STARTER-CODE-INTRO-TO-MONGOOSE) instead
+
+<br>
+<br>
+<br>
+
 1. Make a directory called `mongoose-movies` then change into it
 
 ```bash
