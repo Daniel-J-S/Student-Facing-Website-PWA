@@ -2,7 +2,7 @@
 track: "Full-Stack Development"
 title: "Authentication with Bcrypt and Sessions"
 week: 2
-day: 5
+day: 4
 type: "lecture"
 ---
 

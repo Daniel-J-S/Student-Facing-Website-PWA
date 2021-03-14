@@ -4,31 +4,30 @@ title: "Day 5"
 week: 2
 day: 5
 type: "homepage"
-topics: "Authentication"
+topics: "Optional APIs with Express Workshop & Project 2"
 ---
 
 
 # Week 2 - Day 5
 
-#### Authentication
+#### Optional APIs with Express Workshop & Project 2
 
-- [**Lecture:** Intro to Authentication With Bcrypt & Sessions](/full-stack-development/week-2/day-5/lecture-materials/authentication-with-bcrypt-and-sessions/)
-- [**Advanced Material Resource:** Intro to Authentication With Oauth](/full-stack-development/week-2/day-5/lecture-materials/authentication-with-oauth/)
+- **Optional Workshop:** Consuming a 3rd Party API with Express
+
+- [**Resource:** Consuming the GitHub API with Express](/full-stack-development/week-2/day-5/lecture-materials/consuming-the-github-api-with-express)
+
+- **Activity:** Students Plan Project 2
 
 
 <!-- 
-<br>
-<br>
+
 <hr>
-<br>
-<br>
-
-
 
 #### Lesson Recordings
 
-- [**Intro to Authentication**]()
-
-
-
+- [**Consuming a 3rd Party API Using Express**]()
+  
 -->
+
+
+

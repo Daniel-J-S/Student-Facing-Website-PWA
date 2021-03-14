@@ -2,13 +2,13 @@
 track: "Full-Stack Development"
 title: "Consuming 3rd Party APIs"
 week: 2
-day: 4
+day: 5
 type: "lecture"
 ---
 
 
-# Consuming 3rd Party API<small>s</small>
-
+# Consuming the GitHub API with Express
+<!-- 
 <br>
 <br>
 <br>
@@ -51,12 +51,19 @@ type: "lecture"
 1. Access Tokens
 1. Fetch data from GitHub's API
 1. Render the data
-1. Details, I want details!
+1. Details, I want details! -->
 
 
 <br>
 <br>
+<br>
+<br>
 
+🚨 **NOTE: this guide uses the `request` npm package for making server-side HTTP requests, which has since become deprecated.** <br> [consider looking into `axios` as an alternative](https://www.npmjs.com/package/axios)
+
+<br>
+<br>
+<br>
 
 ## What kind of API are we talking about?
 

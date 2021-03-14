@@ -2,7 +2,7 @@
 track: "Full-Stack Development"
 title: "Authentication with OAuth"
 week: 2
-day: 5
+day: 4
 type: "lecture"
 ---
 

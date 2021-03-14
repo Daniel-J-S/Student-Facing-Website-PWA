@@ -2,7 +2,7 @@
 track: "Full-Stack Development"
 title: "Mongoose Flights Part 3"
 week: 2
-day: 2
+day: 3
 type: "lab"
 ---
 

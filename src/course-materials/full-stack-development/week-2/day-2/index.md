@@ -4,34 +4,37 @@ title: "Day 2"
 week: 2
 day: 2
 type: "homepage"
-topics: "Catch up on Labs - Review Express - Bonus Content"
+topics: "Mongoose Embedded Relationships"
 ---
 
 # Week 2 - Day 2
 
-#### Mongoose Referenced Relationships
-- [**Activity:** Review Project 2 Requirements](/unit-projects/unit-two-project-requirements)
-- [**Advanced Material Resource:** Intro to Mongoose Referenced Relationships](/full-stack-development/week-2/day-2/lecture-materials/intro-to-mongoose-referenced-relationships/)
-- [**Optional Lab:** Mongoose Flights Part 3 of 3](/full-stack-development/week-2/day-2/labs/mongoose-flights-part-3/) - **Only Part 1 is a Deliverable**
+#### Mongoose Embedded Relationships
+- [**Morning Exercise:** HTML/CSS Forms](/full-stack-development/week-2/day-2/lecture-materials-edit/html-css-forms)
+- [**Lecture:** Intro to Mongoose Embedded Relationships](/full-stack-development/week-2/day-2/lecture-materials-edit/intro-to-mongoose-embedded-relationships)
+- [**Optional Lab:** Mongoose Flights Part 2 of 3](/full-stack-development/week-2/day-2/labs/mongoose-flights-part-2) - **Only Part 1 is a Deliverable**
+
 
 <!-- 
 
-<br>
-<br>
 <hr>
-<br>
-<br>
-
-
-
 #### Lesson Recordings
 
-- [**Last Walkthrough of Express/Mongoose**]()
-  
-- [**Project 2 Walk-through**]()
-  
-- [**Project 2 Planning (trello & ERD)**]()
-
+- [**Morning Exercise**]()
+- [**Intro to Mongoose Embedded Relationships**]()
 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

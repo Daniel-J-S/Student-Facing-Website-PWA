@@ -1,37 +1,26 @@
 ---
 track: "Full-Stack Development"
-title: "Day 3"
+title: "Day 5"
 week: 2
 day: 4
 type: "homepage"
-topics: "Consuming a 3rd Party API with Express"
+topics: "Authentication"
 ---
 
 
 # Week 2 - Day 4
 
-#### Consuming a 3rd Party API with Express
+#### Authentication
 
-- [**Lecture:** Consuming a 3rd Party API with Express](/full-stack-development/week-2/day-4/lecture-materials/consuming-3rd-party-apis/)
-
-- **Activity:** Students Plan Project 2
+- [**Lecture:** Intro to Authentication With Bcrypt & Sessions](/full-stack-development/week-2/day-4/lecture-materials/authentication-with-bcrypt-and-sessions/)
+- [**Advanced Material Resource:** Intro to Authentication With Oauth](/full-stack-development/week-2/day-4/lecture-materials/authentication-with-oauth/)
 
 
 <!-- 
 
-<br>
-<br>
 <hr>
-<br>
-<br>
-
-
 
 #### Lesson Recordings
 
-- [**Consuming a 3rd Party API Using Express**]()
-  
+- [**Intro to Authentication**]()
 -->
-
-
-
