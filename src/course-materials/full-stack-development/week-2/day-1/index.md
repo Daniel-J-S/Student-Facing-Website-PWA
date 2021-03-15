@@ -18,42 +18,11 @@ topics: "Intro to MongoDB & Mongoose"
 - [**Activity:** Review Project 2](/unit-projects/unit-two-project-requirements)
 
 
-
-
-
-<!-- 
-
 <hr>
 
 
 
 #### Lesson Recordings
 
-- [**Intro to MongoDB**]()
-- [**Intro to Mongoose**]()
--->
-
-
-
-
-
-
-<!-- 
-
-<br>
-<br>
-<hr>
-<br>
-<br>
-
-
-
-#### Lesson Recordings
-
-- [**HTML/CSS Forms**]()
-- [**Express/Mongoose Review**]()
-
--->
-
-
-
+- [**Intro to MongoDB**](https://generalassembly.zoom.us/rec/share/meb-jZ_7ul5ciUskk9d9j2tYxJCp0Ued1Hfv90S1v0dKCqmBamhv0YIbQuMoqQGS.gzhRHWZLkmwiiIDm?startTime=1615813234000)
+- [**Intro to Mongoose**](https://generalassembly.zoom.us/rec/share/meb-jZ_7ul5ciUskk9d9j2tYxJCp0Ued1Hfv90S1v0dKCqmBamhv0YIbQuMoqQGS.gzhRHWZLkmwiiIDm?startTime=1615819426000)
