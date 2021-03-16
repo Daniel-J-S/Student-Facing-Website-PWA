@@ -78,7 +78,7 @@ mongoose.connect('YOUR MONGODB ATLAS CONNECTION URI', {
 
 <br>
 
-As you can see above 👆, this starter code is missing the MongoDB Atlas connection URI it needs to connect to your database.
+As you can see above, 👆 this starter code is missing the MongoDB Atlas connection URI it needs to connect to your database.
 
 Grab that from your working code from the previous lesson and replace the placeholder string with that value instead 😅
 
