@@ -181,8 +181,6 @@ You will have a maximum of 5 minutes to present your project following these gui
 
 
 ## Suggested Ways to Get Started
-
-- Because your app's functionality revolves around the logged in user, **implement authentication and basic navigation first!**
 - **Discuss your app idea with an instructor to get their feedback before you dive too deep into user stories and wireframes.**
 - **Remember to keep things small and focus on the MVP** – feature creep can doom a project!
 
