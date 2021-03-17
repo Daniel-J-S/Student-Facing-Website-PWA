@@ -12,14 +12,6 @@ type: "lecture"
 <br>
 <br>
 
-<!-- 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8vit-qdoupY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-<br>
-<br>
-<br> 
--->
 
 
 ## Learning Objectives
@@ -49,13 +41,19 @@ type: "lecture"
 <br>
 <br>
 
-#### Setup
+### Setup
 
-- Today's starter code is the final code from our _Mongoose - Embedding Related Data_ lesson, however, to make this lesson flow better, let's make a few small changes:
+Today's starter code is the final code from our _Mongoose - Embedding Related Data_ lesson, however, we need to make a small change to prepare for this lesson.
+
+There's quite a bit to cover in this material. That said, [let's clone down a "ready to go" version](https://git.generalassemb.ly/Instructional-Materials/STARTER-CODE-INTRO-TO-MONGOOSE-REFERENCED-DATA) of the codebase, so we can get straight into the lesson.
+
+You can also see the steps we took to ready today's code base below:
 
 <br>
+<br>
+<br>
 
-#### 1) We're going to add a feature to `show.ejs` that shows the average rating:
+#### 1) We added a feature to `show.ejs` that shows the average rating:
 
 ```html
 
@@ -93,7 +91,7 @@ type: "lecture"
 ```
 <br>
 
-#### 2) Remove the "Cast" input tag from `/views/movies/new.ejs`
+#### 2) We removed the "Cast" input tag from `/views/movies/new.ejs`
 
 ```html
 <form id="new-form" action="/movies" method="POST">
@@ -115,8 +113,9 @@ type: "lecture"
 ```
 
 <br>
+<br>
 
-#### 3) Remove the `<div>` elements for displaying the movie "Cast" input tag from `/views/movies/show.ejs`
+#### 3) We removed the `<div>` elements for displaying the movie "Cast" input tag from `/views/movies/show.ejs`
 
 ```html
 <section id="show-page">
@@ -132,8 +131,9 @@ type: "lecture"
 ```
 
 <br>
+<br>
 
-#### 4) Temporarily "comment out" the cast property in the `models/movie.js`
+#### 4) We temporarily "commented out" the cast property in the `models/movie.js`
 
 ```javascript
 const movieSchema = new Schema({
@@ -160,15 +160,16 @@ const movieSchema = new Schema({
 <br>
 
 
-#### 5) Remove the following lines from the **`create` action** inside of `controllers/movies.js`
+#### 5) We removed the following lines from the **`create` action** inside of `controllers/movies.js`
 
 ```javascript
-
+if(req.body.cast) {
   req.body.cast = req.body.cast.replace(/\s*,\s*/g, ',');
-
   if (req.body.cast) req.body.cast = req.body.cast.split(',');
+}
 ```
 
+<br>
 <br>
 <br>
 
@@ -239,6 +240,7 @@ The `find` method returns a **Query** object that is first logged, followed by t
 
 - For future reference, here's a gist that documents how to do what we just did: [Perform CRUD Using Mongoose Models in a Node REPL](https://gist.github.com/myDeveloperJourney/1f3c01e199913b09e90988dce3384bb1)
 
+<br>
 <br>
 <br>
 
