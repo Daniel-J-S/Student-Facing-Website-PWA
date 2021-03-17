@@ -16,6 +16,8 @@ topics: "Mongoose Embedded Relationships"
 
 
 <hr>
+
+
 #### Lesson Recordings
 
 - [**Intro to Mongoose Embedded Relationships**](https://generalassembly.zoom.us/rec/share/5qsiSSPpYea3CpFFlBdQI8p5bKSronS-mjhMXthdFVQ9vg_k4OKYHytjhkMtOFsA.mqfYsDmEHh-UGxLd?startTime=1615900027000)
