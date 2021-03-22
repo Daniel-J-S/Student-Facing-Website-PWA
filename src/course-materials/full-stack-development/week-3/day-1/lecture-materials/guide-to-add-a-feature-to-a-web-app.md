@@ -21,6 +21,7 @@ When the time comes to implement a user story (feature) in a typical web applica
 
 <br>
 <br>
+<br>
 
 #### Step 1 - Identify the "Proper" Route
 
@@ -32,6 +33,7 @@ Of course, you will substitute the data resource you are CRUDing.  For example: 
 
 Then make note of the **HTTP method** and the **URI/Path** of the route.
 
+<br>
 <br>
 <br>
 
@@ -47,6 +49,7 @@ Examples include:
 
 <br>
 <br>
+<br>
 
 #### Step 3 - Define the Route
 
@@ -58,6 +61,7 @@ When the server receives an HTTP request matching a route that's been defined, t
 
 <br>
 <br>
+<br>
 
 #### Step 4 - Code the Controller Action
 
@@ -67,6 +71,7 @@ Controller actions are responsible for performing CRUD and providing data to vie
 
 However, the last thing a controller action will do is respond to the client by...
 
+<br>
 <br>
 <br>
 

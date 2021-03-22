@@ -27,6 +27,7 @@ This guide will show an example of how to handle the above scenario...
 
 <br>
 <br>
+<br>
 
 ## Example Data Model
 
@@ -39,6 +40,9 @@ Here's the ERD we'll use as an example:
 Note that in this app, a user "recommends" a book to other users by creating it in the database.  This one-to-many relationship is modeled with a `userRecommending` property on the Book model that references the `_id` of the user that created each particular book.
 
 In addition, users can add books to their reading list.  This many-to-many relationship is modeled with a `usersReading` property which references an array of user documents' `_id` values.
+
+
+<br>
 <br>
 <br>
 
@@ -48,11 +52,13 @@ Because comments are being embedded within the book documents, there is no Comme
 
 <br>
 <br>
+<br>
 
 #### Restricting Updating and/or Deleting of Comments Functionality
 
 Each comment needs to know the user that submitted it.  Not just for display purposes, but to restrict the ability to update and/or delete a comment to that of the user that submitted it.  The `userId` property in the comment schema holds the `_id` of the user that submitted the comment and can therefore be compared to the logged in user's `_id` to render the additional UI for updating/deleteing.
 
+<br>
 <br>
 <br>
 
@@ -62,6 +68,7 @@ Since displaying the name of the user commenting on a book makes sense, note tha
 
 Copying over the user's name from `req.user` in the comment `create` action will avoid having to populate comments every time they are accessed.  This provides much better efficiency.
 
+<br>
 <br>
 <br>
 
@@ -83,6 +90,7 @@ Copying over the user's name from `req.user` in the comment `create` action will
 
 <br>
 <br>
+<br>
 
 #### Comments
 
@@ -96,6 +104,7 @@ Copying over the user's name from `req.user` in the comment `create` action will
 | PUT | /comments/:id| commentsCtrl.update | Handle the edit comment form being submitted (restrict to user who submitted the comment) |
 | DELETE | /comments/:id| commentsCtrl.delete | Delete a comment (restrict to user who submitted the comment) |
 
+<br>
 <br>
 <br>
 
@@ -116,6 +125,11 @@ function create(req, res) {
 }
 ```
 
+<br>
+<br>
+<br>
+
+
 #### Edit a book
 
 ```javascript
@@ -127,6 +141,11 @@ function edit(req, res) {
   });
 }
 ```
+
+
+<br>
+<br>
+<br>
 
 #### Adding a book to a user's reading list
 
@@ -144,6 +163,12 @@ function addReading(req, res) {
   });
 }
 ```
+
+<br>
+<br>
+<br>
+
+
 
 #### View all books or based upon a name search
 
@@ -165,6 +190,8 @@ function allBooks(req, res) {
 ```
 <br>
 <br>
+<br>
+<br>
 
 #### Add a comment
 
@@ -178,6 +205,11 @@ A form used to create a comment would look something like:
   <button type="submit">ADD COMMENT</button>
 </form>
 ```
+
+<br>
+<br>
+<br>
+
 
 In the comment controller's create action, we'll need to first find the book to add the comment to:
 
@@ -198,6 +230,10 @@ function create(req, res) {
 ```
 <br>
 <br>
+<br>
+<br>
+
+
 
 #### Update a comment
 
@@ -234,6 +270,10 @@ function update(req, res) {
 ```
 <br>
 <br>
+<br>
+
+
+
 
 #### Delete a comment
 
@@ -288,6 +328,9 @@ function delete(req, res) {
 
 <br>
 <br>
+<br>
+
+
 
 ## Avoiding Having to Pass `user` Every `render`
 

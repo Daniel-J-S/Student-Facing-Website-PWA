@@ -207,6 +207,8 @@ Multiple key:value pairs can be space separated, or the command can be run as ma
 <br>
 <br>
 
+
+<!-- 
 **IMPORTANT**
 
 For deployments using OAuth, be sure to use your Heroku app's hostname, **not** `localhost:3000` when setting the callbacks URL.  For example, this was the command used to set the Google OAuth callback for _sei-students_:
@@ -236,7 +238,9 @@ Return to the previous screen and add the **Authorized redirect URI** for the He
 
 <br>
 <br>
-<br>
+<br> 
+
+-->
 
 ### Browse to the App
 
@@ -253,6 +257,7 @@ $ heroku open
 <br>
 
 ### Congrats on deploying to Heroku!
+
 <br>
 <br>
 
