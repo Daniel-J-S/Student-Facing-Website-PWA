@@ -2,6 +2,15 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styles from '../styles/course-content-display.module.scss';
 
+const blanks = [
+    'Project 1', 
+    'Project 2', 
+    'Project 3', 
+    'Project 4', 
+    'Project Presentations', 
+    'Capstone'
+];
+
 export default function genLinks(data) {
     const lessonData = {};
     let currentWeek = '';
@@ -10,7 +19,7 @@ export default function genLinks(data) {
         lessonData[`week${node.frontmatter.week}`] = [
           ...data.filter(({ node }) => 
           node.frontmatter.week === currentWeek).map(function({ node }) {
-            return node.frontmatter.topics !== 'Project 1' || 'Project 2' || 'Project 3' || 'Project 4' || 'Capstone Project' ?
+            return !blanks.includes(node.frontmatter.topics) ?
             <Link to={node.fields.slug} key={node.id}>
               <h2 className={styles.dayTitle}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
             </Link>
