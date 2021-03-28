@@ -53,10 +53,9 @@ All content is subject to change at Instructors discretion.
 <br>
 
 
-<div style="color: grey;">
 
-### 🔒 Unit Three: React Fundamentals
-<!-- ### [<u>Unit Three: React Fundamentals</u>](/react-fundamentals) -->
+<!-- ### 🔒 Unit Three: React Fundamentals -->
+### [<u>Unit Three: React Fundamentals</u>](/react-fundamentals)
 
 | Week  | Topics |
 | ----- | ------ |
@@ -67,7 +66,10 @@ All content is subject to change at Instructors discretion.
 <br>
 <br>
 
+<div style="color: grey;">
+
 ### 🔒 Unit Four: Second Language
+<!-- ### [<u>Unit Four: Second Language</u>](/second-language) -->
 
 | Week  | Topics |
 | ----- | ------ |
