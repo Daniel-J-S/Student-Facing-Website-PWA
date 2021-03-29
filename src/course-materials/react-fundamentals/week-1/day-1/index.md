@@ -18,14 +18,12 @@ topics: "Intro to SPA's and ReactJS"
 - [**Lab:** Official React Tutorial **Option 2**](https://reactjs.org/tutorial/tutorial.html) - **Non-Deliverable**
 
 
-<!-- 
 <hr>
 
 
 #### Lesson Recordings
 
-- [**Intro to SPA's and React JS**]()
-- [**Intro to JSX**]()
-- [**Starting the JSX Lab walk-through**]() 
-
--->
+- [**Morning Warmup**](https://generalassembly.zoom.us/rec/share/nnS8YheIKMIspy_m_VMHvkmqyaEaDHBRW__llNzdzRqEvc7sm605EjEvytvthuFE.NFVyWbLAmF-aysXa?startTime=1617022984000)
+- [**Intro to SPA's and React JS**](https://generalassembly.zoom.us/rec/share/nnS8YheIKMIspy_m_VMHvkmqyaEaDHBRW__llNzdzRqEvc7sm605EjEvytvthuFE.NFVyWbLAmF-aysXa?startTime=1617025247000)
+- [**Intro to JSX**](https://generalassembly.zoom.us/rec/share/nnS8YheIKMIspy_m_VMHvkmqyaEaDHBRW__llNzdzRqEvc7sm605EjEvytvthuFE.NFVyWbLAmF-aysXa?startTime=1617032946000)
+- [**Starting the JSX Lab walk-through**](https://generalassembly.zoom.us/rec/share/nnS8YheIKMIspy_m_VMHvkmqyaEaDHBRW__llNzdzRqEvc7sm605EjEvytvthuFE.NFVyWbLAmF-aysXa?startTime=1617044377000) 
