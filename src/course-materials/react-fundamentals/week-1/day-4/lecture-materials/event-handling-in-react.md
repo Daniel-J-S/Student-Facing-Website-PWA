@@ -1,8 +1,8 @@
 ---
 track: "React Fundamentals"
 title: "Event Handling in React"
-week: 2
-day: 2
+week: 1
+day: 4
 type: "lecture"
 ---
 

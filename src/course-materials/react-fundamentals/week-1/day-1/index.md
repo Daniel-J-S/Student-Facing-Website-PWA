@@ -19,11 +19,8 @@ topics: "Intro to SPA's and ReactJS"
 
 
 <!-- 
-<br>
-<br>
 <hr>
-<br>
-<br>
+
 
 #### Lesson Recordings
 

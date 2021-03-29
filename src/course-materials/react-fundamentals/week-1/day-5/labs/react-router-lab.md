@@ -1,8 +1,8 @@
 ---
 track: "React Fundamentals"
 title: "React Router Lab"
-week: 2
-day: 3
+week: 1
+day: 5
 type: "lab"
 ---
 

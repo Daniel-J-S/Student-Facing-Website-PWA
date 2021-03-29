@@ -1,8 +1,8 @@
 ---
 track: "React Fundamentals"
 title: "React with AJAX"
-week: 2
-day: 2
+week: 1
+day: 5
 type: "lecture"
 ---
 

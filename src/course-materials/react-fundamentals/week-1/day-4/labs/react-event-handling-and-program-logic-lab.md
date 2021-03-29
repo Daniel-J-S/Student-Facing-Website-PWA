@@ -1,8 +1,8 @@
 ---
 track: "React Fundamentals"
 title: "React Event Handling & Program Logic Lab"
-week: 2
-day: 2
+week: 1
+day: 4
 type: "lab"
 ---
 

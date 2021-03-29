@@ -1,8 +1,8 @@
 ---
 track: "React Fundamentals"
 title: "Styling Components - Lab"
-week: 2
-day: 1
+week: 1
+day: 4
 type: "lab"
 ---
 
@@ -11,12 +11,6 @@ type: "lab"
 
 <br>
 <br>
-<br>
-
-## Lab Set Up Walk Through
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/e0woGXTPVEA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 <br>
 <br>
 <br>

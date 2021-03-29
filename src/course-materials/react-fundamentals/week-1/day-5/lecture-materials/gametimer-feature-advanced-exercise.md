@@ -1,8 +1,8 @@
 ---
 track: "React Fundamentals"
 title: "Advanced Exercise: Game Timer Feature "
-week: 2
-day: 4
+week: 1
+day: 5
 type: "lecture"
 ---
 

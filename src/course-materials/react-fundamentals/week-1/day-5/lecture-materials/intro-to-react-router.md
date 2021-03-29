@@ -1,8 +1,8 @@
 ---
 track: "React Fundamentals"
 title: "Intro to React Router"
-week: 2
-day: 3
+week: 1
+day: 5
 type: "lecture"
 ---
 

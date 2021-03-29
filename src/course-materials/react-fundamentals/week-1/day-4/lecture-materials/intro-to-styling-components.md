@@ -1,8 +1,8 @@
 ---
 track: "React Fundamentals"
 title: "Intro to Styling React Components"
-week: 2
-day: 1
+week: 1
+day: 4
 type: "lecture"
 ---
 
