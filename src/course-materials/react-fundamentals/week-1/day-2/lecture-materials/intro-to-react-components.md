@@ -191,7 +191,7 @@ Function Components are "lighter weight", and with the recent addition of [hooks
 
 
 ```javascript
-import React from 'react';
+
 import './App.css';
 
 function App() {
@@ -364,7 +364,7 @@ The `<GameBoard />` component based on our wireframe is a great place to start -
 4. Add the following code to **GameBoard.js**:
 
 	```javascript
-	import React from 'react';
+	
 	
 	const GameBoard = (props) => (
 	  <div>
@@ -378,7 +378,7 @@ The `<GameBoard />` component based on our wireframe is a great place to start -
 5. Update **App.js** to:
 
 ```javascript
-import React from 'react';
+
 import './App.css';
 // Must import components using the import statement
 import GameBoard from './components/GameBoard/GameBoard';
