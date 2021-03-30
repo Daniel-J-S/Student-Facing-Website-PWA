@@ -136,7 +136,7 @@ React Elements like "&lt;div&gt;" - HTML is what the browser knows and loves.
 
 Developing a game in React provides excellent practice designing and developing React components.
 
-Don't think that by writing a game, you won't learn how to use React in non-game apps. This game is going to be a full-stack app with CRUD on the backend and even advanced authentication! In reality, there's no better way to learn about React than by developing what we're going to this unit!
+Don't think that by writing a game, you won't learn how to use React in non-game apps. This game is going to be a MERN Stack App! In reality, there's no better way to learn about React than by developing what we're going to this unit!
 
 Our goal is by the end of this unit, to have a working game of [Mastermind](https://en.wikipedia.org/wiki/Mastermind_(board_game)).
 
