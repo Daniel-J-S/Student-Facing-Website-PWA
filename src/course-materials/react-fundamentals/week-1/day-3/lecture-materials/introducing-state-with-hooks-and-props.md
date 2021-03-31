@@ -282,7 +282,7 @@ A better way to extract these two elements is with a concept known as [Array Des
 const [selColorIdx, setColorIdx] = useState(0);
 
 // let's see the difference in access array destructuring provides
-console.log(selColorIdx, selColorIdx);
+console.log(selColorIdx, setColorIdx);
 ```
 
 > Key Point: The names of the variables that hold the state value and setter function are up to us. However, it's convention to name the setter function by prepending `set` to the name of the state variable as we did with `selColorIdx` & `selColorIdx`.
