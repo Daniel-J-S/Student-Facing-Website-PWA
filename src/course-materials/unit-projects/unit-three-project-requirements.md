@@ -86,15 +86,14 @@ The project must include a **`README.md`** file with the following sections:
 
 - **Have a well-styled interactive front-end** that communicates with the **Express** backend via AJAX.
 
-- Implement token-based **authentication**.  Including the ability of a user to sign-up, log in & log out.
+- **Include at least two of the four CRUD data operations/actions (having all four are optional)**
 
-- Implement **authorization** by restricting CUD data functionality to authenticated users. Also, navigation should respond to the login status of the user.
-
-- **Have a comprehensive feature-set**. For example, **if the app does not include full-CRUD** data operations, **ensure the addition** of one or more of the following:
-	
+- **(OPTIONAL)** you can try to implement one or more of the following:
 	- Consume a third-party API.
 	- Include _admin_ features.
-	- Utilize multi-user, real-time communications (difficult and time consuming)
+	- Full CRUD Data Operations
+	- Authentication, i.e. the ability of a user to log in & log out.
+	- Authorization, by restricting functionality to authenticated users. Also, navigation should respond to the login status of the user.
 
 
 <br>
@@ -104,7 +103,7 @@ The project must include a **`README.md`** file with the following sections:
 
 #### 4) Project Presentation
 
-You will have 10 minutes to present and demonstrate the following:
+You will have 5 minutes to present and demonstrate the following:
 
 1. Introduce your project by paraphrasing its README.
 
@@ -116,8 +115,6 @@ You will have 10 minutes to present and demonstrate the following:
 
 5. Share/discuss the following code (not line-by-line):
 
-	- The main/central Mongoose model
-	- Your "favorite" Express controller method
 	- Your "favorite" React component
 	- The client-side routing
 
@@ -125,8 +122,6 @@ You will have 10 minutes to present and demonstrate the following:
 
 	- What was your biggest challenge?
 	- What are your key learnings/takeaways?
-
-Following your presentation, there will be a brief Q & A period and optional instructor feedback.
 
 <br>
 <br>
@@ -153,8 +148,6 @@ Following your presentation, there will be a brief Q & A period and optional ins
 
 - Don’t get too caught up in too many awesome features – simple is better. Favor fewer features that look/feel impressive over numerous clunky/sloppy features.
 
-- Implement the `User` model and authentication first. Then implement the "As a visitor, when I browse to the app, I want..." user story.
-
 - Prioritize user stories and code them accordingly.
 
 - When implementing a feature, think through the steps that it takes in plain language first. If necessary, write and/or diagram the steps to help guide your coding.
@@ -174,7 +167,7 @@ Following your presentation, there will be a brief Q & A period and optional ins
 
 -  **Write DRY code.**
 
-- In a SPA, communication with the backend is via AJAX.  Build **RESTful APIs to CRUD your data entities (resources)** and perform other functionality via AJAX.  In a React app, those AJAX calls should be made from "service" modules, not components.
+- In a SPA, communication with the backend is via AJAX.  Build **RESTful APIs to CRUD your data entities (resources)** and perform other functionality via AJAX.  In a React app, the best practice for AJAX related logic should be organized in "service" modules, not component modules.
 
 - **Be consistent** with your code style.
 

@@ -1,8 +1,8 @@
 ---
 track: "React Fundamentals"
 title: "Full-Stack React Lab"
-week: 1
-day: 5
+week: 2
+day: 1
 type: "lab"
 ---
 

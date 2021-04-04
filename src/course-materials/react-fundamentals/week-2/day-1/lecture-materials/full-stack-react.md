@@ -2,7 +2,7 @@
 track: "React Fundamentals"
 title: "Full-Stack React"
 week: 1
-day: 5
+day: 2
 type: "lecture"
 ---
 

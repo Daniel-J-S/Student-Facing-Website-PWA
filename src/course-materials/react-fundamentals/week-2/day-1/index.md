@@ -4,29 +4,26 @@ title: "Day 1"
 week: 2
 day: 1
 type: "homepage"
-topics: "Intro to State, Props & Styling Components"
+topics: "Handling Input In React"
 ---
 
 
-# Week 2 - Day 1
+# Week 2 - Day 1 
 
-#### Intro to State, Props & Styling Components
-- [**Lecture:** Introducing State with Hooks and Props](/react-fundamentals/week-2/day-1/lecture-materials/introducing-state-with-hooks-and-props)
-- [**Lecture:** Intro to Styling Components](/react-fundamentals/week-2/day-1/lecture-materials/intro-to-styling-components/)
-- [**Lab:** React Students Lab](/react-fundamentals/week-2/day-1/labs/react-students-lab/) - **Deliverable**
-- [**Lab:** Styling Components Lab](/react-fundamentals/week-2/day-1/labs/styling-components-lab/) - **Deliverable**
+#### Handling Input In React
+- [**Lecture:** Handling Input In React w/ Controlled Components](/react-fundamentals/week-2/day-1/lecture-materials/handling-input-in-react/)
+- [**Lecture:** Intro to Full-Stack React](/react-fundamentals/week-2/day-1/lecture-materials/full-stack-react)
+- [**Actvity:** Review Project 3 Requirements](/unit-projects/unit-three-project-requirements)
+- **Activity:** Project Planning
+
 
 <!-- 
 
-<br>
-<br>
 <hr>
-<br>
-<br>
 
 #### Lesson Recordings
 
-- [**Intro to State and Props**]()
-- [**Intro to Styling React Components**]() 
+- [**Handling Input In React**]()
+- [**Intro to Ful-Stack React**]()
 
 -->

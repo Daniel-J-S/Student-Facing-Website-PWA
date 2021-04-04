@@ -4,28 +4,10 @@ title: "Day 5"
 week: 2
 day: 5
 type: "homepage"
-topics: "Token-Based Authentication with React"
+topics: "Project 3"
 ---
 
 
-# Week 2 - Day 5 
+# Week 2 - Day 5
 
-#### Token-Based Authentication with React
-- [**Lecture:** Intro to Token-Based Auth With React and JWT's](/react-fundamentals/week-2/day-5/lecture-materials/token-based-auth-with-react-and-jwts)
-- **Activity:** Project Planning
-- [**Advanced Exercise Resource:** Handling Input In React](/react-fundamentals/week-2/day-5/lecture-materials/handling-input-in-react/)
-
-
-<!-- 
-<br>
-<br>
-<hr>
-<br>
-<br>
-
-#### Lesson 
-
-- [**Controlled Components**]()
-- [**Auth with React and JWT's**]()
-
--->
+#### Project 3

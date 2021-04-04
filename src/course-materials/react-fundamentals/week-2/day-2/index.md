@@ -4,29 +4,22 @@ title: "Day 2"
 week: 2
 day: 2
 type: "homepage"
-topics: "Intro to Event Handling & AJAX"
+topics: "React Take Home Coding Challenge & Auth with Firebase Workshop"
 ---
 
 
 # Week 2 - Day 2
 
-#### Intro to Event Handling & AJAX
-- [**Lecture:** Intro to Event Handling in React](/react-fundamentals/week-2/day-2/lecture-materials/event-handling-in-react/)
-- [**Lecture:** React with AJAX](/react-fundamentals/week-2/day-2/lecture-materials/react-with-ajax/)
-- [**Lab:** React Event Handling Lab](/react-fundamentals/week-2/day-2/labs/react-event-handling-and-program-logic-lab) - **Non-Deliverable**
-- [**Lab:** React Star Wars AJAX Lab](/react-fundamentals/week-2/day-2/labs/star-wars-api-react-lab) - **Deliverable**
+#### React Take Home Coding Challenge & Auth with Firebase Workshop
+- [**Activity:** "Take-Home" Coding Challenge: Movies App](/react-fundamentals/week-2/day-2/labs/take-home-coding-challenge-movies-app) - **Non-Deliverable**
+- **Workshop:** Adding Authentication to React with Google Firebase
+- **Activity:** Project 3 Planning and Approvals
 
 <!-- 
-
-<br>
-<br>
 <hr>
-<br>
-<br>
 
 #### Lesson Recordings
 
-- [**Event Handling With React**]()
-- [**React With AJAX**]() 
+- [**React with Firebase Auth Lesson**]()
+ -->
 
--->
