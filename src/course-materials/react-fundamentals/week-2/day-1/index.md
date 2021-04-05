@@ -15,7 +15,7 @@ topics: "Handling Input In React"
 - [**Lecture:** Intro to Full-Stack React](/react-fundamentals/week-2/day-1/lecture-materials/full-stack-react)
 - [**Lab:** Full-Stack React Lab](/react-fundamentals/week-2/day-1/labs/full-stack-react-lab) - **Non-Deliverable**
 - [**Activity:** Review Project 3 Requirements](/unit-projects/unit-three-project-requirements)
-- **Activity:** Project Planning
+
 
 
 <hr>
