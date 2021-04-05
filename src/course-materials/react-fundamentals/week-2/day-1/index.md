@@ -13,7 +13,7 @@ topics: "Handling Input In React"
 #### Handling Input In React
 - [**Lecture:** Handling Input In React w/ Controlled Components](/react-fundamentals/week-2/day-1/lecture-materials/handling-input-in-react/)
 - [**Lecture:** Intro to Full-Stack React](/react-fundamentals/week-2/day-1/lecture-materials/full-stack-react)
-- [**Actvity:** Review Project 3 Requirements](/unit-projects/unit-three-project-requirements)
+- [**Activity:** Review Project 3 Requirements](/unit-projects/unit-three-project-requirements)
 - **Activity:** Project Planning
 
 
