@@ -12,6 +12,7 @@ topics: "React Take Home Coding Challenge & Auth with Firebase Workshop"
 
 #### React Take Home Coding Challenge & Auth with Firebase Workshop
 - [**Activity:** "Take-Home" Coding Challenge: Movies App](/react-fundamentals/week-2/day-2/labs/take-home-coding-challenge-movies-app) - **Non-Deliverable**
+- [**Activity:** Review Project 3 Requirements](/unit-projects/unit-three-project-requirements)
 - **Workshop:** Adding Authentication to React with Google Firebase
 - **Activity:** Project 3 Planning and Approvals
 
