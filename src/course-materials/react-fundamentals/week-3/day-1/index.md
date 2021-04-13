@@ -4,26 +4,11 @@ title: "Day 1"
 week: 3
 day: 1
 type: "homepage"
-topics: "AJAX Activity/React Review & Project Planning"
+topics: "Project 3"
 ---
 
 
 # Week 3 - Day 1
 
- #### AJAX Activity/React Review & Project Planning
-- [**Activity:** "Take-Home" Coding Challenge: Movies App](/react-fundamentals/week-3/day-1/labs/take-home-coding-challenge-movies-app) - **Non-Deliverable**
+#### Project 3
 
-<!-- 
-<br>
-<br>
-<hr>
-<br>
-<br>
-
-#### Lesson Recordings
-
-- [**Full-Stack MERN code-along Part 1**]()
-- [**Full-Stack MERN code-along Part 2**]()
-- [**Full-Stack MERN code-along Part 3**]()
-
--->

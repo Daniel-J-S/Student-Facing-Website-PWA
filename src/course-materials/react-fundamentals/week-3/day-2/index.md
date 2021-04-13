@@ -4,11 +4,11 @@ title: "Day 2"
 week: 3
 day: 2
 type: "homepage"
-topics: "2nd Walkthrough of Auth with React & JWTs"
+topics: "Project 3"
 ---
 
 
 # Week 3 - Day 2
 
-#### 2nd Walkthrough of Auth (frontend & backend) - Students Begin Project 3
+#### Project 3
 

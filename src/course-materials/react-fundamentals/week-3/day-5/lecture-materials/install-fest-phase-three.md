@@ -1,8 +1,8 @@
 ---
 track: "Second Language"
 title: "Install-fest Phase Three"
-week: 4
-day: 2
+week: 3
+day: 5
 type: "lecture"
 ---
 
@@ -13,7 +13,7 @@ type: "lecture"
 <br>
 
 
-## &#x26A0; Uninstall RVM (Ruby Version Manager)
+### &#x26A0; Uninstall RVM (Ruby Version Manager)
 
 To check if you have RVM installed simply run the command `rvm`. If it is not intalled you'll see the message `command not found: rvm`
 
@@ -30,7 +30,7 @@ Once you have removed rvm close and reopen the terminal.  Then test running the 
 <br>
 
 
-## Install rbenv
+### Install rbenv
 
 - If homebrew is installed, run `brew upgrade` to upgrade to the latest version of homebrew
 	* Might take a while, might upgrade stuff for postgres, node, heroku, etc.
@@ -56,7 +56,7 @@ brew install rbenv ruby-build
 <br>
 <br>
 
-## View Possible Ruby Versions
+### View Possible Ruby Versions
 **See which versions of Ruby you can download**
 ```shell
 rbenv install --list
@@ -77,7 +77,7 @@ Either command is fine, you need to choose the version of ruby before `jruby-som
 <br>
 
 
-## Install Latest Ruby
+### Install Latest Ruby
 **Install the latest version of Ruby**
 
 At the time of updating this readme the current version was 2.7.1 but that will change so install the version before `-dev`. 
@@ -99,7 +99,7 @@ rbenv install 2.7.1
 <br>
 <br>
 
-## View Installed Versions of Ruby
+### View Installed Versions of Ruby
 
 ```shell
 rbenv versions
@@ -115,7 +115,7 @@ rbenv versions
 <br>
 
 
-## View Currently Running Version of Ruby
+### View Currently Running Version of Ruby
 
 ```shell
 rbenv version
@@ -127,7 +127,7 @@ rbenv version
 <br>
 
 
-## Switch rbenv to a different Version of Ruby
+### Switch rbenv to a different Version of Ruby
 
 ```shell
 rbenv global 2.7.1
@@ -151,7 +151,7 @@ rbenv versions
 
 
 
-## Update Environment to use new Ruby
+### Update Environment to use new Ruby
 
 Confirm ruby version _now in use by the system_ is `2.5.3p111` or something similar
 
@@ -186,7 +186,7 @@ ruby -v
 <br>
 <br>
 
-## Install a gem
+### Install a gem
 
 Gems are like NPM packages for Ruby, but they're installed globally, as opposed to multiple times for each application that you build.
 
@@ -210,7 +210,7 @@ Note:
 
 
 
-## Install Rails 5.2 beta
+### Install Rails 5.2 beta
 
 1. Run `gem install rails --pre` to install the rails commands
 2. `rbenv rehash`
@@ -228,7 +228,7 @@ Note: if Rails already installed, might need to run `bundle update rails`
 <br>
 
 
-## Test Rails
+### Test Rails
 1. Run `rails new blog` to create a new app
 2. `cd blog`
 3. Run `rails s` to start the server
