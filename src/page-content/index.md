@@ -68,14 +68,13 @@ All content is subject to change at Instructors discretion.
 
 <div style="color: grey;">
 
-### 🔒 Unit Four: Second Language
-<!-- ### [<u>Unit Four: Second Language</u>](/second-language) -->
+<!-- ### 🔒 Unit Four: Second Language -->
+### [<u>Unit Four: Second Language</u>](/second-language)
 
 | Week  | Topics |
 | ----- | ------ |
-| 9  | Relational Databases, SQL, Ruby Fundamentals & Rails |
-| 10  | Full Stack With Rails & React, 1:M & M:M Relationships, Deployment & Auth |
-| 11  | Project Week |
+| 9  | Relational Databases, SQL, Ruby Fundamentals, Rails & Full Stack With Rails & React |
+| 10  | Project Week & 1:M & M:M Relationships Bonus Content |
 
 
 <br>
@@ -86,7 +85,7 @@ All content is subject to change at Instructors discretion.
 
 | Week  | Topics |
 | ----- | ------ |
-| 12/13  | Intro to Python/Django Week, Self Directed Learning, Review & Capstone Project and Graduation 🥳 🎉|
+| 11/12  | Intro to Python/Django Week, Self Directed Learning, Review & Capstone Project and Graduation 🥳 🎉|
 | Post Graduation  | Guide for building a Portfolio Site|
 
 <!-- 

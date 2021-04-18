@@ -2,7 +2,7 @@
 track: "Second Language"
 title: "Ruby Classes Lab"
 week: 1
-day: 4
+day: 2
 type: "lab"
 ---
 

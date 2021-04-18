@@ -2,7 +2,7 @@
 track: "Second Language"
 title: "Carmen San Diego Lab"
 week: 1
-day: 1
+day: 2
 type: "lab"
 ---
 

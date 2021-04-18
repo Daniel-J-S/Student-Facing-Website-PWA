@@ -1,8 +1,8 @@
 ---
 track: "Second Language"
 title: "Rails Controllers & Routing"
-week: 2
-day: 2
+week: 1
+day: 4
 type: "lecture"
 ---
 

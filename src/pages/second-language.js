@@ -1,50 +1,15 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+
+import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 
-import styles from '../styles/course-content-display.module.scss';
-
+import genLinks from '../utils/genLinks';
 
 export default({ data, location }) => {
     
-   const { allMarkdownRemark } = data;
+  const { week1  } = genLinks(data.allMarkdownRemark.edges);
 
-    const weekOneLessons = allMarkdownRemark.edges.filter(({ node }) => 
-      node.frontmatter.week === 1
-      ).map(({ node }) =>
-        <Link to={node.fields.slug}>
-          <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
-        </Link> 
-    );
-      const weekTwoLessons = allMarkdownRemark.edges.filter(({ node }) => 
-        node.frontmatter.week === 2
-        ).map(({ node }) =>
-          <Link to={node.fields.slug}>
-            <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
-          </Link> 
-      );
-      
-      
-      const weekThreeLessons = allMarkdownRemark.edges.filter(({ node }) => 
-        node.frontmatter.week === 3
-        ).map(({ node }) =>
-          <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
-      );
-      
-      const weekFourLessons = allMarkdownRemark.edges.filter(({ node }) => 
-        node.frontmatter.week === 4
-        ).map(({ node }) =>
-          <Link to={node.fields.slug}>
-            <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
-          </Link> 
-      );
-
-      const weekFiveLessons = allMarkdownRemark.edges.filter(({ node }) => 
-        node.frontmatter.week === 5
-        ).map(({ node }) =>
-          <h2 className={styles.dayTitle} key={node.fields.id}>Day {node.frontmatter.day}<small className={styles.smallText}> - {node.frontmatter.topics}</small></h2>
-        );
 
     return (
         <Layout
@@ -55,27 +20,14 @@ export default({ data, location }) => {
             <h1>Second Language</h1>
             <main>
               <h2>Week 1</h2>  
-              { weekOneLessons }
+              { week1 }
+              {/* Commented Out For Now
               <br />
               <hr />
               <br />
-              <h2>Week 2</h2>  
-              { weekTwoLessons }
-              <br />
-              <hr />
-              <br />
-              <h2>Holiday Week</h2>  
-              { weekThreeLessons }
-              <br />
-              <hr />
-              <br />
-              <h2>Week 4</h2>  
-              { weekFourLessons }  
-              <br />
-              <hr />
-              <br />
-              <h2>Week 5</h2>  
-              { weekFiveLessons }  
+              <h2>Project Week</h2>  
+              { week2 }  
+              */}
             </main>
         </Layout>
     );

@@ -2,7 +2,7 @@
 track: "Second Language"
 title: "Ruby vs. Javascript - The Differences"
 week: 1
-day: 3
+day: 1
 type: "lab"
 ---
 

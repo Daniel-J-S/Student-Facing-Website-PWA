@@ -1,8 +1,8 @@
 ---
 track: "Second Language"
 title: "Intro to Rails"
-week: 2
-day: 1
+week: 1
+day: 3
 type: "lecture"
 ---
 

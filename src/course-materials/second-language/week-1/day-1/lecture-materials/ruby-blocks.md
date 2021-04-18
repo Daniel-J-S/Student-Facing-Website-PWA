@@ -2,7 +2,7 @@
 track: "Second Language"
 title: "Ruby Blocks"
 week: 1
-day: 3
+day: 1
 type: "lecture"
 ---
 

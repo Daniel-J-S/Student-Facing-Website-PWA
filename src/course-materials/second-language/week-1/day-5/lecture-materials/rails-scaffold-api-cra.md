@@ -1,8 +1,8 @@
 ---
 track: "Second Language"
 title: "Rails Scaffold API & CRA (Create React App)"
-week: 2
-day: 3
+week: 1
+day: 5
 type: "lecture"
 ---
 

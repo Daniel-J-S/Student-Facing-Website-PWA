@@ -4,28 +4,25 @@ title: "Week 1 Day 4"
 week: 1
 day: 4
 type: "homepage"
-topics: "Review of Ruby Methods/Enumerables & Intro to Ruby Classes"
+topics: "Rails Controllers and Routes"
 ---
 
 # Week 1 - Day 4
 
-#### Review of Ruby Methods & Intro to Ruby Classes 
-
-- [**Activity:** Review of Ruby Methods & Enumerables](/second-language/week-1/day-4/lecture-materials/ruby-methods-and-enumerables)
-- [**Lecture:** Intro  to Ruby Classes & Objects](/second-language/week-1/day-4/lecture-materials/ruby-classes-and-objects)
-- [**Lab:** Ruby Black Jack](/second-language/week-1/day-4/labs/ruby-blackjack) - **Deliverable**
-- [**Optional Lab:** Ruby Classes (More Practice)](/second-language/week-1/day-4/labs/ruby-classes-lab)
+#### Rails Controllers and Routes
+- [**Lecture:** Rails Controllers and Routes I](/second-language/week-1/day-4/lecture-materials/rails-controllers-and-routing)
+- [**Lecture:** Rails Controllers and Routes II](/second-language/week-1/day-4/lecture-materials/rails-controllers-and-routing-2)
+- [**Lab:** Books App](/second-language/week-1/day-4/labs/books-app) - **Non Deliverable**
+- [**Lab:** Tweetr](/second-language/week-1/day-4/labs/tweetr) - **Non Deliverable**
 
 <!-- 
-<br>
-<br>
+
 <hr>
-<br>
-<br>
+
 
 ### Lesson Recordings
 
-- [**Ruby Methods and Enumerables Activity**]()
-- [**Ruby Classes**]()
+- [**Intro to Rails Controllers & Routes**]()
+- [**Intro to Rails Controllers & Routes Part 2**]()
 
 -->

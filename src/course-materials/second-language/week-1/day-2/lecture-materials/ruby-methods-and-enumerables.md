@@ -2,7 +2,7 @@
 track: "Second Language"
 title: "Explore Ruby's Methods & Enumerables"
 week: 1
-day: 4
+day: 2
 type: "lecture"
 ---
 
