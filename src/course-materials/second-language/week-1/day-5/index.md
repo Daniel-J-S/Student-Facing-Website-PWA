@@ -13,6 +13,7 @@ topics: "Rails Scaffold API & CRA"
 #### Rails Scaffold API & CRA
 
 - [**Lecture:** Rails Scaffold API & Create React App](/second-language/week-1/day-5/lecture-materials/rails-scaffold-api-cra)
+- [**Activity:** Review Project 4 Requirements](/unit-projects/unit-four-project-requirements)
 
 
 
