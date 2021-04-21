@@ -18,14 +18,10 @@ topics: "Intro to Rails & Rails Relationships"
 - [**Lab:** Glitch in the Matrix](/second-language/week-1/day-3/labs/glitch-in-the-matrix) - **Deliverable**
 
 
-<!-- 
-
 <hr>
 
 
 ### Lesson Recordings
 
-- [**Intro to Rails**]()
-- [**Intro to Rails Relationships**]() 
-
--->
+- [**Intro to Rails**](https://generalassembly.zoom.us/rec/share/DTBmRGIarIoN_gqKo5ixFdkBs0lS_HO37Ky3Btz5MlAzCdTrBv64GqtU9qbyFhSc.9uG-1BGYcBE8kP7Y?startTime=1619010097000)
+- [**Intro to Rails Relationships Part 1**](https://generalassembly.zoom.us/rec/share/DTBmRGIarIoN_gqKo5ixFdkBs0lS_HO37Ky3Btz5MlAzCdTrBv64GqtU9qbyFhSc.9uG-1BGYcBE8kP7Y?startTime=1619027783000) 
