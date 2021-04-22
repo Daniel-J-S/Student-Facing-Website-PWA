@@ -15,14 +15,10 @@ topics: "Rails Controllers and Routes"
 - [**Lab:** Books App](/second-language/week-1/day-4/labs/books-app) - **Non Deliverable**
 - [**Lab:** Tweetr](/second-language/week-1/day-4/labs/tweetr) - **Non Deliverable**
 
-<!-- 
-
 <hr>
 
 
 ### Lesson Recordings
 
-- [**Intro to Rails Controllers & Routes**]()
-- [**Intro to Rails Controllers & Routes Part 2**]()
+- [**Continue Rails Relationships & Intro to Rails Controllers**](https://generalassembly.zoom.us/rec/share/NpByalBcattLzHJxqgCCiUHbfsXJKZgrzLiKv19-yVeaV2gLLvSY1Ch4qa55csl_.KhPLSvwxsclCcojh?startTime=
 
--->
