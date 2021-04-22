@@ -20,5 +20,5 @@ topics: "Rails Controllers and Routes"
 
 ### Lesson Recordings
 
-- [**Continue Rails Relationships & Intro to Rails Controllers**](https://generalassembly.zoom.us/rec/share/NpByalBcattLzHJxqgCCiUHbfsXJKZgrzLiKv19-yVeaV2gLLvSY1Ch4qa55csl_.KhPLSvwxsclCcojh?startTime=
 
+- [**Continue Rails Relationships & Intro to Rails Controllers**](https://generalassembly.zoom.us/rec/share/NpByalBcattLzHJxqgCCiUHbfsXJKZgrzLiKv19-yVeaV2gLLvSY1Ch4qa55csl_.KhPLSvwxsclCcojh?startTime=1619096647000)
