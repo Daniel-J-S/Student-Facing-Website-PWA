@@ -25,14 +25,15 @@ topics: "Catch Up on Labs & Prepare for Project 4"
 
 
 
-<!-- 
+
 
 <hr>
 
 ### Lesson Recordings
 
-- [**Rails API Scaffold & React**]()
--->
+- [**Git Branching and Merging**](https://generalassembly.zoom.us/rec/share/ntx7BjdyZIMJ8CuLpJ21jVhgbiRdrTGQPDMs4NDqrxQisqsmT4yqX7FrGpUN2Zsa.xCuxZE1uy9DkQx5Q?startTime=1619183039000)
+- [**Review project 4**](https://generalassembly.zoom.us/rec/share/ntx7BjdyZIMJ8CuLpJ21jVhgbiRdrTGQPDMs4NDqrxQisqsmT4yqX7FrGpUN2Zsa.xCuxZE1uy9DkQx5Q?startTime=1619204388000)
+
 
 
 
