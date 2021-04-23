@@ -156,9 +156,7 @@ _Approval meetings with instructors are TBT following the last class for Unit 4_
 
 
 ## How to Submit Your Project
-**Project Metadata, Github Repos, Deployed Urls ... etc must be submitted ASAP following approval but no later than 01/11/2021 by 11:59 PM EST**
-
-[Google Sheet For Turning in Project Resources](https://docs.google.com/spreadsheets/d/1IUHjmqt8CX6cUfJFp5lDfx3S3g6a65OzaYZxnY4_8co/edit#gid=410086012)
+**Project Metadata, Github Repos, Deployed Urls ... etc must be submitted ASAP following approval**
 
 
 <br>
