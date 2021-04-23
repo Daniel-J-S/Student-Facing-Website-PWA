@@ -4,15 +4,23 @@ title: "Week 1 Day 5"
 week: 1
 day: 5
 type: "homepage"
-topics: "Rails Scaffold API & CRA"
+topics: "Catch Up on Labs & Prepare for Project 4"
 ---
 
 
 # Week 1 - Day 5
 
-#### Rails Scaffold API & CRA
+#### Catch Up on Labs & Prepare for Project 4
 
-- [**Lecture:** Rails Scaffold API & Create React App](/second-language/week-1/day-5/lecture-materials/rails-scaffold-api-cra)
+- [**Morning Warmup:** Happy Fun Ball - More Practice with Git](/second-language/week-1/day-5/lecture-materials/happy-fun-ball/)
+
+- [**Lab:** Ruby Black Jack](/second-language/week-1/day-2/labs/ruby-blackjack) - **Deliverable**
+
+- [**Lab:** Glitch in the Matrix](/second-language/week-1/day-3/labs/glitch-in-the-matrix) - **Deliverable**
+
+- [**Lab:** Books App](/second-language/week-1/day-4/labs/books-app) - **Non Deliverable**
+- [**Lab:** Tweetr](/second-language/week-1/day-4/labs/tweetr) - **Non Deliverable**
+
 - [**Activity:** Review Project 4 Requirements](/unit-projects/unit-four-project-requirements)
 
 

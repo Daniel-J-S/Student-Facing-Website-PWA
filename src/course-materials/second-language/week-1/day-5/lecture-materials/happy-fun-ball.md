@@ -1,8 +1,8 @@
 ---
 track: "Second Language"
 title: "Happy Fun Ball - Git Branches and Merging"
-week: 4
-day: 2
+week: 1
+day: 5
 type: "lecture"
 ---
 
