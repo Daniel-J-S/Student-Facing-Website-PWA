@@ -1,34 +1,35 @@
 ---
 track: "Second Language"
-title: "Week 4 Day 2"
-week: 4
+title: "Week 2 Day 2"
+week: 2
 day: 2
 type: "homepage"
-topics: "Many to Many Relationships"
+topics: "Begin Project 4 & Bonus Rails Material"
 ---
 
 
-# Week 4 - Day 2
+# Week 2 - Day 2
 
-#### Many to Many Relationships
+#### Begin Project 4 & Bonus Rails Material
 
+- [**Bonus Material:** Rails One to Many Relationships](/second-language/week-2/day-2/lecture-materials/rails-one-to-many)
+- [**Bonus Material:** Rails One to Many Relationships (Build React Frontend](/second-language/week-2/day-2/lecture-materials/one-to-many-frontend)
+- [**Bonus Material:** Rails Many to Many Relationships](/second-language/week-2/day-2/lecture-materials/rails-many-to-many)
 
-- [**Lecture:** Rails Many to Many Relationships](/second-language/week-4/day-2/lecture-materials/rails-many-to-many)
-- [**Lab:** Playlists **>--<** Songs Lab](/second-language/week-4/day-2/lecture-materials/rails-many-to-many#another-example---playlists-and-songs)
-- [**Lecture:** Rails Heroku Deployment](/second-language/week-4/day-2/lecture-materials/rails-heroku-deployment)
-- [**Activity:** Review Project 4 Requirements](/unit-projects/unit-four-project-requirements)
+<br>
+
+- [**Bonus Lab:** Rails One to Many Lab **(1:M Practice)**](/second-language/week-2/day-2/labs/rails-one-to-many-lab)
+- [**Bonus Lab:** Stock Prices Lab **(1:M Practice)**](/second-language/week-2/day-2/labs/stock-prices-lab)
+- [**Bonus Lab:** Products and Reviews **(1:M Practice)**](/second-language/week-2/day-2/labs/products-and-reviews-lab)
+- [**Bonus Lab:** Playlists **>--<** Songs Lab **(M:M Practice)**](/second-language/week-2/day-2/lecture-materials/rails-many-to-many#another-example---playlists-and-songs)
+
 
 <!-- 
-<br>
-<br>
+
 <hr>
-<br>
-<br>
 
 #### Lesson Recordings
 
-- [**Happy Fun Ball Exercise**]()
-- [**Many to Many Relationships**]()
-- [**Project 4 Requirements Review**]()
+- [**One to Many Relationships with Rails (React Frontend)**]()
 
 -->

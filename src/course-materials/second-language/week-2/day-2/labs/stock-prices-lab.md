@@ -1,8 +1,8 @@
 ---
 track: "Second Language"
 title: "Stock Prices Lab"
-week: 4
-day: 1
+week: 2
+day: 2
 type: "lab"
 ---
 

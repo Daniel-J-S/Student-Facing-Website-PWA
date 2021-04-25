@@ -1,7 +1,7 @@
 ---
 track: "Second Language"
 title: "jService API"
-week: 4
+week: 2
 day: 3
 type: "lab"
 ---

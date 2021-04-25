@@ -1,8 +1,8 @@
 ---
 track: "Second Language"
 title: "Rails One to Many Relationships"
-week: 4
-day: 1
+week: 2
+day: 2
 type: "lecture"
 ---
 
@@ -21,7 +21,7 @@ Each **location** will _have many_ **temperatures**
 <br>
 
 
-### Lesson objectives:
+## Roadmap
 
 * Scaffold two independent models
 * Set up a one-to-many relationship between the models

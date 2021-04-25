@@ -1,7 +1,7 @@
 ---
 track: "Second Language"
 title: "Collaborating with GitHub"
-week: 4
+week: 2
 day: 3
 type: "lecture"
 ---
@@ -27,7 +27,7 @@ Using collaboration via GitHub, each group will create a new repo and collaborat
 
 Each person must make significant contributions (and commits!) to the functionality of this project. 
 
-The `jService` assignment can be found [here](/second-language/week-4/day-3/labs/jservice)
+The `jService` assignment can be found [here](/second-language/week-2/day-3/labs/jservice)
 
 
 <br>

@@ -1,8 +1,8 @@
 ---
 track: "Second Language"
 title: "Deploy Your Rails API"
-week: 4
-day: 2
+week: 2
+day: 3
 type: "lecture"
 ---
 

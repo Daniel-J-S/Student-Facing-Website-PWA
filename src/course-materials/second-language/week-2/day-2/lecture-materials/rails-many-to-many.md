@@ -1,7 +1,7 @@
 ---
 track: "Second Language"
 title: "Rails Many to Many Relationships"
-week: 4
+week: 2
 day: 2
 type: "lecture"
 ---
@@ -15,9 +15,9 @@ type: "lecture"
 <br>
 <br>
 
-## Lesson Objectives
+## Roadmap
 
-_after this lesson, students will be able to:_
+<!-- _after this lesson, students will be able to:_ -->
 
 * Establish a many-to-many relationship between models
 * Make a join table

@@ -1,8 +1,8 @@
 ---
 track: "Second Language"
 title: "One to Many Relationships (Frontend)"
-week: 4
-day: 1
+week: 2
+day: 2
 type: "lecture"
 ---
 
@@ -15,9 +15,9 @@ Now, let's make the front-end for our Temperatures app.
 <br>
 <br>
 
-## Lesson objectives
+## Roadmap
 
-At the end of this lesson, students will be able to:
+<!-- At the end of this lesson, students will be able to: -->
 
 * Display all of a single location's **average high temperatures** on a chart.
 * Interact with our Rails API
