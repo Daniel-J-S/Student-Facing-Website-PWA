@@ -2,7 +2,7 @@
 track: "Second Language"
 title: "Week 2 Day 2"
 week: 2
-day: 2
+day: 3
 type: "homepage"
 topics: "Begin Project 4 & Bonus Rails Material"
 ---
