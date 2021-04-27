@@ -1,17 +1,35 @@
 ---
 track: "Second Language"
-title: "Week 2 Day 3"
+title: "Week 2 Day 2"
 week: 2
-day: 3
+day: 2
 type: "homepage"
-topics: "Project Week & Additional Git Guides"
+topics: "Begin Project 4 & Bonus Rails Material"
 ---
 
 
-# Week 2 - Day 3
+# Week 2 - Day 2
 
-#### Project Week & Additional Git Guides
+#### Begin Project 4 & Bonus Rails Material
 
-- [**Additional Git Resource:** Git Collaboration Guide](/second-language/week-2/day-3/lecture-materials/git-collaboration-guide/)
-- [**Developer Guide:** Rails Heroku Deployment](/second-language/week-2/day-3/lecture-materials/rails-heroku-deployment)
+- [**Bonus Material:** Rails One to Many Relationships](/second-language/week-2/day-2/lecture-materials/rails-one-to-many)
+- [**Bonus Material:** Rails One to Many Relationships (Build React Frontend](/second-language/week-2/day-2/lecture-materials/one-to-many-frontend)
+- [**Bonus Material:** Rails Many to Many Relationships](/second-language/week-2/day-2/lecture-materials/rails-many-to-many)
 
+<br>
+
+- [**Bonus Lab:** Rails One to Many Lab **(1:M Practice)**](/second-language/week-2/day-2/labs/rails-one-to-many-lab)
+- [**Bonus Lab:** Stock Prices Lab **(1:M Practice)**](/second-language/week-2/day-2/labs/stock-prices-lab)
+- [**Bonus Lab:** Products and Reviews **(1:M Practice)**](/second-language/week-2/day-2/labs/products-and-reviews-lab)
+- [**Bonus Lab:** Playlists **>--<** Songs Lab **(M:M Practice)**](/second-language/week-2/day-2/lecture-materials/rails-many-to-many#another-example---playlists-and-songs)
+
+
+<!-- 
+
+<hr>
+
+#### Lesson Recordings
+
+- [**One to Many Relationships with Rails (React Frontend)**]()
+
+-->

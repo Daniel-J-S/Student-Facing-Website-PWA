@@ -2,7 +2,7 @@
 track: "Second Language"
 title: "Rails One To Many Lab"
 week: 2
-day: 2
+day: 3
 type: "lab"
 ---
 

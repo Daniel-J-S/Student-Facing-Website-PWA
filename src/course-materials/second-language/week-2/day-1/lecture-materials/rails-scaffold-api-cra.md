@@ -353,21 +353,6 @@ Two things to keep in mind:
 
 1. Make sure your Rails server is running.
 
-We know our app is running on `localhost:3000` right now, but that could change. 
-
-We should use relative routes in our app. 
-
-We can do that by adding a proxy in our `package.json` for our create react app.
-
-```json
-  "name": "noticeboard_client",
-  "version": "0.1.0",
-  "proxy": "http://localhost:3000",
-  "private": true,
-```
-
-Make sure you kill and run `npm start` again, since we just changed the configuration for the React frontend.
-
 2. The AJAX request below **should not** work. This is due to CORS, a basic security feature. We will talk about CORS specifically later.
 
 >**NOTE:** If you are getting a syntax error of `<` in JSON - try restarting your Create React app (control c then npm start again)
@@ -380,19 +365,22 @@ function App() {
     const [noticesState, setNoticesState] = useState({ notices: [] });
 
      useEffect(() => {
+          async function getNotices() {
+            try {
+              const notices = fetch('http://localhost:3000/notices')
+              .then(response => response.json())
+              console.log(notices)
+            } catch (error) {
+              console.log(error)
+            }
+          }
          getNotices();
      }, []);
 
-     function getNotices() {
-       fetch('/notices')
-        .then(response => response.json())
-        .then(json => console.log(json))
-        .catch(error => console.error(error));
-     }
 
     return (
       <div className="App">
-        <div className='container'>
+        <div className="container">
           <Header />
           <Aside />
           <Main notices={noticesState.notices} />
@@ -497,13 +485,15 @@ Let's tell Rails to send through that `Access-Control-Allow-Origin` header that 
 
 `Gemfile`:
 
-![screenshot](https://i.imgur.com/8WNSCuB.png)
+```ruby
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+
+gem 'rack-cors'
+```
 
 [More on the rack-cors Gem](https://github.com/cyu/rack-cors)
 
 * Run `bundle` on the command line to install the Gemfile gems
-
-![screenshot](https://i.imgur.com/NgpDIoY.png)
 
 In the file `config/initializers/cors.rb`
 
@@ -511,18 +501,59 @@ In the file `config/initializers/cors.rb`
 
 `Rails.application.config.middleware.insert_before 0, Rack::Cors`
 
-![screenshot](https://i.imgur.com/Fq9Fr6U.png)
+```ruby
+# Be sure to restart your server when you modify this file.
+
+# Avoid CORS issues when API is called from the frontend app.
+# Handle Cross-Origin Resource Sharing (CORS) in order to accept cross-origin AJAX requests.
+
+# Read more: https://github.com/cyu/rack-cors
+
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins 'example.com'
+
+    resource '*',
+      headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+  end
+end
+
+```
 
 The address after origins is a _whitelist_ of domains where requests are allowed to originate. We can add as many as we like, separated by commas.
 
-Change origins to the address where your frontend requests will be coming from. In our case, let's whitelist `localhost:3001` (or whatever default port Create React App is using).
+Change origins to the address where your frontend requests will be coming from. In our case, let's whitelist all origins with the star operator: **`*`** _(in production we can put our specific frontend origin)_.
 
-![screenshot](https://i.imgur.com/ghxY51s.png)
+```ruby
+# Be sure to restart your server when you modify this file.
 
-We could whitelist
+# Avoid CORS issues when API is called from the frontend app.
+# Handle Cross-Origin Resource Sharing (CORS) in order to accept cross-origin AJAX requests.
 
-* the local version of the frontend app
-* a hosted version of your frontend app
+# Read more: https://github.com/cyu/rack-cors
+
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins '*'
+
+    resource '*',
+      headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+  end
+end
+
+```
+
+<br>
+<br>
+<br>
+
+
+Just to summarize, we could whitelist
+
+* the local version of the frontend app - `localhost:3001`
+* a hosted version of your frontend app - `my-frontend.netlify.app`
 * an 'admin' version of the frontend app that makes alterations to the db and block other apps from doing so
 * everything at once using `*`.
 
@@ -576,13 +607,19 @@ However, please let an instructor know if you have to run this, because it may h
 
 First, we need to add the `notices` we just pulled from our Rails API to `this.state` in `App.js`:
 
-```js
-  function getNotices() {
-    fetch('/notices')
-    .then(response => response.json())
-    .then(json => setNoticesState({notices: json}))
-    .catch(error => console.error(error));
-  }
+```jsx
+useEffect(() => {
+    async function getNotices() {
+      try {
+        const notices = fetch('http://localhost:3000/notices')
+        .then(response => response.json())
+        setNoticesState({ notices });
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getNotices();
+}, []);
 ```
 
 <br>
@@ -591,145 +628,9 @@ First, we need to add the `notices` we just pulled from our Rails API to `this.s
 
 **Once this is added, we should see the following in the browser:**
 
-![screenshot](https://i.imgur.com/23emQJv.png)
-
-<br>
-<br>
-
-## Style
-
-With React now 'consuming' our API, let's make a webpage using what was once known as the "Holy Grail" layout with a header, footer, main section, and two sidebars.
-
-<br>
-<br>
-<br>
-
-
-## CSS
-
-We'll just add this code into `index.css`. 
-
-*For small projects this is totally fine. As your projects get bigger, you'll likely want to work with other ways that React can incorporate organized CSS or even SASS.*
-
-
-Use the following **Grid** CSS:
-
-```css
-@import url('https://fonts.googleapis.com/css?family=Roboto|Stylish&display=swap');
-
-:root {
-  --black: rgba(0, 0, 0, 1);
-  --oasis-green: rgba(131, 151, 136, 1);
-  --sandy: rgba(238, 224, 203, 1);
-  --shady-sand: rgba(186, 168, 152, 1);
-  --oasis-blue: rgba(191, 215, 234, 1);
-}
-
-h1 {
-  text-align: center;
-}
-.container {
-  display: grid;
-
-  grid-template-areas:
-    "header header header"
-    "nav content aside"
-    "footer footer footer";
-  grid-template-columns: 20% 1fr 20%;
-  grid-template-rows: auto 1fr 200px;
-  grid-gap: 10px;
-  height: 100vh;
-}
-
-header {
-  grid-area: header;
-  background-color: var(--oasis-blue);
-}
-
-nav {
-  grid-area: nav;
-  margin-left: 0.5rem;
-  background-color: var(--oasis-green);
-}
-
-main {
-  grid-area: content;
-  background-color: var(--sandy);
-}
-
-aside {
-  grid-area: aside;
-  margin-right: 0.5rem;
-  background-color: var(--oasis-green);
-}
-
-footer {
-  grid-area: footer;
-  background-color: var(--oasis-blue);
-}
-.notice {
-  border: 5px solid var(--shady-sand);
-  padding: 5px;
-  font-family: 'Stylish', sans-serif;
-}
-
-form {
-  display: grid;
-  grid-template-columns: [labels] auto [controls] 1fr;
-  grid-auto-flow: row;
-  grid-gap: .3em;
-  background: #eee;
-  padding: .1em;
-}
-
-form > label  {
-  grid-column: labels;
-  grid-row: auto;
-}
-
-form > input,
-form > textarea,
-form > button {
-  grid-column: controls;
-  grid-row: auto;
-  border: none;
-  padding: .2em;
-}
-
-body {
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .container {
-    grid-template-areas:
-      "header"
-      "nav"
-      "content"
-      "aside"
-      "footer";
-
-    grid-template-columns: 1fr;
-    grid-template-rows:
-      auto /* Header */
-      minmax(200px, auto) /* Nav */
-      1fr /* Content */
-      minmax(75px, auto) /* Sidebar */
-      auto; /* Footer */
-  }
-
-  nav, aside {
-    margin: 0;
-  }
-  nav {
-    padding: 20px 20%
-  }
-}
-```
-
 ![screenshot](https://i.imgur.com/36AhkCF.png)
 
-**There, that looks a little better.**
+
 
 <br>
 <br>
@@ -739,56 +640,128 @@ body {
 
 ## POST Request - Add a Notice to the Database
 
-In order to `create` a `notice`, we will need to get our `formInputs` from the `Form` component. We will do this in a `handleAdd` function that sends that form data to the Rails API.
+Before we begin adding our `CREATE`, `UPDATE` or `DELETE` functionality, we're going to modify the `create`, `update` & `destroy` actions inside of our rails API `notices_controller` file.
 
-```js
+By default, `create`, `update` & `destroy` will only send back a copy of the model instance we're performing the service on. Unfortunately this make it more challenging to update state in React.
+
+So, instead of sending back a single model instance for these actions, we'll send back the entire collection after all changes have been applied.
+
+```ruby
+
+class NoticesController < ApplicationController
+  before_action :set_notice, only: [:show, :update, :destroy]
+
+  # GET /notices
+  def index
+    render json: get_notices # 👈 send back all the notices
+  end
+
+  # GET /notices/1
+  def show
+    render json: @notice
+  end
+
+  # POST /notices
+  def create
+    @notice = Notice.new(notice_params)
+
+    if @notice.save
+      # send back all the notices
+      #               👇
+      render json: get_notices, status: :created, location: @notice
+    else
+      render json: @notice.errors, status: :unprocessable_entity
+    end
+  end
+
+  # PATCH/PUT /notices/1
+  def update
+    if @notice.update(notice_params)
+      render json: get_notices # 👈 send back all the notices
+    else
+      render json: @notice.errors, status: :unprocessable_entity
+    end
+  end
+
+  # DELETE /notices/1
+  def destroy
+    @notice.destroy
+    render json: get_notices # 👈 send back all the notices
+  end
+
+  private
+    # private controller class method we can reuse inside of index, create, update & destroy.
+    
+    # This will allow us to render our entire collection of notices as a response.
+    
+    # so we can up our component state in react with a fresh array
+    def get_notices
+      Notice.order('created_at DESC')
+    end
+
+    # Use callbacks to share common setup or constraints between actions.
+    def set_notice
+      @notice = Notice.find(params[:id])
+    end
+
+    # Only allow a list of trusted parameters through.
+    def notice_params
+      params.require(:notice).permit(:title, :author, :phone)
+    end
+end
+
+```
+
+<br>
+<br>
+<br>
+
+
+
+Now that we've taken care of that, in order to `create` a `notice`, we will need to get our `formInputs` from the `Form` component. We will do this in a `handleAdd` function that sends that form data to the Rails API.
+
+```jsx
 function App() {
   const [noticesState, setNoticesState ] = useState({ notices: []});
 
   useEffect(() => {
-    getNotices();
+      async function getNotices() {
+        try {
+          const notices = fetch('http://localhost:3000/notices')
+          .then(response => response.json())
+          setNoticesState({ notices });
+        } catch (error) {
+          console.log(error)
+        }
+      }
+      getNotices();
   }, []);
   
-  function handleAdd(event, formInputs) {
-    event.preventDefault();
-    console.log(formInputs);
-  }
+  async function handleAdd(formInputs) {
+      try {
+        const notices = await fetch('http://localhost:3000/notices', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'Application/json'
+          },
+          body: JSON.stringify(formInputs)
+        }).then(res => res.json())
+
+        setNoticesState({ notices });
+        
+      } catch(error) {
+        console.log(error)
+      }
+    }
   //... and pass this into the Aside
 
-  <Aside handleSubmit={handleAdd} />
+  <Aside handleAdd={handleAdd} />
 }
 ```
 
-Test to make sure those `formInputs` show up in the console. 
-
-Next, we will actually send this data to the Rails API.
-
-<br>
-<br>
-<br>
+We won't need to do any further **`"prop-drilling"`** to connect the `handleAdd` function to the `Form` component as this has been taken care of for us in the starter code.
 
 
-### Send the AJAX Request
-
-```javascript
-// ...
-  function handleAdd(event, formInputs) {
-    event.preventDefault()
-    fetch('/notices', {
-      body: JSON.stringify(formInputs),
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(createdNotice => createdNotice.json())
-    .then(jsonedNotice => { setNoticesState(prevState => 
-      ({ notices: [jsonedNotice, ...prevState.notices] }))
-    })
-    .catch(error => console.log(error))
-  }
-```
 
 <br>
 <br>
@@ -798,23 +771,22 @@ Next, we will actually send this data to the Rails API.
 
 ## Delete
 
-Since our data is rendered all the way down in the Notice component but state is all the way up in the App, we should build out the functionality of delete up in app and pass down the functionality.
+Since our data is rendered all the way down in the `Notice` component but state is all the way up in the App, we should build out the functionality of delete up in app and pass down the functionality.
 
 **App.js**
 
 ```jsx
-  function handleDelete(deletedNotice) {
-    fetch(`/notices/${deletedNotice.id}`, {
-       method: 'DELETE',
-       headers: {
-         'Accept': 'application/json, text/plain, */*',
-         'Content-Type': 'application/json'
-       }
-     })
-   .then(() => {
-    getNotices();
-   })
-   .catch(error => console.log(error));
+  function handleDelete(noticeId) {
+    try {
+      const notices = await fetch(`http://localhost:3000/notices/${noticeId}`, {
+        method: 'DELETE',
+      }).then(res => res.json());
+    
+    setNoticesState({ notices });
+
+    } catch (error) {
+      console.log(error)
+    }
   }
 ```
 
@@ -876,14 +848,14 @@ function Notices({ notices, handleDelete }) {
 
 
 **Notice.js**
-```js
+```jsx
 function Notice(props) {
     return (
       <div className="notice">
          <h3>{props.notice.title}</h3>
          <p>{props.notice.author}</p>
          <small>{props.notice.phone}</small>
-         <button onClick={()=> props.handleDelete(props.notice)}>X</button>
+         <button onClick={()=> props.handleDelete(props.notice.id)}>X</button>
        </div>
     );
 }
@@ -911,7 +883,7 @@ We'll also need a new piece of state for showing or hiding an edit form inside t
 
 Let's start with the `Notice` component.
 
-Let's import `useState` from `react` and initialize it as `formVisible` state set to false.
+Let's import `useState` from `react` and initialize it as `editFormVisible` state set to false.
 
 
 ```jsx
@@ -919,7 +891,7 @@ import { useState } from 'react';
 
 function Notice(props) {
 
-  const [formVisible, setFormVisible ] = useState(false);
+  const [editFormVisible, setEditFormVisible ] = useState(false);
 
   return (
     <div className="notice">
@@ -944,24 +916,38 @@ export default Notice;
 import Form from './Form.js';
 ```
 
-Write a function to toggle the form view
+
+<br>
+<br>
+<br>
+
+**Let's write a function that once invoked, will toggle our form**
+
+<br>
+<br>
+<br>
 
 ```js
 function toggleForm() {
-  setFormVisible(!formVisible);
+  setEditFormVisible(!editFormVisible)
 }
+
+  return (
+    // ... more code below
 ```
 
-<br>
-<br>
-<br>
 
 **Add a ternary operator to change our view based on state and a button with an event prop for toggling the form**
 
 ```jsx
+
+  function toggleForm() {
+    setEditFormVisible(!editFormVisible)
+  } 
+
   return (
     <> 
-      { formVisible ?
+      { editFormVisible ?
         <Form />
         :
         <div className="notice">
@@ -969,7 +955,7 @@ function toggleForm() {
           <p>{props.notice.author}</p>
           <small>{props.notice.phone}</small>
           <button onClick={()=> props.handleDelete(props.notice)}>X</button>
-          <button onClick={toggleForm}>Edit This Entry</button>
+          <button onClick={toggleForm}>Edit</button>
         </div>
       }
     </>
@@ -979,10 +965,13 @@ function toggleForm() {
 <br>
 <br>
 
-Let's pass down our notice into our Form
+Let's pass down our `notice` & `toggleForm` into our Form
 
 ```jsx
-<Form notice={props.notice} />
+<Form 
+  notice={props.notice}
+  toggleForm={toggleForm}
+/>
 ```
 
 Let's write some logic that if there are props, we'll populate the form with the notice to edit.
@@ -1002,12 +991,13 @@ We'll use the `useEffect` hook to check for the notice prop and then use that in
 
 ```js
   useEffect(() => {
-    if (props.notice) {
+    if(props.notice) {
+      const { title, author, phone, id } = props.notice;
       setFormState({
-        title: props.notice.title,
-        author: props.notice.author,
-        phone: props.notice.phone,
-        id: props.notice.id
+        title,
+        author,
+        phone,
+        id
       })
     }
   }, [props.notice]);
@@ -1027,21 +1017,26 @@ Let's write our update function and send it down
 **App.js**
 
 ```js
-function handleUpdate(event, formInputs) {
+async function handleUpdate(formInputs) {
   event.preventDefault();
-  fetch(`/notices/${formInputs.id}`, {
-    body: JSON.stringify(formInputs),
-    method: 'PUT',
-    headers: {
-   'Accept': 'application/json, text/plain, */*',
-   'Content-Type': 'application/json'
- }
-})
- .then(() => {
-   getNotices();
- })
- .catch(error => console.log(error));
-}
+  try {
+    /* 
+      we'll destructure the formInputs values so we can seperate the id,
+      and use it for the url param. We don't want to send the id to the server
+      as it's not included in our rails controller permit params
+    */
+    const { title, author, phone, id } = formInputs;
+    const notices = await fetch(`http://localhost:3000/notices/${id}`, {
+      method: 'PUT',
+      headers: {
+      'Content-Type': 'Application/json'
+      },
+      body: JSON.stringify({ title, author, phone }),
+    }).then(res => res.json())
+    setNoticesState({ notices })
+  } catch (error) {
+    console.log(error)
+  }
 ```
 
 <br>
@@ -1138,8 +1133,12 @@ And down:
 ```js
 return(
   <>
-  { formVisible
-     ? <Form notice={props.notice} handleSubmit={handleUpdate} />
+  { editFormVisible
+     ? <Form 
+          notice={props.notice}
+          toggleForm={toggleForm} 
+          handleUpdate={handleUpdate} 
+        />
 ```
 
 <br>
@@ -1148,67 +1147,34 @@ return(
 <br>
 
 
-Why are we naming this one `handleSubmit`?
-
 There are a few more things we need to add in `Notice.js` to tie our update together:
 
-- We need to run `toggleForm` when we click an "Edit this Entry" button
+- We need to run `toggleForm` when we click an "Edit" button
 - We need to run `toggleForm` plus `props.handleUpdate` upon submit of the form
 
 <br>
 <br>
 <br>
 
-**Notice.js**
-```jsx
-function Notice(props) {
-    const [ formVisible, setFormVisible ] = useState(false)
-
-    function toggleForm() {
-      setFormVisible(!formVisible);
-    }
-
-    function handleUpdate(event, notice) {
-      props.handleUpdate(event, notice)
-      toggleForm();
-    }
-
-  return (
-    <> 
-    { formVisible
-      ? <Form notice={props.notice} handleSubmit={handleUpdate} />
-        :
-        <div className="notice">
-          <h3>{props.notice.title}</h3>
-          <p>{props.notice.author}</p>
-          <small>{props.notice.phone}</small>
-          <button onClick={()=> props.handleDelete(props.notice)}>X</button>
-          <button onClick={toggleForm}>Edit This Entry</button>
-        </div>
-      }
-    </>
-  );
-}
-```
-
-Now, let's try running our first update. We get...an error! In the console, you probably see an error.  If it has to do with sending a `PUT` request with an `undefined` ID, we will fix that below.  If it does not, try to debug the issue, using the code above as a reference.
-
-Note that `handleSubmit` in `Form.js` does, indeed, not have an `id` in the object it passes.  Update the function as follows:
-
-<br>
-<br>
-<br>
-
-
 **Form.js**
 
 ```jsx
   function handleSubmit(event) {
     event.preventDefault();
-    if (props.notice) formState.id = props.notice.id;
-    props.handleSubmit(event, formState);
+    if (props.notice) {
+      props.handleUpdate(formState)
+    } else {
+      props.handleSubmit(formState);
+    }
   }
 ```
+
+<br>
+<br>
+<br>
+
+
+
 
 We also need to update the button text based on whether we are updating an existing `notice` or adding a new one:
 
