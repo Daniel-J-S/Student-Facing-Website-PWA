@@ -79,21 +79,18 @@ All content is subject to change at Instructors discretion.
 <br>
 <br>
 
+
+
 <div style="color: grey;">
 
+<!-- ### [<u>Unit Five: Capstone Essentials</u>](/capstone-week) -->
 ### 🔒 Unit Five: Capstone Essentials
 
 | Week  | Topics |
 | ----- | ------ |
 | 11/12  | Intro to Python/Django Week, Self Directed Learning, Review & Capstone Project and Graduation 🥳 🎉|
-| Post Graduation  | Guide for building a Portfolio Site|
+| Post Graduation  | Guide for building a Portfolio Site| 
 
-<!-- 
-### Unit Five: Capstone Essentials
+<!-- | Post Graduation  | [Guide for building a Portfolio Site](/portfolio)|  -->
 
-| Week  | Topics |
-| ----- | ------ |
-| 14  | Intro to Python/Django Week, [Self Directed Learning, Review & Capstone Project](/capstone) |
-| 15  | Final Prep of Capstone Project and Graduation 🥳 🎉|
-| Post Graduation  | [Guide for building a Portfolio Site](/portfolio)| -->
 </div>

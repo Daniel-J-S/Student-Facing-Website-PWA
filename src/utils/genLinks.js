@@ -8,7 +8,7 @@ const blanks = [
     'Project 3', 
     'Project 4', 
     'Project Presentations', 
-    'Capstone'
+    'Locked',
 ];
 
 export default function genLinks(data) {

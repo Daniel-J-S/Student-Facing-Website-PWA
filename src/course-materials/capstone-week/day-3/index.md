@@ -1,12 +1,11 @@
 ---
-track: "Second Language"
-title: "Week 2 Day 3"
-week: 2
+track: "Capstone Week"
+title: "Week 1 Day 3"
+week: 1
 day: 3
 type: "homepage"
-topics: "Rails Scaffold API & CRA"
+topics: "Locked"
 ---
-
 
 # Week 2 - Day 3
 
