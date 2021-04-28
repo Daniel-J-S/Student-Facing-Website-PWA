@@ -4,13 +4,13 @@ title: "Week 2 Day 2"
 week: 2
 day: 3
 type: "homepage"
-topics: "Begin Project 4 & Bonus Rails Material"
+topics: "Project 4 & Bonus Rails Material"
 ---
 
 
 # Week 2 - Day 2
 
-#### Begin Project 4 & Bonus Rails Material
+#### Project 4 & Bonus Rails Material
 
 - [**Bonus Material:** Rails One to Many Relationships](/second-language/week-2/day-3/lecture-materials/rails-one-to-many)
 - [**Bonus Material:** Rails One to Many Relationships (Build React Frontend](/second-language/week-2/day-3/lecture-materials/one-to-many-frontend)
