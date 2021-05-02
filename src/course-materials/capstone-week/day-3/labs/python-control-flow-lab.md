@@ -25,11 +25,3 @@ Go to this [link](https://repl.it/@DanielJS/Python-Control-Flow-Lab) to solve th
 
 Possible solutions are [here](https://repl.it/@DanielJS/Python-Control-Flow-Lab-Solutions), but do your best not to peek.
 
-
-<br>
-<br>
-
-
-#### This lab is a DELIVERABLE
-
-Make sure you submit a link to your repl.it using the Homework submission form so we can check your work.
