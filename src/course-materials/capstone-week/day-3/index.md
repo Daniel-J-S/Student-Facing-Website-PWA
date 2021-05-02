@@ -4,30 +4,28 @@ title: "Week 1 Day 3"
 week: 1
 day: 3
 type: "homepage"
-topics: "Locked"
+topics: "Capstone Week, Intro to Python Control Flow & Django Part 2"
 ---
 
 # Week 2 - Day 3
 
-#### Rails Scaffold API & CRA
+#### Capstone Week, Intro to Python Control Flow & Django Part 2
 
-- [**Lecture:** Rails Scaffold API & Create React App](/second-language/week-2/day-3/lecture-materials/rails-scaffold-api-cra)
+- [**Lecture:** Intro to Python Control Flow](/capstone-week/day-3/lecture-materials/intro-to-python-control-flow)
+- [**Practice Lab** Python Challenges](/capstone-week/day-3/labs/python-challenges-lab)
+- [**Practice Lab** Python Control Flow](/capstone-week/day-3/labs/python-control-flow-lab)
+- [**Lecture:** Intro to Django Part 2](https://docs.djangoproject.com/en/3.2/intro/tutorial02/)
+
 
 
 
 <!-- 
-<br>
-<br>
 <hr>
-<br>
-<br>
-
 
 ### Lesson Recordings
 
-- [**Rails API Scaffold & React**]()
-- [**Solving a Coding Challenge**](https://generalassembly.zoom.us/rec/share/SGf99S8hRcIAUAzqvZfyrPckRGCg5HSGzVabWCOpA4iLcInH4OS-I1eXxtHPCl8i.obu10KQNJt8xcGMi?startTime=1608754171000)
-
+- [**Intro to Python Control Flow**]()
+- [**Intro to Django Part 2**]()
 
 -->
 
