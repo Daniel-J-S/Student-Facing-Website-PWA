@@ -14,7 +14,7 @@ topics: "Capstone Week, Intro to Python Control Flow & Django Part 2"
 - [**Lecture:** Intro to Python Control Flow](/capstone-week/day-3/lecture-materials/intro-to-python-control-flow)
 - [**Practice Lab** Python Challenges](/capstone-week/day-3/labs/python-challenges-lab)
 - [**Practice Lab** Python Control Flow](/capstone-week/day-3/labs/python-control-flow-lab)
-- [**Lecture:** Intro to Django Part 2](https://docs.djangoproject.com/en/3.2/intro/tutorial02/)
+- <a href="https://docs.djangoproject.com/en/3.2/intro/tutorial02/" target="_blank" rel="noopener noreferrer"><strong>Lecture:</strong> Intro to Django Part 2</a>
 
 
 
