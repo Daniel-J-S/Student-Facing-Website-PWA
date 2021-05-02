@@ -178,7 +178,7 @@ As we work through the tutorial together, I'll be sure to draw analogies to the 
 
 
 
-Let's get started with Part 1 by clicking [here](https://docs.djangoproject.com/en/3.2/intro/tutorial01/)!
+Let's get started with Part 1 by clicking <a href="https://docs.djangoproject.com/en/3.2/intro/tutorial01/" target="_blank" rel="noopener noreferrer">here</a>!
 
 <br>
 <br>
