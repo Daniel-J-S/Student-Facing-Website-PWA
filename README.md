@@ -1,11 +1,11 @@
 
-# Student-Facing PWA for SEIR "Perseverance" 02/16
+# Student-Facing PWA for SEIR "Everest" 05/10
 
 
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a78e52d3-b788-4a8c-94fa-ab0a4ad17d4f/deploy-status)](https://app.netlify.com/sites/seir-02-08/deploys)
 
-![perseverance](https://bsmedia.business-standard.com/_media/bs/img/article/2020-06/15/full/1592214363-2978.jpg)
+![everest](https://en.wikipedia.org/wiki/File:Everest_kalapatthar.jpg)
 
 - **Author:** [DanielJS](https://github.com/myDeveloperJourney)
 - **Version:** 2.1.1

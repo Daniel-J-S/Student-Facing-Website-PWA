@@ -77,12 +77,14 @@ type: "lecture"
 
 #### 6 channels
 
-	- #seir-perseverance-classroom
-	- #seir-perseverance-help
-	- #seir-perseverance-linux-users
-	- #seir-perseverance-random
-	- #seir-perseverance-resources
-	- #seir-perseverance-outcomes
+	- #seir-everest-classroom
+	- #seir-everest-help
+	- #seir-everest-linux-users
+	- #seir-everest-random
+	- #seir-everest-resources
+	- #seir-everest-homework
+	- #seir-everest-lesson-recordings
+	- #seir-everest-outcomes
 	
 	
 

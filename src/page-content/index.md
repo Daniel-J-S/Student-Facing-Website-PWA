@@ -2,7 +2,7 @@
 title: "Home"
 ---
 
-# Welcome to SEIR "Perseverance"
+# Welcome to SEIR "Everest"
 
 This website contains the course curriculum and learning assigmments for General Assembly's SEIR program. 
 
@@ -37,10 +37,12 @@ All content is subject to change at Instructors discretion.
 <br>
 <br>
 
+<div style="color: grey;">
 
-<!-- ### 🔒 Unit Two: Full Stack Development -->
 
-### [<u>Unit Two: Full Stack Development</u>](/full-stack-development)
+### 🔒 Unit Two: Full Stack Development
+
+<!-- ### [<u>Unit Two: Full Stack Development</u>](/full-stack-development) -->
 
 | Week  | Topics |
 | ----- | ------ |
@@ -54,8 +56,8 @@ All content is subject to change at Instructors discretion.
 
 
 
-<!-- ### 🔒 Unit Three: React Fundamentals -->
-### [<u>Unit Three: React Fundamentals</u>](/react-fundamentals)
+### 🔒 Unit Three: React Fundamentals
+<!-- ### [<u>Unit Three: React Fundamentals</u>](/react-fundamentals) -->
 
 | Week  | Topics |
 | ----- | ------ |
@@ -67,8 +69,8 @@ All content is subject to change at Instructors discretion.
 <br>
 
 
-<!-- ### 🔒 Unit Four: Second Language -->
-### [<u>Unit Four: Second Language</u>](/second-language)
+### 🔒 Unit Four: Second Language
+<!-- ### [<u>Unit Four: Second Language</u>](/second-language) -->
 
 | Week  | Topics |
 | ----- | ------ |
@@ -82,16 +84,17 @@ All content is subject to change at Instructors discretion.
 
 
 
-### [<u>Unit Five: Capstone Essentials</u>](/capstone-week)
-<!-- ### 🔒 Unit Five: Capstone Essentials -->
+<!-- ### [<u>Unit Five: Capstone Essentials</u>](/capstone-week) -->
+### 🔒 Unit Five: Capstone Essentials
 
 | Week  | Topics |
 | ----- | ------ |
 | 11/12  | Intro to Python/Django Week, Self Directed Learning, Review & Capstone Project and Graduation 🥳 🎉|
-| Post Graduation  | [Guide for building a Portfolio Site](/portfolio)| 
+| Post Graduation  | Guide for building a Portfolio Site| 
 
 
-<!-- | Post Graduation  | Guide for building a Portfolio Site|  -->
 
-<div style="color: grey;">
+<!-- | Post Graduation  | [Guide for building a Portfolio Site](/portfolio)|  -->
+
+
 </div>

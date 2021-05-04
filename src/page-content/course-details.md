@@ -19,12 +19,12 @@ You will be required to meet 80% completion of homework assignments at the end o
 
 ## Schedule and Holidays
 
-- Start date: **02/16/2020**
-- End date: **05/10/2021**
-- Classroom runtime: **Monday-Friday 9 AM - 5 PM EST**  
-- Office Hours: **Monday - Thursday (6PM - 10PM EST) and Sunday (4PM - 9PM EST)**
-- Outcomes: **Wednesdays from  3:30 - 5PM EST**
-- Holidays: **N/A**
+- Start date: **05/10/2021**
+- End date: **08/04/2021**
+- Classroom runtime: **Monday-Friday 10 AM - 6 PM EST**  
+<!-- - Office Hours: **Monday - Thursday (6PM - 10PM EST) and Sunday (4PM - 9PM EST)** -->
+- Outcomes: **Wednesdays from  4:30 - 6PM EST**
+- Holidays: **05/31, 06/18, 07/05**
 
 <br>
 <br>
@@ -52,9 +52,9 @@ You will be required to meet 80% completion of homework assignments at the end o
 | Daniel Scott  |  Lead Instructor 
 | Ayla Ex | Instructional Associate 
 | Paul Chapman | Instructional Associate 
-| Michael Merlo | Teachers Assistant
-| Riana Shahid | Teachers Assistant
-| Becca Kronenbitter | Outcomes Coach
+<!-- | Michael Merlo | Teachers Assistant -->
+<!-- | Riana Shahid | Teachers Assistant -->
+| Kira Maples | Outcomes Coach
 
 <br>
 <br>
@@ -109,7 +109,7 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 ### We will walk through this together the first time!
 
 * Depending on the assignment, your homework will be completed on [repl.it](https://repl.it/), [CodeSandbox](https://codesandbox.io/), [GitHub Enterprise](https://git.generalassemb.ly/), or [GitHub](https://github.com/)
-* Fill out this [Google Form](https://forms.gle/msMPKsoeYVr41fsv7) with a link for that specific homework. It will be the same Google Form for each homework
+* Fill out this [Google Form](https://forms.gle/7Q5U8q5wtTqeBdTZ6) with a link for that specific homework. It will be the same Google Form for each homework
 <!-- * **Homework is due one week from the day it was assigned** -->
 * If homework is marked `incomplete`, you may be asked to re-submit it; a new timeline will be discussed how long you have to re-submit the homework
 
@@ -175,7 +175,7 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 
 ## Lesson Recordings
 
-Lessons will be recorded and embedded as a link into the lesson day homepage within 24-48 hours 
+Lessons will be recorded and embedded as a link into the lesson day homepage and in Slack the next morning 
 
 <!-- 
 <br>
