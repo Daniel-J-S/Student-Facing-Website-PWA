@@ -3,7 +3,7 @@
 
 
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a78e52d3-b788-4a8c-94fa-ab0a4ad17d4f/deploy-status)](https://app.netlify.com/sites/seir-02-08/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6032fa58-ee1b-41d1-abaa-23668e9615c3/deploy-status)](https://app.netlify.com/sites/seir-everest/deploys)
 
 ![everest](https://images.theconversation.com/files/318067/original/file-20200302-18287-i7bt82.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop)
 
