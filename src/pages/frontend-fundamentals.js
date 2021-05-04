@@ -20,6 +20,7 @@ export default({ data, location }) => {
             <main>
               <h2>Week 1</h2>  
               { week1 }
+              {/* Use this to lock content 
               <br />
               <hr />
               <br />
@@ -35,7 +36,7 @@ export default({ data, location }) => {
               <br />
               <h2>Presentations</h2>  
               { week4 } 
-              {/* Use this to lock content */}
+              */}
             </main>
         </Layout>
     );
