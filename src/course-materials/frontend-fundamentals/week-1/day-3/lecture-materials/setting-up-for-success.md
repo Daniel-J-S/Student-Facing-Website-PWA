@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Setting up for Success"
 week: 1
-day: 4
+day: 3
 type: "lecture"
 ---
 

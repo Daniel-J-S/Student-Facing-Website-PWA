@@ -2,18 +2,28 @@
 track: "Frontend Fundamentals"
 title: "Tips and Tricks"
 week: 1
-day: 2
+day: 1
 type: "lecture"
 ---
 
 # Tips and Tricks
 ### AKA How This Course Works and How to Succeed
 
+
 Focus on ~5 of these at a time to incorporate them into your success throughout the course.
+
+<br>
+<br>
+<br>
 
 ## First Off, Take Our Students' Advice!
 
 [This is just from one cohort.  NOT a compilation](https://www.youtube.com/watch?v=LFSsh2_SpR0&list=PLw7csPJf3mEuc8nDUq1FRHVVCDcqWZTep&index=2&t=2s)
+
+
+<br>
+<br>
+<br>
 
 ## My Thoughts
 

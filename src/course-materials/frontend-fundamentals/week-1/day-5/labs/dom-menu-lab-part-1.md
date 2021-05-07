@@ -1,8 +1,8 @@
 ---
 track: "Frontend Fundamentals"
 title: "DOM Menu Lab - Part 1"
-week: 2
-day: 1
+week: 1
+day: 5
 type: "lab"
 ---
 
@@ -11,9 +11,6 @@ type: "lab"
 
 <br>
 <br>
-<!-- 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0T8CUxaf8aU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
 <br>
 <br>
 

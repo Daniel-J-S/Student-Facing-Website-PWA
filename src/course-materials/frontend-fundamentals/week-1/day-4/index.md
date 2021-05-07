@@ -4,25 +4,29 @@ title: "Day 4"
 week: 1
 day: 4
 type: "homepage"
-topics: "JavaScript Arrays, Functions & Scope"
+topics: "Intro to JS Objects and Classes" 
 ---
+
 
 # Week 1 - Day 4
 
-#### JavaScript Arrays, Functions & Scope 
-- [**Warmup**: Setting up for Success](/frontend-fundamentals/week-1/day-4/lecture-materials/setting-up-for-success/)
-- [**Lecture:** JavaScript Arrays](/frontend-fundamentals/week-1/day-4/lecture-materials/intro-to-javascript-arrays/)
-- [**Lab**: JavaScript Arrays Lab](/frontend-fundamentals/week-1/day-4/labs/javascript-arrays-lab/) - **Deliverable**
-- [**Lecture**: JavaScript Functions and Scope](/frontend-fundamentals/week-1/day-4/lecture-materials/intro-to-javascript-functions-and-scope/) 
-- [**Lab**: JavaScript Functions Lab](/frontend-fundamentals/week-1/day-4/labs/javascript-functions-lab/) - **Non-Deliverable**
+#### Intro to JS Objects and Classes
+- [**Warmup:** The HTML5 Boilerplate](/frontend-fundamentals/week-1/day-4/lecture-materials/html-boilerplate-morning-exercise/)
+- [**Lecture:** Intro to JavaScript Objects](/frontend-fundamentals/week-1/day-4/lecture-materials/intro-to-javascript-objects/)
+- [**Lecture:** Intro to JavaScript Classes](/frontend-fundamentals/week-1/day-4/lecture-materials/intro-to-javascript-classes/)
+- [**Lab:** Guess the Number Game Lab](/frontend-fundamentals/week-1/day-4/labs/guess-the-number-game-lab/) - **Deliverable**
+- [**Lab:** JavaScript Classes Lab](/frontend-fundamentals/week-1/day-4/labs/javascript-classes-lab/) - **Non-Deliverable**
 
 
+<!-- 
 
 <hr>
 
-
 #### Lesson Recordings
 
-- [**Setting up for Success**](https://generalassembly.zoom.us/rec/share/CD-AR9SEpAFC1O8fe4xIg3pWMUGWZcV-1lZVE8vZFx06Lh59ZV08aIbd1uCXliM.t-pO_-8Uk5H1X_GQ?startTime=1613656918000)
-- [**Bonus Control Flow Exercise Walk-through, Ice Breakers & Begin JavaScript Arrays Lesson**](https://generalassembly.zoom.us/rec/share/CD-AR9SEpAFC1O8fe4xIg3pWMUGWZcV-1lZVE8vZFx06Lh59ZV08aIbd1uCXliM.t-pO_-8Uk5H1X_GQ?startTime=1613661453000)
-- [**Finish JavaScript Arrays Lesson and Intro to JavaScript Functions**](https://generalassembly.zoom.us/rec/share/CD-AR9SEpAFC1O8fe4xIg3pWMUGWZcV-1lZVE8vZFx06Lh59ZV08aIbd1uCXliM.t-pO_-8Uk5H1X_GQ?startTime=1613673382000) 
+- [**Morning Warmup**]()
+- [**Discussion on Scope**]()
+- [**Intro to JS Objects**]()
+- [**Intro to JS Classes**]() 
+- [**Brief Setup of JS Objects Lab**]() 
+ -->

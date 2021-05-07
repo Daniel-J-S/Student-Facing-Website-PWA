@@ -1,8 +1,8 @@
 ---
 track: "Frontend Fundamentals"
 title: "Intro to DOM Events"
-week: 2
-day: 1
+week: 1
+day: 5
 type: "lecture"
 ---
 

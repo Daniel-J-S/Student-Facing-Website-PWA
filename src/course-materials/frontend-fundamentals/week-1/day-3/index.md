@@ -4,25 +4,25 @@ title: "Day 3"
 week: 1
 day: 3
 type: "homepage"
-topics: "Intro to JavaScript Datatypes & Control Flow"
+topics: "JavaScript Functions & Scope"
 ---
-
 
 # Week 1 - Day 3
 
-#### Intro Git/Github and JavaScript
+#### JavaScript Functions & Scope 
+- [**Warmup**: Setting up for Success](/frontend-fundamentals/week-1/day-3/lecture-materials/setting-up-for-success/)
+- [**Lecture**: JavaScript Functions and Scope](/frontend-fundamentals/week-1/day-3/lecture-materials/intro-to-javascript-functions-and-scope/) 
+- [**Lab**: JavaScript Functions Lab](/frontend-fundamentals/week-1/day-3/labs/javascript-functions-lab/) - **Non-Deliverable**
 
-- [**Lecture:** Intro to JavaScript](/frontend-fundamentals/week-1/day-3/lecture-materials/intro-to-javascript/)
-- [**Lecture:** Intro to JavaScript Control Flow](/frontend-fundamentals/week-1/day-3/lecture-materials/intro-to-javascript-control-flow/)
-
-
+<!-- 
 
 <hr>
 
 
-
-
 #### Lesson Recordings
 
-- [**Intro to JavaScript**](https://generalassembly.zoom.us/rec/share/_lSn0fbVf0L0wuF0Gkd50sXFcqQSQCaeOcEkpT6KTNLty2Iv5wScxcC61P_5umlS.bHELEIVvGrFZQtpF?startTime=1613570506000)
-- [**JavaScript Control Flow**](https://generalassembly.zoom.us/rec/share/_lSn0fbVf0L0wuF0Gkd50sXFcqQSQCaeOcEkpT6KTNLty2Iv5wScxcC61P_5umlS.bHELEIVvGrFZQtpF?startTime=1613580173000)
+- [**Setting up for Success**]()
+- [**Bonus Control Flow Exercise Walk-through, Ice Breakers & Begin JavaScript Arrays Lesson**]()
+
+
+-->

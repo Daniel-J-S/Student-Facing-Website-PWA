@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "The HTML Boilerplate"
 week: 1
-day: 5
+day: 4
 type: "lecture"
 ---
 

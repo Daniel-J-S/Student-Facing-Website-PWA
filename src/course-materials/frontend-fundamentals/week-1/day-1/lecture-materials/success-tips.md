@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Success Tips"
 week: 1
-day: 2
+day: 1
 type: "lecture"
 ---
 

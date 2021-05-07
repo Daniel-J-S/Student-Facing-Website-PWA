@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Classroom Culture"
 week: 1
-day: 2
+day: 1
 type: "lecture"
 ---
 
@@ -79,12 +79,12 @@ type: "lecture"
 
 	- #seir-everest-classroom
 	- #seir-everest-help
-	- #seir-everest-linux-users
-	- #seir-everest-random
-	- #seir-everest-resources
 	- #seir-everest-homework
-	- #seir-everest-lesson-recordings
+	- #seir-everest-linux-users
 	- #seir-everest-outcomes
+	- #seir-everest-random
+	- #seir-everest-recordings
+	- #seir-everest-resources
 	
 	
 
