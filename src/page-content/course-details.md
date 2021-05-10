@@ -51,10 +51,11 @@ You will be required to meet 80% completion of homework assignments at the end o
 | Ira Herman  |  Lead Instructor 
 | Daniel Scott  |  Lead Instructor 
 | Ayla Ex | Instructional Associate 
-| Paul Chapman | Instructional Associate 
-<!-- | Michael Merlo | Teachers Assistant -->
-<!-- | Riana Shahid | Teachers Assistant -->
+| Paul Chapman | Instructional Associate
 | Kira Maples | Outcomes Coach
+| Michael Merlo | Teachers Assistant
+
+
 
 <br>
 <br>
