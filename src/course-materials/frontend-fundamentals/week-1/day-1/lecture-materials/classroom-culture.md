@@ -33,8 +33,7 @@ type: "lecture"
 - Ayla Ex - Instructional Associate 
 - Paul Chapman - Instructor Associate
 - Michael Merlo - Teachers Assistant
-- Riana Shahid - Teachers Assistant
-- Becca Kronenbitter - Outcomes Coach
+- Kira Maples - Outcomes Coach
 
 
 <br>
