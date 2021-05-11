@@ -15,7 +15,7 @@ topics: "Intro to JavaScript"
 - [**Lecture:** Intro to JavaScript](/frontend-fundamentals/week-1/day-2/lecture-materials/intro-to-javascript/)
 - [**Lecture:** Intro to JavaScript Control Flow](/frontend-fundamentals/week-1/day-2/lecture-materials/intro-to-javascript-control-flow/)
 - [**Lecture:** JavaScript Arrays](/frontend-fundamentals/week-1/day-2/lecture-materials/intro-to-javascript-arrays/)
-- [**Lab**: JavaScript Arrays Lab](/frontend-fundamentals/week-1/day-2/labs/javascript-arrays-lab/) - **Deliverable**
+- [**Lab**: JavaScript Arrays Lab](/frontend-fundamentals/week-1/day-2/labs/javascript-arrays-lab/) - **Non-Deliverable**
 
 
 <!-- 
