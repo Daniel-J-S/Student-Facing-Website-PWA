@@ -31,7 +31,9 @@ This lab provides an opportunity to practice defining, accessing and manipulatin
 
 > **Note:** Feel free to reference the arrays lesson, collaborate, google, etc.
 
-This lab **is a deliverable**. When completed, please click the **"Submit Homework"** link above **(it's the same form in the navbar)** to submit your lab work to your instructional team.
+This lab **is a not deliverable**. 
+
+<!-- When completed, please click the **"Submit Homework"** link above **(it's the same form in the navbar)** to submit your lab work to your instructional team. -->
 
 <br>
 <br>
