@@ -11,6 +11,8 @@ topics: "JavaScript Functions & Scope"
 
 #### JavaScript Functions & Scope 
 - [**Warmup**: Setting up for Success](/frontend-fundamentals/week-1/day-3/lecture-materials/setting-up-for-success/)
+- [**Lecture:** JavaScript Arrays](/frontend-fundamentals/week-1/day-2/lecture-materials/intro-to-javascript-arrays/)
+- [**Lab**: JavaScript Arrays Lab](/frontend-fundamentals/week-1/day-2/labs/javascript-arrays-lab/) - **Deliverable**
 - [**Lecture**: JavaScript Functions and Scope](/frontend-fundamentals/week-1/day-3/lecture-materials/intro-to-javascript-functions-and-scope/) 
 - [**Lab**: JavaScript Functions Lab](/frontend-fundamentals/week-1/day-3/labs/javascript-functions-lab/) - **Non-Deliverable**
 
