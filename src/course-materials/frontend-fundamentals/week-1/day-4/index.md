@@ -11,7 +11,7 @@ topics: "Intro to JS Objects and Classes"
 # Week 1 - Day 4
 
 #### Intro to JS Objects and Classes
-- [**Warmup:** The HTML5 Boilerplate](/frontend-fundamentals/week-1/day-4/lecture-materials/html-boilerplate-morning-exercise/)
+- [**Warmup**: Setting up for Success](/frontend-fundamentals/week-1/day-3/lecture-materials/setting-up-for-success/)
 - [**Lecture:** Intro to JavaScript Objects](/frontend-fundamentals/week-1/day-4/lecture-materials/intro-to-javascript-objects/)
 - [**Lecture:** Intro to JavaScript Classes](/frontend-fundamentals/week-1/day-4/lecture-materials/intro-to-javascript-classes/)
 - [**Lab:** Guess the Number Game Lab](/frontend-fundamentals/week-1/day-4/labs/guess-the-number-game-lab/) - **Deliverable**
