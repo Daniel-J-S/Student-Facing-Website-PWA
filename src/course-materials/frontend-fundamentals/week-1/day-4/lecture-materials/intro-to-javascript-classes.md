@@ -325,11 +325,11 @@ var cohort = {
 
 ### Review Questions
 
-You've just learned how to define a class and add prototype methods to it. This represents about 80% there is to know about classes - congrats! 
+You've just learned how to define a class and add prototype methods to it. This represents the majority of what you'll need to know about classes - congrats! 
   
 <br>  
 
-**Some questions before moving on:**
+**Review Questions:**
 
 **❓ What is the JS keyword used to define a class?**
 
@@ -344,6 +344,9 @@ You've just learned how to define a class and add prototype methods to it. This 
 <br>
 
 
+## Hungry for more (Further Reading):
+
+Here is some bonus content to read through if you're hungry for more.
 
 ### Constructor Functions - B.C. (before classes 😀)
 
