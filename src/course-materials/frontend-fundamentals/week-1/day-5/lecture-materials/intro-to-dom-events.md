@@ -51,58 +51,52 @@ type: "lecture"
 
 ### Lesson Setup  
 
-- Create a folder called `intro-to-dom-events`
-- Inside of `intro-to-dom-events` create the following folder/file structure:
+For this lesson we're going to use the same project we set up for the [Intro to the DOM lesson](/frontend-fundamentals/week-1/day-5/lecture-materials/intro-to-the-dom/#lesson-setup).
 
-```shell
-intro-to-dom-events/
-  index.html
-  js/
-    script.js
+The only change we'll make is to add the following content below the `h1` element in `index.html`
+
+```html
+<h3>Comments</h3>
+<ul>
+  <li>SEIR Rocks!</li>
+</ul>
+<input>
+<button>Add Comment</button>
 ```
 
-- You can add this HTML to your `.html` file:
+
+<br>
+<br>
+
+
+After the change, your entire `index.html` file should look like this:
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Intro to DOM Events</title>
-</head>
-<body>
-
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script defer src="./script.js"></script>
+        <title>Intro to the DOM</title>
+    </head>
+    <body>
+       <h1 id="title" class="main-title">Intro to the DOM</h1>
+       <h3>Comments</h3>
+       <ul>
+           <li>SEIR Rocks!</li>
+       </ul>
+       <input type="text">
+       <button>Add Comment</button>
+    </body>
 </html>
 ```
 
-<br>
-<br>
-
-
-
-### Setup
-  
-
-- Add a `<script>` tag to include `script.js` in the `<head>`:
-
-	```html
-	<head>
-	  ...
-	  <title>Intro to DOM Events</title>
-	  <script defer src="./js/script.js"></script>
-	</head>
-	```
-
-- The `defer` attribute ensures the DOM is ready before the script executes.
-
-- Putting a temporary `alert('js loaded)` will verify `script.js` is being loaded.
 
 <br>
 <br>
-
+<br>
 
 
   
@@ -161,7 +155,7 @@ intro-to-dom-events/
 ### Our first Event Listener
   
 
-- Add the following HTML to the Project we setup:
+- Earlier we added the following HTML to the Project we setup:
 
 	```html
 	<h3>Comments</h3>
