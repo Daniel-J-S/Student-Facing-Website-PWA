@@ -426,6 +426,7 @@ var car = new Vehicle('A1234', 'Toyota', 'Camry');
 
 
 
+<!--
 
 ### Review Quesitons
 
@@ -434,6 +435,7 @@ var car = new Vehicle('A1234', 'Toyota', 'Camry');
 **❓ When using constructor functions, how are instance methods defined?**
 
 **❓ What's wrong with the following code?**
+
 
 
 ```javascript
@@ -447,7 +449,7 @@ class Shape {
 	}
 }
 ```
-
+-->
 
 <br>
 <br>
