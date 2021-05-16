@@ -4,27 +4,25 @@ title: "Day 3"
 week: 2
 day: 3
 type: "homepage"
-topics: "DOM Manipulation With jQuery"
+topics: "DOM Manipulation with jQuery Part 2"
 ---
 
+# Week 2 - Day 3
 
-# Day 3
+#### DOM Manipulation with jQuery Part 2
+- [**Warmup** Wireframing](/frontend-fundamentals/week-2/day-3/lecture-materials/wireframing/) 
+- [**Lecture:** Intro To jQuery Part 2](/frontend-fundamentals/week-2/day-3/lecture-materials/intro-to-jquery-part-2/)
+- [**Lab:** My Developer Skills Lab](/frontend-fundamentals/week-2/day-3/labs/my-developer-skills-lab/) - **Deliverable**
+- [**Lecture:** JavaScript Callbacks and Arrow Functions](/frontend-fundamentals/week-2/day-3/lecture-materials/javascript-callbacks-and-arrow-functions/)
+- **Activity:** Project 1 Planning
 
-#### Intro to DOM Manipulation With jQuery
 
-- [**Warmup:** Flexbox Practice](/frontend-fundamentals/week-2/day-3/lecture-materials/flexbox-practice/)
-- [**Lecture:** Intro To jQuery Part 1](/frontend-fundamentals/week-2/day-3/lecture-materials/intro-to-jquery-part-1/)
-- [**Lecture** Array Iterators Walkthrough](/frontend-fundamentals/week-2/day-3/lecture-materials/array-iterators-walkthrough/) 
-- [**Lab:** Array Iterators Lab](/frontend-fundamentals/week-2/day-3/labs/array-iterators-lab/) - **Non-Deliverable**
-
+<!-- 
 <hr>
-
-
 
 #### Lesson Recordings
 
-- [**jQuery Part 1**](https://generalassembly.zoom.us/rec/share/JLLCJQut_vOwgI-DpJScuRMDCzyms0Ho86wT4ePCICrYbZ2BC2f52TnIPZQhk8wk.suRNFjFCoMmN6_0h?startTime=1614179908000)
-- [**Array Iterators Walkthrough**](https://generalassembly.zoom.us/rec/share/JLLCJQut_vOwgI-DpJScuRMDCzyms0Ho86wT4ePCICrYbZ2BC2f52TnIPZQhk8wk.suRNFjFCoMmN6_0h?startTime=1614191666000) 
+- [**jQuery Part 2 - JS Callbacks & Arrow Functions**]()
 
-
+ -->
 

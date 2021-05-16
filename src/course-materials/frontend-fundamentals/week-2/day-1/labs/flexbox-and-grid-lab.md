@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "CSS Flexbox / Grid - Lab"
 week: 2
-day: 2
+day: 1
 type: "lab"
 ---
 

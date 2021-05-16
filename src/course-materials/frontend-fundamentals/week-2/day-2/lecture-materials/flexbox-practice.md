@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Flexbox Practice"
 week: 2
-day: 3
+day: 2
 type: "lecture"
 ---
 
