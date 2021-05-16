@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Build a Weather App With AJAX"
 week: 2
-day: 5
+day: 4
 type: "lab"
 ---
 

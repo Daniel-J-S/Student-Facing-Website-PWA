@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Wireframing Part 2"
 week: 2
-day: 5
+day: 4
 type: "lecture"
 ---
 

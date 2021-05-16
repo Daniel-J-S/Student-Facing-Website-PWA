@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "Fake Resume & Github Practice"
 week: 2
-day: 2
+day: 1
 type: "lecture"
 ---
 

@@ -2,7 +2,7 @@
 track: "Frontend Fundamentals"
 title: "JavaScript Callbacks and Arrow Functions"
 week: 2
-day: 4
+day: 3
 type: "lecture"
 ---
 

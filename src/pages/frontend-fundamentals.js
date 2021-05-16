@@ -20,12 +20,12 @@ export default({ data, location }) => {
             <main>
               <h2>Week 1</h2>  
               { week1 }
-              {/* Use this to lock content 
               <br />
               <hr />
               <br />
               <h2>Week 2</h2>  
               { week2 }
+              {/* Use this to lock content 
               <br />
               <hr />
               <br />
