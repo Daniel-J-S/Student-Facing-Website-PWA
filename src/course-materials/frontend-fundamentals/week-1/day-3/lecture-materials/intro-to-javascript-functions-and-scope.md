@@ -382,6 +382,136 @@ There are a few tidbits about parameters/arguments to ponder:
 <br>
 
 
+#### Functions as Arguments
+
+In JavaScript, it's easy to pass around functions like data -  because they are - they're objects!
+  
+
+<br>
+<br>
+<br>
+
+
+##### Passing an Anonymous Function
+
+Often functions or methods (functions attached to an object) will require a function be provided as an argument.<br><br>For example, the `forEach` method on arrays:
+	
+```javascript
+var a = ['red', 'green', 'blue'];
+	
+a.forEach(function(color) {
+  console.log(color);
+});
+```
+	
+Since the function provided to the `forEach` will never be called anywhere else in the code, why create a separate named function and pass it in? <br><br>**Anonymous functions** like shown above can really come in handy!
+
+<br>
+<br>
+<br>
+
+##### PARAMETER/ARGUMENT REVIEW QUESTIONS
+
+**❓ What's the difference between an _argument_ and a _parameter_?**
+
+**❓ Explain how _arguments_ and _parameters_ are "matched up".**
+  
+
+<br>
+<br>
+
+
+### 5. Scope
+
+<br>
+
+#### What is Scope?
+
+In general, the concept of **scope** in computer programming pertains to the **accessibility** of variables and functions from a given point of the code. In other words, as you write a line of code, what variables and functions do you have access to?
+
+JavaScript has three types of scope:
+
+- A single **global scope**
+- **function scope**, also known as **local scope**
+- and, **block scope** which was added by ES2015's `let` & `const`
+
+<br>
+<br>
+<br>
+
+
+#### Why the Different Types of Scope?
+
+There's a concept in programming known as **The Principle of Least Access**.
+
+The principle is based on the idea that limiting the accessibility of variables (and functions) helps reduce bugs in the code - think of it as a form of "code security".
+
+A practical benefit of having different scope, however, is being able to use the same names for variables in different functions!  If there were only one scope, this wouldn't be possible.
+
+
+<br>
+<br>
+<br>
+
+
+#### Examples of Scope
+
+Ignoring _block scope_ for the moment, let's review the following diagram demonstrates both _global_ and _function_ scope:
+
+![screenshot](https://i.imgur.com/UtIoe7F.png)
+
+The diagram identifies 3 different scopes along with the identifiers (variables and functions) that live within each scope.
+
+
+<br>
+<br>
+<br>
+
+
+##### You can look out, but you can't look in!
+
+A key takeaway is that functions have access to the set of variables and functions defined within their own scope AND in the **outer** scopes.
+
+Basically, when a line of code accesses a variable (or function), JS will traverse up the **scope chain** until it finds what it's looking for.
+
+If the JS runtime engine gets to the _global scope_ (which is the top of the food chain in the scope hierarchy) and still can't find what it's looking for, that's when your program ceases due to a **ReferenceError**.
+
+**❓ Does the function `foo` have access to the variable `c`?**
+
+
+<br>
+<br>
+<br>
+
+
+
+##### Global Scope
+
+In our browsers, the global scope is represented by the `window` object.
+
+It is at the top of the scope chain and its properties are available to **every** function we write.
+
+It is generally bad form for our programs to create variables in the global scope.  Doing so risks us overwriting data in use by JS libraries/frameworks or other routines.
+
+Creating lots of global variables is referred to as "polluting the global scope", and we all know that it's not nice to pollute!
+
+If we define a variable (or a function) within the global scope, it becomes a property on the `window` object. You can see this in action by typing `var pollution = 'sucks'` in the console, then type `window.` (don't forget the dot), scroll down and find the pollution we have created - yuck!
+
+> Although using both `var` and `let` in the global scope results in a global variable being created, interestingly, those created using `let` and `const` do not appear as properties on the `window` object.
+
+**Any questions before moving on the lab where you'll practice writing several functions?**
+
+
+<br>
+<br>
+<br>
+
+
+### 6. Further Study
+
+
+<br>
+
 
 ##### Fewer Arguments
 
@@ -491,138 +621,6 @@ Any expression can be provided as a default, including objects, etc.
 
 <br>
 <br>
-<br>
-
-
-#### Functions as Arguments
-
-In JavaScript, it's easy to pass around functions like data -  because they are - they're objects!
-  
-
-<br>
-<br>
-<br>
-
-
-##### Passing an Anonymous Function
-
-Often functions or methods (functions attached to an object) will require a function be provided as an argument.<br><br>For example, the `forEach` method on arrays:
-	
-```javascript
-var a = ['red', 'green', 'blue'];
-	
-a.forEach(function(color) {
-  console.log(color);
-});
-```
-	
-Since the function provided to the `forEach` will never be called anywhere else in the code, why create a separate named function and pass it in? <br><br>**Anonymous functions** like shown above can really come in handy!
-
-<br>
-<br>
-<br>
-
-##### PARAMETER/ARGUMENT REVIEW QUESTIONS
-
-**❓ What's the difference between an _argument_ and a _parameter_?**
-
-**❓ Explain how _arguments_ and _parameters_ are "matched up".**
-  
-
-<br>
-<br>
-
-
-
-### 5. Scope
-
-<br>
-
-#### What is Scope?
-
-In general, the concept of **scope** in computer programming pertains to the **accessibility** of variables and functions from a given point of the code. In other words, as you write a line of code, what variables and functions do you have access to?
-
-JavaScript has three types of scope:
-
-- A single **global scope**
-- **function scope**, also known as **local scope**
-- and, **block scope** which was added by ES2015's `let` & `const`
-
-<br>
-<br>
-<br>
-
-
-#### Why the Different Types of Scope?
-
-There's a concept in programming known as **The Principle of Least Access**.
-
-The principle is based on the idea that limiting the accessibility of variables (and functions) helps reduce bugs in the code - think of it as a form of "code security".
-
-A practical benefit of having different scope, however, is being able to use the same names for variables in different functions!  If there were only one scope, this wouldn't be possible.
-
-
-<br>
-<br>
-<br>
-
-
-#### Examples of Scope
-
-Ignoring _block scope_ for the moment, let's review the following diagram demonstrates both _global_ and _function_ scope:
-
-![screenshot](https://i.imgur.com/UtIoe7F.png)
-
-The diagram identifies 3 different scopes along with the identifiers (variables and functions) that live within each scope.
-
-
-<br>
-<br>
-<br>
-
-
-##### You can look out, but you can't look in!
-
-A key takeaway is that functions have access to the set of variables and functions defined within their own scope AND in the **outer** scopes.
-
-Basically, when a line of code accesses a variable (or function), JS will traverse up the **scope chain** until it finds what it's looking for.
-
-If the JS runtime engine gets to the _global scope_ (which is the top of the food chain in the scope hierarchy) and still can't find what it's looking for, that's when your program ceases due to a **ReferenceError**.
-
-**❓ Does the function `foo` have access to the variable `c`?**
-
-
-<br>
-<br>
-<br>
-
-
-
-##### Global Scope
-
-In our browsers, the global scope is represented by the `window` object.
-
-It is at the top of the scope chain and its properties are available to **every** function we write.
-
-It is generally bad form for our programs to create variables in the global scope.  Doing so risks us overwriting data in use by JS libraries/frameworks or other routines.
-
-Creating lots of global variables is referred to as "polluting the global scope", and we all know that it's not nice to pollute!
-
-If we define a variable (or a function) within the global scope, it becomes a property on the `window` object. You can see this in action by typing `var pollution = 'sucks'` in the console, then type `window.` (don't forget the dot), scroll down and find the pollution we have created - yuck!
-
-> Although using both `var` and `let` in the global scope results in a global variable being created, interestingly, those created using `let` and `const` do not appear as properties on the `window` object.
-
-**Any questions before moving on the lab where you'll practice writing several functions?**
-
-
-<br>
-<br>
-<br>
-
-
-### 6. Further Study
-
-
 <br>
 
 
