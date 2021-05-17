@@ -24,7 +24,7 @@ Each group will have a squad leader consisted of your instructor lead or one of 
 
 **Please Note:** We still take normal attendance for scheduled classroom days that fall on project periods. 
 
-So, you are expected to be available via Slack/Zoom for check'ins and stand up/stand down. 
+So, you are expected to be available via Slack/Zoom for check'ins and stand ups. 
 
 
 Squad leaders will regularly check on your progress to ensure you're on track to reach MVP. 
@@ -46,7 +46,7 @@ Squad leaders will regularly check on your progress to ensure you're on track to
 #### Necessary Deliverables (_Your application must meet these requirements_):
 
 1. Built with HTML, CSS, JavaScript and *jQuery* 
-2. Hosted on github pages
+2. Hosted on Vercel, Netlify, or GitHub pages.
 3. Use AJAX to make a request to an external data source like OMDBapi and insert some of the data retrieved into the DOM
 3. Frequent Commits to github dating back to the very beginning of the project
 4. **A ``README.md`` file** with these sections:
