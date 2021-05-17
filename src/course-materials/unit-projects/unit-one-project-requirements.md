@@ -181,7 +181,7 @@ You will recieve 5 minutes to present your project and show your code to classma
 ## How to get help during project periods
 
 1. Seek out help online
-2. Post a question in the teach talk channel
+2. Post a question in the `tech-talk` or `help` channel
 2. Seek out help with your classmates
 3. Asking your instructional team for assistant should be the last resort
 
