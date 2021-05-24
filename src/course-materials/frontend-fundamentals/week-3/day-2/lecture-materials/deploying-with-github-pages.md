@@ -19,7 +19,7 @@ type: "lecture"
 
 ## Intro
 
-This quick walk-thru will show you how easy it is to deploy your static web application so that it can be accessed by anyone with Internet access, anywhere in world!
+This quick study guide will show you how easy it is to deploy your static web application so that it can be accessed by anyone with Internet access, anywhere in world!
 
 Any GitHub repository containing an _index.html_ and other static assets can become a website by simply creating a _gh-pages_ branch and pushing it to the _origin_ remote.
 

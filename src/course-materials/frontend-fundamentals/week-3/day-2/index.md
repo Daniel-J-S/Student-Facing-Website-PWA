@@ -4,7 +4,7 @@ title: "Day 3"
 week: 3
 day: 2
 type: "homepage"
-topics: "Project 1 & Deployment with Github Pages"
+topics: "Project 1 & Deployment"
 ---
 
 
@@ -12,13 +12,22 @@ topics: "Project 1 & Deployment with Github Pages"
 
 #### Students Work on Project 1
 
-- [**Lecture:** Deployment With Github Pages](/frontend-fundamentals/week-3/day-2/lecture-materials/deploying-with-github-pages)
+- [**Self Study Guide:** Deployment to Github Pages](/frontend-fundamentals/week-3/day-2/lecture-materials/deploying-with-github-pages)
 
+<br>
+<br>
+
+
+#### Video Walkthrough of Project 1 Deployment Using GH Pages, Netlify or Vercel
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/j5TCiBwLtAk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!-- 
 
 <hr>
 
 #### Lesson Recordings
 
-<!-- - [**Beginners Guide to UX**]() -->
-- [**Deployment to Github Pages Demo**](https://generalassembly.zoom.us/rec/share/SQAhZNVqXiwH23JhUaV8jD0U5x92LQ-JyAfTIvtsuleJc9yJtgncnhhp9iojEsTF.SktkINyxIW4lhKgF?startTime=1614628612000)
-
+- [**Deployment to Github Pages Demo**]()
+ -->
