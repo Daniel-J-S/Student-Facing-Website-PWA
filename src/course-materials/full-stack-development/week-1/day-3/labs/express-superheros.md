@@ -37,10 +37,10 @@ type: "lab"
 
 ## Getting Started with a Basic Express App
 
-1. Create a new directory inside your labs dir called "superheroes"
-1. cd into superheroes
+1. Create a new directory called `"superheroes"`
+1. `cd` into superheroes
 1. create a `server.js` file
-1. perform an npm init, specify `server.js` as your entry
+1. perform an npm init, specify `server.js` as your entry point
 1. install express
 1. inside `server.js`, require express and save it to a variable named `express`
 1. create a variable named app, and set it equal to `express()`
@@ -56,7 +56,7 @@ type: "lab"
 
 ## Creating Routes
 
-1. Create a variable called superheroes and set it to [ 'Superman', 'Wonder Woman', 'Black Panther' ]
+1. Create a variable called superheroes and set it to `[ 'Superman', 'Wonder Woman', 'Black Panther' ]`
 1. Create a route to `/superheroes`, which will be the `index`
     - The route should send the entire superheroes array
 1. Create a route to `/superheroes/:index`, which will be the `show` route
@@ -122,7 +122,7 @@ Hints:
 
 Let's do another rep with setting up an express server!
 
-1. cd back into the labs directory
+1. `cd` back into the labs directory
 1. create a directory called friends
 1. cd into friends
 1. Create a basic express app

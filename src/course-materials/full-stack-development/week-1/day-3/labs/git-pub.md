@@ -51,7 +51,7 @@ The latest hottest trend in food and drinks are pubs for the sober curious! Let'
 
 ### Setting up the file structure
 
-**In terminal, inside your homework folder**: 
+**In terminal:** 
   
   - `mkdir gitpub`
   - `cd gitpub`

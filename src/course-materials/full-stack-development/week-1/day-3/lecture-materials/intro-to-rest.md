@@ -57,7 +57,7 @@ type: "lecture"
 
 ## Setup our app
 
-1.  Create a directory in student examples called fruits
+1.  Create a directory called `fruits`
 2.  npm init
 3.  Create a `server.js` file.
 4.  install express

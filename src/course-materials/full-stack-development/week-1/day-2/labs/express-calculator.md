@@ -18,7 +18,8 @@ Make a calculator that takes two params from the URI and sends the sum to the br
 
 &#x1F535; **Setup**
 
-* Make a directory `express-calculator`. `cd` into the directory.
+* Make a directory `express-calculator`.
+* `cd` into the `express-calculator` directory.
 * `touch server.js` and open the project.
 * `npm init`
 * Enter `server.js` as the entry point (if it hasn't already defaulted to it)

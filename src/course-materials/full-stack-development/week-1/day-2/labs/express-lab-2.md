@@ -33,7 +33,7 @@ Practice the Basics of Express
 
 - Nodejs
 - npm packages
-- Introduction to expressjs
+- Introduction to Expressjs
 - Request/response/ how the internet works basics
 - Basic understanding of routing
 - JavaScript, HTML fundamentals
@@ -60,21 +60,20 @@ Practice the Basics of Express
 
 ## Getting Started
 
-Create a directory called `express-lab-2` and create a Javascript file `server.js`. 
+Create a directory called `express-lab-2` then touch a Javascript file inside of `express-lab-2` called `server.js`. 
 
 You'll use this file to complete the exercises below:
 
 
-* `npm init`. You should receive a `package.json`.
+* Run `npm init` to create a `package.json` file.
 
-Install express. `npm i express`. Check your files.
-  - _Remember:_ If you have an older npm version below 5.0.0, you need to type `npm install express --save` instead! Refer back to your notes if you need to be reminded of the differences between version 4 and 5  
+Install express with `npm i express`.
 
-:elephant: _Hint_: You can check to make sure your installation was successful in one of the following places:
+🐘 _Hint_: You can check to make sure your installation was successful in one of the following places:
 
 - Your `package.json` file should have `express` listed in the dependencies.
 - You could also check in your `node_modules` folder to see an`express` folder.
-- Require `express` and set the `app`. (look back to the markdown from today if you need more help on how to do this).
+- Require `express` and set the `app`. (look back to the lesson notes from today if you need more help on how to do this).
 - Tell the server where to listen for requests (the port).
 
 <br>
@@ -252,56 +251,6 @@ Back in your main app:
 <br>
 
 
-
-### Super Bonus
-Continue to work on X-Files in the labs folder
-
-<br>
-<br>
-<br>
-
-
-
-
-### Request
-
-Looking for something advanced that we haven't covered? How about getting your server to communicate with another server on the web. You will have to look through documentation to get this working.
-
-There are more modules than just `express`. Let's look at one called `request` that can make http requests of its own.
-
-<br>
-<br>
-<br>
-
-
-
-
-## request
-
-Use a module called `request` to make an http request to a third-party API.
-
-* Look on the [npmjs](https://www.npmjs.com/) website to find documentation for a module called `request`
-
-* Go to the [jservice.io](http://jservice.io/) website to find documentation on the jservice api endpoints. This API will send JSON as a response. If you go to `http://jservice.io/api/random` in your browser, you'll see some JSON.
-
-Something like this:
-
-![](https://i.imgur.com/n82vCvO.png)
-
-* Use `request` within node to make a request to `jservice.io` and get a random trivia question and log the JSON in terminal.
-
-* Use `express` to make a route that will display a random trivia question and its answer (only the question and the answer) in the browser. _Hint_ is the JSON really a Javascript object? Or is it a string?
-
-* Make a route that will deliver jservice results for one of either the clues, random, categories, category API endpoints, depending on user input.
-
-&#x1F534; **Commit** <br>
-<hr>
-"Request"
-<hr>
-
-<br>
-<br>
-<br>
 
 
 

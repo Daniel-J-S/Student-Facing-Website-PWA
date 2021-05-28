@@ -37,12 +37,11 @@ All content is subject to change at Instructors discretion.
 <br>
 <br>
 
-<div style="color: grey;">
 
 
-### 🔒 Unit Two: Full Stack Development
+<!-- ### 🔒 Unit Two: Full Stack Development -->
 
-<!-- ### [<u>Unit Two: Full Stack Development</u>](/full-stack-development) -->
+### [<u>Unit Two: Full Stack Development</u>](/full-stack-development)
 
 | Week  | Topics |
 | ----- | ------ |
@@ -55,6 +54,7 @@ All content is subject to change at Instructors discretion.
 <br>
 
 
+<div style="color: grey;">
 
 ### 🔒 Unit Three: React Fundamentals
 <!-- ### [<u>Unit Three: React Fundamentals</u>](/react-fundamentals) -->

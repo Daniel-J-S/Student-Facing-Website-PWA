@@ -4,22 +4,23 @@ title: "Day 5"
 week: 1
 day: 5
 type: "homepage"
-topics: "Express Middleware & MongoDB Preview Materials"
+topics: "Update & Delete with Express"
 ---
 
 # Week 1 - Day 5
 
-#### Express Middleware & MongoDB Preview Materials
-- [**Lecture:** Intro to Express Middleware](/full-stack-development/week-1/day-5/lecture-materials/intro-to-express-middleware/)
-- [**Lab:** Express Dev Skills Part 2 of 2](/full-stack-development/week-1/day-5/labs/express-dev-skills-lab-part-2/) - **Parts 1 and 2 Are Deliverable**
-- [**Resource:** Intro to MongoDB](/full-stack-development/week-1/day-5/lecture-materials/intro-to-mongodb/)
-- [**Resource:** Create a Cloud-Hosted MongoDB](/full-stack-development/week-1/day-5/lecture-materials/create-an-atlas-hosted-mongodb/) 
+#### Update & Delete with Express
+- [**Lecture:** Update & Delete with Express](/full-stack-development/week-1/day-5/lecture-materials/update-and-delete/)
+- [**Lab:** Exobilogy I](/full-stack-development/week-1/day-5/labs/exobiology-1) - **Non-Deliverable**
+- [**Lab:** Exobilogy II](/full-stack-development/week-1/day-5/labs/exobiology-2) - **Non-Deliverable**
+- [**Lab:** Pokedex](/full-stack-development/week-1/day-5/labs/pokedex) - **Non-Deliverable**
 
 
+<!-- 
 #### Recordings
 
 <hr>
 
-- [**Intro to Middleware with Express _(Includes Update Exercise Walkthrough)_**](https://generalassembly.zoom.us/rec/share/2Kf0Su1h0xozOwKZPiDpmCnQ5kueJxRdyCFkooy3EOUcqUr31XgaTaoFruZMXNRO._j_o26pVkPIP3AH0?startTime=1615557982000) 
-
+- [**Update and Delete with Express**]() 
+ -->
 

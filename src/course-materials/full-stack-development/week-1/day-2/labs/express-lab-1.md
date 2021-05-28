@@ -21,7 +21,7 @@ type: "lab"
 <br>
 
 ### Basic Express App
-1. Create a new directory called "frasier"
+1. Create a new directory called `frasier`
 1. `cd` into `frasier`
 1. perform an npm init, specify `server.js` as your entry
 1. install express, tell npm to save express as a dependency in package.json
@@ -45,12 +45,12 @@ type: "lab"
 1. test the `/frasier` route by going to `http://localhost:3000/frasier`
 1. create a GET route for `/niles`
     - it should send a response of "You know, sometimes I wonder if I'm not just in psychiatry for the money"
-1. test the /niles route by going to `http://localhost:3000/niles`
+1. test the `/niles` route by going to `http://localhost:3000/niles`
 1. create a GET route for `/daphne`
     - it should send a response of "Well, have fun.  I'm off to stick my head in the oven."
 1. test the `/daphne` route by going to `http://localhost:3000/daphne`
 1. create a GET route for `/roz`
-    - it should send a response of "Let me make it easy for you.  Freaks! Freaks on line 1. Freaks on line 2! Freaks! Everywhere!"
+    - it should send a response of "Let me make it easy for you. Freaks! Freaks on line 1. Freaks on line 2! Freaks! Everywhere!"
 1. test the `/roz` route by going to `http://localhost:3000/roz`
 1. create a GET route for `/martin`
     - it should send a response of "You may think it's tough being middle-aged, but think about me.  I got a son who's middle-aged."

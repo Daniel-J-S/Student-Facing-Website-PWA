@@ -64,7 +64,7 @@ type: "lecture"
 ## Move our data into a separate file
 
 1. Create a directory called models inside our app directory
-1. Inside /models, create your data file (fruits.js)
+1. Inside `/models`, create your data file (fruits.js)
 1. Put your fruits variable in there
 
     ```javascript
@@ -91,15 +91,15 @@ type: "lecture"
 <br>
 
 
-1. We now require that file in the original server.js
+1. We now require that file in the original `server.js`
 
     ```javascript
     const fruits = require('./models/fruits.js'); //NOTE: it must start with ./ if it's just a file, not an NPM package
     ```
 
-1. But, we could have multiple variables in our /models/fruits.js file.
-    - How does javascript know which variable in /models/fruits.js to assign to the fruits const in server.js (the result of the `require()` statment)?
-    - We must tell javascript which variable we want to be the result of the `require()` statement in server.js
+1. But, we could have multiple variables in our `/models/fruits.js` file.
+    - How does javascript know which variable in `/models/fruits.js` to assign to the fruits const in `server.js` (the result of the `require()` statment)?
+    - We must tell javascript which variable we want to be the result of the `require()` statement in `server.js`
 
         ```javascript
         //at the bottom of /models/fruits.js
@@ -119,7 +119,7 @@ Now we want to move our View code (HTML) into a separate file just like we did w
     - the HTML will change based on the data!
     - `npm install ejs`
 1. Create a views directory inside our app directory
-1. Inside /views, create a file called show.ejs
+1. Inside `/views`, create a file called show.ejs
     - this will be the html for our show route
 1. Put some html into show.ejs
 
@@ -128,7 +128,7 @@ Now we want to move our View code (HTML) into a separate file just like we did w
     <html>
         <head>
             <meta charset="utf-8">
-            <title></title>
+            <title>Fruits App</title>
         </head>
         <body>
             <h1>Fruits show page</h1>
@@ -137,7 +137,7 @@ Now we want to move our View code (HTML) into a separate file just like we did w
     ```
 
 1. Now, instead of `res.send('some text')`, we can call `res.render('show.ejs')`
-    - express will know to look inside the /views directory
+    - express will know to look inside the `/views` directory
     - it will send the html in the show.ejs file as a response
 
         ```javascript
@@ -165,7 +165,7 @@ Now lets mix our data into our HTML
     <html>
         <head>
             <meta charset="utf-8">
-            <title></title>
+            <title>Fruits App</title>
         </head>
         <body>
             <h1>Fruits show page</h1>
@@ -190,7 +190,7 @@ Now lets mix our data into our HTML
 
 ## Update Index Route:
 
-Update the index route in server.js:
+Update the index route in `server.js`:
 
 ```javascript
 app.get('/fruits/', (request, response) => {
@@ -203,14 +203,14 @@ app.get('/fruits/', (request, response) => {
 });
 ```
 
-Create an index.ejs file:
+Create an `index.ejs` file:
 
 ```html
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Fruits App</title>
     </head>
     <body>
         <h1>Fruits index page</h1>
@@ -225,7 +225,7 @@ Create an index.ejs file:
 </html>
 ```
 
-Add a link back to the index route in show.ejs:
+Add a link back to the index route in `show.ejs`:
 
 ```html
 <a href="/fruits">Back to Index</a>

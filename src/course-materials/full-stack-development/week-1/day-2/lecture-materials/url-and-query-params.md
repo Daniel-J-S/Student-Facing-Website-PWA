@@ -22,7 +22,7 @@ type: "lecture"
 1. Multiple Params
 1. Request Object
 1. URL Queries
-1. Extra: Environment Variables
+1. Environment Variables
 
 <br>
 <br>

@@ -8,581 +8,377 @@ type: "lecture"
 
 # Intro to Express 
 
+<br>
+<br>
+<br>
+
+## Lesson Objectives
+
+1. Describe what is a 'back end'
+1. Install Node packages
+1. Set up a basic Express server
+1. Set up a basic GET route
+1. Use nodemon to restart your sever when your code changes
+1. Save a record of what packages your application uses
 
 
 <br>
 <br>
 <br>
-<br>
 
 
+## Describe what is a back end
 
+So far, you've been working on the `front end`, you've been building things with HTML, CSS and JavaScript that appear in a browser.
 
-### Learning Objectives
+Now we'll start learning about the back end and how that is tied to the front end.
 
+A backend typically consists of a server (takes client requests and sends responses), an application (the logic of what to do with the request - get flight information/get directions to somewhere/ etc.) and a database (store, retrieve, update information/data etc.)
 
-- Students Will Be Able To:
-	- List the Fundamental Capabilities of Web Frameworks
-	- Create a Basic Express Web App
-	- Define Basic Routes
-	- Respond to HTTP Requests
-	- Render Dynamic Views Using EJS
+Let's take a moment to think about `Amazon`, Amazon has 300 million products and counting. Each item has its own web page.
 
+Amazon does not have thousands of web developers carefully handcrafting each web page for each item by hand and updating them as needed. Rather, the pages are built dynamically. The developers build an HTML template and then work with the data of the products to create individualized web pages based on the data. Things like price, images of the item, description of the item etc. are stored in a database, this data is retrieved and interpolated with the HTML. This requires the use of a server and a database.
 
-<br>
-<br>
-
-
-
-#### Roadmap
-
-- Setup
-- The Three Fundamental Capabilities of Web Frameworks 
-- Intro to Express
-- Express "Hello World"
-- Basic Structure of an Express App
-- Our First Route
-- The Route's Callback Function
-- Practice - Define Another Route
-- Ways to Respond to a Request
-- Rendering Views
-- Dynamic Templating using EJS
-- Redirecting
-
+In this unit, we'll be building our own web applications with Node.js/Express  that will allow the computer to respond to other computers' requests. At first our responses will be simple text. But we'll build up to sending HTML, then sending dynamic HTML that works with data, and finally building our apps to interact with a database.
 
 
 <br>
 <br>
+<br>
 
 
+## Install Node packages
 
-#### Setup
+- Node.js is an application that lets us run JavaScript outside of the browser and in the terminal. We'll use node.js to build simple servers that will respond to browser requests.
 
-- Create a folder called `express-practice` and then change into it
+- Built into Node.js is something called npm, which stands for `Node Package Manager`, which will manage Node Packages
 
-```shell
-$ mkdir express-practice
-$ cd express-practice
+- Node packages are libraries (or frameworks - see below) of code that provide useful functionality. Much like jQuery for the browser, node packages help us write sophisticated programs with a lot of useful functionality right out of the box. These packages are published at [www.npmjs.com](https://www.npmjs.com/)
+
+
+These chunks of code fall into one of two categories
+
+- Libraries
+    - A collection of functions, objects, and even other libraries that you call
+    - It has no idea what you're going to build
+- Frameworks
+    - Is essentially just a library
+    - Is also a pre-conceived skeleton for an application
+    - It knows what you're going to build and is somewhat opinionated about how you should do it
+
+We'll be working with one package throughout this unit called `express` - which calls itself a framework AND unopinionated  `¯\_(ツ)_/¯`
+
+[express](https://www.npmjs.com/package/express) is a `Fast, unopinionated, minimalist web framework for node`.
+
+At first, we'll be running our express server in terminal and we'll interact with it in our browser. Our browser will send requests to our express app, and our express app will send responses back to our own browser.
+
+<br>
+<br>
+<br>
+
+
+## Activity - Download our First npm Package
+
+- `mkdir first-server`
+- `cd first-server`
+
+
+First we have to initialize our directory with a `package.json` file. 
+
+We can create it interactively by typing `npm init` in terminal.
+
+We'll get a few prompts asking us what the name of our project is, the version, what our main file is etc. To keep the default, you can just press enter. To update it you can do it with the prompts OR you can manually edit the `package.json` file that will be created.
+
+Here is a very minimal `package.json` - it's just a text file with an object in it.
+
+```json
+{
+  "name": "first-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
 ```
 
-- Create a file inside this folder called `server.js`
+It's totally ok to edit this file - for example, if I forgot to put myself as the author I could add it as a string. If I didn't like my project name, I could update it too. **GOTCHA** be careful to keep this as a proper object and keep track of your strings or else you will get errors and your code will not run.
 
-```shell
-$ touch server.js
-```
-	
-- Then create a `package.json` and accept the defaults using this command:
 
-```shell
-$ npm init -y
+To install (download) a package, first you must know its name (each name is unique in npm).  Then run:
+
+```bash
+npm i package-name
 ```
 
-- Open the project's folder in VS Code.
+**Note**: `npm i` - is new as of version 5.0.0, older versions of npm require you to type `npm install` instead. You can type `npm install` with version 5.0.0 (and up) with no errors.
 
-<br>
-<br>
+Additionally, in the old version it was required to type `--save` in order to update the `package.json`, with version 5.0.0 `npm i` automatically updates the `package.json`. If you type `npm i express --save` with the new version, it won't error or do anything different. If you are running 4.x.x or below, if you forget to type `--save` it won't update the `package.json`
 
-#### The Three Fundamental Capabilities of Web Application Frameworks 
+As you explore different npm packages and read documentation you may see one syntax or the other.
 
+Let's install the library `express`:
 
-- Web Application Frameworks have three capabilities fundamental to writing a back-end web application:
-	1. The ability to define routes
-	2. The ability to process HTTP requests using middleware
-	3. The ability to use a view engine to render dynamic templates
-
-- Over the next few lessons, you will learn about how the Express framework implements these three fundamental capabilities.
-
-
-<br>
-<br>
-<br>
-
-
-#### Express Framework - Intro
-
-
-- [Express](https://expressjs.com/) is the most popular web framework for Node.js.
-
-- It is minimalistic and lightweight, especially when compared to massive frameworks like Django and Rails.
-
-- Express uses Node's built-in HTTP module to listen for, and respond to, HTTP requests - Express simply adds those three web application capabilities on top of Node
-
-<br>
-<br>
-
-#### Install the Express Module
-
-
-- Let's use `npm` to install the Express module in this project:
-
-	```shell
-	$ npm i express
-	```
-	Note that `i` is a shortcut for `install`
-
-
-<br>
-<br>
-
-#### Express - Hello World!
-
-- Let's write the obligatory "Hello World!" application:
-
-	```javascript
-	// Load express
-	const express = require('express');
-	
-	// Create our express app
-	const app = express();
-	
-	// Define a "root" route directly on app
-	// Tomorrow, we'll use best practice routing
-	app.get('/', function (req, res) {
-	  res.send('<h1>Hello World!</h1>');
-	});
-	
-	// Tell the app to listen on port 3000
-	// for HTTP requests from clients
-	app.listen(3000, function () {
-	  console.log('Listening on port 3000');
-	});
-	```
-
-<br>
-<br>
-
-- Run the app:
-
-	```shell
-	$ node server
-	```
-	
-- Browsing to `localhost:3000` will hit our app's root route that we defined and return "Hello World!".
-
-
-
-- Using DevTools, we will find that despite just sending back the text of `<h1>Hello World!</h1>`, the browser "built" a minimal HTML document to display it in.
-
-- The `send` method is a general purpose way to respond to the request, however, soon we'll be using more specific methods.
-
-<br>
-<br>
-
-#### Basic Structure of Express App
-
-- Here is a helpful outline of what a typical Express app does - let's put this guide right in our `server.js`:
-
-```javascript
-// Require modules
-const express = require('express');
-
-// Create the Express app
-const app = express();
-
-// Configure the app (app.set)
-
-
-// Mount middleware (app.use)
-
-
-// Mount routes
-app.get('/', function(req, res) {
-  	res.send('<h1>Hello World!</h1>');
-});
-
-// Tell the app to listen on port 3000
-app.listen(3000, function() {
- console.log('Listening on port 3000');
-});
+```bash
+npm i express
 ```
-
-<br>
 <br>
 
-#### Our First Route
-
-
-- Let's replace the content we just sent from our route with something else.
-
-	```javascript
-	// Mount routes
-	app.get('/', function(req, res) {
-	  res.send('<h1>Hello Express</h1>');
-	});
-	```
-
-- Refreshing the page will reveal that it didn't work!  This is because we have to restart the server, or...
-
-
-<br>
-<br>
-
-#### Nodemon
-
-- `nodemon` is a popular development tool used for automatically restarting our Express app when we save changes.
-
-- If you are unsure if you've already installed it, you can make sure you have it or at least ensure you have the latest version by running:
-
-	```shell
-	$ npm i -g nodemon
-	``` 
-	Command line tools are installed using the `-g` (global) option
-
-- Now, thanks to the `main` key in `package.json`, we can start the server by simply typing `nodemon`.
-
-- Let's move on to routing...
-
-<br>
-<br>
-
-#### Our First Route (Cont)
-
-
-- Like most web frameworks, Express uses the `HTTP Method` and the `Path` of the HTTP request to match a route defined in the application.
-	
-- In our first route, we defined a route using the `get` method on the Express `app` object. 
-
-- The `get` method defines a route that listens for a `GET` request. There are other methods such as `post`, `put` and `delete`, that map to the other HTTP verbs.
-
-
-- The first argument provided to `app.get`, `/`, defines the path for the route. In this case the root of the application, i.e., just the host name like `localhost:3000`.
-
-- In Express, all strings used to define a path should start with a forward-slash character (`/`).
-
-- In tomorrow's Express lesson, we'll learn a preferred way of defining routes using the Express `Router` object, but you need to be aware of defining routes this way as well.
-
-
-<br>
-<br>
-
-#### The Route's Callback
-
-
-- The second argument provided to `app.get()` is a callback function:
-
-	```javascript
-	app.get('/', function(req, res) {
-	  res.send('<h1>Hello Express</h1>');
-	});
-	```
-
-- Express will execute route's callback function only when a matching HTTP request (HTTP Method + Path) is received.
-
-
-- The route's callback function:
-
-	```javascript
-	app.get('/', function(req, res) {
-	  res.send('<h1>Hello Express</h1>');
-	});
-	```
-	defines two parameters: `req` & `res`
-
-- `req`: Represents Express's [request object](https://expressjs.com/en/4x/api.html#req), and
-
-- `res`: Represents Express's [response object](https://expressjs.com/en/4x/api.html#res)
-
-- Express provides those two objects as arguments when it invokes the callback.
-
-
-
-- The `request` object has properties and methods used to access information regarding the current HTTP request, including any data being sent from the browser.
-
-- The `response` object contains properties and methods used to end the request/response cycle - like we've done so far using the  `res.send` method.
-
-<br>
-<br>
-
-#### Practice - Define Another Route (3 mins)
-
-
-- Define another route that matches a `get` request to a path of `/home` that sends a text response of `<h1>Home Page</h1>`.
-
-- Test it by browsing to `localhost:3000/home`.
-
-<br>
-<br>
-
-#### Review Question - Routing
-
-
-- **Is it okay to define more than one route on the same path? <br>For example:**
-
-```javascript
-app.get('/cars', function(req, res) {
-  res.send("Here's a list of my cars...");
-});
-	
-app.post('/cars', function(req, res) {
-  res.send('Thanks for the new car!');
-});
-```
-
-<br>
-<br>
-
-#### Ways to Respond to a Request
-
-
-- So far we have responded in our route handler (callback) code by using the `res.send` method.
-
-- The [Express docs for the Response object](https://expressjs.com/en/4x/api.html#res) explains the other ways to respond to the HTTP request.
-
-- Here are the methods we'll use the most:
-  - `res.render()` - Render a view template and send the resulting HTML to the browser.
-  - `res.redirect()` -	Tell the browser to issue another `GET` request.
-  - `res.json()` - Send a JSON response (used when we communicate via AJAX).
-
-<br>
-<br>
-
-#### Rendering Views
-
-- Another of the three fundamental capabilities of a web framework is to be able to use a view engine to render templates.
-
-- A template can include a mixture of static HTML and "code" that generates HTML dynamically.
-
-- For example, code in a template could generate a series of `<li>` elements for data provided to it in an array.
-
-
-- In Express, we use `res.render` to process a template using a _view engine_ and return the resulting HTML to the browser.
-
-- Express can work with a multitude of _view engines_.
-
-- [`Pug`](https://pugjs.org/api/getting-started.html) (formerly `Jade`) is a template language that leverages indentation to create HTML with a "shorthand" syntax.
-
-- However, [`EJS`](https://www.npmjs.com/package/ejs) (Embedded JavaScript) templates are one of the most popular!
-
-
-- Let's use EJS to render a `home` view for the existing `GET /home` route.
-
-- Express applications are usually architected using the MVC design pattern, so we will put all view templates inside of a `views` folder:
-
-	```shell
-	$ mkdir views
-	$ touch views/home.ejs
-	```
-
-- `ejs` is the file extension for the EJS view engine.
-
-
-- Open `home.ejs` then type `!` and press tab to generate the HTML boilerplate:
-
-	```html
-	<!DOCTYPE html>
-	<html lang="en">
-	<head>
-	    <meta charset="UTF-8">
-	    <meta name="viewport" 
-	    	content="width=device-width, initial-scale=1.0">
-	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	    <title>First Express</title>
-	</head>
-	<body>
-	    
-	</body>
-	</html>
-	```
-
-
-- For now, we will need to include the HTML boilerplate inside of every view.
-
-- EJS includes the ability to make our views more DRY by using _partial views_.
-
-- We will cover partial views later, however, if you want to check them out before then, check out the `include` function [here](https://www.npmjs.com/package/ejs#includes). 
-
-
-
-- Let's add an `<h1>` inside the `<body>` so that we see something :)
-
-```html
-<body>
-  <h1>Home Page</h1>
-</body>
-```
-
-
-- Okay, now let's refactor the `GET /home` route's callback to render our new `home.ejs` template:
-
-```javascript
-app.get('/home', function(req, res) {
-  res.render('home');
-});
-```
-
-- Just the file name, not the `ejs` extension.
-
-- Browse to `localhost:3000/home` and - it doesn't work...
-
-- We're going to get a little practice reading Express errors in this lesson.
-
-- The Express error _Error: No default engine was specified..._, makes it clear that we need to specify a view engine.
-
-- This is our first opportunity to configure our app:
-
-```javascript
-// Configure the app (app.set)
-app.set('view engine', 'ejs');
-```
-> Keep in mind, when we configure our server like this, our `ejs` view engine assumes all of our views ... i.e. (files with the `.ejs` extension, in this case), will be placed in a directory named `views` at the root of our directory.
-
-- The `app.set` method is used to configure an Express app's settings...
-
-- Refresh and let's see what the next error is...
-
-
-- _Error: Cannot find module 'ejs'_ - this error is telling us that we need to install the EJS view engine package:
-
-```shell
-$ npm i ejs
-```
-
-- We don't need to `require` the view engine - Express knows how to find it.
-
-- Refresh the page - success!
-
-<br>
-<br>
-
-#### Dynamic Templating Using EJS
-
-
-- Again, view engines are used to dynamically generate HTML on the server before sending it to the client.
-
-- We just used the `render` method, passing in the view name as an argument.
-
-- We can also pass in a JavaScript **object** as a second argument, and all of its properties will be accessible in the view within `ejs` tags!
-
-
-- Let's say we want to render a list of To Dos.
-
-- Normally, the To Dos would be coming from a database, however, we'll "fake" a DB by putting the To Dos in a module and export a method to return them.
-
-- Do this to set up the module:
-
-```shell
-$ mkdir data
-$ touch data/todo-db.js
-```
-	
-- Next up, put code in the module...
-
-
-- In the spirit of saving time, copy/paste the following inside of `todo-db.js`, then we'll review the code:
-
-```javascript
-module.exports = {
-  getAll
-};
-
-const todos = [
-  {text: 'Feed Dogs', done: true},
-  {text: 'Learn Express', done: false},
-  {text: 'Buy Milk', done: false}
-];
-	
-
-function getAll() {
-	return todos;
+We can see that we've successfully added because or `package.json` file will have updated (under dependencies)
+
+```json
+{
+  "name": "first-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
 ```
 
 
-- To access our To Do "database", we need to `require` it inside of **server.js**:
+Additionally, we see that we now have a directory called `node_modules` and a file called `package-lock.json`
+
+We're not going to edit our `package-lock.json` file, it's just a helper file for npm that helps npm do some under the hood stuff.
+
+Inside `node_modules` is all the code that was downloaded so we could use `express`, the code is tucked into folders that are managed by npm. Like jQuery, we don't ever have to look at the source code or modify it in any way, it can just sit there and we'll bring in the code and use it in our own files.  
+
+<br>
+<br>
+<br>
+
+
+## Set up a basic Express server
+
+In the root of our project, `touch server.js`
+
+
+Now that the library has been installed (downloaded), we can use it in our code, by using the `require()` function
 
 ```javascript
-	
-// require the todo "database"
-const todoDb = require('./data/todo-db');
+const express = require('express');
 ```
+<br>
 
-- Now let's add another route responsible for displaying the list of To Do's...
+- For proof of conecept that we've pulled in the code from the express module, let's `console.log(express)`
 
+- run our code by typing `node server.js` in terminal
 
-- Add this new route:
+- We can see it's a giant object with a ton of properties and functions. We can learn how to use this functionality by checking out the docs.
+
+[express on npm](https://www.npmjs.com/package/express)
+
+[Full express documentation](http://expressjs.com/en/api.html)
+
+Looking at express on npm we see how to build the most bare bones simple server
+
+![express server on npm](https://i.imgur.com/u3Dfkql.png)
+
+It looks like we have a good start, but have to write a little more code. And we'll continue to write our code with the newer `ES6` syntax (`const` instead of `var` and arrow functions)
+
+Add:
 
 ```javascript
-app.get('/todos', function(req, res) {
-  res.render('todos/index', {
-   todos: todoDb.getAll()
-  });
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
 });
+
+app.listen(3000);
 ```
-	
-- Again, to pass data to a view, we pass an object as a second argument to `render`.
-
-- We should now be able to access a `todos` variable in the `todos/index` view...
-
-
-- It's a best practice to group views related to a data resource (in this case **To Dos**) in their own folder.
-
-- We also commonly use `index` as a name for views, etc. used for **all** of something - in this case, displaying all To Dos.
-
-- Therefore, we need an `index.ejs` view inside of a `views/todos` folder:
-
-```shell
-$ mkdir views/todos
-$ touch views/todos/index.ejs
-```
-
-
-- Now let's code the `todos/index.ejs` view. Start by copying over the HTML from `home.ejs` and fix it up to look like this:
-
-	```html
-	<body>
-	  <h1>Todos</h1>
-	  <ul>
-	    <% todos.forEach(function(todo) { %>
-	      <li>
-	        <%= todo.text %>
-	          - 
-	        <%= todo.done ? 'done' : 'not done' %>
-	      </li>
-	    <% }); %>
-	  </ul>
-	</body>
-	```
-
-
-- That my friends is embedded JavaScript between those `<% %>` and `<%= %>` tags and I believe you are going to love their simplicity!
-
-- The `<% %>` EJS tags are for executing JavaScript such as control flow.
-
-- The `<%= %>` EJS tags are for writing JS expressions into the HTML page.
-
-- Refresh and browse to `localhost:3000/todos` - yeah!
-
-<br>
 <br>
 
-#### Redirecting
+- Start the app by executing `node server.js` in the command line. It'll now run continuously because of the functionality of the `app.listen`
+
+- Therefore, it will start and then you won't get your bash prompt back, it'll just hang
+
+**Note**: If you want to quit your server, you have to use `control c`
 
 
-- One last trick for the day...
+1. Visit `http://localhost:3000/` in your browser.  You should see your 'Hello world' text. You've successfully created a basic web server!  This will serve dynamic pages to web browsers.
 
-- Currently, if we browse to the root route, we see"Hello Express", however...
+So let's look a little deeper at our code
 
-- We can use the `res.redirect` method to redirect to `GET /home` so that we will see the Home page upon browsing to the app... 
+`const app = express();`
+this creates a shorthand for calling the express function. Less typing!
 
+`app.listen(3000);` this says 'express listen to the port 3000' , by default it will be listening to localhost (your own computer)- it will be listening and waiting for any requests coming to `localhost:3000` from the browser (or [127.0.0.1](https://www.trendhunter.com/trends/127-0-0-1-doormat) )
 
-- Refactor the root route as follows:
+We can see `app.listen` fire by using a callback
 
 ```javascript
-app.get('/', function(req, res) {
- res.redirect('/home');
+app.listen(3000, () => {
+  console.log('Express is listening for requests from the browser');
 });
 ```
 
-- Redirects tell the browser to make a new `GET` request to the provided `path`.
+Only you on your computer can access your `localhost`, later we'll learn how to update the settings so your server can live on the web and other computers can send requests.
 
-- Later, when we  start creating, updating, or deleting data, we will always perform a `redirect`.
+Finally, we have to unpack this very dense bit of code:
+
+```javascript
+app.get('/', (req, res) => {
+  console.log('Oh hey! I got a request. Let me respond with something');
+  res.send('Hello World!');
+});
+```
+
+These 3 lines of code are doing a lot!
+
+First, we're calling express, and we're setting a 'GET' route of '/', that means if a user goes to `localhost:3000/` this is the method that will get triggered.
+
+Then we pass a call back function with two parameters, by convention, they are `req` (for request) and `res` (for response)
+
+Inside our callback we can write whatever code we want.
+
+In this case we are using a method on the response object (`res.send()`) - that is saying 'send this plain text as the response'
+
+
+We can build as many routes as we like and customize them to do whatever we want.
+
+
+![](https://i.imgur.com/eIN0lrM.png)
+
+**Final code**:
+
+
+```javascript
+// Require our dependencies
+const express = require('express');
+const app = express();
+
+
+// Define some routes and responses to those routes
+app.get('/', (req, res) => {
+  console.log('Oh hey! I got a request. Let me respond with something');
+  res.send('Hello World!');
+});
+
+
+// Tell Express to listen for request from the browser (client)
+app.listen(3000, () => {
+  console.log('Express is listening for requests from the browser');
+});
+```
+
+**On semi-colons**: The debate of using semi-colons everywhere is being hotly debated. The place you will end up working will likely have strong opinions. 
+
+**Recommendation:** choose a style for a project and be consistent.
 
 <br>
 <br>
+<br>
 
-#### Essential Questions
 
-**❓ When we define routes in a web app, we are mapping HTTP requests to ________.**
+## Set up another basic GET route
 
-**❓ What method do we call to render a view and on what object does that method exist?**
+Now we'll create our own basic GET route so that visitors to (clients of) our web-server can retrieve some information from it.
 
+We can also pass a callback to our `app.listen` which is handy to use to send a `console.log` message to terminal to let us know if our sever is up and running
+
+Let's add a get route, so when a user goes to `localhost:3000/somedata`, they'll get a text response of `here is your information`
+
+```javascript
+// Require our dependencies
+const express = require('express');
+const app = express();
+
+
+// Define some routes and responses to those routes
+app.get('/', (req, res) => {
+  console.log('Oh hey! I got a request. Let me respond with something');
+  res.send('Hello World!');
+});
+
+// Here's our new route definition!
+app.get('/somedata', (request, response) => {
+  response.send('here is your information');
+});
+
+
+// Tell Express to listen for request from the browser (client)
+app.listen(3000, () => {
+  console.log('Express is listening for requests from the browser');
+});
+```
+
+- The function passed as a second parameter to `app.get()` is executed each time a user (client) goes to `http://localhost:3000/somedata`
+- The function (callback) takes two parameters
+    - `request`
+        - object containing information about the request made (browser, ip, query params, etc)
+    - `response`
+        - object containing methods for sending information back to the user (client)
+
+- We can see the response in the browser
+
+<br>
+<br>
+<br>
+
+
+## Shut down your server
+
+You can't run two servers on the same port and you can get annoying errors if you don't shut your servers down properly. 
+
+Get in the habit of `control c` to shut your server down when you are done working.
+
+
+<br>
+<br>
+<br>
+
+
+## Use nodemon to restart your sever when your code changes
+
+An NPM package called `nodemon` allows us to run code just like `node`, but it will restart the application whenever code in the application's directory is changed. This is really handy and gives us a better workflow.
+
+1. Install it `npm install nodemon -g`
+    - the `-g` tells npm to make the package available for use in the terminal in any directory (globally). You might not be able to install node packages globally by default. You may have to run `sudo npm i nodemon -g` and enter your computer's username and password
+1. Now we can call `nodemon server.js`, and the server will restart whenever the app's code changes
+
+1. If you want to get really fancy, you can go to your `package.json` file and change the value of `main` from `index.js` to `server.js` - now you can just type `nodemon` in terminal and it will 'know' you mean to run `server.js`
+
+When you start a new project and do `npm init` and go through the prompts, you can set this right away.
+
+<br>
+<br>
+<br>
+
+## References 
+
+- [ExpressJS](https://expressjs.com/)
+- [NodeJS](https://nodejs.org/en/about/)
+
+<!-- 
+
+## package.json and node_modules revisited
+
+When we downloaded express it installed a lot of code (inside `node_modules`) - we don't need to track these files and upload/download them to and from github. All the info needed is in the `package.json`
+
+To avoid tracking/uploading/downloading files that don't need to be tracked or shouldn't be tracked (passwords, secrets) you can create a file called `.gitignore`
+
+It will ignore whatever files and folders you tell it. Our class repository already has a `.gitignore`, but when you start your own projects, you'll want to be sure to create one.
+
+Let's give it a whirl:
+
+
+1. Create a file called `.gitignore`
+1. In it, add the line `node_modules`
+1. You can check to see if it works by going to `github` if you see your `node_modules` folders there, you have not properly ignored your `node_modules`
+1. note, our class repo already has a `.gitignore`, so you really should never see `node_modules` there
+1. At first, it won't matter if you ignore  your node modules. But once you go to host your server on the web, having these tracked can cause weird errors and make your server break. We'll talk about this more later. 
+
+-->

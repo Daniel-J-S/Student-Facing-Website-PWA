@@ -4,24 +4,24 @@ title: "Day 4"
 week: 1
 day: 4
 type: "homepage"
-topics: "Intro to Express Routers and Controllers (Cont)"
+topics: "New & Create Routes with Express"
 ---
 
 
 # Week 1 - Day 4
 
-#### Express Routers and Controllers (Cont)
-- [**Lecture:** Intro to Express Routers and Controllers](/full-stack-development/week-1/day-4/lecture-materials/intro-to-express-routers-and-controllers/)
-- [**Lab:** Express Dev Skills Part 1 of 2](/full-stack-development/week-1/day-4/labs/express-dev-skills-part-1/) - **Parts 1 and 2 Are Deliverable**
+#### New & Create Routes with Express
+- [**Lecture:** New & Create with Express](/full-stack-development/week-1/day-4/lecture-materials/new-and-create-routes-with-express/)
+- [**Lab:** Biscoff Bakery](/full-stack-development/week-1/day-4/labs/biscoff-bakery/) - **Non-Deliverable**
+- [**Lecture:** cURL](/full-stack-development/week-1/day-4/lecture-materials/curl/)
+- [**Lab:** cURL Lab](/full-stack-development/week-1/day-4/labs/curl-lab/) - **Deliverable**
+- [**Lab:** Budgtr](/full-stack-development/week-1/day-4/labs/budgtr/) - **Non-Deliverable**
 
-
+<!-- 
 <hr>
-
-
 
 #### Lesson Recordings
 
-- [**Finish Intro to Express & Begin Routers and Controllers Lesson**](https://generalassembly.zoom.us/rec/share/lsdvkRq6iu5lZMFDCUtQrKLsP8LxdDu7U2WP4I7GXKVLzuQanQESkxHsA4_tS5ml.zY9vr7_YTsV9b3jI?startTime=1615385027000) 
-- [**Finish Routers and Controllers Lesson**](https://generalassembly.zoom.us/rec/share/39y8N-EMOPeYT4zmcnwI2GyipSIJwIOhZe9XSP2Gn3PW6BOcreg82hl7WEZE_8ft.j-WSk4PvhQ2OyB8N?startTime=1615471362000) 
-- [**Intro to Express Lab Walkthrough**](https://generalassembly.zoom.us/rec/share/lsdvkRq6iu5lZMFDCUtQrKLsP8LxdDu7U2WP4I7GXKVLzuQanQESkxHsA4_tS5ml.zY9vr7_YTsV9b3jI?startTime=1615401711000) 
-
+- [**New & Create With Express**]() 
+- [**cURL**]() 
+ -->
