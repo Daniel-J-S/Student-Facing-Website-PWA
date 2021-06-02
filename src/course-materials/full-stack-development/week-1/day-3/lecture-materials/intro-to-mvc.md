@@ -63,8 +63,8 @@ type: "lecture"
 
 ## Move our data into a separate file
 
-1. Create a directory called models inside our app directory
-1. Inside `/models`, create your data file (fruits.js)
+1. Create a directory called `models` inside our app directory
+1. Inside `/models`, create a data file named fruits.js
 1. Put your fruits variable in there
 
     ```javascript
