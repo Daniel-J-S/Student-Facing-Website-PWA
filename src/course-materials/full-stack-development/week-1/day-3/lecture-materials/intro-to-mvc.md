@@ -141,7 +141,7 @@ Now we want to move our View code (HTML) into a separate file just like we did w
     - it will send the html in the show.ejs file as a response
 
         ```javascript
-        app.get('/fruits/:indexOfFruitsArray', function(req, res){
+        app.get('/fruits/:indexOfFruitsArray', (req, res) => {
             res.render('show.ejs');
         });        
         ```
@@ -151,7 +151,7 @@ Now lets mix our data into our HTML
 1. Our route is acting like the controller now.  Let's gather the data and pass it to the view
 
     ```javascript
-    app.get('/fruits/:indexOfFruitsArray', function(req, res){
+    app.get('/fruits/:indexOfFruitsArray', (req, res) => {
         res.render('show.ejs', { //second param must be an object
             fruit: fruits[req.params.indexOfFruitsArray] //there will be a variable available inside the ejs file called fruit, its value is fruits[req.params.indexOfFruitsArray]
         });
