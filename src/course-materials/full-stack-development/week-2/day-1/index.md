@@ -17,12 +17,3 @@ topics: "Intro to MongoDB & Mongoose"
 - [**Lab:** Heroku Deployment](/full-stack-development/week-2/day-1/labs/heroku-deployment) - **Deliverable**
 - [**Activity:** Review Project 2](/unit-projects/unit-two-project-requirements)
 
-
-<!-- 
-<hr>
-
-#### Lesson Recordings
-
-- [**Intro to MongoDB**]()
-- [**Intro to Mongoose**]() 
--->

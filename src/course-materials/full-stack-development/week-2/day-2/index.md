@@ -4,24 +4,17 @@ title: "Day 2"
 week: 2
 day: 2
 type: "homepage"
-topics: "Mongoose Embedded Relationships"
+topics: "CRUD with Mongoose"
 ---
 
 # Week 2 - Day 2
 
-#### Mongoose Embedded Relationships
+#### CRUD with Mongoose - Create & Read
 
-- [**Lecture:** Intro to Mongoose Embedded Relationships](/full-stack-development/week-2/day-2/lecture-materials/intro-to-mongoose-embedded-relationships)
-- [**Optional Lab:** Mongoose Flights Part 2 of 3](/full-stack-development/week-2/day-2/labs/mongoose-flights-part-2) - **Only Part 1 is a Deliverable**
-
-
-<hr>
-
-
-#### Lesson Recordings
-
-- [**Intro to Mongoose Embedded Relationships**](https://generalassembly.zoom.us/rec/share/5qsiSSPpYea3CpFFlBdQI8p5bKSronS-mjhMXthdFVQ9vg_k4OKYHytjhkMtOFsA.mqfYsDmEHh-UGxLd?startTime=1615900027000)
-- [**Project 2 Requirements**](https://generalassembly.zoom.us/rec/share/5qsiSSPpYea3CpFFlBdQI8p5bKSronS-mjhMXthdFVQ9vg_k4OKYHytjhkMtOFsA.mqfYsDmEHh-UGxLd?startTime=1615924924000)
+- [**Lecture:** CRUD App with Mongoose - Create & Read](/full-stack-development/week-2/day-2/lecture-materials/crud-app-with-mongoose)
+- [**Resource Guide:** Creating a Seed Route](/full-stack-development/week-2/day-2/lecture-materials/creating-a-seed-route)
+- [**Lab:** The Captain's Log - Create & Read](/full-stack-development/week-2/day-2/labs/the-captains-log) - **Non-Deliverable**
+- [**Lab:** Mongoose Store](/full-stack-development/week-2/day-2/labs/mongoose-store) - **Deliverable**
 
 
 
