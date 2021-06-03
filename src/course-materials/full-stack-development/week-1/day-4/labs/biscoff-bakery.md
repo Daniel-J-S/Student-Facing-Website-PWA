@@ -42,7 +42,7 @@ A new bakery specializing in Biscoff-inspired sweets is opening up soon and has 
 
 You can find the starter code for this morning's lab as a downloadable asset! 
 
-<strong><a href="../biscoff-starter.zip" download>Click here</a></strong> to download it! -- You'll perform your work in that folder after you "unzip" it!
+<strong><a href="/downloads/backend_fundamentals/biscoff-starter.zip" download>Click here</a></strong> to download it! -- You'll perform your work in that folder after you "unzip" it!
 
 
 <br>
