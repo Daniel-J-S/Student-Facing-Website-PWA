@@ -1,6 +1,6 @@
 ---
 track: "Full-Stack Development"
-title: "The Captain's Log - Create & Read"
+title: "The Captain's Log - Full CRUD Project"
 week: 2
 day: 2
 type: "lab"
@@ -8,7 +8,7 @@ type: "lab"
 
 
 
-# The Captain's Log - Create & Read
+# The Captain's Log - Full CRUD Project
 
 ![Insert Pun Image here](https://i.imgflip.com/2174sq.jpg)
 

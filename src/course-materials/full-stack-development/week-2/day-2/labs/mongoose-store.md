@@ -1,13 +1,13 @@
 ---
 track: "Full-Stack Development"
-title: "Mongoose Store"
+title: "Mongoose Store - Full CRUD Project"
 week: 2
 day: 2
 type: "lab"
 ---
 
 
-# Mongoose Store
+# Mongoose Store - Full CRUD Project
 
 Make a product inventory manager with full CRUD using Mongoose.
 
@@ -15,14 +15,6 @@ Make a product inventory manager with full CRUD using Mongoose.
 <br>
 <br>
 
-#### Learning Objectives
-
-- Full CRUD app in Express with Mongoose
-
-
-<br>
-<br>
-<br>
 
 
 #### Prerequisites
