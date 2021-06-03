@@ -63,8 +63,8 @@ type: "lecture"
 
 ## Move our data into a separate file
 
-1. Create a directory called models inside our app directory
-1. Inside `/models`, create your data file (fruits.js)
+1. Create a directory called `models` inside our app directory
+1. Inside `/models`, create a data file named fruits.js
 1. Put your fruits variable in there
 
     ```javascript
@@ -141,7 +141,7 @@ Now we want to move our View code (HTML) into a separate file just like we did w
     - it will send the html in the show.ejs file as a response
 
         ```javascript
-        app.get('/fruits/:indexOfFruitsArray', function(req, res){
+        app.get('/fruits/:indexOfFruitsArray', (req, res) => {
             res.render('show.ejs');
         });        
         ```
@@ -151,7 +151,7 @@ Now lets mix our data into our HTML
 1. Our route is acting like the controller now.  Let's gather the data and pass it to the view
 
     ```javascript
-    app.get('/fruits/:indexOfFruitsArray', function(req, res){
+    app.get('/fruits/:indexOfFruitsArray', (req, res) => {
         res.render('show.ejs', { //second param must be an object
             fruit: fruits[req.params.indexOfFruitsArray] //there will be a variable available inside the ejs file called fruit, its value is fruits[req.params.indexOfFruitsArray]
         });
@@ -207,7 +207,7 @@ Create an `index.ejs` file:
 
 ```html
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
     <head>
         <meta charset="utf-8">
         <title>Fruits App</title>

@@ -124,7 +124,7 @@ app.get('/fruits/:indexOfFruitsArray', (req, res) => {
     res.send(fruits[req.params.indexOfFruitsArray]);
 });
 
-app.listen(3000,function(){
+app.listen(3000, () => {
     console.log('listening');
 });
 ```
