@@ -116,7 +116,7 @@ Recommended: skip this bonus and come back to it after you've implemented Part 2
 Implement composite query functionality, to incorporate `&` and date range functionality
 
 For Example
-```sh
+```shell
 node helper.js shape=sphere&date>05/01/2015
 ```
 should give you all sphere sightings after May 2015.
