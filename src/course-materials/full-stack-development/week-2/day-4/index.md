@@ -17,3 +17,4 @@ topics: "Authentication"
 - [**Lecture:** Intro to Authentication With Bcrypt & Sessions](/full-stack-development/week-2/day-4/lecture-materials/authentication-with-bcrypt-and-sessions/)
 - [**Advanced Material Resource:** Intro to Authentication With Oauth](/full-stack-development/week-2/day-4/lecture-materials/authentication-with-oauth/)
 - [**Lab:** The Captain's Log - Full CRUD Project **(Add Auth For Practice)**](/full-stack-development/week-2/day-2/labs/the-captains-log) - **Non-Deliverable**
+- **Activity:** Project 2 Planning
