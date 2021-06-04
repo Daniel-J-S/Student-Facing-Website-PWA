@@ -66,7 +66,7 @@ const articleSchema = new Schema(
 		},
 	},
 	{ timestamps: true }
-)
+);
 ```
 
 <br>
@@ -96,7 +96,7 @@ const articleSchema = new Schema(
 // Dependencies
 const express = require('express');
 const app = express();
-const PORT = 3000
+const PORT = 3000;
 
 // Listener
 app.listen(PORT, () => console.log(`express is listening on port: ${PORT}`));
@@ -118,7 +118,7 @@ Inside `server.js`
 
 ```js
 // Dependencies
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 ```
 
 - Head on over to [mongodb.com](https://www.mongodb.com/cloud/atlas) and make sure you're set up with a database there
@@ -130,15 +130,15 @@ const mongoose = require('mongoose')
 ```js
 // Database configuration
 const DATABASE_URL =
-	'mongodb+srv://sei:<password>@sei-w0kys.azure.mongodb.net/tweeter?retryWrites=true'
-const db = mongoose.connection
+	'mongodb+srv://sei:<password>@sei-w0kys.azure.mongodb.net/tweeter?retryWrites=true';
+const db = mongoose.connection;
 ```
 
 - Connect to MongoDB Atlas
 
 ```js
 // Connect to MongoDB Atlas
-mongoose.connect(DATABASE_URL)
+mongoose.connect(DATABASE_URL);
 ```
 <br>
 <br>
@@ -158,7 +158,7 @@ mongoose.connect(DATABASE_URL, {
 	useUnifiedTopology: true,
 	useFindAndModify: false,
 	useCreateIndex: true,
-})
+});
 ```
 
 <br>
@@ -170,9 +170,9 @@ mongoose.connect(DATABASE_URL, {
 ```js
 // Database Connection Error/Success
 // Define callback functions for various events
-db.on('error', (err) => console.log(err.message + ' is mongod not running?'))
-db.on('connected', () => console.log('mongo connected'))
-db.on('disconnected', () => console.log('mongo disconnected'))
+db.on('error', (err) => console.log(err.message + ' is mongod not running?'));
+db.on('connected', () => console.log('mongo connected'));
+db.on('disconnected', () => console.log('mongo disconnected'));
 ```
 <br>
 <br>
@@ -185,15 +185,15 @@ Again: Don't memorize it, just set a bookmark and refer back to this as you need
 
 ```js
 // Dependencies
-const express = require('express')
-const mongoose = require('mongoose')
-const app = express()
-const PORT = 3000
+const express = require('express');
+const mongoose = require('mongoose');
+const app = express();
+const PORT = 3000;
 
 // Database Configuration
 const DATABASE_URL =
-	'mongodb+srv://sei:<password>@sei-w0kys.azure.mongodb.net/tweeter?retryWrites=true'
-const db = mongoose.connection
+	'mongodb+srv://sei:<password>@sei-w0kys.azure.mongodb.net/tweeter?retryWrites=true';
+const db = mongoose.connection;
 
 // Database Connection
 mongoose.connect(DATABASE_URL, {
@@ -201,15 +201,15 @@ mongoose.connect(DATABASE_URL, {
 	useUnifiedTopology: true,
 	useFindAndModify: false,
 	useCreateIndex: true,
-})
+});
 
 // Database Connection Error/Success - optional but can be really helpful
-db.on('error', (err) => console.log(err.message + ' is Mongod not running?'))
-db.on('connected', () => console.log('mongo connected'))
-db.on('disconnected', () => console.log('mongo disconnected'))
+db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
+db.on('connected', () => console.log('mongo connected'));
+db.on('disconnected', () => console.log('mongo disconnected'));
 
 // App Listener
-app.listen(PORT, () => console.log(`server is listening on port: ${PORT}`))
+app.listen(PORT, () => console.log(`express is listening on port: ${PORT}`));
 ```
 <br>
 <br>
@@ -231,8 +231,8 @@ Boot up your server by running `nodemon` then check your terminal for a success 
 In `models/tweet.js`
 
 ```js
-const mongoose = require('mongoose') // require mongoose
-const Schema = mongoose.Schema // create a shorthand for the mongoose Schema constructor
+const mongoose = require('mongoose'); // require mongoose
+const Schema = mongoose.Schema; // create a shorthand for the mongoose Schema constructor
 
 // create a new Schema
 // This will define the shape of the documents in the collection
@@ -246,17 +246,17 @@ const tweetSchema = new Schema(
 		sponsored: { type: Boolean, default: false },
 	},
 	{ timestamps: true }
-)
+);
 
 // Creating Tweet model : We need to convert our schema into a model-- will be stored in 'tweets' collection.  Mongo does this for you automatically
 // Model's are fancy constructors compiled from Schema definitions
 // An instance of a model is called a document.
 // Models are responsible for creating and reading documents from the underlying MongoDB Database
 // Resource: https://mongoosejs.com/docs/models.html
-const Tweet = mongoose.model('Tweet', tweetSchema)
+const Tweet = mongoose.model('Tweet', tweetSchema);
 
 // Export Tweet model so it can be used in our controllers
-module.exports = Tweet
+module.exports = Tweet;
 ```
 <br>
 <br>
@@ -271,7 +271,7 @@ In `server.js`
 
 ```js
 // Dependencies
-const Tweet = require('./models/tweet.js')
+const Tweet = require('./models/tweet.js');
 ```
 <br>
 <br>
@@ -285,13 +285,13 @@ This should all be done after your database connection and before your app liste
 ```js
 // Middleware
 // Body parser middleware: gives us access to req.body
-app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: false }));
 
 // Routes / Controllers
 // Create
 app.post('/tweets', (req, res) => {
-	res.send(req.body)
-})
+	res.send(req.body);
+});
 ```
 <br>
 <br>
@@ -330,9 +330,9 @@ Now, let's code out the real functionality for our create route
 // Create
 app.post('/tweets', (req, res) => {
 	Tweet.create(req.body, (error, createdTweet) => {
-		res.send(createdTweet)
-	})
-})
+		res.send(createdTweet);
+	});
+});
 ```
 <br>
 <br>
@@ -382,9 +382,9 @@ Remember INDUCES (Index, New, Delete, Update, Create, Edit, Show) to help organi
 // Index
 app.get('/tweets', (req, res) => {
 	Tweet.find({}, (error, foundTweets) => {
-		res.send(foundTweets)
-	})
-})
+		res.send(foundTweets);
+	});
+});
 ```
 
 <br>
@@ -409,9 +409,9 @@ Remember INDUCES!
 // Show
 app.get('/tweets/:id', (req, res) => {
 	Tweet.findById(req.params.id, (error, foundTweet) => {
-		res.send(foundTweet)
-	})
-})
+		res.send(foundTweet);
+	});
+});
 ```
 
 <br>
@@ -444,9 +444,9 @@ Let's create a delete route. Remember INDUCES!
 // Delete
 app.delete('/tweets/:id', (req, res) => {
 	Tweet.findByIdAndDelete(req.params.id, (error, deletedTweet) => {
-		res.send({ success: true })
-	})
-})
+		res.send({ success: true });
+	});
+});
 ```
 
 We could also `res.send(deletedTweet)`. Why might we want to do that? Because this would be our very last chance to use any of the data. Have you ever deleted your email address from a mailing list and they respond with something like "Hey Karolin! We're sorry to see you go. If this was an accident, click here to resubscribe!" This is a sittuation where your data has already been deleted from the database but they return the deleted object so they can use that data one last time to greet your with your name, and to have your email address ready to go if you click the button to reusubscribe. But if yoy're not going to use that data, you don't have to send it back.
@@ -486,10 +486,10 @@ app.put('/tweets/:id', (req, res) => {
 		req.body,
 		{ new: true },
 		(error, updatedTweet) => {
-			res.send(updatedTweet)
+			res.send(updatedTweet);
 		}
-	)
-})
+	);
+});
 ```
 
 <br>
