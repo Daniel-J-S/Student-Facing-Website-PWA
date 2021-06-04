@@ -148,7 +148,7 @@ Now go back and set up our delete form to send a DELETE request to the appropria
 In our `server.js`, create a GET route which will just display an edit form for a single todo item.
 
 ```javascript
-app.get('/fruits/:indexOfFruitsArray/edit', (req, res)=>{
+app.get('/fruits/:indexOfFruitsArray/edit', (req, res) => {
 	res.render(
 		'edit.ejs', //render views/edit.ejs
 		{ //pass in an object that contains
