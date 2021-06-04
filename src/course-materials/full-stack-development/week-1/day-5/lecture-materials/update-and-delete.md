@@ -249,7 +249,7 @@ Inside server.js add the following:
 
 ```javascript
 app.put('/fruits/:indexOfFruitsArray', (req, res) => { //:indexOfFruitsArray is the index of our fruits array that we want to change
-	if(req.body.readyToEat === 'on'){ //if checked, req.body.readyToEat is set to 'on'
+	if(req.body.readyToEat === 'on') { //if checked, req.body.readyToEat is set to 'on'
 		req.body.readyToEat = true;
 	} else { //if not checked, req.body.readyToEat is undefined
 		req.body.readyToEat = false;
