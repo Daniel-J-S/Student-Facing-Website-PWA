@@ -128,6 +128,7 @@ Check out `package.json` make sure everything looks as expected
 <br>
 <br>
 
+<!-- 
 
 ## Set the Node Engine
 
@@ -155,7 +156,7 @@ In package.json, you can add `engines` anywhere, just make sure you don't break 
     "node": "10.11.0"
   },
   "description": "",
-```
+``` -->
 
 <br>
 <br>
@@ -213,15 +214,15 @@ Load your changes
 //Dependencies
 //___________________
 const express = require('express');
-const methodOverride  = require('method-override');
+const methodOverride = require('method-override');
 const mongoose = require ('mongoose');
-const app = express ();
+const app = express();
 const db = mongoose.connection;
 //___________________
 //Port
 //___________________
 // Allow use of Heroku's port or your own local port, depending on the environment
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3000;
 
 //___________________
 //Database
@@ -236,9 +237,9 @@ mongoose.connect(MONGODB_URI , { useNewUrlParser: true, useUnifiedTopology: true
 });
 
 // Error / success
-db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
-db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
-db.on('disconnected', () => console.log('mongo disconnected'));
+db.on('error', (err) => console.log(err.message + ' is mongod not running?'));
+db.on('connected', () => console.log('mongod connected: ', MONGODB_URI));
+db.on('disconnected', () => console.log('mongod disconnected'));
 
 //___________________
 //Middleware
@@ -266,7 +267,7 @@ app.get('/' , (req, res) => {
 //___________________
 //Listener
 //___________________
-app.listen(PORT, () => console.log( 'Listening on port:', PORT));
+app.listen(PORT, () => console.log('express is listening on:', PORT));
 
 ```
 
