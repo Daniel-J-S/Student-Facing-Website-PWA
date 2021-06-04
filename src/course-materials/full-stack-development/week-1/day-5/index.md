@@ -14,14 +14,4 @@ topics: "Update & Delete with Express"
 - [**Lecture:** Update & Delete with Express](/full-stack-development/week-1/day-5/lecture-materials/update-and-delete/)
 - [**Lab:** Exobilogy I](/full-stack-development/week-1/day-5/labs/exobiology-1) - **Non-Deliverable**
 - [**Lab:** Exobilogy II](/full-stack-development/week-1/day-5/labs/exobiology-2) - **Non-Deliverable**
-- [**Lab:** Pokedex](/full-stack-development/week-1/day-5/labs/pokedex) - **Non-Deliverable**
-
-
-<!-- 
-#### Recordings
-
-<hr>
-
-- [**Update and Delete with Express**]() 
- -->
-
+- [**Lab:** Pokedex](/full-stack-development/week-1/day-5/labs/pokedex) - **Deliverable**

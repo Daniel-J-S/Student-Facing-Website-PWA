@@ -37,8 +37,8 @@ En route to Starbase Regula I on a routine mission, your starship encounters a p
 
 ## Getting Started
 
-1. Create a project folder: `mkdir uncharted_planet`
-1. `cd uncharted_planet`
+1. Create a project folder: `mkdir uncharted-planet`
+1. `cd uncharted-planet`
 1. Create a new express app
     - `npm init`
     - `touch server.js`
@@ -69,7 +69,7 @@ En route to Starbase Regula I on a routine mission, your starship encounters a p
 > Great, the planet is now inhabitable! Let's start sending the scientists in by making a create route.
 
 1. Make a `create` route in your `server.js`
-1. Remember to set up the `body-parser` middleware
+1. Remember to set up the `body-parser` middleware ... i.e. `app.use(express.urlencoded(..`
 1. Check to make sure your create route is working correctly and connected to your `new` form we made above by using `res.send(req.body)`
 1. Once you're sure the create route is working, update your route so that the newly created data is being saved somewhere
 1. Now, let's inhabit the planet! Create 5 scientists!

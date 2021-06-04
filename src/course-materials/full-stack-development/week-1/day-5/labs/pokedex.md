@@ -143,25 +143,28 @@ Here are suggestions for what to display on your Pokémon's show page:
 
 ## Style Your App
 
-Try and make your app look and act nicely with static assets (set up a public folder and add some css, js)-- consider using some jQuery!
+Try and make your app look and act nicely with static assets *(set up a public folder and add some css, js)* 
+
+Consider using some jQuery!
 
 <br>
 <br>
 <br>
 
 ### Need some style inspiration?
-These are screenshots from what other students have done to their Pokedex:
+These are screenshots from what other students have done to their Pokedex ***(Click Each Example To See Illustration)***:
 
 <details>
-<summary>Example 1</summary>
+<summary><strong>Example 1</strong></summary>
 	
+
 ![](https://imgur.com/MZ361IP.png)
 
 ![](https://imgur.com/65HTgw1.png)
 </details>
 
 <details>
-<summary>Example 2</summary>
+<summary><strong>Example 2</strong></summary>
 
 ![](https://imgur.com/XsaaJ2x.png)
 
@@ -169,7 +172,7 @@ These are screenshots from what other students have done to their Pokedex:
 </details>
 
 <details>
-<summary>Example 3</summary>
+<summary><strong>Example 3</strong></summary>
 
 ![](https://imgur.com/ZRFfwgR.png)
 
@@ -189,65 +192,65 @@ The order of your commits this time does not matter, but refer back to the MVP t
 <br>
 <br>
 
-<hr>
+
 "Server is working and displays a plain index page"
-<hr>
+
 
 <br>
 <br>
 
-<hr>
+
 "Displays a bunch of Pokémon images on the index".
-<hr>
+
 
 <br>
 <br>
 
-<hr>
+
 "Has separate show pages for each Pokémon".
-<hr>
+
 
 <br>
 <br>
 
-<hr>
+
 "Has the ability to add a new Pokémon".
-<hr>
+
 
 <br>
 <br>
 
-<hr>
+
 "Has the ability to edit existing Pokémon".
-<hr>
+
 
 <br>
 <br>
 
-<hr>
+
 "Has the ability to delete Pokémon".
-<hr>
+
 
 <br>
 <br>
 
-<hr>
+
 "The app uses RESTful routing, all seven RESTful routes".
-<hr>
+
 
 <br>
 <br>
 
-<hr>
+
 "View templates are complete".
-<hr>
+
 
 <br>
 <br>
 
-<hr>
+
 "Static assets included (CSS) and styled app".
-<hr>
+
 
 </details>
 
