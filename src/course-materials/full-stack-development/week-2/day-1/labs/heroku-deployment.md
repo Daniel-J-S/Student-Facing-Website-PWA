@@ -30,8 +30,6 @@ type: "lab"
 
 
 ## Client Server Flow Review
-![](Client_Server.png)
-
 
 <br>
 <br>
