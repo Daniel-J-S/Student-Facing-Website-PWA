@@ -2,7 +2,7 @@
 track: "Full-Stack Development"
 title: "HTML / CSS Forms"
 week: 2
-day: 4
+day: 2
 type: "lecture"
 ---
 
@@ -33,7 +33,7 @@ Perhaps one of the most common uses for forms out there, today we'll be building
 
 Starter code has been provided for you with all necessary files linked together.
 
-1. <a href="/downloads/backend_fundamentals/html-css-forms/registration-form.zip" download>Download the starter code</a>
+1. <a href="/downloads/backend_fundamentals/registration-form.zip" download>Download the starter code</a>
 1. Open the entire folder in your code editor to follow along
 1. Open the `index.html` in your browser.
 

@@ -11,6 +11,8 @@ topics: "CRUD with Mongoose - Create & Read"
 
 #### CRUD with Mongoose - Create & Read
 
+- [**Morning Exercise:** HTML/CSS Forms](/full-stack-development/week-2/day-2/lecture-materials/html-css-forms)
+
 - [**Lecture:** CRUD App with Mongoose - Create & Read](/full-stack-development/week-2/day-2/lecture-materials/crud-app-with-mongoose)
 - [**Resource Guide:** Creating a Seed Route](/full-stack-development/week-2/day-2/lecture-materials/creating-a-seed-route)
 - [**Lab:** The Captain's Log - Full CRUD Project **(Complete Create & Read)**](/full-stack-development/week-2/day-2/labs/the-captains-log) - **Non-Deliverable**
