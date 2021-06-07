@@ -6,8 +6,7 @@ day: 2
 type: "lab"
 ---
 
-
-# Mongoose Store - Full CRUD Project
+# Mongoose Store
 
 Make a product inventory manager with full CRUD using Mongoose.
 
@@ -15,13 +14,15 @@ Make a product inventory manager with full CRUD using Mongoose.
 <br>
 <br>
 
+#### Learning Objectives
 
+- Full CRUD app in Express with Mongoose
 
 #### Prerequisites
 
 - JavaScript 
 - Express / Node 
-- Mongo / Mongoose 
+- MongoDB / Mongoose 
 
 
 <br>
@@ -31,22 +32,17 @@ Make a product inventory manager with full CRUD using Mongoose.
 
 ## Expected Functionality (MVP)
 
-
-<br>
-<br>
-<br>
-
-
 ### Index Page 
 
 1. Your app should have an index page where
 	- all the products are displayed
 	- the images link to the product's show page
-	- and there should be a link to add a new product.
+	- there's a link to add a new product.
 
-<details><summary><strong>Example</strong></summary>
+<details><summary><strong>Click For Example</strong></summary>
 <img src="https://i.imgur.com/CRJd6Hg.png">
 </details>
+
 
 
 <br>
@@ -56,17 +52,23 @@ Make a product inventory manager with full CRUD using Mongoose.
 
 ### Show Page 
 
-1. Your show page should display a product with
-	- a link back to the products
+1. Your show page should display a product with:
+	- a link back to the index page
 	- a link to edit the product (goes to the edit page)
-	- a delete button that deletes
-	- and the number of items remaining in stock.
+	- a delete button that deletes the product
+	- the number of items remaining in stock
 	
-2. There should be a BUY button. The BUY button will reduce the number of items in stock by 1 each time it's pressed.
+2. Your show page should also have a BUY button. The BUY button will reduce the number of items in stock by 1 each time it's pressed. This is a challenge designed to bend the brain a little! Come back to it at the end if it's taking too long to figure out. An attempt at this is required. Comment out your code if you can't get it working perfectly.
 
-<details><summary><strong>Example</strong></summary>
+<details><summary><strong>Click For Example</strong></summary>
 <img src="https://i.imgur.com/sp9DGtd.png">
 </details>
+
+
+<br>
+<br>
+<br>
+
 
 3. If the quantity of your item is zero, the show page should say 'OUT OF STOCK' instead of saying how many are remaining. (Hint: conditionals in ejs).
 
@@ -74,7 +76,7 @@ Make a product inventory manager with full CRUD using Mongoose.
 
 5. The BUY button should also **not** be rendered if the quantity of the item is zero.
 
-<details><summary><strong>Example</strong></summary>
+<details><summary><strong>Click For Example</strong></summary>
 <img src="https://i.imgur.com/5FZKyly.png">
 </details>
 
@@ -90,8 +92,6 @@ Make a product inventory manager with full CRUD using Mongoose.
 
 
 <br>
-<br>
-<br>
 
 
 ### Redirects 
@@ -100,9 +100,9 @@ Make a product inventory manager with full CRUD using Mongoose.
 
 1. The delete route should redirect to the index
 
-1. The update route will redirect back to the product's show page.
+1. The update route will redirect back to the product's show page
 
-1. For the Hungry for more? the BUY button will go to a route that redirects back to the product's show page
+1. Hungry For More? the BUY button will go to a route that redirects back to the product's show page
 
 
 <br>
@@ -112,32 +112,30 @@ Make a product inventory manager with full CRUD using Mongoose.
 
 ## Getting Started
 
-1. In tonight's homework folder, create a folder called `mongoose_store` 
+1. `mkdir mongoose_store` 
 
 1. Inside the `mongoose_store` folder, set up Express with MVC architecture with the appropriate folders for models, views, and controllers.
 
 1. You will need the seven RESTful routes. You can begin with your data-layer and test that everything works with cURL or Postman. Don't worry about what the BUY button does or where it goes just yet. Just set up your regular RESTful stuff.
 
-1. You will need to make a Mongoose Schema in a products.js file for your products. The schema should have:
+1. You will need to make a Mongoose Schema in a `products.js` file for your products. The schema should have:
 
-	```javascript
+	```js
 	  name: String,
 	  description: String,
 	  img: String,
 	  price: Number,
 	  qty: Number
 	```
-1. Set up validations for the price and qty (can't be less than zero) and make the name a required field.
+1. BONUS: Set up validations for the price and qty (can't be less than zero) and make the name a required field.
 
-1. Create a model and export it.
+1. Create the model from the schema and export it.
 
-1. Make sure you connect to your Mongo server in `server.js`
+1. Make sure you connect to your MongoDB Database (remember to use dotenv)
 
 1. Make sure your controller can access your model:
 
 	`const Product = require('./models/products');`
-
-1. _NOTE:_ For testing purposes, especially for having quick access to those wacky Mongo ids, maybe think about having a route /json that res.sends an index of all the data in json format so that you can copy/paste ids into your url bar or cURL or what-have-you.
 
 
 <br>
@@ -155,11 +153,11 @@ When the BUY button is pressed, it will make a request to update the qty of the 
 
 **Things to think about:**
 
-- What route should the BUY request go to? Maybe it could go to its own route.
+- What route should the BUY request go to? Maybe it could go to its own route
 - Since it updates the product, should it go to a PUT route?
-- Do you need to send any data through to the route? You will need the id, but that is likely all you'll need.
-- Can you edit the qty value just in the route? product.qty -= 1?
-- Will you have to product.save() if you do this?
+- Do you need to send any data through to the route? You will need the id, but that is likely all you'll need
+- Can you edit the qty value just in the route? `product.qty -= 1`?
+- Will you have to `product.save()` if you do this?
 
 
 <br>
@@ -169,13 +167,11 @@ When the BUY button is pressed, it will make a request to update the qty of the 
 
 ## Seed Data 
 
-You can use these seeds to get some starting data if you so choose.
+You can use these the seed data below to get some starting data if you so choose, or you can create your own seed data. [Unsplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/) are two great places to source free to use images for your projects.
 
-_HANDY HINT:_ Make a route in your products controller /seed/newproducts (you can do that by pasting the code below into your controller), and to seed your database, just visit the route once in your browser.
+_HANDY HINT:_ Make a route in your products controller `/products/seed` (you can do that by pasting the code below into your controller), and to seed your database, just visit the route once in your browser.
 
-```javascript
-app.get('/seed', async (req, res) => {
-  const newProducts =
+```js
     [
       {
         name: 'Beans',
@@ -197,14 +193,6 @@ app.get('/seed', async (req, res) => {
         qty: 1
       }
     ]
-
-  try {
-    const seedItems = await Product.create(newProducts)
-    res.send(seedItems)
-  } catch (err) {
-    res.send(err.message)
-  }
-})
 ```
 
 
@@ -215,9 +203,9 @@ app.get('/seed', async (req, res) => {
 
 ## Commits 
 
-The order in which you tackle this homework is up to you, but keep in mind that because this is a two-night homework, you haven't learned everything yet! Start with what you know and whenever you get to any of the following milestones, commit your work! 
+The order in which you tackle this homework is up to you, but keep in mind that because this is a "two-night" homework, you haven't learned everything yet! Start with what you know and whenever you get to any of the following milestones, commit your work! 
 
-<details><summary><strong>Milestones to Commit</strong></summary>
+<details><summary><strong>Click to See Example Milestones to Commit w/Messages</strong></summary>
 
 
 <br>
@@ -252,6 +240,7 @@ The commit message should read: <br>
 <br>
 <br>
 
+
 **Update - Commit your work** <br>
 The commit message should read: <br>
 "Update working".
@@ -259,6 +248,7 @@ The commit message should read: <br>
 <br>
 <br>
 <br>
+
 
 **Delete - Commit your work** <br>
 The commit message should read: <br>
@@ -277,6 +267,7 @@ The commit message should read: <br>
 <br>
 <br>
 
+
 **Buy - Commit your work** <br>
 The commit message should read: <br>
 "Buy Button Working"
@@ -289,23 +280,25 @@ The commit message should read: <br>
 **CSS - Commit your work** <br>
 The commit message should read: <br>
 "App has style"
-
-<br>
-<br>
-<br>
-
+<hr>
 
 </details>
+
+
+<br>
+<br>
+<br>
+
 
 ## Style Inspiration 
 
-See some previous student's examples for some inspiration for your store. Great homework can make great portfolio pieces too!
+See some previous student's examples for some inspiration for your store. Great homework can make great portfolio pieces too! Feel free to create this app on github.com and deploy it for use in your porfolio!
 
-<details><summary><strong>Example 1</strong></summary>
+<details><summary><strong>Click to See Example 1</strong></summary>
 <img src="https://user-images.githubusercontent.com/17508245/28861521-1d513946-7716-11e7-8bed-fe1194f73a2d.png">
 </details>
 
-<details><summary><strong>Example 2</strong></summary>
+<details><summary><strong>Click to See Example 2</strong></summary>
 <img src="https://user-images.githubusercontent.com/29133264/28857343-c3c537e6-76fd-11e7-8104-5ea76de35113.png">
 </details>
 
@@ -314,12 +307,17 @@ See some previous student's examples for some inspiration for your store. Great 
 <br>
 <br>
 
+
 ## Hungry for More? 
+
+
+<br>
+
 
 ### 2nd Model 
 
 1. Make another model, this time for a User. The User will have:
-	```javascript
+	```js
 	username: String,
 	shopping_cart: Array
 	```
@@ -367,11 +365,10 @@ A store app that meets all the expected functionality outlined at the beginning 
 
 This assignment spans over two class days.
 
-You will be required to submit this particular assignment just once before Monday at 10 AM. We suggest that you **do not save it all for Sunday night** and at least try to do the following:
+You will be required to submit this particular assignment each night to show your progress, get feedback on any issues you may be running into, etc. 
 
 **On the first night of this homework, you should work on having:**
-- The app setup, the database connected, the index and show page and new/create page done
+- The app setup, the database connected, the index and show page and new/create page done, and a seed route with seed data
 
 **On the second night of this homework, you should continue working on it so that the app:**
 - Will have delete, update, buy button, router and some css added.
-
