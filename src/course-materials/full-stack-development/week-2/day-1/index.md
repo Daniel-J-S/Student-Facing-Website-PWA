@@ -15,5 +15,5 @@ topics: "Intro to MongoDB & Mongoose"
 - [**Resource:** Create a Cloud-Hosted MongoDB](/full-stack-development/week-2/day-1/lecture-materials/create-an-atlas-hosted-mongodb/) 
 - [**Lecture:** Intro to Mongoose](/full-stack-development/week-2/day-1/lecture-materials/intro-to-mongoose) 
 - [**Lab:** Heroku Deployment](/full-stack-development/week-2/day-1/labs/heroku-deployment) - **Deliverable**
-- <a href="https://git.generalassemb.ly/SEIR-Advanced-Materials/advanced-mongo" target="_blank"><strong>Advanced Track:</strong> Advanced Mongo</a>
+<!-- - <a href="https://git.generalassemb.ly/SEIR-Advanced-Materials/advanced-mongo" target="_blank"><strong>Advanced Track:</strong> Advanced Mongo</a> -->
 
