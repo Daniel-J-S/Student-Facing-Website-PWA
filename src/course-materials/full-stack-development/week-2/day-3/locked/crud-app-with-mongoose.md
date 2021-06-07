@@ -5,11 +5,13 @@ week: 2
 day: 3
 type: "lecture"
 ---
-# CRUD App with Mongoose - Delete and Update
+
+# Book List CRUD App with Mongoose - Delete & Update
 
 <br>
 <br>
 <br>
+
 
 ## Lesson Objectives
 
@@ -18,7 +20,7 @@ Deletion:
 1. Create a Delete Button
 1. Create a DELETE Route
 1. Have the Delete Button send a DELETE request to the server
-1. Make the DELETE Route Delete the Model from MongoDB
+1. Make the DELETE Route Delete the data from MongoDB
 
 Edit/Update:
 
@@ -26,8 +28,9 @@ Edit/Update:
 1. Create an edit route
 1. Create an PUT route
 1. Have the edit page send a PUT request
-1. Make the PUT Route Update the Model in MongoDB
+1. Make the PUT Route Update the data in MongoDB
 1. Make the PUT Route Redirect Back to the Index Page
+
 
 <br>
 <br>
@@ -36,17 +39,19 @@ Edit/Update:
 
 ## Create a Delete Button
 
-In your index.ejs file
+In your index.ejs file, update the li item which is created for each data entry to include a delete form:
 
 ```html
-<li>
-    <a href="/fruits/<%=fruits[i].id; %>"><%=fruits[i].name; %></a>
-    <!--  ADD DELETE FORM HERE-->
-    <form>
-        <input type="submit" value="DELETE"/>
-    </form>
-</li>
+	<% books.forEach(book => { %>
+		<li>
+			<a href="/books/<%=book._id %>"> <%=book.title %> </a>
+			<form>
+				<input type="submit" value="DELETE"/>
+			</form>
+		</li>
+	<% }) %>
 ```
+
 
 <br>
 <br>
@@ -54,12 +59,18 @@ In your index.ejs file
 
 
 ## Create a Delete Route
+Remember INDUCES (index, new, delete, update, create, edit show) to help keep your routes organized and avoid conflicts. 
 
-```javascript
-app.delete('/fruits/:id', (req, res)=>{
+In server.js:
+
+```js
+app.delete('/books/:id', (req, res) => {
     res.send('deleting...');
 });
 ```
+
+STOP! Check your work with Postman. You should be able to visit one of your show pages to grab an ID that you know exists. 
+
 
 <br>
 <br>
@@ -68,48 +79,57 @@ app.delete('/fruits/:id', (req, res)=>{
 
 ## Have the Delete Button send a DELETE request to the server
 
-When we click "DELETE" on our index page (index.ejs), the form needs to make a DELETE request to our DELETE route.
+When we click "DELETE" on our index page **(**`index.ejs`**)**, the form needs to make a DELETE request to our DELETE route.
 
 The problem is that forms can't make DELETE requests.  Only POST and GET.  We can fake this, though.  First we need to install an npm package called `method-override`
 
-```
+```shell
 npm install method-override
 ```
 
 Now, in our server.js file, add:
 
 ```javascript
-//include the method-override package
+// Dependencies
 const methodOverride = require('method-override');
-//...
-//after app has been defined
-//use methodOverride.  We'll be adding a query parameter to our delete form named _method
+
+// Middleware
 app.use(methodOverride('_method'));
 ```
 
-Now go back and set up our delete form to send a DELETE request to the appropriate route
+Now go back and set up our delete form to send a DELETE request to the appropriate route. We're just updating the openeing form tag.
 
 ```html
-<form action="/fruits/<%=fruits[i].id; %>?_method=DELETE" method="POST">
+<form action="/books/<%= book.id %>?_method=DELETE" method="POST">
+	<input type="submit" value="DELETE"/>
+</form>
 ```
 
-<br>
-<br>
-<br>
+STOP! Check your work. Click one of the delete buttons and make sure you're getitng the expected output of 'deleting...' sent in the browser.
 
+
+<br>
+<br>
+<br>
 
 
 ## Make the Delete Route Delete the Model from MongoDB
 
-Also, have it redirect back to the fruits index page when deletion is complete
+Also, have it redirect back to the books index page when deletion is complete
+
+In `server.js`: 
 
 ```javascript
-app.delete('/fruits/:id', (req, res)=>{
-    Fruit.findByIdAndRemove(req.params.id, (err, data)=>{
-        res.redirect('/fruits');//redirect back to fruits index
+// Delete
+app.delete('/books/:id', (req, res) => {
+    Book.findByIdAndRemove(req.params.id, (err, data) => {
+        res.redirect('/books');
     });
 });
 ```
+
+Hint: Deleted all your data? Remember you can hit your seed route `http://localhost:3000/books/seed` to re-populate your database! Isn't that so much easier than adding everything in manually from a form?
+
 
 <br>
 <br>
@@ -118,72 +138,101 @@ app.delete('/fruits/:id', (req, res)=>{
 
 ## Create a link to an edit route
 
-In your `index.ejs` file:
+In `index.ejs`:
 
 ```html
-<a href="/fruits/<%=fruits[i].id; %>/edit">Edit</a>
+	<% books.forEach(book => { %>
+		<li>
+			<a href="/books/<%= book._id %>"> <%=book.title %> </a>
+			<form action="/books/<%=book.id %>?_method=DELETE" method="POST">
+				<input type="submit" value="DELETE"/>
+			</form>
+			<a href="/books/<%=book._id %>/edit">Edit</a>
+		</li>
+	<% }) %>
 ```
 
+STOP! Check your work. We don't have an edit view, but the link should be working.
+
+
+
 <br>
 <br>
 <br>
 
 
-## Create an edit route/page
 
-First the route:
+## Create an Edit Route
+Remember INDUCES! 
 
-```javascript
-app.get('/fruits/:id/edit', (req, res)=>{
-    Fruit.findById(req.params.id, (err, foundFruit)=>{ //find the fruit
-        res.render(
-    		'edit.ejs',
-    		{
-    			fruit: foundFruit //pass in found fruit
-    		}
-    	);
+In `server.js`:
+```js
+// Edit
+app.get('/books/:id/edit', (req, res) => {
+    Book.findById(req.params.id, (error, foundBook) => {
+        res.render('edit.ejs', {
+            book: foundBook
+        });
     });
 });
 ```
 
-Now the EJS:
+
+
+<br>
+<br>
+<br>
+
+
+## Create an Edit Page
+
+Create an `edit.ejs` file
 
 ```html
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
-    <body>
-        <h1>Edit Fruit Page</h1>
-        <form>
-            <!--  NOTE: the form is pre-populated with values for the server-->
-            Name: <input type="text" name="name" value="<%=fruit.name%>"/><br/>
-            Color: <input type="text" name="color" value="<%=fruit.color%>"/><br/>
-            Is Ready To Eat:
-            <input type="checkbox" name="readyToEat"
-                <% if(fruit.readyToEat === true){ %>
-                    checked
-                <% } %>
-            />
-            <br/>
-            <input type="submit" name="" value="Submit Changes"/>
-        </form>
-    </body>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Book List</title>
+</head>
+<body>
+	<h1>Edit Book</h1>
+	<form>
+			<!--  NOTE: the form is pre-populated with values for the server-->
+			Title: <input type="text" name="name" value="<%=book.title%>"/><br/>
+			Author: <input type="text" name="color" value="<%=book.author%>"/><br/>
+			Completed:
+			<input type="checkbox" name="readyToEat"
+					<% if(book.readyToEat === true){ %>
+							checked
+					<% } %>
+			/>
+			<br/>
+			<input type="submit" name="" value="Submit Changes"/>
+	</form>
+</body>
 </html>
 ```
 
+STOP! Check your work. Make sure the edit page is rendering properly. 
+
+
+
 <br>
 <br>
 <br>
 
 
-## Create an PUT route
+## Create an Update Route (PUT)
+Remember INDUCES! 
 
+In `server.js`:
 ```javascript
-app.put('/fruits/:id', (req, res)=>{
-    if(req.body.readyToEat === 'on'){
+// Update
+app.put('/books/:id', (req, res) => {
+    if (req.body.readyToEat === 'on') {
         req.body.readyToEat = true;
     } else {
         req.body.readyToEat = false;
@@ -192,48 +241,46 @@ app.put('/fruits/:id', (req, res)=>{
 });
 ```
 
-<br>
-<br>
-<br>
-
-
 ## Have the edit page send a PUT request
 
-In the `edit.ejs`
-
+In `edit.ejs`:
 ```html
-<form action="/fruits/<%=fruit.id%>?_method=PUT" method="POST">
+<form action="/books/<%=book._id%>?_method=PUT" method="POST">
 ```
 
-<br>
-<br>
-<br>
-
-
-## Make the PUT Route Update the Model in MongoDB
+## Make the PUT Route Update the Model in MongoDB and Redirect back to the Show Page
 
 ```javascript
-app.put('/fruits/:id', (req, res)=>{
-    if(req.body.readyToEat === 'on'){
-        req.body.readyToEat = true;
+// Update
+app.put('/books/:id', (req, res) => {
+    if (req.body.completed === 'on') {
+        req.body.completed = true;
     } else {
-        req.body.readyToEat = false;
+        req.body.completed = false;
     }
-    Fruit.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel)=>{
-        res.send(updatedModel);
+
+    Book.findByIdAndUpdate(req.params.id, req.body, {
+        new: true
+    }, (error, updatedBook) => {
+        res.redirect(`/books/${req.params.id}`);
     });
 });
 ```
 
+
 <br>
 <br>
 <br>
 
 
-## Make the PUT Route Redirect Back to the Index Page
+**Stop! Check your work!**
 
-```javascript
-Fruit.findByIdAndUpdate(req.params.id, req.body, (err, updatedModel)=>{
-    res.redirect('/fruits');
-});
-```
+<br>
+<br>
+<br>
+
+## Congratulation! We now have a Delete and Update feature! 🎉
+
+Hopefully, you now have a fully functional CRUD app with a real MONGODB database. 
+
+Normally, this is the point where we would want to delete our seed route. If you want to comment it out, go ahead! But you might want to keep it in your app for future reference. 
