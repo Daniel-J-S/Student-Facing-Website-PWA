@@ -114,18 +114,16 @@ Then check to make sure it's working.
 Inside `server.js`
 
 - Require mongoose
-- Import your Tweet model
 
 ```js
 // Dependencies
 const mongoose = require('mongoose');
 ```
 
-- Head on over to [mongodb.com](https://www.mongodb.com/cloud/atlas) and make sure you're set up with a database there
-
+- Head on over to [mongodb.com](https://www.mongodb.com/cloud/atlas) and generate a connection URI string
 - Create a variable called DATABASE_URL and set it equal to your MongoDB Atlas connection string
 - Update your DATABASE_URL to connect to the sub-database `tweeter` (if it doesn't exist, it will be created)
-- set `mongoose.connection` to a shorter variable name
+- set `mongoose.connection` to a shorter variable name - this is an object that represents your connection; there are some useful pieces of information we can read from it.
 
 ```js
 // Database configuration
@@ -265,7 +263,7 @@ module.exports = Tweet;
 
 ## Import Tweet Schema
 
-Let's inport that Tweet model alongside our other dependencies in the file that houses our controllers. For now, that's server.js. Soon we'll be moving our controllers to separate files and we'll have to move this import too.
+Let's import that Tweet model alongside our other dependencies in the file that houses our controllers. For now, that's server.js. Soon we'll be moving our controllers to separate files and we'll have to move this import too.
 
 In `server.js`
 
@@ -284,10 +282,11 @@ This should all be done after your database connection and before your app liste
 
 ```js
 // Middleware
-// Body parser middleware: gives us access to req.body
+// Body parser middleware: it creates req.body
 app.use(express.urlencoded({ extended: false }));
 
 // Routes / Controllers
+
 // Create
 app.post('/tweets', (req, res) => {
 	res.send(req.body);
@@ -449,7 +448,7 @@ app.delete('/tweets/:id', (req, res) => {
 });
 ```
 
-We could also `res.send(deletedTweet)`. Why might we want to do that? Because this would be our very last chance to use any of the data. Have you ever deleted your email address from a mailing list and they respond with something like "Hey Karolin! We're sorry to see you go. If this was an accident, click here to resubscribe!" This is a sittuation where your data has already been deleted from the database but they return the deleted object so they can use that data one last time to greet your with your name, and to have your email address ready to go if you click the button to reusubscribe. But if yoy're not going to use that data, you don't have to send it back.
+We could also `res.send(deletedTweet)`. Why might we want to do that? Because this would be our very last chance to use any of the data. Have you ever deleted your email address from a mailing list and they respond with something like "Hey Karolin! We're sorry to see you go. If this was an accident, click here to resubscribe!" This is a situation where your data has already been deleted from the database but they return the deleted object so they can use that data one last time to greet your with your name, and to have your email address ready to go if you click the button to reusubscribe. But if yoy're not going to use that data, you don't have to send it back.
 
 <br>
 <br>
@@ -508,7 +507,7 @@ We can check out all the things we can do at the [Mongoose API docs](http://mong
 <br>
 
 
-## Congratulations! You've built a full CRUD APP with a real database!
+## Congratulations! You've built a full CRUD APP with a real database! 🎉
 
 This is all we need to know to build full CRUD apps with mongoose, but there's so much more you can do like sorting and filtering and finding by different parameters. When you have some free time, poke around [Mongoosejs.com](https://mongoosejs.com/) to learn about all the other options!
 
