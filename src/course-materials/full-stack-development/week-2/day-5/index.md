@@ -4,8 +4,7 @@ title: "Day 5"
 week: 2
 day: 5
 type: "homepage"
-# topics: "Two Model CRUD with Mongoose"
-topics: "Locked"
+topics: "Two Model CRUD with Mongoose"
 ---
 
 
