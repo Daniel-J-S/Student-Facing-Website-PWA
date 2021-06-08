@@ -35,14 +35,14 @@ type: "lecture"
 1. `mkdir views/articles`
 1. `touch views/articles/index.ejs`
 
-views/articles.ejs:
+`views/articles.ejs`:
 
 ```html
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>Express Blog</title>
 	</head>
 	<body>
 		<header>
@@ -62,23 +62,33 @@ views/articles.ejs:
 </html>
 ```
 
+<br>
+<br>
+<br>
+
+
+
 1. `mkdir controllers`
 1. `touch controllers/articles.js`
 
-controllers/articles.js:
+`controllers/articles.js`:
 
 ```javascript
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res)=>{
+router.get('/', (req, res) => {
 	res.render('articles/index.ejs');
 });
 
 module.exports = router;
 ```
+<br>
+<br>
+<br>
 
-Use the controller in server.js:
+
+Use the controller in `server.js`:
 
 ```javascript
 const articlesController = require('./controllers/articles.js');
@@ -98,32 +108,35 @@ app.use('/articles', articlesController);
 ```html
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-		<header>
-			<h1>Create an Article</h1>
-			<nav>
-				<ul>
-					<li>
-						<a href="/">Home</a>
-					</li>
-					<li>
-						<a href="/articles">Articles Index</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<form action="/articles" method="post">
-				<input type="text" name="title" /><br/>
-				<textarea name="body"></textarea><br/>
-				<input type="submit" value="Publish Article"/>
-			</form>
-		</main>
-	</body>
+
+<head>
+	<meta charset="utf-8">
+	<title>Express Blog</title>
+</head>
+
+<body>
+	<header>
+		<h1>Create an Article</h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="/articles">Articles Index</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<form action="/articles" method="post">
+			<input type="text" name="title" /><br />
+			<textarea name="body"></textarea><br />
+			<input type="submit" value="Publish Article" />
+		</form>
+	</main>
+</body>
+
 </html>
 
 ```
@@ -131,7 +144,7 @@ app.use('/articles', articlesController);
 create route in `controllers/articles.js`
 
 ```javascript
-router.get('/new', (req, res)=>{
+router.get('/new', (req, res) => {
 	res.render('articles/new.ejs');
 });
 ```
@@ -150,8 +163,8 @@ router.get('/new', (req, res)=>{
 const mongoose = require('mongoose');
 
 const articleSchema = mongoose.Schema({
-	title:String,
-	body:String
+	title: String,
+	body: String
 });
 
 const Article = mongoose.model('Article', articleSchema);
@@ -167,14 +180,14 @@ module.exports = Article;
 
 ## Create Articles Create Route
 
-controllers/articles.js
+`controllers/articles.js`:
 
 ```javascript
 const Article = require('../models/articles.js');
 //...
 //...farther down the page
-router.post('/', (req, res)=>{
-	Article.create(req.body, (err, createdArticle)=>{
+router.post('/', (req, res) => {
+	Article.create(req.body, (err, createdArticle) => {
 		res.redirect('/articles');
 	});
 });
@@ -188,11 +201,11 @@ router.post('/', (req, res)=>{
 
 ## Show Articles on Index Page
 
-controllers/articles.js:
+`controllers/articles.js`:
 
 ```javascript
-router.get('/', (req, res)=>{
-	Article.find({}, (err, foundArticles)=>{
+router.get('/', (req, res) => {
+	Article.find({}, (err, foundArticles) => {
 		res.render('articles/index.ejs', {
 			articles: foundArticles
 		});
@@ -200,16 +213,21 @@ router.get('/', (req, res)=>{
 });
 ```
 
-views/articles/index.ejs:
+<br>
+<br>
+<br>
+
+
+`views/articles/index.ejs`:
 
 ```html
 <main>
 	<h2>List of Articles</h2>
 	<ul>
 		<% for(let i = 0; i < articles.length; i++){ %>
-			<li>
-				<a href="/articles/<%=articles[i]._id%>"><%=articles[i].title%></a>
-			</li>
+		<li>
+			<a href="/articles/<%=articles[i]._id%>"><%=articles[i].title%></a>
+		</li>
 		<% } %>
 	</ul>
 </main>
@@ -228,39 +246,47 @@ views/articles/index.ejs:
 ```html
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-		<header>
-			<h1><%=article.title%></h1>
-			<nav>
-				<ul>
-					<li>
-						<a href="/">Home</a>
-					</li>
-					<li>
-						<a href="/articles">Articles Index</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<section>
-				<%=article.body%>
-			</section>
-		</main>
-	</body>
+
+<head>
+	<meta charset="utf-8">
+	<title>Express Blog</title>
+</head>
+
+<body>
+	<header>
+		<h1><%=article.title%></h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="/articles">Articles Index</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<%=article.body%>
+		</section>
+	</main>
+</body>
+
 </html>
 ```
 
-towards the bottom controllers/articles.js:
+<br>
+<br>
+<br>
+
+
+Towards the bottom `controllers/articles.js`:
 
 ```javascript
-//avoid this handling /new by placing it towards the bottom of the file
-router.get('/:id', (req, res)=>{
-	Article.findById(req.params.id, (err, foundArticle)=>{
+// avoid this handling /new by placing it towards the bottom of the file
+router.get('/:id', (req, res) => {
+	Article.findById(req.params.id, (err, foundArticle) => {
 		res.render('articles/show.ejs', {
 			article: foundArticle
 		});
@@ -276,23 +302,28 @@ router.get('/:id', (req, res)=>{
 
 ## Create Articles Delete Route
 
-controllers/articles.js:
+`controllers/articles.js`:
 
 ```javascript
-router.delete('/:id', (req, res)=>{
-	Article.findByIdAndRemove(req.params.id, ()=>{
+router.delete('/:id', (req, res) => {
+	Article.findByIdAndRemove(req.params.id, () => {
 		res.redirect('/articles');
 	});
 });
 ```
 
-views/articles/show.ejs
+<br>
+<br>
+<br>
+
+
+`views/articles/show.ejs`:
 
 ```html
 <section>
-    <form action="/articles/<%=article._id%>?_method=DELETE" method="post">
-        <input type="submit" value="Delete Article"/>
-    </form>
+	<form action="/articles/<%=article._id%>?_method=DELETE" method="post">
+		<input type="submit" value="Delete Article" />
+	</form>
 </section>
 ```
 
@@ -304,58 +335,69 @@ views/articles/show.ejs
 
 ## Create Articles Edit Page
 
-Create a link on views/articles/show.ejs:
+Create a link on `views/articles/show.ejs`:
 
 ```html
 <section>
-    <a href="/articles/<%=article._id%>/edit">Edit</a>
+	<a href="/articles/<%=article._id%>/edit">Edit</a>
 </section>
 ```
+<br>
+<br>
+<br>
 
-controllers/articles.js
+
+`controllers/articles.js`:
 
 ```javascript
-router.get('/:id/edit', (req, res)=>{
-	Article.findById(req.params.id, (err, foundArticle)=>{
+router.get('/:id/edit', (req, res) => {
+	Article.findById(req.params.id, (err, foundArticle) => {
 		res.render('articles/edit.ejs', {
 			article: foundArticle
 		});
 	});
 });
 ```
+<br>
+<br>
+<br>
+
 
 `touch views/articles/edit.ejs`
 
 ```html
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-		<header>
-			<h1>Edit <%=article.title%>'s Info</h1>
-			<nav>
-				<ul>
-					<li>
-						<a href="/">Home</a>
-					</li>
-					<li>
-						<a href="/articles">Articles Index</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<h2>Article Attributes:</h2>
-			<form action="/articles/<%=article._id%>?_method=PUT" method="post">
-				<input type="text" name="title" value="<%=article.title%>"/><br/>
-				<textarea name="body"><%=article.body%></textarea><br/>
-				<input type="submit" value="Update Article"/>
-			</form>
-		</main>
-	</body>
+
+<head>
+	<meta charset="utf-8">
+	<title>Express Blog</title>
+</head>
+
+<body>
+	<header>
+		<h1>Edit <%=article.title%>'s Info</h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="/articles">Articles Index</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h2>Article Attributes:</h2>
+		<form action="/articles/<%=article._id%>?_method=PUT" method="post">
+			<input type="text" name="title" value="<%=article.title%>" /><br />
+			<textarea name="body"><%=article.body%></textarea><br />
+			<input type="submit" value="Update Article" />
+		</form>
+	</main>
+</body>
+
 </html>
 ```
 
@@ -367,11 +409,11 @@ router.get('/:id/edit', (req, res)=>{
 
 ## Create Articles Put Route
 
-controllers/articles.js:
+`controllers/articles.js`:
 
 ```javascript
-router.put('/:id', (req, res)=>{
-	Article.findByIdAndUpdate(req.params.id, req.body, ()=>{
+router.put('/:id', (req, res) => {
+	Article.findByIdAndUpdate(req.params.id, req.body, () => {
 		res.redirect('/articles');
 	});
 });

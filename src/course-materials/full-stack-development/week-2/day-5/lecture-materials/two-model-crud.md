@@ -51,14 +51,14 @@ type: "lecture"
 
 ## Start express
 
-server.js:
+`server.js`:
 
 ```javascript
 const express = require('express');
 const app = express();
 
-app.listen(3000, ()=>{
-console.log('listening....');
+app.listen(3000, () => {
+    console.log('listening....');
 });
 ```
 
@@ -80,7 +80,7 @@ console.log('listening....');
 <br>
 
 
-views/index.ejs:
+`views/index.ejs`:
 
 ```html
 <!DOCTYPE html>
@@ -88,7 +88,7 @@ views/index.ejs:
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Express Blog</title>
 </head>
 
 <body>
@@ -116,11 +116,11 @@ views/index.ejs:
 <br>
 
 
-server.js:
+`server.js`:
 
 ```javascript
 app.get('/', (req, res) => {
-res.render('index.ejs');
+    res.render('index.ejs');
 });
 ```
 
@@ -135,7 +135,7 @@ res.render('index.ejs');
 1. `mkdir views/authors`
 1. `touch views/authors/index.ejs`
 
-views/authors.ejs:
+`views/authors.ejs`:
 
 ```html
 <!DOCTYPE html>
@@ -143,7 +143,7 @@ views/authors.ejs:
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Express Blog</title>
 </head>
 
 <body>
@@ -174,20 +174,20 @@ views/authors.ejs:
 <br>
 
 
-controllers/authors.js:
+`controllers/authors.js`:
 
 ```javascript
 const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-res.render('authors/index.ejs');
+    res.render('authors/index.ejs');
 });
 
 module.exports = router;
 ```
 
-Use the controller in server.js:
+Use the controller in `server.js`:
 
 ```javascript
 const authorsController = require('./controllers/authors.js');
@@ -210,7 +210,7 @@ app.use('/authors', authorsController);
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Express Blog</title>
 </head>
 
 <body>
@@ -251,10 +251,10 @@ router.get('/new', (req, res) => {
 <br>
 
 
-## Connect to mongo
+## TODO: Connect to MongoDB
 
 1. `npm install mongoose --save`
-1. Connect in server.js
+1. Connect in `server.js`
 
 ```javascript
 const mongoose = require('mongoose');
@@ -282,32 +282,40 @@ mongoose.connection.once('open', () => {
 const mongoose = require('mongoose');
 
 const authorSchema = mongoose.Schema({
-name: String
+    name: String
 });
 
 const Author = mongoose.model('Author', authorSchema);
 
 module.exports = Author;
 ```
+<br>
+<br>
+<br>
 
 ## Create Authors Create Route
 
-1. use body parser in server.js
+1. use body parser in `server.js`
 
 ```javascript
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({ extended: false }));
 ```
 
-controllers/authors.js
+<br>
+<br>
+<br>
+
+
+`controllers/authors.js`
 
 ```javascript
 const Author = require('../models/authors.js');
 //...
 //...farther down the page
-router.post('/', (req, res)=>{
-Author.create(req.body, (err, createdAuthor)=>{
-res.redirect('/authors');
-});
+router.post('/', (req, res) => {
+    Author.create(req.body, (err, createdAuthor) => {
+        res.redirect('/authors');
+    });
 });
 ```
 
@@ -319,19 +327,23 @@ res.redirect('/authors');
 
 ## Show Authors on Index Page
 
-controllers/authors.js:
+`controllers/authors.js`:
 
 ```javascript
-router.get('/', (req, res)=>{
-Author.find({}, (err, foundAuthors)=>{
-res.render('authors/index.ejs', {
-authors: foundAuthors
-});
-})
+router.get('/', (req, res) => {
+    Author.find({}, (err, foundAuthors) => {
+        res.render('authors/index.ejs', {
+            authors: foundAuthors
+        });
+    })
 });
 ```
 
-views/authors/index.ejs:
+<br>
+<br>
+<br>
+
+`views/authors/index.ejs`:
 
 ```html
 <main>
@@ -361,7 +373,7 @@ views/authors/index.ejs:
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Express Blog</title>
 </head>
 
 <body>
@@ -397,16 +409,16 @@ views/authors/index.ejs:
 <br>
 
 
-towards the bottom controllers/authors.js:
+towards the bottom `controllers/authors.js`:
 
 ```javascript
 //avoid this handling /new by placing it towards the bottom of the file
-router.get('/:id', (req, res)=>{
-Author.findById(req.params.id, (err, foundAuthor)=>{
-res.render('authors/show.ejs', {
-author: foundAuthor
-});
-});
+router.get('/:id', (req, res) => {
+    Author.findById(req.params.id, (err, foundAuthor) => {
+        res.render('authors/show.ejs', {
+            author: foundAuthor
+        });
+    });
 });
 ```
 
@@ -419,25 +431,33 @@ author: foundAuthor
 ## Create Authors Delete Route
 
 1. `npm install method-override --save`
-1. use method-override in server.js:
+1. use `method-override` in `server.js`:
 
 ```javascript
-const methodOverride = require('method-override')
+const methodOverride = require('method-override');
 
 app.use(methodOverride('_method'));
 ```
 
-controllers/authors.js:
+<br>
+<br>
+<br>
+
+`controllers/authors.js`:
 
 ```javascript
-router.delete('/:id', (req, res)=>{
-Author.findByIdAndRemove(req.params.id, ()=>{
-res.redirect('/authors');
-});
+router.delete('/:id', (req, res) => {
+    Author.findByIdAndRemove(req.params.id, () => {
+        res.redirect('/authors');
+    });
 });
 ```
+<br>
+<br>
+<br>
 
-views/authors/show.ejs
+
+`views/authors/show.ejs`:
 
 ```html
 <section>
@@ -455,7 +475,7 @@ views/authors/show.ejs
 
 ## Create Authors Edit Page
 
-Create a link on views/authors/show.ejs:
+Create a link on `views/authors/show.ejs`:
 
 ```html
 <section>
@@ -463,17 +483,27 @@ Create a link on views/authors/show.ejs:
 </section>
 ```
 
-controllers/authors.js
+<br>
+<br>
+<br>
+
+
+`controllers/authors.js`:
 
 ```javascript
-router.get('/:id/edit', (req, res)=>{
-Author.findById(req.params.id, (err, foundAuthor)=>{
-res.render('authors/edit.ejs', {
-author: foundAuthor
-});
-});
+router.get('/:id/edit', (req, res) => {
+    Author.findById(req.params.id, (err, foundAuthor) => {
+        res.render('authors/edit.ejs', {
+            author: foundAuthor
+        });
+    });
 });
 ```
+
+<br>
+<br>
+<br>
+
 
 `touch views/authors/edit.ejs`
 
@@ -483,7 +513,7 @@ author: foundAuthor
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Express Blog</title>
 </head>
 
 <body>
@@ -519,12 +549,12 @@ author: foundAuthor
 
 ## Create Authors Put Route
 
-controllers/authors.js:
+`controllers/authors.js`:
 
 ```javascript
-router.put('/:id', (req, res)=>{
-Author.findByIdAndUpdate(req.params.id, req.body, ()=>{
-res.redirect('/authors');
-});
+router.put('/:id', (req, res) => {
+    Author.findByIdAndUpdate(req.params.id, req.body, () => {
+        res.redirect('/authors');
+    });
 });
 ```
