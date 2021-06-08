@@ -11,7 +11,7 @@ topics: "CRUD App Mongoose - Delete and Update"
 # Week 2 - Day 3
 
 #### CRUD App Mongoose - Delete and Update
-
+- [**Warmup:** Beginners Guide to UX](/full-stack-development/week-2/day-3/lecture-materials/beginners-guide-to-ux/)
 - [**Lecture:** CRUD with - Mongoose Delete and Update](/full-stack-development/week-2/day-3/lecture-materials/crud-app-with-mongoose)
 - [**Lecture:** Express Router](/full-stack-development/week-2/day-3/lecture-materials/express-router)
 - [**Lab:** The Captain's Log - Full CRUD Project **(Complete Delete & Update)**](/full-stack-development/week-2/day-2/labs/the-captains-log) - **Non-Deliverable**

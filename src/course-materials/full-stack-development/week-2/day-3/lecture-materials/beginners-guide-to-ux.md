@@ -2,7 +2,7 @@
 track: "Full-Stack Development"
 title: "Beginners Guide to UX"
 week: 2
-day: 1
+day: 3
 type: "lecture"
 ---
 
@@ -294,7 +294,7 @@ Are you ready for a tropical vacation ... I mean, a haircut?
 1. Share your projects with your friends, family, and fellow classmates!  The best way to find fault in a project is for someone else to try and use it.  Try to give them as little outside instruction as possible.
 2. User stories!  Write user stories from the perspective of the user: "As a user I want to be able to click on x and have y happen" or “As a ____, I need a ____ in order to ____”.
 
-✏️ [Writing Good User Stories](https://www.mariaemerson.com/user-stories/)
+✏️ [Writing Good User Stories](https://www.romanpichler.com/blog/10-tips-writing-good-user-stories/)
 
 
 <br>
