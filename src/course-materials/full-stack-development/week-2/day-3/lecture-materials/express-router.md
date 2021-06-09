@@ -5,8 +5,7 @@ week: 2
 day: 3
 type: "lecture"
 ---
-
-# Express Router
+# Book List CRUD App with Mongoose - Express Router
 
 <br>
 <br>
@@ -21,128 +20,178 @@ type: "lecture"
 1. Use Controller File in Server.js
 1. Remove References to Base of Controller's URLs
 
+
 <br>
 <br>
 <br>
+
 
 ## Explain What Express.Router does for us
 
-- Our server.js file is getting rather bloated
-- express.Router will let us put our routes in a separate file
+- Our `server.js` file is getting rather bloated
+- `express.Router` will let us put our routes in a separate file
+
 
 <br>
 <br>
 <br>
+
 
 ## Create External Controller File for Routes
 
 1. `mkdir controllers`
-1. `touch controllers/fruits.js`
-1. Edit controllers/fruits.js
+1. `touch controllers/books.js`
+1. Edit `controllers/books.js`
 
-```javascript
+In `controllers/books.js`:
+```js
 const express = require('express');
 const router = express.Router();
 
 module.exports = router;
 ```
 
+
 <br>
 <br>
 <br>
+
 
 ## Move Server.js Routes to External Controller File
 
-rename `app` to `router`
+Rename `app` to `router`. 
+Try using the shortcut! Highlight one occurance of app then click `command` + `d` to select the next occurance of it too. Continue doing this until you've highlighted every occurance of the word `app`. Then type `bookRouter` to replace all the highlighted code.
 
-```javascript
+While we're here, let's also update the relative pathing to our bookSeed: const `bookSeed = require('../models/bookSeed.js')`
+
+
+<br>
+<br>
+<br>
+
+
+Here's the final code:
+```js
+// Dependencies 
 const express = require('express');
-const router = express.Router();
+const bookRouter = express.Router();
 
-router.get('/fruits/new', (req, res)=>{
+// Seed
+const bookSeed = require('../models/bookSeed.js');
+bookRouter.get('/books/seed', (req, res) => {
+    Book.deleteMany({}, (error, allBooks) => {});
+
+    Book.create(bookSeed, (error, data) => {
+        res.redirect('/books');
+    });
+});
+
+// Index
+bookRouter.get('/books', (req, res) => {
+    Book.find({}, (error, allBooks) => {
+        res.render('index.ejs', {
+            books: allBooks,
+        });
+    });
+});
+
+// New
+bookRouter.get('/books/new', (req, res) => {
     res.render('new.ejs');
 });
 
-router.post('/fruits/', (req, res)=>{
-    if(req.body.readyToEat === 'on'){ //if checked, req.body.readyToEat is set to 'on'
-        req.body.readyToEat = true;
-    } else { //if not checked, req.body.readyToEat is undefined
-        req.body.readyToEat = false;
-    }
-    Fruit.create(req.body, ()=>{
-        res.redirect('/fruits');
+// Delete
+bookRouter.delete('/books/:id', (req, res) => {
+    Book.findByIdAndRemove(req.params.id, (err, data) => {
+        res.redirect('/books');
     });
 });
 
-router.get('/fruits', (req, res)=>{
-    Fruit.find({}, (error, allFruits)=>{
-        res.render('index.ejs', {
-            fruits: allFruits
-        });
-    });
-});
-
-router.get('/fruits/:id', (req, res)=>{
-    Fruit.findById(req.params.id, (err, foundFruit)=>{
-        res.render('show.ejs', {
-            fruit:foundFruit
-        });
-    });
-});
-
-router.delete('/fruits/:id', (req, res)=>{
-    Fruit.findByIdAndRemove(req.params.id, (err, data)=>{
-        res.redirect('/fruits')
-    });
-});
-
-router.get('/fruits/:id/edit', (req, res)=>{
-    Fruit.findById(req.params.id, (err, foundFruit)=>{ //find the fruit
-        res.render(
-    		'edit.ejs',
-    		{
-    			fruit: foundFruit //pass in found fruit
-    		}
-    	);
-    });
-});
-
-router.put('/fruits/:id', (req, res)=>{
-    if(req.body.readyToEat === 'on'){
-        req.body.readyToEat = true;
+// Update
+bookRouter.put('/books/:id', (req, res) => {
+    if (req.body.completed === 'on') {
+        req.body.completed = true;
     } else {
-        req.body.readyToEat = false;
+        req.body.completed = false;
     }
-    //{new: true} tells mongoose to send the updated model into the callback
-    Fruit.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel)=>{
-        res.redirect('/fruits');
+
+    Book.findByIdAndUpdate(req.params.id, req.body, {
+        new: true
+    }, (error, updatedBook) => {
+        res.redirect(`/books/${req.params.id}`);
     });
 });
 
-module.exports = router;
+// Create
+bookRouter.post('/books', (req, res) => {
+    if (req.body.completed === 'on') {
+        req.body.completed = true;
+    } else {
+        req.body.completed = false;
+    }
+
+    Book.create(req.body, (error, createdBook) => {
+        res.redirect('/books');
+    });
+});
+
+// Edit 
+bookRouter.get('/books/:id/edit', (req, res) => {
+    Book.findById(req.params.id, (error, foundBook) => {
+        res.render('edit.ejs', {
+            book: foundBook
+        });
+    });
+});
+
+// Show
+bookRouter.get('/books/:id', (req, res) => {
+    Book.findById(req.params.id, (err, foundBook) => {
+        res.render('show.ejs', {
+            book: foundBook,
+        });
+    });
+});
+
+
+// Exports 
+module.exports = bookRouter;
 ```
 
+
 <br>
 <br>
 <br>
 
-## Require Fruit Model in Controller File
 
-```javascript
+## Require Book Model in Controller File
+
+```js
+// Dependencies 
 const express = require('express');
-const router = express.Router();
-const Fruit = require('../models/fruits.js')
+const bookRouter = express.Router();
+const Book = require('../models/book.js');
 //...
 ```
 
-The `Fruit` model is no longer needed in `server.js`.  Remove it:
+The `Book` model is no longer needed in `server.js`. Remove it:
 
-```javascript
+
+<br>
+
+
+In `server.js`: 
+```js
+// Dependencies
 const express = require('express');
-const app = express();
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
+const app = express();
+require('dotenv').config();
 ```
+
+
+
 <br>
 <br>
 <br>
@@ -150,90 +199,150 @@ const methodOverride = require('method-override');
 
 ## Use Controller File in Server.js
 
-```javascript
-const fruitsController = require('./controllers/fruits.js');
-app.use(fruitsController);
+This is technically middlware! But make sure it runs after your other middleware. 
+
+POP QUIZ: Why do we have to mount our controllers after our other middleware?
+
+
+<br>
+<br>
+<br>
+
+
+In `server.js`: 
+```js
+// Routes / Controllers 
+const booksController = require('./controllers/books.js');
+app.use(booksController);
 ```
 
+
 <br>
 <br>
 <br>
 
 
-## Remove References to Base of Controller's URLs
+## Specify When our Middleware runs
+We only want our books controller to run on the `/books` route, so let's specify that.
 
-You can specify when a middleware runs
-
-```javascript
-const fruitsController = require('./controllers/fruits.js');
-app.use('/fruits', fruitsController);
+In `server.js`:
+```js
+const booksController = require('./controllers/books.js');
+app.use('/books', booksController);
 ```
 
-Since we've specified that the controller works with all urls starting with /fruits, we can remove this from the controller file:
 
-```javascript
+<br>
+<br>
+<br>
+
+
+Since we've specified that the controller works with all urls starting with `/books`, we can remove this from the controller file. Instead of saying things like `app.get('/books')` we're now going to say `app.get('/')` because we specified books as the root of our controller. 
+
+Confused? Come off mute and ask! 
+
+P.S. Don't use the shortcut to remove `/books`. Whenever we redirect, we need to be specific and include the `/books` prefix, so we don't want to delete those occurrances.
+
+
+
+<br>
+<br>
+<br>
+
+
+Here's our completed code so far: 
+```js
+// Dependencies 
 const express = require('express');
-const router = express.Router();
+const bookRouter = express.Router();
+const Book = require('../models/book.js');
 
-router.get('/new', (req, res)=>{
+// Seed
+const bookSeed = require('../models/bookSeed.js');
+bookRouter.get('/seed', (req, res) => {
+    Book.deleteMany({}, (error, allBooks) => {});
+
+    Book.create(bookSeed, (error, data) => {
+        res.redirect('/books');
+    });
+});
+
+// Index
+bookRouter.get('/', (req, res) => {
+    Book.find({}, (error, allBooks) => {
+        res.render('index.ejs', {
+            books: allBooks,
+        });
+    });
+});
+
+// New
+bookRouter.get('/new', (req, res) => {
     res.render('new.ejs');
 });
 
-router.post('/', (req, res)=>{
-    if(req.body.readyToEat === 'on'){ //if checked, req.body.readyToEat is set to 'on'
-        req.body.readyToEat = true;
-    } else { //if not checked, req.body.readyToEat is undefined
-        req.body.readyToEat = false;
-    }
-    Fruit.create(req.body, ()=>{
-        res.redirect('/fruits');
+// Delete
+bookRouter.delete('/:id', (req, res) => {
+    Book.findByIdAndRemove(req.params.id, (err, data) => {
+        res.redirect('/books');
     });
 });
 
-router.get('/', (req, res)=>{
-    Fruit.find({}, (error, allFruits)=>{
-        res.render('index.ejs', {
-            fruits: allFruits
-        });
-    });
-});
-
-router.get('/:id', (req, res)=>{
-    Fruit.findById(req.params.id, (err, foundFruit)=>{
-        res.render('show.ejs', {
-            fruit:foundFruit
-        });
-    });
-});
-
-router.delete('/:id', (req, res)=>{
-    Fruit.findByIdAndRemove(req.params.id, (err, data)=>{
-        res.redirect('/fruits')
-    });
-});
-
-router.get('/:id/edit', (req, res)=>{
-    Fruit.findById(req.params.id, (err, foundFruit)=>{ //find the fruit
-        res.render(
-    		'edit.ejs',
-    		{
-    			fruit: foundFruit //pass in found fruit
-    		}
-    	);
-    });
-});
-
-router.put('/:id', (req, res)=>{
-    if(req.body.readyToEat === 'on'){
-        req.body.readyToEat = true;
+// Update
+bookRouter.put('/:id', (req, res) => {
+    if (req.body.completed === 'on') {
+        req.body.completed = true;
     } else {
-        req.body.readyToEat = false;
+        req.body.completed = false;
     }
-    //{new: true} tells mongoose to send the updated model into the callback
-    Fruit.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel)=>{
-        res.redirect('/fruits');
+
+    Book.findByIdAndUpdate(req.params.id, req.body, {
+        new: true
+    }, (error, updatedBook) => {
+        res.redirect(`/books/${req.params.id}`);
     });
 });
 
-module.exports = router;
+// Create
+bookRouter.post('/', (req, res) => {
+    if (req.body.completed === 'on') {
+        req.body.completed = true;
+    } else {
+        req.body.completed = false;
+    }
+
+    Book.create(req.body, (error, createdBook) => {
+        res.redirect('/books');
+    });
+});
+
+// Edit 
+bookRouter.get('/:id/edit', (req, res) => {
+    Book.findById(req.params.id, (error, foundBook) => {
+        res.render('edit.ejs', {
+            book: foundBook
+        });
+    });
+});
+
+// Show
+bookRouter.get('/:id', (req, res) => {
+    Book.findById(req.params.id, (err, foundBook) => {
+        res.render('show.ejs', {
+            book: foundBook,
+        });
+    });
+});
+
+
+// Exports 
+module.exports = bookRouter;
 ```
+
+
+<br>
+<br>
+<br>
+
+
+**STOP! Check your work. Make sure all your routes and redirects work as expected.**
