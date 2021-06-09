@@ -244,12 +244,22 @@ app.put('/books/:id', (req, res) => {
 });
 ```
 
+<br>
+<br>
+<br>
+
+
 ## Have the edit page send a PUT request
 
 In `edit.ejs`:
 ```html
 <form action="/books/<%=book._id%>?_method=PUT" method="POST">
 ```
+
+<br>
+<br>
+<br>
+
 
 ## Make the PUT Route Update the Document in MongoDB and Redirect back to the Show Page
 
