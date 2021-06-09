@@ -77,7 +77,7 @@ const express = require('express');
 const bookRouter = express.Router();
 
 // Seed
-const bookSeed = require('../models/bookSeed.js');
+const bookSeed = require('../models/bookSeed');
 bookRouter.get('/books/seed', (req, res) => {
     Book.deleteMany({}, (error, allBooks) => {});
 
@@ -170,7 +170,7 @@ module.exports = bookRouter;
 // Dependencies 
 const express = require('express');
 const bookRouter = express.Router();
-const Book = require('../models/book.js');
+const Book = require('../models/book');
 //...
 ```
 
@@ -212,7 +212,7 @@ POP QUIZ: Why do we have to mount our controllers after our other middleware?
 In `server.js`: 
 ```js
 // Routes / Controllers 
-const booksController = require('./controllers/books.js');
+const booksController = require('./controllers/books');
 app.use(booksController);
 ```
 
@@ -227,7 +227,7 @@ We only want our books controller to run on the `/books` route, so let's specify
 
 In `server.js`:
 ```js
-const booksController = require('./controllers/books.js');
+const booksController = require('./controllers/books');
 app.use('/books', booksController);
 ```
 
@@ -255,10 +255,10 @@ Here's our completed code so far:
 // Dependencies 
 const express = require('express');
 const bookRouter = express.Router();
-const Book = require('../models/book.js');
+const Book = require('../models/book');
 
 // Seed
-const bookSeed = require('../models/bookSeed.js');
+const bookSeed = require('../models/bookSeed');
 bookRouter.get('/seed', (req, res) => {
     Book.deleteMany({}, (error, allBooks) => {});
 
