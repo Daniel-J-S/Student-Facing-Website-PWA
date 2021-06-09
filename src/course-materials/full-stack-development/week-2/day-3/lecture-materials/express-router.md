@@ -174,10 +174,11 @@ const Book = require('../models/book');
 //...
 ```
 
-The `Book` model is no longer needed in `server.js`. Remove it:
-
-
 <br>
+<br>
+<br>
+
+The `Book` model is no longer needed in `server.js`. Remove it:
 
 
 In `server.js`: 
