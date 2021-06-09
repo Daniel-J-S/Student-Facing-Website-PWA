@@ -279,7 +279,7 @@ app.put('/books/:id', (req, res) => {
 <br>
 <br>
 
-## Congratulation! We now have a Delete and Update feature! 🎉
+## Congratulations! We now have a Delete and Update feature! 🎉
 
 Hopefully, you now have a fully functional CRUD app with a real MONGODB database. 
 
