@@ -126,7 +126,7 @@ app.use(
         secret: process.env.SECRET,
         resave: false,
         saveUninitialized: false
-    });
+    })
 );
 ```
 
@@ -264,7 +264,7 @@ app.get('/destroy', (req, res) => {
 
 <br>
 
-1. First, navigate to [http://localhost:3000/destroy](http://localhost:3000/destroy) \
+First, navigate to [http://localhost:3000/destroy](http://localhost:3000/destroy) \
 You should see `success: true` in the browser.
 
 <br>
@@ -390,7 +390,7 @@ app.get('/compare', (req, res) => {
 
 <br>
 
-1. Navigate to [http://localhost:3000/compare](http://localhost:3000/compare) \
+Navigate to [http://localhost:3000/compare](http://localhost:3000/compare) \
 You should see `false` in the browser, because 'example' is not the same as 'yourGuessHere`.
 
 
@@ -416,7 +416,7 @@ app.get('/compare', (req, res) => {
 
 <br>
 
-1. Navigate to [http://localhost:3000/compare](http://localhost:3000/compare) \
+Navigate to [http://localhost:3000/compare](http://localhost:3000/compare) \
 You should see `true` in the browser, because 'example' is the same as 'example`
 
 Take a moment to think about how bcrypt can help us protect users passwords (we should never store an un-hashed password in our database) and how it can help us check to make sure the password a user is trying to log in with matches the hashed password we have stored in the database.

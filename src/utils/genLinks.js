@@ -10,7 +10,6 @@ const blanks = [
     'Project Presentations', 
     'Locked',
     'Holiday',
-    'Authentication',
     'Two Model CRUD with Mongoose',
 ];
 
