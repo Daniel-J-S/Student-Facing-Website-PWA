@@ -97,7 +97,7 @@ const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 ```
 
-Now go back and set up our delete form to send a DELETE request to the appropriate route. We're just updating the openeing form tag.
+Now go back and set up our delete form to send a DELETE request to the appropriate route. We're just updating the opening form tag.
 
 ```html
 <form action="/books/<%= book.id %>?_method=DELETE" method="POST">
