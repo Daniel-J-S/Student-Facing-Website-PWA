@@ -69,7 +69,6 @@ app.delete('/books/:id', (req, res) => {
 });
 ```
 
-STOP! Check your work with Postman. You should be able to visit one of your show pages to grab an ID that you know exists. 
 
 
 <br>
@@ -105,7 +104,12 @@ Now go back and set up our delete form to send a DELETE request to the appropria
 </form>
 ```
 
-STOP! Check your work. Click one of the delete buttons and make sure you're getitng the expected output of 'deleting...' sent in the browser.
+<br>
+<br>
+
+STOP! Check your work. You should be able to visit one of your show pages to grab an ID that you know exists. 
+
+Next, try clicking one of the delete buttons and make sure you're getting the expected output of 'deleting...' sent in the browser.
 
 
 <br>
