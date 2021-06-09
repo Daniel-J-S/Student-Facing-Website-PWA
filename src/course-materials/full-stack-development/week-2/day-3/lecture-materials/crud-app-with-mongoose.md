@@ -212,7 +212,7 @@ Create an `edit.ejs` file
         Completed:
         <input type="checkbox" name="completed" <% if(book.completed === true){ %> checked <% } %> />
         <br />
-        <input type="submit" name="" value="Submit Changes" />
+        <input type="submit" value="Submit Changes" />
     </form>
 </body>
 
