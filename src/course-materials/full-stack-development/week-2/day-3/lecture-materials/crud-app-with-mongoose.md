@@ -197,23 +197,23 @@ Create an `edit.ejs` file
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Book List</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
 </head>
 
 <body>
-	<h1>Edit Book</h1>
-	<form>
-		<!--  NOTE: the form is pre-populated with values for the server-->
-		Title: <input type="text" name="name" value="<%=book.title%>" /><br />
-		Author: <input type="text" name="color" value="<%=book.author%>" /><br />
-		Completed:
-		<input type="checkbox" name="readyToEat" <% if(book.readyToEat === true){ %> checked <% } %> />
-		<br />
-		<input type="submit" name="" value="Submit Changes" />
-	</form>
+    <h1>Edit Book</h1>
+    <form>
+        <!--  NOTE: the form is pre-populated with values for the server-->
+        Title: <input type="text" name="name" value="<%=book.title%>" /><br />
+        Author: <input type="text" name="color" value="<%=book.author%>" /><br />
+        Completed:
+        <input type="checkbox" name="completed" <% if(book.completed === true){ %> checked <% } %> />
+        <br />
+        <input type="submit" name="" value="Submit Changes" />
+    </form>
 </body>
 
 </html>
