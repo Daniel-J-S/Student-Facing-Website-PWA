@@ -117,7 +117,7 @@ Next, try clicking one of the delete buttons and make sure you're getting the ex
 <br>
 
 
-## Make the Delete Route Delete the Model from MongoDB
+## Make the Delete Route Delete the Document from MongoDB
 
 Also, have it redirect back to the books index page when deletion is complete
 
