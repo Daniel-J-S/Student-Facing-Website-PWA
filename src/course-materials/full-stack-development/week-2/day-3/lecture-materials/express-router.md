@@ -46,9 +46,9 @@ type: "lecture"
 In `controllers/books.js`:
 ```js
 const express = require('express');
-const router = express.Router();
+const bookRouter = express.Router();
 
-module.exports = router;
+module.exports = bookRouter;
 ```
 
 
