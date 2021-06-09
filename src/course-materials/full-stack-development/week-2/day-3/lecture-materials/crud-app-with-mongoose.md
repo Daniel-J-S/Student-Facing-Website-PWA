@@ -207,8 +207,8 @@ Create an `edit.ejs` file
     <h1>Edit Book</h1>
     <form>
         <!--  NOTE: the form is pre-populated with values for the server-->
-        Title: <input type="text" name="name" value="<%=book.title%>" /><br />
-        Author: <input type="text" name="color" value="<%=book.author%>" /><br />
+        Title: <input type="text" name="title" value="<%=book.title%>" /><br />
+        Author: <input type="text" name="author" value="<%=book.author%>" /><br />
         Completed:
         <input type="checkbox" name="completed" <% if(book.completed === true){ %> checked <% } %> />
         <br />
