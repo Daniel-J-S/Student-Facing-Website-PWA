@@ -200,7 +200,7 @@ require('dotenv').config();
 
 ## Use Controller File in Server.js
 
-This is technically middlware! But make sure it runs after your other middleware. 
+This is technically middleware! But make sure it runs after your other middleware. 
 
 POP QUIZ: Why do we have to mount our controllers after our other middleware?
 
