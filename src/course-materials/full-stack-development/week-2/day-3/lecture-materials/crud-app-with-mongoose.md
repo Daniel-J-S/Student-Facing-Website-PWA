@@ -173,11 +173,11 @@ In `server.js`:
 ```js
 // Edit
 app.get('/books/:id/edit', (req, res) => {
-    Book.findById(req.params.id, (error, foundBook) => {
-        res.render('edit.ejs', {
-            book: foundBook
-        });
-    });
+	Book.findById(req.params.id, (error, foundBook) => {
+		res.render('edit.ejs', {
+			book: foundBook
+		});
+	});
 });
 ```
 
@@ -195,28 +195,27 @@ Create an `edit.ejs` file
 ```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Book List</title>
+	<title>Book List</title>
 </head>
+
 <body>
 	<h1>Edit Book</h1>
 	<form>
-			<!--  NOTE: the form is pre-populated with values for the server-->
-			Title: <input type="text" name="name" value="<%=book.title%>"/><br/>
-			Author: <input type="text" name="color" value="<%=book.author%>"/><br/>
-			Completed:
-			<input type="checkbox" name="readyToEat"
-					<% if(book.readyToEat === true){ %>
-							checked
-					<% } %>
-			/>
-			<br/>
-			<input type="submit" name="" value="Submit Changes"/>
+		<!--  NOTE: the form is pre-populated with values for the server-->
+		Title: <input type="text" name="name" value="<%=book.title%>" /><br />
+		Author: <input type="text" name="color" value="<%=book.author%>" /><br />
+		Completed:
+		<input type="checkbox" name="readyToEat" <% if(book.readyToEat === true){ %> checked <% } %> />
+		<br />
+		<input type="submit" name="" value="Submit Changes" />
 	</form>
 </body>
+
 </html>
 ```
 
@@ -236,12 +235,12 @@ In `server.js`:
 ```javascript
 // Update
 app.put('/books/:id', (req, res) => {
-    if (req.body.readyToEat === 'on') {
-        req.body.readyToEat = true;
-    } else {
-        req.body.readyToEat = false;
-    }
-    res.send(req.body);
+	if (req.body.readyToEat === 'on') {
+		req.body.readyToEat = true;
+	} else {
+		req.body.readyToEat = false;
+	}
+	res.send(req.body);
 });
 ```
 
@@ -252,22 +251,22 @@ In `edit.ejs`:
 <form action="/books/<%=book._id%>?_method=PUT" method="POST">
 ```
 
-## Make the PUT Route Update the Model in MongoDB and Redirect back to the Show Page
+## Make the PUT Route Update the Document in MongoDB and Redirect back to the Show Page
 
 ```javascript
 // Update
 app.put('/books/:id', (req, res) => {
-    if (req.body.completed === 'on') {
-        req.body.completed = true;
-    } else {
-        req.body.completed = false;
-    }
+	if (req.body.completed === 'on') {
+		req.body.completed = true;
+	} else {
+		req.body.completed = false;
+	}
 
-    Book.findByIdAndUpdate(req.params.id, req.body, {
-        new: true
-    }, (error, updatedBook) => {
-        res.redirect(`/books/${req.params.id}`);
-    });
+	Book.findByIdAndUpdate(req.params.id, req.body, {
+		new: true
+	}, (error, updatedBook) => {
+		res.redirect(`/books/${req.params.id}`);
+	});
 });
 ```
 
