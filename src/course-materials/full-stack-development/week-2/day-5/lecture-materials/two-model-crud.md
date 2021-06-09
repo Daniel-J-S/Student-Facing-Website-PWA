@@ -7,7 +7,7 @@ type: "lecture"
 ---
 
 
-# Two Model CRUD App - No relationship - First Model
+# Two Model CRUD App - No Relationship - First Model
 
 <br>
 <br>
@@ -21,12 +21,12 @@ type: "lecture"
 1. Create Authors Index
 1. Create Authors New Page
 1. Set up Author Model
-1. Create Authors Post Route
+1. Create Authors `POST` Route
 1. Show Authors on Index Page
 1. Create Authors Show Page
-1. Create Authors Delete Route
+1. Create Authors DELETE Route
 1. Create Authors Edit Page
-1. Create Authors Put Route
+1. Create Authors PUT Route
 
 
 <br>
@@ -38,10 +38,9 @@ type: "lecture"
 
 1. `mkdir blog`
 1. `cd blog`
-1. `npm init`
-- make entry point `server.js`
-1. `npm install express --save`
 1. `touch server.js`
+1. `npm init -y`
+1. `npm install express`
 
 
 <br>
@@ -51,7 +50,7 @@ type: "lecture"
 
 ## Start express
 
-`server.js`:
+Let's start with some boilerplate code inside of `server.js`:
 
 ```javascript
 const express = require('express');
@@ -80,7 +79,7 @@ app.listen(3000, () => {
 <br>
 
 
-`views/index.ejs`:
+Inside of `views/index.ejs`:
 
 ```html
 <!DOCTYPE html>
@@ -116,7 +115,7 @@ app.listen(3000, () => {
 <br>
 
 
-`server.js`:
+Inside of `server.js`:
 
 ```javascript
 app.get('/', (req, res) => {
@@ -135,7 +134,7 @@ app.get('/', (req, res) => {
 1. `mkdir views/authors`
 1. `touch views/authors/index.ejs`
 
-`views/authors.ejs`:
+Inside of `views/authors.ejs`:
 
 ```html
 <!DOCTYPE html>
@@ -174,7 +173,7 @@ app.get('/', (req, res) => {
 <br>
 
 
-`controllers/authors.js`:
+Inside of `controllers/authors.js`:
 
 ```javascript
 const express = require('express');
@@ -186,6 +185,9 @@ router.get('/', (req, res) => {
 
 module.exports = router;
 ```
+
+<br>
+<br>
 
 Use the controller in `server.js`:
 
@@ -202,7 +204,7 @@ app.use('/authors', authorsController);
 
 ## Create Authors New Page
 
-`touch views/authors/new.ejs`
+Inside of `touch views/authors/new.ejs`:
 
 ```html
 <!DOCTYPE html>
@@ -237,7 +239,7 @@ app.use('/authors', authorsController);
 </html>
 ```
 
-create route in `controllers/authors.js`
+Add the create route in `controllers/authors.js`:
 
 ```javascript
 router.get('/new', (req, res) => {
@@ -251,20 +253,77 @@ router.get('/new', (req, res) => {
 <br>
 
 
-## TODO: Connect to MongoDB
+## Connect to MongoDB
 
-1. `npm install mongoose --save`
+1. `npm install mongoose dotenv`
+1. `touch .env`
 1. Connect in `server.js`
 
-```javascript
-const mongoose = require('mongoose');
-//...
-//...farther down the page
-mongoose.connect('mongodb://localhost:27017/blog');
+<br>
+<br>
+<br>
 
-mongoose.connection.once('open', () => {
-    console.log('connected to mongo');
+
+## Add ENV Variables
+
+Inside of `.env`:
+
+```shell
+PORT=3000
+DATABASE_URL=mongodb+srv://<username>:<password>@general-assembly.1wjse.mongodb.net/meen-auth-starter?retryWrites=true&w=majority
+SECRET=feedmeseymour
+```
+
+- Remember to use your own `DATABASE_URL`. Copying the one above will not work. \
+- Remember your `SECRET` should be a totally random string. This matters less in development, but it'll be important when you deploy your apps and have to add the variable to Heroku. 
+
+<br>
+<br>
+<br>
+
+
+## Configure the Database
+
+**Don't forget to include this at the top of `server.js`:**
+
+```js
+require('dotenv').config();
+```
+<br>
+<br>
+<br>
+
+Then add this below, also in `server.js`:
+```js
+// Dependencies 
+const mongoose = require('mongoose');
+
+// Database Configuration
+mongoose.connect(process.env.DATABASE_URL, {
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
+	useFindAndModify: false,
+	useCreateIndex: true,
 });
+
+// Database Connection Error / Success
+const db = mongoose.connection;
+db.on('error', (err) => console.log(err.message + ' is mongod not running?'));
+db.on('connected', () => console.log('mongo connected'));
+db.on('disconnected', () => console.log('mongo disconnected'));
+```
+<br>
+<br>
+<br>
+
+
+**STOP! Check your work.**
+
+Boot up your server with `nodemon` and make sure you should see:
+
+```shell
+server is listening on port: 3000
+mongo connected
 ```
 
 
@@ -295,7 +354,7 @@ module.exports = Author;
 
 ## Create Authors Create Route
 
-1. use body parser in `server.js`
+Use body parser inside of `server.js`:
 
 ```javascript
 app.use(express.urlencoded({ extended: false }));
@@ -306,7 +365,7 @@ app.use(express.urlencoded({ extended: false }));
 <br>
 
 
-`controllers/authors.js`
+Inside of `controllers/authors.js`, let's require the `Author` model and define a create controller:
 
 ```javascript
 const Author = require('../models/authors.js');
@@ -327,7 +386,7 @@ router.post('/', (req, res) => {
 
 ## Show Authors on Index Page
 
-`controllers/authors.js`:
+Inside of `controllers/authors.js`, we'll define an index controller:
 
 ```javascript
 router.get('/', (req, res) => {
@@ -343,7 +402,7 @@ router.get('/', (req, res) => {
 <br>
 <br>
 
-`views/authors/index.ejs`:
+Inside of`views/authors/index.ejs`, we'll index the authors:
 
 ```html
 <main>
@@ -351,7 +410,7 @@ router.get('/', (req, res) => {
     <ul>
         <% for(let i = 0; i < authors.length; i++){ %>
         <li>
-            <a href="/authors/<%=authors[i]._id%>"><%=authors[i].name%></a>
+            <a href="/authors/<%= authors[i]._id %>"><%= authors[i].name %></a>
         </li>
         <% } %>
     </ul>
@@ -365,7 +424,7 @@ router.get('/', (req, res) => {
 
 ## Create Authors Show Page
 
-`touch views/authors/show.ejs`
+Create the file with`touch views/authors/show.ejs`, and add this markup to it:
 
 ```html
 <!DOCTYPE html>
@@ -378,7 +437,7 @@ router.get('/', (req, res) => {
 
 <body>
     <header>
-        <h1>Show Page for <%=author.name%></h1>
+        <h1>Show Page for <%= author.name %></h1>
         <nav>
             <ul>
                 <li>
@@ -394,7 +453,7 @@ router.get('/', (req, res) => {
         <section>
             <h2>Author Attributes:</h2>
             <ul>
-                <li>Name: <%=author.name%></li>
+                <li>Name: <%= author.name %></li>
             </ul>
         </section>
     </main>
@@ -409,7 +468,7 @@ router.get('/', (req, res) => {
 <br>
 
 
-towards the bottom `controllers/authors.js`:
+Toward the bottom `controllers/authors.js`, we'll add a show controller:
 
 ```javascript
 //avoid this handling /new by placing it towards the bottom of the file
@@ -428,10 +487,10 @@ router.get('/:id', (req, res) => {
 <br>
 
 
-## Create Authors Delete Route
+## Create Authors DELETE Route
 
-1. `npm install method-override --save`
-1. use `method-override` in `server.js`:
+1. `npm install method-override`
+1. Use `method-override` in `server.js`:
 
 ```javascript
 const methodOverride = require('method-override');
@@ -443,7 +502,7 @@ app.use(methodOverride('_method'));
 <br>
 <br>
 
-`controllers/authors.js`:
+Inside of `controllers/authors.js`, we'll define our delete controller:
 
 ```javascript
 router.delete('/:id', (req, res) => {
@@ -457,11 +516,11 @@ router.delete('/:id', (req, res) => {
 <br>
 
 
-`views/authors/show.ejs`:
+Let's make sure to use the `_method` URL param to make the delete button work in `views/authors/show.ejs`:
 
 ```html
 <section>
-    <form action="/authors/<%=author._id%>?_method=DELETE" method="post">
+    <form action="/authors/<%= author._id %>?_method=DELETE" method="POST">
         <input type="submit" value="Delete Author" />
     </form>
 </section>
@@ -475,11 +534,11 @@ router.delete('/:id', (req, res) => {
 
 ## Create Authors Edit Page
 
-Create a link on `views/authors/show.ejs`:
+Create a link inside of`views/authors/show.ejs`:
 
 ```html
 <section>
-    <a href="/authors/<%=author._id%>/edit">Edit</a>
+    <a href="/authors/<%= author._id %>/edit">Edit</a>
 </section>
 ```
 
@@ -488,7 +547,7 @@ Create a link on `views/authors/show.ejs`:
 <br>
 
 
-`controllers/authors.js`:
+Let's define the edit controller inside of `controllers/authors.js` like this:
 
 ```javascript
 router.get('/:id/edit', (req, res) => {
@@ -505,7 +564,7 @@ router.get('/:id/edit', (req, res) => {
 <br>
 
 
-`touch views/authors/edit.ejs`
+Next, we'll create an edit page with `touch views/authors/edit.ejs`, and add this markup to it:
 
 ```html
 <!DOCTYPE html>
@@ -518,7 +577,7 @@ router.get('/:id/edit', (req, res) => {
 
 <body>
     <header>
-        <h1>Edit <%=author.name%>'s Info</h1>
+        <h1>Edit <%= author.name %>'s Info</h1>
         <nav>
             <ul>
                 <li>
@@ -532,8 +591,8 @@ router.get('/:id/edit', (req, res) => {
     </header>
     <main>
         <h2>Author Attributes:</h2>
-        <form action="/authors/<%=author._id%>?_method=PUT" method="post">
-            <input type="text" name="name" value="<%=author.name%>" /><br />
+        <form action="/authors/<%= author._id %>?_method=PUT" method="POST">
+            <input type="text" name="name" value="<%= author.name %>" /><br />
             <input type="submit" value="Update Author" />
         </form>
     </main>
@@ -547,9 +606,9 @@ router.get('/:id/edit', (req, res) => {
 <br>
 
 
-## Create Authors Put Route
+## Create Authors PUT Route
 
-`controllers/authors.js`:
+Now we just need to define our update controller inside of `controllers/authors.js`:
 
 ```javascript
 router.put('/:id', (req, res) => {

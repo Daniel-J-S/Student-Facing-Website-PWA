@@ -10,7 +10,6 @@ const blanks = [
     'Project Presentations', 
     'Locked',
     'Holiday',
-    'Two Model CRUD with Mongoose',
 ];
 
 export default function genLinks(data) {

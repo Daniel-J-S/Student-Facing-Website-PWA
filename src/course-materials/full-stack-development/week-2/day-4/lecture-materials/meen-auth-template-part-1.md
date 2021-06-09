@@ -54,7 +54,7 @@ SECRET=feedmeseymour
 ```
 
 - Remember to use your own `DATABASE_URL`. Copying the one above will not work. \
-- Remmeber your SECRET should be a totally random string. This matters less in development, but it'll be important when you deploy your apps and have to add the variable to Heroku. 
+- Remember your `SECRET` should be a totally random string. This matters less in development, but it'll be important when you deploy your apps and have to add the variable to Heroku. 
 
 <br>
 <br>

@@ -17,12 +17,12 @@ type: "lecture"
 1. Create Articles Index
 1. Create Articles New Page
 1. Set up Article Model
-1. Create Articles Post Route
+1. Create Articles POST Route
 1. Show Articles on Index Page
 1. Create Articles Show Page
-1. Create Articles Delete Route
+1. Create Articles DELETE Route
 1. Create Articles Edit Page
-1. Create Articles Put Route
+1. Create Articles PUT Route
 
 
 <br>
@@ -35,7 +35,7 @@ type: "lecture"
 1. `mkdir views/articles`
 1. `touch views/articles/index.ejs`
 
-`views/articles.ejs`:
+Add the markup below to `views/articles.ejs`:
 
 ```html
 <!DOCTYPE html>
@@ -71,7 +71,7 @@ type: "lecture"
 1. `mkdir controllers`
 1. `touch controllers/articles.js`
 
-`controllers/articles.js`:
+Inside `controllers/articles.js`, we'll define our first controller action:
 
 ```javascript
 const express = require('express');
@@ -88,7 +88,7 @@ module.exports = router;
 <br>
 
 
-Use the controller in `server.js`:
+Require and mount controller in `server.js`:
 
 ```javascript
 const articlesController = require('./controllers/articles.js');
@@ -103,7 +103,7 @@ app.use('/articles', articlesController);
 
 ## Create Articles New Page
 
-`touch views/articles/new.ejs`
+`touch views/articles/new.ejs` and add this markup below:
 
 ```html
 <!DOCTYPE html>
@@ -129,7 +129,7 @@ app.use('/articles', articlesController);
 		</nav>
 	</header>
 	<main>
-		<form action="/articles" method="post">
+		<form action="/articles" method="POST">
 			<input type="text" name="title" /><br />
 			<textarea name="body"></textarea><br />
 			<input type="submit" value="Publish Article" />
@@ -141,7 +141,10 @@ app.use('/articles', articlesController);
 
 ```
 
-create route in `controllers/articles.js`
+<br>
+<br>
+
+Next, we'll define a create route in `controllers/articles.js`:
 
 ```javascript
 router.get('/new', (req, res) => {
@@ -157,7 +160,7 @@ router.get('/new', (req, res) => {
 
 ## Set up Article Model
 
-1. `touch models/articles.js`
+`touch models/articles.js` so we can define this model below:
 
 ```javascript
 const mongoose = require('mongoose');
@@ -180,7 +183,7 @@ module.exports = Article;
 
 ## Create Articles Create Route
 
-`controllers/articles.js`:
+Next, inside of `controllers/articles.js`, we'll require the `Article` model and define a create controller:
 
 ```javascript
 const Article = require('../models/articles.js');
@@ -201,7 +204,7 @@ router.post('/', (req, res) => {
 
 ## Show Articles on Index Page
 
-`controllers/articles.js`:
+Let's define an index controller inside of `controllers/articles.js`:
 
 ```javascript
 router.get('/', (req, res) => {
@@ -209,7 +212,7 @@ router.get('/', (req, res) => {
 		res.render('articles/index.ejs', {
 			articles: foundArticles
 		});
-	})
+	});
 });
 ```
 
@@ -218,7 +221,7 @@ router.get('/', (req, res) => {
 <br>
 
 
-`views/articles/index.ejs`:
+Then we can show the articles inside of `views/articles/index.ejs` with this markup:
 
 ```html
 <main>
@@ -226,7 +229,7 @@ router.get('/', (req, res) => {
 	<ul>
 		<% for(let i = 0; i < articles.length; i++){ %>
 		<li>
-			<a href="/articles/<%=articles[i]._id%>"><%=articles[i].title%></a>
+			<a href="/articles/<%=articles[i]._id%>"><%= articles[i].title %></a>
 		</li>
 		<% } %>
 	</ul>
@@ -241,7 +244,7 @@ router.get('/', (req, res) => {
 
 ## Create Articles Show Page
 
-`touch views/articles/show.ejs`
+`touch views/articles/show.ejs` and add this markup below:
 
 ```html
 <!DOCTYPE html>
@@ -254,7 +257,7 @@ router.get('/', (req, res) => {
 
 <body>
 	<header>
-		<h1><%=article.title%></h1>
+		<h1><%= article.title %></h1>
 		<nav>
 			<ul>
 				<li>
@@ -268,7 +271,7 @@ router.get('/', (req, res) => {
 	</header>
 	<main>
 		<section>
-			<%=article.body%>
+			<%= article.body %>
 		</section>
 	</main>
 </body>
@@ -281,7 +284,7 @@ router.get('/', (req, res) => {
 <br>
 
 
-Towards the bottom `controllers/articles.js`:
+Towards the bottom `controllers/articles.js`, we'll add a show controller:
 
 ```javascript
 // avoid this handling /new by placing it towards the bottom of the file
@@ -300,9 +303,9 @@ router.get('/:id', (req, res) => {
 <br>
 
 
-## Create Articles Delete Route
+## Create Articles DELETE Route
 
-`controllers/articles.js`:
+Here's how we can define our `DELETE` controller inside of `controllers/articles.js`:
 
 ```javascript
 router.delete('/:id', (req, res) => {
@@ -317,11 +320,11 @@ router.delete('/:id', (req, res) => {
 <br>
 
 
-`views/articles/show.ejs`:
+Now we just need to ensure our `DELETE` button is structured like this inside of `views/articles/show.ejs`:
 
 ```html
 <section>
-	<form action="/articles/<%=article._id%>?_method=DELETE" method="post">
+	<form action="/articles/<%=article._id%>?_method=DELETE" method="POST">
 		<input type="submit" value="Delete Article" />
 	</form>
 </section>
@@ -347,7 +350,7 @@ Create a link on `views/articles/show.ejs`:
 <br>
 
 
-`controllers/articles.js`:
+Here's how we can define our edit controller inside of `controllers/articles.js`:
 
 ```javascript
 router.get('/:id/edit', (req, res) => {
@@ -363,7 +366,7 @@ router.get('/:id/edit', (req, res) => {
 <br>
 
 
-`touch views/articles/edit.ejs`
+Then we'll `touch views/articles/edit.ejs` and add the below markup for our edit page:
 
 ```html
 <!DOCTYPE html>
@@ -376,7 +379,7 @@ router.get('/:id/edit', (req, res) => {
 
 <body>
 	<header>
-		<h1>Edit <%=article.title%>'s Info</h1>
+		<h1>Edit <%= article.title %>'s Info</h1>
 		<nav>
 			<ul>
 				<li>
@@ -390,9 +393,9 @@ router.get('/:id/edit', (req, res) => {
 	</header>
 	<main>
 		<h2>Article Attributes:</h2>
-		<form action="/articles/<%=article._id%>?_method=PUT" method="post">
-			<input type="text" name="title" value="<%=article.title%>" /><br />
-			<textarea name="body"><%=article.body%></textarea><br />
+		<form action="/articles/<%= article._id %>?_method=PUT" method="POST">
+			<input type="text" name="title" value="<%= article.title %>" /><br />
+			<textarea name="body"><%= article.body %></textarea><br />
 			<input type="submit" value="Update Article" />
 		</form>
 	</main>
@@ -407,9 +410,9 @@ router.get('/:id/edit', (req, res) => {
 <br>
 
 
-## Create Articles Put Route
+## Create Articles PUT Route
 
-`controllers/articles.js`:
+Finally, inside of `controllers/articles.js`, we'll define our update controller:
 
 ```javascript
 router.put('/:id', (req, res) => {
