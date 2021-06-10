@@ -4,7 +4,7 @@ title: "Day 3"
 week: 2
 day: 3
 type: "homepage"
-topics: "CRUD App Mongoose - Delete and Update"
+topics: "CRUD with Mongoose - Delete and Update"
 ---
 
 
