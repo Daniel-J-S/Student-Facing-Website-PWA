@@ -308,6 +308,21 @@ In `views/partials/nav.ejs`:
 <br>
 <br>
 
+## Create a Logout Route
+
+Remember INDUCES!
+
+Inside of `controllers/sessions.js`, we can add:
+```js
+sessionsRouter.delete('/', (req, res) => {
+  req.session.destroy((error) => {
+    res.redirect('/');
+  });
+});
+```
+<br>
+<br>
+<br>
 
 
 **STOP! Check your work.**
