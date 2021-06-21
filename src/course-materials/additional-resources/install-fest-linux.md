@@ -27,10 +27,6 @@ type: "resource"
 - VS Code
 - Git
 - Node.js/NVM/Nodemon
-<!-- - PostgreSQL -->
-<!-- - MongoDB -->
-<!-- - Python -->
-<!-- - Django -->
 - Zoom
 
 <br>
@@ -220,56 +216,8 @@ __pycache__/
 <br>
 
 
-<!--
-### PostgreSQL:
-
-[Click Here For the Guide](https://linuxize.com/post/how-to-install-postgresql-on-ubuntu-18-04/)
 
 
-<br>
-<br>
-
--->
-
-
-<!-- 
-
-### MongoDB:
-
-[Click Here For the Guide](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/#install-mongodb-community-edition)
-
-
-<br>
-<br>
- -->
-
-
-
-<!--
-
-### Python 3 (Comes standard with Ubuntu 18.04):
-
-[Click Here For the Guide for `pip` Installation](https://linuxize.com/post/how-to-install-pip-on-ubuntu-18.04/)
-
-
-<br>
-<br>
-
--->
-
-
-<!--
-
-### Django:
-
-
-```shell
-sudo apt install python3-django
-```
-
-<br>
-<br>
--->
 
 
 
@@ -284,19 +232,6 @@ sudo apt install python3-django
 
 
 ### Recommendations:
-
-<!--
-
-```shell
-zsh:
-```
-[Click Here For the Guide](https://gist.github.com/derhuerst/12a1558a4b408b3b2b6e)
-
-
-
-<br>
-<br>
--->
 
 
 
