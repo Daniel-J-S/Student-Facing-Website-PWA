@@ -8,6 +8,7 @@ const blanks = [
     'Project 3', 
     'Project 4', 
     'Project Presentations', 
+    'Project 3 Planning & Approvals', 
     'Locked',
     'Holiday',
 ];
