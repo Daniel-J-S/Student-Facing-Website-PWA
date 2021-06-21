@@ -134,7 +134,7 @@ app.get('/', (req, res) => {
 1. `mkdir views/authors`
 1. `touch views/authors/index.ejs`
 
-Inside of `views/authors.ejs`:
+Inside of `views/authors/index.ejs`:
 
 ```html
 <!DOCTYPE html>
@@ -204,7 +204,9 @@ app.use('/authors', authorsController);
 
 ## Create Authors New Page
 
-Inside of `touch views/authors/new.ejs`:
+First we`touch views/authors/new.ejs`.
+
+Then we can add the following markup:
 
 ```html
 <!DOCTYPE html>
@@ -232,6 +234,7 @@ Inside of `touch views/authors/new.ejs`:
     <main>
         <form action="/authors" method="POST">
             <input type="text" name="name" />
+            <input type="submit" value="Create Author" />
         </form>
     </main>
 </body>
@@ -269,13 +272,10 @@ router.get('/new', (req, res) => {
 Inside of `.env`:
 
 ```shell
-PORT=3000
 DATABASE_URL=mongodb+srv://<username>:<password>@general-assembly.1wjse.mongodb.net/meen-auth-starter?retryWrites=true&w=majority
-SECRET=feedmeseymour
 ```
 
-- Remember to use your own `DATABASE_URL`. Copying the one above will not work. \
-- Remember your `SECRET` should be a totally random string. This matters less in development, but it'll be important when you deploy your apps and have to add the variable to Heroku. 
+- Remember to use your own `DATABASE_URL`. Copying the one above will not work.
 
 <br>
 <br>
@@ -322,7 +322,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 Boot up your server with `nodemon` and make sure you should see:
 
 ```shell
-server is listening on port: 3000
+Listening ... 
 mongo connected
 ```
 
@@ -339,9 +339,12 @@ mongo connected
 
 ```javascript
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const authorSchema = mongoose.Schema({
+const authorSchema = new Schema({
     name: String
+}, {
+    timestamps: true
 });
 
 const Author = mongoose.model('Author', authorSchema);
@@ -386,7 +389,7 @@ router.post('/', (req, res) => {
 
 ## Show Authors on Index Page
 
-Inside of `controllers/authors.js`, we'll define an index controller:
+Inside of `controllers/authors.js`, we'll refactor the index controller:
 
 ```javascript
 router.get('/', (req, res) => {
@@ -402,7 +405,7 @@ router.get('/', (req, res) => {
 <br>
 <br>
 
-Inside of`views/authors/index.ejs`, we'll index the authors:
+Now we can index the authors inside of`views/authors/index.ejs`:
 
 ```html
 <main>
