@@ -90,7 +90,7 @@ In the world of React there is a plethora of templates and project generators. F
 
 ## How React Works
 
-If you look in the file file structure you'll see a folder called ```public``` and this where our index.html file lives.
+If you look in the file file structure you'll see a folder called `public` and this where our index.html file lives.
 
 ```html
 <!DOCTYPE html>
