@@ -484,7 +484,7 @@ Expected output:
 
 Check that the db has seeded correctly inside `rails dbconsole`
 
-```
+```sql
 SELECT * FROM characters;
 ```
 

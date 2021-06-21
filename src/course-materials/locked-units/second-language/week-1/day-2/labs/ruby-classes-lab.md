@@ -42,7 +42,7 @@ Watch the optional short video [here](https://www.youtube.com/watch?v=mrFq-ETuUe
   - Assign the bird a species at random on `initialize`.  Hint: make a small array and use `.sample`
   - Here is an array of bird species, for your convenience
 
-```
+```shell
   ['Belted Kingfisher', 'Yellow-Billed Cuckoo', 'White-Cheeked Pintail', 'Cinnamon Teal', 'Lesser Scaup', 'Bufflehead', 'Common Goldeneye', 'Fulvous Whistling Duck', 'Hooded Merganser', 'White-Winged Scoter', 'Chimney Swift', 'Rufous Hummingbird', 'Chuck-Wills-Widow', 'Whip-Poor-Will', 'Albatross', 'Ruddy Turnstone', 'Piping Plover', 'Killdeer', 'Laughing Gull', 'Marbled Godwit', 'Least Tern', 'New World Warbler']
 ```
 
@@ -60,7 +60,7 @@ Watch the optional short video here [here](https://www.youtube.com/watch?v=kXJbA
   - Add a `honk` method to your muppet that puts `"#{name} is making a honking sound!"`. Test that it works, comment out your test code.
   - Test the following to make sure it gives the expected output:
 
-```
+```ruby
 q = Muppet.new("K-Rad")
 q.honk
 ```

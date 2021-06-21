@@ -389,7 +389,7 @@ const Card1 = (props) => {
 
 Let's update `CardBody` to make use of the props.
 
-```jsX
+```jsx
 const CardBody = (props) => {
     return (
         <div className="card-body">

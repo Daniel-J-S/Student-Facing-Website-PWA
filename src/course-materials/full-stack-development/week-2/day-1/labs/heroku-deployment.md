@@ -122,39 +122,6 @@ Check out `package.json` make sure everything looks as expected
 
 ![package.json](https://i.imgur.com/KzEzGiw.png)
 
-<br>
-<br>
-<br>
-
-<!-- 
-
-## Set the Node Engine
-
-[You should always specify a Node.js version that matches the runtime you're developing and testing with](https://devcenter.heroku.com/articles/nodejs-support). Without setting this, Heroku will 'guess' a version Node.js for you. One big gotcha is that some newer/updated npm packages just won't run on an older version of Node.js and vice versa.
-
-So let's set the correct version:
-
-<br>
-<br>
-<br>
-
-
-**In Terminal**
-
-```bash
-node --version
-```
-The line returned is the version, currently, I have `v10.11.0`, but you should set it to whatever your version is.
-
-In package.json, you can add `engines` anywhere, just make sure you don't break the JSON format. In this example we are putting it between the auto-generated version and description fields. Don't forget double quotes and a `,`
-
-```json
-  "version": "1.0.0",
-  "engines": {
-    "node": "10.11.0"
-  },
-  "description": "",
-``` -->
 
 <br>
 <br>

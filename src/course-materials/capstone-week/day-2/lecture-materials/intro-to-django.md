@@ -129,7 +129,7 @@ Therefore, from the start, we'll be following the better practice of using a mor
 
 To use PostgreSQL, we need to do a one-time install of the **psycopg2** Python package. First make sure you've navigated to your `django_env` folder and ran `pipenv shell` to activate your virtual environment and then run the following command:
 
-```
+```shell
 $ pipenv install psycopg2-binary
 ```
 
@@ -148,7 +148,7 @@ However, we're not so lucky with SQL databases where we will need to manually cr
 
 Let's create one now in psql for the project we're about to code:
 
-```
+```shell
 $ psql
 someuser=# CREATE DATABASE polls;
 ```

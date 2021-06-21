@@ -186,7 +186,7 @@ This will give you the option to copy the link to your clipboard and make it rea
 #### Command line:
 - Navigate to a directory **OUTSIDE** of the class repo 
 `mkdir` (if you need to)
-- ```$git clone `git@generalassemb.ly:your-github-handle/hfb.git` ``` (use `⌘V` to paste the url from github)
+- `$git clone git@generalassemb.ly:your-github-handle/hfb.git` (use `⌘V` to paste the url from github)
 - The above command should create a new folder inside your current directory and make copy of everything in the Happy Fun Ball remote repository, locally (on your computer) and initialize git. Just like cloning always does!
  Let's check:
   - `cd hfb` into the cloned directory and then
