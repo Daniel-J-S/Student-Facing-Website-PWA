@@ -25,13 +25,17 @@ type: "lecture"
 
 ## Framing
 
-Having worked with functions we know that they are meant to be reusable. Part of the reusability is in accepting arguments, performing an action and returning a value.  
+Having worked with functions we know that they are meant to be reusable. 
+
+Part of the reusability is in accepting arguments, performing an action and returning a value.  
 
 *"`Standard Input` produces `Standard Output`"*.
 
 Now consider that our application contains many Components, some of which may require data points in order to render the UI.  
 
-The data we pass from a `parent > child Component` are called: `props`.  Make note that it is the parent that passes props to a child.
+The data we pass from a `parent > child Component` are called: `props`.
+
+Make note that it is the parent that passes props to a child.
 
 React data flow is `unidirectional` and can only be passed down, and never directly from `child` to `parent` or `sibling` to `sibling`. 
 
@@ -94,12 +98,12 @@ Let's extend the rules for creating Components and working with JSX to now inclu
 
 🚔  Props adhere to the following rules:
 
-- Data is unidirectional passed down from a `parent` > `child` 
-- All Props passed to a child are organized into a single object in the child Component
-- Props are `immutable` and cannot be reassigned a new value within the receiving child Component
+1. Data is unidirectional passed down from a `parent` > `child` 
+1. All Props passed to a child are organized into a single object in the child Component
+1. Props are `immutable` and cannot be reassigned a new value within the receiving child Component
 
-This Rule isn't regarding props but something we will need to keep in mind going forward: 
-- Any Components created using `Array.map()` must be assigned a key prop with a unique value
+This rule doesn't regard props but it is something we'll need to keep in mind going forward: 
+4. Any Components created using `Array.map()` must be assigned a key prop with a unique value
 
 
 <br>
@@ -108,7 +112,7 @@ This Rule isn't regarding props but something we will need to keep in mind going
 
 ### Passing Props
 
-Say for instance we wanted to render the name  that the image represents in our cards example. We could go directly to `CardBody` and do the following: 
+Say for instance we wanted to render the name  that the image represents in our cards example; we could go directly to `CardBody` and do the following: 
 
 ```jsx
 <h5 className="card-title">Santorini</h5>
@@ -131,7 +135,7 @@ A `prop` is written in a `name=value` format like the other html attributes your
 
 Since the `Card1` component is the parent that renders  `CardBody` than it must pass the prop to it's child.
 
-🚔 - Data is unidirectional in React and is passed down from a `parent` > `child` Component
+🚔 Data is unidirectional in React and is passed down from a `parent` > `child` Component
 
 Let's assign CardBody the following `prop`.
 
@@ -139,7 +143,7 @@ Let's assign CardBody the following `prop`.
 <CardBody title="Santorini" />
 ```
 
-Nothing should really change as we have already updated CardBody with that title name. So we need to update the CardBody Component to accept props.
+Nothing should really change as we have already updated CardBody with that title name. So, we need to update the CardBody Component to accept props.
 
 
 <br>
@@ -184,7 +188,9 @@ Each prop passed will be assigned a **`key: value`** pair.
 #### ⏰ Activity - 3min
 
 Let's take a moment to edit our code and try to reassign props.
-- Open the `CardBody` Component and add the following:
+
+
+Open the `CardBody` Component and add the following:
 
 ```js
 console.log('current props.title', props.title);
@@ -206,7 +212,7 @@ So it looks like props was not updated to reflect the edit.
 
 Here is an example of one of the rules of props:
 
-🚔 - Props are immutable which means you can't reassign them within the receiving Component
+🚔 Props are immutable which means you can't reassign them within the receiving Component
 
 So any attempt to change those props directly within the Component will have no effect. 
 
@@ -241,7 +247,7 @@ the result should be...
 
 That didn't seem to work out as planned. 
 
-It seems it outputs `props.title` and not the value
+It seems it outputs `props.title` and not the value:
 
 ```jsx
 <h5 className="card-title">props.title</h5>
@@ -251,7 +257,7 @@ It seems it outputs `props.title` and not the value
 
 It seems we forgot about one of the rules of JSX:
 
-🚔  Any JavaScript code that needs to be executed in JSX must be enclosed in opening/closing curls braces `{}` (Remember, think of `{}` in React like the `<%= %>` in ejs)
+🚔 Any JavaScript code that needs to be executed in JSX must be enclosed in opening/closing curls braces `{}` (Remember, think of `{}` in React like the `<%= %>` in ejs)
 
 ```jsx
 <h5 className="card-title">{props.title}</h5>
@@ -291,21 +297,21 @@ Either way we should expect that if we will need to create multiple cards that t
 
 Let's use some real data and replace the generic placeholder text.
 
-- Create a new file in `src` called `data.js`
-- Paste the following code into the file:
+1. Create a new file in `src` called `data.js`
+1. Paste the following code into the file:
 
 ```js
 export default [
     {
         img: "https://images.unsplash.com/photo-1536514072410-5019a3c69182?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
         title: "Santorini",
-        text: "This was one of the most amazing places I've ever seen. A must see for eveyrone",
+        text: "This was one of the most amazing places I've ever seen. A must see for everyone.",
         url: "https://unsplash.com/s/photos/santorini"
     },
     {
         img: "https://images.unsplash.com/photo-1498712964741-5d33ab9e5017?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=600",
         title: "Zakynthos",
-        text: "This was like being a pirate and we were looking to bury our treasure. It was so isolated and beautiful. ",
+        text: "This was like being a pirate and we were looking to bury our treasure. It was so isolated and beautiful.",
         url: "https://unsplash.com/s/photos/santorini"
     }
 ];
@@ -315,7 +321,7 @@ export default [
 <br>
 
 
-- Import the data into `App.js` as `cardsArr` and add a console.log to confirm it was imported. 
+Import the data into `App.js` as `cardsArr` and add a console.log to confirm it was imported. 
 
 ```js
 // IMPORT DATA
@@ -361,7 +367,7 @@ Now take a look in DevTools and you should see the following:
 
 Each object appears to contain much more info then we passed and each one has a `typeof` set to `Symbol(react.element)`.  `Symbols` were a new data type introduced in ES6 and are meant to be unique, meaning there will not be `Symbol` in this array with the same exact info.  
 
-Something will be needed to distinguish it as unique. React does so by assigning a key called `key`.  
+However, something will be needed to distinguish it as unique; React does so by assigning a key called `key`.  
 
 It is currently set to `null` and React will warn in just a bit when we render the Cards based on the following rule:
 
@@ -431,7 +437,9 @@ Keep in the mind the following:
 
 Now it's time to see all that code refactoring done to `Card1` in action. 
 
-In App comment out `<Card1 />` and `<Card2 />`.  We will now replace those values with the data returned via the `.map()` and stored in `cards`.
+In App comment out `<Card1 />` and `<Card2 />`. 
+
+We will now replace those values with the data returned via the `.map()` and stored in `cards`.
 
 ```jsx
 <section className="cards">
@@ -517,7 +525,7 @@ Since passing props is a requirement in React there are a few shortcuts we can m
 
 
 #### Using The ...spread Operator
-The first is that we can use the `...spread` operator to pass many key:value's down instead of writing them out one at a time. 
+The first is that we can use the `...spread` operator to pass many **`key: value's`** down instead of writing them out one at a time. 
 
 In `Card.js` let's replace all those hard coded props, except `key`, with the `...spread` operator. 
 
@@ -546,7 +554,9 @@ The other shorthand we can use is to update the Child components to create varia
 
 Let's update `CardBody` to make use of Object Destructuring.
 
-Here we use an object as parameter that includes all the prop key names that are being passed down. 
+Here we use an object as parameter that includes all the prop key names that are being passed down.
+
+**NOTE:** When destructuring objects as function parameters, we call this *"Parameter Destructuring"*.
 
 
 ```js
