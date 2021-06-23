@@ -143,7 +143,7 @@ For the omdb api the api key is submitted via a URL query (anything after the ? 
 
 Every API is different so what queries can you submit to an api if any will be in the documentation of that api, for the omdb api...
 
-- `API_KEY`: is your api key
+- `apikey`: is your api key
 
 - `t`: the title of the movie you are searching for
 
@@ -170,13 +170,13 @@ Now let's put the react boilerplate in both of them...
 
 ```jsx
 
-// Define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
+// define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
 const MovieDisplay = (props) => {
-  //The Component must return some JSX
+  // the Component must return some JSX
   return <h1>The MovieDisplay Component</h1>;
 };
 
-// We must export the Component to use it in other files
+// we must export the Component to use it in other files
 export default MovieDisplay;
 ```
 <br>
@@ -192,13 +192,13 @@ export default MovieDisplay;
 
 ```jsx
 
-// Define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
+// define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
 const Form = (props) => {
-  //The Component must return some JSX
+  // the Component must return some JSX
   return <h1>The Form Component</h1>;
 };
 
-// We must export the Component to use it in other files
+// we must export the Component to use it in other files
 export default Form;
 ```
 
@@ -246,9 +246,9 @@ In our form Component we need to return the form in the component's JSX:
 
 ```jsx
 
-// Define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
+// define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
 const Form = (props) => {
-  //The Component must return some JSX
+  // the Component must return some JSX
   return (
     <div>
       <form>
@@ -259,7 +259,7 @@ const Form = (props) => {
   );
 };
 
-// We must export the Component to use it in other files
+// we must export the Component to use it in other files
 export default Form;
 ```
 
@@ -281,11 +281,11 @@ So while App doesn't need the movie data, its children do so it will become the 
 
 So let's head over to App and do the following...
 
-- Create state to hold our movie data
+1. Create state to hold our movie data
 
-- Create a function that is given the search term then does the fetch request for the movie data and stores it in state
+1. Create a function that is given the search term then does the fetch request for the movie data and stores it in state
 
-- Pass the function down to form via props
+1. Pass the function down to form via props
 
 <br>
 <br>
@@ -295,7 +295,7 @@ So let's head over to App and do the following...
 **`App.js`**
 
 ```jsx
-// Import the useState hook from react
+// import the useState hook from react
 
 import { useState } from 'react';
 
@@ -305,26 +305,26 @@ import MovieDisplay from "./components/MovieDisplay";
 import Form from "./components/Form";
 
 function App() {
-  //variable with your apiKey
+  // variable with your apiKey
   const API_KEY = "98e3fb1f";
 
-  //State to hold movie data
+  // state to hold movie data
   const [ movie, setMovie ] = useState(null);
 
-  //Function to getMovies
+  // function to getMovies
   const getMovie = async (searchTerm) => {
     // make fetch request and store response
     const response = await fetch(
       `http://www.omdbapi.com/?apikey=${API_KEY}&t=${searchTerm}`
     );
-    // Parse JSON response into a javascript object
+    // parse JSON response into a javascript object
     const data = await response.json();
-    //set the Movie state to the movie
+    // set the Movie state to the movie
     setMovie(data);
   };
 
   // USE OUR COMPONENTS IN APPs RETURNED JSX
-  // We pass the getMovie function as a prop
+  // we pass the getMovie function as a prop
   return (
     <div className="App">
       <Form getMovie={getMovie} />
@@ -355,16 +355,16 @@ Now that we passed down the getMovie function to form which allows use to pass t
 ```jsx
 // import the useState hook from react
 import { useState } from 'react';
-// Define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
+// define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
 const Form = (props) => {
-  //State to hold the data of our form
+  // state to hold the data of our form
   const [ formData, setFormData ] = useState({
     searchterm: "",
   });
 
-  //handleChange - updates formData when we type into form
+  // handleChange - updates formData when we type into form
   const handleChange = (event) => {
-    //use the event object to detect key and value to update
+    // use the event object to detect key and value to update
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
@@ -375,7 +375,7 @@ const Form = (props) => {
     props.getMovie(formData.searchterm);
   };
 
-  //The Component must return some JSX
+  // the Component must return some JSX
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -429,27 +429,27 @@ import MovieDisplay from "./components/MovieDisplay";
 import Form from "./components/Form";
 
 function App() {
-  //variable with your apiKey
+  // variable with your apiKey
   const API_KEY = "98e3fb1f";
 
-  //State to hold movie data
+  // state to hold movie data
   const [movie, setMovie] = React.useState(null);
 
-  //Function to getMovies
+  // function to getMovies
   const getMovie = async (searchTerm) => {
     // make fetch request and store response
     const response = await fetch(
       `http://www.omdbapi.com/?apikey=${API_KEY}&t=${searchTerm}`
     );
-    // Parse JSON response into a javascript object
+    // parse JSON response into a javascript object
     const data = await response.json();
-    //set the Movie state to the movie
+    // set the Movie state to the movie
     setMovie(data);
   };
 
   // USE OUR COMPONENTS IN APPs RETURNED JSX
-  // We pass the getMovie function as a prop
-  // We pass movie as props to movie display
+  // we pass the getMovie function as a prop
+  // we pass movie as props to movie display
   return (
     <div className="App">
       <Form getMovie={getMovie} />
@@ -475,10 +475,10 @@ Now let's display the data in `MovieDisplay.js`:
 
 ```jsx
 
-// Define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
-// You can also destructure your props directly from the parameter list
+// define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
+// you can also destructure your props directly from the parameter list
 const MovieDisplay = ({ movie }) => {
-  //The Component must return some JSX
+  // the Component must return some JSX
   return (
     <>
       <h1>{movie.Title}</h1>
@@ -489,7 +489,7 @@ const MovieDisplay = ({ movie }) => {
   );
 };
 
-// We must export the Component to use it in other files
+// we must export the Component to use it in other files
 export default MovieDisplay;
 ```
 
@@ -497,21 +497,21 @@ Now you may notice you are getting an error saying cannot read property title of
 
 To fix it we need to make sure movie data exists, we will do the following:
 
-- Make a loaded function that returns the JSX if the data exists
+1. Make a loaded function that returns the JSX if the data exists
 
-- Make a loading function that returns the JSX if it doesn't
+1. Make a loading function that returns the JSX if it doesn't
 
-- Use a ternary operator to determine which function we return
+1. Use a ternary operator to determine which function we return
 
 **We are using functions cause the JSX expressions aren't evaluated until the function is invoked, while just saving a JSX expression in a variable would mean they'd get evaluated right away still triggering the error.**
 
 **Form.js**
 
 ```jsx
-// Define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
-// You can also destructure your props directly from the parameter list
+// define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
+// you can also destructure your props directly from the parameter list
 const MovieDisplay = ({ movie }) => {
-  //function to return loaded JSX
+  // function to return loaded JSX
   const loaded = () => {
     return (
       <>
@@ -523,16 +523,16 @@ const MovieDisplay = ({ movie }) => {
     );
   };
 
-  //function to return loading JSX
+  // function to return loading JSX
   const loading = () => {
     return <h1>No Movie to Display</h1>;
   };
 
-  //Ternary operator will determine which functions JSX we will return
+  // ternary operator will determine which functions JSX we will return
   return movie ? loaded() : loading();
 };
 
-// We must export the Component to use it in other files
+// we must export the Component to use it in other files
 export default MovieDisplay;
 ```
 
