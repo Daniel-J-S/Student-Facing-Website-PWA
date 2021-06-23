@@ -129,13 +129,13 @@ In today's application we will be using the OMDB API to pull information about m
 
 To use the OMDB API you will need an API key so take a moment and get one from here...
 
-- http://www.omdbapi.com/
+- `http://www.omdbapi.com/`
 
 In case you have any trouble with your api key, here is one but please use carefully to not reach request limits: `98e3fb1f`
 
 Test our your key by opening the following url in a new tab:
 
-http://www.omdbapi.com/?apikey=YOURKEY&t=godfather
+`http://www.omdbapi.com/?apikey=YOURKEY&t=godfather`
 
 replace `YOURKEY` with your api key.
 
@@ -348,7 +348,7 @@ Now that we passed down the getMovie function to form which allows use to pass t
 
 - Creating state to track our form value
 - A `handleChange` function to control our form value
-- A `handleSubmit` function that passes the `formData` to the getMovie function we passed via props
+- A `handleSubmit` function that passes the `formState` to the getMovie function we passed via props
 
 `Form.js`
 
@@ -358,21 +358,21 @@ import { useState } from 'react';
 // define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
 const Form = (props) => {
   // state to hold the data of our form
-  const [ formData, setFormData ] = useState({
+  const [ formState, setFormState ] = useState({
     searchterm: "",
   });
 
-  // handleChange - updates formData when we type into form
+    // handleChange - updates formState when we type into form
   const handleChange = (event) => {
-    // use the event object to detect key and value to update
-    setFormData({ ...formData, [event.target.name]: event.target.value });
-  };
+    // use the event object to update value
+    setFormState({ searchterm: event.target.value });
+  }
 
   const handleSubmit = (event) => {
     // prevent page from refreshing on form submission
     event.preventDefault();
     // pass the search term to the getMovie prop
-    props.getMovie(formData.searchterm);
+    props.getMovie(formState.searchterm);
   };
 
   // the Component must return some JSX
@@ -383,7 +383,7 @@ const Form = (props) => {
           type="text"
           name="searchterm"
           onChange={handleChange}
-          value={formData.searchterm}
+          value={formState.searchterm}
         />
         <input type="submit" value="submit" />
       </form>
@@ -493,7 +493,9 @@ const MovieDisplay = ({ movie }) => {
 export default MovieDisplay;
 ```
 
-Now you may notice you are getting an error saying cannot read property title of null. React doesn't know to not render MovieDisplay until we have movie data so it's attempting to render a movie we haven't gotten yet the moment the website loads triggering this error.
+Now you may notice you are getting an error saying cannot read property title of null. 
+
+React doesn't know to not render `MovieDisplay` until we have movie data so it's attempting to render a movie we haven't gotten yet the moment the website loads triggering this error.
 
 To fix it we need to make sure movie data exists, we will do the following:
 
@@ -536,12 +538,17 @@ const MovieDisplay = ({ movie }) => {
 export default MovieDisplay;
 ```
 
-Awesome, now our app is working! Now it would be nice if a movie showed up right away. The problem is we can't just make a call to getMovie in the body of the App Component cause it would...
-- It would make the fetch call
-- It would update the state
-- The Component would re-render
-- GetMovie gets invoked again
-- Creating an infinite loop
+Awesome, now our app is working! 
+
+Now it would be nice if a movie showed up right away. 
+
+The problem is we can't just make a call to `getMovie` in the body of the `App` Component cause it would...
+
+1. It would make the fetch call
+1. It would update the state
+1. The Component would re-render
+1. GetMovie gets invoked again
+1. Creating an infinite loop
 
 Is there a way to have something happen when a Component loads without repeating on every render?
 
@@ -563,7 +570,7 @@ useEffect(() => {}, []);
 
 Notice the first argument is a function, that function will run once when the Component first loads. The second argument is an array. On each render of the Component the items in the array are compared to their value on the previous render and if they are a different value the function will run again. This gives you a way to create logic in a Component that doesn't run on every render.
 
-This is a perfect place to make a call to getMovie!
+This is a perfect place to make a call to `getMovie`!
 
 **`App.js`**
 
