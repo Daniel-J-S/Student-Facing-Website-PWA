@@ -53,9 +53,11 @@ Facebook, the creators of React, have created one for React called, create-react
 
 Let's break it down...
 
-- **NPX** npx is a tool build into npm to run different npm tools one time, so that way you don't have to install them permanent for quick use. This is usually used mainly with project generators and CLI tools.
+- **NPX** npx is a tool built into npm to run different npm tools one time, so that way you don't have to install them permanently for quick use. 
 
-- **create-react-app** tool created by facebook that does one thing, generate a React project with all the fancy tools ready to go (Webpack, ESLint, Babel, more).
+This is mainly used with project generators and CLI tools.
+
+- **create-react-app** This tool wsd created by facebook and it does one thing, generate a React project with all the fancy tools ready to go (Webpack, ESLint, Babel, more).
 
 - **projectName** The name of the folder that will be created with your new project!
 
@@ -127,13 +129,13 @@ In today's application we will be using the OMDB API to pull information about m
 
 To use the OMDB API you will need an API key so take a moment and get one from here...
 
-- http://www.omdbapi.com/
+- `http://www.omdbapi.com/`
 
 In case you have any trouble with your api key, here is one but please use carefully to not reach request limits: `98e3fb1f`
 
 Test our your key by opening the following url in a new tab:
 
-http://www.omdbapi.com/?apikey=YOURKEY&t=godfather
+`http://www.omdbapi.com/?apikey=YOURKEY&t=godfather`
 
 replace `YOURKEY` with your api key.
 
@@ -159,7 +161,7 @@ Convention is to create a components folder in your src folder and build any add
 
 so inside `src/components/` you should create two files...
 
-- `MovieDisplay.j`s
+- `MovieDisplay.js`
 - `Form.js`
 
 Now let's put the react boilerplate in both of them...
@@ -167,16 +169,14 @@ Now let's put the react boilerplate in both of them...
 `MovieDisplay.js`
 
 ```jsx
-// We Must Import the React Library to Use React Hooks
-import React from "react";
 
-// Define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
+// define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
 const MovieDisplay = (props) => {
-  //The Component must return some JSX
+  // the Component must return some JSX
   return <h1>The MovieDisplay Component</h1>;
 };
 
-// We must export the Component to use it in other files
+// we must export the Component to use it in other files
 export default MovieDisplay;
 ```
 <br>
@@ -191,16 +191,14 @@ export default MovieDisplay;
 
 
 ```jsx
-// We Must Import the React Library to Use React Hooks
-import React from "react";
 
-// Define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
+// define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
 const Form = (props) => {
-  //The Component must return some JSX
+  // the Component must return some JSX
   return <h1>The Form Component</h1>;
 };
 
-// We must export the Component to use it in other files
+// we must export the Component to use it in other files
 export default Form;
 ```
 
@@ -216,15 +214,13 @@ Now let's import them and use them in `src/App.js`
 
 
 ```jsx
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 // WE IMPORT OUR COMPONENTS
 import MovieDisplay from "./components/MovieDisplay";
 import Form from "./components/Form";
 
 function App() {
-  // USE OUR COMPONENTS IN APPs RETURNED JSX
+  // USE OUR COMPONENTS IN APP's RETURNED JSX
   return (
     <div className="App">
       <Form />
@@ -244,19 +240,15 @@ export default App;
 
 ## Building out the Form
 
-So in our form Component we need to do the following
-
-- Return the form in the components JSX
+In our form Component we need to return the form in the component's JSX:
 
 **Form.js**
 
 ```jsx
-// We Must Import the React Library to Use React Hooks
-import React from "react";
 
-// Define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
+// define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
 const Form = (props) => {
-  //The Component must return some JSX
+  // the Component must return some JSX
   return (
     <div>
       <form>
@@ -267,7 +259,7 @@ const Form = (props) => {
   );
 };
 
-// We must export the Component to use it in other files
+// we must export the Component to use it in other files
 export default Form;
 ```
 
@@ -289,11 +281,11 @@ So while App doesn't need the movie data, its children do so it will become the 
 
 So let's head over to App and do the following...
 
-- Create state to hold our movie data
+1. Create state to hold our movie data
 
-- Create a function that is given the search term then does the fetch request for the movie data and stores it in state
+1. Create a function that is given the search term then does the fetch request for the movie data and stores it in state
 
-- Pass the function down to form via props
+1. Pass the function down to form via props
 
 <br>
 <br>
@@ -303,37 +295,39 @@ So let's head over to App and do the following...
 **`App.js`**
 
 ```jsx
-import React from "react";
-import logo from "./logo.svg";
+// import the useState hook from react
+
+import { useState } from 'react';
+
 import "./App.css";
 // WE IMPORT OUR COMPONENTS
 import MovieDisplay from "./components/MovieDisplay";
 import Form from "./components/Form";
 
 function App() {
-  //variable with your apiKey
-  const apiKey = "98e3fb1f";
+  // variable with your apiKey
+  const API_KEY = "98e3fb1f";
 
-  //State to hold movie data
-  const [ movie, setMovie ] = React.useState(null);
+  // state to hold movie data
+  const [ movie, setMovie ] = useState(null);
 
-  //Function to getMovies
+  // function to getMovies
   const getMovie = async (searchTerm) => {
     // make fetch request and store response
     const response = await fetch(
-      `http://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`
+      `http://www.omdbapi.com/?apikey=${API_KEY}&t=${searchTerm}`
     );
-    // Parse JSON response into a javascript object
+    // parse JSON response into a javascript object
     const data = await response.json();
-    //set the Movie state to the movie
+    // set the Movie state to the movie
     setMovie(data);
   };
 
   // USE OUR COMPONENTS IN APPs RETURNED JSX
-  // We pass the getMovie function as a prop called moviesearch
+  // we pass the getMovie function as a prop
   return (
     <div className="App">
-      <Form moviesearch={getMovie} />
+      <Form getMovie={getMovie} />
       <MovieDisplay />
     </div>
   );
@@ -353,35 +347,35 @@ export default App;
 Now that we passed down the getMovie function to form which allows use to pass the search term to our `App` Component let's wire up the form by doing the following.
 
 - Creating state to track our form value
-- A handleChange function to control our form value
-- A handleSubmit function that passes the formData to getMovie via the moviesearch prop
+- A `handleChange` function to control our form value
+- A `handleSubmit` function that passes the `formState` to the getMovie function we passed via props
 
 `Form.js`
 
 ```jsx
-import React from "react";
-
-// Define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
+// import the useState hook from react
+import { useState } from 'react';
+// define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
 const Form = (props) => {
-  //State to hold the data of our form
-  const [ formData, setFormData ] = React.useState({
+  // state to hold the data of our form
+  const [ formState, setFormState ] = useState({
     searchterm: "",
   });
 
-  //handleChange - updates formData when we type into form
+    // handleChange - updates formState when we type into form
   const handleChange = (event) => {
-    //use the event object to detect key and value to update
-    setFormData({ ...formData, [event.target.name]: event.target.value });
-  };
+    // use the event object to update value
+    setFormState({ searchterm: event.target.value });
+  }
 
   const handleSubmit = (event) => {
-    //prevent page from refreshing on form submission
+    // prevent page from refreshing on form submission
     event.preventDefault();
-    //pass the search term to moviesearch prop, which is apps getMovie function
-    props.moviesearch(formData.searchterm);
+    // pass the search term to the getMovie prop
+    props.getMovie(formState.searchterm);
   };
 
-  //The Component must return some JSX
+  // the Component must return some JSX
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -389,7 +383,7 @@ const Form = (props) => {
           type="text"
           name="searchterm"
           onChange={handleChange}
-          value={formData.searchterm}
+          value={formState.searchterm}
         />
         <input type="submit" value="submit" />
       </form>
@@ -426,38 +420,39 @@ Currently our App Component has the data and we need to send it to our `MovieDis
 `App.js`
 
 ```jsx
-import React from "react";
-import logo from "./logo.svg";
+// import the useState hook from react
+import { useState } from 'react';
+
 import "./App.css";
 // WE IMPORT OUR COMPONENTS
 import MovieDisplay from "./components/MovieDisplay";
 import Form from "./components/Form";
 
 function App() {
-  //variable with your apiKey
-  const apiKey = "98e3fb1f";
+  // variable with your apiKey
+  const API_KEY = "98e3fb1f";
 
-  //State to hold movie data
+  // state to hold movie data
   const [movie, setMovie] = React.useState(null);
 
-  //Function to getMovies
+  // function to getMovies
   const getMovie = async (searchTerm) => {
     // make fetch request and store response
     const response = await fetch(
-      `http://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`
+      `http://www.omdbapi.com/?apikey=${API_KEY}&t=${searchTerm}`
     );
-    // Parse JSON response into a javascript object
+    // parse JSON response into a javascript object
     const data = await response.json();
-    //set the Movie state to the movie
+    // set the Movie state to the movie
     setMovie(data);
   };
 
   // USE OUR COMPONENTS IN APPs RETURNED JSX
-  // We pass the getMovie function as a prop called moviesearch
-  // We pass movie as props to movie display
+  // we pass the getMovie function as a prop
+  // we pass movie as props to movie display
   return (
     <div className="App">
-      <Form moviesearch={getMovie} />
+      <Form getMovie={getMovie} />
       <MovieDisplay movie={movie} />
     </div>
   );
@@ -479,13 +474,11 @@ Now let's display the data in `MovieDisplay.js`:
 **`MovieDisplay.js`**
 
 ```jsx
-// We Must Import the React Library to Use React Hooks
-import React from "react";
 
-// Define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
-// You can also destructure your props directly from the parameter list
+// define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
+// you can also destructure your props directly from the parameter list
 const MovieDisplay = ({ movie }) => {
-  //The Component must return some JSX
+  // the Component must return some JSX
   return (
     <>
       <h1>{movie.Title}</h1>
@@ -496,32 +489,31 @@ const MovieDisplay = ({ movie }) => {
   );
 };
 
-// We must export the Component to use it in other files
+// we must export the Component to use it in other files
 export default MovieDisplay;
 ```
 
-Now you may notice you are getting an error saying cannot read property title of null. React doesn't know to not render MovieDisplay until we have movie data so it's attempting to render a movie we haven't gotten yet the moment the website loads triggering this error.
+Now you may notice you are getting an error saying cannot read property title of null. 
+
+React doesn't know to not render `MovieDisplay` until we have movie data so it's attempting to render a movie we haven't gotten yet the moment the website loads triggering this error.
 
 To fix it we need to make sure movie data exists, we will do the following:
 
-- Make a loaded function that returns the JSX if the data exists
+1. Make a loaded function that returns the JSX if the data exists
 
-- Make a loading function that returns the JSX if it doesn't
+1. Make a loading function that returns the JSX if it doesn't
 
-- Use a ternary operator to determine which function we return
+1. Use a ternary operator to determine which function we return
 
 **We are using functions cause the JSX expressions aren't evaluated until the function is invoked, while just saving a JSX expression in a variable would mean they'd get evaluated right away still triggering the error.**
 
 **Form.js**
 
 ```jsx
-// We Must Import the React Library to Use React Hooks
-import React from "react";
-
-// Define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
-// You can also destructure your props directly from the parameter list
+// define a function that is our Component, always make sure to declare the props parameter so you can use props in your Component
+// you can also destructure your props directly from the parameter list
 const MovieDisplay = ({ movie }) => {
-  //function to return loaded JSX
+  // function to return loaded JSX
   const loaded = () => {
     return (
       <>
@@ -533,26 +525,30 @@ const MovieDisplay = ({ movie }) => {
     );
   };
 
-  //function to return loading JSX
+  // function to return loading JSX
   const loading = () => {
     return <h1>No Movie to Display</h1>;
   };
 
-  //Ternary operator will determine which functions JSX we will return
+  // ternary operator will determine which functions JSX we will return
   return movie ? loaded() : loading();
 };
 
-// We must export the Component to use it in other files
+// we must export the Component to use it in other files
 export default MovieDisplay;
 ```
 
-Awesome, now our app is working! Now it would be nice if a movie showed up right away. The problem is we can't just make a call to getMovie in the body of the App Component cause it would...
+Awesome, now our app is working! 
 
-- It would make the fetch call
-- It would update the state
-- The Component would re-render
-- GetMovie gets invoked again
-- Creating an infinite loop
+Now it would be nice if a movie showed up right away. 
+
+The problem is we can't just make a call to `getMovie` in the body of the `App` Component cause it would...
+
+1. It would make the fetch call
+1. It would update the state
+1. The Component would re-render
+1. GetMovie gets invoked again
+1. Creating an infinite loop
 
 Is there a way to have something happen when a Component loads without repeating on every render?
 
@@ -564,55 +560,56 @@ Is there a way to have something happen when a Component loads without repeating
 
 ## useEffect
 
-The React useEffect Hook allows us to create things that only happen at certain times.
+The React `useEffect` Hook allows us to create things that only happen at certain times.
 
-The fundamental syntax of useEffect is as follows
+The fundamental syntax of `useEffect` is as follows
 
 ```jsx
-React.useEffect(() => {}, []);
+useEffect(() => {}, []);
 ```
 
 Notice the first argument is a function, that function will run once when the Component first loads. The second argument is an array. On each render of the Component the items in the array are compared to their value on the previous render and if they are a different value the function will run again. This gives you a way to create logic in a Component that doesn't run on every render.
 
-This is a perfect place to make a call to getMovie!
+This is a perfect place to make a call to `getMovie`!
 
 **`App.js`**
 
 ```jsx
-import React from "react";
-import logo from "./logo.svg";
+// import the useState & useEffect hooks from react
+import { useState, useEffect } from 'react';
 import "./App.css";
+
 // WE IMPORT OUR COMPONENTS
 import MovieDisplay from "./components/MovieDisplay";
 import Form from "./components/Form";
 
 function App() {
-  //variable with your apiKey
-  const apiKey = "98e3fb1f";
+  // variable with your apiKey
+  const API_KEY = "98e3fb1f";
 
-  //State to hold movie data
+  // state to hold movie data
   const [movie, setMovie] = React.useState(null);
 
-  //Function to getMovies
+  // function to getMovies
   const getMovie = async (searchTerm) => {
     // make fetch request and store response
     const response = await fetch(
-      `http://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`
+      `http://www.omdbapi.com/?apikey=${API_KEY}&t=${searchTerm}`
     );
-    // Parse JSON response into a javascript object
+    // parse JSON response into a javascript object
     const data = await response.json();
-    //set the Movie state to the movie
+    // set the Movie state to the movie
     setMovie(data);
   };
 
-  //This will run on the first render but not on subsquent renders
-  React.useEffect(() => {
+  // this will run on the first render but not on subsquent renders
+  useEffect(() => {
     getMovie("Clueless");
   }, []);
 
   // USE OUR COMPONENTS IN APPs RETURNED JSX
-  // We pass the getMovie function as a prop called moviesearch
-  // We pass movie as props to movie display
+  // we pass the getMovie function as a prop
+  // we pass movie as props to movie display
   return (
     <div className="App">
       <Form moviesearch={getMovie} />
