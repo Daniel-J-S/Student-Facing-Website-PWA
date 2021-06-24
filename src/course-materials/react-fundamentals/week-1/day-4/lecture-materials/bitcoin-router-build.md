@@ -375,7 +375,7 @@ In this component we will be doing the following
 <br>
 
 
-`currencies.js`
+`Currencies.js`
 
 ```jsx
 import React from "react";
