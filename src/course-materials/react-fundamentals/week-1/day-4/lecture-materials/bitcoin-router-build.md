@@ -88,10 +88,10 @@ reportWebVitals();
 A common convention is to create two folders, components and pages. Any component that is used as a piece of UI goes in the components folder, any component meant to act as a "page" of the website goes in pages.
 
 - Create a components and pages folder
-- Create a currencies.js, main.js, price.js file in the pages folder
+- Create a Currencies.js, Main.js, Price.js file in the pages folder
 - Create the component boilerplate in each component
 
-`main.js`
+`Main.js`
 
 ```jsx
 import React from "react";
@@ -106,7 +106,7 @@ export default Main;
 <br>
 
 
-`currencies.js`
+`Currencies.js`
 
 <br>
 
@@ -122,7 +122,7 @@ export default Currencies;
 
 <br>
 
-`price.js`
+`Price.js`
 
 <br>
 
@@ -157,9 +157,9 @@ import React from "react";
 import "./App.css";
 //Import route and our components
 import { Route } from "react-router-dom";
-import Currencies from "./pages/currencies";
-import Main from "./pages/main";
-import Price from "./pages/price";
+import Currencies from "./pages/Currencies";
+import Main from "./pages/Main";
+import Price from "./pages/Price";
 
 function App() {
   // We will use the Route component to specify each route
@@ -195,9 +195,9 @@ Right now only the Main component is rendering cause we are on the main page, "/
 
 ## Navigation
 
-In your components folder create a` nav.js`:
+In your components folder create a `Nav.js`:
 
-`components/nav.js`
+`components/Nav.js`
 
 ```jsx
 import React from "react";
@@ -246,17 +246,17 @@ Next add the following styles to `index.css`:
 <br>
 
 
-import the nav component into `app.js`:
+import the Nav component into `App.js`:
 
 ```jsx
 import React from "react";
 import "./App.css";
 //Import route and our components
 import { Route } from "react-router-dom";
-import Currencies from "./pages/currencies";
-import Main from "./pages/main";
-import Price from "./pages/price";
-import Nav from "./components/nav";
+import Currencies from "./pages/Currencies";
+import Main from "./pages/Main";
+import Price from "./pages/Price";
+import Nav from "./components/Nav";
 
 function App() {
   // We will use the Route component to specify each route
@@ -295,10 +295,10 @@ import React from "react";
 import "./App.css";
 //Import route and our components
 import { Route, Switch } from "react-router-dom";
-import Currencies from "./pages/currencies";
-import Main from "./pages/main";
-import Price from "./pages/price";
-import Nav from "./components/nav";
+import Currencies from "./pages/Currencies";
+import Main from "./pages/Main";
+import Price from "./pages/Price";
+import Nav from "./components/Nav";
 
 function App() {
   // We will use the Route component to specify each route
@@ -438,7 +438,7 @@ Once you have your api key here is what we will do:
 <br>
 
 
-`price.js`
+`Price.js`
 
 ```jsx
 import React from "react";
