@@ -452,7 +452,7 @@ const Price = (props) => {
   const url = `http://rest-sandbox.coinapi.io/v1/exchangerate/${symbol}/USD?apikey=${apiKey}`;
 
   //state to hold the coin data
-  const [coin, setCoin] = React.useState("null");
+  const [coin, setCoin] = React.useState(null);
 
   //function to fetch coin data
   const getCoin = async () => {
