@@ -37,15 +37,7 @@ Build a prototype of this short order receipts tracker.
 
 ## Instructions
 
-Start you server by doing the following:
-
-- Ppen your terminal
-- `cd` into the [./korilla-receipts](./korilla-receipts) folder
-- Run **npm install** to install all dependencies
-- Run **npm start** to start the server
-
-
-You can also choose to work on this codebase using this [CodeSandbox Starter](https://codesandbox.io/s/korilla-receipts-starter-donod?file=/src/App.js).
+You will build out this codebase using this [CodeSandbox Starter](https://codesandbox.io/s/korilla-receipts-starter-donod?file=/src/App.js).
 
 <br>
 <br>
