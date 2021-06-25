@@ -12,7 +12,7 @@ topics: "Handling Input With React & Building an API w/Express"
 
 #### Handling Input With React & Building an API w/Express
 
-
+- [**Activity:** Review Project 3 Requirements](/unit-projects/unit-three-project-requirements)
 - [**Lecture:** Handling Input With React](/react-fundamentals/week-1/day-5/lecture-materials/handling-input-in-react/)
 - [**Lecture:** Creating an API with Express Build](/react-fundamentals/week-1/day-5/lecture-materials/creating-an-api-with-express)
 - [**Lab:** Korilla Receipts](/react-fundamentals/week-1/day-5/labs/korilla-receipts/) - **Non-Deliverable**
