@@ -17,7 +17,7 @@ const Results = connectStateResults(({ searchState, searchResults, children }) =
 const Hit = ({ hit }) => {
     return (
         <div style={{display: "flex", alignItems: "center" }}>
-            <img style={{ height: 25, margin: 0 }} src={logo} alt={hit.title} />
+            <img style={{ height: 25, margin: "0px 5px 0px 0px" }} src={logo} alt={hit.title} />
             <Link to={hit.url}>{hit.title}</Link>
         </div>
     );
