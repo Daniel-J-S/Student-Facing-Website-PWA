@@ -62,7 +62,8 @@ Use this as an exercise to practice the skills we've learned in class so far.
 
 1. Install the following:
     - `npm install express cors`
-    - `npm install --save-dev nodemon`
+
+You should have `nodemon` already installed globally. If not: `npm install nodemon -g`
 
 <br>
 <br>
