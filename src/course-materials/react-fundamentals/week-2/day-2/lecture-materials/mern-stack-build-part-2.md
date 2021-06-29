@@ -123,7 +123,6 @@ export default App;
 Let's create our routes:
 
 ```jsx
-import { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import Index from "../pages/Index";
 import Show from "../pages/Show";
@@ -241,7 +240,7 @@ So let's update Main to have:
 1. State to hold our list of people
 1. Function to make the api call for people
 1. Function to create a new person
-1. UseEffect to make initial call for people list
+1. `useEffect` to make initial call for people list
 1. Pass the people state and the create function to Index
 
 <br>
@@ -309,7 +308,6 @@ export default Main;
 Let's now display the people in `Index.js`:
 
 ```jsx
-import { useState } from "react";
 import { Link } from "react-router-dom"
 
 function Index(props) {
