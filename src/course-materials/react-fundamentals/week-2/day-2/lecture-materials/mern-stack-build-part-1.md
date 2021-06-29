@@ -43,6 +43,8 @@ In this build we will:
 
 ## Setting up the Express app
 
+*Make files `touch .env .gitignore server.js`*
+
 1. Create a new node project `npm init -y`
 1. Install dependencies `npm install dotenv mongoose express cors morgan`
 1. Install dev dependencies `npm install --save-dev nodemon`
@@ -54,8 +56,6 @@ In this build we will:
     "dev": "nodemon server.js"
 }
 ```
-
-*Make files `touch .env .gitignore server.js`*
 
 5. Put the following `.gitignore`
 
@@ -90,8 +90,8 @@ Let's build out the minimum to get `server.js` running:
 ////////////////////////////////
 // get .env variables
 require("dotenv").config();
-// pull PORT from .env, give default value of 3000
-const { PORT = 3000 } = process.env;
+// pull PORT from .env, give default value of 4000
+const { PORT = 4000 } = process.env;
 // import express
 const express = require("express");
 // create application object
@@ -131,9 +131,9 @@ Let's update our `server.js` to include a database connection:
 ////////////////////////////////
 // get .env variables
 require("dotenv").config();
-// pull PORT from .env, give default value of 3000
+// pull PORT from .env, give default value of 4000
 // pull MONGODB_URL from .env
-const { PORT = 3000, MONGODB_URL } = process.env;
+const { PORT = 4000, MONGODB_URL } = process.env;
 // import express
 const express = require("express");
 // create application object
@@ -151,8 +151,8 @@ mongoose.connect(MONGODB_URL, {
 });
 // Connection Events
 mongoose.connection
-    .on("open", () => console.log("Your are connected to mongoose"))
-    .on("close", () => console.log("Your are disconnected from mongoose"))
+    .on("open", () => console.log("You are connected to mongoose"))
+    .on("close", () => console.log("You are disconnected from mongoose"))
     .on("error", (error) => console.log(error));
 
 ///////////////////////////////
@@ -192,9 +192,9 @@ app.listen(PORT, () => console.log(`listening on PORT ${PORT}`));
 ////////////////////////////////
 // get .env variables
 require("dotenv").config();
-// pull PORT from .env, give default value of 3000
+// pull PORT from .env, give default value of 4000
 // pull MONGODB_URL from .env
-const { PORT = 3000, MONGODB_URL } = process.env;
+const { PORT = 4000, MONGODB_URL } = process.env;
 // import express
 const express = require("express");
 // create application object
@@ -215,8 +215,8 @@ mongoose.connect(MONGODB_URL, {
 });
 // Connection Events
 mongoose.connection
-    .on("open", () => console.log("Your are connected to mongoose"))
-    .on("close", () => console.log("Your are disconnected from mongoose"))
+    .on("open", () => console.log("You are connected to mongoose"))
+    .on("close", () => console.log("You are disconnected from mongoose"))
     .on("error", (error) => console.log(error));
 
 ///////////////////////////////
@@ -296,9 +296,9 @@ Let's add an Update and Delete API Route to `server.js`:
 ////////////////////////////////
 // get .env variables
 require("dotenv").config();
-// pull PORT from .env, give default value of 3000
+// pull PORT from .env, give default value of 4000
 // pull MONGODB_URL from .env
-const { PORT = 3000, MONGODB_URL } = process.env;
+const { PORT = 4000, MONGODB_URL } = process.env;
 // import express
 const express = require("express");
 // create application object
@@ -319,8 +319,8 @@ mongoose.connect(MONGODB_URL, {
 });
 // Connection Events
 mongoose.connection
-  .on("open", () => console.log("Your are connected to mongoose"))
-  .on("close", () => console.log("Your are disconnected from mongoose"))
+  .on("open", () => console.log("You are connected to mongoose"))
+  .on("close", () => console.log("You are disconnected from mongoose"))
   .on("error", (error) => console.log(error));
 
 ///////////////////////////////
@@ -371,24 +371,24 @@ app.post("/people", async (req, res) => {
   }
 });
 
-// PEOPLE CREATE ROUTE
-app.put("/people/:id", async (req, res) => {
+// PEOPLE DELETE ROUTE
+app.delete("/people/:id", async (req, res) => {
   try {
     // send all people
-    res.json(
-      await People.findByIdAndUpdate(req.params.id, req.body, { new: true })
-    );
+    res.json(await People.findByIdAndRemove(req.params.id));
   } catch (error) {
     //send error
     res.status(400).json(error);
   }
 });
 
-// PEOPLE CREATE ROUTE
-app.delete("/people/:id", async (req, res) => {
+// PEOPLE UPDATE ROUTE
+app.put("/people/:id", async (req, res) => {
   try {
     // send all people
-    res.json(await People.findByIdAndRemove(req.params.id));
+    res.json(
+      await People.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    );
   } catch (error) {
     //send error
     res.status(400).json(error);
