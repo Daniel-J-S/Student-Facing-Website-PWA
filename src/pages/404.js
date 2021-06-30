@@ -4,7 +4,11 @@ import { Link } from 'gatsby';
 
 export default ({ location }) => {
     return (
-        <Layout pageTitle="Page Not Found" location={location} crumbLabel={"Page Not Found"}>
+        <Layout 
+            pageTitle="Page Not Found"
+            centerContent={true} 
+            location={location} 
+            crumbLabel={"Page Not Found"}>
             <main>
                 <h1>Not Found</h1>
                 <p>Sorry the page you requested was not found</p>

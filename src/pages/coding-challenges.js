@@ -9,7 +9,11 @@ export default ({ data, location }) => {
     const html = allMarkdownRemark.edges[0].node.html;
 
     return (
-        <Layout pageTitle={"Coding Challenges"} location={location} crumbLabel={"Coding Challenges"}>
+        <Layout 
+            pageTitle={"Coding Challenges"} 
+            location={location}
+            centerContent={true} 
+            crumbLabel={"Coding Challenges"}>
             <main dangerouslySetInnerHTML={{__html: html}} />
         </Layout>
     );

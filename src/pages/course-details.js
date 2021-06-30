@@ -10,7 +10,8 @@ export default ({ data, location }) => {
     return (
         <Layout
             pageTitle={"Home"} 
-            location={location} 
+            location={location}
+            centerContent={true} 
             crumbLabel={"Course Details"}>
             <main dangerouslySetInnerHTML={{__html: html}} />
         </Layout>
