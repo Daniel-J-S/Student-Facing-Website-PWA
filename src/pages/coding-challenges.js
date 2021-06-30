@@ -12,7 +12,6 @@ export default ({ data, location }) => {
         <Layout 
             pageTitle={"Coding Challenges"} 
             location={location}
-            centerContent={true} 
             crumbLabel={"Coding Challenges"}>
             <main dangerouslySetInnerHTML={{__html: html}} />
         </Layout>

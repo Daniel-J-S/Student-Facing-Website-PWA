@@ -10,7 +10,6 @@ export default ({ data, location }) => {
 
     return (
         <Layout 
-            centerContent={true} 
             pageTitle={"Home"} 
             location={location} 
             crumbLabel={"Home"}>

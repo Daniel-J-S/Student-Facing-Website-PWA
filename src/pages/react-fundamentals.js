@@ -13,7 +13,7 @@ export default({ data, location }) => {
 
     return (
         <Layout
-          centerContent={true} 
+           
           pageTitle="React Fundamentals" 
           location={location} 
           crumbLabel={"React Fundamentals"}>

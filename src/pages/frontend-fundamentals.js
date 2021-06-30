@@ -12,7 +12,6 @@ export default({ data, location }) => {
 
     return (
         <Layout
-          centerContent={true} 
           pageTitle="Frontend Fundamentals" 
           location={location} 
           crumbLabel={"Frontend Fundamentals"}>
@@ -30,13 +29,6 @@ export default({ data, location }) => {
               <br />
               <h2>Project Week</h2>  
               { week3 }
-              {/* Use this to lock content 
-              <br />
-              <hr />
-              <br />
-              <h2>Presentations</h2>  
-              { week4 } 
-              */}
             </main>
         </Layout>
     );

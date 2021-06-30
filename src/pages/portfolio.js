@@ -9,8 +9,7 @@ export default ({ data, location }) => {
     const html = allMarkdownRemark.edges[0].node.html;
 
     return (
-        <Layout 
-            centerContent={true} 
+        <Layout  
             pageTitle={"Home"} 
             location={location} 
             crumbLabel={"Home"}>

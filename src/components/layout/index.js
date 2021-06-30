@@ -47,7 +47,6 @@ export default ({
                     homeworkSubmissionLink={site.siteMetadata.homeworkSubmissionLink}
                 />
                 <div 
-                    style={centerContent ? {margin: '0 auto'} : {}}
                     className={styles.innerContainer}>
                     <Search />
                     <div className={styles.breadContainer}>

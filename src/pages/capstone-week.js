@@ -12,8 +12,7 @@ export default({ data, location }) => {
 
 
     return (
-        <Layout
-          centerContent={true} 
+        <Layout 
           pageTitle="Capstone Week" 
           location={location} 
           crumbLabel={"Capstone Week"}>

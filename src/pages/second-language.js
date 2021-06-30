@@ -13,7 +13,7 @@ export default({ data, location }) => {
 
     return (
         <Layout
-          centerContent={true} 
+           
           pageTitle="Second Language" 
           location={location} 
           crumbLabel={"Second Language"}>

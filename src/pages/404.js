@@ -6,7 +6,6 @@ export default ({ location }) => {
     return (
         <Layout 
             pageTitle="Page Not Found"
-            centerContent={true} 
             location={location} 
             crumbLabel={"Page Not Found"}>
             <main>

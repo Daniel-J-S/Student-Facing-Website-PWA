@@ -14,7 +14,6 @@ export default({ data, location }) => {
 
     return (
         <Layout
-          centerContent={true} 
           pageTitle="Full-Stack Development" 
           location={location} 
           crumbLabel={"Full-Stack Development"}>
@@ -27,13 +26,6 @@ export default({ data, location }) => {
               <br />
               <h2>Week 2</h2>  
               { week2}
-              {/* Uncomment to unlock
-              <br />
-              <hr />
-              <br />
-              <h2>Project Week</h2>  
-              { week3 }   
-              */}
             </main>
         </Layout>
     );
