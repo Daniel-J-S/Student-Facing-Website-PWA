@@ -67,10 +67,9 @@ All content is subject to change at Instructors discretion.
 <br>
 <br>
 
-<div style="color: grey;">
 
-### 🔒 Unit Four: Second Language
-<!-- ### [<u>Unit Four: Second Language</u>](/second-language) -->
+<!-- ### 🔒 Unit Four: Second Language -->
+### [<u>Unit Four: Second Language</u>](/second-language)
 
 | Week  | Topics |
 | ----- | ------ |
@@ -82,6 +81,7 @@ All content is subject to change at Instructors discretion.
 <br>
 
 
+<div style="color: grey;">
 
 
 <!-- ### [<u>Unit Five: Capstone Essentials</u>](/capstone-week) -->
