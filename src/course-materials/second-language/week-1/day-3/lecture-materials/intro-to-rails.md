@@ -409,7 +409,8 @@ In a seperate location (**NOT inside your Rails project folder**), perform the f
 * Make a new Rails app called `blog_app_api`.
 * Remember the `--api` flag. If you forget, **delete this app and start over**.
 * Remember the `-d postgresql`. If you forget, **delete this app and start over**.
-* Create the db.
+* `cd blog_app_api`
+* Create the db with `rails db:create`
 * Generate a migration for creating a table called **posts**. `rails g migration CreatePosts`.
 * In the migration file, set up the `posts` table to have columns for `title`, `author`, and `content` (all strings).
 * Run the migration.
@@ -471,11 +472,11 @@ All this does for now is wire up our app so that we use Active Record on our Tod
 
 Active Record, as an ORM Framework, gives us several mechanisms, the most important being the ability to:
 
-- represent models and their data
-- represent associations between these models
-- represent inheritance hierarchies through related models
-- validate models before they are saved into the database
-- perform database operations in an object-oriented fashion
+- Represent models and their data
+- Represent associations between these models
+- Represent inheritance hierarchies through related models
+- Validate models before they are saved into the database
+- Perform database operations in an object-oriented fashion
 
 Active Record is the M in MVC - the model - which is the layer of the system responsible for representing business data and logic.
 
