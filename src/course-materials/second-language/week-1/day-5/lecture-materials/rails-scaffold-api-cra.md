@@ -776,7 +776,7 @@ Since our data is rendered all the way down in the `Notice` component but state 
 **App.js**
 
 ```jsx
-  function handleDelete(noticeId) {
+  async function handleDelete(noticeId) {
     try {
       const notices = await fetch(`http://localhost:3000/notices/${noticeId}`, {
         method: 'DELETE',
