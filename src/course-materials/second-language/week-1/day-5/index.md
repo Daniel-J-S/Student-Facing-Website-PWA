@@ -21,3 +21,4 @@ topics: "Rails Scaffold & CRA & Catch Up on Labs"
 
 - [**Activity:** Review Project 4 Requirements](/unit-projects/unit-four-project-requirements)
 
+- [**Extra Credit Lab/Homework:** Rails Scaffolding and Automated Testing Lab](/second-language/week-1/day-5/labs/rails-scaffold-testing)
