@@ -5,7 +5,7 @@ type: "Project Prompt"
 topics: "Unit Projects"
 ---
 
-# Project #4: Ruby on Rails and React as a Team
+# Project Four: Ruby on Rails and React as a Team
 
 <br>
 <br>
