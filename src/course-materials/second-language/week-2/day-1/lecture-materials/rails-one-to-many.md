@@ -2,7 +2,7 @@
 track: "Second Language"
 title: "Rails One to Many Relationships"
 week: 2
-day: 3
+day: 1
 type: "lecture"
 ---
 

@@ -2,7 +2,7 @@
 track: "Second Language"
 title: "One to Many Relationships (Frontend)"
 week: 2
-day: 3
+day: 1
 type: "lecture"
 ---
 
