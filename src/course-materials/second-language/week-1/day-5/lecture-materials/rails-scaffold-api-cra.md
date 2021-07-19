@@ -776,7 +776,7 @@ Since our data is rendered all the way down in the `Notice` component but state 
 **App.js**
 
 ```jsx
-  function handleDelete(noticeId) {
+  async function handleDelete(noticeId) {
     try {
       const notices = await fetch(`http://localhost:3000/notices/${noticeId}`, {
         method: 'DELETE',
@@ -849,13 +849,13 @@ function Notices({ notices, handleDelete }) {
 
 **Notice.js**
 ```jsx
-function Notice(props) {
+function Notice({ notice, handleDelete }) {
     return (
       <div className="notice">
-         <h3>{props.notice.title}</h3>
-         <p>{props.notice.author}</p>
-         <small>{props.notice.phone}</small>
-         <button onClick={()=> props.handleDelete(props.notice.id)}>X</button>
+         <h3>{notice.title}</h3>
+         <p>{notice.author}</p>
+         <small>{notice.phone}</small>
+         <button onClick={() => handleDelete(notice.id)} >X</button>
        </div>
     );
 }
@@ -877,11 +877,16 @@ Here is the strategy for our `Update` functionality:
 
 Where does `state` for all of this go?
 
-The data for `notice` belongs all the way in app since we're making our AJAX requests and updating that state there. 
+The data for `notice` still belongs all the way in app since we're making our AJAX requests and updating that state there. 
 
-We'll also need a new piece of state for showing or hiding an edit form inside the `Notice` component.
+<br>
+
+However, we need a new piece of state for showing or hiding an edit form inside the `Notice` component.
 
 Let's start with the `Notice` component.
+
+<br>
+<br>
 
 Let's import `useState` from `react` and initialize it as `editFormVisible` state set to false.
 
@@ -889,16 +894,16 @@ Let's import `useState` from `react` and initialize it as `editFormVisible` stat
 ```jsx
 import { useState } from 'react';
 
-function Notice(props) {
+function Notice({ notice, handleDelete }) {
 
   const [editFormVisible, setEditFormVisible ] = useState(false);
 
   return (
     <div className="notice">
-       <h3>{props.notice.title}</h3>
-       <p>{props.notice.author}</p>
-       <small>{props.notice.phone}</small>
-       <button onClick={()=> props.handleDelete(props.notice)}>X</button>
+       <h3>{notice.title}</h3>
+       <p>{notice.author}</p>
+       <small>{notice.phone}</small>
+       <button onClick={()=> handleDelete(props.notice)}>X</button>
      </div>
   );
 }
@@ -913,7 +918,7 @@ export default Notice;
 **... then we import our Form component**
 
 ```js
-import Form from './Form.js';
+import Form from './Form';
 ```
 
 
@@ -951,10 +956,10 @@ function toggleForm() {
         <Form />
         :
         <div className="notice">
-          <h3>{props.notice.title}</h3>
-          <p>{props.notice.author}</p>
-          <small>{props.notice.phone}</small>
-          <button onClick={()=> props.handleDelete(props.notice)}>X</button>
+          <h3>{notice.title}</h3>
+          <p>{notice.author}</p>
+          <small>{notice.phone}</small>
+          <button onClick={()=> handleDelete(props.notice)}>X</button>
           <button onClick={toggleForm}>Edit</button>
         </div>
       }
@@ -969,7 +974,7 @@ Let's pass down our `notice` & `toggleForm` into our Form
 
 ```jsx
 <Form 
-  notice={props.notice}
+  notice={notice}
   toggleForm={toggleForm}
 />
 ```
@@ -1018,7 +1023,6 @@ Let's write our update function and send it down
 
 ```js
 async function handleUpdate(formInputs) {
-  event.preventDefault();
   try {
     /* 
       we'll destructure the formInputs values so we can seperate the id,
@@ -1162,7 +1166,8 @@ There are a few more things we need to add in `Notice.js` to tie our update toge
   function handleSubmit(event) {
     event.preventDefault();
     if (props.notice) {
-      props.handleUpdate(formState)
+      props.handleUpdate(formState);
+      props.toggleForm();
     } else {
       props.handleSubmit(formState);
     }
