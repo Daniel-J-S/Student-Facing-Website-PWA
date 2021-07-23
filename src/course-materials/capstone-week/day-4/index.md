@@ -7,7 +7,7 @@ type: "homepage"
 topics: "Capstone Week & Intro to Python Containers & Django Part 3 & Beyond"
 ---
 
-# Week 2 - Day 4
+# Week 1 - Day 4
 
 #### Capstone Week & Intro to Python Containers & Django Part 3 & Beyond
 
@@ -15,15 +15,3 @@ topics: "Capstone Week & Intro to Python Containers & Django Part 3 & Beyond"
 - <a href="https://docs.djangoproject.com/en/3.2/intro/tutorial03/" target="_blank" rel="noopener noreferrer"><strong>Lecture:</strong> Intro to Django Part 3 & Beyond</a>
 - [**Practice Lab** Python Containers](/capstone-week/day-4/labs/python-containers-lab)
 
-
-
-
-<!-- 
-<hr>
-
-### Lesson Recordings
-
-- [**Intro to Python Control Containers**]()
-- [**Intro to Django Part 3**]()
-
--->

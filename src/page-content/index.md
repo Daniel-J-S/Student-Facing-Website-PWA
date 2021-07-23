@@ -81,12 +81,11 @@ All content is subject to change at Instructors discretion.
 <br>
 <br>
 
-<div style="color: grey;">
 
 
 
-<!-- ### [<u>Unit Five: Capstone Essentials</u>](/capstone-week) -->
-### 🔒 Unit Five: Capstone Essentials
+### [<u>Unit Five: Capstone Essentials</u>](/capstone-week)
+<!-- ### 🔒 Unit Five: Capstone Essentials -->
 
 | Week  | Topics |
 | ----- | ------ |
@@ -98,4 +97,4 @@ All content is subject to change at Instructors discretion.
 <!-- | Post Graduation  | [Guide for building a Portfolio Site](/portfolio)|  -->
 
 
-</div>
+<div style="color: grey;"></div>

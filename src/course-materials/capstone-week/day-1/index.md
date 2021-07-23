@@ -8,7 +8,7 @@ topics: "Group Project Presentations & Intro to Capstone Week"
 ---
 
 
-# Week 2 - Day 1
+# Week 1 - Day 1
 
 #### Group Project Presentations & Intro to Capstone Week
 
