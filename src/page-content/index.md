@@ -90,11 +90,13 @@ All content is subject to change at Instructors discretion.
 | Week  | Topics |
 | ----- | ------ |
 | 11/12  | Intro to Python/Django Week, Self Directed Learning, Review & Capstone Project and Graduation 🥳 🎉|
-| Post Graduation  | Guide for building a Portfolio Site| 
+| Post Graduation  | [Guide for building a Portfolio Site](/portfolio)| 
+
+
+<!-- | Post Graduation  | Guide for building a Portfolio Site|  -->
 
 
 
-<!-- | Post Graduation  | [Guide for building a Portfolio Site](/portfolio)|  -->
 
 
 <div style="color: grey;"></div>
