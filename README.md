@@ -1,14 +1,9 @@
+# Student-Facing PWA for SEIR "Everest" 09/07
 
-# Student-Facing PWA for SEIR "Everest" 05/10
-
-
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/6032fa58-ee1b-41d1-abaa-23668e9615c3/deploy-status)](https://app.netlify.com/sites/seir-everest/deploys)
-
-![everest](https://images.theconversation.com/files/318067/original/file-20200302-18287-i7bt82.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop)
+[![Netlify Status]()
 
 - **Author:** [DanielJS](https://github.com/myDeveloperJourney)
-- **Version:** 2.1.1
+- **Version:** 2.1.2
 
 <br>
 <br>
@@ -21,36 +16,41 @@
 - PrismJS (syntax highlighting)
 - MarkdownRemark
 - Netlify
+- Algolia Search
+- SCSS
 
 <br>
 <br>
 <br>
 
 ## Change Log
+
 <br>
 
 **v2.1.0**
+
 - Adds change log 😎
 - Adds scroll progress bar
 - Adds header links
 
-
 **v2.1.1**
+
 - Adds developer guides
 - Adds genLinks Utility
 - Removes "Coding Challenges" page for further development
 
+**v2.1.2**
+
+- Adds Search Capability w/ Algolia
+- Improves CSS loading efficiency
 
 <br>
 <br>
 <br>
-
 
 ## Future Enhancements
-- Page Search Functionality
+
 - Authentication
 - "Student Dashboard" for viewing course progress, outstanding assignments, % homework completion
 - Feedback Submission form
 - Instructor-facing dashboard for notes and lesson-prep content
-
-

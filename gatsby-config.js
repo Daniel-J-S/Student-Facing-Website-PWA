@@ -5,7 +5,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'SEIR "Everest" 05/10',
+    title: 'SEIR 09/07',
     author: 'DanielJS',
     currentYear: new Date().getFullYear(),
     description: 'An interactive website for students currently enrolled in the General Assembly Software Engineering Immersive remote program',
@@ -19,7 +19,7 @@ module.exports = {
     ],
     homeworkSubmissionLink: {
       title: 'Submit Homework',
-      href: 'https://forms.gle/WbW9cLTEqBiCJjZu6'
+      href: 'https://forms.gle/w3P4Bw3hYFbTQf8o9'
     }
   },
   plugins: [
