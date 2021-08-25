@@ -2,7 +2,7 @@
 title: "Home"
 ---
 
-# Welcome to SEIR
+# Welcome to SEIR "Challengers" 09/07
 
 This website contains the course curriculum and learning assigmments for General Assembly's SEIR program.
 

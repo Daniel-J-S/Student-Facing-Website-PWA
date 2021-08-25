@@ -1,9 +1,9 @@
-# Student-Facing PWA for SEIR "Everest" 09/07
+# Student-Facing PWA for SEIR "Challengers" 09/07
 
 [![Netlify Status]()
 
 - **Author:** [DanielJS](https://github.com/myDeveloperJourney)
-- **Version:** 2.1.2
+- **Version:** 2.2.2
 
 <br>
 <br>
@@ -41,8 +41,11 @@
 
 **v2.1.2**
 
-- Adds Search Capability w/ Algolia
 - Improves CSS loading efficiency
+
+**v2.2.2**
+
+- Adds Search Capability w/ Algolia
 
 <br>
 <br>

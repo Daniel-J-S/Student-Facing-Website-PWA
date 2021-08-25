@@ -8,7 +8,7 @@ import genLinks from '../utils/genLinks';
 
 export default({ data, location }) => {
 
-   const { week1, week2, week3 } = genLinks(data.allMarkdownRemark.edges);
+   const { week1 } = genLinks(data.allMarkdownRemark.edges);
 
     return (
         <Layout
@@ -19,6 +19,7 @@ export default({ data, location }) => {
             <main>
               <h2>Week 1</h2>  
               { week1 }
+              {/* 
               <br />
               <hr />
               <br />
@@ -28,7 +29,7 @@ export default({ data, location }) => {
               <hr />
               <br />
               <h2>Project Week</h2>  
-              { week3 }
+              { week3 } */}
             </main>
         </Layout>
     );
