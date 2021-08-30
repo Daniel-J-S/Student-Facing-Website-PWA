@@ -62,10 +62,10 @@ All content is subject to change at Instructors discretion.
 
 <!-- ### [<u>Unit Four: Second Language</u>](/second-language) -->
 
-| Week | Topics                                                                              |
-| ---- | ----------------------------------------------------------------------------------- |
-| 9    | Relational Databases, SQL, Ruby Fundamentals, Rails & Full Stack With Rails & React |
-| 10   | Project Week & 1:M & M:M Relationships Bonus Content                                |
+| Week | Topics                                                                             |
+| ---- | ---------------------------------------------------------------------------------- |
+| 9    | Relational Databases, SQL, Python Fundamentals, Full Stack Development with Django |
+| 10   | Project Week                                                                       |
 
 <br>
 <br>
@@ -78,6 +78,7 @@ All content is subject to change at Instructors discretion.
 | --------------- | --------------------------------------------------------------------------------------------------- |
 | 11/12           | Intro to Python/Django Week, Self Directed Learning, Review & Capstone Project and Graduation 🥳 🎉 |
 | Post Graduation | Guide for building a Portfolio Site                                                                 |
-| <!--            | Post Graduation                                                                                     | [Guide for building a Portfolio Site](/portfolio) | --> |
+
+<!-- | Post Graduation | [Guide for building a Portfolio Site](/portfolio) |  -->
 
 </div>
