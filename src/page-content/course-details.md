@@ -19,12 +19,11 @@ You will be required to meet 80% completion of homework assignments at the end o
 
 ## Schedule and Holidays
 
-- Start date: **05/10/2021**
-- End date: **08/04/2021**
-- Classroom runtime: **Monday-Friday 10 AM - 6 PM EST**  
-<!-- - Office Hours: **Monday - Thursday (6PM - 10PM EST) and Sunday (4PM - 9PM EST)** -->
-- Outcomes: **Wednesdays from  4:30 - 6PM EST**
-- Holidays: **05/31, 06/18, 07/05**
+- Start date: **09/07/2021**
+- End date: **12/03/2021**
+- Classroom runtime: **Monday-Friday 9 AM - 5 PM EST**  
+- Outcomes: **Wednesdays from  3:30 - 5PM EST**
+- Holidays: **09/11, 11/24, 11/25 & 11/26**
 
 <br>
 <br>
@@ -48,12 +47,11 @@ You will be required to meet 80% completion of homework assignments at the end o
 
 | Name  | Role |
 | ----- | ----- |
-| Ira Herman  |  Lead Instructor 
 | Daniel Scott  |  Lead Instructor 
-| Ayla Ex | Instructional Associate 
-| Paul Chapman | Instructional Associate
-| Kira Maples | Outcomes Coach
-| Michael Merlo | Teachers Assistant
+| Michael Siller  |  Lead Instructor 
+| Michael Jennings | Instructional Associate 
+| Jamie Popovics | Outcomes Coach
+| TBD | Teachers Assistant
 
 
 
@@ -110,86 +108,18 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 ### We will walk through this together the first time!
 
 * Depending on the assignment, your homework will be completed on [repl.it](https://repl.it/), [CodeSandbox](https://codesandbox.io/), [GitHub Enterprise](https://git.generalassemb.ly/), or [GitHub](https://github.com/)
-* Fill out this [Google Form](https://forms.gle/7Q5U8q5wtTqeBdTZ6) with a link for that specific homework. It will be the same Google Form for each homework
-<!-- * **Homework is due one week from the day it was assigned** -->
+* Fill out this [Google Form](https://forms.gle/t9wWuPgrsV1jChJf8) with a link for that specific homework. It will be the same Google Form for each homework
+* **Homework is generally due the following morning of class unless specified otherwise by your instructional team**
 * If homework is marked `incomplete`, you may be asked to re-submit it; a new timeline will be discussed how long you have to re-submit the homework
 
 <br>
 <br>
-
-<!-- ### Homework/Project Assignments & Due Dates
-
-<br>
-<br>
-
-
-<h3 style="color: crimson;">Unit 1</h3>
-
-<br>
-<br>
-
-| Assignment | Due Date |
-|  ------------- | ---------|
-| [JS Arrays Lab](/frontend-fundamentals/week-1/day-2/labs/javascript-arrays-lab/)  | 10/20/20 |
-| [JS Objects Lab](/frontend-fundamentals/week-1/day-4/labs/guess-the-number-game-lab/) | 10/22/20 | 
-| [DOM Menu Lab Part 1](/frontend-fundamentals/week-1/day-5/labs/dom-menu-lab-part-1/) | 10/23/20 |
-| [Flexbox/Grid Lab](/frontend-fundamentals/week-2/day-1/labs/flexbox-and-grid-lab/) | 10/26/20 |
-| [My Developer Skills Lab](/frontend-fundamentals/week-2/day-2/labs/my-developer-skills-lab/) | 10/27/20 |
-| [AJAX Weather Lab](/frontend-fundamentals/week-2/day-4/labs/build-a-weather-app-with-ajax/) | 10/29/20 |
-| [Project 1](/unit-projects/unit-one-project-requirements/) | 10/29/20 |
-
-<br>
-<br>
-
-<h3 style="color: crimson;">Unit 2</h3>
-
-<br>
-<br>
-
-|  |  |
-|  ------------- | ---------|
-| Express Dev Skills [Parts 1](/full-stack-development/week-1/day-3/labs/express-dev-skills-part-1/) & [Part 2](full-stack-development/week-1/day-4/labs/express-dev-skills-lab-part-2/)| 11/12/20 |
-| [Mongoose Flights Part 1 ](full-stack-development/week-1/day-5/labs/mongoose-flights-part-1/)| 11/17/20 |
-| [Project 2](/unit-projects/unit-two-project-requirements) | 11/19/20 |
-
-
-<br>
-<br>
-
-<h3 style="color: crimson;">Unit 3</h3>
-
-<br>
-<br>
-
-|  |  |
-|  ------------- | ---------|
-| [React Floor Plan](react-fundamentals/week-1/day-1/labs/react-floorplan/) | 11/30/20 |
-| [React Components Lab](/react-fundamentals/week-1/day-2/lecture-materials/intro-to-react-components/#lab-define-the-remaining-components-for-mastermind)| 12/01/20 |
-| [React Students Lab](/react-fundamentals/week-2/day-1/labs/react-students-lab/)| 12/07/20 |
-| [Styling React Components Lab](/react-fundamentals/week-2/day-1/labs/styling-components-lab/)| 12/07/20 |
-| [React Star Wars Lab](/react-fundamentals/week-2/day-2/lecture-materials/react-with-ajax/)| 12/08/20 |
-
--->
-
 <br>
 <br>
 
 ## Lesson Recordings
 
-Lessons will be recorded and embedded as a link into the lesson day homepage and in Slack the next morning 
-
-<!-- 
-<br>
-
-*Also, be sure to checkout the video below for more details*
-
-<br>
-<br>
-<br>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wGSg8CybMG8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
--->
+Lessons will be recorded and embedded as a link in the "Recordings Channel" in Slack the next morning 
 
 <br>
 <br>
@@ -201,6 +131,7 @@ Lessons will be recorded and embedded as a link into the lesson day homepage and
 * At the end of each unit, you will create a repo in your personal github for your project... i.e. Project One, Project Two, or whatever you've decided to name your project ...etc
 * Pushing your labs/homework to your personal github is not recommended
 
+<br>
 <br>
 <br>
 
