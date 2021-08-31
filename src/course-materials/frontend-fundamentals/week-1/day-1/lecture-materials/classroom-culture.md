@@ -28,12 +28,11 @@ type: "lecture"
 
 ## Instructors
 
-- Ira Herman - Instructor Lead
+- Michael Siller - Instructor Lead
 - Daniel Scott - Instructor Lead
-- Ayla Ex - Instructional Associate 
-- Paul Chapman - Instructor Associate
-- Michael Merlo - Teachers Assistant
-- Kira Maples - Outcomes Coach
+- Michael Jennings - Instructional Associate 
+- Jamie Popovics - Outcomes Coach
+- TBD - Teachers Assistant
 
 
 <br>
@@ -74,16 +73,15 @@ type: "lecture"
 
 ### Slack
 
-#### 6 channels
+#### 7 channels
 
-	- #seir-everest-classroom
-	- #seir-everest-help
-	- #seir-everest-homework
-	- #seir-everest-linux-users
-	- #seir-everest-outcomes
-	- #seir-everest-random
-	- #seir-everest-recordings
-	- #seir-everest-resources
+	- #seir_ec_9-7-classroom
+	- #seir_ec_9-7-help
+	- #seir_ec_9-7-homework
+	- #seir_ec_9-7-outcomes
+	- #seir_ec_9-7-random
+	- #seir_ec_9-7-recordings
+	- #seir_ec_9-7-resources
 	
 	
 
