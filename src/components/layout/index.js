@@ -13,7 +13,6 @@ import '../../styles/base.scss';
 import styles from './layout.module.scss';
 
 export default ({
-        centerContent, 
         pageTitle, 
         children, 
         location, 
