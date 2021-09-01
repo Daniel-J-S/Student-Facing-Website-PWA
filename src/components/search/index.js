@@ -22,11 +22,12 @@ export default (props) => {
                 setSearchState({...searchState, query: ''})
             };
             return (
-                <div style={{display: "flex", alignItems: "center" }}>
-                    <img style={{ height: 25, margin: "0px 5px 0px 0px" }} src={logo} alt={hit.title} />
-                    <Link to={hit.url} onClick={handleClick}>
-                        <Highlight hit={hit} attribute="title" />
+                <div style={{display: 'flex', flexDirection: 'column' }}>
+                    <Link to={hit.url} onClick={handleClick} style={{display: 'flex', alignItems: 'center'}}>
+                        <img style={{ height: 25, margin: '0px 5px 0px 0px' }} src={logo} alt={hit.title} />
+                        <Highlight hit={hit} attribute='title' />
                     </Link>
+                    <p>{hit.content.slice(0, 125) + ' ...'}</p>
                 </div>
             );
         });
@@ -45,7 +46,7 @@ export default (props) => {
                 />
             </Results>
             <Configure 
-                hitsPerPage={5}
+                hitsPerPage={3}
             />
         </InstantSearch>
     );
