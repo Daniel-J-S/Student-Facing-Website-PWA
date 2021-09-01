@@ -22,9 +22,9 @@ export default (props) => {
                 setSearchState({...searchState, query: ''})
             };
             return (
-                <div style={{display: "flex", alignItems: "center" }} onClick={handleClick}>
+                <div style={{display: "flex", alignItems: "center" }}>
                     <img style={{ height: 25, margin: "0px 5px 0px 0px" }} src={logo} alt={hit.title} />
-                    <Link to={hit.url}>
+                    <Link to={hit.url} onClick={handleClick}>
                         <Highlight hit={hit} attribute="title" />
                     </Link>
                 </div>
