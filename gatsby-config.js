@@ -26,6 +26,12 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet-async`,
     {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/layout`),
+      },
+    },
+    {
       resolve: `gatsby-plugin-html-attributes`,
       options: {
         lang: `en`

@@ -1,19 +1,25 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-
-import Layout from '../components/layout';
+import Head from '../components/head';
+import { Breadcrumb } from 'gatsby-plugin-breadcrumb';
 
 export default ({ data, location }) => {
     const { allMarkdownRemark } = data;
 
     const html = allMarkdownRemark.edges[0].node.html;
     return (
-        <Layout
-            pageTitle={"Home"} 
-            location={location} 
-            crumbLabel={"Course Details"}>
-            <main dangerouslySetInnerHTML={{__html: html}} />
-        </Layout>
+        <>
+        <Head pageTitle="Course Details"/>
+            <div style={{margin: '1rem 0 1.5rem 0'}}>
+                <Breadcrumb 
+                    location={location} 
+                    crumbLabel={'Course Details'}
+                    crumbStyle={{ color: '#000' }}
+                    crumbActiveStyle={{ color: 'crimson' }} 
+                />
+        </div>
+        <main dangerouslySetInnerHTML={{__html: html}} />
+    </>
     );
 
 }
