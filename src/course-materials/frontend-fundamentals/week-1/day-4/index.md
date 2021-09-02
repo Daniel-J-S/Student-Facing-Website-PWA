@@ -4,29 +4,15 @@ title: "Day 4"
 week: 1
 day: 4
 type: "homepage"
-topics: "Intro to JS Objects and Classes" 
+topics: "JavaScript Functions & Scope"
 ---
-
 
 # Week 1 - Day 4
 
-#### Intro to JS Objects and Classes
-- [**Warmup**: Setting up for Success](/frontend-fundamentals/week-1/day-3/lecture-materials/setting-up-for-success/)
-- [**Lecture:** Intro to JavaScript Objects](/frontend-fundamentals/week-1/day-4/lecture-materials/intro-to-javascript-objects/)
-- [**Lecture:** Intro to JavaScript Classes](/frontend-fundamentals/week-1/day-4/lecture-materials/intro-to-javascript-classes/)
-- [**Lab:** Guess the Number Game Lab](/frontend-fundamentals/week-1/day-4/labs/guess-the-number-game-lab/) - **Deliverable**
-- [**Lab:** JavaScript Classes Lab](/frontend-fundamentals/week-1/day-4/labs/javascript-classes-lab/) - **Non-Deliverable**
+#### JavaScript Functions & Scope 
 
+- [**Lecture:** JavaScript Arrays](/frontend-fundamentals/week-1/day-4/lecture-materials/intro-to-javascript-arrays/)
+- [**Lab**: JavaScript Arrays Lab](/frontend-fundamentals/week-1/day-4/labs/javascript-arrays-lab/) - **Deliverable**
+- [**Lecture**: JavaScript Functions and Scope](/frontend-fundamentals/week-1/day-4/lecture-materials/intro-to-javascript-functions-and-scope/) 
+- [**Lab**: JavaScript Functions Lab](/frontend-fundamentals/week-1/day-4/labs/javascript-functions-lab/) - **Non-Deliverable**
 
-<!-- 
-
-<hr>
-
-#### Lesson Recordings
-
-- [**Morning Warmup**]()
-- [**Discussion on Scope**]()
-- [**Intro to JS Objects**]()
-- [**Intro to JS Classes**]() 
-- [**Brief Setup of JS Objects Lab**]() 
- -->

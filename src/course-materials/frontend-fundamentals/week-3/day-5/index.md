@@ -4,14 +4,10 @@ title: "Day 5"
 week: 3
 day: 5
 type: "homepage"
-topics: "Project 1 Presentations"
+topics: "Project 1"
 ---
 
 
 # Week 3 - Day 5
 
-#### Students Present Project 1
-
-<!-- - [**Recording:** Students Present Project 1]() -->
-- **Activity:** Students Present Project 1
-- [**Activity:** "Install-Fest" Phase Two](/frontend-fundamentals/week-3/day-5/lecture-materials/install-fest-phase-two) 
+#### Students Work on Project 1

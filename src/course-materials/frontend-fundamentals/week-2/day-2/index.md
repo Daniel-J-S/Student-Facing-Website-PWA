@@ -4,26 +4,15 @@ title: "Day 2"
 week: 2
 day: 2
 type: "homepage"
-topics: "DOM Manipulation With jQuery"
+topics: "Intro to CSS Flexbox/Grid & Responsive Design"
 ---
-
 
 # Week 2 - Day 2
 
-#### Intro to DOM Manipulation With jQuery
+#### Intro to CSS Flexbox/Grid & Responsive Design
 
-- [**Warmup:** Flexbox Practice](/frontend-fundamentals/week-2/day-2/lecture-materials/flexbox-practice/)
-- [**Lecture:** Intro To jQuery Part 1](/frontend-fundamentals/week-2/day-2/lecture-materials/intro-to-jquery-part-1/)
-- [**Lecture** Array Iterators Walkthrough](/frontend-fundamentals/week-2/day-2/lecture-materials/array-iterators-walkthrough/) 
-- [**Lab:** Array Iterators Lab](/frontend-fundamentals/week-2/day-2/labs/array-iterators-lab/) - **Non-Deliverable**
-
-<!-- 
-<hr>
-
-#### Lesson Recordings
-
-- [**jQuery Part 1**]()
-- [**Array Iterators Walkthrough**]() 
- -->
-
-
+- [**Lecture:** Intro to CSS Flexbox and Grid](/frontend-fundamentals/week-2/day-2/lecture-materials/intro-to-css-flexbox-and-css-grid/)
+- [**Lecture:** Intro to Responsive Design](/frontend-fundamentals/week-2/day-2/lecture-materials/intro-to-responsive-design/)
+- [**Lab:** CSS Flexbox and Grid Lab](/frontend-fundamentals/week-2/day-2/labs/flexbox-and-grid-lab/) - **Deliverable**
+- [**Activity** Review Project 1 Requirements](/unit-projects/unit-one-project-requirements/)
+- **Activity** Begin Planning Project 1
