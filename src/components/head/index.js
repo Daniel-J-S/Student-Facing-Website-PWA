@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useStaticQuery, graphql } from 'gatsby';
 
-export default ({ pageTitle }) => {
+const Head = ({ pageTitle }) => {
     const { site } = useStaticQuery(graphql`
         query {
             site {
@@ -26,4 +26,6 @@ export default ({ pageTitle }) => {
             ]}
         />
     );
-}
+};
+
+export default Head;

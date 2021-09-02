@@ -6,7 +6,7 @@ import logo from '../../../static/ga-logo.svg';
 
 import "./responsiveNav.css";
 
-export default ({ 
+const ResponsiveNav = ({ 
     title, 
     navigationLinks, 
     homeworkSubmissionLink }) => {
@@ -81,4 +81,6 @@ export default ({
       </button>
     </div>
   );
-}
+};
+
+export default ResponsiveNav;

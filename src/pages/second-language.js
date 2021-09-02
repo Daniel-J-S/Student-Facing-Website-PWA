@@ -5,7 +5,7 @@ import genLinks from '../utils/genLinks';
 import Head from '../components/head';
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb';
 
-export default({ data, location }) => {
+const SecondLanguage = ({ data, location }) => {
     
   const { week1 } = genLinks(data.allMarkdownRemark.edges);
 
@@ -17,8 +17,8 @@ export default({ data, location }) => {
               <Breadcrumb 
                   location={location} 
                   crumbLabel={'Second Language'}
-                  crumbStyle={{ color: '#000' }}
-                  crumbActiveStyle={{ color: 'crimson' }} 
+                  
+                   
               />
           </div>
           <h1>Second Language</h1>
@@ -34,7 +34,7 @@ export default({ data, location }) => {
           </main>
         </>
     );
-}
+};
 
 export const query = graphql`
 query {
@@ -62,3 +62,6 @@ query {
     }
   }
 `;
+
+
+export default SecondLanguage;

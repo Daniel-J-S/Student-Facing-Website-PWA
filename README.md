@@ -3,7 +3,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/88cb8447-bce7-4d16-826f-a0098f34d57f/deploy-status)](https://app.netlify.com/sites/seir-challengers/deploys)
 
 - **Author:** [DanielJS](https://github.com/myDeveloperJourney)
-- **Version:** 2.2.3
+- **Version:** 2.3.0
 
 <br>
 <br>
@@ -54,6 +54,16 @@
 - Optimizes Layout Loading with Gatsby Layout Plugin
 - Fixes responsive nav, drop down menu not closing on click
 
+**v2.3.0**
+
+- Add content to Algolia Search Results
+- Updates Gatsby to v3
+- Updates React & React DOM to v17
+- Updates community plugins
+- Updates community plugin config
+- Updates all peer dependencies
+- Updates all components to updated syntax
+- Patches minor bugs in gatsby config & plugin options
 
 <br>
 <br>

@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Head from '../components/head';
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb';
 
-export default ({ data, location }) => {
+const CourseDetails = ({ data, location }) => {
     const { allMarkdownRemark } = data;
 
     const html = allMarkdownRemark.edges[0].node.html;
@@ -14,15 +14,15 @@ export default ({ data, location }) => {
                 <Breadcrumb 
                     location={location} 
                     crumbLabel={'Course Details'}
-                    crumbStyle={{ color: '#000' }}
-                    crumbActiveStyle={{ color: 'crimson' }} 
+                    
+                     
                 />
         </div>
         <main dangerouslySetInnerHTML={{__html: html}} />
     </>
     );
 
-}
+};
 
 export const query = graphql`
     query {
@@ -40,3 +40,5 @@ export const query = graphql`
     }
     }
 `;
+
+export default CourseDetails;

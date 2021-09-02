@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import Head from '../components/head';
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb';
 
-export default ({ location }) => {
+const NotFound = ({ location }) => {
     return (
         <>
         <Head pageTitle="Page Not Found"/>
@@ -11,8 +11,7 @@ export default ({ location }) => {
               <Breadcrumb 
                   location={location} 
                   crumbLabel={'Page Not Found'}
-                  crumbStyle={{ color: '#000' }}
-                  crumbActiveStyle={{ color: 'crimson' }} 
+                   
               />
           </div>
             <main>
@@ -22,4 +21,6 @@ export default ({ location }) => {
             </main>
         </>
     );
-}
+};
+
+export default NotFound;

@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 import genLinks from '../utils/genLinks';
 
 
-export default({ data, location }) => {
+const CaptstoneWeek = ({ data, location }) => {
     
   const { week1  } = genLinks(data.allMarkdownRemark.edges);
 
@@ -22,7 +22,7 @@ export default({ data, location }) => {
             </main>
         </Layout>
     );
-}
+};
 
 export const query = graphql`
 query {
@@ -50,3 +50,5 @@ query {
     }
   }
 `;
+
+export default CaptstoneWeek;

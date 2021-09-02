@@ -5,7 +5,7 @@ import { InstantSearch, Hits, SearchBox, connectStateResults, Configure, Highlig
 import logo from '../../../static/ga-logo.svg';
 
 
-export default (props) => {
+const Search = (props) => {
         const [searchState, setSearchState ] = useState({});
         const searchClient = algoliasearch('T0NZ90NSF1', '2df3a7f3f34749616a0a5cafe81cccc5');
 
@@ -51,3 +51,5 @@ export default (props) => {
         </InstantSearch>
     );
 };
+
+export default Search;

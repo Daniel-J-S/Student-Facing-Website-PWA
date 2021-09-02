@@ -6,7 +6,7 @@ import { Breadcrumb } from 'gatsby-plugin-breadcrumb';
 
 
 
-export default ({ data, location }) => {
+const Page = ({ data, location }) => {
     const { markdownRemark } = data;
     return (
         <>
@@ -15,8 +15,6 @@ export default ({ data, location }) => {
             <Breadcrumb 
                 location={location} 
                 crumbLabel={markdownRemark.frontmatter.title} 
-                crumbStyle={{ color: '#000' }}
-                crumbActiveStyle={{ color: 'crimson' }} 
             />
         </div>
             <main dangerouslySetInnerHTML={{ __html: markdownRemark.html }}/>
@@ -34,3 +32,5 @@ export const query = graphql`
         }
     }
 `;
+
+export default Page;

@@ -7,9 +7,10 @@ import Search from '../search';
 
 import '../../styles/base.scss';
 
-import styles from './layout.module.scss';
+import * as styles from './layout.module.scss';
+import 'gatsby-plugin-breadcrumb/gatsby-plugin-breadcrumb.css';
 
-export default ({ children  }) => {
+const Layout = ({ children  }) => {
 
         const { site } = useStaticQuery(graphql`
         query {
@@ -46,4 +47,6 @@ export default ({ children  }) => {
             </div>
         </Fragment>
     );
-}
+};
+
+export default Layout;

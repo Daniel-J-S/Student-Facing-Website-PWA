@@ -6,7 +6,7 @@ import Head from '../components/head';
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb';
 
 
-export default({ data, location }) => {
+const FullstackDevelopment = ({ data, location }) => {
   
 
    const { week1 } = genLinks(data.allMarkdownRemark.edges);
@@ -19,8 +19,8 @@ export default({ data, location }) => {
               <Breadcrumb 
                   location={location} 
                   crumbLabel={'Full Stack Development'}
-                  crumbStyle={{ color: '#000' }}
-                  crumbActiveStyle={{ color: 'crimson' }} 
+                  
+                   
               />
             </div>
             <h1>Full Stack Development</h1>
@@ -36,7 +36,7 @@ export default({ data, location }) => {
             </main>
         </>
     );
-}
+};
 
 export const query = graphql`
 query {
@@ -64,3 +64,5 @@ query {
     }
   }
 `;
+
+export default FullstackDevelopment;

@@ -34,7 +34,13 @@
 }
 
 a.breadcrumb__link {
-  line-height: 2.5rem;
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
+span.breadcrumb__separator {
+  font-size: 1.2rem;
+  margin: 0 .25rem 0 0;
 }
 
 h1:first-of-type {
