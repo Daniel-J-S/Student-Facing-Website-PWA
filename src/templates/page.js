@@ -1,20 +1,24 @@
 import React from 'react';
-
 import { graphql } from 'gatsby';
+import Head from '../components/head';
+import { Breadcrumb } from 'gatsby-plugin-breadcrumb';
 
-import Layout from '../components/layout';
 
 
-export default ({ data, location }) => {
+
+const Page = ({ data, location }) => {
     const { markdownRemark } = data;
     return (
-        <Layout
-            
-            pageTitle={markdownRemark.frontmatter.title} 
-        location={location}crumbLabel={markdownRemark.frontmatter.title}
-        >
+        <>
+        <Head pageTitle={markdownRemark.frontmatter.title} />
+        <div style={{margin: '1rem 0 1.5rem 0'}}>
+            <Breadcrumb 
+                location={location} 
+                crumbLabel={markdownRemark.frontmatter.title} 
+            />
+        </div>
             <main dangerouslySetInnerHTML={{ __html: markdownRemark.html }}/>
-        </Layout>
+        </>
     );
 };
 
@@ -28,3 +32,5 @@ export const query = graphql`
         }
     }
 `;
+
+export default Page;

@@ -1,23 +1,28 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from '../components/layout';
+import { Breadcrumb } from 'gatsby-plugin-breadcrumb';
+import Head from '../components/head';
 
-export default ({ data, location }) => {
+const IndexPage = ({ data, location }) => {
     const { allMarkdownRemark } = data;
 
     const html = allMarkdownRemark.edges[0].node.html;
 
     return (
-        <Layout 
-            pageTitle={"Home"} 
-            location={location} 
-            crumbLabel={"Home"}>
-            <main dangerouslySetInnerHTML={{__html: html}} />
-        </Layout>
+        <>
+            <Head pageTitle="Home"/>
+                <div style={{margin: '1rem 0 1.5rem 0'}}>
+                    <Breadcrumb 
+                        location={location} 
+                        crumbLabel={' '}
+                    />
+                </div>
+                <main dangerouslySetInnerHTML={{__html: html}} />
+        </>
     );
 
-}
+};
 
 export const query = graphql`
     query {
@@ -35,3 +40,5 @@ export const query = graphql`
     }
     }
 `;
+
+export default IndexPage;

@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 
-export default ({ data, location }) => {
+const CodingChallenges = ({ data, location }) => {
     const { allMarkdownRemark } = data;
 
     const html = allMarkdownRemark.edges[0].node.html;
@@ -17,7 +17,7 @@ export default ({ data, location }) => {
         </Layout>
     );
 
-}
+};
 
 export const query = graphql`
     query {
@@ -35,3 +35,6 @@ export const query = graphql`
     }
     }
 `;
+
+
+export default CodingChallenges;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import styles from '../styles/course-content-display.module.scss';
+import * as styles from '../styles/course-content-display.module.scss';
 
 const blanks = [
     'Project 1', 

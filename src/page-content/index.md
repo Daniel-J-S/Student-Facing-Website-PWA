@@ -64,21 +64,7 @@ All content is subject to change at Instructors discretion.
 
 | Week | Topics                                                                             |
 | ---- | ---------------------------------------------------------------------------------- |
-| 9    | Relational Databases, SQL, Python Fundamentals, Full Stack Development with Django |
-| 10   | Project Week                                                                       |
+| 9    | Relational Databases, SQL & Python Fundamentals |
+| 10   | Full Stack Development with Django              |
+| 11-12   | Thanksgiving Holiday, Group Project Period & Graduation  🥳🎉         |
 
-<br>
-<br>
-
-<!-- ### [<u>Unit Five: Capstone Essentials</u>](/capstone-week) -->
-
-### 🔒 Unit Five: Capstone Essentials
-
-| Week            | Topics                                                                                              |
-| --------------- | --------------------------------------------------------------------------------------------------- |
-| 11/12           | Intro to Python/Django Week, Self Directed Learning, Review & Capstone Project and Graduation 🥳 🎉 |
-| Post Graduation | Guide for building a Portfolio Site                                                                 |
-
-<!-- | Post Graduation | [Guide for building a Portfolio Site](/portfolio) |  -->
-
-</div>

@@ -23,11 +23,3 @@ topics: "Project 1 & Deployment"
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/j5TCiBwLtAk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<!-- 
-
-<hr>
-
-#### Lesson Recordings
-
-- [**Deployment to Github Pages Demo**]()
- -->
