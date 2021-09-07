@@ -30,7 +30,8 @@ type: "lecture"
 
 - Michael Siller - Instructor Lead
 - Daniel Scott - Instructor Lead
-- Michael Jennings - Instructional Associate 
+- Michael Jennings - Instructional Associate
+- Ian Terada - Instructional Associate  
 - Jamie Popovics - Outcomes Coach
 - TBD - Teachers Assistant
 
@@ -75,13 +76,13 @@ type: "lecture"
 
 #### 7 channels
 
-	- #seir_ec_9-7-classroom
-	- #seir_ec_9-7-help
-	- #seir_ec_9-7-homework
-	- #seir_ec_9-7-outcomes
-	- #seir_ec_9-7-random
-	- #seir_ec_9-7-recordings
-	- #seir_ec_9-7-resources
+	- #seir_ec_9-7_classroom
+	- #seir_ec_9-7_help
+	- #seir_ec_9-7_homework
+	- #seir_ec_9-7_outcomes
+	- #seir_ec_9-7_random
+	- #seir_ec_9-7_recordings
+	- #seir_ec_9-7_resources
 	
 	
 
