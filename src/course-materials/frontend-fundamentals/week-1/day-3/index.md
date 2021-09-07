@@ -13,3 +13,4 @@ topics: "Intro to JavaScript"
 
 - [**Lecture:** Intro to JavaScript](/frontend-fundamentals/week-1/day-3/lecture-materials/intro-to-javascript/)
 - [**Lecture:** Intro to JavaScript Control Flow](/frontend-fundamentals/week-1/day-3/lecture-materials/intro-to-javascript-control-flow/)
+- [**Lab:** JavaScript Loops and Conditionals Lab](/frontend-fundamentals/week-1/day-3/labs/loops-and-conditionals-lab.md) - **Non-Deliverable**
