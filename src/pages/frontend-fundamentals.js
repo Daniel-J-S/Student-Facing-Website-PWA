@@ -8,7 +8,7 @@ import { Breadcrumb } from 'gatsby-plugin-breadcrumb';
 
 const FrontendFundamentals = ({ data, location }) => {
 
-   const { week1 } = genLinks(data.allMarkdownRemark.edges);
+   const { week1, week2 } = genLinks(data.allMarkdownRemark.edges);
        
     return (
         <>
@@ -25,12 +25,12 @@ const FrontendFundamentals = ({ data, location }) => {
             <main>
               <h2>Week 1</h2>  
               { week1 }
-              {/* 
               <br />
               <hr />
               <br />
               <h2>Week 2</h2>  
               { week2 }
+              {/* 
               <br />
               <hr />
               <br />
