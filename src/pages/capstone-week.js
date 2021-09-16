@@ -1,28 +1,28 @@
 import React from 'react';
 import { graphql  } from 'gatsby';
-
-import Layout from '../components/layout';
-
 import genLinks from '../utils/genLinks';
+import Head from '../components/head';
+import { Breadcrumb } from 'gatsby-plugin-breadcrumb';
 
-
-const CaptstoneWeek = ({ data, location }) => {
+const CapstoneWeek = ({ data, location }) => {
     
   const { week1  } = genLinks(data.allMarkdownRemark.edges);
-
-
     return (
-        <Layout 
-          pageTitle="Capstone Week" 
-          location={location} 
-          crumbLabel={"Capstone Week"}>
-            <h1>Capstone Week</h1>
-            <main>
-              { week1 }
-            </main>
-        </Layout>
+        <>
+        <Head pageTitle="Capstone Week"/>
+        <div style={{margin: '1rem 0 5rem 0'}}>
+          <Breadcrumb 
+            location={location} 
+            crumbLabel="Capstone Week"  
+          />
+        </div>
+        <h1>Capstone Week</h1>
+        <main>
+          { week1 }
+        </main>
+        </>
     );
-};
+}
 
 export const query = graphql`
 query {
@@ -51,4 +51,4 @@ query {
   }
 `;
 
-export default CaptstoneWeek;
+export default CapstoneWeek;

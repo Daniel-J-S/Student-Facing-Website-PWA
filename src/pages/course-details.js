@@ -26,16 +26,16 @@ export const query = graphql`
     query {
         allMarkdownRemark (
         filter: { fileAbsolutePath: {regex : "\/course-details/"} }
-    ) {
-        edges {
-            node {
-                frontmatter {
-                title
+        ) {
+            edges {
+                node {
+                    frontmatter {
+                    title
+                    }
+                    html
                 }
-                html
             }
         }
-    }
     }
 `;
 
