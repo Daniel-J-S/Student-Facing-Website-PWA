@@ -14,7 +14,7 @@ This website contains the course curriculum and learning assigmments for General
 
 All content is subject to change at Instructors discretion.
 
-<p style="color: crimson; text-decoration: underline"><b>Click on A Unit Heading Below to Access Content 🔍</b></p>
+<p style="color: crimson; text-decoration: underline"><b>Click On A Unit Heading Below To Access Content 🔍</b></p>
 
 <br>
 <br>
@@ -62,9 +62,8 @@ All content is subject to change at Instructors discretion.
 
 <!-- ### [<u>Unit Four: Second Language</u>](/second-language) -->
 
-| Week | Topics                                                                             |
-| ---- | ---------------------------------------------------------------------------------- |
-| 9    | Relational Databases, SQL & Python Fundamentals |
-| 10   | Full Stack Development with Django              |
-| 11-12   | Thanksgiving Holiday, Group Project Period & Graduation  🥳🎉         |
-
+| Week  | Topics                                                       |
+| ----- | ------------------------------------------------------------ |
+| 9     | Relational Databases, SQL & Python Fundamentals              |
+| 10    | Full Stack Development with Django                           |
+| 11-12 | Thanksgiving Holiday, Group Project Period & Graduation 🥳🎉 |

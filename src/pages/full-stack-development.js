@@ -15,10 +15,10 @@ const FullstackDevelopment = ({ data, location }) => {
     return (
         <>
           <Head pageTitle="Full Stack Development"/>
-            <div style={{margin: '1rem 0 1.5rem 0'}}>
+            <div style={{margin: '1rem 0 5rem 0'}}>
               <Breadcrumb 
                   location={location} 
-                  crumbLabel={'Full Stack Development'}
+                  crumbLabel="Full Stack Development"
                   
                    
               />

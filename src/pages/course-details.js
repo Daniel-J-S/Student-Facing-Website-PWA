@@ -10,12 +10,10 @@ const CourseDetails = ({ data, location }) => {
     return (
         <>
         <Head pageTitle="Course Details"/>
-            <div style={{margin: '1rem 0 1.5rem 0'}}>
+            <div style={{margin: '1rem 0 5rem 0'}}>
                 <Breadcrumb 
                     location={location} 
-                    crumbLabel={'Course Details'}
-                    
-                     
+                    crumbLabel="Course Details"
                 />
         </div>
         <main dangerouslySetInnerHTML={{__html: html}} />

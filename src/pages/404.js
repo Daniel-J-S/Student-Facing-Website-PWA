@@ -7,10 +7,10 @@ const NotFound = ({ location }) => {
     return (
         <>
         <Head pageTitle="Page Not Found"/>
-          <div style={{margin: '1rem 0 1.5rem 0'}}>
+          <div style={{margin: '1rem 0 5rem 0'}}>
               <Breadcrumb 
                   location={location} 
-                  crumbLabel={'Page Not Found'}
+                  crumbLabel="Page Not Found"
                    
               />
           </div>

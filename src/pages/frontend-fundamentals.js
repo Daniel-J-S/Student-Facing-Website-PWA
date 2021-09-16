@@ -13,12 +13,10 @@ const FrontendFundamentals = ({ data, location }) => {
     return (
         <>
           <Head pageTitle="Frontend Fundamentals"/>
-          <div style={{margin: '1rem 0 1.5rem 0'}}>
+          <div style={{margin: '1rem 0 5rem 0'}}>
               <Breadcrumb 
                   location={location} 
-                  crumbLabel={'Frontend Fundamentals'}
-                  
-                   
+                  crumbLabel="Frontend Fundamentals"
               />
           </div>
             <h1>Frontend Fundamentals</h1>
