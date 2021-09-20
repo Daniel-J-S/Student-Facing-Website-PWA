@@ -95,17 +95,16 @@ Squad leaders will regularly check on your progress to ensure you're on track to
 
 Below is a non-exhaustive list of some free API's you can use. There are _many_ API's out there, however, so if you find one not on this list that you'd like to use, feel free! Please note that some may require signing up for an API key (e.g. the Marvel API).
 
-  1. Super Hero API: <a href="https://superheroapi.com/" target="_blank">https://superheroapi.com/</a>
-  2. Weather: <a href="https://openweathermap.org/api" target="_blank">https://openweathermap.org/api</a>
-  3. News: <a href="https://newsapi.org/" target="_blank">https://newsapi.org/</a>
-  4. Giphy: <a href="https://developers.giphy.com/">https://developers.giphy.com/</a>
-  5. Pokemon: <a href="https://pokeapi.co/">https://pokeapi.co/</a>
-  6. Card Deck: <a href="https://deckofcardsapi.com/" target="_blank">https://deckofcardsapi.com/</a>
-  7. Google Books: <a href="https://developers.google.com/books/" target="_blank">https://developers.google.com/books/</a>
-  8. City of Chicago: <a href="https://data.cityofchicago.org/" target="_blank">https://data.cityofchicago.org/</a>
-  9.  Beer: <a href="https://www.brewerydb.com/developers" target="_blank">https://www.brewerydb.com/developers</a>
-  10. Rick and Morty: <a href="https://rickandmortyapi.com/documentation/#rest" target="_blank">https://rickandmortyapi.com/documentation/#rest</a>
-  11. Open Trivia DB: <a href="https://opentdb.com/" target="_blank">https://opentdb.com/</a>
+  1. Weather: <a href="https://openweathermap.org/api" target="_blank">https://openweathermap.org/api</a>
+  2. News: <a href="https://newsapi.org/" target="_blank">https://newsapi.org/</a>
+  3. Giphy: <a href="https://developers.giphy.com/">https://developers.giphy.com/</a>
+  4. Pokemon: <a href="https://pokeapi.co/">https://pokeapi.co/</a>
+  5. Card Deck: <a href="https://deckofcardsapi.com/" target="_blank">https://deckofcardsapi.com/</a>
+  6. Google Books: <a href="https://developers.google.com/books/" target="_blank">https://developers.google.com/books/</a>
+  7. City of Chicago: <a href="https://data.cityofchicago.org/" target="_blank">https://data.cityofchicago.org/</a>
+  8.  Beer: <a href="https://www.brewerydb.com/developers" target="_blank">https://www.brewerydb.com/developers</a>
+  9. Rick and Morty: <a href="https://rickandmortyapi.com/documentation/#rest" target="_blank">https://rickandmortyapi.com/documentation/#rest</a>
+  10. Open Trivia DB: <a href="https://opentdb.com/" target="_blank">https://opentdb.com/</a>
   
 Note, not all API's are free and many listed may require payment. <br>We **highly suggest** to use a free API for your first project. 
 
