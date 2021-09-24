@@ -1,21 +1,15 @@
 ---
 track: "Full-Stack Development"
 title: "Day 5"
-week: 2
+week: 3
 day: 5
 type: "homepage"
-topics: "Two Model CRUD with Mongoose"
+topics: "Bonus Lectures & Project 2"
 ---
 
+# Week 3 - Day 5
 
-# Week 2 - Day 5
+#### Bonus Lectures & Start Project 2
 
-#### Two Model CRUD with Mongoose
-
-- [**Lecture:** Two Model CRUD - First Model](/full-stack-development/week-2/day-5/lecture-materials/two-model-crud/)
-- [**Lecture:** Two Model CRUD (Cont) - Second Model](/full-stack-development/week-2/day-5/lecture-materials/two-model-crud-2/)
-
-- [**Optional Guide:** Mongoose Emedded Relationship](https://git.generalassemb.ly/SEIR-Advanced-Materials/mongoose-embedded-relationships)
-- [**Optional Guide:** Mongoose Referenced Relationships](https://git.generalassemb.ly/SEIR-Advanced-Materials/mongoose-referenced-relationships)
-
-- **Activity:** Final Approvals on Project 2 and Project Week Launch
+- [**Bonus Material:** Producing an API with Express](/full-stack-development/week-3/day-5/lecture-materials/producing-an-api-with-express/)
+- [**Bonus Lab:** Producing an API Lab](/full-stack-development/week-3/day-5/labs/producing-an-api-lab/) - **Non-Deliverable**

@@ -4,14 +4,14 @@ title: "Day 5"
 week: 1
 day: 5
 type: "homepage"
-topics: "Update & Delete with Express"
+topics: "Intro to MongoDB & Mongoose"
 ---
 
 # Week 1 - Day 5
 
-#### Update & Delete with Express
-- [**Morning Exercise:** Intro to EJS Partials](/full-stack-development/week-1/day-5/lecture-materials/intro-to-ejs-partials/)
-- [**Lecture:** Update & Delete with Express](/full-stack-development/week-1/day-5/lecture-materials/update-and-delete/)
-- [**Lab:** Exobilogy I](/full-stack-development/week-1/day-5/labs/exobiology-1) - **Non-Deliverable**
-- [**Lab:** Exobilogy II](/full-stack-development/week-1/day-5/labs/exobiology-2) - **Non-Deliverable**
-- [**Lab:** Pokedex](/full-stack-development/week-1/day-5/labs/pokedex) - **Deliverable**
+#### Intro to MongoDB & Mongoose
+
+- [**Lecture:** Intro to MongoDB](/full-stack-development/week-1/day-5/lecture-materials/intro-to-mongodb/)
+- [**Resource:** Create a Cloud-Hosted MongoDB](/full-stack-development/week-1/day-5/lecture-materials/create-an-atlas-hosted-mongodb/)
+- [**Lecture:** Intro to Mongoose](/full-stack-development/week-1/day-5/lecture-materials/intro-to-mongoose)
+- [**Lab:** Heroku Deployment](/full-stack-development/week-1/day-5/labs/heroku-deployment) - **Deliverable**

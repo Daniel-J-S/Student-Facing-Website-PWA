@@ -4,33 +4,14 @@ title: "Day 2"
 week: 2
 day: 2
 type: "homepage"
-topics: "CRUD with Mongoose - Create & Read"
+topics: "CRUD with Mongoose - Delete and Update"
 ---
 
 # Week 2 - Day 2
 
-#### CRUD with Mongoose - Create & Read
+#### CRUD App Mongoose - Delete and Update
 
-- [**Morning Exercise:** HTML/CSS Forms](/full-stack-development/week-2/day-2/lecture-materials/html-css-forms)
-
-- [**Lecture:** CRUD App with Mongoose - Create & Read](/full-stack-development/week-2/day-2/lecture-materials/crud-app-with-mongoose)
-- [**Resource Guide:** Creating a Seed Route](/full-stack-development/week-2/day-2/lecture-materials/creating-a-seed-route)
-- [**Lab:** The Captain's Log - Full CRUD Project **(Complete Create & Read)**](/full-stack-development/week-2/day-2/labs/the-captains-log) - **Non-Deliverable**
-- [**Lab:** Mongoose Store - Full CRUD Project **(Complete Create & Read)**](/full-stack-development/week-2/day-2/labs/mongoose-store) - **Deliverable**
-- [**Activity:** Review Project 2](/unit-projects/unit-two-project-requirements)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- [**Lecture:** CRUD with - Mongoose Delete and Update](/full-stack-development/week-2/day-2/lecture-materials/crud-app-with-mongoose)
+- [**Lecture:** Express Router](/full-stack-development/week-2/day-2/lecture-materials/express-router)
+- [**Lab:** The Captain's Log - Full CRUD Project **(Complete Delete & Update)**](/full-stack-development/week-2/day-1/labs/the-captains-log) - **Non-Deliverable**
+- [**Lab:** Mongoose Store - Full CRUD Project **(Complete Delete & Update)**](/full-stack-development/week-2/day-1/labs/mongoose-store) - **Deliverable**

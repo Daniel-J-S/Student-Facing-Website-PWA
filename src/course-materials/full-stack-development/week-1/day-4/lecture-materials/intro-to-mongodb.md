@@ -2,7 +2,7 @@
 track: "Full-Stack Development"
 title: "Intro to MongoDB"
 week: 1
-day: 5
+day: 4
 type: "lecture"
 ---
 

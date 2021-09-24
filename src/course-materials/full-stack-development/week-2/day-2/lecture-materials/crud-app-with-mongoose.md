@@ -1,12 +1,12 @@
 ---
 track: "Full-Stack Development"
-title: "CRUD App with Mongoose - Create and Read"
+title: "CRUD App with Mongoose - Delete and Update"
 week: 2
 day: 2
 type: "lecture"
 ---
 
-# Book List CRUD App with Mongoose - Create & Read
+# Book List CRUD App with Mongoose - Delete & Update
 
 <br>
 <br>
@@ -14,548 +14,269 @@ type: "lecture"
 
 ## Lesson Objectives
 
-1. Review the flow of technology
-1. Initialize a directory
-1. Start express
-1. Create New Route
-1. Create Create Route
-1. Connect Express to Mongo
-1. Create Book Model
-1. Have Create Route Create data in MongoDB
-1. Create Index Route
-1. Have Index Route Render All Books
-1. Have Create Route redirect to Index After Book Creation
-1. Create Show Route
-1. Have Index Page Link to Show Route
-1. Create show.ejs
+Deletion:
+
+1. Create a Delete Button
+1. Create a DELETE Route
+1. Have the Delete Button send a DELETE request to the server
+1. Make the DELETE Route Delete the data from MongoDB
+
+Edit/Update:
+
+1. Create a link to the edit route
+1. Create an edit route
+1. Create an PUT route
+1. Have the edit page send a PUT request
+1. Make the PUT Route Update the data in MongoDB
+1. Make the PUT Route Redirect Back to the Index Page
 
 <br>
 <br>
 <br>
 
+## Create a Delete Button
 
-
-## Review the flow of technology
-
-![](https://i.imgur.com/mx6edUc.png)
-
-
-
-## Initialize a directory
-
-1. `mkdir booklist`
-1. `cd booklist`
-1. `touch server.js`
-1. `code .`
-1. `npm init -y`
-1. `npm install express dotenv`
-1. `touch .env`
-
-Remember to add a .gitignore with node_modules if you don't have a global .gitignore.
-
-<br>
-<br>
-<br>
-
-
-## Add The PORT Variable to .env
-
-```shell
-PORT=3000
-```
-
-<br>
-<br>
-<br>
-
-
-## Create Your Basic Express Server
-
-```js
-// Dependencies
-const express = require('express');
-const app = express();
-require('dotenv').config();
-
-// Listener
-const PORT = process.env.PORT;
-app.listen(PORT, () => console.log(`server is listning on port: ${PORT}`));
-```
-
-Stop! Check your work!
-
-<br>
-<br>
-<br>
-
-
-## Connect Express to MongoDB Atlas
-
-1. `npm install mongoose`
-1. Navigate to [MongoDB.com](https://www.mongodb.com/) and create a new database or get prepapred to use an old one.
-1. Add your connection string to your .env file (do not copy and paste this one) then update the sub-database to use `booklist` like we've done in the connection string example below
-
-<br>
-<br>
-<br>
-
-Inside `.env`
-
-```shell
-DATABASE_URL=mongodb+srv://<username>:<password>@general-assembly.1wjse.mongodb.net/booklist?retryWrites=true&w=majority
-```
-
-Inside `server.js`, connect to your database
-
-```js
-// Dependencies
-const mongoose = require('mongoose');
-
-// Database Connection
-mongoose.connect(process.env.DATABASE_URL, {
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
-	useFindAndModify: false,
-	useCreateIndex: true,
-});
-
-// Database Connection Error/Success
-// Define callback functions for various events
-const db = mongoose.connection
-db.on('error', (err) => console.log(err.message + ' is mongo not running?'));
-db.on('connected', () => console.log('mongo connected'));
-db.on('disconnected', () => console.log('mongo disconnected'));
-```
-
-Stop! Check your work!
-
-<br>
-<br>
-<br>
-
-
-## Create Create Route
-
-```js
-// Create
-app.post('/books', (req, res) => {
-	res.send('received');
-});
-```
-
-Stop! Check your work with Postman.
-
-<br>
-<br>
-<br>
-
-
-## Set Up Your Body Parser Middleware
-
-```js
-// Middleware
-// Body parser middleware: give us access to req.body
-app.use(express.urlencoded({ extended: true }));
-```
-
-```javascript
-app.post('/books', (req, res) => {
-	res.send(req.body);
-});
-```
-
-Stop! Check your work with Postman
-
-Let's add:
-
-title: Cracking the Coding Interview \
-author: Gayle Laakmann McDowell
-
-<br>
-<br>
-<br>
-
-## Format Checkbox Data Properly
-
-In `server.js`:
-
-```javascript
-app.post('/books', (req, res) => {
-	if (req.body.completed === 'on') {
-		//if checked, req.body.completed is set to 'on'
-		req.body.completed = true;
-	} else {
-		//if not checked, req.body.completed is undefined
-		req.body.completed = false;
-	}
-	res.send(req.body);
-});
-```
-
-Stop! Check your work again by resending the previous request.
-
-<br>
-<br>
-<br>
-
-
-## Create Books Model
-
-1. `mkdir models`
-1. `touch models/book.js`
-1. Create the book schema
-
-In `models/book.js`:
-
-```js
-const mongoose = require('mongoose');
-
-const bookSchema = new mongoose.Schema({
-	title: { type: String, required: true },
-	author: { type: String, required: true },
-	completed: Boolean,
-});
-
-const Book = mongoose.model('Book', bookSchema);
-
-module.exports = Book;
-```
-
-<br>
-<br>
-<br>
-
-
-## Have Create Route Create data in MongoDB
-
-Inside `server.js`:
-
-```javascript
-// Dependencies
-const Book = require('./models/book.js');
-
-// Routes / Controllers
-// Create
-app.post('/books', (req, res) => {
-	if (req.body.completed === 'on') {
-		//if checked, req.body.completed is set to 'on'
-		req.body.completed = true;
-	} else {
-		//if not checked, req.body.completed is undefined
-		req.body.completed = false;
-	}
-
-	Book.create(req.body, (error, createdBook) => {
-		res.send(createdBook);
-	});
-});
-```
-
-Stop! Check your work with Postman.
-
-<br>
-<br>
-<br>
-
-
-## Create The New Page Route
-
-Remember INDUCES *(index, new, delete, update, create, edit, show)* to help organize your routes and avoid any conflicts.
-
-```js
-// Routes / Controllers
-// New
-app.get('/books/new', (req, res) => {
-	res.send('new');
-});
-```
-
-<br>
-<br>
-<br>
-
-
-## Create The New View
-
-1. `npm install ejs`
-1. `mkdir views`
-1. `touch views/new.ejs`
-
-In `views/new.ejs`:
+In your index.ejs file, update the li item which is created for each data entry to include a delete form:
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Book List</title>
-	</head>
-	<body>
-		<h1>New Book Page</h1>
-		<form action="/books" method="POST">
-			Title: <input type="text" name="title" /><br />
-			Author: <input type="text" name="author" /><br />
-			Completed: <input type="checkbox" name="completed" /><br />
-			<input type="submit" name="" value="Add Book" />
-		</form>
-	</body>
-	</body>
-</html>
-
-```
-
-<br>
-<br>
-<br>
-
-## Render the view
-
-```js
-// Routes / Controllers
-// New
-app.get('/books/new', (req, res) => {
-	res.render('new.ejs');
-});
-```
-
-Stop! Check your work! Is the view working?
-We'll check the form functionality soon!
-
-<br>
-<br>
-<br>
-
-
-## Create The Index Route
-
-Remember INDUCES
-
-In `server.js`:
-
-```js
-// Index
-app.get('/books', (req, res) => {
-	res.send('index');
-});
-```
-
-Stop! Check your work.
-
-<br>
-<br>
-<br>
-
-
-## Create The Index View
-
-`touch views/index.ejs`
-
-In `views/index.ejs`:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Book List</title>
-	</head>
-	<body>
-		<h1>My Reading List</h1>
-	</body>
-</html>
-```
-
-<br>
-<br>
-<br>
-
-## Render The Index View
-
-```js
-// Index
-app.get('/books', (req, res) => {
-	res.render('index.ejs');
-});
-```
-
-<br>
-<br>
-<br>
-
-
-## Have Index Route Pass Book Data to the View
-
-```javascript
-// Index
-app.get('/books', (req, res) => {
-	Book.find({}, (error, allBooks) => {
-		res.render('index.ejs', {
-			books: allBooks,
-		});
-	});
-});
-```
-
-We could just res.send allBooks and check with Postman, but we're getting confident and bold! Let's stick with a render for now and check it in a moment.
-
-<br>
-<br>
-<br>
-
-
-## Update the Index View to Display All Books:
-
-In `views/index.ejs`:
-
-```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title></title>
-	</head>
-	<body>
-		<h1>Books index page</h1>
-		<ul>
-			<% books.forEach(book => { %>
-			<li><%=book.title; %></li>
-			<% }) %>
-		</ul>
-	</body>
-</html>
-```
-
-We could use any type of loop we want, but the forEach loop reads really nicely!
-
-<br>
-<br>
-<br>
-
-
-## Add a Link to the Create Page Above Your h1:
-
-In `views/index.ejs`:
-
-```html
-<nav>
-	<a href="/books/new">Add a New Book</a>
-</nav>
-```
-
-<br>
-<br>
-<br>
-
-## Update Your Create Route redirect to Index After Book Creation
-
-In `server.js`:
-
-```js
-Book.create(req.body, (error, createdBook) => {
-	res.redirect('/books');
-});
-```
-
-Stop! Check your work. Navigate to your form.
-
-Let's add:
-
-title: You don't know JS Yet \
-author: Kyle Simpson
-
-We should be redirected to /books and see our new book there. Success? Awesome! Error? Take a moment to fix it.
-
-<br>
-<br>
-<br>
-
-
-## Have Index Page Link to Show Route
-
-In `views/index.ejs`:
-
-```html
+<% books.forEach(book => { %>
 <li>
-	<a href="/books/<%=book._id; %>"> <%=book.title; %> </a>
+  <a href="/books/<%=book._id %>"> <%=book.title %> </a>
+  <form>
+    <input type="submit" value="DELETE" />
+  </form>
 </li>
+<% }) %>
 ```
 
-Notice how we have to put an underscore before id. That's a MongoDB convention.
-
-Stop! Check your work. Click one of the links and make sure it redirects you to the right place.
-
 <br>
 <br>
 <br>
 
+## Create a Delete Route
 
-## Create Show Route
+Remember INDUCES (index, new, delete, update, create, edit show) to help keep your routes organized and avoid conflicts.
 
-Remember INDUCES
+In server.js:
 
 ```js
-// Show
-app.get('/books/:id', (req, res) => {
-	Book.findById(req.params.id, (err, foundBook) => {
-		res.send(foundBook);
-	});
-});
+app.delete("/books/:id", (req, res) => {
+  res.send("deleting...")
+})
 ```
 
-Stop! Check your work.
+<br>
+<br>
+<br>
+
+## Have the Delete Button send a DELETE request to the server
+
+When we click "DELETE" on our index page **(**`index.ejs`**)**, the form needs to make a DELETE request to our DELETE route.
+
+The problem is that forms can't make DELETE requests. Only POST and GET. We can fake this, though. First we need to install an npm package called `method-override`
+
+```shell
+npm install method-override
+```
+
+Now, in our server.js file, add:
+
+```javascript
+// Dependencies
+const methodOverride = require("method-override")
+
+// Middleware
+app.use(methodOverride("_method"))
+```
+
+Now go back and set up our delete form to send a DELETE request to the appropriate route. We're just updating the opening form tag.
+
+```html
+<form action="/books/<%= book.id %>?_method=DELETE" method="POST">
+  <input type="submit" value="DELETE" />
+</form>
+```
+
+<br>
+<br>
+
+STOP! Check your work. You should be able to visit one of your show pages to grab an ID that you know exists.
+
+Next, try clicking one of the delete buttons and make sure you're getting the expected output of 'deleting...' sent in the browser.
 
 <br>
 <br>
 <br>
 
+## Make the Delete Route Delete the Document from MongoDB
 
-## Create A Show Page
+Also, have it redirect back to the books index page when deletion is complete
 
-`touch views/show.ejs`
+In `server.js`:
 
-In `views/show.ejs`:
+```javascript
+// Delete
+app.delete("/books/:id", (req, res) => {
+  Book.findByIdAndRemove(req.params.id, (err, data) => {
+    res.redirect("/books")
+  })
+})
+```
+
+Hint: Deleted all your data? Remember you can hit your seed route `http://localhost:3000/books/seed` to re-populate your database! Isn't that so much easier than adding everything in manually from a form?
+
+<br>
+<br>
+<br>
+
+## Create a link to an edit route
+
+In `index.ejs`:
+
+```html
+<% books.forEach(book => { %>
+<li>
+  <a href="/books/<%= book._id %>"> <%=book.title %> </a>
+  <form action="/books/<%=book.id %>?_method=DELETE" method="POST">
+    <input type="submit" value="DELETE" />
+  </form>
+  <a href="/books/<%=book._id %>/edit">Edit</a>
+</li>
+<% }) %>
+```
+
+STOP! Check your work. We don't have an edit view, but the link should be working.
+
+<br>
+<br>
+<br>
+
+## Create an Edit Route
+
+Remember INDUCES!
+
+In `server.js`:
+
+```js
+// Edit
+app.get("/books/:id/edit", (req, res) => {
+  Book.findById(req.params.id, (error, foundBook) => {
+    res.render("edit.ejs", {
+      book: foundBook,
+    })
+  })
+})
+```
+
+<br>
+<br>
+<br>
+
+## Create an Edit Page
+
+Create an `edit.ejs` file
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		<nav>
-			<a href="/books">Back to Books Index</a>
-		</nav>
-		<h1><%=book.title %></h1>
-		Author: <%= book.author%>
-		<br />
-		Completed: <%= book.completed %>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book List</title>
+  </head>
+
+  <body>
+    <h1>Edit Book</h1>
+    <form>
+      <!--  NOTE: the form is pre-populated with values for the server-->
+      Title: <input type="text" name="title" value="<%=book.title%>" /><br />
+      Author: <input type="text" name="author" value="<%=book.author%>" /><br />
+      Completed: <input type="checkbox" name="completed" <% if(book.completed
+      === true){ %> checked <% } %> />
+      <br />
+      <input type="submit" value="Submit Changes" />
+    </form>
+  </body>
 </html>
 ```
 
+STOP! Check your work. Make sure the edit page is rendering properly.
+
 <br>
 <br>
 <br>
 
+## Create an Update Route (PUT)
 
-## Render the Show Page
+Remember INDUCES!
 
-```js
-// Show
-app.get('/books/:id', (req, res) => {
-	Book.findById(req.params.id, (err, foundBook) => {
-		res.render('show.ejs', {
-			book: foundBook,
-		});
-	});
-});
+In `server.js`:
+
+```javascript
+// Update
+app.put("/books/:id", (req, res) => {
+  if (req.body.readyToEat === "on") {
+    req.body.readyToEat = true
+  } else {
+    req.body.readyToEat = false
+  }
+  res.send(req.body)
+})
 ```
 
-Final stop! Check your work :)
+<br>
+<br>
+<br>
+
+## Have the edit page send a PUT request
+
+In `edit.ejs`:
+
+```html
+<form action="/books/<%=book._id%>?_method=PUT" method="POST"></form>
+```
+
+<br>
+<br>
+<br>
+
+## Make the PUT Route Update the Document in MongoDB and Redirect back to the Show Page
+
+```javascript
+// Update
+app.put("/books/:id", (req, res) => {
+  if (req.body.completed === "on") {
+    req.body.completed = true
+  } else {
+    req.body.completed = false
+  }
+
+  Book.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    {
+      new: true,
+    },
+    (error, updatedBook) => {
+      res.redirect(`/books/${req.params.id}`)
+    }
+  )
+})
+```
+
+<br>
+<br>
+<br>
+
+**Stop! Check your work!**
+
+<br>
+<br>
+<br>
+
+## Congratulations! We now have a Delete and Update feature! 🎉
+
+Hopefully, you now have a fully functional CRUD app with a real MONGODB database.
+
+Normally, this is the point where we would want to delete our seed route. If you want to comment it out, go ahead! But you might want to keep it in your app for future reference.
