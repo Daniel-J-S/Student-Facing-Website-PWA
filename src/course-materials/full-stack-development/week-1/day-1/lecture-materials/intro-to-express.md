@@ -326,7 +326,7 @@ Get in the habit of `control c` to shut your server down when you are done worki
 <br>
 <br>
 
-## Use nodemon to restart your sever when your code changes
+## Use nodemon to restart your server when your code changes
 
 An NPM package called `nodemon` allows us to run code just like `node`, but it will restart the application whenever code in the application's directory is changed. This is really handy and gives us a better workflow.
 

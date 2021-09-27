@@ -15,7 +15,7 @@ type: "lab"
 
 ### Make sure you shut down your previous app
 
-1. be sure to have `control c` your previous app if you were running one before starting this new activity
+1. Be sure to have `control c` your previous app if you were running one before starting this new activity
 
 <br>
 <br>
