@@ -1,12 +1,12 @@
 ---
 track: "Full-Stack Development"
-title: "Express Superheros (Index/Show)"
+title: "Express Superheroes (Index/Show)"
 week: 1
 day: 2
 type: "lab"
 ---
 
-# Express Superheros (Index/Show)
+# Express Superheroes (Index/Show)
 
 _... because Superheroes need REST Too_
 
