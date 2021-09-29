@@ -33,8 +33,8 @@ type: "lecture"
 ```javascript
 //put this above your show.ejs file
 app.get("/fruits/new", (req, res) => {
-  res.render("new.ejs")
-})
+  res.render("new.ejs");
+});
 ```
 
 1. Now lets's create the html for this page in our `/views/new.ejs` file
@@ -98,8 +98,8 @@ Since the form in the last step tells the browser to create a POST request to `/
 
 ```javascript
 app.post("/fruits", (req, res) => {
-  res.send("hi")
-})
+  res.send("hi");
+});
 ```
 
 <br>
@@ -112,9 +112,9 @@ We can have a function execute for all routes:
 
 ```javascript
 app.use((req, res, next) => {
-  console.log("I run for all routes")
-  next()
-})
+  console.log("I run for all routes");
+  next();
+});
 ```
 
 - This is called **'middleware'**
@@ -135,7 +135,7 @@ app.use((req, res, next) => {
 
 ```javascript
 //near the top, around other app.use() calls
-app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: false }));
 ```
 
 <br>
@@ -146,9 +146,9 @@ app.use(express.urlencoded({ extended: false }))
 
 ```javascript
 app.post("/fruits", (req, res) => {
-  console.log(req.body)
-  res.send("data received")
-})
+  console.log(req.body);
+  res.send("data received");
+});
 ```
 
 1.  Push this data into our fruits array:
@@ -157,15 +157,15 @@ app.post("/fruits", (req, res) => {
 app.post("/fruits", (req, res) => {
   if (req.body.readyToEat === "on") {
     //if checked, req.body.readyToEat is set to 'on'
-    req.body.readyToEat = true //do some data correction
+    req.body.readyToEat = true; //do some data correction
   } else {
     //if not checked, req.body.readyToEat is undefined
-    req.body.readyToEat = false //do some data correction
+    req.body.readyToEat = false; //do some data correction
   }
-  fruits.push(req.body)
-  console.log(fruits)
-  res.send("data received")
-})
+  fruits.push(req.body);
+  console.log(fruits);
+  res.send("data received");
+});
 ```
 
 <br>
@@ -181,14 +181,14 @@ app.post("/fruits", (req, res) => {
 app.post("/fruits", (req, res) => {
   if (req.body.readyToEat === "on") {
     //if checked, req.body.readyToEat is set to 'on'
-    req.body.readyToEat = true
+    req.body.readyToEat = true;
   } else {
     //if not checked, req.body.readyToEat is undefined
-    req.body.readyToEat = false
+    req.body.readyToEat = false;
   }
-  fruits.push(req.body)
-  res.redirect("/fruits") //send the user back to /fruits
-})
+  fruits.push(req.body);
+  res.redirect("/fruits"); //send the user back to /fruits
+});
 ```
 
 <br>
