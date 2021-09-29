@@ -390,7 +390,7 @@ Remember, this is just JavaScript, so you can write as much JS logic as you want
 
 <br>
 
-<details><summary><strong>Click me for additional challenges</strong></summary><p>
+<details><summary><strong style="cursor: pointer;">Click me for additional challenges</strong></summary><p>
    <br>
    <br>
    Feel free to choose what you want and if you want to implement something differently than the suggestion, go for it! It is hungry for more time!

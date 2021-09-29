@@ -30,27 +30,27 @@ type: "lecture"
 1. Let's create a page that will allow us to create a new fruit
 1. First, we'll need a route for displaying the page in our server.js file **IMPORTANT: put this above your show route, so that the show route doesn't accidentally pick up a `/fruits/new` request**
 
-   ```javascript
-   //put this above your show.ejs file
-   app.get("/fruits/new", (req, res) => {
-     res.render("new.ejs")
-   })
-   ```
+```javascript
+//put this above your show.ejs file
+app.get("/fruits/new", (req, res) => {
+  res.render("new.ejs")
+})
+```
 
 1. Now lets's create the html for this page in our `/views/new.ejs` file
 
-   ```html
-   <!DOCTYPE html>
-   <html>
-     <head>
-       <meta charset="utf-8" />
-       <title>Create a new Fruit</title>
-     </head>
-     <body>
-       <h1>New Fruit page</h1>
-     </body>
-   </html>
-   ```
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Create a new Fruit</title>
+  </head>
+  <body>
+    <h1>New Fruit page</h1>
+  </body>
+</html>
+```
 
 <br>
 <br>
@@ -133,10 +133,10 @@ app.use((req, res, next) => {
 1. We can easily access this data with a middleware function
 1. Tell express to use the middleware
 
-   ```javascript
-   //near the top, around other app.use() calls
-   app.use(express.urlencoded({ extended: false }))
-   ```
+```javascript
+//near the top, around other app.use() calls
+app.use(express.urlencoded({ extended: false }))
+```
 
 <br>
 <br>
@@ -144,31 +144,33 @@ app.use((req, res, next) => {
 
 1.  Now, inside the POST to `/fruits` route handler, we can do the following:
 
-    ```javascript
-    app.post("/fruits", (req, res) => {
-      console.log(req.body)
-      res.send("data received")
-    })
-    ```
+```javascript
+app.post("/fruits", (req, res) => {
+  console.log(req.body)
+  res.send("data received")
+})
+```
 
 1.  Push this data into our fruits array:
 
-        ```javascript
-        app.post('/fruits', (req, res) => {
-            if(req.body.readyToEat === 'on'){ //if checked, req.body.readyToEat is set to 'on'
-                req.body.readyToEat = true; //do some data correction
-            } else { //if not checked, req.body.readyToEat is undefined
-                req.body.readyToEat = false; //do some data correction
-            }
-            fruits.push(req.body);
-            console.log(fruits);
-            res.send('data received');
-        });
-        ```
+```javascript
+app.post("/fruits", (req, res) => {
+  if (req.body.readyToEat === "on") {
+    //if checked, req.body.readyToEat is set to 'on'
+    req.body.readyToEat = true //do some data correction
+  } else {
+    //if not checked, req.body.readyToEat is undefined
+    req.body.readyToEat = false //do some data correction
+  }
+  fruits.push(req.body)
+  console.log(fruits)
+  res.send("data received")
+})
+```
 
-    <br>
-    <br>
-    <br>
+<br>
+<br>
+<br>
 
 ## Redirect the user to another page
 
@@ -202,3 +204,7 @@ Put a link in the index page going to the new page
 <br>
 <br>
 <br>
+
+## References
+
+- [Using Middleware w/Express](https://expressjs.com/en/guide/using-middleware.html)
