@@ -9,7 +9,7 @@ import { Breadcrumb } from 'gatsby-plugin-breadcrumb';
 const FullstackDevelopment = ({ data, location }) => {
   
 
-   const { week1 } = genLinks(data.allMarkdownRemark.edges);
+   const { week1, week2 } = genLinks(data.allMarkdownRemark.edges);
 
 
     return (
@@ -19,20 +19,17 @@ const FullstackDevelopment = ({ data, location }) => {
               <Breadcrumb 
                   location={location} 
                   crumbLabel="Full Stack Development"
-                  
-                   
               />
             </div>
             <h1>Full Stack Development</h1>
             <main>
               <h2>Week 1</h2>
               { week1 }
-              {/* Commented Out To Lock Content
               <br />
               <hr />
               <br />
               <h2>Week 2</h2>  
-              { week2} */}
+              { week2 }
             </main>
         </>
     );
