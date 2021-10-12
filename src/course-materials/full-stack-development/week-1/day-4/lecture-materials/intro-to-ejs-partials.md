@@ -12,10 +12,6 @@ type: "lecture"
 
 Making our EJS more DRY and more easily maintanable.
 
-<br>
-<br>
-<br>
-
 **Learning Objectives**
 
 - EJS Partials
@@ -53,17 +49,13 @@ In order to see how useful partials are and how exactly to use them, what we'll 
 
 > Note: Because we're just focusing on EJS partials for this exercise, the provided app is _not_ fully functioning with a proper mongo database or working create/delete routes. Hungry for more things to do in all your copious spare time? Try to make this app fully functional!
 
-<br>
-<br>
-<br>
-
 **Getting the starter code ready**
 
-- [Fork and clone this git repo](https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/ejs-partials)
-- run `npm install` so you install all then necessary packages for this project
+- Fork and clone [this git repo](https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/ejs-partials)
+- run `npm install` inside the directory to install all then necessary packages for this project
 - `code .` inside the directory to open it up in vscode
-- `nodemon` to run the project
-- in your browser, go to `http://localhost:3000/pub` - you should see a landing page that looks like the image below
+- `nodemon` inside the directory to run the project
+- in your browser, go to [http://localhost:3000/pub](http://localhost:3000/pub) - you should see a landing page that looks like the image below
 
 <br>
 <br>
@@ -90,7 +82,6 @@ Now that one simple change that should have only taken a few seconds took a much
 This is where partials come in super handy. They let you create reusable EJS that you only have to edit in _one place_ and it will update across all your pages where the partial is included.
 
 Let's create our first partial to really see how this works.
-
 <br>
 <br>
 <br>
@@ -116,10 +107,14 @@ Right now, only our `index` view has styling. That's not a good look, so let's c
 <link rel="stylesheet" href="/css/styles.css" />
 ```
 
+<br>
+<br>
+<br>
+
 Now if we save and refresh our index, the CSS is gone! Oh no! But, no worries, we saved all that code in our `head.ejs` partial, and now all we need to do to utilize that partial is `include` it back into the head of our index.ejs using the following syntax:
 
-```html
-<% include ./partials/head.ejs %>
+```ejs
+ <%- include('./partials/head.ejs')%>
 ```
 
 Make sure you've saved all your files and refresh your index -- voila! Our CSS is back! We've successfully included our partial.
@@ -157,8 +152,8 @@ Let's do the same thing we just did:
 
 - Include the header partial in: `index.ejs`, `new.ejs`, `showDrinks.ejs`, `showFood.ejs`
 
-```html
-<% include ./partials/header.ejs %>
+```ejs
+ <%- include('./partials/header.ejs')%>
 ```
 
 <br>
@@ -181,15 +176,11 @@ Our ejs files are looking so much cleaner already! But there's one more repetiti
 
 - Include the footer partial in: `index.ejs`, `new.ejs`, `showDrinks.ejs`, `showFood.ejs`
 
-```html
-<% include ./partials/footer.ejs %>
+```ejs
+ <%- include('./partials/footer.ejs')%>
 ```
 
 Sweet, our code looks so DRY! And -- oh, wait there's a typo in our footer. Let's fix that up.
-
-<br>
-<br>
-<br>
 
 **In footer.ejs**
 
@@ -203,6 +194,8 @@ Now check all our pages -- nice, it's fixed for all of them and we only had to c
 
 ## Other extra things to note
 
+<br>
+
 ### Using variables in partials
 
 Just like any other `.ejs` file, you can use variables inside your partials. You just have to make sure that wherever you use that partial, that variable is actually defined.
@@ -214,12 +207,11 @@ For example, let's say we want our tab titles to be variable depending on the pa
 Let's create a variable called `tabTitle` that will determine what the title is. So, let's go ahead and put that in.
 
 ```html
-<title>gitPub | <%=tabTitle%></title>
+<title>gitPub | <%= tabTitle %></title>
 ```
 
 If you try to view any of the pages now, it throws us an error saying tabTitle is not defined - let's define it!
 
-<br>
 <br>
 <br>
 
@@ -245,8 +237,6 @@ However, consider our show route. We did _not_ define the `tabTitle` variable th
 To fix it then, let's define the `tabTitle` on all our other views!
 
 <br>
-<br>
-<br>
 
 **In the show route**
 
@@ -259,7 +249,6 @@ res.render('show.ejs', {
 
 <br>
 <br>
-<br>
 
 **In the new route**
 
@@ -269,4 +258,4 @@ res.render('new.ejs', {
 }
 ```
 
-If you check all your views now, they should all work and have different titles depending on the page! 🎉
+If you check all your views now, they should all work and have different titles depending on the page! :tada:
