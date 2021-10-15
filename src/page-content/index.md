@@ -43,16 +43,17 @@ All content is subject to change at Instructors discretion.
 
 <br>
 <br>
-<div style="color: grey;">
 
-### 🔒 Unit Three: React Fundamentals
+<!-- ### 🔒 Unit Three: React Fundamentals -->
 
-<!-- ### [<u>Unit Three: React Fundamentals</u>](/react-fundamentals) -->
+### [<u>Unit Three: React Fundamentals</u>](/react-fundamentals)
 
 | Week | Topics                                                              |
 | ---- | ------------------------------------------------------------------- |
 | 7    | Intro to ReactJS, fetching data for our components using AJAX       |
 | 8    | React Hooks, Tooling, The MERN Stack, Authentication & Project Week |
+
+<div style="color: grey;">
 
 <br>
 <br>
