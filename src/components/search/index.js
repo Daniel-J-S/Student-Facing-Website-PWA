@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'gatsby';
 import algoliasearch from 'algoliasearch/lite';
-import { InstantSearch, Hits, SearchBox, connectStateResults, Configure, Highlight } from 'react-instantsearch-dom';
-import logo from '../../../static/danieljs-logo.svg';
+import { InstantSearch, Hits, SearchBox, connectStateResults, Configure } from 'react-instantsearch-dom';
+import logo from '../../../static/danieljs-logo-black.svg';
 
 
 const Search = (props) => {
@@ -22,13 +22,13 @@ const Search = (props) => {
                 setSearchState({...searchState, query: ''})
             };
             return (
-                <div style={{display: 'flex', flexDirection: 'column' }}>
-                    <Link to={hit.url} onClick={handleClick} style={{display: 'flex', alignItems: 'center'}}>
+                <Link to={hit.url} onClick={handleClick} style={{display: 'flex', flexDirection: 'column' }}>
+                    <div style={{display: 'flex', alignItems: 'center'}}>
                         <img style={{ height: 25, margin: '0px 5px 0px 0px' }} src={logo} alt={hit.title} />
-                        <Highlight hit={hit} attribute='title' />
-                    </Link>
+                        <h5>{hit.title.replace('| Student Facing Website', '')}</h5>
+                    </div>
                     <p>{hit.content.slice(0, 125) + ' ...'}</p>
-                </div>
+                </Link>
             );
         });
 
