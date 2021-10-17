@@ -159,7 +159,7 @@ module.exports = {
         description: `Our student-facing website expressed as a progressive web app!`,
         lang: `en`,
         display: `standalone`,
-        icon: `static/danieljs-logo.svg`,
+        icon: `static/danieljs-logo-black.svg`,
         start_url: `/`,
         background_color: `#222222`,
         theme_color: `#222222`,
