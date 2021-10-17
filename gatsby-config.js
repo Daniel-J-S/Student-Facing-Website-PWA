@@ -177,6 +177,7 @@ module.exports = {
         headers: {
           '/*': [
             "Content-Security-Policy: frame-ancestors 'self' https://danieljs.io/",
+            "Content-Security-Policy: frame-ancestors 'self' https://danieljs.dev/",
             "X-Frame-Options: ALLOW-FROM https://danieljs.io/",
             "X-Frame-Options: ALLOW-FROM https://danieljs.dev/",
           ],
