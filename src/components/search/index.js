@@ -7,7 +7,7 @@ import logo from '../../../static/danieljs-logo.svg';
 
 const Search = (props) => {
         const [searchState, setSearchState ] = useState({});
-        const searchClient = algoliasearch('T0NZ90NSF1', '2df3a7f3f34749616a0a5cafe81cccc5');
+        const searchClient = algoliasearch('VAO62LD9P5', 'ff429d3a2c74d328b5a556cda718ab47');
 
         const Results = connectStateResults(({ searchState, searchResults, children }) => {
             if(searchState && searchState.query && children) {
@@ -35,7 +35,7 @@ const Search = (props) => {
     return (
         <InstantSearch
             searchClient={searchClient}
-            indexName={'netlify_88cb8447-bce7-4d16-826f-a0098f34d57f_master_all'}
+            indexName={'netlify_31f375b5-8a8a-4edf-a453-f68c610f6adc_master_all'}
             searchState={searchState}
             onSearchStateChange={setSearchState}
             >
