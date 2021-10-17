@@ -22,20 +22,6 @@ For the first phase of "install-fest", we'll install or verify the installation 
 
 
 
-
-
-<br>
-<br>
-<br>
-<br>
-
-
-
-
-
-**PLEASE NOTE:** ***if you have a linux machine, [here are some resources](/additional-resources/install-fest-linux) that might be more ideal for your computer***
-
-
 <br>
 <br>
 <br>
@@ -144,7 +130,6 @@ brew install git
 
 [Github](https://github.com/) provides a way to host Git repos in the cloud.  It enables collaboration and is wildly popular.
 
-You should have already opened a personal Github account, however, you need to have a General Assembly Github Enterprise account as well. <br>You can get one by signing up here: [https://git.generalassemb.ly/join](https://git.generalassemb.ly/join)
 
 <br>
 <br>

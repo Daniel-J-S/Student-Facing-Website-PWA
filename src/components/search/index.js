@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Link } from 'gatsby';
 import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch, Hits, SearchBox, connectStateResults, Configure, Highlight } from 'react-instantsearch-dom';
-import logo from '../../../static/ga-logo.svg';
+import logo from '../../../static/danieljs-logo.svg';
 
 
 const Search = (props) => {

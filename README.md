@@ -1,4 +1,4 @@
-# Student-Facing PWA for SEIR "Challengers" 09/07
+# Student-Facing PWA for Learning To Code
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/88cb8447-bce7-4d16-826f-a0098f34d57f/deploy-status)](https://app.netlify.com/sites/seir-challengers/deploys)
 

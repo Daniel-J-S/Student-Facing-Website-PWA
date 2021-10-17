@@ -2,9 +2,9 @@
 title: "Home"
 ---
 
-# Welcome to SEIR "Challengers" 09/07
+# Welcome to Your Coding Curriculum 
 
-This website contains the course curriculum and learning assigmments for General Assembly's SEIR program.
+This website contains the course curriculum and learning assigmments for learning Software Engineering.
 
 <br>
 <br>
@@ -14,7 +14,7 @@ This website contains the course curriculum and learning assigmments for General
 
 All content is subject to change at Instructors discretion.
 
-<p style="color: crimson; text-decoration: underline"><b>Click On A Unit Heading Below To Access Content 🔍</b></p>
+<p style="color: dodgerblue; text-decoration: underline"><b>Click On A Unit Heading Below To Access Content 🔍</b></p>
 
 <br>
 <br>
@@ -31,9 +31,12 @@ All content is subject to change at Instructors discretion.
 <br>
 <br>
 
-<!-- ### 🔒 Unit Two: Full Stack Development -->
+<div style="color: grey;">
 
-### [<u>Unit Two: Full Stack Development</u>](/full-stack-development)
+
+### 🔒 Unit Two: Full Stack Development
+
+<!-- ### [<u>Unit Two: Full Stack Development</u>](/full-stack-development) -->
 
 | Week | Topics                                                                                                        |
 | ---- | ------------------------------------------------------------------------------------------------------------- |
@@ -44,16 +47,15 @@ All content is subject to change at Instructors discretion.
 <br>
 <br>
 
-<!-- ### 🔒 Unit Three: React Fundamentals -->
+### 🔒 Unit Three: React Fundamentals
 
-### [<u>Unit Three: React Fundamentals</u>](/react-fundamentals)
+<!-- ### [<u>Unit Three: React Fundamentals</u>](/react-fundamentals) -->
 
 | Week | Topics                                                              |
 | ---- | ------------------------------------------------------------------- |
 | 7    | Intro to ReactJS, fetching data for our components using AJAX       |
 | 8    | React Hooks, Tooling, The MERN Stack, Authentication & Project Week |
 
-<div style="color: grey;">
 
 <br>
 <br>

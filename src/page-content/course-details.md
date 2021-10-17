@@ -9,7 +9,7 @@ title: "Course Details"
 
 ## Graduation Requirements
 
-You will be required to meet 80% completion of homework assignments at the end of each unit, and complete all project requirements. As this is an intense, fast-paced course, only 3 absences will be allowed.
+All homework assignments must be completed by the end of each unit. All project requirements. As this is an intense, fast-paced course, only 3 absences will be allowed.
 
 <br>
 <br>
@@ -19,11 +19,11 @@ You will be required to meet 80% completion of homework assignments at the end o
 
 ## Schedule and Holidays
 
-- Start date: **09/07/2021**
-- End date: **12/03/2021**
-- Classroom runtime: **Monday-Friday 9 AM - 5 PM EST**  
-- Outcomes: **Wednesdays from  3:30 - 5PM EST**
-- Holidays: **09/11, 11/24, 11/25 & 11/26**
+- Start date: **TBT**
+- End date: **TBT**
+- Classroom runtime: **TBT**  
+- Career Coaching: **TBT**
+- Holidays: **TBH**
 
 <br>
 <br>
@@ -47,11 +47,10 @@ You will be required to meet 80% completion of homework assignments at the end o
 
 | Name  | Role |
 | ----- | ----- |
-| Daniel Scott  |  Lead Instructor 
-| Michael Siller  |  Lead Instructor 
-| Michael Jennings | Instructional Associate 
-| Jamie Popovics | Outcomes Coach
-| TBD | Teachers Assistant
+| TBT  |  Lead Instructor 
+| TBT  |  Lead Instructor 
+| TBT | Outcomes Coach
+
 
 
 
@@ -107,8 +106,7 @@ Learn the fundamentals of object-oriented programming while receiving support fr
 
 ### We will walk through this together the first time!
 
-* Depending on the assignment, your homework will be completed on [repl.it](https://repl.it/), [CodeSandbox](https://codesandbox.io/), [GitHub Enterprise](https://git.generalassemb.ly/), or [GitHub](https://github.com/)
-* Fill out this [Google Form](https://forms.gle/t9wWuPgrsV1jChJf8) with a link for that specific homework. It will be the same Google Form for each homework
+* Fill out this [Google Form](https://forms.gle/ZiqyPsEhf7bRbh5K6) with a link for that specific homework. It will be the same Google Form for each homework
 * **Homework is generally due the following morning of class unless specified otherwise by your instructional team**
 * If homework is marked `incomplete`, you may be asked to re-submit it; a new timeline will be discussed how long you have to re-submit the homework
 

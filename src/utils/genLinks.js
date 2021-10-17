@@ -11,6 +11,9 @@ const blanks = [
     'Project 3 Planning & Approvals', 
     'Locked',
     'Holiday',
+    'Intro to JS Objects and Classes',
+    'JavaScript Arrays, Functions & Scope',
+    'Intro to JavaScript',
 ];
 
 export default function genLinks(data) {

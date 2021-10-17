@@ -5,21 +5,18 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'SEIR "Challengers" 09/07',
+    title: 'Student Facing Website',
     author: 'DanielJS',
     currentYear: new Date().getFullYear(),
-    description: 'An interactive website for students currently enrolled in the General Assembly Software Engineering Immersive remote program',
+    description: 'An interactive website for students currently enrolled in an online coding bootcamp program',
     keywords: 'software engineer, software engineering, coding, javascript, html, css',
     navigationLinks: [
       {title: 'Home', slug: '/'},
       {title: 'Course Details', slug: '/course-details'},
-      /* Will consider adding this back once we have more challenges
-      {title: 'Coding Challenges', slug: '/coding-challenges'},
-      */
     ],
     homeworkSubmissionLink: {
       title: 'Submit Homework',
-      href: 'https://forms.gle/t9wWuPgrsV1jChJf8'
+      href: 'https://forms.gle/32B92eUfJRc8sGeB8'
     }
   },
   plugins: [
@@ -129,7 +126,7 @@ module.exports = {
           {
             resolve: `gatsby-plugin-scroll-indicator`,
             options: {
-              color: '#dc143c',
+              color: 'dodgerblue',
               height: '4px',
               zIndex: `9999`,
             },
@@ -157,15 +154,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `General Assembly - Full Time SEIR Program`,
+        name: `Student Facing Website`,
         short_name: `GA`,
         description: `Our student-facing website expressed as a progressive web app!`,
         lang: `en`,
         display: `standalone`,
-        icon: `static/ga-logo.svg`,
+        icon: `static/danieljs-logo.svg`,
         start_url: `/`,
         background_color: `#222222`,
-        theme_color: `#dc143c`,
+        theme_color: `#222222`,
       }
     },
     {

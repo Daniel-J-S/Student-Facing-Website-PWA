@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from 'gatsby';
 import { CSSTransition } from "react-transition-group";
 
-import logo from '../../../static/ga-logo.svg';
+import logo from '../../../static/danieljs-logo.svg';
 
 import "./responsiveNav.css";
 
